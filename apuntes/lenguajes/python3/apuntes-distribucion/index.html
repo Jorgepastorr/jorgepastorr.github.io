@@ -1,0 +1,2725 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="http://docs.jorgepastorr.tk:50022/lenguajes/python3/apuntes-distribucion/">
+      
+      
+        <meta name="author" content="Jorge Pastor">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Distribución - Apuntes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#distribucion" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://docs.jorgepastorr.tk:50022" title="Apuntes" aria-label="Apuntes" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Apuntes
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Distribución
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://docs.jorgepastorr.tk:50022" title="Apuntes" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Apuntes
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Apuntes Jorgepastorr" class="md-nav__link">
+      Apuntes Jorgepastorr
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Administracion
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Administracion
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/Configurar_pantallas_manualmente/" title="Configurar pantallas manualmente" class="md-nav__link">
+      Configurar pantallas manualmente
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/Debian_hostname_dinamico/" title="Debian hostname dinamico" class="md-nav__link">
+      Debian hostname dinamico
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/Mutt/" title="Que es mutt?" class="md-nav__link">
+      Que es mutt?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/Procesos/" title="Procesos" class="md-nav__link">
+      Procesos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/Resetear_la_password_root/" title="Resetear la password root." class="md-nav__link">
+      Resetear la password root.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/Vim/" title="Vim atajos básicos" class="md-nav__link">
+      Vim atajos básicos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/awk/" title="Uso básico de AWK" class="md-nav__link">
+      Uso básico de AWK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/freeipa/" title="FreeIpa" class="md-nav__link">
+      FreeIpa
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/instalar_webmin/" title="instalar webmin" class="md-nav__link">
+      instalar webmin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/per/" title="PER" class="md-nav__link">
+      PER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/permisos_avanzados/" title="Permisos avanzados" class="md-nav__link">
+      Permisos avanzados
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/samba/" title="Samba" class="md-nav__link">
+      Samba
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/server-correo/" title="Servidor Correo" class="md-nav__link">
+      Servidor Correo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/server-mensajeria/" title="Server mensajeria instantanea" class="md-nav__link">
+      Server mensajeria instantanea
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/ssh/" title="ssh" class="md-nav__link">
+      ssh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/sudo/" title="sudo" class="md-nav__link">
+      sudo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/umask/" title="umask" class="md-nav__link">
+      umask
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/usuarios/" title="Usuarios" class="md-nav__link">
+      Usuarios
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/vnc/" title="vnc" class="md-nav__link">
+      vnc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/webdav/" title="webdav" class="md-nav__link">
+      webdav
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-21" type="checkbox" id="nav-2-21">
+    
+    <label class="md-nav__link" for="nav-2-21">
+      Ldap
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-21">
+        Ldap
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/ldap/Ldap-Samba-Hostpam/" title="Ldap - Samba - Hostpam" class="md-nav__link">
+      Ldap - Samba - Hostpam
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/ldap/acl_ejercicios/" title="Acl ejercicios" class="md-nav__link">
+      Acl ejercicios
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/ldap/host-kerberos-con-ldap/" title="Instalación host ldap-kerberos" class="md-nav__link">
+      Instalación host  ldap-kerberos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/ldap/ldap/" title="ldap" class="md-nav__link">
+      ldap
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-22" type="checkbox" id="nav-2-22">
+    
+    <label class="md-nav__link" for="nav-2-22">
+      Pxe
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-22">
+        Pxe
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/pxe/Servidor-pxe-con-rapberry/" title="Servidor pxe con rapberry" class="md-nav__link">
+      Servidor pxe con rapberry
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/pxe/guiapxe-fedora/" title="Guiapxe fedora" class="md-nav__link">
+      Guiapxe fedora
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-23" type="checkbox" id="nav-2-23">
+    
+    <label class="md-nav__link" for="nav-2-23">
+      Redes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-23">
+        Redes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/redes/apuntes-xarxa/" title="APUNTS DE XARXES" class="md-nav__link">
+      APUNTS DE XARXES
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/redes/comandos_router_switch/" title="Configuració de Routers" class="md-nav__link">
+      Configuració de Routers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/redes/haproxy/" title="Haproxy" class="md-nav__link">
+      Haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../administracion/redes/redes2/" title="Redes2" class="md-nav__link">
+      Redes2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Auditoria
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Auditoria
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../auditoria/apuntes_hacking/" title="Haking ético" class="md-nav__link">
+      Haking ético
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Bases datos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Bases datos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Mongo
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        Mongo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../bases_datos/mongo/Mongo/" title="Mongo" class="md-nav__link">
+      Mongo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Postgres
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Postgres
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../bases_datos/postgres/bases/" title="Postgres" class="md-nav__link">
+      Postgres
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../bases_datos/postgres/modificaciones/" title="Modificación tablas" class="md-nav__link">
+      Modificación tablas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../bases_datos/postgres/plpgsql/" title="Plpgsql" class="md-nav__link">
+      Plpgsql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../bases_datos/postgres/postgresql-intalacion/" title="Postgresql intalacion" class="md-nav__link">
+      Postgresql intalacion
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Curiosidades
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Curiosidades
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../curiosidades/Lanzador_aplicaciones_en_gnome/" title="Lanzador aplicaciones en gnome" class="md-nav__link">
+      Lanzador aplicaciones en gnome
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../curiosidades/cambiar_color_promp_terminal/" title="Cambiar color promp terminal" class="md-nav__link">
+      Cambiar color promp terminal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../curiosidades/conky/" title="conky" class="md-nav__link">
+      conky
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../curiosidades/openbox/" title="Openbox" class="md-nav__link">
+      Openbox
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../curiosidades/qbit/" title="Qbit" class="md-nav__link">
+      Qbit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../curiosidades/tmux/" title="Tmux" class="md-nav__link">
+      Tmux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Desatendidas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Desatendidas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../desatendidas/" title="Desatendidas" class="md-nav__link">
+      Desatendidas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../desatendidas/Instalacion-desatendida-debian/" title="Instalacion desatendida debian" class="md-nav__link">
+      Instalacion desatendida debian
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../desatendidas/desatendida-windows/" title="Desatendida windows" class="md-nav__link">
+      Desatendida windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../desatendidas/kikstart/" title="Kikstart" class="md-nav__link">
+      Kikstart
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Generar doc
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Generar doc
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../generar_doc/docsify/" title="Docsify" class="md-nav__link">
+      Docsify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../generar_doc/remark/" title="Remark" class="md-nav__link">
+      Remark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    
+    <label class="md-nav__link" for="nav-8">
+      Lenguajes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Lenguajes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Fundamentos_php/" title="Fundamentos php" class="md-nav__link">
+      Fundamentos php
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Shell/" title="Shell" class="md-nav__link">
+      Shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+    
+    <label class="md-nav__link" for="nav-8-3">
+      Python3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-3">
+        Python3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Apuntes-Metodos/" title="Métodos de colecciones" class="md-nav__link">
+      Métodos de colecciones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apuntes-Funcionalidades_avanzadas/" title="apuntes Funcionalidades avanzadas" class="md-nav__link">
+      apuntes Funcionalidades avanzadas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apuntes-Herencia/" title="Herencias" class="md-nav__link">
+      Herencias
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Distribución
+      </label>
+    
+    <a href="./" title="Distribución" class="md-nav__link md-nav__link--active">
+      Distribución
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setuptools" class="md-nav__link">
+    Setuptools
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paquete-basico" class="md-nav__link">
+    Paquete básico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setuppy" class="md-nav__link">
+    setup.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependencias" class="md-nav__link">
+    Dependencias
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utilizando-un-fichero-de-dependencias" class="md-nav__link">
+    Utilizando un fichero de dependencias
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirementstxt" class="md-nav__link">
+    requirements.txt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suite-test" class="md-nav__link">
+    Suite Test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pypi-y-pip" class="md-nav__link">
+    PyPI y PIP
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clasificadores" class="md-nav__link">
+    Clasificadores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probando-el-paquete" class="md-nav__link">
+    Probando el paquete
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distribuyendo-el-paquete" class="md-nav__link">
+    Distribuyendo el paquete
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#localmente" class="md-nav__link">
+    Localmente
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publicamente" class="md-nav__link">
+    Públicamente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyinstaller" class="md-nav__link">
+    Pyinstaller
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    Instalación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primer-ejecutable" class="md-nav__link">
+    Primer ejecutable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecutable-con-interfaz" class="md-nav__link">
+    Ejecutable con interfaz
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecutable-en-un-fichero" class="md-nav__link">
+    Ejecutable en un fichero
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambiar-el-icono" class="md-nav__link">
+    Cambiar el icono
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones" class="md-nav__link">
+    Limitaciones
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apuntes-documentacion/" title="Documentación" class="md-nav__link">
+      Documentación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apuntes-ficheros/" title="Apuntes ficheros" class="md-nav__link">
+      Apuntes ficheros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apuntes-fundamento/" title="Python fundamentos" class="md-nav__link">
+      Python fundamentos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apuntes-modulos/" title="Módulos" class="md-nav__link">
+      Módulos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apuntes-orientado-objetos/" title="Orientado a objetos" class="md-nav__link">
+      Orientado a objetos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apuntes-test/" title="Test" class="md-nav__link">
+      Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apuntes-tkinter/" title="Tkinter" class="md-nav__link">
+      Tkinter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apuntes_bases/" title="Apuntes bases" class="md-nav__link">
+      Apuntes bases
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../argparse/" title="Argparse" class="md-nav__link">
+      Argparse
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Seguridad
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Seguridad
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../seguridad/Certificados-Digitales/" title="Certificados Digitales" class="md-nav__link">
+      Certificados Digitales
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../seguridad/Kerberos/" title="Kerberos" class="md-nav__link">
+      Kerberos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../seguridad/OpenVpn/" title="OpenVpn" class="md-nav__link">
+      OpenVpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../seguridad/The-crazy-thing/" title="The crazy thing!" class="md-nav__link">
+      The crazy thing!
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../seguridad/TunelSSH/" title="Tunel SSH" class="md-nav__link">
+      Tunel SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../seguridad/gpg/" title="GPG" class="md-nav__link">
+      GPG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../seguridad/lvm/" title="Lvm logical volum manager" class="md-nav__link">
+      Lvm logical volum manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../seguridad/practica-ssl-tls/" title="Practica ssl tls" class="md-nav__link">
+      Practica ssl tls
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../seguridad/raid/" title="Raid" class="md-nav__link">
+      Raid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-10" type="checkbox" id="nav-9-10">
+    
+    <label class="md-nav__link" for="nav-9-10">
+      Backups
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-10">
+        Backups
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../seguridad/backups/Borg_basico/" title="Borg básico" class="md-nav__link">
+      Borg básico
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../seguridad/backups/Tar/" title="Tar" class="md-nav__link">
+      Tar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../seguridad/backups/rdiff-backup/" title="rdiff-backup" class="md-nav__link">
+      rdiff-backup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../seguridad/backups/rsync/" title="rsync" class="md-nav__link">
+      rsync
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-11" type="checkbox" id="nav-9-11">
+    
+    <label class="md-nav__link" for="nav-9-11">
+      Cortafuegos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-11">
+        Cortafuegos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../seguridad/cortafuegos/Iptables/" title="Iptables" class="md-nav__link">
+      Iptables
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Sistemas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Sistemas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/Actualizar_hora_sys_o_bios/" title="Gestionar Hora" class="md-nav__link">
+      Gestionar Hora
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/Arranque-del-sistema/" title="Arranque del sistema" class="md-nav__link">
+      Arranque del sistema
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/Eliminar_contrase%C3%B1a_windows/" title="Eliminar contraseña windows" class="md-nav__link">
+      Eliminar contraseña windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/Estructura_de_directorios/" title="Estructura de directorios" class="md-nav__link">
+      Estructura de directorios
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/Logs_journalctl/" title="Logs" class="md-nav__link">
+      Logs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/Systemd/" title="Systemd" class="md-nav__link">
+      Systemd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/chroot/" title="Chroot" class="md-nav__link">
+      Chroot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/disco/" title="Disco" class="md-nav__link">
+      Disco
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/gestores_de_paquetes/" title="Gestores de paquetes" class="md-nav__link">
+      Gestores de paquetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/getenforce/" title="getenforce" class="md-nav__link">
+      getenforce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/grub/" title="Grub" class="md-nav__link">
+      Grub
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/home/" title="Cambiar /home" class="md-nav__link">
+      Cambiar /home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/ip_est%C3%A1tica/" title="ip estática raspberry" class="md-nav__link">
+      ip estática raspberry
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/pam/" title="Pam" class="md-nav__link">
+      Pam
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/raid/" title="Raid" class="md-nav__link">
+      Raid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/xinetd/" title="xinetd" class="md-nav__link">
+      xinetd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-17" type="checkbox" id="nav-10-17">
+    
+    <label class="md-nav__link" for="nav-10-17">
+      Automatizacion
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-17">
+        Automatizacion
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/automatizacion/ansible/" title="Ansible" class="md-nav__link">
+      Ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sistemas/automatizacion/tareas_programadas/" title="Tareas Programadas" class="md-nav__link">
+      Tareas Programadas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Virtualizacion
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Virtualizacion
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../virtualizacion/Docker-basico/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../virtualizacion/Lxc/" title="LXC y LXD" class="md-nav__link">
+      LXC y LXD
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../virtualizacion/Vagrant/" title="Vagrant" class="md-nav__link">
+      Vagrant
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../virtualizacion/kubernetes/" title="Kubernetes" class="md-nav__link">
+      Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../virtualizacion/swarm/" title="Swarm" class="md-nav__link">
+      Swarm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-6" type="checkbox" id="nav-11-6">
+    
+    <label class="md-nav__link" for="nav-11-6">
+      Virt manager
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-11-6">
+        Virt manager
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../virtualizacion/virt-manager/Backing_chain/" title="Backing_chain" class="md-nav__link">
+      Backing_chain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../virtualizacion/virt-manager/Clonar/" title="Clonar de virtual a físico y de físico a virtual." class="md-nav__link">
+      Clonar de virtual a físico y de físico a virtual.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../virtualizacion/virt-manager/Instalacion_de_virtualizacion_fedora/" title="Instalación de virtualización fedora" class="md-nav__link">
+      Instalación de virtualización fedora
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../virtualizacion/virt-manager/acceder_consola_desde_virsh/" title="acceder consola desde virsh" class="md-nav__link">
+      acceder consola desde virsh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../virtualizacion/virt-manager/crear_red_aislada/" title="Crear red aislada" class="md-nav__link">
+      Crear red aislada
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../virtualizacion/virt-manager/instalar_maquina_virtual_virt-install/" title="virt" class="md-nav__link">
+      virt
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setuptools" class="md-nav__link">
+    Setuptools
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paquete-basico" class="md-nav__link">
+    Paquete básico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setuppy" class="md-nav__link">
+    setup.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependencias" class="md-nav__link">
+    Dependencias
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utilizando-un-fichero-de-dependencias" class="md-nav__link">
+    Utilizando un fichero de dependencias
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirementstxt" class="md-nav__link">
+    requirements.txt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suite-test" class="md-nav__link">
+    Suite Test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pypi-y-pip" class="md-nav__link">
+    PyPI y PIP
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clasificadores" class="md-nav__link">
+    Clasificadores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probando-el-paquete" class="md-nav__link">
+    Probando el paquete
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distribuyendo-el-paquete" class="md-nav__link">
+    Distribuyendo el paquete
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#localmente" class="md-nav__link">
+    Localmente
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publicamente" class="md-nav__link">
+    Públicamente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyinstaller" class="md-nav__link">
+    Pyinstaller
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    Instalación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primer-ejecutable" class="md-nav__link">
+    Primer ejecutable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecutable-con-interfaz" class="md-nav__link">
+    Ejecutable con interfaz
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecutable-en-un-fichero" class="md-nav__link">
+    Ejecutable en un fichero
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambiar-el-icono" class="md-nav__link">
+    Cambiar el icono
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones" class="md-nav__link">
+    Limitaciones
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/jorgepastorr/apuntes/edit/master/docs/lenguajes/python3/apuntes-distribucion.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="distribucion">Distribución</h1>
+<h2 id="setuptools">Setuptools</h2>
+<p>En Python todo el tema de empaquetar puede ser un poco lioso, ya que encontramos varios módulos desintados a ello. Nosotros vamos a centrarnos en <strong>setuptools</strong>, ya que es la forma más utilizada, nos proporciona todo lo necesario para distribuir nuestros propios módulos e incluso nos permite publicar paquetes en el respositorio público PyPI (Python Package Index) de forma directa desde la propia terminal.</p>
+<p>Si lo recordáis, en la lección de módulos ya os enseñé como crear un distribuible con setuptools, a lo largo de esta lección vamos a repasar y aprender varios conceptos nuevos.</p>
+<h3 id="paquete-basico">Paquete básico</h3>
+<p>Antes de comenzar es importante repasar la estructura de un paquete en Python,ya que para distribuir nuestro código es indispensable estructurarlo dentro de un paquete:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">| setup.py         # Fichero que contiene toda la información de instalación</span>
+<span class="err">+ prueba/          # Directorio del paquete al mismo nivel que setup.py</span>
+<span class="err">   | __init__.py   # Fichero que indica que el directorio es un paquete</span>
+<span class="err">   | modulo.py     # Módulo o script que contiene definiciones</span>
+</code></pre></div>
+
+<p>Por lo tanto vamos a empaquetar el paquete de nombre <strong>prueba</strong>, que contiene código en el fichero <em>modulo.py</em>.</p>
+<p>Vamos a aprender un poco más sobre el fichero de instalación.</p>
+<h3 id="setuppy">setup.py</h3>
+<p>El fichero de configuración incluye toda la información necesaria para realizar la instalación de nuestro paquete. Algunos campos incluyen sólo metadatos como el nombre, la versión, la descripción o el autor. Pero otros sirven para extender la instalación.</p>
+<p>Como sería un caos que cada desarrollador pusiera los campos que quisiera, hay una serie de parámetros comunes y avanzados, pero como son muchos lo más común es utilizar una plantilla base como la siguiente que pasa la configuración a la función <strong>setup</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
+
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Prueba&quot;</span><span class="p">,</span>  <span class="c1"># Nombre</span>
+      <span class="n">version</span><span class="o">=</span><span class="s2">&quot;0.1&quot;</span><span class="p">,</span>  <span class="c1"># Versión de desarrollo</span>
+      <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Paquete de prueba&quot;</span><span class="p">,</span>  <span class="c1"># Descripción del funcionamiento</span>
+      <span class="n">author</span><span class="o">=</span><span class="s2">&quot;Hector Costa&quot;</span><span class="p">,</span>  <span class="c1"># Nombre del autor</span>
+      <span class="n">author_email</span><span class="o">=</span><span class="s1">&#39;me@hcosta.info&#39;</span><span class="p">,</span>  <span class="c1"># Email del autor</span>
+      <span class="n">license</span><span class="o">=</span><span class="s2">&quot;GPL&quot;</span><span class="p">,</span>  <span class="c1"># Licencia: MIT, GPL, GPL 2.0...</span>
+      <span class="n">url</span><span class="o">=</span><span class="s2">&quot;http://ejemplo.com&quot;</span><span class="p">,</span>  <span class="c1"># Página oficial (si la hay)</span>
+      <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;prueba&#39;</span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>¿Hasta aquí fácil no? Son simples metadatos para definir el paquete, con la excepción de <strong>packages</strong>, en el que tenemos que indicar todos los paquetes que formarán parte del paquete distribuido en forma de lista.</p>
+<p>Aunque en este caso únicamente tendríamos al paquete <strong>prueba</strong>, imaginaros que tenemos docenas de subpaquetes y tubiéramos que añadirlos uno a uno... Pues para estos casos podemos importar una función que se encargará de buscar automáticamente los subpaquetes, se trata de <strong>find_packages</strong> y la podemos encontrar dentro de <strong>setuptools</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">find_packages</span>
+
+<span class="n">setup</span><span class="p">(</span><span class="o">...</span>
+      <span class="n">packages</span><span class="o">=</span><span class="n">find_packages</span><span class="p">()</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<h3 id="dependencias">Dependencias</h3>
+<p>Ahora imaginaros que en vuestro paquete algún código utiliza funciones de un módulo externo o paquete que hay que instalar manualmente. Esto se conoce como dependencias del paquete, y por suerte podemos indicar a un parámetro que descargue todos los paquetes en la versión que nosotros indiquemos, se trata de <strong>install_requires</strong>. </p>
+<p>Por ejemplo imaginad que dentro de nuestro paquete necesitamos utilizar el módulo <strong>Pillow</strong> para manejar imágenes. Por regla general podemos instalarlo desde la terminal con el comando:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">pip install pillow</span>
+</code></pre></div>
+
+<p>Pero si queremos que el paquete lo instale automáticamente sólo tenemos que indicarlo de esta forma:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">setup</span><span class="p">(</span><span class="o">...</span><span class="p">,</span>
+      <span class="n">install_requires</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;pillow&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>Y así iríamos poniendo todas las dependencias en la lista.</p>
+<p>Lo bueno que tiene es que podemos indicar la versión exacta que queremos instalar, por ejemplo. Si mi programa utilizase la versión 1.1.0 de Pillow tendría que poner:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">setup</span><span class="p">(</span><span class="o">...</span><span class="p">,</span>
+      <span class="n">install_requires</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;pillow==1.1.0&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>En cambio si fuera compatible con cualquier versión a partir de la 1.1.5 podría poner:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">setup</span><span class="p">(</span><span class="o">...</span><span class="p">,</span>
+      <span class="n">install_requires</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;pillow&gt;=1.1.5&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>Si no indicamos una versión, se instalará automáticamente la más actual.</p>
+<h4 id="utilizando-un-fichero-de-dependencias">Utilizando un fichero de dependencias</h4>
+<p>De forma similar a antes, quizá llega el momento donde tenemos muchísimas dependencias y es un engorro tener que cambiar directamente el fichero <strong>setup.py</strong>. Para solucionarlo podemos utilizar una técnica que se basa en crear un fichero de texto y escribir las dependencias, una por línea.</p>
+<p>Luego podemos abrir el fichero y añadir las dependencias automáticamente en forma de lista. Generalmente a este fichero se le llama <strong>requirements.txt</strong> y debe estar en el mismo directorio que <strong>setup.py</strong>:</p>
+<h5 id="requirementstxt">requirements.txt</h5>
+<div class="codehilite"><pre><span></span><code><span class="err">pillow==1.1.0</span>
+<span class="err">django&gt;=1.10.0,&lt;=1.10.3</span>
+<span class="err">pygame</span>
+</code></pre></div>
+
+<p>Luego en las dependencias indicaríamos lo siguiente:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">setup</span><span class="p">(</span><span class="o">...</span><span class="p">,</span>
+      <span class="n">install_requires</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;requirements.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<h3 id="suite-test">Suite Test</h3>
+<p>Otra cosa interesante que podemos hacer es adjuntar una suite de tests unitarios para nuestro paquete, ya sabéis, los que aprendimos en la unidad anterior. </p>
+<p>Para incluirlos tendremos indicar un parámetro en el instalador llamado <strong>test_suite</strong>, al que le pasaremos el nombre del directorio que los contiene, por lo general llamado <strong>tests</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">| setup.py</span>
+<span class="err">| requeriments.txt</span>
+<span class="err">+ prueba/          </span>
+<span class="err">   | __init__.py   </span>
+<span class="err">   | modulo.py  </span>
+<span class="err">+ tests/</span>
+<span class="err">   | test_pillow.py</span>
+<span class="err">   | test_django.py</span>
+<span class="err">   | test_pygame.py</span>
+</code></pre></div>
+
+<p>En el <strong>setup.py</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">setup</span><span class="p">(</span><span class="o">...</span><span class="p">,</span>
+      <span class="n">test_suite</span><span class="o">=</span><span class="s2">&quot;tests&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>Luego para ejecutarlos podemos utilizar el comando:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">test</span>
+</code></pre></div>
+
+<h2 id="pypi-y-pip">PyPI y PIP</h2>
+<p>Por último hablemos un poco más del <strong>Python Package Index</strong>. </p>
+<p>Como ya sabéis se trata de un repositorio público con miles y miles de paquetes creados por la enorme comunidad de Python. De hecho yo mismo creé hace años un pequeño módulo para el framework django, os dejo el enlace por si os pica la curiosidad: https://pypi.python.org/pypi/django-easyregistration </p>
+<p>Sea como sea, la forma de instalar cómodamente los paquetes de PyPI es con la herramienta PIP (un acrónimo recursivo de Pip Installs Packages), utilizando el comando <strong>pip install nombre_paquete</strong>. </p>
+<p>Además podemos listar los paquetes instalados con <strong>pip list</strong>, borrar alguno con <strong>pip uninstall  nombre_paquete</strong> o incluso instalar todas las dependencias de un fichero <strong>requisites.txt</strong> utilizando <strong>pip install requisites.txt</strong>.</p>
+<p>Si queréis saber más sobre pip, simplemente escribid <strong>pip</strong> en la terminal.</p>
+<h3 id="clasificadores">Clasificadores</h3>
+<p>Por lo tanto tenemos un repositorio inmenso, así que ¿cómo podemos añadir información para categorizar nuestro paquete en PyPI? Pues utilizando un parámetro llamado <strong>classifiers</strong> de la siguiente forma:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">setup</span><span class="p">(</span><span class="o">...</span><span class="p">,</span>
+    <span class="n">classifiers</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;Development Status :: 3 - Alpha&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Topic :: Utilities&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;License :: OSI Approved :: GNU General Public License (GPL)&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>Hay un montón de clasificadores, desde el estado del proyecto, el tema, las licencias, etc. Una lista completa de los clasificadores disponibles podemos encontrarla en la propia web de PyPI:
+https://pypi.python.org/pypi?%3Aaction=list_classifiers</p>
+<h3 id="probando-el-paquete">Probando el paquete</h3>
+<p>Una vez tenemos toda la información configurada, podemos probar nuestro paquete fácilmente realizando una instalación en modo desarrollo. Para ello utilizaríamos el siguiente comando:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">python setup.py develop</span>
+</code></pre></div>
+
+<p>Este modo es muy práctico, ya que nos permite utilizar nuestro módulo en cualquier lugar y hacer modificacione sin necesidad de reinstalarlo constamente. Eso es posible porque se utiliza desde el propio directorio. </p>
+<p>Una vez hayamos hecho las probaturas y estemos satisfechos, podemos desinstalar el paquete de desarrollo:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">python setup.py develop --uninstall</span>
+</code></pre></div>
+
+<p>Para instalar el paquete definitivo utilizaríamos:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">python setup.py install</span>
+</code></pre></div>
+
+<p>Pero tenemos que tener en cuenta que una vez hecho esto, el paquete se instala en una copia interna y ya no podremos modificarlo sin antes desinstalarlo, algo que tendremos que hacer con PIP, buscando el nombre del paquete con <strong>pip list</strong> y haciendo un <strong>pip uninstall nombre_paquete</strong>.</p>
+<h2 id="distribuyendo-el-paquete">Distribuyendo el paquete</h2>
+<p>Ya tenemos el paquete, hemos creado el instalador, lo hemos probado y estamos preparados para distribuirlo. Hay dos formas:</p>
+<ul>
+<li><strong>Localmente</strong>: Generando un fichero comprimido que podemos compartir con nuestros conocidos.</li>
+<li><strong>Públicamente</strong>: En el repositorio PyPI para que todo el mundo pueda utilizarlo.</li>
+</ul>
+<p>Evidentemente si distribuimos localmente no tenemos que tener mucho cuidado, y además podemos hacer pruebas. Pero si decidimos hacerlo públicamente tendremos que intentar que el paquete tenga un mínimo de calidad.</p>
+<h3 id="localmente">Localmente</h3>
+<p>Distribuir el paquete localmente es muy fáci. Simplemente tenemos que utilizar el comando:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">python setup.py sdist</span>
+</code></pre></div>
+
+<p>Esto generará un directorio <strong>dist/</strong> en la carpeta del paquete. Dentro encontraremos un fichero zip o tar.gz dependiendo de nuestro sistema operativo.</p>
+<p>Este fichero ya podremos compartirlo con quien queramos, y para instalarlo sólo tendremos que utilizar la herramienta <strong>pip</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">pip install nombre_del_fichero.zip  # La extensión depende del sistema operativo</span>
+</code></pre></div>
+
+<p>Luego para desinstalarlo de la misma forma pero utilizando el nombre del paquete:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">pip uninstall nombre_paquete</span>
+</code></pre></div>
+
+<h3 id="publicamente">Públicamente</h3>
+<p>Aunque no voy a hacer la demostración porque ahora mismo no dispongo de un paquete para publicar en el repositorio de PyPI, sí que os voy a enseñar los pasos a seguir para hacerlo. Lo bueno de registrar un paquete en PyPI es que podemos instalarlo desde cualquier lugar a través de internet utilizando la herramienta PIP.</p>
+<p>Dicho ésto, si algún día creáis un paquete de calidad y queréis compartirlo con la comunidad, lo primero es registrar una cuenta en PyPI: https://pypi.python.org/pypi?%3Aaction=register_form</p>
+<p>A continuación desde el directorio de nuestro paquete tenemos que ejecutar el comando:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">python setup.py register</span>
+</code></pre></div>
+
+<p>Así iniciaremos una petición para registrar nuestro paquete en el repositorio. Luego tendremos que seguir los pasos e identificarnos cuando lo pida con nuestro usuario y contraseña (que hemos creado antes).</p>
+<p>Una vez hecho esto ya hemos creado nuestro paquete, pero todavía no hemos publicado una versión, así que vamos a hacerlo utilizando el comando:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">python setup.py sdist upload</span>
+</code></pre></div>
+
+<p>¡Y ya está! Ahora podremos instalar nuestro paquete desde en cualquier lugar con PIP:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">pip install nombre_paquete</span>
+</code></pre></div>
+
+<h2 id="pyinstaller">Pyinstaller</h2>
+<p>Ya hemos visto como distribuir nuestros paquetes... ¿Pero y si creamos una aplicación y queremos generar un ejecutable para utilizarla? Bueno, en este caso puede ser bastante complicado dependiendo de las dependencias que utilice el programa.</p>
+<p>Por suerte hay un módulo que nos ayudará mucho a generar ejecutables porque automatiza el proceso, ese es <strong>pyinstaller</strong>.</p>
+<p>Lo que hace es generar un .EXE en Windows, un .DMG en MAC o el ejecutable que utilice el sistema operativo. Dentro del ejecutable se incluye el propio intérprete de Python, y por esa razón podremos utilizarlo en cualquier ordenador sin necesidad de instalar Python previamente.</p>
+<h3 id="instalacion">Instalación</h3>
+<p>La instalación es muy fácil:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">pip install pyinstaller</span>
+</code></pre></div>
+
+<p>No hay más.</p>
+<h3 id="primer-ejecutable">Primer ejecutable</h3>
+<p>Comencemos con algo simple, tenemos un script <strong>hola.py</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola mundo!&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Y queremos crear un ejecutable a partir de él, pues haríamos lo siguiente:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">pyinstaller hola.py</span>
+</code></pre></div>
+
+<p>Una vez acabe el proceso se nos habrán creado varias carpetas. La que nos interesa es <strong>dist</strong>, y dentro encontraremos una carpeta con el nombre programa y en esta un montón de ficheros y el ejecutable, en mi caso como estoy en Windows es <strong>hola.exe</strong>.</p>
+<p>Como es un programa para terminal, para ejecutarlo tengo que abrir la terminal en ese directorio y ejecutar el programa manualmente:</p>
+<div class="codehilite"><pre><span></span><code><span class="c">C:\Users\Hector\Desktop\hola\dist\hola&gt;hola.exe</span>
+<span class="err">Hola mundo!</span>
+</code></pre></div>
+
+<h3 id="ejecutable-con-interfaz">Ejecutable con interfaz</h3>
+<p>Ahora vamos a hacer otro a partir de un simple programa con Tkinter, la librería de componentes integrada en Python que ya conocemos. Nos debería funcionar sin problemas:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
+<span class="n">Label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">pady</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</code></pre></div>
+
+<p>Suponiendo que lo hemos puesto en el mismo script:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">pyinstaller hola.py</span>
+</code></pre></div>
+
+<p>En esta ocasión si ejecutamos el programa con doble clic nos funcionará bien, el problema es que se muestra la terminal de fondo.</p>
+<p>Para que desaparezca tenemos que indicar que es una aplicación en ventana, y eso lo hacemos de la siguiente forma al crear el ejecutable:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">pyinstaller --windowed hola.py</span>
+</code></pre></div>
+
+<h3 id="ejecutable-en-un-fichero">Ejecutable en un fichero</h3>
+<p>Ya véis que por defecto Pyinstaller crea un directorio con un montón de ficheros. Podemos utilizar un comando para generar un solo fichero ejecutable que lo contenga todo, pero este ocupara bastante más:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">pyinstaller --windowed --onefile hola.py</span>
+</code></pre></div>
+
+<h3 id="cambiar-el-icono">Cambiar el icono</h3>
+<p>También podemos cambiar el icono por defecto del ejecutable. Para ello necesitamos una imagen en formato .ico.</p>
+<div class="codehilite"><pre><span></span><code><span class="err">pyinstaller --windowed --onefile --icon=./hola.ico hola.py</span>
+</code></pre></div>
+
+<p>Si no tenéis uno, podéis utilizar este para probar: http://www.iconarchive.com/download/i3532/artua/star-wars/Darth-Vader.ico</p>
+<p>Si por algo no os cambia el icono, probad cambiando el nombre del ejecutable. A veces el caché de Windows puede ignorar estas cosas.</p>
+<h2 id="limitaciones">Limitaciones</h2>
+<p>El gran problema con Pyinstaller como os decía al principio son las dependencias.</p>
+<p>Si nuestro programa utiliza únicamente módulos de la librería estándard no tendremos ningún problema, pero si queremos utilizar módulos externos es posible que no funcione... A no ser que sea alguno de los soportados como PyQT, django, pandas, matpotlib... pero requieren una configuraciones extra.</p>
+<p>Si queréis saber más os dejo este enlace con los paquetes soportados:
+https://github.com/pyinstaller/pyinstaller/wiki/Supported-Packages</p>
+<p>Personalmente nunca he hecho nada avanzado, pero si queréis hacerlo y no lo conseguís, os podéis poner en contacto conmigo y estaré encantado de ayudaros.</p>
+<p>Y con esto llegamos al final... por ahora ;-)</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../apuntes-Herencia/" title="Herencias" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Herencias
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../apuntes-documentacion/" title="Documentación" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Documentación
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+      
+    
+  </body>
+</html>

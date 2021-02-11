@@ -1,0 +1,3404 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="http://docs.jorgepastorr.tk:50022/seguridad/Certificados-Digitales/">
+      
+      
+        <meta name="author" content="Jorge Pastor">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Certificados Digitales - Apuntes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#certificados-digitales" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://docs.jorgepastorr.tk:50022" title="Apuntes" aria-label="Apuntes" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Apuntes
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Certificados Digitales
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://docs.jorgepastorr.tk:50022" title="Apuntes" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Apuntes
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Apuntes Jorgepastorr" class="md-nav__link">
+      Apuntes Jorgepastorr
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Administracion
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Administracion
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/Configurar_pantallas_manualmente/" title="Configurar pantallas manualmente" class="md-nav__link">
+      Configurar pantallas manualmente
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/Debian_hostname_dinamico/" title="Debian hostname dinamico" class="md-nav__link">
+      Debian hostname dinamico
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/Mutt/" title="Que es mutt?" class="md-nav__link">
+      Que es mutt?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/Procesos/" title="Procesos" class="md-nav__link">
+      Procesos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/Resetear_la_password_root/" title="Resetear la password root." class="md-nav__link">
+      Resetear la password root.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/Vim/" title="Vim atajos básicos" class="md-nav__link">
+      Vim atajos básicos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/awk/" title="Uso básico de AWK" class="md-nav__link">
+      Uso básico de AWK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/freeipa/" title="FreeIpa" class="md-nav__link">
+      FreeIpa
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/instalar_webmin/" title="instalar webmin" class="md-nav__link">
+      instalar webmin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/per/" title="PER" class="md-nav__link">
+      PER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/permisos_avanzados/" title="Permisos avanzados" class="md-nav__link">
+      Permisos avanzados
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/samba/" title="Samba" class="md-nav__link">
+      Samba
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/server-correo/" title="Servidor Correo" class="md-nav__link">
+      Servidor Correo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/server-mensajeria/" title="Server mensajeria instantanea" class="md-nav__link">
+      Server mensajeria instantanea
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/ssh/" title="ssh" class="md-nav__link">
+      ssh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/sudo/" title="sudo" class="md-nav__link">
+      sudo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/umask/" title="umask" class="md-nav__link">
+      umask
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/usuarios/" title="Usuarios" class="md-nav__link">
+      Usuarios
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/vnc/" title="vnc" class="md-nav__link">
+      vnc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/webdav/" title="webdav" class="md-nav__link">
+      webdav
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-21" type="checkbox" id="nav-2-21">
+    
+    <label class="md-nav__link" for="nav-2-21">
+      Ldap
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-21">
+        Ldap
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/ldap/Ldap-Samba-Hostpam/" title="Ldap - Samba - Hostpam" class="md-nav__link">
+      Ldap - Samba - Hostpam
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/ldap/acl_ejercicios/" title="Acl ejercicios" class="md-nav__link">
+      Acl ejercicios
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/ldap/host-kerberos-con-ldap/" title="Instalación host ldap-kerberos" class="md-nav__link">
+      Instalación host  ldap-kerberos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/ldap/ldap/" title="ldap" class="md-nav__link">
+      ldap
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-22" type="checkbox" id="nav-2-22">
+    
+    <label class="md-nav__link" for="nav-2-22">
+      Pxe
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-22">
+        Pxe
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/pxe/Servidor-pxe-con-rapberry/" title="Servidor pxe con rapberry" class="md-nav__link">
+      Servidor pxe con rapberry
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/pxe/guiapxe-fedora/" title="Guiapxe fedora" class="md-nav__link">
+      Guiapxe fedora
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-23" type="checkbox" id="nav-2-23">
+    
+    <label class="md-nav__link" for="nav-2-23">
+      Redes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-23">
+        Redes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/redes/apuntes-xarxa/" title="APUNTS DE XARXES" class="md-nav__link">
+      APUNTS DE XARXES
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/redes/comandos_router_switch/" title="Configuració de Routers" class="md-nav__link">
+      Configuració de Routers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/redes/haproxy/" title="Haproxy" class="md-nav__link">
+      Haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/redes/redes2/" title="Redes2" class="md-nav__link">
+      Redes2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Auditoria
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Auditoria
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../auditoria/apuntes_hacking/" title="Haking ético" class="md-nav__link">
+      Haking ético
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Bases datos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Bases datos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Mongo
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        Mongo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bases_datos/mongo/Mongo/" title="Mongo" class="md-nav__link">
+      Mongo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Postgres
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Postgres
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bases_datos/postgres/bases/" title="Postgres" class="md-nav__link">
+      Postgres
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bases_datos/postgres/modificaciones/" title="Modificación tablas" class="md-nav__link">
+      Modificación tablas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bases_datos/postgres/plpgsql/" title="Plpgsql" class="md-nav__link">
+      Plpgsql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bases_datos/postgres/postgresql-intalacion/" title="Postgresql intalacion" class="md-nav__link">
+      Postgresql intalacion
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Curiosidades
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Curiosidades
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../curiosidades/Lanzador_aplicaciones_en_gnome/" title="Lanzador aplicaciones en gnome" class="md-nav__link">
+      Lanzador aplicaciones en gnome
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../curiosidades/cambiar_color_promp_terminal/" title="Cambiar color promp terminal" class="md-nav__link">
+      Cambiar color promp terminal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../curiosidades/conky/" title="conky" class="md-nav__link">
+      conky
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../curiosidades/openbox/" title="Openbox" class="md-nav__link">
+      Openbox
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../curiosidades/qbit/" title="Qbit" class="md-nav__link">
+      Qbit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../curiosidades/tmux/" title="Tmux" class="md-nav__link">
+      Tmux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Desatendidas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Desatendidas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../desatendidas/" title="Desatendidas" class="md-nav__link">
+      Desatendidas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../desatendidas/Instalacion-desatendida-debian/" title="Instalacion desatendida debian" class="md-nav__link">
+      Instalacion desatendida debian
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../desatendidas/desatendida-windows/" title="Desatendida windows" class="md-nav__link">
+      Desatendida windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../desatendidas/kikstart/" title="Kikstart" class="md-nav__link">
+      Kikstart
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Generar doc
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Generar doc
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../generar_doc/docsify/" title="Docsify" class="md-nav__link">
+      Docsify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../generar_doc/remark/" title="Remark" class="md-nav__link">
+      Remark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Lenguajes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Lenguajes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/Fundamentos_php/" title="Fundamentos php" class="md-nav__link">
+      Fundamentos php
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/Shell/" title="Shell" class="md-nav__link">
+      Shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3">
+    
+    <label class="md-nav__link" for="nav-8-3">
+      Python3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-3">
+        Python3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/Apuntes-Metodos/" title="Métodos de colecciones" class="md-nav__link">
+      Métodos de colecciones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-Funcionalidades_avanzadas/" title="apuntes Funcionalidades avanzadas" class="md-nav__link">
+      apuntes Funcionalidades avanzadas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-Herencia/" title="Herencias" class="md-nav__link">
+      Herencias
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-distribucion/" title="Distribución" class="md-nav__link">
+      Distribución
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-documentacion/" title="Documentación" class="md-nav__link">
+      Documentación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-ficheros/" title="Apuntes ficheros" class="md-nav__link">
+      Apuntes ficheros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-fundamento/" title="Python fundamentos" class="md-nav__link">
+      Python fundamentos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-modulos/" title="Módulos" class="md-nav__link">
+      Módulos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-orientado-objetos/" title="Orientado a objetos" class="md-nav__link">
+      Orientado a objetos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-test/" title="Test" class="md-nav__link">
+      Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-tkinter/" title="Tkinter" class="md-nav__link">
+      Tkinter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes_bases/" title="Apuntes bases" class="md-nav__link">
+      Apuntes bases
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/argparse/" title="Argparse" class="md-nav__link">
+      Argparse
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      Seguridad
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Seguridad
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Certificados Digitales
+      </label>
+    
+    <a href="./" title="Certificados Digitales" class="md-nav__link md-nav__link--active">
+      Certificados Digitales
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tlsssl-https" class="md-nav__link">
+    TLS/SSL (HTTPS)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generacio-de-claus-requests-i-certs" class="md-nav__link">
+    Generació de claus, requests i certs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificado-autofirmado" class="md-nav__link">
+    Certificado autofirmado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-clave-privada-y-certificado-autofirmado" class="md-nav__link">
+    Creación de clave privada y certificado autofirmado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-clave-privada-request-i-certificacion" class="md-nav__link">
+    Creación de clave privada, request i certificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-clave-provada" class="md-nav__link">
+    Creación de clave provada
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-sin-interactivo" class="md-nav__link">
+    Request sin interactivo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-una-ca-propia" class="md-nav__link">
+    Crear una CA propia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenido-fisico-y-logico" class="md-nav__link">
+    Contenido físico y lógico
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-certificado-servidor-real" class="md-nav__link">
+    crear certificado servidor real
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passfrase" class="md-nav__link">
+    passfrase
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anadir" class="md-nav__link">
+    Añadir
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar" class="md-nav__link">
+    Modificar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar" class="md-nav__link">
+    Eliminar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examinar-contenido-de-certificados-y-llaves" class="md-nav__link">
+    Examinar contenido de certificados y llaves
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-se-que" class="md-nav__link">
+    No se que
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ldap-tls" class="md-nav__link">
+    Ldap tls
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generar-certificados" class="md-nav__link">
+    Generar certificados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion" class="md-nav__link">
+    Configuración
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobaciones" class="md-nav__link">
+    Comprobaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openvpn" class="md-nav__link">
+    OpenVpn
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generar-llaves-servidor" class="md-nav__link">
+    Generar llaves servidor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generar-llaves-cliente" class="md-nav__link">
+    Generar llaves cliente
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tunel-manual" class="md-nav__link">
+    Túnel manual
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar" class="md-nav__link">
+    Configurar
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servidor" class="md-nav__link">
+    Servidor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cliente" class="md-nav__link">
+    Cliente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensiones" class="md-nav__link">
+    Extensiones
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fichero-especifico-de-extension" class="md-nav__link">
+    fichero especifico de extensión
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichero-global" class="md-nav__link">
+    fichero global
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kerberos/" title="Kerberos" class="md-nav__link">
+      Kerberos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../OpenVpn/" title="OpenVpn" class="md-nav__link">
+      OpenVpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../The-crazy-thing/" title="The crazy thing!" class="md-nav__link">
+      The crazy thing!
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../TunelSSH/" title="Tunel SSH" class="md-nav__link">
+      Tunel SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gpg/" title="GPG" class="md-nav__link">
+      GPG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvm/" title="Lvm logical volum manager" class="md-nav__link">
+      Lvm logical volum manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../practica-ssl-tls/" title="Practica ssl tls" class="md-nav__link">
+      Practica ssl tls
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../raid/" title="Raid" class="md-nav__link">
+      Raid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-10" type="checkbox" id="nav-9-10">
+    
+    <label class="md-nav__link" for="nav-9-10">
+      Backups
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-10">
+        Backups
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backups/Borg_basico/" title="Borg básico" class="md-nav__link">
+      Borg básico
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backups/Tar/" title="Tar" class="md-nav__link">
+      Tar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backups/rdiff-backup/" title="rdiff-backup" class="md-nav__link">
+      rdiff-backup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backups/rsync/" title="rsync" class="md-nav__link">
+      rsync
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-11" type="checkbox" id="nav-9-11">
+    
+    <label class="md-nav__link" for="nav-9-11">
+      Cortafuegos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-11">
+        Cortafuegos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cortafuegos/Iptables/" title="Iptables" class="md-nav__link">
+      Iptables
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Sistemas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Sistemas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/Actualizar_hora_sys_o_bios/" title="Gestionar Hora" class="md-nav__link">
+      Gestionar Hora
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/Arranque-del-sistema/" title="Arranque del sistema" class="md-nav__link">
+      Arranque del sistema
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/Eliminar_contrase%C3%B1a_windows/" title="Eliminar contraseña windows" class="md-nav__link">
+      Eliminar contraseña windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/Estructura_de_directorios/" title="Estructura de directorios" class="md-nav__link">
+      Estructura de directorios
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/Logs_journalctl/" title="Logs" class="md-nav__link">
+      Logs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/Systemd/" title="Systemd" class="md-nav__link">
+      Systemd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/chroot/" title="Chroot" class="md-nav__link">
+      Chroot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/disco/" title="Disco" class="md-nav__link">
+      Disco
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/gestores_de_paquetes/" title="Gestores de paquetes" class="md-nav__link">
+      Gestores de paquetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/getenforce/" title="getenforce" class="md-nav__link">
+      getenforce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/grub/" title="Grub" class="md-nav__link">
+      Grub
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/home/" title="Cambiar /home" class="md-nav__link">
+      Cambiar /home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/ip_est%C3%A1tica/" title="ip estática raspberry" class="md-nav__link">
+      ip estática raspberry
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/pam/" title="Pam" class="md-nav__link">
+      Pam
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/raid/" title="Raid" class="md-nav__link">
+      Raid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/xinetd/" title="xinetd" class="md-nav__link">
+      xinetd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-17" type="checkbox" id="nav-10-17">
+    
+    <label class="md-nav__link" for="nav-10-17">
+      Automatizacion
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-17">
+        Automatizacion
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/automatizacion/ansible/" title="Ansible" class="md-nav__link">
+      Ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/automatizacion/tareas_programadas/" title="Tareas Programadas" class="md-nav__link">
+      Tareas Programadas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Virtualizacion
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Virtualizacion
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/Docker-basico/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/Lxc/" title="LXC y LXD" class="md-nav__link">
+      LXC y LXD
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/Vagrant/" title="Vagrant" class="md-nav__link">
+      Vagrant
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/kubernetes/" title="Kubernetes" class="md-nav__link">
+      Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/swarm/" title="Swarm" class="md-nav__link">
+      Swarm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-6" type="checkbox" id="nav-11-6">
+    
+    <label class="md-nav__link" for="nav-11-6">
+      Virt manager
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-11-6">
+        Virt manager
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/virt-manager/Backing_chain/" title="Backing_chain" class="md-nav__link">
+      Backing_chain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/virt-manager/Clonar/" title="Clonar de virtual a físico y de físico a virtual." class="md-nav__link">
+      Clonar de virtual a físico y de físico a virtual.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/virt-manager/Instalacion_de_virtualizacion_fedora/" title="Instalación de virtualización fedora" class="md-nav__link">
+      Instalación de virtualización fedora
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/virt-manager/acceder_consola_desde_virsh/" title="acceder consola desde virsh" class="md-nav__link">
+      acceder consola desde virsh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/virt-manager/crear_red_aislada/" title="Crear red aislada" class="md-nav__link">
+      Crear red aislada
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/virt-manager/instalar_maquina_virtual_virt-install/" title="virt" class="md-nav__link">
+      virt
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tlsssl-https" class="md-nav__link">
+    TLS/SSL (HTTPS)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generacio-de-claus-requests-i-certs" class="md-nav__link">
+    Generació de claus, requests i certs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificado-autofirmado" class="md-nav__link">
+    Certificado autofirmado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-clave-privada-y-certificado-autofirmado" class="md-nav__link">
+    Creación de clave privada y certificado autofirmado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-clave-privada-request-i-certificacion" class="md-nav__link">
+    Creación de clave privada, request i certificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-clave-provada" class="md-nav__link">
+    Creación de clave provada
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-sin-interactivo" class="md-nav__link">
+    Request sin interactivo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-una-ca-propia" class="md-nav__link">
+    Crear una CA propia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenido-fisico-y-logico" class="md-nav__link">
+    Contenido físico y lógico
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-certificado-servidor-real" class="md-nav__link">
+    crear certificado servidor real
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passfrase" class="md-nav__link">
+    passfrase
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anadir" class="md-nav__link">
+    Añadir
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar" class="md-nav__link">
+    Modificar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar" class="md-nav__link">
+    Eliminar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examinar-contenido-de-certificados-y-llaves" class="md-nav__link">
+    Examinar contenido de certificados y llaves
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-se-que" class="md-nav__link">
+    No se que
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ldap-tls" class="md-nav__link">
+    Ldap tls
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generar-certificados" class="md-nav__link">
+    Generar certificados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion" class="md-nav__link">
+    Configuración
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobaciones" class="md-nav__link">
+    Comprobaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openvpn" class="md-nav__link">
+    OpenVpn
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generar-llaves-servidor" class="md-nav__link">
+    Generar llaves servidor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generar-llaves-cliente" class="md-nav__link">
+    Generar llaves cliente
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tunel-manual" class="md-nav__link">
+    Túnel manual
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar" class="md-nav__link">
+    Configurar
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servidor" class="md-nav__link">
+    Servidor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cliente" class="md-nav__link">
+    Cliente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensiones" class="md-nav__link">
+    Extensiones
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fichero-especifico-de-extension" class="md-nav__link">
+    fichero especifico de extensión
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichero-global" class="md-nav__link">
+    fichero global
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/jorgepastorr/apuntes/edit/master/docs/seguridad/Certificados-Digitales.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="certificados-digitales">Certificados Digitales</h1>
+<h2 id="tlsssl-https">TLS/SSL (HTTPS)</h2>
+<h3 id="generacio-de-claus-requests-i-certs">Generació de claus, requests i certs</h3>
+<h4 id="certificado-autofirmado">Certificado autofirmado</h4>
+<div class="codehilite"><pre><span></span><code>openssl req -new -x509 -days <span class="m">3650</span> -nodes -keyout serverkey.auto1.pem -out servercert.auto1.pem
+</code></pre></div>
+
+<h4 id="creacion-de-clave-privada-y-certificado-autofirmado">Creación de clave privada y certificado autofirmado</h4>
+<div class="codehilite"><pre><span></span><code>openssl genrsa -out serverkey.auto2.pem
+
+openssl req -new -x509 -days <span class="m">3650</span> -nodes -key serverkey.auto2.pem -out servercert.auto2.pem
+</code></pre></div>
+
+<h4 id="creacion-de-clave-privada-request-i-certificacion">Creación de clave privada, request i certificación</h4>
+<div class="codehilite"><pre><span></span><code>openssl genrsa -out serverkey.web1.pem
+openssl req -new -key serverkey.web1.pem -out serverreq.web1.pem
+openssl x509 -CAkey cakey.pem -CA cacert.pem -req -in serverreq.web1.pem -days <span class="m">3650</span> -CAcreateserial -out servercert.web1.pem
+</code></pre></div>
+
+<h4 id="creacion-de-clave-provada">Creación de clave provada</h4>
+<p>Petición de certificación y firma de la certificación usando fitchero de configuración</p>
+<p>Fitxer exemple de configuració parcial de openssl:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#ca.conf</span>
+<span class="nv">basicConstraints</span> <span class="o">=</span> critical,CA:FALSE 
+<span class="nv">extendedKeyUsage</span> <span class="o">=</span> serverAuth,emailProtection 
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>openssl genrsa -out serverkey.web2.pem
+openssl req -new -key serverkey.web2.pem -out serverreq.web2.pem
+openssl x509 -CAkey cakey.pem -CA cacert.pem -req -in serverreq.web2.pem -days <span class="m">3650</span> -CAcreateserial -extfile ca.conf -out servercert.web2.pem
+</code></pre></div>
+
+<h4 id="request-sin-interactivo">Request sin interactivo</h4>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Generar el certificat + clau privada autosignats</span>
+openssl req -x509 -nodes -days <span class="m">365</span> -sha256 <span class="se">\</span>
+-subj <span class="s1">&#39;/C=ca/ST=Barcelona/L=Barcelona/CN=www.edt.org&#39;</span> <span class="se">\</span>
+-newkey rsa:2048 -keyout mykey.pem -out mycert.pem
+
+➜  openssl req -new -x509 -nodes -out mycrt.pem -keyout mykey.pem
+Generating a RSA private key
+....................................+++++
+.........+++++
+writing new private key to <span class="s1">&#39;mykey.pem&#39;</span>
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter <span class="s1">&#39;.&#39;</span>, the field will be left blank.
+-----
+Country Name <span class="o">(</span><span class="m">2</span> letter code<span class="o">)</span> <span class="o">[</span>AU<span class="o">]</span>:ca
+State or Province Name <span class="o">(</span>full name<span class="o">)</span> <span class="o">[</span>Some-State<span class="o">]</span>:barcelona
+Locality Name <span class="o">(</span>eg, city<span class="o">)</span> <span class="o">[]</span>:Barcelona
+Organization Name <span class="o">(</span>eg, company<span class="o">)</span> <span class="o">[</span>Internet Widgits Pty Ltd<span class="o">]</span>:escola del treball        
+Organizational Unit Name <span class="o">(</span>eg, section<span class="o">)</span> <span class="o">[]</span>:departament informatica
+Common Name <span class="o">(</span>e.g. server FQDN or YOUR name<span class="o">)</span> <span class="o">[]</span>:www.edt.org
+Email Address <span class="o">[]</span>:admin@edt.org
+</code></pre></div>
+
+<h4 id="crear-una-ca-propia">Crear una CA propia</h4>
+<div class="codehilite"><pre><span></span><code><span class="c1"># generar clave privada encriptada con des3 i passfrase (formato PEM)</span>
+➜  openssl genrsa -des3 -out ca.key <span class="m">2048</span>
+
+<span class="c1"># generar el certificat x509 pròpi de l&#39;entitat CA (per a 365 dies) en format PEM</span>
+➜  openssl req -new -x509 -nodes -sha1 -days <span class="m">365</span> -key ca.key -out ca.crt
+Enter pass phrase <span class="k">for</span> ca.key:
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter <span class="s1">&#39;.&#39;</span>, the field will be left blank.
+-----
+Country Name <span class="o">(</span><span class="m">2</span> letter code<span class="o">)</span> <span class="o">[</span>AU<span class="o">]</span>:ca
+State or Province Name <span class="o">(</span>full name<span class="o">)</span> <span class="o">[</span>Some-State<span class="o">]</span>:Barcelona
+Locality Name <span class="o">(</span>eg, city<span class="o">)</span> <span class="o">[]</span>:Barcelona
+Organization Name <span class="o">(</span>eg, company<span class="o">)</span> <span class="o">[</span>Internet Widgits Pty Ltd<span class="o">]</span>:Veritat absoluta
+Organizational Unit Name <span class="o">(</span>eg, section<span class="o">)</span> <span class="o">[]</span>:Departament de certificats
+Common Name <span class="o">(</span>e.g. server FQDN or YOUR name<span class="o">)</span> <span class="o">[]</span>:VeritatAbsoluta
+Email Address <span class="o">[]</span>:admin@edt.org
+
+➜ ll
+-rw-r--r-- <span class="m">1</span> debian debian <span class="m">1</span>,5K mar <span class="m">30</span> <span class="m">11</span>:24 ca.crt
+-rw------- <span class="m">1</span> debian debian <span class="m">1</span>,8K mar <span class="m">30</span> <span class="m">11</span>:17 ca.key
+</code></pre></div>
+
+<h4 id="contenido-fisico-y-logico">Contenido físico y lógico</h4>
+<div class="codehilite"><pre><span></span><code><span class="c1"># contenido fisico</span>
+➜ cat ca.key 
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: <span class="m">4</span>,ENCRYPTED
+DEK-Info: DES-EDE3-CBC,7EB452B3EA57B216
+gtG861azfOG/vZblyVumXLzx9SvFAT3shENQQxNqjW+PMUO9+aB15oNwASSgj1X2
+SGRTEZtViAZdo1B5K8N3nhArTWULsIpHP5EiiS1qDYaFQcU38+Akzw<span class="o">==</span>
+-----END RSA PRIVATE KEY-----
+
+<span class="c1"># contenido logico</span>
+➜ openssl rsa -noout -text -in ca.key
+Enter pass phrase <span class="k">for</span> ca.key:
+RSA Private-Key: <span class="o">(</span><span class="m">2048</span> bit, <span class="m">2</span> primes<span class="o">)</span>
+modulus:
+    <span class="m">00</span>:c8:72:8a:93:51:19:0a:58:d6:45:8f:2e:1b:24:
+    cd:e9:0d:5a:91:69:2f:e9:49:fb:56:78:68:9e:94:
+...
+
+<span class="c1"># ca.crt</span>
+➜ openssl x509 -noout -text -in ca.crt 
+Certificate:
+    Data:
+        Version: <span class="m">3</span> <span class="o">(</span>0x2<span class="o">)</span>
+        Serial Number:
+            <span class="m">56</span>:b0:8d:ea:f1:e0:ea:b6:ca:ca:36:b1:56:35:54:9b:32:e1:87:11
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: <span class="nv">C</span> <span class="o">=</span> ca, <span class="nv">ST</span> <span class="o">=</span> Barcelona, <span class="nv">L</span> <span class="o">=</span> Barcelona, <span class="nv">O</span> <span class="o">=</span> Veritat absoluta, <span class="nv">OU</span> <span class="o">=</span> Departament de certificats, <span class="nv">CN</span> <span class="o">=</span> VeritatAbsoluta, <span class="nv">emailAddress</span> <span class="o">=</span> admin@edt.org
+        Validity
+            Not Before: Mar <span class="m">30</span> <span class="m">09</span>:24:14 <span class="m">2020</span> GMT
+            Not After : Mar <span class="m">30</span> <span class="m">09</span>:24:14 <span class="m">2021</span> GMT
+</code></pre></div>
+
+<h3 id="crear-certificado-servidor-real">crear certificado servidor real</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Crear una clau privada per al servidor</span>
+<span class="c1"># és en format PEM, de 2048 bits i xifrada en 3DES. Utilitza passfrase</span>
+➜ openssl genrsa -des3 -out server.key <span class="m">2048</span>
+
+<span class="c1"># Generar una petició de certificat request per enviar a l&#39;entitat certificadora CA</span>
+➜ openssl req -new -key server.key -out server.csr
+Enter pass phrase <span class="k">for</span> server.key:
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter <span class="s1">&#39;.&#39;</span>, the field will be left blank.
+-----
+Country Name <span class="o">(</span><span class="m">2</span> letter code<span class="o">)</span> <span class="o">[</span>AU<span class="o">]</span>:ca
+State or Province Name <span class="o">(</span>full name<span class="o">)</span> <span class="o">[</span>Some-State<span class="o">]</span>:Barcelona
+Locality Name <span class="o">(</span>eg, city<span class="o">)</span> <span class="o">[]</span>:Barcelona
+Organization Name <span class="o">(</span>eg, company<span class="o">)</span> <span class="o">[</span>Internet Widgits Pty Ltd<span class="o">]</span>:escola del treball
+Organizational Unit Name <span class="o">(</span>eg, section<span class="o">)</span> <span class="o">[]</span>:dep informatica
+Common Name <span class="o">(</span>e.g. server FQDN or YOUR name<span class="o">)</span> <span class="o">[]</span>:www.edt.org
+Email Address <span class="o">[]</span>:admin@edt.org
+
+Please enter the following <span class="s1">&#39;extra&#39;</span> attributes
+to be sent with your certificate request
+A challenge password <span class="o">[]</span>:request password
+An optional company name <span class="o">[]</span>:edt
+
+➜ ll
+-rw-r--r-- <span class="m">1</span> debian debian <span class="m">1</span>,2K mar <span class="m">30</span> <span class="m">11</span>:48 server.csr
+-rw------- <span class="m">1</span> debian debian <span class="m">1</span>,8K mar <span class="m">30</span> <span class="m">11</span>:45 server.key
+</code></pre></div>
+
+<p>una entidad certificadora a de firmar  la peticion request del certificado y devolver un certificado.crt, como aremos nosotros de entidad CA lo autofirmaremos.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Fitxer de configuració de la generació de certificats: indica què certifiquen</span>
+➜ cat ca/ca.conf 
+<span class="nv">basicConstraints</span> <span class="o">=</span> critical,CA:FALSE
+<span class="nv">extendedKeyUsage</span> <span class="o">=</span> serverAuth,emailProtection
+
+<span class="c1"># L&#39;autoritat CA ha de signar el certificat</span>
+➜ openssl x509 -CA ca.crt -CAkey ca.key -req -in server.csr -days <span class="m">365</span> -sha1 -extfile ca/ca.conf -CAcreateserial -out server.crt
+Signature ok
+<span class="nv">subject</span><span class="o">=</span><span class="nv">C</span> <span class="o">=</span> ca, <span class="nv">ST</span> <span class="o">=</span> Barcelona, <span class="nv">L</span> <span class="o">=</span> Barcelona, <span class="nv">O</span> <span class="o">=</span> escola del treball, <span class="nv">OU</span> <span class="o">=</span> dep informatica, <span class="nv">CN</span> <span class="o">=</span> www.edt.org, <span class="nv">emailAddress</span> <span class="o">=</span> admin@edt.org
+Getting CA Private Key
+Enter pass phrase <span class="k">for</span> ca.key:
+
+<span class="c1"># Mostrar el no de sèrie que genera la CA per a cada certificat que emet.</span>
+➜ cat ca.srl
+777493C4F77FDEF98879C20B0EBE80A94E2B048E
+
+<span class="c1"># la entidad le enviara al cliente el archivo server.crt</span>
+
+<span class="c1"># El client que ha sol·licitat el certificat pot validar el certificat respecte la seva clau privada</span>
+➜ openssl x509 -noout -modulus -in server.crt<span class="p">|</span> openssl md5
+<span class="o">(</span>stdin<span class="o">)=</span> 1e560851e07dd9c2774474a44c16abd2
+➜ openssl rsa -noout -modulus -in server.key<span class="p">|</span> openssl md5
+Enter pass phrase <span class="k">for</span> server.key:
+<span class="o">(</span>stdin<span class="o">)=</span> 1e560851e07dd9c2774474a44c16abd2
+</code></pre></div>
+
+<h3 id="passfrase">passfrase</h3>
+<p>Añadir una passfrase a una clave privada suma seguridad, ya que sin esa passfrase nadie podrá utilizar la clave privada.</p>
+<p><strong>inconvenientes</strong>: es que al arrancar el servicio apache pide la passfrase necesaria por cada certificado que tenga una.</p>
+<p><strong>Ventajas</strong>: si no roban la llave privada, si no tienen la pasfrase no podrán utilizarla.</p>
+<p>Al hacer modificaciones en una key se genera otra nueva, después de modificar es recomendable remplazar con un <code>mv</code>.</p>
+<h4 id="anadir">Añadir</h4>
+<div class="codehilite"><pre><span></span><code>➜ openssl rsa -des3 -in server.key -out passfrase.server.key
+writing RSA key
+Enter PEM pass phrase:
+Verifying - Enter PEM pass phrase:
+➜ mv passfrase.server.key server.key 
+</code></pre></div>
+
+<h4 id="modificar">Modificar</h4>
+<div class="codehilite"><pre><span></span><code>➜ openssl rsa -des3 -in server.key -out passfrase.new.server.key
+Enter pass phrase <span class="k">for</span> server.key:
+writing RSA key
+Enter PEM pass phrase:
+Verifying - Enter PEM pass phrase:
+➜ mv passfrase.new.server.key server.key 
+</code></pre></div>
+
+<h4 id="eliminar">Eliminar</h4>
+<div class="codehilite"><pre><span></span><code>➜ openssl rsa -in server.key -out delete-passfrase.server.key
+Enter pass phrase <span class="k">for</span> server.key:
+writing RSA key
+</code></pre></div>
+
+<h3 id="examinar-contenido-de-certificados-y-llaves">Examinar contenido de certificados y llaves</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># contenido certificado</span>
+➜ openssl x509 -noout -text -in autosigned.server.crt  
+
+<span class="c1"># contenido clave privada</span>
+➜ openssl rsa -noout -text -in autosigned.server.key 
+
+<span class="c1"># verificar que el certificado y la llave privada se corresponden.</span>
+➜ openssl x509 -noout -modulus -in autosigned.server.crt <span class="p">|</span> openssl md5 
+<span class="o">(</span>stdin<span class="o">)=</span> 749c4e62abb2fcc4f16325f5ccbe5d24
+➜ openssl rsa -noout -modulus -in autosigned.server.key <span class="p">|</span> openssl md5
+<span class="o">(</span>stdin<span class="o">)=</span> 749c4e62abb2fcc4f16325f5ccbe5d24
+</code></pre></div>
+
+<h2 id="no-se-que">No se que</h2>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>root@hp01 m11<span class="o">]</span><span class="c1"># openssl s_client -connect 172.17.0.2:443</span>
+---
+GET / HTTP/1.1
+Host: www.m11.cat
+
+---
+GET / HTTP/1.1
+Host: www.admin.cat
+
+<span class="o">[</span>root@hp01 m11<span class="o">]</span><span class="c1"># curl -v -ssl https://www.m11.cat</span>
+
+<span class="o">[</span>root@https /<span class="o">]</span><span class="c1"># openssl s_client -connect pop.gmail.com:995</span>
+USER edtasixm14
++OK send PASS
+PASS xxxxx
++OK Welcome.
+STAT
++OK <span class="m">8</span> <span class="m">87440</span>
+LIST
++OK <span class="m">8</span> messages <span class="o">(</span><span class="m">87440</span> bytes<span class="o">)</span>
+<span class="m">1</span> <span class="m">6928</span>
+<span class="m">2</span> <span class="m">7758</span>
+<span class="m">3</span> <span class="m">4844</span>
+<span class="m">4</span> <span class="m">5364</span>
+<span class="m">5</span> <span class="m">5071</span>
+<span class="m">6</span> <span class="m">35142</span>
+<span class="m">7</span> <span class="m">12120</span>
+<span class="m">8</span> <span class="m">10213</span>
+.
+QUIT
+DONE
+
+<span class="c1"># conectar con sclient a un virtual host</span>
+openssl s_client -servername www.web1.org -connect <span class="m">172</span>.17.0.2:443
+openssl s_client -CAfile cacert.pem -servername www.web1.org -connect
+<span class="m">172</span>.17.0.2:443
+
+<span class="c1"># verificar</span>
+➜  tls19:https openssl verify -CAfile cacert.pem servercert.web1.pem                                      
+<span class="c1"># descargar certificado remoto</span>
+➜  tls19:https openssl s_client -servername www.web1.org -connect <span class="m">172</span>.17.0.2:443  &lt; /dev/null <span class="m">2</span>&gt; /dev/null <span class="p">|</span> openssl x509 -outform PEM &gt; downloaded.cert.pem
+➜  tls19:https openssl x509 -noout -text -in downloaded.cert.pem
+</code></pre></div>
+
+<h2 id="ldap-tls">Ldap tls</h2>
+<p>Ldap con conexiones seguras TLS/SSL  y startTLS.</p>
+<h3 id="generar-certificados">Generar certificados</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># genrar llaves privadas, del servidor.</span>
+openssl genrsa -out cakey.pem <span class="m">2048</span>
+openssl genrsa -out serverkey.pem <span class="m">2048</span>
+
+<span class="c1"># genrar certificado propio de la entidad CA por 365 dias</span>
+openssl req -new -x509 -nodes -sha1 -days <span class="m">365</span> -key cakey.pem -out cacrt.pem
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter <span class="s1">&#39;.&#39;</span>, the field will be left blank.
+-----
+Country Name <span class="o">(</span><span class="m">2</span> letter code<span class="o">)</span> <span class="o">[</span>AU<span class="o">]</span>:ca
+State or Province Name <span class="o">(</span>full name<span class="o">)</span> <span class="o">[</span>Some-State<span class="o">]</span>:Barcelona
+Locality Name <span class="o">(</span>eg, city<span class="o">)</span> <span class="o">[]</span>:Barcelona
+Organization Name <span class="o">(</span>eg, company<span class="o">)</span> <span class="o">[</span>Internet Widgits Pty Ltd<span class="o">]</span>:Varitat Absoluta
+Organizational Unit Name <span class="o">(</span>eg, section<span class="o">)</span> <span class="o">[]</span>:Dep de certificats
+Common Name <span class="o">(</span>e.g. server FQDN or YOUR name<span class="o">)</span> <span class="o">[]</span>:VeritatAbsoluta
+Email Address <span class="o">[]</span>:admin@edt.org
+
+<span class="c1"># generar una de  certificado request para enviar a la entidad certificadora CA</span>
+openssl req -new -key serverkey.pem -out servercsr.pem 
+
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter <span class="s1">&#39;.&#39;</span>, the field will be left blank.
+-----
+Country Name <span class="o">(</span><span class="m">2</span> letter code<span class="o">)</span> <span class="o">[</span>AU<span class="o">]</span>:ca
+State or Province Name <span class="o">(</span>full name<span class="o">)</span> <span class="o">[</span>Some-State<span class="o">]</span>:Barcelona
+Locality Name <span class="o">(</span>eg, city<span class="o">)</span> <span class="o">[]</span>:Barcelona
+Organization Name <span class="o">(</span>eg, company<span class="o">)</span> <span class="o">[</span>Internet Widgits Pty Ltd<span class="o">]</span>:escola de mi casa 
+Organizational Unit Name <span class="o">(</span>eg, section<span class="o">)</span> <span class="o">[]</span>:dep informatica
+Common Name <span class="o">(</span>e.g. server FQDN or YOUR name<span class="o">)</span> <span class="o">[]</span>:ldap.edt.org
+Email Address <span class="o">[]</span>:admin@edt.org
+
+Please enter the following <span class="s1">&#39;extra&#39;</span> attributes
+to be sent with your certificate request
+A challenge password <span class="o">[]</span>:request password
+An optional company name <span class="o">[]</span>:edt
+
+<span class="c1"># Una entidad CA a de firmar el servercsr.pem y devolvernos un certificado.crt, como hago yo mismo de entidad</span>
+cat ca.conf 
+<span class="nv">basicConstraints</span> <span class="o">=</span> critical,CA:FALSE
+<span class="nv">extendedKeyUsage</span> <span class="o">=</span> serverAuth,emailProtection
+
+<span class="c1"># Autoridad CA firmando el certificado </span>
+openssl x509 -CA cacrt.pem -CAkey cakey.pem -req -in servercsr.pem -days <span class="m">365</span> -sha1 -extfile ca.conf -CAcreateserial -out servercrt.pem 
+
+Signature ok
+<span class="nv">subject</span><span class="o">=</span><span class="nv">C</span> <span class="o">=</span> ca, <span class="nv">ST</span> <span class="o">=</span> Barcelona, <span class="nv">L</span> <span class="o">=</span> Barcelona, <span class="nv">O</span> <span class="o">=</span> escola de mi casa, <span class="nv">OU</span> <span class="o">=</span> dep informatica, <span class="nv">CN</span> <span class="o">=</span> ldap.edt.org, <span class="nv">emailAddress</span> <span class="o">=</span> admin@edt.org
+Getting CA Private Key
+
+<span class="c1"># archivos finales</span>
+➜  ll
+total 60K
+-rw-r--r-- <span class="m">1</span> debian debian   <span class="m">83</span> abr  <span class="m">1</span> <span class="m">10</span>:14 ca.conf
+-rw-r--r-- <span class="m">1</span> debian debian <span class="m">1</span>,5K abr  <span class="m">1</span> <span class="m">10</span>:23 cacrt.pem
+-rw-r--r-- <span class="m">1</span> debian debian   <span class="m">41</span> abr  <span class="m">1</span> <span class="m">10</span>:35 cacrt.srl
+-rw------- <span class="m">1</span> debian debian <span class="m">1</span>,7K abr  <span class="m">1</span> <span class="m">10</span>:14 cakey.pem
+-rw-r--r-- <span class="m">1</span> debian debian <span class="m">1</span>,5K abr  <span class="m">1</span> <span class="m">10</span>:35 servercrt.pem
+-rw-r--r-- <span class="m">1</span> debian debian <span class="m">1</span>,2K abr  <span class="m">1</span> <span class="m">10</span>:32 servercsr.pem
+-rw------- <span class="m">1</span> debian debian <span class="m">1</span>,7K abr  <span class="m">1</span> <span class="m">10</span>:14 serverkey.pem
+</code></pre></div>
+
+<h3 id="configuracion">Configuración</h3>
+<div class="codehilite"><pre><span></span><code>slapd.conf
+---
+TLSCACertificateFile    /etc/openldap/certs/cacrt.pem
+TLSCertificateFile      /etc/openldap/certs/servercrt.pem
+TLSCertificateKeyFile   /etc/openldap/certs/serverkey.pem
+TLSVerifyClient         never
+TLSCipherSuite          HIGH:MEDIUM:LOW:+SSLv2
+---
+
+ldap.conf
+---
+TLS_CACERT /etc/openldap/certs/cacrt.pem
+SASL_NOCANON    on
+URI ldap://ldap.edt.org
+BASE <span class="nv">dc</span><span class="o">=</span>edt,dc<span class="o">=</span>org
+---
+
+startup.sh
+---
+/sbin/slapd -d0 -h <span class="s2">&quot;ldap:/// ldaps:/// ldapi:///&quot;</span> 
+---
+</code></pre></div>
+
+<p>cliente <code>ldap.conf</code></p>
+<div class="codehilite"><pre><span></span><code>TLS_CACERT /etc/ldap/cacrt.pem
+TLS_REQCERT allow
+
+URI ldap://ldap.edt.org
+BASE <span class="nv">dc</span><span class="o">=</span>edt,dc<span class="o">=</span>org
+
+SASL_NOCANON on
+</code></pre></div>
+
+<h3 id="comprobaciones">Comprobaciones</h3>
+<div class="codehilite"><pre><span></span><code>ldapsearch -x -LLL -ZZ dn
+ldapsearch -x -LLL -ZZ -h ldap.edt.org -b <span class="s1">&#39;dc=edt,dc=org&#39;</span> dn
+ldapsearch -x -LLL -H ldaps://ldap.edt.org dn
+openssl s_client -connect ldap.edt.org:636
+</code></pre></div>
+
+<h3 id="docker">Docker</h3>
+<div class="codehilite"><pre><span></span><code>➜ docker run --rm --name ldap.edt.org -h ldap.edt.org -p <span class="m">389</span>:389  -p <span class="m">636</span>:636 -d jorgepastorr/ldapserver19:tls 
+</code></pre></div>
+
+<h2 id="openvpn">OpenVpn</h2>
+<h3 id="generar-llaves-servidor">Generar llaves servidor</h3>
+<p>Primero creamos nuestra CA</p>
+<div class="codehilite"><pre><span></span><code>➜  openssl genrsa -des3 -out cakey.pem <span class="m">2048</span>
+➜  openssl req -new -x509 -nodes -sha1 -days <span class="m">365</span> -key cakey.pem -out cacert.pem
+Enter pass phrase <span class="k">for</span> cakey.pem:
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter <span class="s1">&#39;.&#39;</span>, the field will be left blank.
+-----
+Country Name <span class="o">(</span><span class="m">2</span> letter code<span class="o">)</span> <span class="o">[</span>AU<span class="o">]</span>:ca
+State or Province Name <span class="o">(</span>full name<span class="o">)</span> <span class="o">[</span>Some-State<span class="o">]</span>:Barcelona
+Locality Name <span class="o">(</span>eg, city<span class="o">)</span> <span class="o">[]</span>:Barcelona
+Organization Name <span class="o">(</span>eg, company<span class="o">)</span> <span class="o">[</span>Internet Widgits Pty Ltd<span class="o">]</span>:Veritat absoluta
+Organizational Unit Name <span class="o">(</span>eg, section<span class="o">)</span> <span class="o">[]</span>:Departament de certificats
+Common Name <span class="o">(</span>e.g. server FQDN or YOUR name<span class="o">)</span> <span class="o">[]</span>:VeritatAbsoluta
+Email Address <span class="o">[]</span>:admin@edt.org
+
+➜ ll
+-rw-r--r-- <span class="m">1</span> debian debian <span class="m">1</span>,5K mar <span class="m">30</span> <span class="m">11</span>:24 cacert.pem
+-rw------- <span class="m">1</span> debian debian <span class="m">1</span>,8K mar <span class="m">30</span> <span class="m">11</span>:17 cakey.pem
+</code></pre></div>
+
+<p>generar la llave del servidor y el request para enviar a la CA para que nos certifique.</p>
+<div class="codehilite"><pre><span></span><code>➜ openssl dhparam -out dh2048.pem <span class="m">2048</span>
+
+<span class="c1"># llave del server</span>
+➜ openssl genrsa  -out serverkey.pem <span class="m">2048</span>                                 
+Generating RSA private key, <span class="m">2048</span> bit long modulus <span class="o">(</span><span class="m">2</span> primes<span class="o">)</span>
+.........................................+++++
+................................................................+++++
+e is <span class="m">65537</span> <span class="o">(</span>0x010001<span class="o">)</span>
+
+<span class="c1"># request para la CA</span>
+➜ openssl req -new -key serverkey.pem -out serverreq.pem
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter <span class="s1">&#39;.&#39;</span>, the field will be left blank.
+-----
+Country Name <span class="o">(</span><span class="m">2</span> letter code<span class="o">)</span> <span class="o">[</span>AU<span class="o">]</span>:ca
+State or Province Name <span class="o">(</span>full name<span class="o">)</span> <span class="o">[</span>Some-State<span class="o">]</span>:barcelona
+Locality Name <span class="o">(</span>eg, city<span class="o">)</span> <span class="o">[]</span>:barcelona
+Organization Name <span class="o">(</span>eg, company<span class="o">)</span> <span class="o">[</span>Internet Widgits Pty Ltd<span class="o">]</span>:server vvpn
+Organizational Unit Name <span class="o">(</span>eg, section<span class="o">)</span> <span class="o">[]</span>:VpnServer
+Common Name <span class="o">(</span>e.g. server FQDN or YOUR name<span class="o">)</span> <span class="o">[]</span>:VpnServer
+Email Address <span class="o">[]</span>:
+
+Please enter the following <span class="s1">&#39;extra&#39;</span> attributes
+to be sent with your certificate request
+A challenge password <span class="o">[]</span>:request password
+An optional company name <span class="o">[]</span>:edt
+</code></pre></div>
+
+<p>Como no tenemos CA externa, simulamos una y nos auto certificamos.</p>
+<p>fichero de extensiones para servidor:</p>
+<p><em>ext.server.conf</em></p>
+<div class="codehilite"><pre><span></span><code><span class="nv">basicConstraints</span>       <span class="o">=</span> CA:FALSE
+<span class="nv">nsCertType</span>             <span class="o">=</span> server
+<span class="nv">nsComment</span>              <span class="o">=</span> <span class="s2">&quot;OpenSSL Generated Server Certificate&quot;</span>
+<span class="nv">subjectKeyIdentifier</span>   <span class="o">=</span> <span class="nb">hash</span>
+<span class="nv">authorityKeyIdentifier</span> <span class="o">=</span> keyid,issuer:always
+<span class="nv">extendedKeyUsage</span>       <span class="o">=</span> serverAuth
+<span class="nv">keyUsage</span>               <span class="o">=</span> digitalSignature, keyEncipherment
+</code></pre></div>
+
+<p>Generar certificado ( esto lo debería hacer una certificadora externa a nosotros )</p>
+<div class="codehilite"><pre><span></span><code>➜ openssl x509 -CAkey cakey.pem -CA cacert.pem -req -in serverreq.pem -days <span class="m">365</span> -CAcreateserial -extfile ext.server.conf -out servercert.pem 
+Signature ok
+<span class="nv">subject</span><span class="o">=</span><span class="nv">C</span> <span class="o">=</span> ca, <span class="nv">ST</span> <span class="o">=</span> barcelona, <span class="nv">L</span> <span class="o">=</span> barcelona, <span class="nv">O</span> <span class="o">=</span> server vvpn, <span class="nv">OU</span> <span class="o">=</span> VpnServer, <span class="nv">CN</span> <span class="o">=</span> VpnServer
+Getting CA Private Key
+</code></pre></div>
+
+<p>Archivos generados:</p>
+<div class="codehilite"><pre><span></span><code>➜  tls19:vpn ll
+total 64K
+-rw-r--r-- <span class="m">1</span> debian debian <span class="m">1</span>,4K abr  <span class="m">3</span> <span class="m">19</span>:29 cacert.pem
+-rw-r--r-- <span class="m">1</span> debian debian   <span class="m">41</span> abr  <span class="m">3</span> <span class="m">19</span>:40 cacert.srl
+-rw------- <span class="m">1</span> debian debian <span class="m">1</span>,7K abr  <span class="m">3</span> <span class="m">19</span>:27 cakey.pem
+-rw-r--r-- <span class="m">1</span> debian debian  <span class="m">424</span> abr  <span class="m">4</span> <span class="m">11</span>:39 dh2048.pem
+-rw-r--r-- <span class="m">1</span> debian debian  <span class="m">301</span> abr  <span class="m">3</span> <span class="m">19</span>:12 ext.server.conf
+-rw-r--r-- <span class="m">1</span> debian debian <span class="m">1</span>,8K abr  <span class="m">3</span> <span class="m">19</span>:37 servercert.pem
+-rw------- <span class="m">1</span> debian debian <span class="m">1</span>,7K abr  <span class="m">3</span> <span class="m">19</span>:30 serverkey.pem
+-rw-r--r-- <span class="m">1</span> debian debian <span class="m">1</span>,1K abr  <span class="m">3</span> <span class="m">19</span>:32 serverreq.pem
+</code></pre></div>
+
+<h3 id="generar-llaves-cliente">Generar llaves cliente</h3>
+<p>Lo recomendable es que cada cliente tenga una llave propia para conectar con el servidor, por lo tanto estos pasos se deben repetir por cada cliente que quiera conectar con el servidor.</p>
+<p>generar llave de cliente y request para certificar.</p>
+<div class="codehilite"><pre><span></span><code>➜ openssl genrsa  -out cliekey1.pem <span class="m">2048</span>                                                                                          
+Generating RSA private key, <span class="m">2048</span> bit long modulus <span class="o">(</span><span class="m">2</span> primes<span class="o">)</span>
+........................................................................+++++
+....................................................+++++
+e is <span class="m">65537</span> <span class="o">(</span>0x010001<span class="o">)</span>
+
+<span class="c1"># generar request ( quien soy )</span>
+➜ openssl req -new -key cliekey1.pem -out cliereq1.pem                                                                              
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter <span class="s1">&#39;.&#39;</span>, the field will be left blank.
+-----
+Country Name <span class="o">(</span><span class="m">2</span> letter code<span class="o">)</span> <span class="o">[</span>AU<span class="o">]</span>:ca
+State or Province Name <span class="o">(</span>full name<span class="o">)</span> <span class="o">[</span>Some-State<span class="o">]</span>:barcelona
+Locality Name <span class="o">(</span>eg, city<span class="o">)</span> <span class="o">[]</span>:barcelona
+Organization Name <span class="o">(</span>eg, company<span class="o">)</span> <span class="o">[</span>Internet Widgits Pty Ltd<span class="o">]</span>:cliente <span class="m">1</span> server vpn
+Organizational Unit Name <span class="o">(</span>eg, section<span class="o">)</span> <span class="o">[]</span>:cliente1
+Common Name <span class="o">(</span>e.g. server FQDN or YOUR name<span class="o">)</span> <span class="o">[]</span>:cliente1
+Email Address <span class="o">[]</span>:
+
+Please enter the following <span class="s1">&#39;extra&#39;</span> attributes
+to be sent with your certificate request
+A challenge password <span class="o">[]</span>:request password
+An optional company name <span class="o">[]</span>:edt
+</code></pre></div>
+
+<p>Generar certificado desde una CA, una CA verifica que eres quien dices ser.</p>
+<p>fichero de extensiones para cliente</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">basicConstraints</span>        <span class="o">=</span> CA:FALSE
+<span class="nv">subjectKeyIdentifier</span>    <span class="o">=</span> <span class="nb">hash</span>
+<span class="nv">authorityKeyIdentifier</span>  <span class="o">=</span> keyid,issuer:always
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>➜ openssl x509 -CAkey cakey.pem -CA cacert.pem -req -in cliereq1.pem -days <span class="m">365</span> -CAcreateserial -extfile ext.client.conf -out cliecert1.pem  
+Signature ok
+<span class="nv">subject</span><span class="o">=</span><span class="nv">C</span> <span class="o">=</span> ca, <span class="nv">ST</span> <span class="o">=</span> barcelona, <span class="nv">L</span> <span class="o">=</span> barcelona, <span class="nv">O</span> <span class="o">=</span> cliente <span class="m">1</span> server vpn, <span class="nv">OU</span> <span class="o">=</span> cliente1, <span class="nv">CN</span> <span class="o">=</span> cliente1
+Getting CA Private Key
+</code></pre></div>
+
+<p>Archivos generados para cliente:</p>
+<div class="codehilite"><pre><span></span><code>➜ ll
+-rw-r--r-- <span class="m">1</span> debian debian <span class="m">1</span>,4K abr  <span class="m">3</span> <span class="m">19</span>:29 cacert.pem
+-rw-r--r-- <span class="m">1</span> debian debian <span class="m">1</span>,6K abr  <span class="m">3</span> <span class="m">19</span>:40 cliecert1.pem
+-rw------- <span class="m">1</span> debian debian <span class="m">1</span>,7K abr  <span class="m">3</span> <span class="m">19</span>:38 cliekey1.pem
+-rw-r--r-- <span class="m">1</span> debian debian <span class="m">3</span>,6K abr  <span class="m">3</span> <span class="m">19</span>:15 client.conf
+-rw-r--r-- <span class="m">1</span> debian debian <span class="m">1</span>,1K abr  <span class="m">3</span> <span class="m">19</span>:40 cliereq1.pem
+-rw-r--r-- <span class="m">1</span> debian debian  <span class="m">113</span> abr  <span class="m">3</span> <span class="m">19</span>:13 ext.client.conf
+</code></pre></div>
+
+<h3 id="tunel-manual">Túnel manual</h3>
+<p>Una manera  de verificar que los certificados funcionan correctamente es creando un túnel manualmente, si funcionan correctamente pasamos va configurar el servidor.</p>
+<div class="codehilite"><pre><span></span><code>pc02 ➜  sudo openvpn --remote pc03 --dev tun1 --ifconfig <span class="m">10</span>.4.0.1 <span class="m">10</span>.4.0.2 --tls-server --dh dh2048.pem --ca cacert.pem --cert servercert.pem --key serverkey.pem --reneg-sec <span class="m">60</span>
+
+<span class="o">[</span>jorge@pc03 certs<span class="o">]</span>$ sudo openvpn --remote pc02 --dev tun1 --ifconfig <span class="m">10</span>.4.0.2 <span class="m">10</span>.4.0.1 --tls-client --ca cacert.pem --cert cliecert1.pem --key cliekey1.pem --reneg-sec <span class="m">60</span>
+</code></pre></div>
+
+<h3 id="configurar">Configurar</h3>
+<h4 id="servidor">Servidor</h4>
+<p>Primero de todo hacemos una copia del servicio y lo modificamos para tener una configuración como se ve en el siguiente recuadro</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>fedora@aws ~<span class="o">]</span>$ sudo cp /lib/systemd/system/openvpn-server@.service /etc/systemd/system/.
+
+<span class="o">[</span>fedora@aws ~<span class="o">]</span>$ cat /etc/systemd/system/openvpn-server<span class="se">\@</span>.service 
+<span class="o">[</span>Unit<span class="o">]</span>
+<span class="nv">Description</span><span class="o">=</span>OpenVPN service <span class="k">for</span> %I hisx
+<span class="nv">After</span><span class="o">=</span>syslog.target network-online.target
+
+<span class="o">[</span>Service<span class="o">]</span>
+<span class="nv">Type</span><span class="o">=</span>forking
+<span class="nv">PrivateTmp</span><span class="o">=</span><span class="nb">true</span>
+<span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/echo serveri %i %I
+<span class="nv">PIDFile</span><span class="o">=</span>/var/run/openvpn-server/%i.pid
+<span class="nv">ExecStart</span><span class="o">=</span>/usr/sbin/openvpn --daemon --writepid /var/run/openvpn-server/%i.pid --cd /etc/openvpn/ --config %i.conf
+
+<span class="o">[</span>Install<span class="o">]</span>
+<span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</code></pre></div>
+
+<p>Cogemos el archivo de configuración de muestra y lo modificamos de la siguiente manera.</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>fedora@aws ~<span class="o">]</span>$ cp /usr/share/doc/openvpn/sample/sample-config-files/server.conf .
+<span class="o">[</span>fedora@aws ~<span class="o">]</span>$ sudo cp server.conf /etc/openvpn/confserver.conf
+<span class="o">[</span>fedora@aws ~<span class="o">]</span>$ cat /etc/openvpn/confserver.conf 
+
+port <span class="m">1194</span>
+proto udp
+dev tun     <span class="c1"># interfaz de vpn</span>
+
+<span class="c1"># nuestras llaves para el server</span>
+ca /etc/openvpn/keys/cacert.pem
+cert /etc/openvpn/keys/servercert.pem
+key /etc/openvpn/keys/serverkey.pem 
+dh /etc/openvpn/keys/dh2048.pem
+
+server <span class="m">10</span>.8.0.0 <span class="m">255</span>.255.255.0   <span class="c1"># red del vpn</span>
+ifconfig-pool-persist ipp.txt
+client-to-client <span class="c1"># clientes se ven entre ellos</span>
+<span class="p">;</span>duplicate-cn  <span class="c1">#  no permitir diferentes conexxiones con la misma llave</span>
+
+keepalive <span class="m">10</span> <span class="m">120</span>
+cipher AES-256-CBC
+comp-lzo    <span class="c1"># compresion</span>
+
+persist-key
+persist-tun
+
+<span class="c1"># datos de logs</span>
+status openvpn-status.log
+verb <span class="m">3</span>
+explicit-exit-notify <span class="m">1</span>
+</code></pre></div>
+
+<p>Los archivos de configuración quedan con la siguiente estructura.</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>fedora@ip-172-31-92-8 ~<span class="o">]</span>$ sudo tree /etc/openvpn/
+/etc/openvpn/
+├── client
+├── confserver.conf
+├── ipp.txt
+├── keys
+│   ├── cacert.pem
+│   ├── dh2048.pem
+│   ├── servercert.pem
+│   └── serverkey.pem
+├── openvpn-status.log
+└── server
+</code></pre></div>
+
+<p>Poner en marcha el servidor.</p>
+<p>Al poner en marcha el servidor Hay que tener en cuenta que hemos modificado un dominio manualmente, por eso se han de recargar. Otra cosa a tener en cuenta es que en el start, hay que indicar el nombre del archivo de configuración <code>openvpn-server@confserver</code></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># recargar los dominios</span>
+<span class="o">[</span>fedora@aws ~<span class="o">]</span>$ sudo systemctl daemon-reload 
+
+<span class="c1"># encender el servidor</span>
+<span class="o">[</span>fedora@aws ~<span class="o">]</span>$ sudo systemctl start openvpn-server@confserver.service
+
+<span class="c1"># comprovar interfaz creada</span>
+<span class="o">[</span>fedora@aws <span class="o">]</span>$ ip a s tun0
+<span class="m">8</span>: tun0: &lt;POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP&gt; mtu <span class="m">1500</span> qdisc fq_codel state UNKNOWN group default qlen <span class="m">100</span>
+    link/none 
+    inet <span class="m">10</span>.8.0.1 peer <span class="m">10</span>.8.0.2/32 scope global tun0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::b502:a827:5610:7c23/64 scope link stable-privacy 
+       valid_lft forever preferred_lft forever
+</code></pre></div>
+
+<h4 id="cliente">Cliente</h4>
+<p>En la configuración del cliente es mas simple, ya que solo se a de modificar el archivo de configuración, agregar las llaves del cliente en su sitio y arrancar el servicio. Todos estos pasos se han de hacer por cada cliente con sus claves propias.</p>
+<p>Archivo de configuración:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>jorge@pc03<span class="o">]</span>$ sudo cat client/confclient.conf
+client
+dev tun
+proto udp
+
+remote aws <span class="m">1194</span> <span class="c1"># ip/host port del servidor remoto</span>
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+
+<span class="c1"># certificados</span>
+ca /etc/openvpn/keys/cacert.pem
+cert  /etc/openvpn/keys/cliecert1.pem
+key  /etc/openvpn/keys/cliekey1.pem
+
+remote-cert-tls server
+cipher AES-256-CBC
+comp-lzo
+verb <span class="m">3</span>
+</code></pre></div>
+
+<p>Se colocan las llaves en su sitio indicado</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>jorge@pc03 openvpn<span class="o">]</span>$ sudo tree
+.
+├── client
+│   └── confclient.conf
+├── keys
+│   ├── cacert.pem
+│   ├── cliecert1.pem
+│   └── cliekey1.pem
+└── server
+</code></pre></div>
+
+<p>Como no tengo resolución dns  indico la resolución en el <code>/etc/hosts</code></p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>jorge@pc03<span class="o">]</span>$ cat /etc/hosts
+<span class="m">127</span>.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+<span class="m">3</span>.86.219.56 aws
+</code></pre></div>
+
+<p>Arrancar y comprobar.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># arrancar servicio, con el nombre del archivo de configuración</span>
+<span class="o">[</span>jorge@pc03<span class="o">]</span>$ sudo systemctl start openvpn-client@confclient
+
+<span class="c1"># verificar que se a creado la interfaz</span>
+<span class="o">[</span>jorge@pc03<span class="o">]</span>$ ip a s tun0
+<span class="m">9</span>: tun0: &lt;POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP&gt; mtu <span class="m">1500</span> qdisc fq_codel state UNKNOWN group default qlen <span class="m">100</span>
+    link/none 
+    inet <span class="m">10</span>.8.0.6 peer <span class="m">10</span>.8.0.5/32 scope global tun0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::7b5f:a77b:2a32:be1e/64 scope link stable-privacy 
+       valid_lft forever preferred_lft forever
+
+<span class="c1"># comprovar que llego al otro extremo</span>
+<span class="o">[</span>jorge@pc03<span class="o">]</span>$ curl <span class="m">10</span>.8.0.1:13
+<span class="m">04</span> APR <span class="m">2020</span> <span class="m">11</span>:26:59 UTC
+</code></pre></div>
+
+<h2 id="extensiones">Extensiones</h2>
+<h3 id="fichero-especifico-de-extension">fichero especifico de extensión</h3>
+<p>Generar un certificado de servidor ldap que correrá en un container llamado <code>ldap.edt.org</code> pero que también acepte conexiones realizadas en nip <code>172.17.0.2, 127.0.0.1, ldaps://mysecureldapserver.org</code>.</p>
+<p>Creo un fichero de extensiones y defino el <code>subjectAltName</code> para cada uno de los nombres alternativos.</p>
+<p><em>ext.alterare.conf</em></p>
+<div class="codehilite"><pre><span></span><code><span class="nv">basicConstraints</span><span class="o">=</span>CA:FALSE
+<span class="nv">extendedKeyUsage</span><span class="o">=</span>serverAuth
+<span class="nv">subjectAltName</span><span class="o">=</span>IP:172.17.0.2,IP:127.0.0.1,email:copy,URI:ldaps://mysecureldapserver.org
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>➜  ldap openssl x509 -CAkey cakey.pem -CA cacrt.pem -req -in serverreq.pem -days <span class="m">365</span> -CAcreateserial  -extfile ext.alterate.conf -out servercert.alternate.pem 
+Signature ok
+<span class="nv">subject</span><span class="o">=</span><span class="nv">C</span> <span class="o">=</span> ca, <span class="nv">ST</span> <span class="o">=</span> barcelona, <span class="nv">L</span> <span class="o">=</span> barcelona, <span class="nv">O</span> <span class="o">=</span> edt, <span class="nv">OU</span> <span class="o">=</span> EDT, <span class="nv">CN</span> <span class="o">=</span> ldap.edt.org
+Getting CA Private Key
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>➜  ldap openssl x509 -noout -text -in servercert.alternate.pem                                                                                                  
+Certificate:
+    Data:
+        Version: <span class="m">3</span> <span class="o">(</span>0x2<span class="o">)</span>
+        Serial Number:
+            7a:e9:d4:14:65:f2:8e:66:aa:9c:0f:88:33:24:8c:cb:21:02:05:dc
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: <span class="nv">C</span> <span class="o">=</span> ca, <span class="nv">ST</span> <span class="o">=</span> Barcelona, <span class="nv">L</span> <span class="o">=</span> Barcelona, <span class="nv">O</span> <span class="o">=</span> Veritat absoluta, <span class="nv">OU</span> <span class="o">=</span> departament certificats, <span class="nv">CN</span> <span class="o">=</span> VeritatAbsoluta
+        Validity
+            Not Before: Apr  <span class="m">6</span> <span class="m">08</span>:54:33 <span class="m">2020</span> GMT
+            Not After : Apr  <span class="m">6</span> <span class="m">08</span>:54:33 <span class="m">2021</span> GMT
+        Subject: <span class="nv">C</span> <span class="o">=</span> ca, <span class="nv">ST</span> <span class="o">=</span> barcelona, <span class="nv">L</span> <span class="o">=</span> barcelona, <span class="nv">O</span> <span class="o">=</span> edt, <span class="nv">OU</span> <span class="o">=</span> EDT, <span class="nv">CN</span> <span class="o">=</span> ldap.edt.org
+        Subject Public Key Info:
+...
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Subject Alternative Name: 
+                IP Address:172.17.0.2, IP Address:127.0.0.1, URI:ldaps://mysecureldapserver.org
+</code></pre></div>
+
+<h3 id="fichero-global">fichero global</h3>
+<p>fedora: <code>/etc/pki/tls/openssl.cnf</code> , debian: <code>/etc/ssl/openssl.cnf</code> </p>
+<p><em>openssl.cnf</em></p>
+<div class="codehilite"><pre><span></span><code>...
+<span class="o">[</span> my_client <span class="o">]</span>
+<span class="nv">basicConstraints</span>        <span class="o">=</span> CA:FALSE
+<span class="nv">subjectKeyIdentifier</span>    <span class="o">=</span> <span class="nb">hash</span>
+<span class="nv">authorityKeyIdentifier</span>  <span class="o">=</span> keyid,issuer:always
+
+<span class="o">[</span> my_server <span class="o">]</span>
+<span class="nv">basicConstraints</span>    <span class="o">=</span> CA:FALSE
+<span class="nv">nsCertType</span>          <span class="o">=</span> server
+<span class="nv">nsComment</span>           <span class="o">=</span> <span class="s2">&quot;OpenSSL Generated Server Certificate&quot;</span>
+<span class="nv">subjectKeyIdentifier</span> <span class="o">=</span> <span class="nb">hash</span>
+<span class="nv">authorityKeyIdentifier</span> <span class="o">=</span> keyid,issuer:always
+<span class="nv">extendedKeyUsage</span>    <span class="o">=</span> serverAuth
+<span class="nv">keyUsage</span>            <span class="o">=</span> digitalSignature, keyEncipherment
+...
+</code></pre></div>
+
+<p>Certificar usando la extensión del fichero global</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Ca utilizando extension de archivo de configuración</span>
+➜  ldap openssl x509 -CAkey cakey.pem -CA cacrt.pem -req -in serverreq.pem -days <span class="m">365</span> -CAcreateserial  -extfile /etc/ssl/openssl.cnf -extensions my_client -out servercert.alternate.pem
+
+<span class="c1"># certificado autofirmado</span>
+➜  ldap openssl req -new -x509 -key cakey.pem -config openssl.cnf -extensions usr_cert -out cert1.pem
+</code></pre></div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../lenguajes/python3/argparse/" title="Argparse" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Argparse
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Kerberos/" title="Kerberos" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Kerberos
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

