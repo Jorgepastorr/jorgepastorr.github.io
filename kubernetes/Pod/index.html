@@ -1,0 +1,922 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="http://kubernetes.jorgepastorr.tk:50022/Pod/">
+      
+      
+        <meta name="author" content="Jorge Pastor">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../images/kubernetes.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Pod - Proyecto Kubernetes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="__gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#pod" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://kubernetes.jorgepastorr.tk:50022" title="Proyecto Kubernetes" aria-label="Proyecto Kubernetes" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../images/logokubernetes.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Proyecto Kubernetes
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Pod
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://gitlab.com/jorgepastorr/kubernetes/" title="Go to repository" class="md-source" data-md-source="gitlab">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__gitlab" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jorgepastorr/kubernetes
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://kubernetes.jorgepastorr.tk:50022" title="Proyecto Kubernetes" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../images/logokubernetes.png" width="48" height="48">
+      
+    </a>
+    Proyecto Kubernetes
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://gitlab.com/jorgepastorr/kubernetes/" title="Go to repository" class="md-source" data-md-source="gitlab">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__gitlab" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jorgepastorr/kubernetes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Kubernetes" class="md-nav__link">
+      Kubernetes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Instalaci%C3%B3n/" title="Instalación" class="md-nav__link">
+      Instalación
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Pod
+      </label>
+    
+    <a href="./" title="Pod" class="md-nav__link md-nav__link--active">
+      Pod
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pod" class="md-nav__link">
+    Pod
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionar-pod-manualmente" class="md-nav__link">
+    Gestionar pod manualmente
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comandos-de-gestion-en-pods" class="md-nav__link">
+    Comandos de gestion en pods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manifiestos" class="md-nav__link">
+    Manifiestos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple" class="md-nav__link">
+    Simple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dos-pods" class="md-nav__link">
+    Dos pods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dos-contenedores" class="md-nav__link">
+    Dos contenedores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labels" class="md-nav__link">
+    Labels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Replicaset/" title="Replicaset" class="md-nav__link">
+      Replicaset
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Deployment/" title="Deployment" class="md-nav__link">
+      Deployment
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Services_Endpoints/" title="Services & Endpoints" class="md-nav__link">
+      Services & Endpoints
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Namespaces/" title="Namespaces" class="md-nav__link">
+      Namespaces
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Limits/" title="Limits" class="md-nav__link">
+      Limits
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Probes/" title="Probes" class="md-nav__link">
+      Probes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ConfigMaps/" title="ConfigMaps & Environtment" class="md-nav__link">
+      ConfigMaps & Environtment
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Secrets/" title="Secrets" class="md-nav__link">
+      Secrets
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Volumes/" title="Volumes" class="md-nav__link">
+      Volumes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../RBAC/" title="RBAC" class="md-nav__link">
+      RBAC
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Ingres/" title="Ingres" class="md-nav__link">
+      Ingres
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../aws-cli/" title="AWS-clie" class="md-nav__link">
+      AWS-clie
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../aws/awseks/" title="AWS EKS" class="md-nav__link">
+      AWS EKS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      presentacion
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        presentacion
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../presentacion/diapositiva.html" title="diapositiva" class="md-nav__link">
+      diapositiva
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../presentacion/diapositiva.pdf" title="diapositiva-pdf" class="md-nav__link">
+      diapositiva-pdf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../presentacion/videos/" title="Videos" class="md-nav__link">
+      Videos
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pod" class="md-nav__link">
+    Pod
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionar-pod-manualmente" class="md-nav__link">
+    Gestionar pod manualmente
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comandos-de-gestion-en-pods" class="md-nav__link">
+    Comandos de gestion en pods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manifiestos" class="md-nav__link">
+    Manifiestos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple" class="md-nav__link">
+    Simple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dos-pods" class="md-nav__link">
+    Dos pods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dos-contenedores" class="md-nav__link">
+    Dos contenedores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labels" class="md-nav__link">
+    Labels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://gitlab.com/jorgepastorr/kubernetes/edit/master/docs/Pod.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Pod</h1>
+                
+                <h2 id="pod">Pod</h2>
+<p>Un pod es uno o mas contenedores que comparten namespaces entre si.</p>
+<p>Los contenedores internos de un pod comparen NCT, IPC, UTS. es decir comparten ip, hostname, y procesos.</p>
+<p>Para crear los contenedores del pod, primero crea un contenedor de configuración a este le extrae el id, y a partir de este id crea los contenedores necesarios, de esta forma pueden compartir la red, hostname y procesos entre ellos. para finalizar la creación del pod elimina el container de configuración.</p>
+<p><strong>comparten</strong>: IPC inter process comunication, Network, UTS  Unix timesharing system</p>
+<p><strong>no comparten</strong>: mount, PID, USER, Cgroup.</p>
+<p>El no compartir el mount, permite decidir que montar y no montar en cada contenedor, y el no compartir Cgroup da control sobre la cpu que consume cada container.</p>
+<h2 id="gestionar-pod-manualmente">Gestionar pod manualmente</h2>
+<p>https://kubernetes.io/docs/reference/kubectl/conventions/</p>
+<p>Al crear un pod hay que tener en cuenta la versión de la api que estamos utilizando y que la imagen desde la que creará el contenedor la cogerá de docker.</p>
+<p>También hay que tener en cuenta, que crear un pod desde linea de comandos es una mala practica, lo recomendable es utilizar manifiestos o un objeto de mas alto nivel, ya que pod por si mismo no puede auto ejecutarse, por lo tanto si muere se tendrá que arrancar manualmente otra vez.</p>
+<p><strong>Importante</strong>: En el caso de que un container de un pod fallara, el pod se crea, pero no da datos de que a fallado, en ese caso se tendrá que inspeccionar el pod con <code>kubectl describe pod &lt;nombre-pod&gt; o kubectl logs &lt;nombre-pod&gt;</code></p>
+<div class="codehilite"><pre><span></span><code>➜  sudo kubectl api-versions <span class="c1"># ver versiónnde kubectl </span>
+➜  ~ sudo kubectl run --generator<span class="o">=</span>run-pod/v1 podtest --image<span class="o">=</span>nginx:alpine
+pod/podtest created
+
+➜  ~ sudo kubectl get pods                                          
+NAME      READY   STATUS    RESTARTS   AGE
+podtest   <span class="m">1</span>/1     Running   <span class="m">0</span>          12s
+</code></pre></div>
+
+<ul>
+<li>con <code>get pods</code> se puede ver como a creado el pod y su estado es corriendo, en la columna <code>READY</code> se ve que esta corriendo un contenedor de uno, ya que en un pod puede haber diferentes contenedores.</li>
+</ul>
+<h3 id="comandos-de-gestion-en-pods">Comandos de gestion en pods</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># crear pod</span>
+➜  sudo kubectl run --generator<span class="o">=</span>run-pod/v1 podtest --image<span class="o">=</span>nginx:alpine
+➜  sudo kubectl delete pod podtest1 <span class="c1"># eliminar pod</span>
+
+<span class="c1"># informativos</span>
+➜  sudo kubectl describe  pod podtest <span class="c1"># informacion del pod</span>
+➜  sudo kubectl get pod podtest -o yaml <span class="c1"># extraer info de pot en yaml</span>
+➜  sudo kubectl api-resources <span class="c1"># diferentes recursos de la api</span>
+
+<span class="c1"># entrada</span>
+➜  sudo kubectl <span class="nb">exec</span> -it podtest -- sh <span class="c1"># entrar pod con 1 contenedor</span>
+➜  sudo kubectl <span class="nb">exec</span> -it doscont -c contenedor2 -- sh <span class="c1"># entrar contenedor2 del pod doscont</span>
+
+<span class="c1"># logs</span>
+➜  sudo kubectl logs podtest    <span class="c1"># ver logs</span>
+➜  sudo kubectl logs podtest -f <span class="c1"># vre logs interactivos</span>
+➜  sudo kubectl logs doscont -c contenedor1 <span class="c1"># ver logs del contendor1</span>
+
+<span class="c1"># manifiestos</span>
+➜  sudo kubectl apply -f pod.yaml  <span class="c1"># aplicar manifiesto</span>
+➜  sudo kubectl delete -f pod.yaml <span class="c1"># eliminar manifiesto</span>
+</code></pre></div>
+
+<h3 id="manifiestos">Manifiestos</h3>
+<p>Un manifiesto es un archivo en yaml , yml o json que define el recurso que queremos crear o actualizar en kubernetes, la ventaja que proporciona esta practica, es que, se puede desplegar uno o mas pods a la vez y estos teniendo uno o mas contenedores en su interior.</p>
+<p>https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/</p>
+<h4 id="simple">Simple</h4>
+<p>Ejemplo de manifiesto muy simple, con un pod podtest2 y un contenedor de una imagen nginx.</p>
+<p><em>pod.yml</em></p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Pod</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">podtest2</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">containers</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">contenedor1</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx:alpine</span>
+</code></pre></div>
+
+<p>Desplegar manifiesto.</p>
+<div class="codehilite"><pre><span></span><code>➜  pods sudo kubectl apply -f pod.yaml 
+pod/podtest2 created
+➜  pods sudo kubectl get pods
+NAME       READY   STATUS    RESTARTS   AGE
+podtest2   <span class="m">1</span>/1     Running   <span class="m">0</span>          15s
+
+➜  pods sudo kubectl delete -f pod.yaml
+</code></pre></div>
+
+<h4 id="dos-pods">Dos pods</h4>
+<p>En este ejemplo de manifiesto se crean dos pods, para identificar donde acaba un pod y donde empieza el siguiente se define con <code>---</code> .</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Pod</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">podtest2</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">containers</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">contenedor1</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx:alpine</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Pod</span>
+<span class="nt">metadata</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">podtest3</span>
+<span class="nt">spec</span><span class="p">:</span>
+    <span class="nt">containers</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">contenedor1</span>
+      <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx:alpine</span>
+</code></pre></div>
+
+<p>Se puede ver como al cargarlo se crean  dos pods a la vez.</p>
+<div class="codehilite"><pre><span></span><code>➜  pods sudo kubectl apply -f pod.yaml
+pod/podtest2 unchanged
+pod/podtest3 created
+➜  pods sudo kubectl get pods
+NAME       READY   STATUS    RESTARTS   AGE
+podtest2   <span class="m">1</span>/1     Running   <span class="m">0</span>          45s
+podtest3   <span class="m">1</span>/1     Running   <span class="m">0</span>          19s
+
+➜  pods sudo kubectl delete -f pod.yaml 
+pod <span class="s2">&quot;podtest2&quot;</span> deleted
+pod <span class="s2">&quot;podtest3&quot;</span> deleted
+</code></pre></div>
+
+<h4 id="dos-contenedores">Dos contenedores</h4>
+<p>Al crear dos contenedores en el mismo pod se tiene que tener en cuenta, que estos dos contenedores están compartiendo ip,  pero nunca se puede compartir puerto.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Pod</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">doscont</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">containers</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">contenedor1</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python:3.6-alpine</span>
+    <span class="nt">command</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;sh&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;-c&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;echo</span><span class="nv"> </span><span class="s">&quot;contenedor1&quot;</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">index.html</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">python</span><span class="nv"> </span><span class="s">-m</span><span class="nv"> </span><span class="s">http.server</span><span class="nv"> </span><span class="s">8082&#39;</span><span class="p p-Indicator">]</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">contenedor2</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python:3.6-alpine</span>
+    <span class="nt">command</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;sh&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;-c&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;echo</span><span class="nv"> </span><span class="s">&quot;contenedor2&quot;</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">index.html</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">python</span><span class="nv"> </span><span class="s">-m</span><span class="nv"> </span><span class="s">http.server</span><span class="nv"> </span><span class="s">8083&#39;</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+
+<p>Cargar manifiesto.</p>
+<div class="codehilite"><pre><span></span><code>➜  pods sudo kubectl apply -f doscont.yaml 
+pod/doscont created
+
+➜  pods sudo kubectl get pods             
+NAME      READY   STATUS    RESTARTS   AGE
+doscont   <span class="m">2</span>/2     Running   <span class="m">0</span>          8s
+</code></pre></div>
+
+<p>n el caso que un contenedor fallara, se vería de esta manera, <code>READY 1/2</code> </p>
+<div class="codehilite"><pre><span></span><code>➜  pods sudo kubectl get pods                   
+NAME      READY   STATUS             RESTARTS   AGE
+doscont   <span class="m">1</span>/2     CrashLoopBackOff   <span class="m">6</span>          7m58s
+</code></pre></div>
+
+<h4 id="labels">Labels</h4>
+<p>Los labels juegan un papel importante en los pods, esto es por dos razones:</p>
+<ul>
+<li>Los objetos de mas alto nivel se pueden referir a los pods mediante labels, es decir puedo indicar aumenta las replicas de los backend, siendo backend un label.</li>
+<li>Se puede filtrar el output de pods mediante labels.</li>
+</ul>
+<p>La sección de label se define dentro de metadata, y dentro de label, las variables que indiques son a tu gusto, aun que una buena practica es definir app como mínimo.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Pod</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">podtest2</span>
+  <span class="nt">labels</span><span class="p">:</span>
+    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">front</span>
+    <span class="nt">env</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dev</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">containers</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">contenedor1</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx:alpine</span>
+</code></pre></div>
+
+<p>Ejemplo de filtro.</p>
+<div class="codehilite"><pre><span></span><code>➜  sudo kubectl get pods -l <span class="nv">app</span><span class="o">=</span>backend
+NAME       READY   STATUS    RESTARTS   AGE
+podtest3   <span class="m">1</span>/1     Running   <span class="m">0</span>          46s
+➜  sudo kubectl get pods -l <span class="nv">env</span><span class="o">=</span>dev    
+NAME       READY   STATUS    RESTARTS   AGE
+podtest2   <span class="m">1</span>/1     Running   <span class="m">0</span>          5m54s
+podtest3   <span class="m">1</span>/1     Running   <span class="m">0</span>          5m54s
+</code></pre></div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Instalaci%C3%B3n/" title="Instalación" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Instalación
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Replicaset/" title="Replicaset" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Replicaset
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

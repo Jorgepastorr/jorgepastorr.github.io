@@ -1,0 +1,1277 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="http://kubernetes.jorgepastorr.tk:50022/RBAC/">
+      
+      
+        <meta name="author" content="Jorge Pastor">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../images/kubernetes.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>RBAC - Proyecto Kubernetes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="__gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#rbac" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://kubernetes.jorgepastorr.tk:50022" title="Proyecto Kubernetes" aria-label="Proyecto Kubernetes" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../images/logokubernetes.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Proyecto Kubernetes
+            </span>
+            <span class="md-header-nav__topic">
+              
+                RBAC
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://gitlab.com/jorgepastorr/kubernetes/" title="Go to repository" class="md-source" data-md-source="gitlab">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__gitlab" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jorgepastorr/kubernetes
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://kubernetes.jorgepastorr.tk:50022" title="Proyecto Kubernetes" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../images/logokubernetes.png" width="48" height="48">
+      
+    </a>
+    Proyecto Kubernetes
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://gitlab.com/jorgepastorr/kubernetes/" title="Go to repository" class="md-source" data-md-source="gitlab">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__gitlab" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jorgepastorr/kubernetes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Kubernetes" class="md-nav__link">
+      Kubernetes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Instalaci%C3%B3n/" title="Instalación" class="md-nav__link">
+      Instalación
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Pod/" title="Pod" class="md-nav__link">
+      Pod
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Replicaset/" title="Replicaset" class="md-nav__link">
+      Replicaset
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Deployment/" title="Deployment" class="md-nav__link">
+      Deployment
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Services_Endpoints/" title="Services & Endpoints" class="md-nav__link">
+      Services & Endpoints
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Namespaces/" title="Namespaces" class="md-nav__link">
+      Namespaces
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Limits/" title="Limits" class="md-nav__link">
+      Limits
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Probes/" title="Probes" class="md-nav__link">
+      Probes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ConfigMaps/" title="ConfigMaps & Environtment" class="md-nav__link">
+      ConfigMaps & Environtment
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Secrets/" title="Secrets" class="md-nav__link">
+      Secrets
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Volumes/" title="Volumes" class="md-nav__link">
+      Volumes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        RBAC
+      </label>
+    
+    <a href="./" title="RBAC" class="md-nav__link md-nav__link--active">
+      RBAC
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rbac" class="md-nav__link">
+    RBAC
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permisos" class="md-nav__link">
+    Permisos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binding" class="md-nav__link">
+    Binding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usuarios" class="md-nav__link">
+    Usuarios
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x509-clients-certs" class="md-nav__link">
+    x509 clients certs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role" class="md-nav__link">
+    Role
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rolebinding" class="md-nav__link">
+    Rolebinding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clusterrole" class="md-nav__link">
+    ClusterRole
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cluster-admin" class="md-nav__link">
+    Cluster admin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grupos-roles" class="md-nav__link">
+    Grupos roles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serviceaccount" class="md-nav__link">
+    ServiceAccount
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asociar-sa-a-pod" class="md-nav__link">
+    Asociar SA a Pod
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Ingres/" title="Ingres" class="md-nav__link">
+      Ingres
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../aws-cli/" title="AWS-clie" class="md-nav__link">
+      AWS-clie
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../aws/awseks/" title="AWS EKS" class="md-nav__link">
+      AWS EKS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      presentacion
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        presentacion
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../presentacion/diapositiva.html" title="diapositiva" class="md-nav__link">
+      diapositiva
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../presentacion/diapositiva.pdf" title="diapositiva-pdf" class="md-nav__link">
+      diapositiva-pdf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../presentacion/videos/" title="Videos" class="md-nav__link">
+      Videos
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rbac" class="md-nav__link">
+    RBAC
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permisos" class="md-nav__link">
+    Permisos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binding" class="md-nav__link">
+    Binding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usuarios" class="md-nav__link">
+    Usuarios
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x509-clients-certs" class="md-nav__link">
+    x509 clients certs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role" class="md-nav__link">
+    Role
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rolebinding" class="md-nav__link">
+    Rolebinding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clusterrole" class="md-nav__link">
+    ClusterRole
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cluster-admin" class="md-nav__link">
+    Cluster admin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grupos-roles" class="md-nav__link">
+    Grupos roles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serviceaccount" class="md-nav__link">
+    ServiceAccount
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asociar-sa-a-pod" class="md-nav__link">
+    Asociar SA a Pod
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://gitlab.com/jorgepastorr/kubernetes/edit/master/docs/RBAC.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>RBAC</h1>
+                
+                <h2 id="rbac">RBAC</h2>
+<p><strong>Control de Acceso Basado en Rol</strong> es una forma de controlar que puede o no puede hacer cierto usuario en el cluster, esto se controla especificando diferentes roles con sus reglas para después asignar usuarios a ese rol. De esta manera se evita que todos los usuarios tengan un control total del cluster.</p>
+<p>Por defecto RBAC en minikube viene habilitado, aún que es bueno comprobarlo por si acaso.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># comprobar que esta habilitado</span>
+➜ kubectl cluster-info dump <span class="p">|</span> grep -i authorization-mode
+                            <span class="s2">&quot;--authorization-mode=Node,RBAC&quot;</span>,
+
+<span class="c1"># habilitar</span>
+➜ minikube start --vm-driver<span class="o">=</span>none --extra-config<span class="o">=</span>apiserver.authorization-mode<span class="o">=</span>RBAC
+</code></pre></div>
+
+<h3 id="permisos">Permisos</h3>
+<p>Kubernetes diferencia dos tipos de permisos, <code>Role y ClusterRole</code> donde los dos son muy similares,  son una lista de <code>resources</code> y <code>verbs</code> donde <em>resources</em> especifica a que tipo de objeto tienes permiso acceder <code>pods, deployments ...</code>  y <em>verbs</em> se refiere a acciones que puedes hacer <code>listar, crear, eliminar ...</code> la diferencia es que <code>Role</code> se refiere a los permisos que tienes dentro de un namespace y <code>ClusterRole</code> son los permisos que tiene dentro del cluster.</p>
+<h3 id="binding">Binding</h3>
+<p>El binding en kubernetes es la asociación de un usuario, grupo o serviceAccound a un Role o ClusterRole. Binding es un objeto con dos denominaciones diferentes <code>RoleBinding</code> y <code>ClusterRoleBinding</code> según se utilice para asociar <code>Roles</code> o <code>ClusterRoles</code>.</p>
+<h3 id="usuarios">Usuarios</h3>
+<p>kubernetes no tiene ningun objeto donde puedas crear usuarios, de esta manera todos los usuarios seran externos a la aplicación de kubernetes</p>
+<p>kubernetes solo aporta el método de autenticación y soporta diferentes métodos <code>x509 clients certs, statik token file, bootstrap tokens, static Password File, service Account Tokens</code>.</p>
+<p>Un nuevo usuario necesita instalar y configurar  <code>kubectl</code>  para que la api le deje autentificar en alguno de los métodos anteriormente nombrados.</p>
+<h4 id="x509-clients-certs">x509 clients certs</h4>
+<p>Uso de certificados es el método mas utilizado y el que por defecto utiliza minikube, en los siguientes pasos se muestra como añadir un usuario nuevo.</p>
+<ol>
+<li>El <strong>nuevo cliente</strong> genera su llave y el certificado csr para que lo firme el administrador del cluster. Es importante que <code>CN/=jorge</code> se refiere al usuario y <code>/O=dev</code> es el grupo del usuario.</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>➜ openssl genrsa  -out jorgekey.pem <span class="m">2048</span>
+➜ openssl req -new -key jorgekey.pem -out jorgecsr.pem -subj <span class="s2">&quot;/CN=jorge/O=dev&quot;</span>
+</code></pre></div>
+
+<ol>
+<li>El administrador confirma el <code>csr</code> del nuevo cliente/usuario y lo firma con la CA del cluster</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="c1"># identificar donde esta la CA del cluster</span>
+➜ kubectl config view
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: /home/debian/.minikube/ca.crt
+    server: https://192.168.88.2:8443
+
+<span class="c1"># firmar el csr del cliente y generar el certificado</span>
+➜ openssl x509 -req -in jorgecsr.pem -CAkey /home/debian/.minikube/ca.key -CA /home/debian/.minikube/ca.crt -days <span class="m">365</span> -CAcreateserial   -out jorgecrt.pem        
+
+Signature ok
+<span class="nv">subject</span><span class="o">=</span><span class="nv">CN</span> <span class="o">=</span> jorge, <span class="nv">O</span> <span class="o">=</span> dev
+Getting CA Private Key
+</code></pre></div>
+
+<ol>
+<li>En este paso el administrador del cluster nos a proporcionado dos archivos <code>jorgecrt.pem, ca.crt</code>  el nuevo certificado y la clave pública del cluster. Ahora el cliente tiene que configurar su kubectl para poder acceder al cluster</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="c1"># añadir cluster a la configuración de kubectl</span>
+jorge@pc02:~$ kubectl config set-cluster minikube --server<span class="o">=</span>https://192.168.88.2:8443 --certificate-authority<span class="o">=</span>ca.crt
+
+<span class="c1"># añadir credenciales del usuario</span>
+jorge@pc02:~$ kubectl config set-credentials jorge --client-certificate<span class="o">=</span>jorgecrt.pem --client-key<span class="o">=</span>jorgekey.pem
+
+<span class="c1"># crear un espacio de trabajo del usuario</span>
+jorge@pc02:~$ kubectl config set-context jorge --cluster<span class="o">=</span>minikube --user<span class="o">=</span>jorge
+
+<span class="c1"># utilizar ese espacio</span>
+jorge@pc02:~$ kubectl config use-context jorge
+</code></pre></div>
+
+<p>Comprobar que todo se a aplicado correctamente:</p>
+<div class="codehilite"><pre><span></span><code>jorge@pc02:~$ kubectl config view
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: /home/jorge/ca.crt
+    server: https://192.168.88.2:8443
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    user: jorge
+  name: jorge
+current-context: jorge
+kind: Config
+preferences: <span class="o">{}</span>
+users:
+- name: jorge
+  user:
+    client-certificate: /home/jorge/jorgecrt.pem
+    client-key: /home/jorge/jorgekey.pem
+</code></pre></div>
+
+<blockquote>
+<p><strong>Nota:</strong> Una vez configurado <code>kubectl</code>,  si el administrador no nos asigna ningún tipo de Role no tendremos permisos para hacer nada. Una vez asignado un Role podremos hacer lo que ese Role nos permita.</p>
+</blockquote>
+<h3 id="role">Role</h3>
+<p>En los Roles hay que tener en cuenta el <code>namespace</code> en el que se asignan los permisos, los <code>resources</code> (objetos) a los que se podrá acceder y los <code>verbs</code> permisos que se tendrá sobre los objetos.</p>
+<p><strong>verbs</strong> </p>
+<p>Los verbs indica que puedes hacer sobre algún objeto, esta es la tabla de los diferentes verbs que existen.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP verb</th>
+<th>request verb</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>create</td>
+</tr>
+<tr>
+<td>GET, HEAD</td>
+<td>get (for individual resources), list (for collections, including full  object content), watch (for watching an individual resource or  collection of resources)</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>update</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>patch</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>delete (for individual resources), deletecollection (for collections)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Resources</strong></p>
+<p>Los resources son los diferentes objetos que encontramos en kubernetes, <code>Pods, Replicasets, Deployments, ...</code></p>
+<div class="codehilite"><pre><span></span><code>➜  ~ kubectl api-resources
+NAME                              SHORTNAMES   APIGROUP 
+pods                              po                    
+secrets                                                 
+services                          svc                   
+deployments                       deploy       apps     
+replicasets                       rs           apps     
+....
+</code></pre></div>
+
+<p>Template de <strong>ejemplo de Role</strong> en el namespace default donde puede ver, listar y observar (describir) Pods. El apartado <code>apiGroups</code> se tiene que indicar solo cuando el objeto pertenece a un APIGROUP, como podemos ver en el bloque de arriba que deployments pertenece al apigroup apps.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Role</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pod-reader</span>
+<span class="nt">rules</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">apiGroups</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;&quot;</span><span class="p p-Indicator">]</span> <span class="c1"># &quot;&quot; indicates the core API group</span>
+  <span class="nt">resources</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;pods&quot;</span><span class="p p-Indicator">]</span>
+  <span class="nt">verbs</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;get&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;watch&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;list&quot;</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+
+<p>Una vez desplegado el rol se verá de la siguiente forma. Para asignar este rol a un usuario o grupo se tiene que utilizar <code>Rolebinding</code></p>
+<div class="codehilite"><pre><span></span><code>➜ kubectl get roles             
+NAME         AGE
+pod-reader   13s
+
+➜ kubectl describe  role pod-reader
+Name:         pod-reader
+PolicyRule:
+  Resources  Non-Resource URLs  Resource Names  Verbs
+  ---------  -----------------  --------------  -----
+  pods       <span class="o">[]</span>                 <span class="o">[]</span>              <span class="o">[</span>get watch list<span class="o">]</span>
+</code></pre></div>
+
+<h3 id="rolebinding">Rolebinding</h3>
+<p>Rolebinding es el enlace entre roles y Usuarios/Grupos. En este ejemplo muestro como enlazar el usuario <code>jorge</code> con el role <code>pod-reader</code> .</p>
+<p>Las secciones importantes del objeto <code>RoleBinding</code> son:</p>
+<ul>
+<li>especificar el namespace donde trabajar</li>
+<li><code>subjects</code> el Usuer o Group que enlazar</li>
+<li><code>roleRef</code> la referencia al rol que pertenecerá</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Role</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pod-reader</span>
+<span class="nt">rules</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">apiGroups</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;&quot;</span><span class="p p-Indicator">]</span> 
+  <span class="nt">resources</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;pods&quot;</span><span class="p p-Indicator">]</span>
+  <span class="nt">verbs</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;get&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;watch&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;list&quot;</span><span class="p p-Indicator">]</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">RoleBinding</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">users-read-pods</span>
+  <span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="nt">subjects</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">User</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jorge</span>
+  <span class="nt">apiGroup</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+<span class="nt">roleRef</span><span class="p">:</span>
+  <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Role</span> 
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pod-reader</span> 
+  <span class="nt">apiGroup</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+</code></pre></div>
+
+<p>Comprobación de que se a asignado los permisos correctamente.</p>
+<div class="codehilite"><pre><span></span><code>➜ kubectl get rolebinding             
+NAME              AGE
+users-read-pods   49s
+
+<span class="c1"># miro la descripción completa del enlace</span>
+➜ kubectl describe rolebinding users-read-pods 
+Name:         users-read-pods
+Role:
+  Kind:  Role
+  Name:  pod-reader
+Subjects:
+  Kind  Name   Namespace
+  ----  ----   ---------
+  User  jorge  
+</code></pre></div>
+
+<p>Actualmente estoy trabajando como administrador minikube, cambio a jorge para comprobar permisos</p>
+<div class="codehilite"><pre><span></span><code>➜ kubectl config current-context
+minikube
+
+<span class="c1"># cambiar a usuario jorge</span>
+➜ kubectl config use-context jorge
+Switched to context <span class="s2">&quot;jorge&quot;</span>.
+
+<span class="c1"># puedo ver pods de namespace default</span>
+➜ kubectl get pods
+No resources found in default namespace.
+
+<span class="c1"># y no puedo verbni hacer nada mas.</span>
+➜ kubectl get pods -n dev
+Error from server <span class="o">(</span>Forbidden<span class="o">)</span>: pods is forbidden: User <span class="s2">&quot;jorge&quot;</span> cannot list resource <span class="s2">&quot;pods&quot;</span> in API group <span class="s2">&quot;&quot;</span> in the namespace <span class="s2">&quot;dev&quot;</span>
+
+➜ kubectl get svc        
+Error from server <span class="o">(</span>Forbidden<span class="o">)</span>: services is forbidden: User <span class="s2">&quot;jorge&quot;</span> cannot list resource <span class="s2">&quot;services&quot;</span> in API group <span class="s2">&quot;&quot;</span> in the namespace <span class="s2">&quot;default&quot;</span>
+</code></pre></div>
+
+<h3 id="clusterrole">ClusterRole</h3>
+<p>ClusterRole es exactamente lo mismo que role pero en vez de dar permisos sobre un namespace, da permisos sobre todo un cluster.</p>
+<p>En este ejemplo e juntado el <code>ClusterRol</code> con el <code>ClusterRolebinding</code> porque es exactamente igual a role, simplemente se cambia el <code>kind</code> de referencia al objeto.</p>
+<p>El siguiente template otorga al usuario jorge permisos de lectura de Pods y deployments sobre todo el cluster.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ClusterRole</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cluster-pod-deploy-reader</span>
+<span class="nt">rules</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">apiGroups</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;apps&quot;</span><span class="p p-Indicator">]</span> 
+  <span class="nt">resources</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;deployments&quot;</span><span class="p p-Indicator">]</span>
+  <span class="nt">verbs</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;get&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;watch&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;list&quot;</span><span class="p p-Indicator">]</span>
+<span class="p p-Indicator">-</span> <span class="nt">apiGroups</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;&quot;</span><span class="p p-Indicator">]</span> 
+  <span class="nt">resources</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;pods&quot;</span><span class="p p-Indicator">]</span>
+  <span class="nt">verbs</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;get&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;watch&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;list&quot;</span><span class="p p-Indicator">]</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ClusterRoleBinding</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">users-read-pods-deploy</span>
+<span class="nt">subjects</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">User</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jorge</span>
+  <span class="nt">apiGroup</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+<span class="nt">roleRef</span><span class="p">:</span>
+  <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ClusterRole</span> 
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cluster-pod-deploy-reader</span> 
+  <span class="nt">apiGroup</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+</code></pre></div>
+
+<h4 id="cluster-admin">Cluster admin</h4>
+<p>Por defecto kubernetes ya tiene roles definidos, como se ve en el siguiente bloque, en el caso de querer asignar ese rol ya definido como por ejemplo el <code>cluster-admin</code> simplemente se tendría que hacer la asignación al usuario.</p>
+<div class="codehilite"><pre><span></span><code>➜  k8s git:<span class="o">(</span>proceso<span class="o">)</span> ✗ kubectl get clusterroles
+NAME                                                                   AGE
+admin                                                                  66d
+cluster-admin                                                          66d
+edit                                                                   66d
+kubernetes-dashboard                                                   9d
+system:aggregate-to-admin                                              66d
+system:aggregate-to-edit                                               66d
+...
+</code></pre></div>
+
+<p>Asignación de role cluster-admin a usuario jorge.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ClusterRoleBinding</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">users-cluster-admin</span>
+<span class="nt">subjects</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">User</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jorge</span>
+  <span class="nt">apiGroup</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+<span class="nt">roleRef</span><span class="p">:</span>
+  <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ClusterRole</span> 
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cluster-admin</span>
+  <span class="nt">apiGroup</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+</code></pre></div>
+
+<h3 id="grupos-roles">Grupos roles</h3>
+<p>Los grupos de roles son muy útiles en la gestión de permisos, ya que te permite agrupar a un grupo a tener ciertos permisos.</p>
+<p>El grupo de un usuario se establece en el método de crear el usuario, utilizando certificados <code>➜ openssl req -new -key jorgekey.pem -out jorgecsr.pem -subj "/CN=jorge/O=dev"</code> , en este caso el usuario <code>jorge</code> pertenece al grupo <code>dev</code></p>
+<p>El siguiente ejemplo de template se ve como se crea un <em>clusterRoleBinding</em> de el grupo de usuarios  <code>dev</code> asignando los permisos del  <em>ClusterRole</em> con nombre <code>svc-clusterrole</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ClusterRole</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">svc-clusterrole</span>
+<span class="nt">rules</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">apiGroups</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;apps&quot;</span><span class="p p-Indicator">]</span> 
+  <span class="nt">resources</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;services&quot;</span><span class="p p-Indicator">,</span><span class="s">&quot;Pods&quot;</span><span class="p p-Indicator">,</span><span class="s">&quot;replicasets&quot;</span><span class="p p-Indicator">,</span><span class="s">&quot;deployments&quot;</span><span class="p p-Indicator">]</span>
+  <span class="nt">verbs</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;*&quot;</span><span class="p p-Indicator">]</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ClusterRoleBinding</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cluster-svc</span>
+<span class="nt">subjects</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Group</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dev</span>
+  <span class="nt">apiGroup</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+<span class="nt">roleRef</span><span class="p">:</span>
+  <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ClusterRole</span> 
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">svc-clusterrole</span>
+  <span class="nt">apiGroup</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+</code></pre></div>
+
+<h3 id="serviceaccount">ServiceAccount</h3>
+<p>ServiceAccount proporciona una identidad para los procesos que se ejecutan en un Pod.</p>
+<p>Cuando alguien accede a un cluster utilizando por ejemplo <code>kubectl</code>, el api server lo autentica como usuario y  puede ver que ocurre en el cluster, según los permisos. Los procesos de los contenedores también pueden consultar datos al api server, pero para eso necesitan autenticarse  y para eso utilizan serviceAccount.</p>
+<p>ServiceAccount utiliza un tocken para la autenticación del pod con la api, este tocken se monta automáticamente en el pod al crearlo, si no se especifica ninguno se monta el de por default, y según los permisos que se otorgan a ese tocken puede acceder a distintas consultas de la api.</p>
+<p>Ejemplo de serviceAccount simple.</p>
+<p><em>sa.yaml</em></p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-sa</span>
+</code></pre></div>
+
+<p>Un serviceAccount solo implica crear un tocken, para que este tenga utilidad se tiene que aplicarle un role y asociarlo con un binding a algún pod.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># desplegar serviceaccount</span>
+➜ kubectl apply -f k8s/RBAC/serviceacount/sa.yaml 
+serviceaccount/my-sa created
+
+<span class="c1"># por defecto kubernetes ya tiene uno</span>
+➜ kubectl get sa
+NAME      SECRETS   AGE
+default   <span class="m">1</span>         67d
+my-sa     <span class="m">1</span>         20s
+
+<span class="c1"># vemos que se a creado el tocken my-sa-token-7z2ms</span>
+➜ kubectl describe sa my-sa
+Name:                my-sa
+Namespace:           default
+...
+Mountable secrets:   my-sa-token-7z2ms
+Tokens:              my-sa-token-7z2ms
+
+<span class="c1"># comprovamos que exise ese tocken</span>
+➜ kubectl get secrets      
+NAME                  TYPE                                  DATA   AGE
+default-token-k8kw2   kubernetes.io/service-account-token   <span class="m">3</span>      67d
+my-sa-token-7z2ms     kubernetes.io/service-account-token   <span class="m">3</span>      57s
+</code></pre></div>
+
+<h4 id="asociar-sa-a-pod">Asociar SA a Pod</h4>
+<p>En el siguiente template se muestra como se asigna un rol a un serviceAccount y este se asigna a un Pod</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># creo el service account</span>
+<span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-sa</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">annotations</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">deployment-test</span>
+  <span class="nt">labels</span><span class="p">:</span>
+    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">front-nginx</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">replicas</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">selector</span><span class="p">:</span>
+    <span class="nt">matchLabels</span><span class="p">:</span>
+      <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">front-nginx</span>
+  <span class="nt">template</span><span class="p">:</span>
+    <span class="nt">metadata</span><span class="p">:</span>
+      <span class="nt">labels</span><span class="p">:</span>
+        <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">front-nginx</span>
+    <span class="nt">spec</span><span class="p">:</span>
+     <span class="c1"># assigno el SA my-sa al pod </span>
+      <span class="nt">serviceAccountName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-sa</span>
+      <span class="nt">containers</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+        <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx:alpine</span>
+<span class="nn">---</span>
+<span class="c1"># creo el role de permisos que tendra el SA</span>
+<span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Role</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sa-reader</span>
+<span class="nt">rules</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">apiGroups</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;&quot;</span><span class="p p-Indicator">]</span> 
+  <span class="nt">resources</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;pods&quot;</span><span class="p p-Indicator">]</span>
+  <span class="nt">verbs</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;get&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;watch&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;list&quot;</span><span class="p p-Indicator">]</span>
+<span class="nn">---</span>
+<span class="c1"># assigno el Role al SA</span>
+<span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">RoleBinding</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sa-read-pods</span>
+  <span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
+ <span class="c1"># subjects.kind  especifica el objeto SA, y el name del SA</span>
+<span class="nt">subjects</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-sa</span>
+  <span class="nt">apiGroup</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+<span class="nt">roleRef</span><span class="p">:</span>
+  <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Role</span> 
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sa-reader</span> 
+  <span class="nt">apiGroup</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+</code></pre></div>
+
+<p><strong>Verificar</strong> la asignación y utilizar el token</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># vemos el pod desplegado</span>
+➜ kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+deployment-test-79bb7486b-cnx7s   <span class="m">1</span>/1     Running   <span class="m">0</span>          8m16s
+
+<span class="c1"># verificamos que se a asignado bien el SA al Pod</span>
+➜ kubectl get pod deployment-test-79bb7486b-cnx7s -o yaml
+...
+  serviceAccount: my-sa
+  serviceAccountName: my-sa
+...
+
+<span class="c1"># entramos en el pod y utilizar el token haciendo una consulta a la api.</span>
+➜ kubectl <span class="nb">exec</span> -it deployment-test-79bb7486b-cnx7s -- sh
+/ <span class="c1"># apk add curl</span>
+/ <span class="c1"># TOKEN=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)</span>
+/ <span class="c1"># curl -H &quot;Authorization: Bearer ${TOKEN}&quot; https://kubernetes/api/v1/namespaces/default/pods --insecure</span>
+<span class="o">{</span>
+  <span class="s2">&quot;kind&quot;</span>: <span class="s2">&quot;PodList&quot;</span>,
+  <span class="s2">&quot;apiVersion&quot;</span>: <span class="s2">&quot;v1&quot;</span>,
+  <span class="s2">&quot;metadata&quot;</span>: <span class="o">{</span>
+    <span class="s2">&quot;selfLink&quot;</span>: <span class="s2">&quot;/api/v1/namespaces/default/pods&quot;</span>,
+    <span class="s2">&quot;resourceVersion&quot;</span>: <span class="s2">&quot;430633&quot;</span>
+  <span class="o">}</span>,
+  <span class="s2">&quot;items&quot;</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">&quot;metadata&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;deployment-test-79bb7486b-cnx7s&quot;</span>,
+        <span class="s2">&quot;generateName&quot;</span>: <span class="s2">&quot;deployment-test-79bb7486b-&quot;</span>,
+...
+</code></pre></div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Volumes/" title="Volumes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Volumes
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Ingres/" title="Ingres" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Ingres
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

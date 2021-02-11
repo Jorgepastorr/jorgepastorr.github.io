@@ -1,0 +1,1044 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="http://kubernetes.jorgepastorr.tk:50022/Deployment/">
+      
+      
+        <meta name="author" content="Jorge Pastor">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../images/kubernetes.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Deployment - Proyecto Kubernetes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="__gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#deployment" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://kubernetes.jorgepastorr.tk:50022" title="Proyecto Kubernetes" aria-label="Proyecto Kubernetes" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../images/logokubernetes.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Proyecto Kubernetes
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Deployment
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://gitlab.com/jorgepastorr/kubernetes/" title="Go to repository" class="md-source" data-md-source="gitlab">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__gitlab" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jorgepastorr/kubernetes
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://kubernetes.jorgepastorr.tk:50022" title="Proyecto Kubernetes" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../images/logokubernetes.png" width="48" height="48">
+      
+    </a>
+    Proyecto Kubernetes
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://gitlab.com/jorgepastorr/kubernetes/" title="Go to repository" class="md-source" data-md-source="gitlab">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__gitlab" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jorgepastorr/kubernetes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Kubernetes" class="md-nav__link">
+      Kubernetes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Instalaci%C3%B3n/" title="Instalación" class="md-nav__link">
+      Instalación
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Pod/" title="Pod" class="md-nav__link">
+      Pod
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Replicaset/" title="Replicaset" class="md-nav__link">
+      Replicaset
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Deployment
+      </label>
+    
+    <a href="./" title="Deployment" class="md-nav__link md-nav__link--active">
+      Deployment
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-gestiona-las-actualizaciones" class="md-nav__link">
+    Como gestiona las actualizaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-manifiesto" class="md-nav__link">
+    Gestion de manifiesto
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-manifiesto" class="md-nav__link">
+    Ejemplo manifiesto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desplegar-deployment" class="md-nav__link">
+    Desplegar deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobar-que-ha-creado" class="md-nav__link">
+    Comprobar que ha creado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizar" class="md-nav__link">
+    Actualizar
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    History
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    Metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambio-manual" class="md-nav__link">
+    Cambio manual
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#record" class="md-nav__link">
+    Record
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roll-back" class="md-nav__link">
+    Roll-back
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Services_Endpoints/" title="Services & Endpoints" class="md-nav__link">
+      Services & Endpoints
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Namespaces/" title="Namespaces" class="md-nav__link">
+      Namespaces
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Limits/" title="Limits" class="md-nav__link">
+      Limits
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Probes/" title="Probes" class="md-nav__link">
+      Probes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ConfigMaps/" title="ConfigMaps & Environtment" class="md-nav__link">
+      ConfigMaps & Environtment
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Secrets/" title="Secrets" class="md-nav__link">
+      Secrets
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Volumes/" title="Volumes" class="md-nav__link">
+      Volumes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../RBAC/" title="RBAC" class="md-nav__link">
+      RBAC
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Ingres/" title="Ingres" class="md-nav__link">
+      Ingres
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../aws-cli/" title="AWS-clie" class="md-nav__link">
+      AWS-clie
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../aws/awseks/" title="AWS EKS" class="md-nav__link">
+      AWS EKS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      presentacion
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        presentacion
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../presentacion/diapositiva.html" title="diapositiva" class="md-nav__link">
+      diapositiva
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../presentacion/diapositiva.pdf" title="diapositiva-pdf" class="md-nav__link">
+      diapositiva-pdf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../presentacion/videos/" title="Videos" class="md-nav__link">
+      Videos
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-gestiona-las-actualizaciones" class="md-nav__link">
+    Como gestiona las actualizaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-manifiesto" class="md-nav__link">
+    Gestion de manifiesto
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-manifiesto" class="md-nav__link">
+    Ejemplo manifiesto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desplegar-deployment" class="md-nav__link">
+    Desplegar deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobar-que-ha-creado" class="md-nav__link">
+    Comprobar que ha creado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizar" class="md-nav__link">
+    Actualizar
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    History
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    Metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambio-manual" class="md-nav__link">
+    Cambio manual
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#record" class="md-nav__link">
+    Record
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roll-back" class="md-nav__link">
+    Roll-back
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://gitlab.com/jorgepastorr/kubernetes/edit/master/docs/Deployment.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Deployment</h1>
+                
+                <h2 id="deployment">Deployment</h2>
+<p>https://kubernetes.io/docs/concepts/workloads/controllers/deployment/</p>
+<p>Deployment es el objeto encargado de gestionar las actualizaciones de versiones de los pods y replicasets, por lo tanto es un objeto superior de replicaset y pod, los engloba. Es decir un deployment tiene en su interior un replicaset que este en su interior tiene un pod. </p>
+<h3 id="como-gestiona-las-actualizaciones">Como gestiona las actualizaciones</h3>
+<p>Deployment tiene el replicaset versión 1 en su interior, cuando tu le añades una actualización, deployment crea un nuevo replicaset versión 2 y va encendiendo pods del replicaset versión 2 y apagando los de la versión 1, para así asegurar una transición sin interrupciones. Además se guarda por defecto hasta 10 versiones por si quieres hacer un rollback ( ir a una versión anterior por si a habido problemas).</p>
+<h3 id="gestion-de-manifiesto">Gestion de manifiesto</h3>
+<h4 id="ejemplo-manifiesto">Ejemplo manifiesto</h4>
+<p>En el siguiente manifiesto se especifica, crear un deployment que contenga un replicaset que creara tres replicas de una pod con un container nginx.</p>
+<p><em>Ejemplo deployment</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">annotations</span><span class="p">:</span>
+    <span class="nt">kubernetes.io/change-cause</span><span class="p">:</span> <span class="s">&quot;version</span><span class="nv"> </span><span class="s">inicial</span><span class="nv"> </span><span class="s">nginx&quot;</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">deployment-test</span>
+  <span class="nt">labels</span><span class="p">:</span>
+    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">front-nginx</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="c1">#   revisionHistoryLimit: 3</span>
+  <span class="nt">replicas</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+  <span class="nt">selector</span><span class="p">:</span>
+    <span class="nt">matchLabels</span><span class="p">:</span>
+      <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">front-nginx</span>
+  <span class="nt">template</span><span class="p">:</span>
+    <span class="nt">metadata</span><span class="p">:</span>
+      <span class="nt">labels</span><span class="p">:</span>
+        <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">front-nginx</span>
+    <span class="nt">spec</span><span class="p">:</span>
+      <span class="nt">containers</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+        <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx:alpine</span>
+        <span class="nt">ports</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
+</code></pre></div>
+
+<h4 id="desplegar-deployment">Desplegar deployment</h4>
+<div class="codehilite"><pre><span></span><code>sudo kubectl apply -f dep.yaml 
+deployment.apps/deployment-test created
+
+sudo kubectl get deployment --show-labels
+NAME              READY   UP-TO-DATE   AVAILABLE   AGE   LABELS
+deployment-test   <span class="m">3</span>/3     <span class="m">3</span>            <span class="m">3</span>           40s   <span class="nv">app</span><span class="o">=</span>front-nginx
+
+sudo kubectl rollout status deployment deployment-test
+deployment <span class="s2">&quot;deployment-test&quot;</span> successfully rolled out
+</code></pre></div>
+
+<h4 id="comprobar-que-ha-creado">Comprobar que ha creado</h4>
+<p>Efectivamente a creado un resource con tres pods</p>
+<div class="codehilite"><pre><span></span><code>sudo kubectl get rs
+NAME                         DESIRED   CURRENT   READY   AGE
+deployment-test-694b78cb4c   <span class="m">3</span>         <span class="m">3</span>         <span class="m">3</span>       6m32s
+
+sudo kubectl get pods
+NAME                               READY   STATUS    RESTARTS   AGE
+deployment-test-694b78cb4c-mcm27   <span class="m">1</span>/1     Running   <span class="m">0</span>          6m51s
+deployment-test-694b78cb4c-r62tx   <span class="m">1</span>/1     Running   <span class="m">0</span>          6m51s
+deployment-test-694b78cb4c-w8t2p   <span class="m">1</span>/1     Running   <span class="m">0</span>          6m51s
+</code></pre></div>
+
+<h4 id="actualizar">Actualizar</h4>
+<p>Actualmente los pods están con la imagen <code>nginx:alpine</code> y voy a cambiar el manifiesto para hacer una actualización con la imagen <code>nginx:latest</code> y así ver como se comporta.</p>
+<div class="codehilite"><pre><span></span><code>sudo kubectl get pods deployment-test-694b78cb4c-mcm27 -o yaml <span class="p">|</span> grep <span class="s1">&#39;image:&#39;</span>         
+  - image: nginx:alpine
+    image: nginx:alpine
+</code></pre></div>
+
+<p>hago el cambio en el manifiesto, lo despliego y veo el resultado.</p>
+<div class="codehilite"><pre><span></span><code>sudo kubectl apply -f dep.yaml 
+deployment.apps/deployment-test configured
+
+sudo kubectl get pods deployment-test-78895f88b7-2z525 -o yaml <span class="p">|</span> grep <span class="s1">&#39;image:&#39;</span>
+  - image: nginx:latest
+    image: nginx:latest
+</code></pre></div>
+
+<p>Se puede ver que a echo exactamente con <code>describe</code> , se que crea un nuevo replicaset y va encendiendo pods a la vez que los apaga en el antiguo.</p>
+<div class="codehilite"><pre><span></span><code>sudo kubectl describe deployment deployment-test
+Events:
+  Type    Reason             Age                    From                   Message
+  ----    ------             ----                   ----                   -------
+  Normal  ScalingReplicaSet  31m                    deployment-controller  Scaled up replica <span class="nb">set</span> deployment-test-694b78cb4c to <span class="m">3</span>
+  Normal  ScalingReplicaSet  10m                    deployment-controller  Scaled up replica <span class="nb">set</span> deployment-test-78895f88b7 to <span class="m">1</span>
+  Normal  ScalingReplicaSet  10m                    deployment-controller  Scaled down replica <span class="nb">set</span> deployment-test-694b78cb4c to <span class="m">2</span>
+  Normal  ScalingReplicaSet  10m                    deployment-controller  Scaled up replica <span class="nb">set</span> deployment-test-78895f88b7 to <span class="m">2</span>
+  Normal  ScalingReplicaSet  10m                    deployment-controller  Scaled down replica <span class="nb">set</span> deployment-test-694b78cb4c to <span class="m">1</span>
+  Normal  ScalingReplicaSet  10m                    deployment-controller  Scaled up replica <span class="nb">set</span> deployment-test-78895f88b7 to <span class="m">3</span>
+  Normal  ScalingReplicaSet  10m                    deployment-controller  Scaled down replica <span class="nb">set</span> deployment-test-694b78cb4c to <span class="m">0</span>
+</code></pre></div>
+
+<p>Ahora ahí dos replicasets, el nuevo y el antiguo se guarda por si quiero volver a una versión anterior a la actual.</p>
+<div class="codehilite"><pre><span></span><code>sudo kubectl get rs                             
+NAME                         DESIRED   CURRENT   READY   AGE
+deployment-test-694b78cb4c   <span class="m">3</span>         <span class="m">3</span>         <span class="m">3</span>       35m
+deployment-test-78895f88b7   <span class="m">0</span>         <span class="m">0</span>         <span class="m">0</span>       15m
+
+sudo kubectl rollout <span class="nb">history</span> deployment deployment-test
+deployment.apps/deployment-test 
+REVISION  CHANGE-CAUSE
+<span class="m">2</span>         &lt;none&gt;
+<span class="m">3</span>         &lt;none&gt;
+</code></pre></div>
+
+<h5 id="history">History</h5>
+<p>El historial de versiones por defecto no añade ninguna anotación y en el caso de tener diferentes versiones, es difícil saber cual es cual. para solucionar esto existen diferentes maneras de añadir un comentario.</p>
+<ul>
+<li><code>--record</code> al lanzar la actualización, se añade la misma linea del comando.</li>
+<li>con metadata <code>annotations</code> en el archivo yaml ( es la mas practica )</li>
+<li>Manualmente desde linea de commando ( muy engorrosa )</li>
+</ul>
+<p>Este es un ejemplo por defecto:</p>
+<div class="codehilite"><pre><span></span><code>sudo kubectl rollout <span class="nb">history</span> deployment deployment-test
+deployment.apps/deployment-test 
+REVISION  CHANGE-CAUSE
+<span class="m">1</span>         &lt;none&gt;
+</code></pre></div>
+
+<h6 id="metadata">Metadata</h6>
+<p>Esta es la manera más agradable de insertar los comentarios del historial, desde la metadata del archivo yaml en la sección deploymet.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">annotations</span><span class="p">:</span>
+    <span class="nt">kubernetes.io/change-cause</span><span class="p">:</span> <span class="s">&quot;cambio</span><span class="nv"> </span><span class="s">puerto</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">110&quot;</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">deployment-test</span>
+  <span class="nt">labels</span><span class="p">:</span>
+    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">front-nginx</span>
+<span class="p p-Indicator">[</span> <span class="nv">texto recortado</span> <span class="p p-Indicator">]</span>    
+</code></pre></div>
+
+<p>Al desplegar se ve de la siguiente manera.</p>
+<div class="codehilite"><pre><span></span><code>sudo kubectl apply -f deployment/dep.yaml              
+deployment.apps/deployment-test configured
+
+sudo kubectl rollout <span class="nb">history</span> deployment deployment-test
+deployment.apps/deployment-test 
+REVISION  CHANGE-CAUSE
+<span class="m">1</span>         &lt;none&gt;
+<span class="m">2</span>         cambio puerto a <span class="m">110</span>
+</code></pre></div>
+
+<h6 id="cambio-manual">Cambio manual</h6>
+<p>El cambio manual de anotación de versión es muy engorroso, pero útil si te has olvidado cambiarlo anteriormente o era erróneo.</p>
+<div class="codehilite"><pre><span></span><code>sudo kubectl annotate deployment.v1.apps/deployment-test kubernetes.io/change-cause<span class="o">=</span><span class="s2">&quot;cambio manual de anotacion&quot;</span>
+
+sudo kubectl rollout <span class="nb">history</span> deployment deployment-test
+deployment.apps/deployment-test 
+REVISION  CHANGE-CAUSE
+<span class="m">1</span>         &lt;none&gt;
+<span class="m">2</span>         cambio manual de anotacion
+</code></pre></div>
+
+<h6 id="record">Record</h6>
+<p>El modo record, no es del todo útil ya que no de una descripción como tal.</p>
+<div class="codehilite"><pre><span></span><code>sudo kubectl apply -f deployment/dep.yaml --record              
+deployment.apps/deployment-test configured
+
+sudo kubectl rollout <span class="nb">history</span> deployment deployment-test
+deployment.apps/deployment-test 
+REVISION  CHANGE-CAUSE
+<span class="m">1</span>         &lt;none&gt;
+<span class="m">2</span>         cambio puerto a <span class="m">110</span>
+<span class="m">3</span>         kubectl apply -f deployment/dep.yaml --record<span class="o">=</span>True
+</code></pre></div>
+
+<h5 id="roll-back">Roll-back</h5>
+<p>Roll-back permite regresar a una versión anterior con la siguiente sintaxis: <code>kubectl rollout undo deployment deployment-test --to-revision=2</code> . Esto es muy útil si al desplegar una nueva versión a habido algún tipo de error y se quiere volver a una versión estable.</p>
+<p>En el siguiente ejemplo muestro como añado una versión con una imagen inexistente, dará errores y volveré a la anterior estable.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># lanzo nueva versión</span>
+sudo kubectl apply -f deployment/dep.yaml 
+deployment.apps/deployment-test configured
+
+<span class="c1"># veo como se añade la nueva versión</span>
+sudo kubectl rollout <span class="nb">history</span> deployment deployment-test             
+deployment.apps/deployment-test 
+REVISION  CHANGE-CAUSE
+<span class="m">1</span>         &lt;none&gt;
+<span class="m">2</span>         cambio manual de anotacion
+<span class="m">3</span>         cambio version imagen fake
+
+<span class="c1"># al ver el estado del proceso de cambio, veo que no avanza</span>
+sudo kubectl rollout status deployment deployment-test
+Waiting <span class="k">for</span> deployment <span class="s2">&quot;deployment-test&quot;</span> rollout to finish: <span class="m">1</span> out of <span class="m">3</span> new replicas have been updated...
+
+<span class="c1"># y veo que no puede hacer la transicion de pods, porque no puede descargar la imagen</span>
+sudo kubectl get pods                                               
+NAME                               READY   STATUS             RESTARTS   AGE
+deployment-test-64bcc5dd9c-4b9rk   <span class="m">1</span>/1     Running            <span class="m">0</span>          21m
+deployment-test-64bcc5dd9c-bkp5v   <span class="m">1</span>/1     Running            <span class="m">0</span>          21m
+deployment-test-64bcc5dd9c-rlc6l   <span class="m">1</span>/1     Running            <span class="m">0</span>          21m
+deployment-test-7b799b8bcf-gw9nl   <span class="m">0</span>/1     ImagePullBackOff   <span class="m">0</span>          3m49s
+
+<span class="c1"># vuelvo a la versión 2 que era estable</span>
+sudo kubectl rollout undo deployment deployment-test --to-revision<span class="o">=</span><span class="m">2</span>
+deployment.apps/deployment-test rolled back
+
+<span class="c1"># parece haber ido bien</span>
+sudo kubectl rollout status deployment deployment-test 
+deployment <span class="s2">&quot;deployment-test&quot;</span> successfully rolled out
+
+<span class="c1"># los pods vuleven a estar correctos</span>
+sudo kubectl get pods                                               
+NAME                               READY   STATUS    RESTARTS   AGE
+deployment-test-64bcc5dd9c-4b9rk   <span class="m">1</span>/1     Running   <span class="m">0</span>          24m
+deployment-test-64bcc5dd9c-bkp5v   <span class="m">1</span>/1     Running   <span class="m">0</span>          24m
+deployment-test-64bcc5dd9c-rlc6l   <span class="m">1</span>/1     Running   <span class="m">0</span>          24m
+
+<span class="c1"># compruevo que su versión de imagen es la correcta</span>
+sudo kubectl describe pod deployment-test-64bcc5dd9c-bkp5v <span class="p">|</span> grep -i image:
+    Image:          nginx:alpine
+</code></pre></div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Replicaset/" title="Replicaset" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Replicaset
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Services_Endpoints/" title="Services & Endpoints" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Services & Endpoints
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

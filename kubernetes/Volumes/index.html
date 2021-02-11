@@ -1,0 +1,1306 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="http://kubernetes.jorgepastorr.tk:50022/Volumes/">
+      
+      
+        <meta name="author" content="Jorge Pastor">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../images/kubernetes.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Volumes - Proyecto Kubernetes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="__gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#volumenes" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://kubernetes.jorgepastorr.tk:50022" title="Proyecto Kubernetes" aria-label="Proyecto Kubernetes" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../images/logokubernetes.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Proyecto Kubernetes
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Volumes
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://gitlab.com/jorgepastorr/kubernetes/" title="Go to repository" class="md-source" data-md-source="gitlab">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__gitlab" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jorgepastorr/kubernetes
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://kubernetes.jorgepastorr.tk:50022" title="Proyecto Kubernetes" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../images/logokubernetes.png" width="48" height="48">
+      
+    </a>
+    Proyecto Kubernetes
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://gitlab.com/jorgepastorr/kubernetes/" title="Go to repository" class="md-source" data-md-source="gitlab">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__gitlab" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jorgepastorr/kubernetes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Kubernetes" class="md-nav__link">
+      Kubernetes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Instalaci%C3%B3n/" title="Instalación" class="md-nav__link">
+      Instalación
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Pod/" title="Pod" class="md-nav__link">
+      Pod
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Replicaset/" title="Replicaset" class="md-nav__link">
+      Replicaset
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Deployment/" title="Deployment" class="md-nav__link">
+      Deployment
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Services_Endpoints/" title="Services & Endpoints" class="md-nav__link">
+      Services & Endpoints
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Namespaces/" title="Namespaces" class="md-nav__link">
+      Namespaces
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Limits/" title="Limits" class="md-nav__link">
+      Limits
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Probes/" title="Probes" class="md-nav__link">
+      Probes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ConfigMaps/" title="ConfigMaps & Environtment" class="md-nav__link">
+      ConfigMaps & Environtment
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Secrets/" title="Secrets" class="md-nav__link">
+      Secrets
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Volumes
+      </label>
+    
+    <a href="./" title="Volumes" class="md-nav__link md-nav__link--active">
+      Volumes
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#volumenes" class="md-nav__link">
+    Volumenes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-volumenes" class="md-nav__link">
+    Tipos de Volúmenes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emptydir" class="md-nav__link">
+    Emptydir
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hostpath" class="md-nav__link">
+    HostPath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volumen-aws-ebs" class="md-nav__link">
+    Volumen AWS ebs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pvpvc" class="md-nav__link">
+    PV/PvC
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selectors" class="md-nav__link">
+    Selectors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asignar-pvc-a-pod" class="md-nav__link">
+    Asignar pvc a pod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storageclass-dinamico" class="md-nav__link">
+    StorageClass dinamico
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nfs" class="md-nav__link">
+    NFS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dinamico" class="md-nav__link">
+    Dinámico
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nfs_1" class="md-nav__link">
+    Nfs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-del-nfs-server" class="md-nav__link">
+    Configuración del nfs server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#despliegue-requerido" class="md-nav__link">
+    Despliegue  requerido
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storageclass" class="md-nav__link">
+    StorageClass
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobar" class="md-nav__link">
+    Comprobar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../RBAC/" title="RBAC" class="md-nav__link">
+      RBAC
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Ingres/" title="Ingres" class="md-nav__link">
+      Ingres
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../aws-cli/" title="AWS-clie" class="md-nav__link">
+      AWS-clie
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../aws/awseks/" title="AWS EKS" class="md-nav__link">
+      AWS EKS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      presentacion
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        presentacion
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../presentacion/diapositiva.html" title="diapositiva" class="md-nav__link">
+      diapositiva
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../presentacion/diapositiva.pdf" title="diapositiva-pdf" class="md-nav__link">
+      diapositiva-pdf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../presentacion/videos/" title="Videos" class="md-nav__link">
+      Videos
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#volumenes" class="md-nav__link">
+    Volumenes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-volumenes" class="md-nav__link">
+    Tipos de Volúmenes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emptydir" class="md-nav__link">
+    Emptydir
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hostpath" class="md-nav__link">
+    HostPath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volumen-aws-ebs" class="md-nav__link">
+    Volumen AWS ebs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pvpvc" class="md-nav__link">
+    PV/PvC
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selectors" class="md-nav__link">
+    Selectors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asignar-pvc-a-pod" class="md-nav__link">
+    Asignar pvc a pod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storageclass-dinamico" class="md-nav__link">
+    StorageClass dinamico
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nfs" class="md-nav__link">
+    NFS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dinamico" class="md-nav__link">
+    Dinámico
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nfs_1" class="md-nav__link">
+    Nfs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-del-nfs-server" class="md-nav__link">
+    Configuración del nfs server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#despliegue-requerido" class="md-nav__link">
+    Despliegue  requerido
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storageclass" class="md-nav__link">
+    StorageClass
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobar" class="md-nav__link">
+    Comprobar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://gitlab.com/jorgepastorr/kubernetes/edit/master/docs/Volumes.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Volumes</h1>
+                
+                <h2 id="volumenes">Volumenes</h2>
+<p>Los volúmenes son puntos de montaje que se utilizan para compartir datos entre contenedores o almacenaje persistente de datos.</p>
+<h3 id="tipos-de-volumenes">Tipos de Volúmenes</h3>
+<p><strong>emptydir</strong>: es un directorio vacio que se crea como volumen y va ligado a la vida del pod, mientras el pod viva ese volumen seguirá existiendo y manteniendo los datos, los containers dentro del pod pueden morir y revivir las veces que quieran que el volumen seguirá existiendo, pero si muere el pod el volumen desaparece.</p>
+<p><strong>hostPath</strong>: es un directorio que en forma de volumen y va ligado a la vida del nodo, ese directorio existirá en el nodo, si un pod muere y se despliega en otro nodo no podrá acceder a la información del volumen donde murió, este volumen existirá hasta que se elimine o el nodo muera.</p>
+<p><strong>Volumenes cloud</strong>: kubernetes permite crear puntos de montaje en diferentes plataformas como aws, openstack, google cloud, donde previamente a de haber una configuración en el nodo para conectar con la plataforma.</p>
+<p><strong>PV/PvC</strong>: mas que un tipo de montaje es una metodología que utiliza kubernetes para separar el trabajo del desarrollador al de administrador. </p>
+<p>Funciona de la siguiente manera, un pod solicita el punto de montaje al objeto PvC (Persistent Volume claim) en este objeto se especifica la capacidad que se quiere, el PvC pide ese espacio al objeto PV (Persistent volume) que este sabe donde esta cada disco externo al nodo y su capacidad, si lo solicitado por el PvC esta disponible en algún PV el punto de montaje se crea.</p>
+<p>De esta manera los desarrolladores no tienen que preocuparse d donde almacenar los datos, solo solicitan el espacio deseado, y los administradores ponen espacio disponible a disposición de recogida.</p>
+<p>Diferentes tipos de funcionamientos:</p>
+<ul>
+<li>
+<p><strong>retain</strong>: en caso de eliminar el pvc, retener el pv y los datos de disco, ademas no podrá ser usado por otro pvc</p>
+</li>
+<li>
+<p><strong>recycle</strong>: en caso de eliminar el pvc el pv se mantiene pero los datos del disco se borran para que otro pvc lo reclame.</p>
+</li>
+<li>
+<p><strong>delete</strong>: en este caso si eliminas el pvc también eliminas el pv y los datos del disco.</p>
+</li>
+</ul>
+<h3 id="emptydir">Emptydir</h3>
+<p>Este tipo de montaje al ser muy volátil es utilizado normalmente para guardar cache o archivos que pueden perderse. Una vez muera el POD los datos del punto de montaje se perderán.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Pod</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-pd</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">containers</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx:alpine</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-container</span>
+    <span class="nt">volumeMounts</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">mountPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/cache</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cache-volume</span>
+  <span class="nt">volumes</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cache-volume</span>
+    <span class="nt">emptyDir</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
+</code></pre></div>
+
+<p>Ruta del directorio local</p>
+<div class="codehilite"><pre><span></span><code>/var/lib/kubelet/pods/b60897a7-f689-4bff-bef6-0545d1727f9b/volumes/kubernetes.io~empty-dir/cache-volume
+</code></pre></div>
+
+<h3 id="hostpath">HostPath</h3>
+<p>hostPath es un punto de montaje a nivel de nodo, en el nodo persistirán los datos pero si el pod por la razón que sea cambia de nodo, no podrá llegar a los datos a del anterior nodo.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Pod</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-pd</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">containers</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx.alpine</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-container</span>
+    <span class="nt">volumeMounts</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">mountPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/usr/share/nginx/html</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-volume</span>
+  <span class="nt">volumes</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-volume</span>
+    <span class="nt">hostPath</span><span class="p">:</span>
+      <span class="c1"># directory location on host</span>
+      <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/data/front-nginx</span>
+</code></pre></div>
+
+<h3 id="volumen-aws-ebs">Volumen AWS ebs</h3>
+<p>Este es un ejemplo de punto de montaje con un volumen creado en amazon ebs, se indica el id del volumen a montar. La ventaja de estos puntos de montaje, son que los datos están disponibles en todos los nodos y no hay perdidas ni conflictos, la desventaja que se utiliza una entidad externa.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Pod</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-ebs</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">containers</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">k8s.gcr.io/test-webserver</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-container</span>
+    <span class="nt">volumeMounts</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">mountPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/test-ebs</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-volume</span>
+  <span class="nt">volumes</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-volume</span>
+    <span class="c1"># This AWS EBS volume must already exist.</span>
+    <span class="nt">awsElasticBlockStore</span><span class="p">:</span>
+      <span class="nt">volumeID</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">vol-0fb30c332ecff512d</span>
+      <span class="nt">fsType</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ext4</span>
+</code></pre></div>
+
+<blockquote>
+<p><strong>Nota</strong>: Este proceso de montaje requiere una configuración previa, tanto de amazon ebs con usuarios especiales IAM, como de cada nodo establecer la conexión con amazon correctamente con <code>aws-clie</code></p>
+</blockquote>
+<h3 id="pvpvc">PV/PvC</h3>
+<p>Esta metodología qu a creado kubernetes, en un principio se hace pesada de utilizar y un tanto engorrosa, pero una vez te acostumbras, acaba siendo muy útil y rápida de utilizar, sobre todo en su opción dinámica.</p>
+<p>PV y PvC son dos objetos diferentes donde PvC solicita un espacio determinado y PV lo proporciona si esta disponible.</p>
+<p>En el siguiente ejemplo se ve un PV con 5Gi de espacio disponible, permisos sobre el espacio de <code>ReadWriteOnce</code> escritura y lectura solo por un PvC y que ese espacio está en <code>/mnt/data</code></p>
+<p>El PvC que se observa solicita a cualquier PV que exista: 5Gi de espacio <code>readWriteOnce</code> y que en ese espacio solo pueda escribir el.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># pv</span>
+<span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pv-volume</span>
+  <span class="nt">labels</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">local</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">storageClassName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">manual</span>
+  <span class="nt">capacity</span><span class="p">:</span>
+    <span class="nt">storage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5Gi</span>
+  <span class="nt">accessModes</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
+  <span class="nt">hostPath</span><span class="p">:</span>
+    <span class="nt">path</span><span class="p">:</span> <span class="s">&quot;/mnt/data&quot;</span>
+<span class="nn">---</span>
+<span class="c1"># pvc</span>
+<span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PersistentVolumeClaim</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pv-claim</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">storageClassName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">manual</span>
+  <span class="nt">accessModes</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
+  <span class="nt">resources</span><span class="p">:</span>
+    <span class="nt">requests</span><span class="p">:</span>
+      <span class="nt">storage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5Gi</span>
+</code></pre></div>
+
+<p>Una vez desplegado se observa que el PvC se a asignado al PV que había.</p>
+<div class="codehilite"><pre><span></span><code>➜ sudo kubectl get pv
+NAME        CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM              STORAGECLASS   REASON   AGE
+pv-volume   5Gi        RWO            Retain           Bound    default/pv-claim   manual
+
+➜ sudo kubectl get pvc
+NAME       STATUS   VOLUME      CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+pv-claim   Bound    pv-volume   5Gi        RWO            manual         18s
+</code></pre></div>
+
+<h4 id="selectors">Selectors</h4>
+<p>Los selectores es una manera de especificar a que PV quieres que se asigne un PvC. En el siguiente ejemplo se muestra un PvC que se asigna a un PV que tenga el label <code>type:local</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PersistentVolumeClaim</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pv-claim</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">storageClassName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">manual</span>
+  <span class="nt">accessModes</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
+  <span class="nt">resources</span><span class="p">:</span>
+    <span class="nt">requests</span><span class="p">:</span>
+      <span class="nt">storage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5Gi</span>
+  <span class="nt">selector</span><span class="p">:</span>
+    <span class="nt">matchLabels</span><span class="p">:</span>
+      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">local</span>
+</code></pre></div>
+
+<p>Se puede observar que teniendo dos PV disponibles se a asociado al que coincide con el label indicado.</p>
+<div class="codehilite"><pre><span></span><code>NAME              CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM              STORAGECLASS   REASON   AGE
+pv-volume         5Gi        RWO            Retain           Bound       default/pv-claim
+pv-volume-mysql   5Gi        RWO            Retain           Available                  
+</code></pre></div>
+
+<h4 id="asignar-pvc-a-pod">Asignar pvc a pod</h4>
+<p>Teniendo el siguiente PvC corriendo, asigno un POD a este para mostrar un ejemplo de funcionamiento.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PersistentVolumeClaim</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pv-claim</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">storageClassName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">manual</span>
+  <span class="nt">accessModes</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
+  <span class="nt">resources</span><span class="p">:</span>
+    <span class="nt">requests</span><span class="p">:</span>
+      <span class="nt">storage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5Gi</span>
+  <span class="nt">selector</span><span class="p">:</span>
+    <span class="nt">matchLabels</span><span class="p">:</span>
+      <span class="nt">mysql</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">local</span>
+</code></pre></div>
+
+<p>Para asociar un PvC a un POD solo se tiene que indicar el nombre del PvC en la sección <code>volumes</code> con la opción <code>persistentVolimeClaim y claimName</code></p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">deploy-mysql</span>
+  <span class="nt">labels</span><span class="p">:</span>
+    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysql</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">replicas</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">selector</span><span class="p">:</span>
+    <span class="nt">matchLabels</span><span class="p">:</span>
+      <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysql</span>
+  <span class="nt">template</span><span class="p">:</span>
+    <span class="nt">metadata</span><span class="p">:</span>
+      <span class="nt">labels</span><span class="p">:</span>
+        <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysql</span>
+    <span class="nt">spec</span><span class="p">:</span>
+      <span class="nt">containers</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysql</span>
+        <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysql:latest</span>
+        <span class="nt">env</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MYSQL_ROOT_PASSWORD</span>
+            <span class="nt">value</span><span class="p">:</span> <span class="s">&quot;12345678&quot;</span>
+        <span class="nt">volumeMounts</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">mountPath</span><span class="p">:</span> <span class="s">&quot;/var/lib/mysql&quot;</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">vol-mysql</span>
+      <span class="nt">volumes</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">vol-mysql</span>
+          <span class="nt">persistentVolumeClaim</span><span class="p">:</span>
+            <span class="nt">claimName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pv-claim</span>
+</code></pre></div>
+
+<p>Resultado del montaje:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># se a creado el POD del deployment</span>
+➜ sudo kubectl get pods
+NAME                            READY   STATUS    RESTARTS   AGE
+deploy-mysql-6c5cdb988b-7w9cp   <span class="m">1</span>/1     Running   <span class="m">0</span>          26s
+
+<span class="c1"># el pvc pc-claim se a asociado al PV pv-volume</span>
+➜ sudo kubectl get pvc 
+NAME       STATUS   VOLUME      CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+pv-claim   Bound    pv-volume   5Gi        RWO            manual         35s
+
+➜ sudo kubectl get pv 
+NAME        CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM              STORAGECLASS   REASON   AGE
+pv-volume   5Gi        RWO            Retain           Bound    default/pv-claim   manual
+
+<span class="c1"># Y desde el host podemos ver el directorio que se a montado </span>
+➜ ls /mnt/data 
+ auto.cnf        binlog.000002   ca-key.pem   client-cert.pem   ib_buffer_pool ...  
+</code></pre></div>
+
+<h4 id="storageclass-dinamico">StorageClass dinamico</h4>
+<p>Esta es una opción para facilitar rápidamente a los desarrolladores puntos de montaje, con esta opción solo tienes que crear un PvC y StorageClass te crea un PV con unos valores por defecto.</p>
+<p>Por defecto minikube ya tiene creado un storageclass como HostPath, por lo contrario con minikube no puede configurar un StorageClass dinamico para la nube.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># sc abreviación de storageClass</span>
+➜ sudo kubectl get sc
+NAME                 PROVISIONER                RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+standard <span class="o">(</span>default<span class="o">)</span>   k8s.io/minikube-hostpath   Delete          Immediate           <span class="nb">false</span>
+</code></pre></div>
+
+<p>Solo creando un PvC storageClass ya nos proporciona el punto de montaje.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PersistentVolumeClaim</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sc-pvc</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">accessModes</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
+  <span class="nt">resources</span><span class="p">:</span>
+    <span class="nt">requests</span><span class="p">:</span>
+      <span class="nt">storage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5Gi</span>
+</code></pre></div>
+
+<p>Comprobación de que se a creado el pv automáticamente:</p>
+<blockquote>
+<p><strong>Atención</strong>: el PV lo crea en modo delete si borras el PvC se borraran tanto los datos como el PV, esto solo es un entorno de pruebas, se puede cambiar utilizando <code>sudo kubectl edit storageClass standard</code></p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="c1"># despliego el PvC</span>
+➜ sudo kubectl apply -f volumenes/storage-class.yml 
+persistentvolumeclaim/sc-pvc created
+
+<span class="c1"># ompruevo que se a asignado a un PV</span>
+➜ sudo kubectl get pvc
+NAME     STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+sc-pvc   Bound    pvc-a1ac3b34-d19c-4bd8-8fd5-26cc4ae1123b   5Gi        RWO            standard       16s
+
+➜ sudo kubectl get pv 
+NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM            STORAGECLASS   REASON   AGE
+pvc-a1ac3b34-d19c-4bd8-8fd5-26cc4ae1123b   5Gi        RWO            Delete           Bound    default/sc-pvc   standard                24s
+
+<span class="c1"># Observo que el pv crea un punto de montaje en tmp.</span>
+➜ sudo kubectl describe pv pvc-a1ac3b34-d19c-4bd8-8fd5-26cc4ae1123b
+Name:            pvc-a1ac3b34-d19c-4bd8-8fd5-26cc4ae1123b
+StorageClass:    standard
+Status:          Bound
+Claim:           default/sc-pvc
+Reclaim Policy:  Delete
+Access Modes:    RWO
+VolumeMode:      Filesystem
+Capacity:        5Gi
+Message:         
+Source:
+    Type:          HostPath <span class="o">(</span>bare host directory volume<span class="o">)</span>
+    Path:          /tmp/hostpath-provisioner/pvc-a1ac3b34-d19c-4bd8-8fd5-26cc4ae1123b
+</code></pre></div>
+
+<h3 id="nfs">NFS</h3>
+<p>nfs junto con kubernetes es una manera de tener puntos de montaje en el cluster sin utilizar una plataforma externa.</p>
+<p>El funcionamiento de esto es Montar un servidor NFS en el que todos los nodos del cluster tengan acceso y desde los nodos utilizar PV/PvC.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nfs-pv</span>
+  <span class="nt">labels</span><span class="p">:</span>
+    <span class="nt">datos</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nfs</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">storageClassName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">manual</span>
+  <span class="nt">capacity</span><span class="p">:</span>
+    <span class="nt">storage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10Gi</span>
+  <span class="nt">accessModes</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ReadWriteMany</span>
+  <span class="nt">nfs</span><span class="p">:</span>
+    <span class="nt">server</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-nfs-server</span>
+    <span class="nt">path</span><span class="p">:</span> <span class="s">&quot;/var/shared&quot;</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PersistentVolumeClaim</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nfs-pvc</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">accessModes</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ReadWriteMany</span>
+  <span class="nt">storageClassName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">manual</span>
+  <span class="nt">resources</span><span class="p">:</span>
+    <span class="nt">requests</span><span class="p">:</span>
+      <span class="nt">storage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5Gi</span>
+  <span class="nt">selector</span><span class="p">:</span>
+    <span class="nt">matchLabels</span><span class="p">:</span>
+      <span class="nt">datos</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nfs</span>
+</code></pre></div>
+
+<h3 id="dinamico">Dinámico</h3>
+<p>El aprovisionamiento dinámico es un recurso normalmente en la nube, donde  se crean volumenes automáticamente al solicitarlos.</p>
+<p>Los puntos de aprovisionamiento dinámico están diseñados para dar puntos de montaje rápidamente y sin tener que pedir permiso al administrador. Hasta ahora el diseñador cada vez que quería pedir un punto de montaje con un PVC, el administrador tenia que crear un PV manualmente, con el aprovisionamiento dinámico esto se automatiza.</p>
+<h4 id="nfs_1">Nfs</h4>
+<p>https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client/deploy</p>
+<p>Por defecto kubernetes deja esta metodología para terceros y proporciona el siguiente <a href="https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client/deploy">git</a> para configurar un servidor nfs como aprovisionamiento dinámico.</p>
+<blockquote>
+<p>Previamente se tiene que disponer de un servidor nfs configurado</p>
+</blockquote>
+<p>Los archivos del repositorio proporcionan un deployment para poder gestionar las solicitudes de storage en el namespace en el que se despliege, ademas un archivo <code>rbac.yaml</code> con todos los permisos necesarios para hacer posible esta gestión.</p>
+<h5 id="configuracion-del-nfs-server">Configuración del nfs server</h5>
+<div class="codehilite"><pre><span></span><code>pi@raspberrypi:~ $ cat /etc/exports 
+/srv/dinamic        <span class="m">192</span>.168.88.0/24<span class="o">(</span>rw,sync,no_subtree_check,no_root_squash,no_all_squash,insecure<span class="o">)</span>
+
+pi@raspberrypi:~ $ ls -l /srv/
+total <span class="m">20</span>
+drwxr-xr-x  <span class="m">2</span> nobody   root             <span class="m">4096</span> May  <span class="m">6</span> <span class="m">19</span>:14 dinamic
+</code></pre></div>
+
+<h5 id="despliegue-requerido">Despliegue  requerido</h5>
+<p>Despliegue de los archivos requeridos para el funcionamiento de nfs dinámico proporcionados por el git de esta sección.</p>
+<div class="codehilite"><pre><span></span><code>➜ kubectl apply -f rbac.yaml 
+serviceaccount/nfs-client-provisioner created
+clusterrole.rbac.authorization.k8s.io/nfs-client-provisioner-runner created
+clusterrolebinding.rbac.authorization.k8s.io/run-nfs-client-provisioner created
+role.rbac.authorization.k8s.io/leader-locking-nfs-client-provisioner created
+rolebinding.rbac.authorization.k8s.io/leader-locking-nfs-client-provisioner created
+
+➜ kubectl get clusterrole,role,rolebinding,clusterrolebinding,svc <span class="p">|</span> grep nfs
+clusterrole.rbac.authorization.k8s.io/nfs-client-provisioner-runner                                          10m
+role.rbac.authorization.k8s.io/leader-locking-nfs-client-provisioner   10m
+rolebinding.rbac.authorization.k8s.io/leader-locking-nfs-client-provisioner   10m
+clusterrolebinding.rbac.authorization.k8s.io/run-nfs-client-provisioner                             10m
+
+➜ kubectl apply -f deployment.yaml 
+deployment.apps/nfs-client-provisioner created
+</code></pre></div>
+
+<h5 id="storageclass">StorageClass</h5>
+<p>StorageClass es el objeto que kubernetes proporciona para el almacenamiento dinámico</p>
+<p><em>class.yml</em></p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">storage.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">StorageClass</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">managed-nfs-storage</span>
+<span class="nt">provisioner</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-nfs-provisioner</span> <span class="c1"># or choose another name, must match deployment&#39;s env PROVISIONER_NAME&#39;</span>
+<span class="nt">parameters</span><span class="p">:</span>
+  <span class="nt">archiveOnDelete</span><span class="p">:</span> <span class="s">&quot;false&quot;</span>
+<span class="nt">reclaimPolicy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Delete</span> <span class="c1"># Delete | Retain | recycle</span>
+</code></pre></div>
+
+<p>Aplicar StorageClass y visualizar </p>
+<div class="codehilite"><pre><span></span><code>➜ kubectl apply -f class.yaml                                               
+storageclass.storage.k8s.io/managed-nfs-storage created
+
+➜ kubectl get storageclass,deploy
+NAME                                              PROVISIONER                RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+storageclass.storage.k8s.io/managed-nfs-storage   my-nfs-provisioner         Delete          Immediate           <span class="nb">false</span>                  57s
+storageclass.storage.k8s.io/standard <span class="o">(</span>default<span class="o">)</span>    k8s.io/minikube-hostpath   Delete          Immediate           <span class="nb">false</span>                  81d
+
+NAME                                     READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/nfs-client-provisioner   <span class="m">1</span>/1     <span class="m">1</span>            <span class="m">1</span>           49s
+</code></pre></div>
+
+<h5 id="comprobar">Comprobar</h5>
+<p>Para comprobar creamos un PVC y automáticamente se tiene que crear un PV asociado y un directorio en el servidor nfs.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PersistentVolumeClaim</span>
+<span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-claim</span>
+  <span class="nt">annotations</span><span class="p">:</span>
+    <span class="nt">volume.beta.kubernetes.io/storage-class</span><span class="p">:</span> <span class="s">&quot;managed-nfs-storage&quot;</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">accessModes</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ReadWriteMany</span>
+  <span class="nt">resources</span><span class="p">:</span>
+    <span class="nt">requests</span><span class="p">:</span>
+      <span class="nt">storage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10Mi</span>
+</code></pre></div>
+
+<p>Despliegue:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># no hay pv, pvc exisentes</span>
+➜ kubectl get pv,pvc                                          
+No resources found in default namespace.
+
+<span class="c1"># crear PVC</span>
+➜ kubectl apply -f test-claim.yml
+
+<span class="c1"># automaticamente se a creado un PV asociado al PVC</span>
+➜ kubectl get pv,pvc              
+NAME                                                        CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                STORAGECLASS          REASON   AGE
+persistentvolume/pvc-1355ca1f-7e3a-4b67-a0aa-b9bdc229baae   10Mi       RWX            Delete           Bound    default/test-claim   managed-nfs-storage            5s
+
+NAME                               STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS          AGE
+persistentvolumeclaim/test-claim   Bound    pvc-1355ca1f-7e3a-4b67-a0aa-b9bdc229baae   10Mi       RWX            managed-nfs-storage   5s
+
+<span class="c1"># En el servidor nfs se a creado el recurso automaticamente</span>
+pi@raspberrypi:~ $ ls -l /srv/dinamic/
+total <span class="m">4</span>
+drwxrwxrwx <span class="m">2</span> root root <span class="m">4096</span> May  <span class="m">6</span> <span class="m">19</span>:12 default-test-claim-pvc-1355ca1f-7e3a-4b67-a0aa-b9bdc229baae
+</code></pre></div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Secrets/" title="Secrets" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Secrets
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../RBAC/" title="RBAC" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                RBAC
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

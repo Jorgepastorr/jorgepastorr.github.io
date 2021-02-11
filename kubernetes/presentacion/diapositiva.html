@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kubernetes</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/kubernetes.png" sizes="16x16" type="image/png">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .image-25 img {
+        width: 25%;
+        /* .image-100[![](images/estructura.png)] */
+      }
+      .invert{
+        background-color: #272822;
+        color: #f3f3f3;
+      }
+      .marca {
+        background-image: url(images/header.png);
+        background-size: 70%;
+        background-position: 100% 0%;
+      }
+      img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, invert
+
+.image-25[![](images/kubernetes.png)]
+### Kubernetes
+### Jorge Pastor
+
+---
+class: marca
+
+### Que es?
+
+Kubernetes es una plataforma portátil, extensible y de código abierto  para gestionar 
+cargas de trabajo y servicios en contenedores
+
+### Historia
+
+Kubernetes es el predecessor del proyecto Borg de Google.
+
+El nombre Kubernetes se origina del griego, que significa timonel o  piloto. 
+Google abrió el proyecto Kubernetes en 2014
+
+---
+class: marca
+
+### Etructura del cluster
+
+![](images/estructura.png)
+
+---
+class: marca
+
+### Pod
+
+El objeto mas pequeño de nuestro cluster
+
+![](images/pod.png)
+
+---
+class: marca, center
+
+<img src="images/deployment.png"  width="65%">
+
+.left[**Deployment** despliega la aplicación y crea un control de versiones]
+
+---
+class: marca
+
+### Servicios
+
+Se encargan de dar acceso a una aplicación
+
+![](images/servicio.png)
+
+---
+class: marca
+
+### ClusterIP
+
+Servicio de comunicación, entre aplicaciones dentro del cluster
+
+.center[![](images/clusterIP.png)]
+
+---
+class: marca
+
+### NodePort
+
+Servicio de acceso desde el exterior a las aplicaciones del cluster. 
+
+Puertos permitidos ( 30000 - 32767 )
+
+![](images/nodeport.png)
+
+---
+class: marca
+
+### ExternalIP
+
+Serivicio que expone una aplicación a una ip concreta
+
+![](images/externalip.png)
+
+---
+layout: true
+class: marca
+
+### Ingres
+
+---
+Es un proxy que proporciona kubernetes junto con nginx para filtrar las entradas al cluster.
+
+Este objeto es accesible desde el nodo master, o se puede comunicar con un *Loadbalancer* 
+de AWS o Gogle Cloud. 
+
+---
+class: marca
+<img src="images/ingress.png"  width="80%">
+
+---
+layout: false
+layout: true
+class: marca
+
+### Volumenes
+
+---
+class: marca
+
+Existen tres tipos de volumenes:
+
+**Temporales:**
+- EmptyDir
+- HostPath
+
+**Persistentes:**
+- Volumen externo de red
+
+Para Utilizar volumenes persistentes recomiendan la metodología `PV/PVC`
+
+---
+![](images/volumes.png)
+
+---
+
+Metodologia `PV/PVC`
+
+- `PV` Marca un disco/volumen como disponible
+- `PVC` Es la petición de espacio que se requiere
+
+Por Que?
+
+- Esta forma de trabajo es para separar las tareas del SysAdmin y Desarrollador
+
+---
+
+Funcionamiento de trabajo con PV/PVC
+
+![](images/pv-pvc.png)
+
+---
+layout: false
+class: marca
+
+### Piensa en grande
+
+Kubernetes puede soportar hasta:
+
+- 5.000 nodos
+- 150.000 pods totales
+- 300.000 containers
+- 100 pods por nodo
+
+.pull-left[Una infraestructura así para un solo administrador, plantea un problema]
+
+.right[![](images/emoji-peroque.jpg)]
+
+---
+class: marca
+
+### Namespaces
+
+Diferentes equipos trabajando simultaniamente sin molestarse
+
+![](images/namespace.png)
+
+---
+class: marca
+
+### Permisos y usuarios
+
+- Usuarios y grupos
+- Diferentes roles de acceso a los objetos del cluster
+
+.center[![](images/equipo.jpg)]
+
+---
+class: center, middle, invert
+
+.image-25[![](images/kubernetes.png)]
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
