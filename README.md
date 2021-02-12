@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+## Acerca de
 
-You can use the [editor on GitHub](https://github.com/Jorgepastorr/jorgepastorr.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Soy Jorge Pastor un Administrador de sistemas informáticos Linux, en estos momentos me ilusiona un proyecto en el que pueda aportar valor y que me permita crecer profesional y personalmente.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Me defino como una persona comunicativa, emprendedora, positiva, colaborativa, abierta a nuevas alternativas y oportunidades. Me encanta aprender sobre nuevas tecnologias relacionadas en la administración de servidores y el Open Source.
 
-### Markdown
+## Proyectos
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Kubernetes
 
-```markdown
-Syntax highlighted code block
+Proyecto final de curso realizado en Escola del treball Grado Superior ASIX, en el que muestro el funcionamiento de kubernetes 
 
-# Header 1
-## Header 2
-### Header 3
+[Leer mas ...](https://gitlab.com/jorgepastorr/kubernetes)
 
-- Bulleted
-- List
+### PXE Cloud
 
-1. Numbered
-2. List
+Proyecto final de curso realizado en Escola del treball Grado Medio en colaboracion de [@NefixEstrada](https://github.com/NefixEstrada)
 
-**Bold** and _Italic_ and `Code` text
+PXE Cloud es un entorno fácil de configurar y administrar para iniciar imágenes en vivo e instaladores de SO a través de iPXE.  
 
-[Link](url) and ![Image](src)
-```
+[Leer mas ...](https://github.com/pxe-cloud/pxe-cloud)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Jorgepastorr/jorgepastorr.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
