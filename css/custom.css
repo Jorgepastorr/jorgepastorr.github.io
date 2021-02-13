@@ -1,0 +1,90 @@
+/* Generales */
+body {
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #222222;
+}
+.letter-spacing {
+    letter-spacing: .2rem;
+    color: rgba(255, 255, 255, 0.5) !important; 
+}
+.lead {
+    font-weight: 200;
+    line-height: 1.5; 
+}
+a {color: #bac964;}
+a:hover {color: #bac964;}
+
+.grow:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+    transition-duration: 1s, 4s;
+}
+
+
+
+/* stilos navbar  */
+
+.site-navbar {
+    position: absolute;
+    width: 100%;
+    letter-spacing: .1rem;
+    background-color: transparent !important;
+}
+
+
+/* estilos bienvenida home */
+
+.site-entrada {
+    background: url(../images/portada.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+
+}
+.site-entrada h1 {
+    font-weight: 200;
+    margin-bottom: 20px;
+    display: block; 
+    font-weight: 800; 
+    font-size: 70px;
+}
+
+
+/* estilos seccion proyectos */
+
+.section-proyect {
+    background:  #54575a;
+}
+.section-proyect h3 {
+    color: #fff;
+}
+.proyect-box-item {
+    background: #333;
+    padding: 30px; 
+}
+
+
+/* estilos contacto */
+
+.social-item {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: #333;
+    position: relative;
+    border-radius: 50%;
+    font-size: 25px;
+    margin: 0 10px; 
+}
+.social-item > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+}
