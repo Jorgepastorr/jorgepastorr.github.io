@@ -1,431 +1,435 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-     <loc>http://docs.jorgepastorr.tk:50022/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/Configurar_pantallas_manualmente/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/Configurar_pantallas_manualmente/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/Debian_hostname_dinamico/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/Debian_hostname_dinamico/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/Mutt/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/Mutt/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/Procesos/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/Procesos/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/Resetear_la_password_root/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/Resetear_la_password_root/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/Vim/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/Vim/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/awk/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/awk/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/freeipa/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/freeipa/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/instalar_webmin/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/instalar_webmin/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/per/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/per/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/permisos_avanzados/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/permisos_avanzados/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/samba/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/samba/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/server-correo/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/server-correo/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/server-mensajeria/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/server-mensajeria/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/ssh/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/ssh/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/sudo/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/sudo/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/umask/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/umask/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/usuarios/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/usuarios/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/vnc/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/vnc/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/webdav/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/webdav/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/ldap/Ldap-Samba-Hostpam/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/ldap/Ldap-Samba-Hostpam/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/ldap/acl_ejercicios/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/ldap/acl_ejercicios/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/ldap/host-kerberos-con-ldap/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/ldap/host-kerberos-con-ldap/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/ldap/ldap/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/ldap/ldap/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/pxe/Servidor-pxe-con-rapberry/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/pxe/Servidor-pxe-con-rapberry/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/pxe/guiapxe-fedora/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/pxe/guiapxe-fedora/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/redes/apuntes-xarxa/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/redes/apuntes-xarxa/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/redes/comandos_router_switch/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/redes/comandos_router_switch/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/redes/haproxy/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/redes/haproxy/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/administracion/redes/redes2/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/administracion/redes/redes2/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/auditoria/apuntes_hacking/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/auditoria/apuntes_hacking/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/bases_datos/mongo/Mongo/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/bases_datos/mongo/Mongo/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/bases_datos/postgres/bases/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/bases_datos/postgres/bases/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/bases_datos/postgres/modificaciones/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/bases_datos/postgres/modificaciones/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/bases_datos/postgres/plpgsql/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/bases_datos/postgres/plpgsql/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/bases_datos/postgres/postgresql-intalacion/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/bases_datos/postgres/postgresql-intalacion/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/curiosidades/Lanzador_aplicaciones_en_gnome/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/cloud/aws/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/curiosidades/cambiar_color_promp_terminal/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/curiosidades/Eliminar_contrase%C3%B1a_windows/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/curiosidades/conky/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/curiosidades/Lanzador_aplicaciones_en_gnome/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/curiosidades/openbox/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/curiosidades/cambiar_color_promp_terminal/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/curiosidades/qbit/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/curiosidades/conky/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/curiosidades/tmux/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/curiosidades/openbox/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/desatendidas/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/curiosidades/qbit/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/desatendidas/Instalacion-desatendida-debian/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/curiosidades/tmux/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/desatendidas/desatendida-windows/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/desatendidas/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/desatendidas/kikstart/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/desatendidas/Instalacion-desatendida-debian/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/generar_doc/docsify/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/desatendidas/desatendida-windows/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/generar_doc/remark/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/desatendidas/kikstart/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/lenguajes/Fundamentos_php/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/generar_doc/docsify/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/lenguajes/Shell/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/generar_doc/remark/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/lenguajes/python3/Apuntes-Metodos/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/lenguajes/Fundamentos_php/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/lenguajes/python3/apuntes-Funcionalidades_avanzadas/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/lenguajes/Shell/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/lenguajes/python3/apuntes-Herencia/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/Apuntes-Metodos/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/lenguajes/python3/apuntes-distribucion/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-Funcionalidades_avanzadas/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/lenguajes/python3/apuntes-documentacion/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-Herencia/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/lenguajes/python3/apuntes-ficheros/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-distribucion/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/lenguajes/python3/apuntes-fundamento/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-documentacion/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/lenguajes/python3/apuntes-modulos/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-ficheros/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/lenguajes/python3/apuntes-orientado-objetos/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-fundamento/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/lenguajes/python3/apuntes-test/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-modulos/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/lenguajes/python3/apuntes-tkinter/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-orientado-objetos/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/lenguajes/python3/apuntes_bases/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-test/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/lenguajes/python3/argparse/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-tkinter/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/seguridad/Certificados-Digitales/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes_bases/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/seguridad/Kerberos/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/argparse/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/seguridad/OpenVpn/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/seguridad/Certificados-Digitales/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/seguridad/The-crazy-thing/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/seguridad/Kerberos/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/seguridad/TunelSSH/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/seguridad/OpenVpn/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/seguridad/gpg/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/seguridad/The-crazy-thing/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/seguridad/lvm/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/seguridad/TunelSSH/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/seguridad/practica-ssl-tls/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/seguridad/gpg/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/seguridad/raid/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/seguridad/lvm/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/seguridad/backups/Borg_basico/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/seguridad/practica-ssl-tls/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/seguridad/backups/Tar/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/seguridad/raid/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/seguridad/backups/rdiff-backup/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/seguridad/backups/Borg_basico/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/seguridad/backups/rsync/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/seguridad/backups/Tar/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/seguridad/cortafuegos/Iptables/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/seguridad/backups/rdiff-backup/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/Actualizar_hora_sys_o_bios/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/seguridad/backups/rsync/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/Arranque-del-sistema/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/seguridad/cortafuegos/Iptables/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/Eliminar_contrase%C3%B1a_windows/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/Actualizar_hora_sys_o_bios/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/Estructura_de_directorios/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/Arranque-del-sistema/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/Logs_journalctl/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/Estructura_de_directorios/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/Systemd/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/Logs/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/chroot/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/Systemd/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/disco/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/chroot/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/gestores_de_paquetes/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/disco/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/getenforce/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/gestores_de_paquetes/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/grub/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/getenforce/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/home/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/grub/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/ip_est%C3%A1tica/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/home/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/pam/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/ip_est%C3%A1tica/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/raid/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/pam/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/xinetd/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/raid/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/automatizacion/ansible/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/xinetd/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/sistemas/automatizacion/tareas_programadas/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/automatizacion/ansible/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/virtualizacion/Docker-basico/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/sistemas/automatizacion/tareas_programadas/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/virtualizacion/Lxc/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/Docker-basico/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/virtualizacion/Vagrant/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/Lxc/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/virtualizacion/kubernetes/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/Vagrant/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/virtualizacion/swarm/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/kubernetes/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/virtualizacion/virt-manager/Backing_chain/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/swarm/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/virtualizacion/virt-manager/Clonar/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/virt-manager/Backing_chain/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/virtualizacion/virt-manager/Instalacion_de_virtualizacion_fedora/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/virt-manager/Clonar/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/virtualizacion/virt-manager/acceder_consola_desde_virsh/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/virt-manager/Instalacion_de_virtualizacion_fedora/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/virtualizacion/virt-manager/crear_red_aislada/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/virt-manager/acceder_consola_desde_virsh/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://docs.jorgepastorr.tk:50022/virtualizacion/virt-manager/instalar_maquina_virtual_virt-install/</loc>
-     <lastmod>2021-02-11</lastmod>
+     <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/virt-manager/crear_red_aislada/</loc>
+     <lastmod>2021-02-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/virt-manager/instalar_maquina_virtual_virt-install/</loc>
+     <lastmod>2021-02-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
