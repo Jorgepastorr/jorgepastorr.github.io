@@ -1,0 +1,3293 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Jorge Pastor">
+      
+      
+        <link rel="canonical" href="https://jorgepastorr.github.io/apuntes/sistemas/ZFS/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.2">
+    
+    
+      
+        <title>ZFS - Apuntes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.816931ca.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../..":"../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#zfs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Apuntes" class="md-header__button md-logo" aria-label="Apuntes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ZFS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apuntes" class="md-nav__button md-logo" aria-label="Apuntes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Apuntes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Apuntes Jorgepastorr
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Administracion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Administracion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Administracion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/Configurar_pantallas_manualmente/" class="md-nav__link">
+        Configurar pantallas manualmente
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/Debian_hostname_dinamico/" class="md-nav__link">
+        Debian hostname dinamico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/Mutt/" class="md-nav__link">
+        Que es mutt?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/Procesos/" class="md-nav__link">
+        Procesos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/Resetear_la_password_root/" class="md-nav__link">
+        Resetear la password root.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/Vim/" class="md-nav__link">
+        Vim atajos básicos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/awk/" class="md-nav__link">
+        Uso básico de AWK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/freeipa/" class="md-nav__link">
+        FreeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/instalar_webmin/" class="md-nav__link">
+        instalar webmin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/per/" class="md-nav__link">
+        PER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/permisos_avanzados/" class="md-nav__link">
+        Permisos avanzados
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/samba/" class="md-nav__link">
+        Samba
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/server-correo/" class="md-nav__link">
+        Servidor Correo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/server-mensajeria/" class="md-nav__link">
+        Server mensajeria instantanea
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/ssh/" class="md-nav__link">
+        ssh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/sudo/" class="md-nav__link">
+        sudo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/umask/" class="md-nav__link">
+        umask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/usuarios/" class="md-nav__link">
+        Usuarios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/vnc/" class="md-nav__link">
+        vnc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/webdav/" class="md-nav__link">
+        webdav
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_21" type="checkbox" id="__nav_2_21" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_21">
+          Ldap
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ldap" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_21">
+          <span class="md-nav__icon md-icon"></span>
+          Ldap
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/ldap/Ldap-Samba-Hostpam/" class="md-nav__link">
+        Ldap - Samba - Hostpam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/ldap/acl_ejercicios/" class="md-nav__link">
+        Acl ejercicios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/ldap/host-kerberos-con-ldap/" class="md-nav__link">
+        Instalación host  ldap-kerberos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/ldap/ldap/" class="md-nav__link">
+        ldap
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_22" type="checkbox" id="__nav_2_22" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_22">
+          Pxe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pxe" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_22">
+          <span class="md-nav__icon md-icon"></span>
+          Pxe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/pxe/Servidor-pxe-con-rapberry/" class="md-nav__link">
+        Servidor pxe con rapberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/pxe/guiapxe-fedora/" class="md-nav__link">
+        Guiapxe fedora
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_23" type="checkbox" id="__nav_2_23" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_23">
+          Redes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Redes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_23">
+          <span class="md-nav__icon md-icon"></span>
+          Redes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/redes/apuntes-xarxa/" class="md-nav__link">
+        APUNTS DE XARXES
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/redes/comandos_router_switch/" class="md-nav__link">
+        Configuració de Routers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/redes/haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/redes/redes2/" class="md-nav__link">
+        Redes2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Auditoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Auditoria" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Auditoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../auditoria/apuntes_hacking/" class="md-nav__link">
+        Haking ético
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Bases datos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bases datos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Bases datos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Mongo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mongo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Mongo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases_datos/mongo/Mongo/" class="md-nav__link">
+        Mongo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Postgres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Postgres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Postgres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases_datos/postgres/bases/" class="md-nav__link">
+        Postgres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases_datos/postgres/modificaciones/" class="md-nav__link">
+        Modificación tablas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases_datos/postgres/plpgsql/" class="md-nav__link">
+        Plpgsql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases_datos/postgres/postgresql-intalacion/" class="md-nav__link">
+        Postgresql intalacion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cloud" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud/aws/" class="md-nav__link">
+        aws
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Curiosidades
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Curiosidades" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Curiosidades
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curiosidades/Eliminar_contrase%C3%B1a_windows/" class="md-nav__link">
+        Eliminar contraseña windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curiosidades/Lanzador_aplicaciones_en_gnome/" class="md-nav__link">
+        Lanzador aplicaciones en gnome
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curiosidades/cambiar_color_promp_terminal/" class="md-nav__link">
+        Cambiar color promp terminal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curiosidades/conky/" class="md-nav__link">
+        conky
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curiosidades/openbox/" class="md-nav__link">
+        Openbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curiosidades/qbit/" class="md-nav__link">
+        Qbit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curiosidades/tmux/" class="md-nav__link">
+        Tmux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Desatendidas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Desatendidas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Desatendidas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../desatendidas/" class="md-nav__link">
+        Desatendidas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../desatendidas/Instalacion-desatendida-debian/" class="md-nav__link">
+        Instalacion desatendida debian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../desatendidas/desatendida-windows/" class="md-nav__link">
+        Desatendida windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../desatendidas/kikstart/" class="md-nav__link">
+        Kikstart
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Generar doc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Generar doc" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Generar doc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../generar_doc/docsify/" class="md-nav__link">
+        Docsify
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../generar_doc/remark/" class="md-nav__link">
+        Remark
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Lenguajes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lenguajes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Lenguajes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/Fundamentos_php/" class="md-nav__link">
+        Fundamentos php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/Shell/" class="md-nav__link">
+        Shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3">
+          Python3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python3" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Python3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/Apuntes-Metodos/" class="md-nav__link">
+        Métodos de colecciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-Funcionalidades_avanzadas/" class="md-nav__link">
+        apuntes Funcionalidades avanzadas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-Herencia/" class="md-nav__link">
+        Herencias
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-distribucion/" class="md-nav__link">
+        Distribución
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-documentacion/" class="md-nav__link">
+        Documentación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-ficheros/" class="md-nav__link">
+        Apuntes ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-fundamento/" class="md-nav__link">
+        Python fundamentos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-modulos/" class="md-nav__link">
+        Módulos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-orientado-objetos/" class="md-nav__link">
+        Orientado a objetos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-test/" class="md-nav__link">
+        Test
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-tkinter/" class="md-nav__link">
+        Tkinter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes_bases/" class="md-nav__link">
+        Apuntes bases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/argparse/" class="md-nav__link">
+        Argparse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Seguridad
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seguridad" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Seguridad
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/Certificados-Digitales/" class="md-nav__link">
+        Certificados Digitales
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/Kerberos/" class="md-nav__link">
+        Kerberos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/OpenVpn/" class="md-nav__link">
+        OpenVpn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/The-crazy-thing/" class="md-nav__link">
+        The crazy thing!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/TunelSSH/" class="md-nav__link">
+        Tunel SSH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/lvm/" class="md-nav__link">
+        Lvm logical volum manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/practica-ssl-tls/" class="md-nav__link">
+        Practica ssl tls
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_10" type="checkbox" id="__nav_10_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_10">
+          Backups
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Backups" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_10">
+          <span class="md-nav__icon md-icon"></span>
+          Backups
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/backups/Borg_basico/" class="md-nav__link">
+        Borg básico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/backups/Tar/" class="md-nav__link">
+        Tar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/backups/rdiff-backup/" class="md-nav__link">
+        rdiff-backup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/backups/rsync/" class="md-nav__link">
+        rsync
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_11" type="checkbox" id="__nav_10_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_11">
+          Cortafuegos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cortafuegos" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_11">
+          <span class="md-nav__icon md-icon"></span>
+          Cortafuegos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/cortafuegos/Iptables/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Sistemas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sistemas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Sistemas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Actualizar_hora_sys_o_bios/" class="md-nav__link">
+        Gestionar Hora
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Arranque-del-sistema/" class="md-nav__link">
+        Arranque del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Estructura_de_directorios/" class="md-nav__link">
+        Estructura de directorios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Logs/" class="md-nav__link">
+        Logs del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Systemd/" class="md-nav__link">
+        Systemd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ZFS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ZFS
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#niveles-de-raid-soportados" class="md-nav__link">
+    Niveles de RAID soportados
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-zpools" class="md-nav__link">
+    Gestión de Zpools
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestión de Zpools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-zpool" class="md-nav__link">
+    Crear zpool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizar-estato" class="md-nav__link">
+    Visualizar estato
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discos-adicionales" class="md-nav__link">
+    Discos adicionales
+  </a>
+  
+    <nav class="md-nav" aria-label="Discos adicionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disco-de-log" class="md-nav__link">
+    Disco de log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disco-cache" class="md-nav__link">
+    Disco caché
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disco-spare" class="md-nav__link">
+    Disco spare
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quitar-disco-adicional" class="md-nav__link">
+    Quitar disco adicional
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-un-zpool" class="md-nav__link">
+    Modificar un Zpool
+  </a>
+  
+    <nav class="md-nav" aria-label="Modificar un Zpool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anadirquitar-discos-a-mirror" class="md-nav__link">
+    Añadir/Quitar discos a mirror
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambio-disco-fallido-n-raidz-con-spare" class="md-nav__link">
+    cambio disco fallido n raidz con spare
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambio-de-disco-a-raidz" class="md-nav__link">
+    Cambio de disco a raidz
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aumentarreducir-raidz" class="md-nav__link">
+    Aumentar/Reducir raidz
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migracion" class="md-nav__link">
+    Migración
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destruccion" class="md-nav__link">
+    Destrucción
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-notificaciones-por-e-mail" class="md-nav__link">
+    Añadir notificaciones por e-Mail.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-de-un-pool" class="md-nav__link">
+    Propiedades de un pool
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volumenes" class="md-nav__link">
+    Volumenes
+  </a>
+  
+    <nav class="md-nav" aria-label="Volumenes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-volumen" class="md-nav__link">
+    Crear volumen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snapshot" class="md-nav__link">
+    Snapshot
+  </a>
+  
+    <nav class="md-nav" aria-label="Snapshot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enviar-snapshot" class="md-nav__link">
+    Enviar snapshot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades" class="md-nav__link">
+    Propiedades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chroot/" class="md-nav__link">
+        Chroot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disco/" class="md-nav__link">
+        Disco
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestores_de_paquetes/" class="md-nav__link">
+        Gestores de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getenforce/" class="md-nav__link">
+        getenforce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grub/" class="md-nav__link">
+        Grub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../home/" class="md-nav__link">
+        Cambiar /home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ip_est%C3%A1tica/" class="md-nav__link">
+        ip estática raspberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pam/" class="md-nav__link">
+        Pam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xinetd/" class="md-nav__link">
+        xinetd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_17" type="checkbox" id="__nav_11_17" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_17">
+          Automatizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Automatizacion" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_17">
+          <span class="md-nav__icon md-icon"></span>
+          Automatizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automatizacion/ansible/" class="md-nav__link">
+        Ansible
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automatizacion/tareas_programadas/" class="md-nav__link">
+        Tareas Programadas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          Virtualizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virtualizacion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Virtualizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtualizacion/Docker-basico/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtualizacion/Lxc/" class="md-nav__link">
+        LXC y LXD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtualizacion/Vagrant/" class="md-nav__link">
+        Vagrant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtualizacion/kubernetes/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtualizacion/swarm/" class="md-nav__link">
+        Swarm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_6" type="checkbox" id="__nav_12_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_6">
+          Virt manager
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virt manager" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_6">
+          <span class="md-nav__icon md-icon"></span>
+          Virt manager
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtualizacion/virt-manager/Backing_chain/" class="md-nav__link">
+        Backing_chain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtualizacion/virt-manager/Clonar/" class="md-nav__link">
+        Clonar de virtual a físico y de físico a virtual.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtualizacion/virt-manager/Instalacion_de_virtualizacion_fedora/" class="md-nav__link">
+        Instalación de virtualización fedora
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtualizacion/virt-manager/acceder_consola_desde_virsh/" class="md-nav__link">
+        acceder consola desde virsh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtualizacion/virt-manager/crear_red_aislada/" class="md-nav__link">
+        Crear red aislada
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtualizacion/virt-manager/instalar_maquina_virtual_virt-install/" class="md-nav__link">
+        virt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#niveles-de-raid-soportados" class="md-nav__link">
+    Niveles de RAID soportados
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-zpools" class="md-nav__link">
+    Gestión de Zpools
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestión de Zpools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-zpool" class="md-nav__link">
+    Crear zpool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizar-estato" class="md-nav__link">
+    Visualizar estato
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discos-adicionales" class="md-nav__link">
+    Discos adicionales
+  </a>
+  
+    <nav class="md-nav" aria-label="Discos adicionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disco-de-log" class="md-nav__link">
+    Disco de log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disco-cache" class="md-nav__link">
+    Disco caché
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disco-spare" class="md-nav__link">
+    Disco spare
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quitar-disco-adicional" class="md-nav__link">
+    Quitar disco adicional
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-un-zpool" class="md-nav__link">
+    Modificar un Zpool
+  </a>
+  
+    <nav class="md-nav" aria-label="Modificar un Zpool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anadirquitar-discos-a-mirror" class="md-nav__link">
+    Añadir/Quitar discos a mirror
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambio-disco-fallido-n-raidz-con-spare" class="md-nav__link">
+    cambio disco fallido n raidz con spare
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambio-de-disco-a-raidz" class="md-nav__link">
+    Cambio de disco a raidz
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aumentarreducir-raidz" class="md-nav__link">
+    Aumentar/Reducir raidz
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migracion" class="md-nav__link">
+    Migración
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destruccion" class="md-nav__link">
+    Destrucción
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-notificaciones-por-e-mail" class="md-nav__link">
+    Añadir notificaciones por e-Mail.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-de-un-pool" class="md-nav__link">
+    Propiedades de un pool
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volumenes" class="md-nav__link">
+    Volumenes
+  </a>
+  
+    <nav class="md-nav" aria-label="Volumenes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-volumen" class="md-nav__link">
+    Crear volumen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snapshot" class="md-nav__link">
+    Snapshot
+  </a>
+  
+    <nav class="md-nav" aria-label="Snapshot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enviar-snapshot" class="md-nav__link">
+    Enviar snapshot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades" class="md-nav__link">
+    Propiedades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/jorgepastorr/apuntes/edit/master/docs/sistemas/ZFS.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="zfs">ZFS</h1>
+<ul>
+<li><a href="https://docs.oracle.com/cd/E26921_01/html/E25823/docinfo.html#scrolltoc">Doc oracle zfs</a></li>
+<li><a href="https://linux.die.net/man/8/zpool">man zpool</a></li>
+<li><a href="https://linux.die.net/man/8/zfs">man zfs</a></li>
+</ul>
+<div class="highlight"><pre><span></span><code>apt install  zfsutils-linux  zfs-dkms
+</code></pre></div>
+<p><strong>IMPORTANTE</strong>: No usar ZFS sobre controladoras  hardware, puesto que tienen su propia caché. ZFS necesita comunicarse  directamente con los discos.</p>
+<h2 id="niveles-de-raid-soportados">Niveles de RAID soportados</h2>
+<p>El sistema ZFS, soporta los siguientes tipos de RAID, los RAID-Z son una variacion de Raid5</p>
+<ul>
+<li>RAID0</li>
+<li>RAID1</li>
+<li>RAID10 </li>
+<li>RAIDZ-1 (min 3 discos, paridad simple)</li>
+<li>RAIDZ-2 (min 4 discos, paridad doble)</li>
+<li>RAIDZ-3 (min 5 discos, paridad triple)</li>
+</ul>
+<h2 id="gestion-de-zpools">Gestión de Zpools</h2>
+<p>Visualización de zpool</p>
+<div class="highlight"><pre><span></span><code>zpool status    <span class="c1"># ver estado el pool</span>
+zpool list      <span class="c1"># ver la capacidad de los discos</span>
+zfs list        <span class="c1"># ver los volumenes dentro de zpool</span>
+zpool <span class="nb">history</span>   <span class="c1"># ver historial de comandos</span>
+zpool get all   <span class="c1"># ver propiedades del pool</span>
+</code></pre></div>
+<h3 id="crear-zpool">Crear zpool</h3>
+<p><a href="https://docs.oracle.com/cd/E23824_01/html/821-1448/gaypw.html#gazhd">doc oracle</a> sobre esta sección</p>
+<p><strong>RAID0 o "Striping"</strong></p>
+<p>No añade redundancia, por lo que un fallo en un disco supone un fallo en el RAID completo. Sin embargo, si que mejora la velocidad de Lectura/Escritura.</p>
+<div class="highlight"><pre><span></span><code>zpool create -f &lt;NombrePool&gt; &lt;Disco&gt; &lt;Disco&gt; <span class="o">[</span>&lt;Disco&gt; &lt;Disco&gt; &lt;Disco&gt; ...<span class="o">]</span>
+zpool create -f tank /dev/vdb /dev/vdc
+</code></pre></div>
+<p><strong>RAID1 o "Mirroring"</strong></p>
+<p>Como mínimo necesitaremos 2 discos de la misma capacidad. La capacidad resultante será la de un solo disco.</p>
+<div class="highlight"><pre><span></span><code>zpool create -f &lt;NombrePool&gt; mirror &lt;Disco1&gt; &lt;Disco2&gt;
+zpool create -f tank mirror /dev/vdb /dev/vdc
+</code></pre></div>
+<p><strong>RAID10</strong></p>
+<p>El resultado será un RAID0 sobre varios RAID1. Su capacidad será la suma de capacidades de todos los RAID1 que lo compongan.</p>
+<div class="highlight"><pre><span></span><code>zpool create -f &lt;NombrePool&gt; mirror &lt;Disco1&gt; &lt;Disco2&gt; mirror &lt;Disco1&gt; &lt;Disco2&gt; <span class="o">[</span>mirror &lt;Disco1&gt; &lt;Disco2&gt; ...<span class="o">]</span>
+zpool create -f tank mirror /dev/vdb /dev/vdc mirror /dev/vdd /dev/vde
+</code></pre></div>
+<p><strong>RAIDZ-1</strong></p>
+<p>El RAID-Z1, es similar a un RAID5 con paridad simple, requiere al menos 3 discos.</p>
+<div class="highlight"><pre><span></span><code>zpool create -f &lt;NombrePool&gt; raidz1 &lt;Disco1&gt; &lt;Disco2&gt; &lt;Disco3&gt;
+zpool create -f tank raidz1 /dev/vdb /dev/vdc /dev/vdd
+</code></pre></div>
+<p><strong>RAIDZ-2</strong></p>
+<p>El RAID-Z2, es similar a un RAID5 con paridad doble, requiere al menos 4 discos.</p>
+<div class="highlight"><pre><span></span><code>zpool create -f &lt;NombrePool&gt; raidz2 &lt;Disco1&gt; &lt;Disco2&gt; &lt;Disco3&gt; &lt;Disco4&gt;
+zpool create -f tank raidz2 /dev/vd[b-e]
+</code></pre></div>
+<p><strong>RAIDZ-3</strong></p>
+<p>El RAID-Z3, es similar a un RAID5 con paridad triple, requiere al menos 5 discos.</p>
+<div class="highlight"><pre><span></span><code>zpool create -f &lt;NombrePool&gt; raidz3 &lt;Disco1&gt; &lt;Disco2&gt; &lt;Disco3&gt; &lt;Disco4&gt; &lt;Disco5&gt;
+zpool create -f tank raidz2 /dev/vd[b-f]
+</code></pre></div>
+<h3 id="visualizar-estato">Visualizar estato</h3>
+<div class="highlight"><pre><span></span><code>zpool status    <span class="c1"># ver estado el pool</span>
+zpool list      <span class="c1"># ver la capacidad de los discos</span>
+zfs list        <span class="c1"># ver los volumenes dentro de zpool</span>
+zpool <span class="nb">history</span>   <span class="c1"># ver historial de comandos</span>
+zpool get all   <span class="c1"># ver propiedades del pool</span>
+</code></pre></div>
+<h3 id="discos-adicionales">Discos adicionales</h3>
+<h4 id="disco-de-log">Disco de log</h4>
+<p>Podemos añadir un disco adicional para logs:</p>
+<div class="highlight"><pre><span></span><code>zpool create -f &lt;NombrePool&gt; &lt;ElRaidQueSea&gt; log &lt;Disco&gt; <span class="c1"># crear pool con disco de log</span>
+zpool add -f &lt;NombrePool&gt; log &lt;Disco&gt;   <span class="c1"># añadir disco cache de pool ya creado</span>
+</code></pre></div>
+<h4 id="disco-cache">Disco caché</h4>
+<p>Para acelerar la lectura y escritura en el RAID, podemos usar un disco caché. Obviamente esto tiene sentido con discos SSD:</p>
+<div class="highlight"><pre><span></span><code>zpool create -f &lt;NombrePool&gt; &lt;ElRaidQueSea&gt; cache &lt;Disco&gt;   <span class="c1"># crear pool con disco de cache</span>
+zpool add -f &lt;NombrePool&gt; cache &lt;Disco&gt; <span class="c1"># añadir disco cache a pool ya creado</span>
+</code></pre></div>
+<h4 id="disco-spare">Disco spare</h4>
+<div class="highlight"><pre><span></span><code>zpool create -f &lt;NombrePool&gt; &lt;ElRaidQueSea&gt; spare &lt;Disco&gt;   <span class="c1"># crear pool con disco de spare</span>
+zpool add -f &lt;NombrePool&gt; spare &lt;Disco&gt; <span class="c1"># añadir disco spare a pool ya creado</span>
+</code></pre></div>
+<h4 id="quitar-disco-adicional">Quitar disco adicional</h4>
+<div class="highlight"><pre><span></span><code>zpool remove tank  /dev/vdg <span class="c1"># remove solo funciona con discos spare, cache, log, ...</span>
+</code></pre></div>
+<h3 id="modificar-un-zpool">Modificar un Zpool</h3>
+<h4 id="anadirquitar-discos-a-mirror">Añadir/Quitar discos a mirror</h4>
+<div class="highlight"><pre><span></span><code>zpool create -f tank mirrot /dev/vdb /dev/vdc <span class="c1"># creación de mirror simple</span>
+zpool status 
+...
+config:
+    NAME          STATE     READ WRITE CKSUM
+    tank          ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+      mirror-0    ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdb       ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdc       ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+
+zpool attach tank /dev/vdb /dev/vdd <span class="c1"># añadir disco a mirror</span>
+zpool offline tank  /dev/vdd        <span class="c1"># poner disco offline (simular un fallo)</span>
+zpool detach tank  /dev/vdd         <span class="c1"># retirar disco</span>
+</code></pre></div>
+<blockquote>
+<p>La opción attach no se puede utilizar directamente sobre raidz*, se tendrá que utilizar replace</p>
+</blockquote>
+<h4 id="cambio-disco-fallido-n-raidz-con-spare">cambio disco fallido n raidz con spare</h4>
+<p>En este ejemplo se muestra como seria el cambio de un disco que a fallado en un raidz2 con spare</p>
+<div class="highlight"><pre><span></span><code>zpool create -f tank raidz2 /dev/vd<span class="o">[</span>b-e<span class="o">]</span> spare /dev/vd<span class="o">[</span>fg<span class="o">]</span>  <span class="c1"># creación de raidz2 con 2 discos spare</span>
+zpool status
+    NAME        STATE     READ WRITE CKSUM
+    tank        ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+      raidz2-0  ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdb     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdc     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdd     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vde     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+    spares
+      vdf       AVAIL   
+      vdg       AVAIL   
+---
+zpool offline tank vdc <span class="c1"># simulo fallo de disco vdc</span>
+zpool status
+    NAME        STATE     READ WRITE CKSUM
+    tank        DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+      raidz2-0  DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdb     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdc     OFFLINE      <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdd     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vde     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+    spares
+      vdg       AVAIL   
+      vdf       AVAIL   
+---
+zpool replace tank vdc vdf <span class="c1"># remplazo disco vdc offline por vdf en spare</span>
+zpool status
+    NAME         STATE     READ WRITE CKSUM
+    tank         DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+      raidz2-0   DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdb      ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        spare-1  DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+          vdc    OFFLINE      <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+          vdf    ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdd      ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vde      ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+    spares
+      vdg        AVAIL   
+      vdf        INUSE     currently <span class="k">in</span> use
+---
+zpool detach tank vdc   <span class="c1"># quito disco dañado vdc</span>
+zpool status
+    NAME        STATE     READ WRITE CKSUM
+    tank        ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+      raidz2-0  ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdb     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdf     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdd     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vde     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+    spares
+      vdg       AVAIL   
+---
+zpool add tank spare vdc    <span class="c1"># pongo vdc reparado como spare</span>
+zpool status
+    NAME        STATE     READ WRITE CKSUM
+    tank        ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+      raidz2-0  ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdb     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdf     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdd     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vde     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+    spares
+      vdg       AVAIL   
+      vdc       AVAIL   
+</code></pre></div>
+<h4 id="cambio-de-disco-a-raidz">Cambio de disco a raidz</h4>
+<p>En este ejemplo se muestra el cambio de un disco en un raidz2 sin spare </p>
+<p>Primero de todo simulamos el fallo de un disco poniendolo offline</p>
+<div class="highlight"><pre><span></span><code>zpool offline tank vdd
+zpool status
+    NAME        STATE     READ WRITE CKSUM
+    tank        DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+      raidz2-0  DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdb     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdc     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdd     OFFLINE      <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vde     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdf     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdg     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+</code></pre></div>
+<p>En este paso ya podemos desmontar y retirar el disco de la máquina y poner uno nuevo. Una vez insertado el disco nuevo en la máquina con <code>zpool replace</code> lo volvemos a poner online en el pool</p>
+<div class="highlight"><pre><span></span><code>zpool replace tank /dev/vdd
+zpool status
+    NAME        STATE     READ WRITE CKSUM
+    tank        ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+      raidz2-0  ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdb     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdc     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdd     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vde     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdf     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+        vdg     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+</code></pre></div>
+<h4 id="aumentarreducir-raidz">Aumentar/Reducir raidz</h4>
+<p>Actualmente en la versio de OpenZFS 2.1 no se puede canviar el modo de raidz, aun que anuncian para 3.0 en 2022 esa  funcionalidad.</p>
+<p>De momento solo podemos hacer un snapshot de los datos, destruir el el zpool, crear uno nuevo y volver a volcar el snapshot</p>
+<div class="highlight"><pre><span></span><code>zfs snapshot tank/documents@backup
+zfs send -cpe tank/documents@backup &gt; backup.documnts
+
+zpool destroy tank
+zpool create -f tank raidz2 /dev/vd<span class="o">[</span>b-g<span class="o">]</span> 
+
+zfs recv tank/documents  &lt; backup.documnts
+zfs list
+NAME             USED  AVAIL     REFER  MOUNTPOINT
+tank             357K  <span class="m">7</span>.42G     <span class="m">44</span>.0K  /tank
+tank/documents  <span class="m">90</span>.9K  <span class="m">7</span>.42G     <span class="m">90</span>.9K  /tank/documents
+</code></pre></div>
+<h3 id="migracion">Migración</h3>
+<p><a href="https://docs.oracle.com/cd/E19253-01/820-2314/gbchy/index.html">doc oracle</a> sobre esta sección</p>
+<p>La opción export marca los discos como que se esta iniciando una migración y entre otras cosas purga cualquier dato no escrito en el disco ( hace un sync)</p>
+<div class="highlight"><pre><span></span><code>zpool <span class="nb">export</span> tank 
+</code></pre></div>
+<blockquote>
+<p>Una vez exportado el pool ya se pueden extraer los discos e llevarlos a otro nas</p>
+</blockquote>
+<p>Para detectar las agrupaciones disponibles, ejecute el comando zpool import sin opciones. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>zpool import    <span class="c1"># ver pools disponibles</span>
+zpool import tank   <span class="c1"># importar pool tank (tambien se puede indicar con nel id)</span>
+zpool import tank zelda <span class="c1"># importar renombrando</span>
+
+zfs <span class="nb">set</span> <span class="nv">mountpoint</span><span class="o">=</span>/zelda zelda <span class="c1"># canviar punto de montaje</span>
+</code></pre></div>
+<blockquote>
+<p>podrás ver el id de un pool con <code>zpool status</code> o <code>zpool import</code></p>
+</blockquote>
+<h3 id="destruccion">Destrucción</h3>
+<div class="highlight"><pre><span></span><code>zpool destroy dozer <span class="c1"># destruir un pool</span>
+zpool import -D     <span class="c1"># ver pools destridos</span>
+zpool import -Df dozer  <span class="c1"># forzar importción pool dozer</span>
+zpool status -x     <span class="c1"># visualizar pool en mal estado</span>
+  pool: dozer
+ state: DEGRADED
+status: One or more devices could not be opened.  Sufficient replicas exist <span class="k">for</span>
+        the pool to <span class="k">continue</span> functioning <span class="k">in</span> a degraded state.
+action: Attach the missing device and online it using <span class="s1">&#39;zpool online&#39;</span>.
+   see: http://www.sun.com/msg/ZFS-8000-2Q
+ scrub: scrub completed after 0h0m with <span class="m">0</span> errors on Thu Jan <span class="m">21</span> <span class="m">15</span>:38:48 <span class="m">2010</span>
+config:
+        NAME         STATE     READ WRITE CKSUM
+        dozer        DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+          raidz2-0   DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+            c2t8d0   ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+            c2t9d0   ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+            c2t10d0  ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+            c2t11d0  UNAVAIL      <span class="m">0</span>    <span class="m">37</span>     <span class="m">0</span>  cannot open
+            c2t12d0  ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+
+errors: No known data errors
+
+zpool online dozer c2t11d0  <span class="c1"># reactivar disco </span>
+Bringing device c2t11d0 online
+
+zpool status -x
+all pools are healthy
+</code></pre></div>
+<h3 id="anadir-notificaciones-por-e-mail">Añadir notificaciones por e-Mail.</h3>
+<p>Instalamos el servicio que se encargará de monitorizar los eventos  del módulo de kernel ZFS. Este servicio puede enviar emails cuando  ocurran errores en alguna pool.</p>
+<div class="highlight"><pre><span></span><code>apt-get install zfs-zed
+</code></pre></div>
+<p>Para activar el demonio, debemos configurar el correo:</p>
+<div class="highlight"><pre><span></span><code>nano /etc/zfs/zed.d/zed.rc
+ZED_EMAIL_ADDR=&quot;avisos@correo.es&quot;
+</code></pre></div>
+<h3 id="propiedades-de-un-pool">Propiedades de un pool</h3>
+<p><a href="https://docs.oracle.com/cd/E19253-01/819-5461/gfifk/index.html">doc oracle</a> sobre esta sección</p>
+<p><strong>Definir tamaño de sector</strong></p>
+<p>Para un comportamiento óptimo de la unidad ZFS, el tamaño del sector  de la Pool (ashift), debe ser mayor o igual que el tamaño del sector en  los discos que la componen. Para configurarlo, lo haríamos de la  siguiente forma:</p>
+<div class="highlight"><pre><span></span><code>zpool create -f -o <span class="nv">ashift</span><span class="o">=</span><span class="m">12</span> &lt;NombrePool&gt; &lt;ElRaidQueSea&gt;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>zpool create -f -m /tank tank /dev/vdb  <span class="c1"># crear volumenes -f force vdevs</span>
+zpool scrub tank    <span class="c1"># añadir control de fallos al volumen</span>
+zpool <span class="nb">history</span>   <span class="c1"># ver historial de comandos</span>
+</code></pre></div>
+<h2 id="volumenes">Volumenes</h2>
+<h3 id="crear-volumen">Crear volumen</h3>
+<div class="highlight"><pre><span></span><code>zfs create tank/documents
+zfs destroy tank/documents
+
+zfs create -o <span class="nv">compression</span><span class="o">=</span>on tank/documents 
+</code></pre></div>
+<h3 id="snapshot">Snapshot</h3>
+<div class="highlight"><pre><span></span><code>zfs snapshot tank/documents@backup
+zfs list -t snapshot
+ll /tank/documents/.zfs/snapshot/backup
+
+zfs rollback tank/documents@backup
+zfs destroy tank/documents@backup
+         -n no-action
+         -v verbose
+         -r recursive <span class="o">(</span>clones...<span class="o">)</span>
+</code></pre></div>
+<h4 id="enviar-snapshot">Enviar snapshot</h4>
+<div class="highlight"><pre><span></span><code>zfs send -cpev tank/dana@snap1 <span class="p">|</span> ssh host2 zfs recv newtank/dana    <span class="c1"># enviar snap</span>
+<span class="c1"># -c compress</span>
+<span class="c1"># -p  Información verbosa sobre el paquete de transmisión generado. </span>
+<span class="c1"># -e  Generate a more compact stream </span>
+<span class="c1"># -v vervose</span>
+
+zfs send -i tank/dana@snap1 tank/dana@snap2 <span class="p">|</span> ssh host2 zfs recv -F newtank/dana    <span class="c1"># enviar icremental snap</span>
+<span class="c1"># -F forzar rollback a la instantanea mas reciente antes de recibir</span>
+</code></pre></div>
+<h3 id="propiedades">Propiedades</h3>
+<p><a href="https://docs.oracle.com/cd/E19253-01/819-5461/gazss/index.html">doc oracle</a> sobre esta sección</p>
+<p>Se pueden ver todas las propiedades en <code>man zfsprops</code></p>
+<div class="highlight"><pre><span></span><code>zfs get all tank/documents <span class="c1"># ver opciones</span>
+
+zfs <span class="nb">set</span> <span class="nv">compression</span><span class="o">=</span>on tank/documents
+zfs <span class="nb">set</span> <span class="nv">atime</span><span class="o">=</span>off  <span class="c1"># Controla si el tiempo de acceso a los archivos se actualiza cuando se leen</span>
+zfs <span class="nb">set</span> <span class="nv">atime</span><span class="o">=</span>off <span class="nv">relatime</span><span class="o">=</span>on zelda
+</code></pre></div>
+<p>Una vez creada la unidad ZFS, es posible usar compresión en este almacenamiento</p>
+<div class="highlight"><pre><span></span><code>zfs <span class="nb">set</span> <span class="nv">compression</span><span class="o">=</span>lz4 &lt;NombrePool&gt;
+zfs <span class="nb">set</span> <span class="nv">compression</span><span class="o">=</span>off &lt;NombrePool&gt;
+</code></pre></div>
+<blockquote>
+<p>Se recomienda usar el algoritmo lz4, ya que agrega muy poca sobrecarga de CPU. También están disponibles otros algoritmos como lzjb y gzip-N, donde N es un  número entero de 1 (más rápido) a 9 (mejor relación de compresión).  Dependiendo del algoritmo y de la compresión de los datos, tener la  compresión habilitada puede incluso aumentar el rendimiento.</p>
+</blockquote>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Systemd/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Systemd" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Systemd
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../chroot/" class="md-footer__link md-footer__link--next" aria-label="Next: Chroot" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Chroot
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ff0eccb3.min.js"></script>
+      
+    
+  </body>
+</html>

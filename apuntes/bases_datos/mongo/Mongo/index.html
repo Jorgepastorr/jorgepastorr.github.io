@@ -1,42 +1,19 @@
 
-
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      
-      
-        <link rel="canonical" href="https://jorgepastorr.github.io/apuntes/bases_datos/mongo/Mongo/">
       
       
         <meta name="author" content="Jorge Pastor">
       
       
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+        <link rel="canonical" href="https://jorgepastorr.github.io/apuntes/bases_datos/mongo/Mongo/">
       
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.2">
     
     
       
@@ -44,102 +21,119 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.adb8469c.css">
-      
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
-      
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.816931ca.min.css">
       
         
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9204c3b2.min.css">
         
-        <meta name="theme-color" content="#7e57c2">
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
       
     
     
-      <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
-    
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
-    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
-    
+    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../../..":"../../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
     
       
+
+
     
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
-        
-      </defs>
-    </svg>
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#mongo" tabindex="0" class="md-skip">
-        Skip to content
-      </a>
-    
-    
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://jorgepastorr.github.io/apuntes/" title="Apuntes" aria-label="Apuntes" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mongo" class="md-skip">
+          Skip to content
         </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              Apuntes
-            </span>
-            <span class="md-header-nav__topic">
-              
-                Mongo
-              
-            </span>
-          
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Apuntes" class="md-header__button md-logo" aria-label="Apuntes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mongo
+            
+          </span>
         </div>
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
-<div class="md-search" data-md-component="search" role="dialog">
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -147,71 +141,59 @@
     </div>
   </div>
 </div>
-        
-      </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-
-
-  
-
-<a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
-    </div>
-  
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
   <div class="md-source__repository">
     jorgepastorr/apuntes
   </div>
 </a>
-          </div>
-        </div>
-      
-    </div>
+      </div>
+    
   </nav>
+  
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
+      
       
         
+          
+        
       
-      
-      <main class="md-main" role="main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://jorgepastorr.github.io/apuntes/" title="Apuntes" class="md-nav__button md-logo">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Apuntes" class="md-nav__button md-logo" aria-label="Apuntes" data-md-component="logo">
       
-        <i class="md-icon"></i>
-      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
     </a>
     Apuntes
   </label>
   
     <div class="md-nav__source">
-      
-
-
-  
-
-<a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
-    </div>
-  
+      <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
   <div class="md-source__repository">
     jorgepastorr/apuntes
   </div>
@@ -224,504 +206,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../../.." title="Apuntes Jorgepastorr" class="md-nav__link">
-      Apuntes Jorgepastorr
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
-    <label class="md-nav__link" for="nav-2">
-      Administracion
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Administracion
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/Configurar_pantallas_manualmente/" title="Configurar pantallas manualmente" class="md-nav__link">
-      Configurar pantallas manualmente
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/Debian_hostname_dinamico/" title="Debian hostname dinamico" class="md-nav__link">
-      Debian hostname dinamico
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/Mutt/" title="Que es mutt?" class="md-nav__link">
-      Que es mutt?
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/Procesos/" title="Procesos" class="md-nav__link">
-      Procesos
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/Resetear_la_password_root/" title="Resetear la password root." class="md-nav__link">
-      Resetear la password root.
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/Vim/" title="Vim atajos básicos" class="md-nav__link">
-      Vim atajos básicos
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/awk/" title="Uso básico de AWK" class="md-nav__link">
-      Uso básico de AWK
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/freeipa/" title="FreeIpa" class="md-nav__link">
-      FreeIpa
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/instalar_webmin/" title="instalar webmin" class="md-nav__link">
-      instalar webmin
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/per/" title="PER" class="md-nav__link">
-      PER
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/permisos_avanzados/" title="Permisos avanzados" class="md-nav__link">
-      Permisos avanzados
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/samba/" title="Samba" class="md-nav__link">
-      Samba
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/server-correo/" title="Servidor Correo" class="md-nav__link">
-      Servidor Correo
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/server-mensajeria/" title="Server mensajeria instantanea" class="md-nav__link">
-      Server mensajeria instantanea
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/ssh/" title="ssh" class="md-nav__link">
-      ssh
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/sudo/" title="sudo" class="md-nav__link">
-      sudo
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/umask/" title="umask" class="md-nav__link">
-      umask
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/usuarios/" title="Usuarios" class="md-nav__link">
-      Usuarios
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/vnc/" title="vnc" class="md-nav__link">
-      vnc
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/webdav/" title="webdav" class="md-nav__link">
-      webdav
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-21" type="checkbox" id="nav-2-21">
-    
-    <label class="md-nav__link" for="nav-2-21">
-      Ldap
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-21">
-        Ldap
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/ldap/Ldap-Samba-Hostpam/" title="Ldap - Samba - Hostpam" class="md-nav__link">
-      Ldap - Samba - Hostpam
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/ldap/acl_ejercicios/" title="Acl ejercicios" class="md-nav__link">
-      Acl ejercicios
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/ldap/host-kerberos-con-ldap/" title="Instalación host ldap-kerberos" class="md-nav__link">
-      Instalación host  ldap-kerberos
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/ldap/ldap/" title="ldap" class="md-nav__link">
-      ldap
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-22" type="checkbox" id="nav-2-22">
-    
-    <label class="md-nav__link" for="nav-2-22">
-      Pxe
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-22">
-        Pxe
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/pxe/Servidor-pxe-con-rapberry/" title="Servidor pxe con rapberry" class="md-nav__link">
-      Servidor pxe con rapberry
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/pxe/guiapxe-fedora/" title="Guiapxe fedora" class="md-nav__link">
-      Guiapxe fedora
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-23" type="checkbox" id="nav-2-23">
-    
-    <label class="md-nav__link" for="nav-2-23">
-      Redes
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-23">
-        Redes
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/redes/apuntes-xarxa/" title="APUNTS DE XARXES" class="md-nav__link">
-      APUNTS DE XARXES
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/redes/comandos_router_switch/" title="Configuració de Routers" class="md-nav__link">
-      Configuració de Routers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/redes/haproxy/" title="Haproxy" class="md-nav__link">
-      Haproxy
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../administracion/redes/redes2/" title="Redes2" class="md-nav__link">
-      Redes2
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      Auditoria
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        Auditoria
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../auditoria/apuntes_hacking/" title="Haking ético" class="md-nav__link">
-      Haking ético
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Apuntes Jorgepastorr
+      </a>
+    </li>
+  
 
     
       
@@ -729,74 +222,698 @@
       
 
   
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
-    
-    <label class="md-nav__link" for="nav-4">
-      Bases datos
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        Bases datos
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Administracion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Administracion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Administracion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-          
-
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Configurar_pantallas_manualmente/" class="md-nav__link">
+        Configurar pantallas manualmente
+      </a>
+    </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Debian_hostname_dinamico/" class="md-nav__link">
+        Debian hostname dinamico
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Mutt/" class="md-nav__link">
+        Que es mutt?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Procesos/" class="md-nav__link">
+        Procesos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Resetear_la_password_root/" class="md-nav__link">
+        Resetear la password root.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Vim/" class="md-nav__link">
+        Vim atajos básicos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/awk/" class="md-nav__link">
+        Uso básico de AWK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/freeipa/" class="md-nav__link">
+        FreeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/instalar_webmin/" class="md-nav__link">
+        instalar webmin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/per/" class="md-nav__link">
+        PER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/permisos_avanzados/" class="md-nav__link">
+        Permisos avanzados
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/samba/" class="md-nav__link">
+        Samba
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/server-correo/" class="md-nav__link">
+        Servidor Correo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/server-mensajeria/" class="md-nav__link">
+        Server mensajeria instantanea
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ssh/" class="md-nav__link">
+        ssh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/sudo/" class="md-nav__link">
+        sudo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/umask/" class="md-nav__link">
+        umask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/usuarios/" class="md-nav__link">
+        Usuarios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/vnc/" class="md-nav__link">
+        vnc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/webdav/" class="md-nav__link">
+        webdav
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_21" type="checkbox" id="__nav_2_21" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_21">
+          Ldap
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ldap" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_21">
+          <span class="md-nav__icon md-icon"></span>
+          Ldap
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/Ldap-Samba-Hostpam/" class="md-nav__link">
+        Ldap - Samba - Hostpam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/acl_ejercicios/" class="md-nav__link">
+        Acl ejercicios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/host-kerberos-con-ldap/" class="md-nav__link">
+        Instalación host  ldap-kerberos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/ldap/" class="md-nav__link">
+        ldap
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-    <label class="md-nav__link" for="nav-4-1">
-      Mongo
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-1">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_22" type="checkbox" id="__nav_2_22" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_22">
+          Pxe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pxe" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_22">
+          <span class="md-nav__icon md-icon"></span>
+          Pxe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/pxe/Servidor-pxe-con-rapberry/" class="md-nav__link">
+        Servidor pxe con rapberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/pxe/guiapxe-fedora/" class="md-nav__link">
+        Guiapxe fedora
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_23" type="checkbox" id="__nav_2_23" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_23">
+          Redes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Redes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_23">
+          <span class="md-nav__icon md-icon"></span>
+          Redes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/apuntes-xarxa/" class="md-nav__link">
+        APUNTS DE XARXES
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/comandos_router_switch/" class="md-nav__link">
+        Configuració de Routers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/redes2/" class="md-nav__link">
+        Redes2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Auditoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Auditoria" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Auditoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../auditoria/apuntes_hacking/" class="md-nav__link">
+        Haking ético
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Bases datos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bases datos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Bases datos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Mongo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mongo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Mongo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Mongo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Mongo
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
+      </a>
       
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Mongo
-      </label>
-    
-    <a href="./" title="Mongo" class="md-nav__link md-nav__link--active">
-      Mongo
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#basico" class="md-nav__link">
@@ -810,7 +927,7 @@
     insertar
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="insertar">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -865,7 +982,7 @@
     querys
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="querys">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -936,7 +1053,7 @@
     campos array
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="campos array">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -977,7 +1094,7 @@
     Aggregate
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Aggregate">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1009,7 +1126,7 @@
     Indices
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Indices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1024,7 +1141,7 @@
     geoespaciales
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="geoespaciales">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1058,1261 +1175,1560 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
-        
-      </ul>
-    </nav>
-  </li>
-
-        
+            
           
-          
-          
+        </ul>
+      </nav>
+    </li>
+  
 
-
-  <li class="md-nav__item md-nav__item--nested">
+            
+          
+            
+              
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
-    
-    <label class="md-nav__link" for="nav-4-2">
-      Postgres
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-2">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Postgres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Postgres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Postgres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgres/bases/" class="md-nav__link">
         Postgres
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgres/modificaciones/" class="md-nav__link">
+        Modificación tablas
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgres/plpgsql/" class="md-nav__link">
+        Plpgsql
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgres/postgresql-intalacion/" class="md-nav__link">
+        Postgresql intalacion
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../postgres/bases/" title="Postgres" class="md-nav__link">
-      Postgres
-    </a>
-  </li>
-
-        
+            
           
+        </ul>
+      </nav>
+    </li>
+  
+
+            
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../postgres/modificaciones/" title="Modificación tablas" class="md-nav__link">
-      Modificación tablas
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../postgres/plpgsql/" title="Plpgsql" class="md-nav__link">
-      Plpgsql
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../postgres/postgresql-intalacion/" title="Postgresql intalacion" class="md-nav__link">
-      Postgresql intalacion
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      Cloud
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Cloud
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cloud" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cloud/aws/" class="md-nav__link">
+        aws
+      </a>
+    </li>
+  
+
+            
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../cloud/aws/" title="aws" class="md-nav__link">
-      aws
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      Curiosidades
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        Curiosidades
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Curiosidades
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Curiosidades" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Curiosidades
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/Eliminar_contrase%C3%B1a_windows/" class="md-nav__link">
+        Eliminar contraseña windows
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/Lanzador_aplicaciones_en_gnome/" class="md-nav__link">
+        Lanzador aplicaciones en gnome
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/cambiar_color_promp_terminal/" class="md-nav__link">
+        Cambiar color promp terminal
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../curiosidades/Eliminar_contrase%C3%B1a_windows/" title="Eliminar contraseña windows" class="md-nav__link">
-      Eliminar contraseña windows
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/conky/" class="md-nav__link">
+        conky
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/openbox/" class="md-nav__link">
+        Openbox
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/qbit/" class="md-nav__link">
+        Qbit
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../curiosidades/Lanzador_aplicaciones_en_gnome/" title="Lanzador aplicaciones en gnome" class="md-nav__link">
-      Lanzador aplicaciones en gnome
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/tmux/" class="md-nav__link">
+        Tmux
+      </a>
+    </li>
+  
+
+            
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../curiosidades/cambiar_color_promp_terminal/" title="Cambiar color promp terminal" class="md-nav__link">
-      Cambiar color promp terminal
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../curiosidades/conky/" title="conky" class="md-nav__link">
-      conky
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../curiosidades/openbox/" title="Openbox" class="md-nav__link">
-      Openbox
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../curiosidades/qbit/" title="Qbit" class="md-nav__link">
-      Qbit
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../curiosidades/tmux/" title="Tmux" class="md-nav__link">
-      Tmux
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
-    
-    <label class="md-nav__link" for="nav-7">
-      Desatendidas
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Desatendidas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Desatendidas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Desatendidas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/" class="md-nav__link">
         Desatendidas
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../desatendidas/" title="Desatendidas" class="md-nav__link">
-      Desatendidas
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/Instalacion-desatendida-debian/" class="md-nav__link">
+        Instalacion desatendida debian
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/desatendida-windows/" class="md-nav__link">
+        Desatendida windows
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/kikstart/" class="md-nav__link">
+        Kikstart
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../desatendidas/Instalacion-desatendida-debian/" title="Instalacion desatendida debian" class="md-nav__link">
-      Instalacion desatendida debian
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../desatendidas/desatendida-windows/" title="Desatendida windows" class="md-nav__link">
-      Desatendida windows
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../desatendidas/kikstart/" title="Kikstart" class="md-nav__link">
-      Kikstart
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
-    
-    <label class="md-nav__link" for="nav-8">
-      Generar doc
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        Generar doc
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Generar doc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Generar doc" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Generar doc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generar_doc/docsify/" class="md-nav__link">
+        Docsify
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generar_doc/remark/" class="md-nav__link">
+        Remark
+      </a>
+    </li>
+  
+
+            
           
-
-
-  <li class="md-nav__item">
-    <a href="../../../generar_doc/docsify/" title="Docsify" class="md-nav__link">
-      Docsify
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../generar_doc/remark/" title="Remark" class="md-nav__link">
-      Remark
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Lenguajes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lenguajes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Lenguajes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/Fundamentos_php/" class="md-nav__link">
+        Fundamentos php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/Shell/" class="md-nav__link">
+        Shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-    <label class="md-nav__link" for="nav-9">
-      Lenguajes
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
-        Lenguajes
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3">
+          Python3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python3" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Python3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/Apuntes-Metodos/" class="md-nav__link">
+        Métodos de colecciones
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-Funcionalidades_avanzadas/" class="md-nav__link">
+        apuntes Funcionalidades avanzadas
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-Herencia/" class="md-nav__link">
+        Herencias
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../lenguajes/Fundamentos_php/" title="Fundamentos php" class="md-nav__link">
-      Fundamentos php
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-distribucion/" class="md-nav__link">
+        Distribución
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-documentacion/" class="md-nav__link">
+        Documentación
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-ficheros/" class="md-nav__link">
+        Apuntes ficheros
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../lenguajes/Shell/" title="Shell" class="md-nav__link">
-      Shell
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-fundamento/" class="md-nav__link">
+        Python fundamentos
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-modulos/" class="md-nav__link">
+        Módulos
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-orientado-objetos/" class="md-nav__link">
+        Orientado a objetos
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3" type="checkbox" id="nav-9-3">
-    
-    <label class="md-nav__link" for="nav-9-3">
-      Python3
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-9-3">
-        Python3
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-test/" class="md-nav__link">
+        Test
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-tkinter/" class="md-nav__link">
+        Tkinter
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes_bases/" class="md-nav__link">
+        Apuntes bases
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../lenguajes/python3/Apuntes-Metodos/" title="Métodos de colecciones" class="md-nav__link">
-      Métodos de colecciones
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/argparse/" class="md-nav__link">
+        Argparse
+      </a>
+    </li>
+  
+
+            
           
+        </ul>
+      </nav>
+    </li>
+  
+
+            
           
-
-
-  <li class="md-nav__item">
-    <a href="../../../lenguajes/python3/apuntes-Funcionalidades_avanzadas/" title="apuntes Funcionalidades avanzadas" class="md-nav__link">
-      apuntes Funcionalidades avanzadas
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../lenguajes/python3/apuntes-Herencia/" title="Herencias" class="md-nav__link">
-      Herencias
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../lenguajes/python3/apuntes-distribucion/" title="Distribución" class="md-nav__link">
-      Distribución
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../lenguajes/python3/apuntes-documentacion/" title="Documentación" class="md-nav__link">
-      Documentación
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../lenguajes/python3/apuntes-ficheros/" title="Apuntes ficheros" class="md-nav__link">
-      Apuntes ficheros
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../lenguajes/python3/apuntes-fundamento/" title="Python fundamentos" class="md-nav__link">
-      Python fundamentos
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../lenguajes/python3/apuntes-modulos/" title="Módulos" class="md-nav__link">
-      Módulos
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../lenguajes/python3/apuntes-orientado-objetos/" title="Orientado a objetos" class="md-nav__link">
-      Orientado a objetos
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../lenguajes/python3/apuntes-test/" title="Test" class="md-nav__link">
-      Test
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../lenguajes/python3/apuntes-tkinter/" title="Tkinter" class="md-nav__link">
-      Tkinter
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../lenguajes/python3/apuntes_bases/" title="Apuntes bases" class="md-nav__link">
-      Apuntes bases
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../lenguajes/python3/argparse/" title="Argparse" class="md-nav__link">
-      Argparse
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Seguridad
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seguridad" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Seguridad
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/Certificados-Digitales/" class="md-nav__link">
+        Certificados Digitales
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/Kerberos/" class="md-nav__link">
+        Kerberos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/OpenVpn/" class="md-nav__link">
+        OpenVpn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/The-crazy-thing/" class="md-nav__link">
+        The crazy thing!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/TunelSSH/" class="md-nav__link">
+        Tunel SSH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/lvm/" class="md-nav__link">
+        Lvm logical volum manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/practica-ssl-tls/" class="md-nav__link">
+        Practica ssl tls
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-    <label class="md-nav__link" for="nav-10">
-      Seguridad
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        Seguridad
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_10" type="checkbox" id="__nav_10_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_10">
+          Backups
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Backups" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_10">
+          <span class="md-nav__icon md-icon"></span>
+          Backups
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/Borg_basico/" class="md-nav__link">
+        Borg básico
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../seguridad/Certificados-Digitales/" title="Certificados Digitales" class="md-nav__link">
-      Certificados Digitales
-    </a>
-  </li>
-
-        
+            
           
-          
-          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/Tar/" class="md-nav__link">
+        Tar
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../seguridad/Kerberos/" title="Kerberos" class="md-nav__link">
-      Kerberos
-    </a>
-  </li>
-
-        
+            
           
-          
-          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/rdiff-backup/" class="md-nav__link">
+        rdiff-backup
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../seguridad/OpenVpn/" title="OpenVpn" class="md-nav__link">
-      OpenVpn
-    </a>
-  </li>
-
-        
+            
           
-          
-          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/rsync/" class="md-nav__link">
+        rsync
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../seguridad/The-crazy-thing/" title="The crazy thing!" class="md-nav__link">
-      The crazy thing!
-    </a>
-  </li>
-
-        
+            
           
-          
-          
+        </ul>
+      </nav>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../seguridad/TunelSSH/" title="Tunel SSH" class="md-nav__link">
-      Tunel SSH
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../seguridad/gpg/" title="GPG" class="md-nav__link">
-      GPG
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../seguridad/lvm/" title="Lvm logical volum manager" class="md-nav__link">
-      Lvm logical volum manager
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../seguridad/practica-ssl-tls/" title="Practica ssl tls" class="md-nav__link">
-      Practica ssl tls
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../seguridad/raid/" title="Raid" class="md-nav__link">
-      Raid
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
+            
+              
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-10" type="checkbox" id="nav-10-10">
-    
-    <label class="md-nav__link" for="nav-10-10">
-      Backups
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-10">
-        Backups
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_11" type="checkbox" id="__nav_10_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_11">
+          Cortafuegos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cortafuegos" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_11">
+          <span class="md-nav__icon md-icon"></span>
+          Cortafuegos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/cortafuegos/Iptables/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
           
+        </ul>
+      </nav>
+    </li>
+  
+
+            
           
-
-
-  <li class="md-nav__item">
-    <a href="../../../seguridad/backups/Borg_basico/" title="Borg básico" class="md-nav__link">
-      Borg básico
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../seguridad/backups/Tar/" title="Tar" class="md-nav__link">
-      Tar
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../seguridad/backups/rdiff-backup/" title="rdiff-backup" class="md-nav__link">
-      rdiff-backup
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../seguridad/backups/rsync/" title="rsync" class="md-nav__link">
-      rsync
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-11" type="checkbox" id="nav-10-11">
-    
-    <label class="md-nav__link" for="nav-10-11">
-      Cortafuegos
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-11">
-        Cortafuegos
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../seguridad/cortafuegos/Iptables/" title="Iptables" class="md-nav__link">
-      Iptables
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Sistemas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sistemas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Sistemas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Actualizar_hora_sys_o_bios/" class="md-nav__link">
+        Gestionar Hora
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Arranque-del-sistema/" class="md-nav__link">
+        Arranque del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Estructura_de_directorios/" class="md-nav__link">
+        Estructura de directorios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Logs/" class="md-nav__link">
+        Logs del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Systemd/" class="md-nav__link">
+        Systemd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/ZFS/" class="md-nav__link">
+        ZFS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/chroot/" class="md-nav__link">
+        Chroot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/disco/" class="md-nav__link">
+        Disco
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/gestores_de_paquetes/" class="md-nav__link">
+        Gestores de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/getenforce/" class="md-nav__link">
+        getenforce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/grub/" class="md-nav__link">
+        Grub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/home/" class="md-nav__link">
+        Cambiar /home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/ip_est%C3%A1tica/" class="md-nav__link">
+        ip estática raspberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/pam/" class="md-nav__link">
+        Pam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/xinetd/" class="md-nav__link">
+        xinetd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-    <label class="md-nav__link" for="nav-11">
-      Sistemas
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        Sistemas
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_17" type="checkbox" id="__nav_11_17" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_17">
+          Automatizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Automatizacion" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_17">
+          <span class="md-nav__icon md-icon"></span>
+          Automatizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/automatizacion/ansible/" class="md-nav__link">
+        Ansible
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/automatizacion/tareas_programadas/" class="md-nav__link">
+        Tareas Programadas
+      </a>
+    </li>
+  
+
+            
           
+        </ul>
+      </nav>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/Actualizar_hora_sys_o_bios/" title="Gestionar Hora" class="md-nav__link">
-      Gestionar Hora
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/Arranque-del-sistema/" title="Arranque del sistema" class="md-nav__link">
-      Arranque del sistema
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/Estructura_de_directorios/" title="Estructura de directorios" class="md-nav__link">
-      Estructura de directorios
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/Logs/" title="Logs del sistema" class="md-nav__link">
-      Logs del sistema
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/Systemd/" title="Systemd" class="md-nav__link">
-      Systemd
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/chroot/" title="Chroot" class="md-nav__link">
-      Chroot
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/disco/" title="Disco" class="md-nav__link">
-      Disco
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/gestores_de_paquetes/" title="Gestores de paquetes" class="md-nav__link">
-      Gestores de paquetes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/getenforce/" title="getenforce" class="md-nav__link">
-      getenforce
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/grub/" title="Grub" class="md-nav__link">
-      Grub
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/home/" title="Cambiar /home" class="md-nav__link">
-      Cambiar /home
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/ip_est%C3%A1tica/" title="ip estática raspberry" class="md-nav__link">
-      ip estática raspberry
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/pam/" title="Pam" class="md-nav__link">
-      Pam
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/raid/" title="Raid" class="md-nav__link">
-      Raid
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/xinetd/" title="xinetd" class="md-nav__link">
-      xinetd
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-16" type="checkbox" id="nav-11-16">
-    
-    <label class="md-nav__link" for="nav-11-16">
-      Automatizacion
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-11-16">
-        Automatizacion
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/automatizacion/ansible/" title="Ansible" class="md-nav__link">
-      Ansible
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../sistemas/automatizacion/tareas_programadas/" title="Tareas Programadas" class="md-nav__link">
-      Tareas Programadas
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          Virtualizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virtualizacion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Virtualizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/Docker-basico/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/Lxc/" class="md-nav__link">
+        LXC y LXD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/Vagrant/" class="md-nav__link">
+        Vagrant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/kubernetes/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/swarm/" class="md-nav__link">
+        Swarm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-    <label class="md-nav__link" for="nav-12">
-      Virtualizacion
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
-        Virtualizacion
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_6" type="checkbox" id="__nav_12_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_6">
+          Virt manager
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virt manager" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_6">
+          <span class="md-nav__icon md-icon"></span>
+          Virt manager
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/Backing_chain/" class="md-nav__link">
+        Backing_chain
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/Clonar/" class="md-nav__link">
+        Clonar de virtual a físico y de físico a virtual.
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/Instalacion_de_virtualizacion_fedora/" class="md-nav__link">
+        Instalación de virtualización fedora
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../virtualizacion/Docker-basico/" title="Docker" class="md-nav__link">
-      Docker
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/acceder_consola_desde_virsh/" class="md-nav__link">
+        acceder consola desde virsh
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/crear_red_aislada/" class="md-nav__link">
+        Crear red aislada
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/instalar_maquina_virtual_virt-install/" class="md-nav__link">
+        virt
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../virtualizacion/Lxc/" title="LXC y LXD" class="md-nav__link">
-      LXC y LXD
-    </a>
-  </li>
-
-        
+            
           
+        </ul>
+      </nav>
+    </li>
+  
+
+            
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../virtualizacion/Vagrant/" title="Vagrant" class="md-nav__link">
-      Vagrant
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../virtualizacion/kubernetes/" title="Kubernetes" class="md-nav__link">
-      Kubernetes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../virtualizacion/swarm/" title="Swarm" class="md-nav__link">
-      Swarm
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-6" type="checkbox" id="nav-12-6">
-    
-    <label class="md-nav__link" for="nav-12-6">
-      Virt manager
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-12-6">
-        Virt manager
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../virtualizacion/virt-manager/Backing_chain/" title="Backing_chain" class="md-nav__link">
-      Backing_chain
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../virtualizacion/virt-manager/Clonar/" title="Clonar de virtual a físico y de físico a virtual." class="md-nav__link">
-      Clonar de virtual a físico y de físico a virtual.
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../virtualizacion/virt-manager/Instalacion_de_virtualizacion_fedora/" title="Instalación de virtualización fedora" class="md-nav__link">
-      Instalación de virtualización fedora
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../virtualizacion/virt-manager/acceder_consola_desde_virsh/" title="acceder consola desde virsh" class="md-nav__link">
-      acceder consola desde virsh
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../virtualizacion/virt-manager/crear_red_aislada/" title="Crear red aislada" class="md-nav__link">
-      Crear red aislada
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../virtualizacion/virt-manager/instalar_maquina_virtual_virt-install/" title="virt" class="md-nav__link">
-      virt
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
   </ul>
@@ -2322,18 +2738,24 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#basico" class="md-nav__link">
@@ -2347,7 +2769,7 @@
     insertar
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="insertar">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2402,7 +2824,7 @@
     querys
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="querys">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2473,7 +2895,7 @@
     campos array
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="campos array">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2514,7 +2936,7 @@
     Aggregate
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Aggregate">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2546,7 +2968,7 @@
     Indices
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Indices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2561,7 +2983,7 @@
     geoespaciales
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="geoespaciales">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2595,10 +3017,6 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
@@ -2607,16 +3025,18 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/jorgepastorr/apuntes/edit/master/docs/bases_datos/mongo/Mongo.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
-                
-                
-                <h1 id="mongo">Mongo</h1>
+<a href="https://github.com/jorgepastorr/apuntes/edit/master/docs/bases_datos/mongo/Mongo.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="mongo">Mongo</h1>
 <h2 id="basico">básico</h2>
-<div class="codehilite"><pre><span></span><code><span class="nx">Entrar</span> <span class="nx">en</span> <span class="nx">consola</span><span class="o">:</span>
+<div class="highlight"><pre><span></span><code><span class="nx">Entrar</span> <span class="nx">en</span> <span class="nx">consola</span><span class="o">:</span>
 <span class="nx">mongo</span>
 <span class="nx">Comandes</span> <span class="nx">bàsiques</span> <span class="nx">de</span> <span class="nx">la</span> <span class="nx">consola</span><span class="o">:</span>
 <span class="nx">db</span> <span class="c1">// mostra la BD en ús</span>
@@ -2625,36 +3045,32 @@
 <span class="nx">use</span> <span class="nx">proves</span> <span class="c1">// fa que la BD en ús sigui proves; si no existeix, la crea</span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">createCollection</span><span class="p">(</span><span class="err">“</span><span class="nx">tweets</span><span class="err">”</span><span class="p">)</span> <span class="c1">// crear tabla</span>
 </code></pre></div>
-
 <h2 id="insertar">insertar</h2>
 <p><code>insertOne</code> se utiliza para insertar una fila y <code>insertMany</code> para insertar múltiples filas</p>
-<div class="codehilite"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span> <span class="nx">item</span><span class="o">:</span> <span class="s2">&quot;canvas&quot;</span><span class="p">,</span> <span class="nx">qty</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;cotton&quot;</span><span class="p">],</span> <span class="nx">size</span><span class="o">:</span> <span class="p">{</span> <span class="nx">h</span><span class="o">:</span> <span class="mi">28</span><span class="p">,</span> <span class="nx">w</span><span class="o">:</span> <span class="mf">35.5</span><span class="p">,</span> <span class="nx">uom</span><span class="o">:</span> <span class="s2">&quot;cm&quot;</span> <span class="p">}</span> <span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span> <span class="nx">item</span><span class="o">:</span> <span class="s2">&quot;canvas&quot;</span><span class="p">,</span> <span class="nx">qty</span><span class="o">:</span> <span class="mf">100</span><span class="p">,</span> <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;cotton&quot;</span><span class="p">],</span> <span class="nx">size</span><span class="o">:</span> <span class="p">{</span> <span class="nx">h</span><span class="o">:</span> <span class="mf">28</span><span class="p">,</span> <span class="nx">w</span><span class="o">:</span> <span class="mf">35.5</span><span class="p">,</span> <span class="nx">uom</span><span class="o">:</span> <span class="s2">&quot;cm&quot;</span> <span class="p">}</span> <span class="p">})</span>
 
 <span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">insertMany</span><span class="p">([</span>
-   <span class="p">{</span> <span class="nx">item</span><span class="o">:</span> <span class="s2">&quot;journal&quot;</span><span class="p">,</span> <span class="nx">qty</span><span class="o">:</span> <span class="mi">25</span><span class="p">,</span> <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;blank&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">],</span> <span class="nx">size</span><span class="o">:</span> <span class="p">{</span> <span class="nx">h</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span> <span class="nx">w</span><span class="o">:</span> <span class="mi">21</span><span class="p">,</span> <span class="nx">uom</span><span class="o">:</span> <span class="s2">&quot;cm&quot;</span> <span class="p">}</span> <span class="p">},</span>
-   <span class="p">{</span> <span class="nx">item</span><span class="o">:</span> <span class="s2">&quot;mat&quot;</span><span class="p">,</span> <span class="nx">qty</span><span class="o">:</span> <span class="mi">85</span><span class="p">,</span> <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;gray&quot;</span><span class="p">],</span> <span class="nx">size</span><span class="o">:</span> <span class="p">{</span> <span class="nx">h</span><span class="o">:</span> <span class="mf">27.9</span><span class="p">,</span> <span class="nx">w</span><span class="o">:</span> <span class="mf">35.5</span><span class="p">,</span> <span class="nx">uom</span><span class="o">:</span> <span class="s2">&quot;cm&quot;</span> <span class="p">}</span> <span class="p">},</span>
-   <span class="p">{</span> <span class="nx">item</span><span class="o">:</span> <span class="s2">&quot;mousepad&quot;</span><span class="p">,</span> <span class="nx">qty</span><span class="o">:</span> <span class="mi">25</span><span class="p">,</span> <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;gel&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">],</span> <span class="nx">size</span><span class="o">:</span> <span class="p">{</span> <span class="nx">h</span><span class="o">:</span> <span class="mi">19</span><span class="p">,</span> <span class="nx">w</span><span class="o">:</span> <span class="mf">22.85</span><span class="p">,</span> <span class="nx">uom</span><span class="o">:</span> <span class="s2">&quot;cm&quot;</span> <span class="p">}</span> <span class="p">}</span>
+   <span class="p">{</span> <span class="nx">item</span><span class="o">:</span> <span class="s2">&quot;journal&quot;</span><span class="p">,</span> <span class="nx">qty</span><span class="o">:</span> <span class="mf">25</span><span class="p">,</span> <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;blank&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">],</span> <span class="nx">size</span><span class="o">:</span> <span class="p">{</span> <span class="nx">h</span><span class="o">:</span> <span class="mf">14</span><span class="p">,</span> <span class="nx">w</span><span class="o">:</span> <span class="mf">21</span><span class="p">,</span> <span class="nx">uom</span><span class="o">:</span> <span class="s2">&quot;cm&quot;</span> <span class="p">}</span> <span class="p">},</span>
+   <span class="p">{</span> <span class="nx">item</span><span class="o">:</span> <span class="s2">&quot;mat&quot;</span><span class="p">,</span> <span class="nx">qty</span><span class="o">:</span> <span class="mf">85</span><span class="p">,</span> <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;gray&quot;</span><span class="p">],</span> <span class="nx">size</span><span class="o">:</span> <span class="p">{</span> <span class="nx">h</span><span class="o">:</span> <span class="mf">27.9</span><span class="p">,</span> <span class="nx">w</span><span class="o">:</span> <span class="mf">35.5</span><span class="p">,</span> <span class="nx">uom</span><span class="o">:</span> <span class="s2">&quot;cm&quot;</span> <span class="p">}</span> <span class="p">},</span>
+   <span class="p">{</span> <span class="nx">item</span><span class="o">:</span> <span class="s2">&quot;mousepad&quot;</span><span class="p">,</span> <span class="nx">qty</span><span class="o">:</span> <span class="mf">25</span><span class="p">,</span> <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;gel&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">],</span> <span class="nx">size</span><span class="o">:</span> <span class="p">{</span> <span class="nx">h</span><span class="o">:</span> <span class="mf">19</span><span class="p">,</span> <span class="nx">w</span><span class="o">:</span> <span class="mf">22.85</span><span class="p">,</span> <span class="nx">uom</span><span class="o">:</span> <span class="s2">&quot;cm&quot;</span> <span class="p">}</span> <span class="p">}</span>
 <span class="p">])</span>
 </code></pre></div>
-
 <h3 id="insert-save">insert save</h3>
 <p>Exemple (utilitza el mètode <em>deprecat</em> <code>db.collection.save()</code> enlloc del <code>.insertOne()</code>) :</p>
-<div class="codehilite"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({})</span>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({})</span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="p">[]})</span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;George&#39;</span><span class="p">]})</span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;George&#39;</span><span class="p">,</span> <span class="s1">&#39;Raymond&#39;</span><span class="p">]})</span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;George&#39;</span><span class="p">,</span> <span class="s1">&#39;Raymond&#39;</span><span class="p">,</span> <span class="s1">&#39;Richard&#39;</span><span class="p">]})</span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;George&#39;</span><span class="p">,</span> <span class="s1">&#39;Raymond&#39;</span><span class="p">,</span> <span class="s1">&#39;Richard&#39;</span><span class="p">,</span> <span class="s1">&#39;Martin&#39;</span><span class="p">]})</span>
 </code></pre></div>
-
 <h2 id="update">Update</h2>
 <p>tiene este formato</p>
-<div class="codehilite"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">collection</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">update</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">collection</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">update</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
 </code></pre></div>
-
 <p><a href="https://docs.mongodb.com/manual/reference/operator/update/#id1">Operadors de valores</a></p>
 <p>actualiza el primero que encuentra</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">updateOne</span><span class="p">(</span> 
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">updateOne</span><span class="p">(</span> 
 <span class="p">...</span>    <span class="p">{</span> <span class="n">item</span><span class="p">:</span> <span class="s">&quot;paper&quot;</span> <span class="p">},</span> 
 <span class="p">...</span>    <span class="p">{</span> 
 <span class="p">...</span>      <span class="n">$set</span><span class="p">:</span> <span class="p">{</span> <span class="s">&quot;size.uom&quot;</span><span class="p">:</span> <span class="s">&quot;cm&quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="s">&quot;P&quot;</span> <span class="p">},</span> 
@@ -2662,9 +3078,8 @@
 <span class="p">...</span>    <span class="p">}</span> 
 <span class="p">...</span> <span class="p">)</span>
 </code></pre></div>
-
 <p>actualizar todos los que coinciden</p>
-<div class="codehilite"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">updateMany</span><span class="p">(</span> 
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">updateMany</span><span class="p">(</span> 
    <span class="p">{</span> <span class="s">&quot;qty&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="n">$lt</span><span class="p">:</span> <span class="mi">50</span> <span class="p">}</span> <span class="p">},</span> 
    <span class="p">{</span> 
      <span class="n">$set</span><span class="p">:</span> <span class="p">{</span> <span class="s">&quot;size.uom&quot;</span><span class="p">:</span> <span class="s">&quot;in&quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="s">&quot;P&quot;</span> <span class="p">},</span> 
@@ -2672,26 +3087,22 @@
    <span class="p">}</span> 
 <span class="p">)</span> 
 </code></pre></div>
-
 <p>sustituir el primero que encuentra</p>
-<div class="codehilite"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">replaceOne</span><span class="p">(</span> 
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">replaceOne</span><span class="p">(</span> 
    <span class="p">{</span> <span class="n">item</span><span class="p">:</span> <span class="s">&quot;paper&quot;</span> <span class="p">},</span> 
    <span class="p">{</span> <span class="n">item</span><span class="p">:</span> <span class="s">&quot;paper&quot;</span><span class="p">,</span> <span class="n">instock</span><span class="p">:</span> <span class="o">[</span> <span class="p">{</span> <span class="n">warehouse</span><span class="p">:</span> <span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="n">qty</span><span class="p">:</span> <span class="mi">60</span> <span class="p">},</span> <span class="p">{</span> <span class="n">warehouse</span><span class="p">:</span> <span class="s">&quot;B&quot;</span><span class="p">,</span> <span class="n">qty</span><span class="p">:</span> <span class="mi">40</span> <span class="p">}</span> <span class="o">]</span> <span class="p">}</span> 
 <span class="p">)</span>
 </code></pre></div>
-
 <h2 id="delete">Delete</h2>
-<div class="codehilite"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">deleteMany</span><span class="p">({</span> <span class="n">status</span> <span class="p">:</span> <span class="s">&quot;A&quot;</span> <span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">deleteMany</span><span class="p">({</span> <span class="n">status</span> <span class="p">:</span> <span class="s">&quot;A&quot;</span> <span class="p">})</span>
 <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">deleteOne</span><span class="p">({</span> <span class="n">status</span> <span class="p">:</span> <span class="s">&quot;A&quot;</span> <span class="p">})</span>
 </code></pre></div>
-
 <h2 id="remove">Remove</h2>
-<div class="codehilite"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">restaurants</span><span class="p">.</span><span class="na">remove</span><span class="p">({})</span> <span class="c1">// eliminar contenido de tabla</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">restaurants</span><span class="p">.</span><span class="na">remove</span><span class="p">({})</span> <span class="c1">// eliminar contenido de tabla</span>
 <span class="n">db</span><span class="p">.</span><span class="na">restaurants</span><span class="p">.</span><span class="na">drop</span><span class="p">()</span> <span class="c1">// eliminar tabla</span>
 </code></pre></div>
-
 <h2 id="operadores">Operadores</h2>
-<div class="codehilite"><pre><span></span><code><span class="c1"># comparadores</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># comparadores</span>
 <span class="nv">$eq</span> <span class="c1"># igual que</span>
 <span class="nv">$gt</span> <span class="c1"># mayor que</span>
 <span class="nv">$gte</span> <span class="c1"># mayor o igual que</span>
@@ -2708,10 +3119,9 @@
 <span class="nv">$nor</span> <span class="c1"># debuelve los elementos que no comparten ninguna de las condiciones</span>
 <span class="nv">$exists</span> <span class="c1"># retorna los documentos que contienen el campo espewcificado</span>
 </code></pre></div>
-
 <h2 id="importar">Importar</h2>
 <p>desde fuera de mongo</p>
-<div class="codehilite"><pre><span></span><code>mongoimport --db users --collection contacts --file contacts.json
+<div class="highlight"><pre><span></span><code>mongoimport --db users --collection contacts --file contacts.json
 mongoimport --db users --collection contacts --type csv <span class="se">\</span>
             --headerline --file /opt/backups/contacts.csv
 
@@ -2719,23 +3129,22 @@ mongoimport --host <span class="m">127</span>.0.0.1 --port <span class="m">27017
             --type json --file json_dades_exemple/geo/countries.json -<span class="se">\</span>
             -drop --stopOnError --maintainInsertionOrder
 </code></pre></div>
-
 <h2 id="querys">querys</h2>
 <p>Para hacer búsquedas se utiliza el método <code>find</code> o <code>findOne</code> si solo quieres un resultado.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="s2">&quot;patron de busqueda&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;campos a mostrar, por defecto todos&quot;</span><span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="s2">&quot;patron de busqueda&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;campos a mostrar, por defecto todos&quot;</span><span class="p">})</span>
 <span class="o">&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">count</span><span class="p">()</span>
-<span class="mi">4</span>
+<span class="mf">4</span>
 <span class="o">&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">pretty</span><span class="p">()</span>
 <span class="p">{</span>
     <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;5e661c4863e51a5f0a8f3c2a&quot;</span><span class="p">),</span>
     <span class="s2">&quot;item&quot;</span> <span class="o">:</span> <span class="s2">&quot;mousepad&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;qty&quot;</span> <span class="o">:</span> <span class="mi">25</span><span class="p">,</span>
+    <span class="s2">&quot;qty&quot;</span> <span class="o">:</span> <span class="mf">25</span><span class="p">,</span>
     <span class="s2">&quot;tags&quot;</span> <span class="o">:</span> <span class="p">[</span>
         <span class="s2">&quot;gel&quot;</span><span class="p">,</span>
         <span class="s2">&quot;blue&quot;</span>
     <span class="p">],</span>
     <span class="s2">&quot;size&quot;</span> <span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;h&quot;</span> <span class="o">:</span> <span class="mi">19</span><span class="p">,</span>
+        <span class="s2">&quot;h&quot;</span> <span class="o">:</span> <span class="mf">19</span><span class="p">,</span>
         <span class="s2">&quot;w&quot;</span> <span class="o">:</span> <span class="mf">22.85</span><span class="p">,</span>
         <span class="s2">&quot;uom&quot;</span> <span class="o">:</span> <span class="s2">&quot;cm&quot;</span>
     <span class="p">}</span>
@@ -2743,44 +3152,37 @@ mongoimport --host <span class="m">127</span>.0.0.1 --port <span class="m">27017
 <span class="p">...</span>
  <span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">findOne</span><span class="p">()</span>
 </code></pre></div>
-
 <h3 id="where">where</h3>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">item</span><span class="o">:</span> <span class="s2">&quot;mousepad&quot;</span><span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">item</span><span class="o">:</span> <span class="s2">&quot;mousepad&quot;</span><span class="p">})</span>
 </code></pre></div>
-
 <p><strong>where</strong>: és un intèrpret i va molt lent (avalua l’expressió JavaScript per a cada document de la col·lecció), però alhora és molt potent. Utilitza l’objecte this per referir-se al document. Per exemple aquí serveix per avaluar si l’array name té mida més gran que 1:</p>
-<div class="codehilite"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span> <span class="p">{</span> <span class="nx">$where</span><span class="o">:</span> <span class="s2">&quot;this.name.length &gt; 1&quot;</span> <span class="p">}</span> <span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span> <span class="p">{</span> <span class="nx">$where</span><span class="o">:</span> <span class="s2">&quot;this.name.length &gt; 1&quot;</span> <span class="p">}</span> <span class="p">);</span>
 </code></pre></div>
-
 <h3 id="in">in</h3>
-<div class="codehilite"><pre><span></span><code><span class="nx">SELECT</span> <span class="o">*</span> <span class="nx">FROM</span> <span class="nx">inventory</span> <span class="nx">WHERE</span> <span class="nx">status</span> <span class="k">in</span> <span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nx">SELECT</span> <span class="o">*</span> <span class="nx">FROM</span> <span class="nx">inventory</span> <span class="nx">WHERE</span> <span class="nx">status</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">)</span>
 <span class="c1">// equivalente</span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span> <span class="p">{</span> <span class="nx">status</span><span class="o">:</span> <span class="p">{</span> <span class="nx">$in</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span> <span class="p">]</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
 </code></pre></div>
-
 <h3 id="and">and</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">inventory</span> <span class="n">WHERE</span> <span class="n">status</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span> <span class="n">AND</span> <span class="n">qty</span> <span class="o">&lt;</span> <span class="mi">30</span>
+<div class="highlight"><pre><span></span><code><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">inventory</span> <span class="n">WHERE</span> <span class="n">status</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span> <span class="n">AND</span> <span class="n">qty</span> <span class="o">&lt;</span> <span class="mi">30</span>
 <span class="c1">// equivalente</span>
 <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">status</span><span class="p">:</span> <span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="n">qty</span><span class="p">:</span> <span class="p">{</span> <span class="n">$lt</span><span class="p">:</span> <span class="mi">30</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
 </code></pre></div>
-
 <h3 id="or">or</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">inventory</span> <span class="n">WHERE</span> <span class="n">status</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span> <span class="n">OR</span> <span class="n">qty</span> <span class="o">&lt;</span> <span class="mi">30</span>
+<div class="highlight"><pre><span></span><code><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">inventory</span> <span class="n">WHERE</span> <span class="n">status</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span> <span class="n">OR</span> <span class="n">qty</span> <span class="o">&lt;</span> <span class="mi">30</span>
 <span class="c1">// equivalente</span>
 <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">$or</span><span class="p">:</span> <span class="o">[</span> <span class="p">{</span> <span class="n">status</span><span class="p">:</span> <span class="s">&quot;A&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="n">qty</span><span class="p">:</span> <span class="p">{</span> <span class="n">$lt</span><span class="p">:</span> <span class="mi">30</span> <span class="p">}</span> <span class="p">}</span> <span class="o">]</span> <span class="p">}</span> <span class="p">)</span>
 </code></pre></div>
-
 <h3 id="and-y-or">and y or</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">inventory</span> <span class="n">WHERE</span> <span class="n">status</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span> <span class="n">AND</span> <span class="p">(</span> <span class="n">qty</span> <span class="o">&lt;</span> <span class="mi">30</span> <span class="n">OR</span> <span class="n">item</span> <span class="n">LIKE</span> <span class="s">&quot;p%&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">inventory</span> <span class="n">WHERE</span> <span class="n">status</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span> <span class="n">AND</span> <span class="p">(</span> <span class="n">qty</span> <span class="o">&lt;</span> <span class="mi">30</span> <span class="n">OR</span> <span class="n">item</span> <span class="n">LIKE</span> <span class="s">&quot;p%&quot;</span><span class="p">)</span>
 <span class="c1">// equivalente</span>
 <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span>
      <span class="n">status</span><span class="p">:</span> <span class="s">&quot;A&quot;</span><span class="p">,</span>
      <span class="n">$or</span><span class="p">:</span> <span class="o">[</span> <span class="p">{</span> <span class="n">qty</span><span class="p">:</span> <span class="p">{</span> <span class="n">$lt</span><span class="p">:</span> <span class="mi">30</span> <span class="p">}</span> <span class="p">},</span> <span class="p">{</span> <span class="n">item</span><span class="p">:</span> <span class="o">/^</span><span class="n">p</span><span class="o">/</span> <span class="p">}</span> <span class="o">]</span>
 <span class="p">}</span> <span class="p">)</span>
 </code></pre></div>
-
 <h3 id="likeilike">like/ilike</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="o">/</span><span class="p">.</span><span class="o">*</span><span class="n">m</span><span class="p">.</span><span class="o">*/</span><span class="p">})</span> <span class="c1">// like &#39;%m%&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="o">/</span><span class="p">.</span><span class="o">*</span><span class="n">m</span><span class="p">.</span><span class="o">*/</span><span class="p">})</span> <span class="c1">// like &#39;%m%&#39;</span>
 <span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="o">/</span><span class="n">m</span><span class="o">/</span><span class="p">})</span> <span class="c1">// like &#39;%m%&#39;</span>
 <span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="o">/</span><span class="n">m</span><span class="o">/</span><span class="n">i</span> <span class="p">}</span> <span class="p">)</span> <span class="c1">// ilike &#39;%m%&#39;</span>
 <span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="n">name</span><span class="p">:</span> <span class="o">/</span><span class="n">a</span><span class="o">/</span><span class="p">})</span>
@@ -2788,25 +3190,22 @@ mongoimport --host <span class="m">127</span>.0.0.1 --port <span class="m">27017
 <span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="n">name</span><span class="p">:</span> <span class="o">/</span><span class="n">ro$</span><span class="o">/</span><span class="p">})</span> <span class="c1">// like &#39;%ro&#39;</span>
 <span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span> <span class="n">name</span><span class="p">:</span> <span class="p">{</span> <span class="n">$regex</span><span class="p">:</span> <span class="o">/</span><span class="p">.</span><span class="o">*</span><span class="n">m</span><span class="p">.</span><span class="o">*/</span><span class="n">i</span><span class="p">}</span> <span class="p">})</span>
 </code></pre></div>
-
 <p>https://www.w3schools.com/jsref/jsref_obj_regexp.asp</p>
 <h3 id="exists">exists</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">records</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">a</span><span class="p">:</span> <span class="p">{</span> <span class="n">$exists</span><span class="p">:</span> <span class="kc">true</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">records</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">a</span><span class="p">:</span> <span class="p">{</span> <span class="n">$exists</span><span class="p">:</span> <span class="kc">true</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
 <span class="n">db</span><span class="p">.</span><span class="na">records</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">b</span><span class="p">:</span> <span class="p">{</span> <span class="n">$exists</span><span class="p">:</span> <span class="kc">false</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
 </code></pre></div>
-
 <h3 id="proyecciones">proyecciones</h3>
 <p>Las proyecciones son los campos a mostrar</p>
-<div class="codehilite"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">collection</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="o">&lt;</span><span class="n">query</span> <span class="n">document</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">projection</span> <span class="n">document</span><span class="o">&gt;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">collection</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="o">&lt;</span><span class="n">query</span> <span class="n">document</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">projection</span> <span class="n">document</span><span class="o">&gt;</span><span class="p">)</span>
 <span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">findOne</span><span class="p">({},{</span><span class="n">_id</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
 <span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">findOne</span><span class="p">({},{</span><span class="n">item</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
 <span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">findOne</span><span class="p">({},{</span><span class="n">_id</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="n">item</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
 <span class="p">{</span> <span class="s">&quot;item&quot;</span> <span class="p">:</span> <span class="s">&quot;canvas&quot;</span> <span class="p">}</span>
 </code></pre></div>
-
 <h3 id="subcampos">subcampos</h3>
 <p>En la búsqueda de subcampos ( objetos dentro de objetos ) en el primer ejemplo se muestra como hay que asignar el subcampo entero a buscar ( El orden importa ). En el segundo ejemplo buscas un item dentro del subcampo.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1">// buscar el objeto {h:28, w:35.5, uom:&quot;cm&quot;}</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// buscar el objeto {h:28, w:35.5, uom:&quot;cm&quot;}</span>
 <span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">findOne</span><span class="p">({</span><span class="n">size</span><span class="p">:</span> <span class="p">{</span><span class="n">h</span><span class="p">:</span><span class="mi">28</span><span class="p">,</span> <span class="n">w</span><span class="p">:</span><span class="mf">35.5</span><span class="p">,</span> <span class="n">uom</span><span class="p">:</span><span class="s">&quot;cm&quot;</span><span class="p">}})</span>
 <span class="p">{</span>
     <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s">&quot;5e661beb63e51a5f0a8f3c27&quot;</span><span class="p">),</span>
@@ -2824,24 +3223,22 @@ mongoimport --host <span class="m">127</span>.0.0.1 --port <span class="m">27017
 <span class="c1">// buscar el valor del item &quot;uom&quot; dentro del subcampo de &quot;size&quot;</span>
 <span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">findOne</span><span class="p">({</span><span class="s">&quot;size.uom&quot;</span><span class="p">:</span> <span class="s">&quot;cm&quot;</span><span class="p">})</span>
 </code></pre></div>
-
 <h3 id="campos-array">campos array</h3>
 <p>En la búsqueda de arrays existen diferentes soluciones:</p>
 <ul>
 <li>buscar toda la array (el orden de los items importa ).</li>
 <li>metodo <code>$all</code> indica que contenga esos items.</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="c1">// busqueda por array</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// busqueda por array</span>
 <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">tags</span><span class="p">:</span> <span class="o">[</span><span class="s">&quot;blank&quot;</span><span class="p">,</span> <span class="s">&quot;red&quot;</span><span class="o">]</span> <span class="p">}</span> <span class="p">)</span>
 <span class="c1">// que contenga red y blank</span>
 <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">tags</span><span class="p">:</span> <span class="p">{</span> <span class="n">$all</span><span class="p">:</span> <span class="o">[</span><span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="s">&quot;blank&quot;</span><span class="o">]</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
 <span class="c1">// que contenga red</span>
 <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">tags</span><span class="p">:</span> <span class="s">&quot;red&quot;</span> <span class="p">}</span> <span class="p">)</span>
 </code></pre></div>
-
 <h4 id="entre">entre</h4>
 <p>Búsquedas entre con comparadores</p>
-<div class="codehilite"><pre><span></span><code><span class="c1">// &gt; 22 and &lt; 30</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// &gt; 22 and &lt; 30</span>
 <span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">dim_cm</span><span class="p">:</span> <span class="p">{</span> <span class="n">$elemMatch</span><span class="p">:</span> <span class="p">{</span> <span class="n">$gt</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span> <span class="n">$lt</span><span class="p">:</span> <span class="mi">30</span> <span class="p">}</span> <span class="p">}</span> <span class="p">})</span>
 <span class="p">{</span> <span class="s">&quot;dim_cm&quot;</span> <span class="p">:</span> <span class="o">[</span> <span class="mf">22.85</span><span class="p">,</span> <span class="mi">30</span> <span class="o">]</span> <span class="p">}</span>
 
@@ -2849,60 +3246,53 @@ mongoimport --host <span class="m">127</span>.0.0.1 --port <span class="m">27017
 <span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="s">&quot;dim_cm.1&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="n">$gt</span><span class="p">:</span> <span class="mi">25</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
 <span class="p">{</span> <span class="s">&quot;dim_cm&quot;</span> <span class="p">:</span> <span class="o">[</span> <span class="mf">22.85</span><span class="p">,</span> <span class="mi">30</span> <span class="o">]</span> <span class="p">}</span>
 </code></pre></div>
-
 <h4 id="buscar-entre-objetos">buscar entre objetos</h4>
 <p>buscar un item que contiene objetos, hay que buscar por objeto, el orden importa</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="s">&quot;instock&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="n">warehouse</span><span class="p">:</span> <span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="n">qty</span><span class="p">:</span> <span class="mi">5</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="s">&quot;instock&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="n">warehouse</span><span class="p">:</span> <span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="n">qty</span><span class="p">:</span> <span class="mi">5</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
 
 <span class="c1">// buscar en el primer objeto de instock</span>
 <span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="err">&#39;</span><span class="n">instock</span><span class="mf">.0</span><span class="p">.</span><span class="na">qty</span><span class="err">&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="n">$lte</span><span class="p">:</span> <span class="mi">14</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
 </code></pre></div>
-
 <h3 id="nor">Nor</h3>
 <p>Devuelve los elementos que no comparten ninguna de las condiciones</p>
 <p>En el siguiente ejemplo la sentencia dice, muéstrame: </p>
 <ul>
 <li>los que no tengan el item name, o un tamaño de array de 0, o un tamaño de array de 1. Estos no me los muestres.</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="c1">// $size es el numero de valores que tiene la array name</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// $size es el numero de valores que tiene la array name</span>
 <span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">test</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="n">$nor</span><span class="p">:</span> <span class="o">[</span><span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="p">{</span><span class="n">$exists</span><span class="p">:</span> <span class="kc">false</span><span class="p">}},</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="p">{</span><span class="n">$size</span><span class="p">:</span> <span class="mi">0</span><span class="p">}},</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="p">{</span><span class="n">$size</span><span class="p">:</span> <span class="mi">1</span><span class="p">}}</span><span class="o">]</span><span class="p">})</span>
 <span class="p">{</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="o">[</span> <span class="s">&quot;George&quot;</span><span class="p">,</span> <span class="s">&quot;Raymond&quot;</span> <span class="o">]</span> <span class="p">}</span>
 <span class="p">{</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="o">[</span> <span class="s">&quot;George&quot;</span><span class="p">,</span> <span class="s">&quot;Raymond&quot;</span><span class="p">,</span> <span class="s">&quot;Richard&quot;</span> <span class="o">]</span> <span class="p">}</span>
 <span class="p">{</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="o">[</span> <span class="s">&quot;George&quot;</span><span class="p">,</span> <span class="s">&quot;Raymond&quot;</span><span class="p">,</span> <span class="s">&quot;Richard&quot;</span><span class="p">,</span> <span class="s">&quot;Martin&quot;</span> <span class="o">]</span> <span class="p">}</span>
 </code></pre></div>
-
 <h3 id="not">not</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">test</span><span class="p">.</span><span class="na">count</span><span class="p">({</span> <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s">&quot;$not&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s">&quot;$size&quot;</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}</span> <span class="p">}</span> <span class="p">});</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">test</span><span class="p">.</span><span class="na">count</span><span class="p">({</span> <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s">&quot;$not&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s">&quot;$size&quot;</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}</span> <span class="p">}</span> <span class="p">});</span>
 </code></pre></div>
-
 <h3 id="aggregate">Aggregate</h3>
 <h4 id="group">group</h4>
 <p>group ace una agrupación de los campos que coinciden y sum los suma.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">aggregate</span><span class="p">(</span><span class="o">[</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">aggregate</span><span class="p">(</span><span class="o">[</span>
     <span class="p">{</span> <span class="n">$match</span> <span class="p">:{</span><span class="s">&quot;status&quot;</span> <span class="p">:</span> <span class="sc">&#39;A&#39;</span><span class="p">}},</span> 
     <span class="p">{</span> <span class="n">$group</span><span class="p">:</span> <span class="p">{</span><span class="n">_id</span> <span class="p">:</span><span class="s">&quot;$status&quot;</span><span class="p">,</span> <span class="n">total</span> <span class="p">:</span> <span class="p">{</span><span class="n">$sum</span><span class="p">:</span> <span class="s">&quot;$qty&quot;</span><span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
 <span class="o">]</span><span class="p">)</span>
 <span class="c1">// resultado    </span>
 <span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="s">&quot;total&quot;</span> <span class="p">:</span> <span class="mi">120</span> <span class="p">}</span>
 </code></pre></div>
-
 <h4 id="project">project</h4>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s">&quot;5e6bc9655a4fa4a58d139cd9&quot;</span><span class="p">),</span> <span class="s">&quot;item&quot;</span> <span class="p">:</span> <span class="s">&quot;notebook&quot;</span><span class="p">,</span> <span class="s">&quot;qty&quot;</span> <span class="p">:</span> <span class="o">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="o">]</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s">&quot;5e6bc9655a4fa4a58d139cd9&quot;</span><span class="p">),</span> <span class="s">&quot;item&quot;</span> <span class="p">:</span> <span class="s">&quot;notebook&quot;</span><span class="p">,</span> <span class="s">&quot;qty&quot;</span> <span class="p">:</span> <span class="o">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="o">]</span><span class="p">}</span>
 <span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s">&quot;5e6bc9655a4fa4a58d139cdc&quot;</span><span class="p">),</span> <span class="s">&quot;item&quot;</span> <span class="p">:</span> <span class="s">&quot;jupiter&quot;</span><span class="p">,</span> <span class="s">&quot;qty&quot;</span> <span class="p">:</span> <span class="o">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="o">]</span><span class="p">}</span>
 </code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">aggregate</span><span class="p">(</span><span class="o">[</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">aggregate</span><span class="p">(</span><span class="o">[</span>
     <span class="p">{</span> <span class="n">$match</span> <span class="p">:{</span><span class="s">&quot;item&quot;</span> <span class="p">:</span> <span class="err">&#39;</span><span class="n">notebook</span><span class="err">&#39;</span><span class="p">}},</span> 
     <span class="p">{</span> <span class="n">$project</span><span class="p">:</span> <span class="p">{</span> <span class="n">total</span> <span class="p">:</span> <span class="p">{</span><span class="n">$sum</span><span class="p">:</span> <span class="s">&quot;$qty&quot;</span><span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
 <span class="o">]</span><span class="p">)</span>
 <span class="c1">// resultado    </span>
 <span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s">&quot;5e6bc9655a4fa4a58d139cd9&quot;</span><span class="p">),</span> <span class="s">&quot;total&quot;</span> <span class="p">:</span> <span class="mi">50</span> <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="indices">Indices</h2>
 <h3 id="texto">Texto</h3>
 <p>ver indice</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">getIndexes</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">getIndexes</span><span class="p">()</span>
 <span class="o">[</span><span class="p">{</span>
         <span class="s">&quot;v&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="s">&quot;key&quot;</span> <span class="p">:</span> <span class="p">{</span>
@@ -2912,9 +3302,8 @@ mongoimport --host <span class="m">127</span>.0.0.1 --port <span class="m">27017
         <span class="s">&quot;ns&quot;</span> <span class="p">:</span> <span class="s">&quot;text.stores&quot;</span>
     <span class="p">}</span><span class="o">]</span>
 </code></pre></div>
-
 <p>expandir index de texto a campos name y description</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">createIndex</span><span class="p">(</span> <span class="p">{</span> <span class="n">name</span><span class="p">:</span> <span class="s">&quot;text&quot;</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="s">&quot;text&quot;</span> <span class="p">}</span> <span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">createIndex</span><span class="p">(</span> <span class="p">{</span> <span class="n">name</span><span class="p">:</span> <span class="s">&quot;text&quot;</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="s">&quot;text&quot;</span> <span class="p">}</span> <span class="p">)</span>
 <span class="p">{</span>
     <span class="s">&quot;createdCollectionAutomatically&quot;</span> <span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="s">&quot;numIndexesBefore&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -2922,8 +3311,7 @@ mongoimport --host <span class="m">127</span>.0.0.1 --port <span class="m">27017
     <span class="s">&quot;ok&quot;</span> <span class="p">:</span> <span class="mi">1</span>
 <span class="p">}</span>
 </code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">find</span><span class="p">({</span> <span class="n">$text</span><span class="p">:</span> <span class="p">{</span> <span class="n">$search</span><span class="p">:</span> <span class="s">&quot;java coffe shop&quot;</span><span class="p">}</span> <span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">find</span><span class="p">({</span> <span class="n">$text</span><span class="p">:</span> <span class="p">{</span> <span class="n">$search</span><span class="p">:</span> <span class="s">&quot;java coffe shop&quot;</span><span class="p">}</span> <span class="p">})</span>
 <span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;Java Shopping&quot;</span><span class="p">,</span> <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Indonesian goods&quot;</span> <span class="p">}</span>
 <span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;Java Hut&quot;</span><span class="p">,</span> <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Coffee and cakes&quot;</span> <span class="p">}</span>
 <span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;Coffee Shop&quot;</span><span class="p">,</span> <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Just coffee&quot;</span> <span class="p">}</span>
@@ -2934,21 +3322,18 @@ mongoimport --host <span class="m">127</span>.0.0.1 --port <span class="m">27017
 <span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">find</span><span class="p">({</span> <span class="n">$text</span><span class="p">:</span> <span class="p">{</span> <span class="n">$search</span><span class="p">:</span> <span class="s">&quot;java \&quot;coffee shop\&quot;&quot;</span><span class="p">}</span> <span class="p">})</span>
 <span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;Coffee Shop&quot;</span><span class="p">,</span> <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Just coffee&quot;</span> <span class="p">}</span>
 </code></pre></div>
-
 <p>ordenar por relevancia</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">find</span><span class="p">({</span> <span class="n">$text</span><span class="p">:</span> <span class="p">{</span> <span class="n">$search</span><span class="p">:</span> <span class="s">&quot;java coffe shop&quot;</span><span class="p">}</span> <span class="p">},</span> <span class="p">{</span> <span class="n">puntuacio</span><span class="p">:</span> <span class="p">{</span> <span class="n">$meta</span><span class="p">:</span> <span class="s">&quot;textScore&quot;</span> <span class="p">}}</span> <span class="p">).</span><span class="na">sort</span><span class="p">(</span> <span class="p">{</span> <span class="n">puntuacio</span><span class="p">:</span> <span class="p">{</span><span class="n">$meta</span><span class="p">:</span> <span class="s">&quot;textScore&quot;</span><span class="p">}})</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">find</span><span class="p">({</span> <span class="n">$text</span><span class="p">:</span> <span class="p">{</span> <span class="n">$search</span><span class="p">:</span> <span class="s">&quot;java coffe shop&quot;</span><span class="p">}</span> <span class="p">},</span> <span class="p">{</span> <span class="n">puntuacio</span><span class="p">:</span> <span class="p">{</span> <span class="n">$meta</span><span class="p">:</span> <span class="s">&quot;textScore&quot;</span> <span class="p">}}</span> <span class="p">).</span><span class="na">sort</span><span class="p">(</span> <span class="p">{</span> <span class="n">puntuacio</span><span class="p">:</span> <span class="p">{</span><span class="n">$meta</span><span class="p">:</span> <span class="s">&quot;textScore&quot;</span><span class="p">}})</span>
 <span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;Java Shopping&quot;</span><span class="p">,</span> <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Indonesian goods&quot;</span><span class="p">,</span> <span class="s">&quot;puntuacio&quot;</span> <span class="p">:</span> <span class="mf">1.5</span> <span class="p">}</span>
 <span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;Java Hut&quot;</span><span class="p">,</span> <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Coffee and cakes&quot;</span><span class="p">,</span> <span class="s">&quot;puntuacio&quot;</span> <span class="p">:</span> <span class="mf">0.75</span> <span class="p">}</span>
 <span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;Coffee Shop&quot;</span><span class="p">,</span> <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Just coffee&quot;</span><span class="p">,</span> <span class="s">&quot;puntuacio&quot;</span> <span class="p">:</span> <span class="mf">0.75</span> <span class="p">}</span>
 </code></pre></div>
-
 <h3 id="geoespaciales">geoespaciales</h3>
 <p>Mongo permet crear uns <a href="https://docs.mongodb.com/manual/geospatial-queries/">índexs geoespacials</a> per a camps que continguin aquest tipus d’informació, i així poder fer consultes sobre documents propers a certes coordenades. Les coordenades poden ser esfèriques-2D (com les de latitud i longitud de la Terra), o planars-2D.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">createIndex</span><span class="p">({</span><span class="s">&quot;loc&quot;</span><span class="p">:</span> <span class="s">&quot;2dsphere&quot;</span><span class="p">}</span> <span class="p">,</span> <span class="p">{</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;loc.geoidx&quot;</span><span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">createIndex</span><span class="p">({</span><span class="s">&quot;loc&quot;</span><span class="p">:</span> <span class="s">&quot;2dsphere&quot;</span><span class="p">}</span> <span class="p">,</span> <span class="p">{</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;loc.geoidx&quot;</span><span class="p">})</span>
 </code></pre></div>
-
 <p>var las ciudades que están hasta 20km de las cordenadas indicadas.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="s">&quot;loc&quot;</span><span class="p">:</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="s">&quot;loc&quot;</span><span class="p">:</span> <span class="p">{</span>
 <span class="p">...</span>                      <span class="s">&quot;$near&quot;</span><span class="p">:</span> <span class="p">{</span>
 <span class="p">...</span>      <span class="s">&quot;$geometry&quot;</span><span class="p">:</span> <span class="p">{</span>
 <span class="p">...</span>      <span class="n">type</span><span class="p">:</span> <span class="s">&quot;Point&quot;</span> <span class="p">,</span>
@@ -2960,11 +3345,10 @@ mongoimport --host <span class="m">127</span>.0.0.1 --port <span class="m">27017
 <span class="p">...</span>    <span class="p">}</span>
 <span class="p">...</span>                 <span class="p">})</span>
 </code></pre></div>
-
 <h4 id="buscar-orden-cercania">Buscar orden cercanía</h4>
 <p>Devuelve documentos en orden de proximidad a un punto específico, del más cercano al más lejano.
 límite: opcional. El número máximo de documentos a devolver. El valor predeterminado es 100.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">aggregate</span> <span class="p">(</span><span class="o">[</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">aggregate</span> <span class="p">(</span><span class="o">[</span>
         <span class="p">{</span><span class="s">&quot;$geoNear&quot;</span><span class="p">:</span> 
             <span class="p">{</span><span class="s">&quot;near&quot;</span><span class="p">:</span> <span class="o">[-</span><span class="mf">5.53888900000004</span><span class="p">,</span>  <span class="mf">38.639167</span><span class="o">]</span><span class="p">,</span> 
              <span class="s">&quot;distanceField&quot;</span><span class="p">:</span> <span class="s">&quot;dis&quot;</span><span class="p">,</span> 
@@ -2979,10 +3363,9 @@ límite: opcional. El número máximo de documentos a devolver. El valor predete
         <span class="p">}</span>
     <span class="o">]</span><span class="p">)</span>
 </code></pre></div>
-
 <h4 id="orden-cercania-con-max-distancia">Orden cercanía con max distancia</h4>
 <p>en una distancia de max de 20km</p>
-<div class="codehilite"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">aggregate</span> <span class="p">(</span><span class="o">[</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">aggregate</span> <span class="p">(</span><span class="o">[</span>
         <span class="p">{</span><span class="s">&quot;$geoNear&quot;</span><span class="p">:</span> 
             <span class="p">{</span><span class="s">&quot;near&quot;</span><span class="p">:</span> <span class="o">[-</span><span class="mf">5.53888900000004</span><span class="p">,</span>  <span class="mf">38.639167</span><span class="o">]</span><span class="p">,</span> 
              <span class="s">&quot;distanceField&quot;</span><span class="p">:</span> <span class="s">&quot;dis&quot;</span><span class="p">,</span> 
@@ -3011,9 +3394,8 @@ límite: opcional. El número máximo de documentos a devolver. El valor predete
         <span class="p">}</span>
     <span class="o">]</span><span class="p">)</span>
 </code></pre></div>
-
 <h2 id="funciones">Funciones</h2>
-<div class="codehilite"><pre><span></span><code><span class="n">function</span> <span class="nf">findCities</span><span class="p">(</span><span class="kt">long</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">maxDist</span><span class="p">,</span> <span class="n">minDist</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="n">function</span> <span class="nf">findCities</span><span class="p">(</span><span class="kt">long</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">maxDist</span><span class="p">,</span> <span class="n">minDist</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">aggregate</span> <span class="p">(</span><span class="o">[</span>
         <span class="p">{</span><span class="s">&quot;$geoNear&quot;</span><span class="p">:</span> 
             <span class="p">{</span><span class="s">&quot;near&quot;</span><span class="p">:</span> <span class="o">[</span><span class="kt">long</span><span class="p">,</span> <span class="n">lat</span><span class="o">]</span><span class="p">,</span> <span class="s">&quot;distanceField&quot;</span><span class="p">:</span> <span class="s">&quot;dis&quot;</span><span class="p">,</span> <span class="s">&quot;includeLocs&quot;</span><span class="p">:</span> <span class="s">&quot;loc&quot;</span><span class="p">,</span> <span class="s">&quot;spherical&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="s">&quot;maxDistance&quot;</span><span class="p">:</span> <span class="n">maxDist</span><span class="o">/</span><span class="mi">6371</span><span class="p">,</span> <span class="s">&quot;minDistance&quot;</span><span class="p">:</span> <span class="n">minDist</span><span class="o">/</span><span class="mi">6371</span><span class="p">,</span> <span class="s">&quot;distanceMultiplier&quot;</span><span class="p">:</span> <span class="mi">6371</span><span class="p">}</span>
@@ -3026,79 +3408,75 @@ límite: opcional. El número máximo de documentos a devolver. El valor predete
 <span class="n">Aquesta</span> <span class="n">funció</span> <span class="n">només</span> <span class="n">funciona</span> <span class="n">si</span> <span class="n">estem</span> <span class="n">utilitzant</span> <span class="n">la</span> <span class="n">BD</span> <span class="n">geo</span><span class="p">,</span> <span class="n">és</span> <span class="n">clar</span><span class="p">.</span>
 <span class="nf">findCities</span><span class="p">(</span><span class="o">-</span><span class="mf">5.53888900000004</span><span class="p">,</span> <span class="mf">38.639167</span><span class="p">,</span> <span class="mi">40000</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </code></pre></div>
-                
-                  
-                
-                
-              
-              
-                
-
 
               
             </article>
           </div>
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
         
-          <a href="../../../auditoria/apuntes_hacking/" title="Haking ético" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Haking ético
+        <a href="../../../auditoria/apuntes_hacking/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Haking ético" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
               </span>
+              Haking ético
             </div>
-          </a>
+          </div>
+        </a>
+      
+      
         
-        
-          <a href="../../postgres/bases/" title="Postgres" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Postgres
+        <a href="../../postgres/bases/" class="md-footer__link md-footer__link--next" aria-label="Next: Postgres" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
               </span>
+              Postgres
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        powered by
-        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs</a>
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.01824240.min.js"}</script>
     
-      <script src="../../../assets/javascripts/application.c33a9706.js"></script>
-      
-      <script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+    
+      <script src="../../../assets/javascripts/bundle.ff0eccb3.min.js"></script>
       
     
   </body>

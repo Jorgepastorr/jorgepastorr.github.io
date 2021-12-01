@@ -1,42 +1,19 @@
 
-
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      
-      
-        <link rel="canonical" href="https://jorgepastorr.github.io/apuntes/virtualizacion/Docker-basico/">
       
       
         <meta name="author" content="Jorge Pastor">
       
       
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+        <link rel="canonical" href="https://jorgepastorr.github.io/apuntes/virtualizacion/Docker-basico/">
       
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.2">
     
     
       
@@ -44,102 +21,119 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
-      
+      <link rel="stylesheet" href="../../assets/stylesheets/main.816931ca.min.css">
       
         
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
         
-        <meta name="theme-color" content="#7e57c2">
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
       
     
     
-      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
-    
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
-    
+    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../..":"../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
     
       
+
+
     
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
-        
-      </defs>
-    </svg>
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#docker" tabindex="0" class="md-skip">
-        Skip to content
-      </a>
-    
-    
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://jorgepastorr.github.io/apuntes/" title="Apuntes" aria-label="Apuntes" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#docker" class="md-skip">
+          Skip to content
         </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              Apuntes
-            </span>
-            <span class="md-header-nav__topic">
-              
-                Docker
-              
-            </span>
-          
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Apuntes" class="md-header__button md-logo" aria-label="Apuntes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Docker
+            
+          </span>
         </div>
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
-<div class="md-search" data-md-component="search" role="dialog">
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -147,71 +141,59 @@
     </div>
   </div>
 </div>
-        
-      </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-
-
-  
-
-<a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
-    </div>
-  
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
   <div class="md-source__repository">
     jorgepastorr/apuntes
   </div>
 </a>
-          </div>
-        </div>
-      
-    </div>
+      </div>
+    
   </nav>
+  
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
+      
       
         
+          
+        
       
-      
-      <main class="md-main" role="main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://jorgepastorr.github.io/apuntes/" title="Apuntes" class="md-nav__button md-logo">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apuntes" class="md-nav__button md-logo" aria-label="Apuntes" data-md-component="logo">
       
-        <i class="md-icon"></i>
-      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
     </a>
     Apuntes
   </label>
   
     <div class="md-nav__source">
-      
-
-
-  
-
-<a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
-    </div>
-  
+      <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
   <div class="md-source__repository">
     jorgepastorr/apuntes
   </div>
@@ -224,1620 +206,1056 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../.." title="Apuntes Jorgepastorr" class="md-nav__link">
-      Apuntes Jorgepastorr
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Apuntes Jorgepastorr
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Administracion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Administracion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Administracion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/Configurar_pantallas_manualmente/" class="md-nav__link">
+        Configurar pantallas manualmente
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/Debian_hostname_dinamico/" class="md-nav__link">
+        Debian hostname dinamico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/Mutt/" class="md-nav__link">
+        Que es mutt?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/Procesos/" class="md-nav__link">
+        Procesos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/Resetear_la_password_root/" class="md-nav__link">
+        Resetear la password root.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/Vim/" class="md-nav__link">
+        Vim atajos básicos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/awk/" class="md-nav__link">
+        Uso básico de AWK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/freeipa/" class="md-nav__link">
+        FreeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/instalar_webmin/" class="md-nav__link">
+        instalar webmin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/per/" class="md-nav__link">
+        PER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/permisos_avanzados/" class="md-nav__link">
+        Permisos avanzados
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/samba/" class="md-nav__link">
+        Samba
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/server-correo/" class="md-nav__link">
+        Servidor Correo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/server-mensajeria/" class="md-nav__link">
+        Server mensajeria instantanea
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/ssh/" class="md-nav__link">
+        ssh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/sudo/" class="md-nav__link">
+        sudo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/umask/" class="md-nav__link">
+        umask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/usuarios/" class="md-nav__link">
+        Usuarios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/vnc/" class="md-nav__link">
+        vnc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/webdav/" class="md-nav__link">
+        webdav
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-    <label class="md-nav__link" for="nav-2">
-      Administracion
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Administracion
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_21" type="checkbox" id="__nav_2_21" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_21">
+          Ldap
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ldap" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_21">
+          <span class="md-nav__icon md-icon"></span>
+          Ldap
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/ldap/Ldap-Samba-Hostpam/" class="md-nav__link">
+        Ldap - Samba - Hostpam
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../administracion/Configurar_pantallas_manualmente/" title="Configurar pantallas manualmente" class="md-nav__link">
-      Configurar pantallas manualmente
-    </a>
-  </li>
-
-        
+            
           
-          
-          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/ldap/acl_ejercicios/" class="md-nav__link">
+        Acl ejercicios
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../administracion/Debian_hostname_dinamico/" title="Debian hostname dinamico" class="md-nav__link">
-      Debian hostname dinamico
-    </a>
-  </li>
-
-        
+            
           
-          
-          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/ldap/host-kerberos-con-ldap/" class="md-nav__link">
+        Instalación host  ldap-kerberos
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../administracion/Mutt/" title="Que es mutt?" class="md-nav__link">
-      Que es mutt?
-    </a>
-  </li>
-
-        
+            
           
-          
-          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/ldap/ldap/" class="md-nav__link">
+        ldap
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../administracion/Procesos/" title="Procesos" class="md-nav__link">
-      Procesos
-    </a>
-  </li>
-
-        
+            
           
-          
-          
+        </ul>
+      </nav>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../administracion/Resetear_la_password_root/" title="Resetear la password root." class="md-nav__link">
-      Resetear la password root.
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/Vim/" title="Vim atajos básicos" class="md-nav__link">
-      Vim atajos básicos
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/awk/" title="Uso básico de AWK" class="md-nav__link">
-      Uso básico de AWK
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/freeipa/" title="FreeIpa" class="md-nav__link">
-      FreeIpa
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/instalar_webmin/" title="instalar webmin" class="md-nav__link">
-      instalar webmin
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/per/" title="PER" class="md-nav__link">
-      PER
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/permisos_avanzados/" title="Permisos avanzados" class="md-nav__link">
-      Permisos avanzados
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/samba/" title="Samba" class="md-nav__link">
-      Samba
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/server-correo/" title="Servidor Correo" class="md-nav__link">
-      Servidor Correo
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/server-mensajeria/" title="Server mensajeria instantanea" class="md-nav__link">
-      Server mensajeria instantanea
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/ssh/" title="ssh" class="md-nav__link">
-      ssh
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/sudo/" title="sudo" class="md-nav__link">
-      sudo
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/umask/" title="umask" class="md-nav__link">
-      umask
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/usuarios/" title="Usuarios" class="md-nav__link">
-      Usuarios
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/vnc/" title="vnc" class="md-nav__link">
-      vnc
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/webdav/" title="webdav" class="md-nav__link">
-      webdav
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
+            
+              
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-21" type="checkbox" id="nav-2-21">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_22" type="checkbox" id="__nav_2_22" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_22">
+          Pxe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pxe" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_22">
+          <span class="md-nav__icon md-icon"></span>
+          Pxe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/pxe/Servidor-pxe-con-rapberry/" class="md-nav__link">
+        Servidor pxe con rapberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/pxe/guiapxe-fedora/" class="md-nav__link">
+        Guiapxe fedora
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-    <label class="md-nav__link" for="nav-2-21">
-      Ldap
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-21">
-        Ldap
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_23" type="checkbox" id="__nav_2_23" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_23">
+          Redes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Redes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_23">
+          <span class="md-nav__icon md-icon"></span>
+          Redes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/redes/apuntes-xarxa/" class="md-nav__link">
+        APUNTS DE XARXES
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/redes/comandos_router_switch/" class="md-nav__link">
+        Configuració de Routers
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/redes/haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../administracion/ldap/Ldap-Samba-Hostpam/" title="Ldap - Samba - Hostpam" class="md-nav__link">
-      Ldap - Samba - Hostpam
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administracion/redes/redes2/" class="md-nav__link">
+        Redes2
+      </a>
+    </li>
+  
+
+            
           
+        </ul>
+      </nav>
+    </li>
+  
+
+            
           
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/ldap/acl_ejercicios/" title="Acl ejercicios" class="md-nav__link">
-      Acl ejercicios
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/ldap/host-kerberos-con-ldap/" title="Instalación host ldap-kerberos" class="md-nav__link">
-      Instalación host  ldap-kerberos
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/ldap/ldap/" title="ldap" class="md-nav__link">
-      ldap
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-22" type="checkbox" id="nav-2-22">
-    
-    <label class="md-nav__link" for="nav-2-22">
-      Pxe
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-22">
-        Pxe
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/pxe/Servidor-pxe-con-rapberry/" title="Servidor pxe con rapberry" class="md-nav__link">
-      Servidor pxe con rapberry
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/pxe/guiapxe-fedora/" title="Guiapxe fedora" class="md-nav__link">
-      Guiapxe fedora
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-23" type="checkbox" id="nav-2-23">
-    
-    <label class="md-nav__link" for="nav-2-23">
-      Redes
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-23">
-        Redes
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/redes/apuntes-xarxa/" title="APUNTS DE XARXES" class="md-nav__link">
-      APUNTS DE XARXES
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/redes/comandos_router_switch/" title="Configuració de Routers" class="md-nav__link">
-      Configuració de Routers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/redes/haproxy/" title="Haproxy" class="md-nav__link">
-      Haproxy
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../administracion/redes/redes2/" title="Redes2" class="md-nav__link">
-      Redes2
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      Auditoria
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        Auditoria
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Auditoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Auditoria" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Auditoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../auditoria/apuntes_hacking/" class="md-nav__link">
+        Haking ético
+      </a>
+    </li>
+  
+
+            
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../auditoria/apuntes_hacking/" title="Haking ético" class="md-nav__link">
-      Haking ético
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      Bases datos
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        Bases datos
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Bases datos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bases datos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Bases datos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
+            
+              
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
-    
-    <label class="md-nav__link" for="nav-4-1">
-      Mongo
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-1">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Mongo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mongo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Mongo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases_datos/mongo/Mongo/" class="md-nav__link">
         Mongo
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../bases_datos/mongo/Mongo/" title="Mongo" class="md-nav__link">
-      Mongo
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
+            
           
-          
-          
+        </ul>
+      </nav>
+    </li>
+  
 
-
-  <li class="md-nav__item md-nav__item--nested">
+            
+          
+            
+              
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
-    
-    <label class="md-nav__link" for="nav-4-2">
-      Postgres
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-2">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Postgres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Postgres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Postgres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases_datos/postgres/bases/" class="md-nav__link">
         Postgres
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases_datos/postgres/modificaciones/" class="md-nav__link">
+        Modificación tablas
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases_datos/postgres/plpgsql/" class="md-nav__link">
+        Plpgsql
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases_datos/postgres/postgresql-intalacion/" class="md-nav__link">
+        Postgresql intalacion
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../bases_datos/postgres/bases/" title="Postgres" class="md-nav__link">
-      Postgres
-    </a>
-  </li>
-
-        
+            
           
+        </ul>
+      </nav>
+    </li>
+  
+
+            
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../bases_datos/postgres/modificaciones/" title="Modificación tablas" class="md-nav__link">
-      Modificación tablas
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../bases_datos/postgres/plpgsql/" title="Plpgsql" class="md-nav__link">
-      Plpgsql
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../bases_datos/postgres/postgresql-intalacion/" title="Postgresql intalacion" class="md-nav__link">
-      Postgresql intalacion
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      Cloud
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Cloud
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cloud" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud/aws/" class="md-nav__link">
+        aws
+      </a>
+    </li>
+  
+
+            
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../cloud/aws/" title="aws" class="md-nav__link">
-      aws
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      Curiosidades
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        Curiosidades
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Curiosidades
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Curiosidades" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Curiosidades
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curiosidades/Eliminar_contrase%C3%B1a_windows/" class="md-nav__link">
+        Eliminar contraseña windows
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curiosidades/Lanzador_aplicaciones_en_gnome/" class="md-nav__link">
+        Lanzador aplicaciones en gnome
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curiosidades/cambiar_color_promp_terminal/" class="md-nav__link">
+        Cambiar color promp terminal
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../curiosidades/Eliminar_contrase%C3%B1a_windows/" title="Eliminar contraseña windows" class="md-nav__link">
-      Eliminar contraseña windows
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curiosidades/conky/" class="md-nav__link">
+        conky
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curiosidades/openbox/" class="md-nav__link">
+        Openbox
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curiosidades/qbit/" class="md-nav__link">
+        Qbit
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../curiosidades/Lanzador_aplicaciones_en_gnome/" title="Lanzador aplicaciones en gnome" class="md-nav__link">
-      Lanzador aplicaciones en gnome
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curiosidades/tmux/" class="md-nav__link">
+        Tmux
+      </a>
+    </li>
+  
+
+            
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../curiosidades/cambiar_color_promp_terminal/" title="Cambiar color promp terminal" class="md-nav__link">
-      Cambiar color promp terminal
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../curiosidades/conky/" title="conky" class="md-nav__link">
-      conky
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../curiosidades/openbox/" title="Openbox" class="md-nav__link">
-      Openbox
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../curiosidades/qbit/" title="Qbit" class="md-nav__link">
-      Qbit
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../curiosidades/tmux/" title="Tmux" class="md-nav__link">
-      Tmux
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
-    
-    <label class="md-nav__link" for="nav-7">
-      Desatendidas
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Desatendidas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Desatendidas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Desatendidas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../desatendidas/" class="md-nav__link">
         Desatendidas
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../desatendidas/" title="Desatendidas" class="md-nav__link">
-      Desatendidas
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../desatendidas/Instalacion-desatendida-debian/" title="Instalacion desatendida debian" class="md-nav__link">
-      Instalacion desatendida debian
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../desatendidas/desatendida-windows/" title="Desatendida windows" class="md-nav__link">
-      Desatendida windows
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../desatendidas/kikstart/" title="Kikstart" class="md-nav__link">
-      Kikstart
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
-    
-    <label class="md-nav__link" for="nav-8">
-      Generar doc
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        Generar doc
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../generar_doc/docsify/" title="Docsify" class="md-nav__link">
-      Docsify
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../generar_doc/remark/" title="Remark" class="md-nav__link">
-      Remark
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
-    
-    <label class="md-nav__link" for="nav-9">
-      Lenguajes
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
-        Lenguajes
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lenguajes/Fundamentos_php/" title="Fundamentos php" class="md-nav__link">
-      Fundamentos php
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lenguajes/Shell/" title="Shell" class="md-nav__link">
-      Shell
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3" type="checkbox" id="nav-9-3">
-    
-    <label class="md-nav__link" for="nav-9-3">
-      Python3
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-9-3">
-        Python3
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lenguajes/python3/Apuntes-Metodos/" title="Métodos de colecciones" class="md-nav__link">
-      Métodos de colecciones
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lenguajes/python3/apuntes-Funcionalidades_avanzadas/" title="apuntes Funcionalidades avanzadas" class="md-nav__link">
-      apuntes Funcionalidades avanzadas
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lenguajes/python3/apuntes-Herencia/" title="Herencias" class="md-nav__link">
-      Herencias
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lenguajes/python3/apuntes-distribucion/" title="Distribución" class="md-nav__link">
-      Distribución
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lenguajes/python3/apuntes-documentacion/" title="Documentación" class="md-nav__link">
-      Documentación
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lenguajes/python3/apuntes-ficheros/" title="Apuntes ficheros" class="md-nav__link">
-      Apuntes ficheros
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lenguajes/python3/apuntes-fundamento/" title="Python fundamentos" class="md-nav__link">
-      Python fundamentos
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lenguajes/python3/apuntes-modulos/" title="Módulos" class="md-nav__link">
-      Módulos
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lenguajes/python3/apuntes-orientado-objetos/" title="Orientado a objetos" class="md-nav__link">
-      Orientado a objetos
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lenguajes/python3/apuntes-test/" title="Test" class="md-nav__link">
-      Test
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lenguajes/python3/apuntes-tkinter/" title="Tkinter" class="md-nav__link">
-      Tkinter
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lenguajes/python3/apuntes_bases/" title="Apuntes bases" class="md-nav__link">
-      Apuntes bases
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lenguajes/python3/argparse/" title="Argparse" class="md-nav__link">
-      Argparse
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
-      Seguridad
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        Seguridad
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../seguridad/Certificados-Digitales/" title="Certificados Digitales" class="md-nav__link">
-      Certificados Digitales
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../seguridad/Kerberos/" title="Kerberos" class="md-nav__link">
-      Kerberos
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../seguridad/OpenVpn/" title="OpenVpn" class="md-nav__link">
-      OpenVpn
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../seguridad/The-crazy-thing/" title="The crazy thing!" class="md-nav__link">
-      The crazy thing!
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../seguridad/TunelSSH/" title="Tunel SSH" class="md-nav__link">
-      Tunel SSH
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../seguridad/gpg/" title="GPG" class="md-nav__link">
-      GPG
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../seguridad/lvm/" title="Lvm logical volum manager" class="md-nav__link">
-      Lvm logical volum manager
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../seguridad/practica-ssl-tls/" title="Practica ssl tls" class="md-nav__link">
-      Practica ssl tls
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../seguridad/raid/" title="Raid" class="md-nav__link">
-      Raid
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-10" type="checkbox" id="nav-10-10">
-    
-    <label class="md-nav__link" for="nav-10-10">
-      Backups
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-10">
-        Backups
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../seguridad/backups/Borg_basico/" title="Borg básico" class="md-nav__link">
-      Borg básico
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../seguridad/backups/Tar/" title="Tar" class="md-nav__link">
-      Tar
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../seguridad/backups/rdiff-backup/" title="rdiff-backup" class="md-nav__link">
-      rdiff-backup
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../seguridad/backups/rsync/" title="rsync" class="md-nav__link">
-      rsync
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-11" type="checkbox" id="nav-10-11">
-    
-    <label class="md-nav__link" for="nav-10-11">
-      Cortafuegos
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-11">
-        Cortafuegos
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../seguridad/cortafuegos/Iptables/" title="Iptables" class="md-nav__link">
-      Iptables
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
-    
-    <label class="md-nav__link" for="nav-11">
-      Sistemas
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        Sistemas
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/Actualizar_hora_sys_o_bios/" title="Gestionar Hora" class="md-nav__link">
-      Gestionar Hora
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/Arranque-del-sistema/" title="Arranque del sistema" class="md-nav__link">
-      Arranque del sistema
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/Estructura_de_directorios/" title="Estructura de directorios" class="md-nav__link">
-      Estructura de directorios
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/Logs/" title="Logs del sistema" class="md-nav__link">
-      Logs del sistema
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/Systemd/" title="Systemd" class="md-nav__link">
-      Systemd
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/chroot/" title="Chroot" class="md-nav__link">
-      Chroot
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/disco/" title="Disco" class="md-nav__link">
-      Disco
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/gestores_de_paquetes/" title="Gestores de paquetes" class="md-nav__link">
-      Gestores de paquetes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/getenforce/" title="getenforce" class="md-nav__link">
-      getenforce
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/grub/" title="Grub" class="md-nav__link">
-      Grub
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/home/" title="Cambiar /home" class="md-nav__link">
-      Cambiar /home
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/ip_est%C3%A1tica/" title="ip estática raspberry" class="md-nav__link">
-      ip estática raspberry
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/pam/" title="Pam" class="md-nav__link">
-      Pam
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/raid/" title="Raid" class="md-nav__link">
-      Raid
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/xinetd/" title="xinetd" class="md-nav__link">
-      xinetd
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-16" type="checkbox" id="nav-11-16">
-    
-    <label class="md-nav__link" for="nav-11-16">
-      Automatizacion
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-11-16">
-        Automatizacion
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/automatizacion/ansible/" title="Ansible" class="md-nav__link">
-      Ansible
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../sistemas/automatizacion/tareas_programadas/" title="Tareas Programadas" class="md-nav__link">
-      Tareas Programadas
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../desatendidas/Instalacion-desatendida-debian/" class="md-nav__link">
+        Instalacion desatendida debian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../desatendidas/desatendida-windows/" class="md-nav__link">
+        Desatendida windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../desatendidas/kikstart/" class="md-nav__link">
+        Kikstart
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
@@ -1845,60 +1263,1030 @@
       
 
   
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  
+  
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12" checked>
-    
-    <label class="md-nav__link" for="nav-12">
-      Virtualizacion
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
-        Virtualizacion
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Generar doc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Generar doc" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Generar doc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-          
-
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../generar_doc/docsify/" class="md-nav__link">
+        Docsify
+      </a>
+    </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../generar_doc/remark/" class="md-nav__link">
+        Remark
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
       
+      
+      
+
+  
+  
+  
     
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Lenguajes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lenguajes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Lenguajes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/Fundamentos_php/" class="md-nav__link">
+        Fundamentos php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/Shell/" class="md-nav__link">
+        Shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3">
+          Python3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python3" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Python3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/Apuntes-Metodos/" class="md-nav__link">
+        Métodos de colecciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-Funcionalidades_avanzadas/" class="md-nav__link">
+        apuntes Funcionalidades avanzadas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-Herencia/" class="md-nav__link">
+        Herencias
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-distribucion/" class="md-nav__link">
+        Distribución
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-documentacion/" class="md-nav__link">
+        Documentación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-ficheros/" class="md-nav__link">
+        Apuntes ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-fundamento/" class="md-nav__link">
+        Python fundamentos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-modulos/" class="md-nav__link">
+        Módulos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-orientado-objetos/" class="md-nav__link">
+        Orientado a objetos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-test/" class="md-nav__link">
+        Test
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes-tkinter/" class="md-nav__link">
+        Tkinter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/apuntes_bases/" class="md-nav__link">
+        Apuntes bases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/argparse/" class="md-nav__link">
+        Argparse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Seguridad
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seguridad" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Seguridad
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/Certificados-Digitales/" class="md-nav__link">
+        Certificados Digitales
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/Kerberos/" class="md-nav__link">
+        Kerberos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/OpenVpn/" class="md-nav__link">
+        OpenVpn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/The-crazy-thing/" class="md-nav__link">
+        The crazy thing!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/TunelSSH/" class="md-nav__link">
+        Tunel SSH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/lvm/" class="md-nav__link">
+        Lvm logical volum manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/practica-ssl-tls/" class="md-nav__link">
+        Practica ssl tls
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_10" type="checkbox" id="__nav_10_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_10">
+          Backups
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Backups" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_10">
+          <span class="md-nav__icon md-icon"></span>
+          Backups
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/backups/Borg_basico/" class="md-nav__link">
+        Borg básico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/backups/Tar/" class="md-nav__link">
+        Tar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/backups/rdiff-backup/" class="md-nav__link">
+        rdiff-backup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/backups/rsync/" class="md-nav__link">
+        rsync
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_11" type="checkbox" id="__nav_10_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_11">
+          Cortafuegos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cortafuegos" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_11">
+          <span class="md-nav__icon md-icon"></span>
+          Cortafuegos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguridad/cortafuegos/Iptables/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Sistemas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sistemas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Sistemas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/Actualizar_hora_sys_o_bios/" class="md-nav__link">
+        Gestionar Hora
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/Arranque-del-sistema/" class="md-nav__link">
+        Arranque del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/Estructura_de_directorios/" class="md-nav__link">
+        Estructura de directorios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/Logs/" class="md-nav__link">
+        Logs del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/Systemd/" class="md-nav__link">
+        Systemd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/ZFS/" class="md-nav__link">
+        ZFS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/chroot/" class="md-nav__link">
+        Chroot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/disco/" class="md-nav__link">
+        Disco
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/gestores_de_paquetes/" class="md-nav__link">
+        Gestores de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/getenforce/" class="md-nav__link">
+        getenforce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/grub/" class="md-nav__link">
+        Grub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/home/" class="md-nav__link">
+        Cambiar /home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/ip_est%C3%A1tica/" class="md-nav__link">
+        ip estática raspberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/pam/" class="md-nav__link">
+        Pam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/xinetd/" class="md-nav__link">
+        xinetd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_17" type="checkbox" id="__nav_11_17" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_17">
+          Automatizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Automatizacion" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_17">
+          <span class="md-nav__icon md-icon"></span>
+          Automatizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/automatizacion/ansible/" class="md-nav__link">
+        Ansible
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sistemas/automatizacion/tareas_programadas/" class="md-nav__link">
+        Tareas Programadas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          Virtualizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virtualizacion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Virtualizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Docker
-      </label>
-    
-    <a href="./" title="Docker" class="md-nav__link md-nav__link--active">
-      Docker
-    </a>
-    
+      </a>
       
-<nav class="md-nav md-nav--secondary">
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#instalar" class="md-nav__link">
     Instalar
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Instalar">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1925,7 +2313,7 @@
     Comandos básicos
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Comandos básicos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1940,7 +2328,7 @@
     Acciones
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Acciones">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1965,7 +2353,7 @@
     Dockerfile
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Dockerfile">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1973,7 +2361,7 @@
     Contenido
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Contenido">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2005,7 +2393,7 @@
     Contenedores
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Contenedores">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2046,7 +2434,7 @@
     docker-compose
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="docker-compose">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2068,7 +2456,7 @@
     Estructura
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Estructura">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2144,164 +2532,192 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lxc/" class="md-nav__link">
+        LXC y LXD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vagrant/" class="md-nav__link">
+        Vagrant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubernetes/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../swarm/" class="md-nav__link">
+        Swarm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-  </li>
-
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_6" type="checkbox" id="__nav_12_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_6">
+          Virt manager
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virt manager" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_6">
+          <span class="md-nav__icon md-icon"></span>
+          Virt manager
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virt-manager/Backing_chain/" class="md-nav__link">
+        Backing_chain
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virt-manager/Clonar/" class="md-nav__link">
+        Clonar de virtual a físico y de físico a virtual.
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virt-manager/Instalacion_de_virtualizacion_fedora/" class="md-nav__link">
+        Instalación de virtualización fedora
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../Lxc/" title="LXC y LXD" class="md-nav__link">
-      LXC y LXD
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virt-manager/acceder_consola_desde_virsh/" class="md-nav__link">
+        acceder consola desde virsh
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virt-manager/crear_red_aislada/" class="md-nav__link">
+        Crear red aislada
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virt-manager/instalar_maquina_virtual_virt-install/" class="md-nav__link">
+        virt
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../Vagrant/" title="Vagrant" class="md-nav__link">
-      Vagrant
-    </a>
-  </li>
-
-        
+            
           
+        </ul>
+      </nav>
+    </li>
+  
+
+            
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../kubernetes/" title="Kubernetes" class="md-nav__link">
-      Kubernetes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../swarm/" title="Swarm" class="md-nav__link">
-      Swarm
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-6" type="checkbox" id="nav-12-6">
-    
-    <label class="md-nav__link" for="nav-12-6">
-      Virt manager
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-12-6">
-        Virt manager
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../virt-manager/Backing_chain/" title="Backing_chain" class="md-nav__link">
-      Backing_chain
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../virt-manager/Clonar/" title="Clonar de virtual a físico y de físico a virtual." class="md-nav__link">
-      Clonar de virtual a físico y de físico a virtual.
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../virt-manager/Instalacion_de_virtualizacion_fedora/" title="Instalación de virtualización fedora" class="md-nav__link">
-      Instalación de virtualización fedora
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../virt-manager/acceder_consola_desde_virsh/" title="acceder consola desde virsh" class="md-nav__link">
-      acceder consola desde virsh
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../virt-manager/crear_red_aislada/" title="Crear red aislada" class="md-nav__link">
-      Crear red aislada
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../virt-manager/instalar_maquina_virtual_virt-install/" title="virt" class="md-nav__link">
-      virt
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
   </ul>
@@ -2311,25 +2727,31 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#instalar" class="md-nav__link">
     Instalar
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Instalar">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2356,7 +2778,7 @@
     Comandos básicos
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Comandos básicos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2371,7 +2793,7 @@
     Acciones
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Acciones">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2396,7 +2818,7 @@
     Dockerfile
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Dockerfile">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2404,7 +2826,7 @@
     Contenido
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Contenido">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2436,7 +2858,7 @@
     Contenedores
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Contenedores">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2477,7 +2899,7 @@
     docker-compose
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="docker-compose">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2499,7 +2921,7 @@
     Estructura
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Estructura">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2575,10 +2997,6 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
@@ -2587,19 +3005,21 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/jorgepastorr/apuntes/edit/master/docs/virtualizacion/Docker-basico.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
-                
-                
-                <h1 id="docker">Docker</h1>
+<a href="https://github.com/jorgepastorr/apuntes/edit/master/docs/virtualizacion/Docker-basico.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="docker">Docker</h1>
 <h2 id="instalar">Instalar</h2>
 <p>Debian y raspbian.</p>
 <p>Para otras distros mirar el enlace.</p>
 <p>https://docs.docker.com/install/linux/docker-ce/debian/#set-up-the-repository</p>
-<div class="codehilite"><pre><span></span><code>sudo apt-get update
+<div class="highlight"><pre><span></span><code>sudo apt-get update
 
 <span class="c1"># dependencias necesarias</span>
 sudo apt-get install <span class="se">\</span>
@@ -2612,38 +3032,33 @@ sudo apt-get install <span class="se">\</span>
 <span class="c1"># añadir clave oficial del repositorio</span>
 curl -fsSL https://download.docker.com/linux/debian/gpg <span class="p">|</span> sudo apt-key add -
 </code></pre></div>
-
 <!-- tabs:start -->
 
 <h4 id="debian"><strong>debian</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="c1"># añadir repositorio</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># añadir repositorio</span>
 sudo add-apt-repository <span class="se">\</span>
    <span class="s2">&quot;deb [arch=amd64] https://download.docker.com/linux/debian \</span>
 <span class="s2">   </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> \</span>
 <span class="s2">   stable&quot;</span>
 </code></pre></div>
-
 <h4 id="raspbian"><strong>raspbian</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="c1"># añadir repositorio</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># añadir repositorio</span>
 <span class="nb">echo</span> <span class="s2">&quot;deb [arch=armhf] https://download.docker.com/linux/debian \</span>
 <span class="s2">     </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> stable&quot;</span> <span class="p">|</span> <span class="se">\</span>
     sudo tee /etc/apt/sources.list.d/docker.list
 </code></pre></div>
-
 <!-- tabs:end -->
 
-<div class="codehilite"><pre><span></span><code><span class="c1"># instalar docker y docker compose</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># instalar docker y docker compose</span>
 sudo apt-get update
 sudo apt-get install docker-ce docker-compose
 </code></pre></div>
-
 <p><strong>Añadir usuario al grupo docker</strong></p>
-<div class="codehilite"><pre><span></span><code>sudo usermod -aG docker <span class="k">$(</span>whoami<span class="k">)</span>
+<div class="highlight"><pre><span></span><code>sudo usermod -aG docker <span class="k">$(</span>whoami<span class="k">)</span>
 </code></pre></div>
-
 <h2 id="comandos-basicos">Comandos básicos</h2>
 <h3 id="visualizacion">Visualización</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># contenedores</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># contenedores</span>
 docker ps        <span class="c1"># ver contenedores en ejecucion</span>
 docker ps -a     <span class="c1"># Todos los contenedores</span>
 docker inspect docker-nginx    <span class="c1"># informacion del contenedor</span>
@@ -2662,9 +3077,8 @@ docker <span class="nb">history</span> -H apache-centos    <span class="c1"># in
 docker volume ls     <span class="c1"># listar volumenes</span>
 docker volume ls -f <span class="nv">dangling</span><span class="o">=</span><span class="nb">true</span>    <span class="c1"># listar volumenes huérfanos</span>
 </code></pre></div>
-
 <h3 id="acciones">Acciones</h3>
-<div class="codehilite"><pre><span></span><code>docker rmi imagen        <span class="c1"># borrar imagen</span>
+<div class="highlight"><pre><span></span><code>docker rmi imagen        <span class="c1"># borrar imagen</span>
 docker rm contenedor    <span class="c1"># borrar contenedor</span>
 docker rm -f contenedor <span class="c1"># borrar contenedor en marcha</span>
 docker rm -fv contenedor <span class="c1"># borrar contenedor con sus volumenes</span>
@@ -2682,32 +3096,28 @@ docker build -t nombre-conenedor .    <span class="c1"># crear imagen con dockfi
 docker attach docker-nginx         <span class="c1"># acceder a contenedor (si está en marcha)</span>
 docker <span class="nb">exec</span> -i -t docker-nginx /bin/bash    <span class="c1"># acceder a un contenedor o mandar orden</span>
 </code></pre></div>
-
 <h4 id="limpieza">Limpieza</h4>
-<div class="codehilite"><pre><span></span><code>docker images -f <span class="nv">dangling</span><span class="o">=</span><span class="nb">true</span>    <span class="c1"># ver imágenes huérfanas </span>
+<div class="highlight"><pre><span></span><code>docker images -f <span class="nv">dangling</span><span class="o">=</span><span class="nb">true</span>    <span class="c1"># ver imágenes huérfanas </span>
 docker images -f <span class="nv">dangling</span><span class="o">=</span><span class="nb">true</span> -q <span class="p">|</span> xargs docker rmi    <span class="c1"># eliminar imágenes huérfanas</span>
 docker rm <span class="k">$(</span>docker ps -a -q<span class="k">)</span>    <span class="c1"># borrar todos los contenedores</span>
 docker rmi <span class="k">$(</span>docker images -q<span class="k">)</span>    <span class="c1"># borrar todas las imagenes</span>
 </code></pre></div>
-
 <h2 id="dockerfile">Dockerfile</h2>
 <p>Dockerfile es un archivo de texto donde introducimos  la configuración para crear imágenes docker.</p>
-<div class="codehilite"><pre><span></span><code>docker build -t nombre-conenedor .
+<div class="highlight"><pre><span></span><code>docker build -t nombre-conenedor .
 </code></pre></div>
-
 <p>La sintaxis de configuración mínima es la siguiente.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">centos</span>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span> <span class="s">centos</span>
 <span class="k">RUN</span> yum install httpd -y
 <span class="k">CMD</span> apachectl -DFOREGROUND
 </code></pre></div>
-
 <ul>
 <li><code>from</code> imagen base donde correr</li>
 <li><code>run</code> ordenes a ejecutar, actualizaciones , instalaciones, etc...</li>
 <li><code>cmd</code> activación del servicio en primer plano.</li>
 </ul>
 <h3 id="contenido">Contenido</h3>
-<div class="codehilite"><pre><span></span><code>FROM     <span class="c1"># imagen base</span>
+<div class="highlight"><pre><span></span><code>FROM     <span class="c1"># imagen base</span>
 RUN        <span class="c1"># ejecucion de ordenes</span>
 COPY/ADD    <span class="c1"># copiar archivos locales dentro de la imagen</span>
 ENV        <span class="c1"># definir variables de entorno que utilizaras en la creación de la imagen</span>
@@ -2718,7 +3128,6 @@ USER    <span class="c1"># cabiar de usuario, ( tiene que existir )</span>
 VOLUME    <span class="c1"># Punto de montage  anonimo</span>
 CMD        <span class="c1"># ejecucion de servicio, o script final</span>
 </code></pre></div>
-
 <ul>
 <li><code>COPY/ADD</code> : hacen prácticamente lo mismo, la diferencia es que <code>ADD</code>  permite descargar los archivos desde una url, sin tener que tenerlos localmente.</li>
 </ul>
@@ -2736,7 +3145,7 @@ CMD        <span class="c1"># ejecucion de servicio, o script final</span>
 <h3 id="multi-stage-build">Multi Stage Build</h3>
 <p>Multi stage build es una forma de ahorrar espacio en una imagen, copiando contenido de una imagen a otra.</p>
 <p>En este ejemplo creare un app en una imagen esta generará contenido adicional que no quiero tener, por lo tanto copiare la app compilada en otra imagen para ahorrar espacio.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">maven:3.5-alpine</span> <span class="k">as</span> <span class="s">builder</span>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span> <span class="s">maven:3.5-alpine</span> <span class="k">as</span> <span class="s">builder</span>
 <span class="k">COPY</span> app /app
 <span class="k">RUN</span> <span class="nb">cd</span> /app <span class="o">&amp;&amp;</span> mvn package
 
@@ -2744,23 +3153,20 @@ CMD        <span class="c1"># ejecucion de servicio, o script final</span>
 <span class="k">COPY</span> --from<span class="o">=</span>builder /app/target/my-app-1.0-SNAPSHOT.jar /opt/app.jar
 <span class="k">CMD</span> java -jar /opt/app.jar
 </code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>debian  ➜ docker build -t multi-stage .
+<div class="highlight"><pre><span></span><code>debian  ➜ docker build -t multi-stage .
 </code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+<div class="highlight"><pre><span></span><code>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 multi-stage         latest              3051e85589f3        <span class="m">21</span> seconds ago      105MB
 &lt;none&gt;              &lt;none&gt;              6b149ba281fe        <span class="m">37</span> seconds ago      131MB
 openjdk             <span class="m">8</span>-alpine            e9ea51023687        <span class="m">2</span> days ago          105MB
 maven               <span class="m">3</span>.5-alpine          fb4bb0d89941        <span class="m">4</span> months ago        119MB
 </code></pre></div>
-
 <p>Explicación de todo esto. Obviamente tenemos las imágenes oficiales de maven, y openjdk que hemos utilizado de base.</p>
 <p>Después tenemos la 2ª línea una imagen huérfana, que es la utilizada para compilar la app, podemos ver que se a inflado 11MB en dependencias de su base maven.</p>
 <p>Por ultimo tenemos la imagen multi-stage donde hemos copiado la app compilada, por lo tanto podríamos borrar todas las demás imágenes y ahorrar ese espacio de mas que no necesitamos de nada.</p>
 <h2 id="contenedores">Contenedores</h2>
 <p>Los contenedores se crean a partir de una imagen y son los encargados de mantener activos los servicios.</p>
-<div class="codehilite"><pre><span></span><code>--name nombre-contenedor
+<div class="highlight"><pre><span></span><code>--name nombre-contenedor
 -p <span class="m">8000</span>:80        <span class="c1"># exponer puerto 8000 puerto local 80 puerto contenedor</span>
 -v ./path/local:/path/to/image    <span class="c1"># punto de montage comun --volume=host-dir:container-dir:options</span>
 -it    centos /bin/bash    <span class="c1"># tty interactive</span>
@@ -2773,14 +3179,12 @@ maven               <span class="m">3</span>.5-alpine          fb4bb0d89941     
 -m <span class="s2">&quot;500mb&quot;</span>        <span class="c1"># limitar MiB de memoria ue puede usar</span>
 --cpuset-cpus <span class="m">0</span>-1    <span class="c1"># numeros de cpu permito usar</span>
 </code></pre></div>
-
 <p><strong>Sintaxis:</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="c1">#            nombre contenedor     puertos   nombre de imagen</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#            nombre contenedor     puertos   nombre de imagen</span>
 docker run --name docker-nginx   -p <span class="m">8000</span>:80      nginx
 </code></pre></div>
-
 <p>Ejemplos crear contenedores</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># contendor interactivo, puedes acceder a el</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># contendor interactivo, puedes acceder a el</span>
 docker run -dti --name centos1 centos
 
 <span class="c1"># Crear contenedor con directorio local montado en contenedor</span>
@@ -2792,16 +3196,13 @@ docker run -dti --name centos3 --network test1 centos
 <span class="c1"># contenedor con red e ip concreta, solo podras asignar ip si es una subred</span>
 docker run -dti --name centos3 --network test1 --ip <span class="m">172</span>.30.0.10 centos
 </code></pre></div>
-
 <p>Acceder a un contenedor</p>
-<div class="codehilite"><pre><span></span><code>docker <span class="nb">exec</span> -ti docker-nginx /bin/bash <span class="c1"># acceder a un contenedor</span>
+<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti docker-nginx /bin/bash <span class="c1"># acceder a un contenedor</span>
 docker <span class="nb">exec</span> -u root -ti docker-nginx /bin/bash <span class="c1"># acceder a un contenedor con user esecífico</span>
 </code></pre></div>
-
 <p>Generar imagen desde un contenedor</p>
-<div class="codehilite"><pre><span></span><code>docker commit --change<span class="o">=</span><span class="s1">&#39;CMD [&quot;apache2ctl&quot;, &quot; -D FOREGROUND&quot;]&#39;</span> -c <span class="s2">&quot;EXPOSE 80&quot;</span>  nueva-imagen-apache
+<div class="highlight"><pre><span></span><code>docker commit --change<span class="o">=</span><span class="s1">&#39;CMD [&quot;apache2ctl&quot;, &quot; -D FOREGROUND&quot;]&#39;</span> -c <span class="s2">&quot;EXPOSE 80&quot;</span>  nueva-imagen-apache
 </code></pre></div>
-
 <ul>
 <li>no es necesario sobreescribir el CMD aun que es recomendable.</li>
 </ul>
@@ -2852,7 +3253,7 @@ docker <span class="nb">exec</span> -u root -ti docker-nginx /bin/bash <span cla
 <p><code>Overlay:</code> </p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><code>docker network ls                    <span class="c1"># listar redes </span>
+<div class="highlight"><pre><span></span><code>docker network ls                    <span class="c1"># listar redes </span>
 docker network inspect nombre-red    <span class="c1"># iformación de la red</span>
 docker network create test-network    <span class="c1"># crear nueva red por defecto bridge</span>
 
@@ -2872,61 +3273,51 @@ docker network disconnect red-a-conectar contenedor    <span class="c1"># elimin
 docker network rm red    <span class="c1"># eliminar red creada, no tiene que estar utilizada por ningun contenedor</span>
 docker network prune     <span class="c1"># eliminasr redes en desuso</span>
 </code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>docker run -d -p <span class="m">127</span>.0.0.1:8081:80 nginx
+<div class="highlight"><pre><span></span><code>docker run -d -p <span class="m">127</span>.0.0.1:8081:80 nginx
 </code></pre></div>
-
 <p>​    </p>
 <h2 id="subir-imagen-a-dockerhub">Subir imagen a dockerhub</h2>
-<div class="codehilite"><pre><span></span><code>docker login
+<div class="highlight"><pre><span></span><code>docker login
 docker commit nombre-container nombre-nueva-imagen
 docker commit lunch_mirie mychispas
 docker tag mychispas:latest jorgepastorr/mychispas:latest
 docker push jorgepastorr/mychispas:latest
 </code></pre></div>
-
 <p>ver imagenes en el repositorio remoto  </p>
-<div class="codehilite"><pre><span></span><code>docker search jorgepastorr
+<div class="highlight"><pre><span></span><code>docker search jorgepastorr
 </code></pre></div>
-
 <h2 id="entrypoints">Entrypoints</h2>
 <p>entripoint permite tratar un contenedor como un script, de esta manera se puede asignar argumentos a el arranque de un contenedor.</p>
 <p>si un Dockerfile comparte entrypoint con cmd el cmp se sumara como argumento al entripoint</p>
-<div class="codehilite"><pre><span></span><code>FROM ubuntu
+<div class="highlight"><pre><span></span><code>FROM ubuntu
 ENTRYPOINT <span class="o">[</span><span class="s2">&quot;top&quot;</span>, <span class="s2">&quot;-b&quot;</span><span class="o">]</span>
 CMD <span class="o">[</span><span class="s2">&quot;-c&quot;</span><span class="o">]</span>
 </code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>$ docker <span class="nb">exec</span> -it <span class="nb">test</span> ps aux
+<div class="highlight"><pre><span></span><code>$ docker <span class="nb">exec</span> -it <span class="nb">test</span> ps aux
 USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root         <span class="m">1</span>  <span class="m">2</span>.6  <span class="m">0</span>.1  <span class="m">19752</span>  <span class="m">2352</span> ?        Ss+  <span class="m">08</span>:24   <span class="m">0</span>:00 top -b -c
 </code></pre></div>
-
 <p>En cambio si desde la linea de comandos al arrncar el docker especifico un argumento el cmd se anula</p>
-<div class="codehilite"><pre><span></span><code>docker run -it --rm --name <span class="nb">test</span>  top -H
+<div class="highlight"><pre><span></span><code>docker run -it --rm --name <span class="nb">test</span>  top -H
 $ docker <span class="nb">exec</span> -it <span class="nb">test</span> ps aux
 USER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND
 root <span class="m">1</span> <span class="m">2</span>.6 <span class="m">0</span>.1 <span class="m">19752</span> <span class="m">2352</span> ? Ss+ <span class="m">08</span>:24 <span class="m">0</span>:00 top -b -H
 </code></pre></div>
-
 <p>Se puede sobreescrivir el entripoint manualmente desde linea de comandos</p>
-<div class="codehilite"><pre><span></span><code>docker run --rm --entrypoint /usr/bin/cal -it <span class="nb">test</span>
+<div class="highlight"><pre><span></span><code>docker run --rm --entrypoint /usr/bin/cal -it <span class="nb">test</span>
 </code></pre></div>
-
 <p>el <code>0.0.0.0</code> significa que en todas las interficies de red del host esta escuchando por el puerto 389</p>
-<div class="codehilite"><pre><span></span><code>ldap.edt.org      /bin/sh -c /opt/docker/sta ...   Up      <span class="m">0</span>.0.0.0:389-&gt;389/tcp                                          
+<div class="highlight"><pre><span></span><code>ldap.edt.org      /bin/sh -c /opt/docker/sta ...   Up      <span class="m">0</span>.0.0.0:389-&gt;389/tcp                                          
 </code></pre></div>
-
 <h2 id="docker-compose">docker-compose</h2>
 <h3 id="instalar_1">Instalar</h3>
 <p><a href="https://docs.docker.com/compose/install/">web oficial docker compose</a></p>
-<div class="codehilite"><pre><span></span><code>sudo curl -L <span class="s2">&quot;https://github.com/docker/compose/releases/download/1.23.2/docker-compose-</span><span class="k">$(</span>uname -s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname -m<span class="k">)</span><span class="s2">&quot;</span> -o /usr/local/bin/docker-compose
+<div class="highlight"><pre><span></span><code>sudo curl -L <span class="s2">&quot;https://github.com/docker/compose/releases/download/1.23.2/docker-compose-</span><span class="k">$(</span>uname -s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname -m<span class="k">)</span><span class="s2">&quot;</span> -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 </code></pre></div>
-
 <p><a href="https://docs.docker.com/compose/compose-file/">documentacion oficial compose</a></p>
 <h3 id="desplegar-docker-compose">Desplegar docker compose</h3>
-<div class="codehilite"><pre><span></span><code>docker-compose up -d <span class="c1"># crear, actualizar contenedor</span>
+<div class="highlight"><pre><span></span><code>docker-compose up -d <span class="c1"># crear, actualizar contenedor</span>
 docker-compose -p webtest up -d    <span class="c1"># ombrar proyecto, red sera webtest-default</span>
 docker-compose -f docker-compose-nginx.yml up -d    <span class="c1"># desplegar en nombre archivo distinto</span>
 docker-compose build     <span class="c1"># crear imagen </span>
@@ -2943,10 +3334,9 @@ docker-compose ps
 docker-compose top ldap
 docker-compose images
 </code></pre></div>
-
 <h3 id="estructura">Estructura</h3>
 <h4 id="estructura-basica">Estructura básica</h4>
-<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
 <span class="nt">services</span><span class="p">:</span>
     <span class="nt">web</span><span class="p">:</span>
         <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
@@ -2954,10 +3344,9 @@ docker-compose images
         <span class="nt">ports</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="s">&quot;80:80&quot;</span>
 </code></pre></div>
-
 <h4 id="variables-de-entorno">Variables de entorno</h4>
 <p>Se pueden definir en el mismo yaml o en un archivo externo que recogemos.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">environment</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="nt">environment</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">RACK_ENV=development</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">SHOW=true</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">SESSION_SECRET</span>
@@ -2969,11 +3358,10 @@ docker-compose images
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">./apps/web.env</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/opt/secrets.env</span>
 </code></pre></div>
-
 <h4 id="volumenes_1">Volumenes</h4>
 <p><strong>Nombrados</strong> </p>
 <p>Estos volumenes por defecto se crean nen <code>/var/lib/docker/volumes</code></p>
-<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
 <span class="nt">services</span><span class="p">:</span>
     <span class="nt">web</span><span class="p">:</span>
         <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
@@ -2985,10 +3373,9 @@ docker-compose images
 <span class="nt">volumes</span><span class="p">:</span>
     <span class="nt">vol2</span><span class="p">:</span>
 </code></pre></div>
-
 <p><strong>Host</strong>  </p>
 <p>Se añade ruta relativa o absoluta  donde se quiere que se cree el volumen</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
 <span class="nt">services</span><span class="p">:</span>
   <span class="nt">web</span><span class="p">:</span>
     <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
@@ -2998,10 +3385,9 @@ docker-compose images
     <span class="nt">volumes</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="s">&quot;./html:/usr/share/nginx/html&quot;</span>
 </code></pre></div>
-
 <h4 id="redes-compose">Redes-Compose</h4>
 <p>Las redes dentro de compose sirve para crear uno o varios contenedores dentro de una red especifica.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
 <span class="nt">services</span><span class="p">:</span>
     <span class="nt">web</span><span class="p">:</span>
         <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
@@ -3013,11 +3399,10 @@ docker-compose images
 <span class="nt">networks</span><span class="p">:</span>
     <span class="nt">net-test</span><span class="p">:</span>
 </code></pre></div>
-
 <h4 id="crear-imagen">Crear imagen</h4>
 <p><code>build</code> indica donde se encuentra el <code>Dockerfile</code> que tiene que fabricar. </p>
 <p>En este ejemplo, primero fabricara una imagen nombrada web-centos  y luego creara un contenedor web-centos</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
 <span class="nt">services</span><span class="p">:</span>
   <span class="nt">web</span><span class="p">:</span>
     <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">web-centos</span>
@@ -3027,13 +3412,11 @@ docker-compose images
     <span class="nt">ports</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="s">&quot;8080:8080&quot;</span>
 </code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>docker-compose up --build -d
+<div class="highlight"><pre><span></span><code>docker-compose up --build -d
 </code></pre></div>
-
 <h4 id="sobreescribir-cmd">Sobreescribir CMD</h4>
 <p>En ocasiones queremos sobreescribir el cmd de una imagen, en el siguiente ejemplo vemos como una imagen centos que su cmd por defecto es <code>/bin/bash</code> ,  ahora es una instrucción de python.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
 <span class="nt">services</span><span class="p">:</span>
     <span class="nt">web</span><span class="p">:</span>
         <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">centos</span>
@@ -3041,11 +3424,9 @@ docker-compose images
         <span class="nt">ports</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="s">&quot;8080:8080&quot;</span>
 </code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>CONTAINER ID       IMAGE                 COMMAND                             
+<div class="highlight"><pre><span></span><code>CONTAINER ID       IMAGE                 COMMAND                             
 f4e99be647702b   web-centos          <span class="s2">&quot;python -m SimpleHTTPServer 8080&quot;</span>
 </code></pre></div>
-
 <h4 id="politica-reinincio">Politica reinincio</h4>
 <ul>
 <li>
@@ -3061,7 +3442,7 @@ f4e99be647702b   web-centos          <span class="s2">&quot;python -m SimpleHTTP
 <p><code>always</code> : cada vez que el contenedor se apage o caiga  se reiniciara</p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
 <span class="nt">services</span><span class="p">:</span>
     <span class="nt">web</span><span class="p">:</span>
         <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
@@ -3070,10 +3451,9 @@ f4e99be647702b   web-centos          <span class="s2">&quot;python -m SimpleHTTP
             <span class="p p-Indicator">-</span> <span class="s">&quot;80:80&quot;</span>
         <span class="nt">restart</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
 </code></pre></div>
-
 <h4 id="multiples-servicios">Múltiples servicios</h4>
 <p>la gracia de compose es desplegar multiples servicios de golpe, en el siguiente ejemplo se ve como e ejecuta joomla junto con mysql en una red conjunta.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
 <span class="nt">services</span><span class="p">:</span>
   <span class="nt">db</span><span class="p">:</span>
     <span class="nt">container_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">joomla-db</span>
@@ -3108,91 +3488,85 @@ f4e99be647702b   web-centos          <span class="s2">&quot;python -m SimpleHTTP
 <span class="nt">networks</span><span class="p">:</span>
   <span class="nt">my_net</span><span class="p">:</span>
 </code></pre></div>
-
 <h2 id="dockerhub">DockerHub</h2>
-<div class="codehilite"><pre><span></span><code>docker login    <span class="c1"># logearse</span>
+<div class="highlight"><pre><span></span><code>docker login    <span class="c1"># logearse</span>
 </code></pre></div>
-
 <blockquote>
 <p>Obviamente hay que tener una cuenta.</p>
 </blockquote>
 <p>Cambiar de nombre a una imagen y subir</p>
-<div class="codehilite"><pre><span></span><code>docker tag mi-debian-imagen jorgepastorr/debian-update <span class="c1"># por ejemplo</span>
+<div class="highlight"><pre><span></span><code>docker tag mi-debian-imagen jorgepastorr/debian-update <span class="c1"># por ejemplo</span>
 docker push jorgepastorr/debian-update    <span class="c1"># subir la imagen</span>
 </code></pre></div>
-                
-                  
-                
-                
-              
-              
-                
-
 
               
             </article>
           </div>
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
         
-          <a href="../../sistemas/automatizacion/tareas_programadas/" title="Tareas Programadas" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Tareas Programadas
+        <a href="../../sistemas/automatizacion/tareas_programadas/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tareas Programadas" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
               </span>
+              Tareas Programadas
             </div>
-          </a>
+          </div>
+        </a>
+      
+      
         
-        
-          <a href="../Lxc/" title="LXC y LXD" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                LXC y LXD
+        <a href="../Lxc/" class="md-footer__link md-footer__link--next" aria-label="Next: LXC y LXD" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
               </span>
+              LXC y LXD
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        powered by
-        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs</a>
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js"}</script>
     
-      <script src="../../assets/javascripts/application.c33a9706.js"></script>
-      
-      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+    
+      <script src="../../assets/javascripts/bundle.ff0eccb3.min.js"></script>
       
     
   </body>
