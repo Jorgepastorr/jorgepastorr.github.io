@@ -1302,6 +1302,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#copiar-y-pegar" class="md-nav__link">
+    Copiar y pegar
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1666,20 +1673,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lenguajes/python3/apuntes-fundamento/" class="md-nav__link">
-        Python fundamentos
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../lenguajes/python3/apuntes-modulos/" class="md-nav__link">
         Módulos
       </a>
@@ -1753,6 +1746,109 @@
       <a href="../../lenguajes/python3/argparse/" class="md-nav__link">
         Argparse
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3_13" type="checkbox" id="__nav_9_3_13" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3_13">
+          Fundamentos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fundamentos" data-md-level="3">
+        <label class="md-nav__title" for="__nav_9_3_13">
+          <span class="md-nav__icon md-icon"></span>
+          Fundamentos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/fundamentos/excepciones/" class="md-nav__link">
+        Las excepciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/fundamentos/funciones/" class="md-nav__link">
+        Funciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/fundamentos/fundamento/" class="md-nav__link">
+        Fundamentos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/fundamentos/manejo_de_datos/" class="md-nav__link">
+        Manejo de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/fundamentos/salida_por_pantalla/" class="md-nav__link">
+        Salida por pantalla
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -2746,6 +2842,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#copiar-y-pegar" class="md-nav__link">
+    Copiar y pegar
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2865,6 +2968,14 @@ tmux a -t nombre
 <div class="highlight"><pre><span></span><code>ctrl + b <span class="p">&amp;</span> <span class="c1"># en todas las ventanas</span>
 tmux kill-session -t mysesión <span class="c1"># matar sesión</span>
 </code></pre></div>
+<h5 id="copiar-y-pegar">Copiar y pegar</h5>
+<p>En tmux se puede copiar y pegar como en todas las terminales <code>ctrl + Mayus + c|v</code>, o en caso de no utilizar entorno gráfico dispone de su propio Copy&amp;Paste muy parecido a vim.</p>
+<ul>
+<li>Entrar "copy mode" presionando <code>CTRL + b, [</code>.</li>
+<li>Utilizar las flechas para mover el cursor por la pantalla. Presiona <code>CTRL + SPACE</code> para empezar a copiar.</li>
+<li>Usa las flexas para moverte al final det texto que quieres copiar. Presiona <code>ALT + w</code> o <code>CTRL + w</code> para copiar.</li>
+<li>Presiona <code>CTRL + b, ]</code> para copiar, incluso en otras ventanas Tmux abiertas en esa misma sessión.</li>
+</ul>
 <h2 id="compartir-sesion">Compartir sesión</h2>
 <p><em>Partimos de 2 hosts, host "uno" y host "dos", el host dos ara de server con la ip 10.0.0.2.</em></p>
 <p>Fingiremos que hay alguien trabajando en el server e invita a otro a ver su trabajo, o pide ayuda, da lo mismo.</p>

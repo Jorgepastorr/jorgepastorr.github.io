@@ -1492,20 +1492,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lenguajes/python3/apuntes-fundamento/" class="md-nav__link">
-        Python fundamentos
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../lenguajes/python3/apuntes-modulos/" class="md-nav__link">
         Módulos
       </a>
@@ -1579,6 +1565,109 @@
       <a href="../../lenguajes/python3/argparse/" class="md-nav__link">
         Argparse
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3_13" type="checkbox" id="__nav_9_3_13" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3_13">
+          Fundamentos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fundamentos" data-md-level="3">
+        <label class="md-nav__title" for="__nav_9_3_13">
+          <span class="md-nav__icon md-icon"></span>
+          Fundamentos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/fundamentos/excepciones/" class="md-nav__link">
+        Las excepciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/fundamentos/funciones/" class="md-nav__link">
+        Funciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/fundamentos/fundamento/" class="md-nav__link">
+        Fundamentos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/fundamentos/manejo_de_datos/" class="md-nav__link">
+        Manejo de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes/python3/fundamentos/salida_por_pantalla/" class="md-nav__link">
+        Salida por pantalla
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -2215,6 +2304,19 @@
   <a href="#propiedades" class="md-nav__link">
     Propiedades
   </a>
+  
+    <nav class="md-nav" aria-label="Propiedades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprimir-dataset-existente" class="md-nav__link">
+    Comprimir dataset existente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2870,6 +2972,19 @@
     Propiedades
   </a>
   
+    <nav class="md-nav" aria-label="Propiedades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprimir-dataset-existente" class="md-nav__link">
+    Comprimir dataset existente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -3201,6 +3316,9 @@ zfs destroy tank/documents@backup
 
 zfs send -i tank/dana@snap1 tank/dana@snap2 <span class="p">|</span> ssh host2 zfs recv -F newtank/dana    <span class="c1"># enviar icremental snap</span>
 <span class="c1"># -F forzar rollback a la instantanea mas reciente antes de recibir</span>
+
+<span class="c1"># enviar datast con todos los snapshots</span>
+zfs send -R tank/dataset@snapMasReciente <span class="p">|</span> ssh &lt;ip&gt; zfs recv tank/dataset
 </code></pre></div>
 <h3 id="propiedades">Propiedades</h3>
 <p><a href="https://docs.oracle.com/cd/E19253-01/819-5461/gazss/index.html">doc oracle</a> sobre esta sección</p>
@@ -3218,6 +3336,18 @@ zfs <span class="nb">set</span> <span class="nv">compression</span><span class="
 <blockquote>
 <p>Se recomienda usar el algoritmo lz4, ya que agrega muy poca sobrecarga de CPU. También están disponibles otros algoritmos como lzjb y gzip-N, donde N es un  número entero de 1 (más rápido) a 9 (mejor relación de compresión).  Dependiendo del algoritmo y de la compresión de los datos, tener la  compresión habilitada puede incluso aumentar el rendimiento.</p>
 </blockquote>
+<h4 id="comprimir-dataset-existente">Comprimir dataset existente</h4>
+<p>En el caso de tener un dataset sin compresión activada y activarla, los archivos existentes no se comprimen, solo los nuevos. En este caso hay que sobresscribir todo el dataset.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># activar compresion</span>
+zfs <span class="nb">set</span> <span class="nv">compress</span><span class="o">=</span>on tank/dataset
+
+<span class="c1"># replicar dataset</span>
+zfs send -R tank/dataset <span class="p">|</span> zfs recv tank/newDataset
+
+<span class="c1"># eliminar el antiguo y renombrar</span>
+zfs destroy -r tank/dataset
+zfs rename tank/newDataset tank/dataset
+</code></pre></div>
 
               
             </article>

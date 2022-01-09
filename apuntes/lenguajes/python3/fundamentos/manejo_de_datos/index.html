@@ -1,0 +1,3298 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Jorge Pastor">
+      
+      
+        <link rel="canonical" href="https://jorgepastorr.github.io/apuntes/lenguajes/python3/fundamentos/manejo_de_datos/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.2">
+    
+    
+      
+        <title>Manejo de datos - Apuntes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.816931ca.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.9204c3b2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../../../..":"../../../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#manejo-de-datos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Apuntes" class="md-header__button md-logo" aria-label="Apuntes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Manejo de datos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Apuntes" class="md-nav__button md-logo" aria-label="Apuntes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Apuntes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Apuntes Jorgepastorr
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Administracion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Administracion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Administracion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/Configurar_pantallas_manualmente/" class="md-nav__link">
+        Configurar pantallas manualmente
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/Debian_hostname_dinamico/" class="md-nav__link">
+        Debian hostname dinamico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/Mutt/" class="md-nav__link">
+        Que es mutt?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/Procesos/" class="md-nav__link">
+        Procesos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/Resetear_la_password_root/" class="md-nav__link">
+        Resetear la password root.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/Vim/" class="md-nav__link">
+        Vim atajos básicos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/awk/" class="md-nav__link">
+        Uso básico de AWK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/freeipa/" class="md-nav__link">
+        FreeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/instalar_webmin/" class="md-nav__link">
+        instalar webmin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/per/" class="md-nav__link">
+        PER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/permisos_avanzados/" class="md-nav__link">
+        Permisos avanzados
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/samba/" class="md-nav__link">
+        Samba
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/server-correo/" class="md-nav__link">
+        Servidor Correo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/server-mensajeria/" class="md-nav__link">
+        Server mensajeria instantanea
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/ssh/" class="md-nav__link">
+        ssh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/sudo/" class="md-nav__link">
+        sudo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/umask/" class="md-nav__link">
+        umask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/usuarios/" class="md-nav__link">
+        Usuarios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/vnc/" class="md-nav__link">
+        vnc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/webdav/" class="md-nav__link">
+        webdav
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_21" type="checkbox" id="__nav_2_21" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_21">
+          Ldap
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ldap" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_21">
+          <span class="md-nav__icon md-icon"></span>
+          Ldap
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/ldap/Ldap-Samba-Hostpam/" class="md-nav__link">
+        Ldap - Samba - Hostpam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/ldap/acl_ejercicios/" class="md-nav__link">
+        Acl ejercicios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/ldap/host-kerberos-con-ldap/" class="md-nav__link">
+        Instalación host  ldap-kerberos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/ldap/ldap/" class="md-nav__link">
+        ldap
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_22" type="checkbox" id="__nav_2_22" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_22">
+          Pxe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pxe" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_22">
+          <span class="md-nav__icon md-icon"></span>
+          Pxe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/pxe/Servidor-pxe-con-rapberry/" class="md-nav__link">
+        Servidor pxe con rapberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/pxe/guiapxe-fedora/" class="md-nav__link">
+        Guiapxe fedora
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_23" type="checkbox" id="__nav_2_23" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_23">
+          Redes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Redes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_23">
+          <span class="md-nav__icon md-icon"></span>
+          Redes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/redes/apuntes-xarxa/" class="md-nav__link">
+        APUNTS DE XARXES
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/redes/comandos_router_switch/" class="md-nav__link">
+        Configuració de Routers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/redes/haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../administracion/redes/redes2/" class="md-nav__link">
+        Redes2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Auditoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Auditoria" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Auditoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../auditoria/apuntes_hacking/" class="md-nav__link">
+        Haking ético
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Bases datos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bases datos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Bases datos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Mongo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mongo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Mongo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bases_datos/mongo/Mongo/" class="md-nav__link">
+        Mongo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Postgres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Postgres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Postgres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bases_datos/postgres/bases/" class="md-nav__link">
+        Postgres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bases_datos/postgres/modificaciones/" class="md-nav__link">
+        Modificación tablas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bases_datos/postgres/plpgsql/" class="md-nav__link">
+        Plpgsql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bases_datos/postgres/postgresql-intalacion/" class="md-nav__link">
+        Postgresql intalacion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cloud" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cloud/aws/" class="md-nav__link">
+        aws
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Curiosidades
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Curiosidades" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Curiosidades
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../curiosidades/Eliminar_contrase%C3%B1a_windows/" class="md-nav__link">
+        Eliminar contraseña windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../curiosidades/Lanzador_aplicaciones_en_gnome/" class="md-nav__link">
+        Lanzador aplicaciones en gnome
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../curiosidades/cambiar_color_promp_terminal/" class="md-nav__link">
+        Cambiar color promp terminal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../curiosidades/conky/" class="md-nav__link">
+        conky
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../curiosidades/openbox/" class="md-nav__link">
+        Openbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../curiosidades/qbit/" class="md-nav__link">
+        Qbit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../curiosidades/tmux/" class="md-nav__link">
+        Tmux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Desatendidas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Desatendidas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Desatendidas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../desatendidas/" class="md-nav__link">
+        Desatendidas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../desatendidas/Instalacion-desatendida-debian/" class="md-nav__link">
+        Instalacion desatendida debian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../desatendidas/desatendida-windows/" class="md-nav__link">
+        Desatendida windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../desatendidas/kikstart/" class="md-nav__link">
+        Kikstart
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Generar doc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Generar doc" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Generar doc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../generar_doc/docsify/" class="md-nav__link">
+        Docsify
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../generar_doc/remark/" class="md-nav__link">
+        Remark
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Lenguajes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lenguajes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Lenguajes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Fundamentos_php/" class="md-nav__link">
+        Fundamentos php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Shell/" class="md-nav__link">
+        Shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3">
+          Python3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python3" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Python3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes-Metodos/" class="md-nav__link">
+        Métodos de colecciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apuntes-Funcionalidades_avanzadas/" class="md-nav__link">
+        apuntes Funcionalidades avanzadas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apuntes-Herencia/" class="md-nav__link">
+        Herencias
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apuntes-distribucion/" class="md-nav__link">
+        Distribución
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apuntes-documentacion/" class="md-nav__link">
+        Documentación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apuntes-ficheros/" class="md-nav__link">
+        Apuntes ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apuntes-modulos/" class="md-nav__link">
+        Módulos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apuntes-orientado-objetos/" class="md-nav__link">
+        Orientado a objetos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apuntes-test/" class="md-nav__link">
+        Test
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apuntes-tkinter/" class="md-nav__link">
+        Tkinter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apuntes_bases/" class="md-nav__link">
+        Apuntes bases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argparse/" class="md-nav__link">
+        Argparse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3_13" type="checkbox" id="__nav_9_3_13" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3_13">
+          Fundamentos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fundamentos" data-md-level="3">
+        <label class="md-nav__title" for="__nav_9_3_13">
+          <span class="md-nav__icon md-icon"></span>
+          Fundamentos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../excepciones/" class="md-nav__link">
+        Las excepciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones/" class="md-nav__link">
+        Funciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamento/" class="md-nav__link">
+        Fundamentos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Manejo de datos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Manejo de datos
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#los-conjuntos" class="md-nav__link">
+    Los conjuntos
+  </a>
+  
+    <nav class="md-nav" aria-label="Los conjuntos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo-add" class="md-nav__link">
+    Método add()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lista-a-conjunto-y-viceversa" class="md-nav__link">
+    lista a conjunto y viceversa
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cadena-a-conjunto" class="md-nav__link">
+    cadena a conjunto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#los-diccionarios" class="md-nav__link">
+    Los diccionarios
+  </a>
+  
+    <nav class="md-nav" aria-label="Los diccionarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis" class="md-nav__link">
+    Sintaxis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificacion-de-valor-a-partir-de-la-clave" class="md-nav__link">
+    Modificación de valor a partir de la clave
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcion-del" class="md-nav__link">
+    Función del()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directamente-con-registros" class="md-nav__link">
+    Directamente con registros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lectura-secuencial-con-for" class="md-nav__link">
+    Lectura secuencial con for
+  </a>
+  
+    <nav class="md-nav" aria-label="Lectura secuencial con for">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-metodo-items" class="md-nav__link">
+    El método .items()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listas-de-disccionarios" class="md-nav__link">
+    listas de disccionarios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valor-por-defecto" class="md-nav__link">
+    Valor por defecto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diccionarios-ordenados" class="md-nav__link">
+    Diccionarios ordenados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#las-pilas" class="md-nav__link">
+    Las pilas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#las-colas" class="md-nav__link">
+    Las colas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../salida_por_pantalla/" class="md-nav__link">
+        Salida por pantalla
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Seguridad
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seguridad" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Seguridad
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../seguridad/Certificados-Digitales/" class="md-nav__link">
+        Certificados Digitales
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../seguridad/Kerberos/" class="md-nav__link">
+        Kerberos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../seguridad/OpenVpn/" class="md-nav__link">
+        OpenVpn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../seguridad/The-crazy-thing/" class="md-nav__link">
+        The crazy thing!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../seguridad/TunelSSH/" class="md-nav__link">
+        Tunel SSH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../seguridad/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../seguridad/lvm/" class="md-nav__link">
+        Lvm logical volum manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../seguridad/practica-ssl-tls/" class="md-nav__link">
+        Practica ssl tls
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../seguridad/raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_10" type="checkbox" id="__nav_10_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_10">
+          Backups
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Backups" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_10">
+          <span class="md-nav__icon md-icon"></span>
+          Backups
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../seguridad/backups/Borg_basico/" class="md-nav__link">
+        Borg básico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../seguridad/backups/Tar/" class="md-nav__link">
+        Tar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../seguridad/backups/rdiff-backup/" class="md-nav__link">
+        rdiff-backup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../seguridad/backups/rsync/" class="md-nav__link">
+        rsync
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_11" type="checkbox" id="__nav_10_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_11">
+          Cortafuegos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cortafuegos" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_11">
+          <span class="md-nav__icon md-icon"></span>
+          Cortafuegos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../seguridad/cortafuegos/Iptables/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Sistemas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sistemas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Sistemas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/Actualizar_hora_sys_o_bios/" class="md-nav__link">
+        Gestionar Hora
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/Arranque-del-sistema/" class="md-nav__link">
+        Arranque del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/Estructura_de_directorios/" class="md-nav__link">
+        Estructura de directorios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/Logs/" class="md-nav__link">
+        Logs del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/Systemd/" class="md-nav__link">
+        Systemd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/ZFS/" class="md-nav__link">
+        ZFS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/chroot/" class="md-nav__link">
+        Chroot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/disco/" class="md-nav__link">
+        Disco
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/gestores_de_paquetes/" class="md-nav__link">
+        Gestores de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/getenforce/" class="md-nav__link">
+        getenforce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/grub/" class="md-nav__link">
+        Grub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/home/" class="md-nav__link">
+        Cambiar /home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/ip_est%C3%A1tica/" class="md-nav__link">
+        ip estática raspberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/pam/" class="md-nav__link">
+        Pam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/xinetd/" class="md-nav__link">
+        xinetd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_17" type="checkbox" id="__nav_11_17" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_17">
+          Automatizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Automatizacion" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_17">
+          <span class="md-nav__icon md-icon"></span>
+          Automatizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/automatizacion/ansible/" class="md-nav__link">
+        Ansible
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sistemas/automatizacion/tareas_programadas/" class="md-nav__link">
+        Tareas Programadas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          Virtualizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virtualizacion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Virtualizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../virtualizacion/Docker-basico/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../virtualizacion/Lxc/" class="md-nav__link">
+        LXC y LXD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../virtualizacion/Vagrant/" class="md-nav__link">
+        Vagrant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../virtualizacion/kubernetes/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../virtualizacion/swarm/" class="md-nav__link">
+        Swarm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_6" type="checkbox" id="__nav_12_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_6">
+          Virt manager
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virt manager" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_6">
+          <span class="md-nav__icon md-icon"></span>
+          Virt manager
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../virtualizacion/virt-manager/Backing_chain/" class="md-nav__link">
+        Backing_chain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../virtualizacion/virt-manager/Clonar/" class="md-nav__link">
+        Clonar de virtual a físico y de físico a virtual.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../virtualizacion/virt-manager/Instalacion_de_virtualizacion_fedora/" class="md-nav__link">
+        Instalación de virtualización fedora
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../virtualizacion/virt-manager/acceder_consola_desde_virsh/" class="md-nav__link">
+        acceder consola desde virsh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../virtualizacion/virt-manager/crear_red_aislada/" class="md-nav__link">
+        Crear red aislada
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../virtualizacion/virt-manager/instalar_maquina_virtual_virt-install/" class="md-nav__link">
+        virt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#los-conjuntos" class="md-nav__link">
+    Los conjuntos
+  </a>
+  
+    <nav class="md-nav" aria-label="Los conjuntos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo-add" class="md-nav__link">
+    Método add()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lista-a-conjunto-y-viceversa" class="md-nav__link">
+    lista a conjunto y viceversa
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cadena-a-conjunto" class="md-nav__link">
+    cadena a conjunto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#los-diccionarios" class="md-nav__link">
+    Los diccionarios
+  </a>
+  
+    <nav class="md-nav" aria-label="Los diccionarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis" class="md-nav__link">
+    Sintaxis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificacion-de-valor-a-partir-de-la-clave" class="md-nav__link">
+    Modificación de valor a partir de la clave
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcion-del" class="md-nav__link">
+    Función del()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directamente-con-registros" class="md-nav__link">
+    Directamente con registros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lectura-secuencial-con-for" class="md-nav__link">
+    Lectura secuencial con for
+  </a>
+  
+    <nav class="md-nav" aria-label="Lectura secuencial con for">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-metodo-items" class="md-nav__link">
+    El método .items()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listas-de-disccionarios" class="md-nav__link">
+    listas de disccionarios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valor-por-defecto" class="md-nav__link">
+    Valor por defecto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diccionarios-ordenados" class="md-nav__link">
+    Diccionarios ordenados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#las-pilas" class="md-nav__link">
+    Las pilas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#las-colas" class="md-nav__link">
+    Las colas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/jorgepastorr/apuntes/edit/master/docs/lenguajes/python3/fundamentos/manejo_de_datos.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="manejo-de-datos">Manejo de datos</h1>
+<h2 id="los-conjuntos">Los conjuntos</h2>
+<p>Son colecciones desordenadas de elementos únicos utilizados para hacer pruebas de pertenencia a grupos y eliminación de elementos duplicados.</p>
+<div class="highlight"><pre><span></span><code><span class="n">conjunto</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="n">conjunto</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">conjunto</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>{1, 2, 3}
+</code></pre></div>
+<p>Un conjunto auto-elimina elementos duplicados</p>
+<div class="highlight"><pre><span></span><code><span class="n">test</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Hector&#39;</span><span class="p">,</span><span class="s1">&#39;Hector&#39;</span><span class="p">,</span><span class="s1">&#39;Hector&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>{&#39;Hector&#39;}
+</code></pre></div>
+<h3 id="metodo-add">Método add()</h3>
+<p>Sirve para añadir elementos al conjunto. Si un elemento ya se encuentra, no se añadirá de nuevo.</p>
+<div class="highlight"><pre><span></span><code><span class="n">conjunto</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="n">conjunto</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
+<span class="n">conjunto</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">conjunto</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>{1, 2, 3, 4}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">conjunto</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">conjunto</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>{0, 1, 2, 3, 4}
+</code></pre></div>
+<h3 id="lista-a-conjunto-y-viceversa">lista a conjunto y viceversa</h3>
+<p>Es muy útil transformar listas a conjuntos para borrar los elementos duplicados automáticamente.</p>
+<div class="highlight"><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[1, 2, 3, 3, 2, 1]
+</code></pre></div>
+<p>Convertir lista a conjunto</p>
+<div class="highlight"><pre><span></span><code><span class="n">c</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>{1, 2, 3}
+</code></pre></div>
+<p>Convertir conjunto a lista</p>
+<div class="highlight"><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[1, 2, 3]
+</code></pre></div>
+<p>Conversion en una linea, lista --&gt; conjunto --&gt; lista</p>
+<div class="highlight"><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1"># En una línea</span>
+<span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span> <span class="nb">set</span><span class="p">(</span> <span class="n">l</span> <span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[1, 2, 3]
+</code></pre></div>
+<h3 id="cadena-a-conjunto">cadena a conjunto</h3>
+<p>Sirve para crear un conjunto con todos los caracteres de la cadena.</p>
+<div class="highlight"><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Al pan pan y al vino vino&quot;</span>
+<span class="nb">print</span><span class="p">(</span> <span class="nb">set</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>{&#39; &#39;, &#39;A&#39;, &#39;a&#39;, &#39;i&#39;, &#39;l&#39;, &#39;n&#39;, &#39;o&#39;, &#39;p&#39;, &#39;v&#39;, &#39;y&#39;}
+</code></pre></div>
+<h2 id="los-diccionarios">Los diccionarios</h2>
+<p>Son junto a las listas las colecciones más utilizadas. Se basan en una estructura mapeada donde cada elemento de la colección se encuentra identificado con una clave única. Por tanto, no puede haber dos claves iguales. En otros lenguajes se conocen como arreglos asociativos.</p>
+<div class="highlight"><pre><span></span><code><span class="n">vacio</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vacio</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>{}
+</code></pre></div>
+<p>Tipo de variable</p>
+<div class="highlight"><pre><span></span><code><span class="nb">type</span><span class="p">(</span><span class="n">vacio</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>dict
+</code></pre></div>
+<h3 id="sintaxis">Sintaxis</h3>
+<p>Para cada elemento se define la estructura -&gt; <code>clave:valor</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">colores</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;amarillo&#39;</span><span class="p">:</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span><span class="s1">&#39;azul&#39;</span><span class="p">:</span><span class="s1">&#39;blue&#39;</span><span class="p">}</span>
+</code></pre></div>
+<p>También se pueden añadir elementos sobre la marcha</p>
+<div class="highlight"><pre><span></span><code><span class="n">colores</span><span class="p">[</span><span class="s1">&#39;verde&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">colores</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>{&#39;amarillo&#39;: &#39;yellow&#39;, &#39;azul&#39;: &#39;blue&#39;, &#39;verde&#39;: &#39;green&#39;}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">colores</span><span class="p">[</span><span class="s1">&#39;azul&#39;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;blue&#39;
+</code></pre></div>
+<h3 id="modificacion-de-valor-a-partir-de-la-clave">Modificación de valor a partir de la clave</h3>
+<div class="highlight"><pre><span></span><code><span class="n">colores</span><span class="p">[</span><span class="s1">&#39;amarillo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">colores</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>{&#39;amarillo&#39;: &#39;white&#39;, &#39;azul&#39;: &#39;blue&#39;, &#39;verde&#39;: &#39;green&#39;}
+</code></pre></div>
+<h3 id="funcion-del">Función del()</h3>
+<p>Sirve para borrar un elemento del diccionario.</p>
+<div class="highlight"><pre><span></span><code><span class="k">del</span><span class="p">(</span><span class="n">colores</span><span class="p">[</span><span class="s1">&#39;amarillo&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">colores</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>{&#39;azul&#39;: &#39;blue&#39;, &#39;verde&#39;: &#39;green&#39;}
+</code></pre></div>
+<h3 id="directamente-con-registros">Directamente con registros</h3>
+<div class="highlight"><pre><span></span><code><span class="n">edades</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Hector&#39;</span><span class="p">:</span><span class="mi">27</span><span class="p">,</span><span class="s1">&#39;Juan&#39;</span><span class="p">:</span><span class="mi">45</span><span class="p">,</span><span class="s1">&#39;Maria&#39;</span><span class="p">:</span><span class="mi">34</span><span class="p">}</span>
+<span class="n">edades</span><span class="p">[</span><span class="s1">&#39;Hector&#39;</span><span class="p">]</span><span class="o">+=</span><span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">edades</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>{&#39;Hector&#39;: 28, &#39;Juan&#39;: 45, &#39;Maria&#39;: 34}
+</code></pre></div>
+<h3 id="lectura-secuencial-con-for">Lectura secuencial con for</h3>
+<p>Es posible utilizar una iteración for para recorrer los elementos del diccionario:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">edad</span> <span class="ow">in</span> <span class="n">edades</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Maria
+Hector
+Juan
+</code></pre></div>
+<blockquote>
+<p>El problema es que se devuelven las claves, no los valores</p>
+</blockquote>
+<p>Para solucionarlo deberíamos indicar la clave del diccionario para cada elemento.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">clave</span> <span class="ow">in</span> <span class="n">edades</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">clave</span><span class="p">,</span><span class="n">edades</span><span class="p">[</span><span class="n">clave</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Maria 34
+Hector 28
+Juan 45
+</code></pre></div>
+<h4 id="el-metodo-items">El método .items()</h4>
+<p>Nos facilita la lectura en clave y valor de los elementos porque devuelve ambos valores en cada iteración automáticamente:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">c</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">edades</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Maria 34
+Hector 28
+Juan 45
+</code></pre></div>
+<h3 id="listas-de-disccionarios">listas de disccionarios</h3>
+<p>Podemos crear nuestras propias estructuras avanzadas mezclando ambas colecciones. Mientras los diccionarios se encargarían de manejar las propiedades individuales de los registros, las listas nos permitirían manejarlos todos en conjunto.</p>
+<div class="highlight"><pre><span></span><code><span class="n">personajes</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">p</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Nombre&#39;</span><span class="p">:</span><span class="s1">&#39;Gandalf&#39;</span><span class="p">,</span><span class="s1">&#39;Clase&#39;</span><span class="p">:</span><span class="s1">&#39;Mago&#39;</span><span class="p">,</span><span class="s1">&#39;Raza&#39;</span><span class="p">:</span><span class="s1">&#39;Humano&#39;</span><span class="p">}</span> 
+<span class="n">personajes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">personajes</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[{&#39;Clase&#39;: &#39;Mago&#39;, &#39;Nombre&#39;: &#39;Gandalf&#39;, &#39;Raza&#39;: &#39;Humano&#39;}]
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">p</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Nombre&#39;</span><span class="p">:</span><span class="s1">&#39;Legolas&#39;</span><span class="p">,</span><span class="s1">&#39;Clase&#39;</span><span class="p">:</span><span class="s1">&#39;Arquero&#39;</span><span class="p">,</span><span class="s1">&#39;Raza&#39;</span><span class="p">:</span><span class="s1">&#39;Elfo&#39;</span><span class="p">}</span>
+<span class="n">personajes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Nombre&#39;</span><span class="p">:</span><span class="s1">&#39;Gimli&#39;</span><span class="p">,</span><span class="s1">&#39;Clase&#39;</span><span class="p">:</span><span class="s1">&#39;Guerrero&#39;</span><span class="p">,</span><span class="s1">&#39;Raza&#39;</span><span class="p">:</span><span class="s1">&#39;Enano&#39;</span><span class="p">}</span>
+<span class="n">personajes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">personajes</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[{&#39;Clase&#39;: &#39;Mago&#39;, &#39;Nombre&#39;: &#39;Gandalf&#39;, &#39;Raza&#39;: &#39;Humano&#39;},
+ {&#39;Clase&#39;: &#39;Arquero&#39;, &#39;Nombre&#39;: &#39;Legolas&#39;, &#39;Raza&#39;: &#39;Elfo&#39;},
+ {&#39;Clase&#39;: &#39;Guerrero&#39;, &#39;Nombre&#39;: &#39;Gimli&#39;, &#39;Raza&#39;: &#39;Enano&#39;}]
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">personajes</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;Nombre&#39;</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="s1">&#39;Clase&#39;</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="s1">&#39;Raza&#39;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Gandalf Mago Humano
+Legolas Arquero Elfo
+Gimli Guerrero Enano
+</code></pre></div>
+<h3 id="valor-por-defecto">Valor por defecto</h3>
+<p>Se utilizan para crear diccionarios con un valor por defecto aunque el registro no haya sido definido anteriormente.</p>
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">d</span><span class="p">[</span><span class="s1">&#39;algo&#39;</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>---------------------------------------------------------------------------
+
+KeyError                                  Traceback (most recent call last)
+
+&lt;ipython-input-38-c4e2998bb821&gt; in &lt;module&gt;()
+----&gt; 1 d[&#39;algo&#39;]
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>KeyError: &#39;algo&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;algo&#39;</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>0.0
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">d</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>defaultdict(float, {&#39;algo&#39;: 0.0})
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;algo&#39;</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">d</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>defaultdict(str, {&#39;algo&#39;: &#39;&#39;})
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span>
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;algo&#39;</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&lt;object at 0x1ad7f3201f0&gt;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">d</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>defaultdict(object, {&#39;algo&#39;: &lt;object at 0x1ad7f3201f0&gt;})
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;algo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.5</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">d</span><span class="p">[</span><span class="s1">&#39;algo&#39;</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>10.5
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">d</span><span class="p">[</span><span class="s1">&#39;algomas&#39;</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>0
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">d</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>defaultdict(int, {&#39;algo&#39;: 10.5, &#39;algomas&#39;: 0})
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="p">{}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">n</span><span class="p">[</span><span class="s1">&#39;uno&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;one&#39;</span>
+<span class="n">n</span><span class="p">[</span><span class="s1">&#39;dos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;two&#39;</span>
+<span class="n">n</span><span class="p">[</span><span class="s1">&#39;tres&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;three&#39;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">n</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>{&#39;dos&#39;: &#39;two&#39;, &#39;tres&#39;: &#39;three&#39;, &#39;uno&#39;: &#39;one&#39;}
+</code></pre></div>
+<h3 id="diccionarios-ordenados">Diccionarios ordenados</h3>
+<p>Otra subclase de diccionario que conserva el orden en que añadimos los registros.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">n</span><span class="p">[</span><span class="s1">&#39;uno&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;one&#39;</span>
+<span class="n">n</span><span class="p">[</span><span class="s1">&#39;dos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;two&#39;</span>
+<span class="n">n</span><span class="p">[</span><span class="s1">&#39;tres&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;three&#39;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">n</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>OrderedDict([(&#39;uno&#39;, &#39;one&#39;), (&#39;dos&#39;, &#39;two&#39;), (&#39;tres&#39;, &#39;three&#39;)])
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">n1</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">n1</span><span class="p">[</span><span class="s1">&#39;uno&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;one&#39;</span>
+<span class="n">n1</span><span class="p">[</span><span class="s1">&#39;dos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;two&#39;</span>
+
+<span class="n">n2</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">n2</span><span class="p">[</span><span class="s1">&#39;dos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;two&#39;</span>
+<span class="n">n2</span><span class="p">[</span><span class="s1">&#39;uno&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;one&#39;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">n1</span> <span class="o">==</span> <span class="n">n2</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>True
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">n1</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">n1</span><span class="p">[</span><span class="s1">&#39;uno&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;one&#39;</span>
+<span class="n">n1</span><span class="p">[</span><span class="s1">&#39;dos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;two&#39;</span>
+
+<span class="n">n2</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">n2</span><span class="p">[</span><span class="s1">&#39;dos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;two&#39;</span>
+<span class="n">n2</span><span class="p">[</span><span class="s1">&#39;uno&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;one&#39;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">n1</span> <span class="o">==</span> <span class="n">n2</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>False
+</code></pre></div>
+<h2 id="las-pilas">Las pilas</h2>
+<p>Son colecciones de elementos ordenados que únicamente permiten dos acciones:</p>
+<ul>
+<li>Añadir un elemento a la pila</li>
+<li>Sacar un elemento de la pila</li>
+</ul>
+<p>La peculiaridad es que el último elemento en entrar es el primero en salir. En inglés se conocen como estructuras <em>LIFO (Last In First Out)</em>.</p>
+<p>Las podemos crear como listas normales y añadir elementos al final con el append():</p>
+<div class="highlight"><pre><span></span><code><span class="n">pila</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">pila</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">pila</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pila</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[3, 4, 5, 6, 7]
+</code></pre></div>
+<p>Para sacar los elementos utilizaremos el método .pop():</p>
+<p>Al utilizar pop() devolveremos el último elemento, pero también lo borraremos. Si queremos trabajar con él deberíamos asignarlo a una variable o lo perderemos:</p>
+<div class="highlight"><pre><span></span><code><span class="n">pila</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>7
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">pila</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[3, 4, 5, 6]
+</code></pre></div>
+<blockquote>
+<p>Si hacemos pop() de una pila vacía, devolverá un error:</p>
+</blockquote>
+<p>Debemos asegurarnos siempre de que la len() de la pila sea mayor que 0 antes de extraer un elemento automáticamente.</p>
+<div class="highlight"><pre><span></span><code><span class="n">pila</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>---------------------------------------------------------------------------
+
+IndexError                                Traceback (most recent call last)
+
+&lt;ipython-input-14-3900970cfbef&gt; in &lt;module&gt;()
+----&gt; 1 pila.pop()
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>IndexError: pop from empty list
+</code></pre></div>
+<h2 id="las-colas">Las colas</h2>
+<p>Son colecciones de elementos ordenados que únicamente permiten dos acciones:</p>
+<ul>
+<li>Añadir un elemento a la cola</li>
+<li>Sacar un elemento de la cola</li>
+</ul>
+<p>La peculiaridad es que el primer elemento en entrar es el primero en salir. En inglés se conocen como estructuras <em>FIFO (First In First Out)</em>.</p>
+<p>Debemos importar la colección <em>deque</em> manualmente para crear una cola:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+
+<span class="n">cola</span> <span class="o">=</span> <span class="n">deque</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cola</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>deque([])
+</code></pre></div>
+<p>Podemos añadir elemento directamente pasando una lista a la cola al crearla:</p>
+<div class="highlight"><pre><span></span><code><span class="n">cola</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([</span><span class="s1">&#39;Hector&#39;</span><span class="p">,</span><span class="s1">&#39;Juan&#39;</span><span class="p">,</span><span class="s1">&#39;Miguel&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cola</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>deque([&#39;Hector&#39;, &#39;Juan&#39;, &#39;Miguel&#39;])
+</code></pre></div>
+<p>Y también utilizando el método <code>.append()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">cola</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Maria&#39;</span><span class="p">)</span>
+<span class="n">cola</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Arnaldo&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cola</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>deque([&#39;Hector&#39;, &#39;Juan&#39;, &#39;Miguel&#39;, &#39;Maria&#39;, &#39;Arnaldo&#39;])
+</code></pre></div>
+<p>A la hora de sacar los elementos utilizaremos el método <code>popleft()</code> para extraerlos por la parte izquierda (el principio de la cola). </p>
+<div class="highlight"><pre><span></span><code><span class="n">cola</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Hector&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">cola</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>deque([&#39;Juan&#39;, &#39;Miguel&#39;, &#39;Maria&#39;, &#39;Arnaldo&#39;])
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">cola</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Juan&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">cola</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>deque([&#39;Miguel&#39;, &#39;Maria&#39;, &#39;Arnaldo&#39;])
+</code></pre></div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../fundamento/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Fundamentos" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Fundamentos
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../salida_por_pantalla/" class="md-footer__link md-footer__link--next" aria-label="Next: Salida por pantalla" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Salida por pantalla
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.01824240.min.js"}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.ff0eccb3.min.js"></script>
+      
+    
+  </body>
+</html>
