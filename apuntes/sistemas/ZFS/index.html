@@ -2301,6 +2301,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#clones" class="md-nav__link">
+    Clones
+  </a>
+  
+    <nav class="md-nav" aria-label="Clones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sustitur-clon-por-dataset-original" class="md-nav__link">
+    Sustitur clon por dataset original
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#propiedades" class="md-nav__link">
     Propiedades
   </a>
@@ -2968,6 +2988,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#clones" class="md-nav__link">
+    Clones
+  </a>
+  
+    <nav class="md-nav" aria-label="Clones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sustitur-clon-por-dataset-original" class="md-nav__link">
+    Sustitur clon por dataset original
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#propiedades" class="md-nav__link">
     Propiedades
   </a>
@@ -3291,7 +3331,8 @@ zpool <span class="nb">history</span>   <span class="c1"># ver historial de coma
 </code></pre></div>
 <h2 id="volumenes">Volumenes</h2>
 <h3 id="crear-volumen">Crear volumen</h3>
-<div class="highlight"><pre><span></span><code>zfs create tank/documents
+<div class="highlight"><pre><span></span><code>zfs 
+create tank/documents
 zfs destroy tank/documents
 
 zfs create -o <span class="nv">compression</span><span class="o">=</span>on tank/documents 
@@ -3319,7 +3360,46 @@ zfs send -i tank/dana@snap1 tank/dana@snap2 <span class="p">|</span> ssh host2 z
 
 <span class="c1"># enviar datast con todos los snapshots</span>
 zfs send -R tank/dataset@snapMasReciente <span class="p">|</span> ssh &lt;ip&gt; zfs recv tank/dataset
+
+<span class="c1"># si no existe lista snapshots remotos </span>
+zfs send -cpev &lt;dataset@snapshot&gt; <span class="p">|</span> ssh &lt;destino&gt; zfs recv -vsd pool
+
+<span class="c1"># envia un incremental</span>
+zfs send -cpevI &lt;@snapshot&gt; &lt;dataset@snapshot&gt;  <span class="p">|</span> ssh &lt;destino&gt; zfs recv -Fvd pool
 </code></pre></div>
+<p>Opciones mas usadas de send y recieve</p>
+<div class="highlight"><pre><span></span><code>zfs send
+    -p  <span class="c1"># enviar propiedades</span>
+    -v  <span class="c1"># vervose</span>
+    -I  <span class="c1"># enviar todas las instantaneas intermedias entre &quot;snapA&quot; y &quot;snapB&quot;</span>
+    -c  <span class="c1"># comprime el envio</span>
+    -e  <span class="c1"># comprimido optimizado</span>
+
+zfs recv
+    -v  <span class="c1"># vervose</span>
+    -e  <span class="c1"># Utiliza el ultimo snap (de send) para determinar el nombre de la nueva instantánea</span>
+    -d  <span class="c1"># Utilice todos menos el primer elemento de la ruta de la instantánea enviada </span>
+    -F  <span class="c1"># fuerza rolback en el destino al snap mas reciente</span>
+    -s  <span class="c1"># Si se interrumpe la recepción, guarde el estado de recepción parcial, en lugar de eliminarlo.</span>
+</code></pre></div>
+<h3 id="clones">Clones</h3>
+<p><a href="https://docs.oracle.com/cd/E26921_01/html/E25823/gbcxz.html">doc oracle</a></p>
+<p>Crear un clon partiendo de un snap</p>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="n">zfs</span><span class="w"> </span><span class="n">clone</span><span class="w"> </span><span class="n">tank</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">productA</span><span class="nv">@today</span><span class="w"> </span><span class="n">tank</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">productAbeta</span><span class="w"></span>
+</code></pre></div>
+
+<h4 id="sustitur-clon-por-dataset-original">Sustitur clon por dataset original</h4>
+<p>Sustituir el sistema de archivos, se le asignaran al clon los snaps del original</p>
+<div class="codehilite"><pre><span></span><code>zfs promote tank/test/productAbeta
+
+# renombramos datasets 
+zfs rename tank/test/productA tank/test/productAlegacy
+zfs rename tank/test/productAbeta tank/test/productA
+
+# destruimos original
+zfs destroy tank/test/productAlegacy
+</code></pre></div>
+
 <h3 id="propiedades">Propiedades</h3>
 <p><a href="https://docs.oracle.com/cd/E19253-01/819-5461/gazss/index.html">doc oracle</a> sobre esta sección</p>
 <p>Se pueden ver todas las propiedades en <code>man zfsprops</code></p>
