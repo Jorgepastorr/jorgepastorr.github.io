@@ -1,0 +1,5540 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Jorge Pastor">
+      
+      
+        <link rel="canonical" href="https://jorgepastorr.github.io/apuntes/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/10-AdministracionDeRedes/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Administración de redes - Apuntes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#administracion-de-redes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Apuntes" class="md-header__button md-logo" aria-label="Apuntes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Administración de redes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Apuntes" class="md-nav__button md-logo" aria-label="Apuntes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Apuntes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Apuntes Jorgepastorr
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Administracion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Administracion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Administracion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Configurar_pantallas_manualmente/" class="md-nav__link">
+        Configurar pantallas manualmente
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Debian_hostname_dinamico/" class="md-nav__link">
+        Debian hostname dinamico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Mutt/" class="md-nav__link">
+        Que es mutt?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Procesos/" class="md-nav__link">
+        Procesos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Resetear_la_password_root/" class="md-nav__link">
+        Resetear la password root.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Vim/" class="md-nav__link">
+        Vim atajos básicos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/awk/" class="md-nav__link">
+        Uso básico de AWK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/freeipa/" class="md-nav__link">
+        FreeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/instalar_webmin/" class="md-nav__link">
+        instalar webmin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/per/" class="md-nav__link">
+        PER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/permisos_avanzados/" class="md-nav__link">
+        Permisos avanzados
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/samba/" class="md-nav__link">
+        Samba
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/server-correo/" class="md-nav__link">
+        Servidor Correo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/server-mensajeria/" class="md-nav__link">
+        Server mensajeria instantanea
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ssh/" class="md-nav__link">
+        ssh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/sudo/" class="md-nav__link">
+        sudo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/umask/" class="md-nav__link">
+        umask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/usuarios/" class="md-nav__link">
+        Usuarios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/vnc/" class="md-nav__link">
+        vnc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/webdav/" class="md-nav__link">
+        webdav
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_21" type="checkbox" id="__nav_2_21" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_21">
+          Ldap
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ldap" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_21">
+          <span class="md-nav__icon md-icon"></span>
+          Ldap
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/Ldap-Samba-Hostpam/" class="md-nav__link">
+        Ldap - Samba - Hostpam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/acl_ejercicios/" class="md-nav__link">
+        Acl ejercicios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/host-kerberos-con-ldap/" class="md-nav__link">
+        Instalación host  ldap-kerberos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/ldap/" class="md-nav__link">
+        ldap
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_22" type="checkbox" id="__nav_2_22" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_22">
+          Pxe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pxe" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_22">
+          <span class="md-nav__icon md-icon"></span>
+          Pxe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/pxe/Servidor-pxe-con-rapberry/" class="md-nav__link">
+        Servidor pxe con rapberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/pxe/guiapxe-fedora/" class="md-nav__link">
+        Guiapxe fedora
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_23" type="checkbox" id="__nav_2_23" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_23">
+          Redes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Redes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_23">
+          <span class="md-nav__icon md-icon"></span>
+          Redes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/apuntes-xarxa/" class="md-nav__link">
+        APUNTS DE XARXES
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/comandos_router_switch/" class="md-nav__link">
+        Configuració de Routers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/redes2/" class="md-nav__link">
+        Redes2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Auditoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Auditoria" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Auditoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../auditoria/apuntes_hacking/" class="md-nav__link">
+        Haking ético
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Bases datos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bases datos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Bases datos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Mongo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mongo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Mongo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/mongo/Mongo/" class="md-nav__link">
+        Mongo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Postgres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Postgres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Postgres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/bases/" class="md-nav__link">
+        Postgres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/modificaciones/" class="md-nav__link">
+        Modificación tablas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/plpgsql/" class="md-nav__link">
+        Plpgsql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/postgresql-intalacion/" class="md-nav__link">
+        Postgresql intalacion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Ccna
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ccna" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ccna
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ordenes/" class="md-nav__link">
+        ordenes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          1 IntroducciónRedes(ITN)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1 IntroducciónRedes(ITN)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          1 IntroducciónRedes(ITN)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/01-LasRedesEnLaActualidad/" class="md-nav__link">
+        01 LasRedesEnLaActualidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/02-ConfiguracionBasicaDelSwitchYdisp/" class="md-nav__link">
+        Configuración básica del Switch y dispositivo final
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/03-ProtocolosYmodelos/" class="md-nav__link">
+        Protocolos y modelos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/04-CapaFisica/" class="md-nav__link">
+        Capa Física
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/05-SistemasDeNumeracion/" class="md-nav__link">
+        Sistemas de numeración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/06-CapaDeEnlaceDeDatos/" class="md-nav__link">
+        Capa de enlace de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/07-ConmutacionEthernet/" class="md-nav__link">
+        Conmutación Ethernet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/08-CapaDeRed/" class="md-nav__link">
+        Capa de Red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/09-Resoluci%C3%B3nDeDireccion/" class="md-nav__link">
+        Resolución de dirección
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/10-ConfiguracionBasicaDelRouter/" class="md-nav__link">
+        Configuración básica del router
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/11-DireccionamientoIPv4/" class="md-nav__link">
+        Direccionamiento IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/12-DireccionamientoIPv6/" class="md-nav__link">
+        Direccionamiento IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/13-ICMP/" class="md-nav__link">
+        ICMP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/14-CapaDeTransporte/" class="md-nav__link">
+        Capa de transporte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/15-CapaDeAplicacion/" class="md-nav__link">
+        Capa de aplicación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/16-FundamentosDeSeguridadDeRed/" class="md-nav__link">
+        Fundamentos de seguridad de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/17-ConstruirUnaRedPeque%C3%B1a/" class="md-nav__link">
+        Construir una red pequeña
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/ipv6/" class="md-nav__link">
+        IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/minicom/" class="md-nav__link">
+        Minicom
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          2 Switching Routing And WirelessEssentials(SRWE)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2 Switching Routing And WirelessEssentials(SRWE)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          2 Switching Routing And WirelessEssentials(SRWE)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/01-ConfiguracionBasicaDelDispositivo/" class="md-nav__link">
+        Configuración básica del dispositivo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/03-VLAN/" class="md-nav__link">
+        VLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/04-Inter-VLAN-Routing/" class="md-nav__link">
+        Inter-VLAN Routing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/05-ConceptosSTP/" class="md-nav__link">
+        Conceptos STP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/06-EtherChannel/" class="md-nav__link">
+        EtherChannel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/07-DHCPv4/" class="md-nav__link">
+        DHCPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/08-SLAACyDHCPv6/" class="md-nav__link">
+        SLAAC y DHCPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/09-ConceptosdeFHRP/" class="md-nav__link">
+        Conceptos de FHRP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/10-ConceptosSeguridadLAN/" class="md-nav__link">
+        Conceptos de seguridad LAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/11-ConfiguracionSeguridadSwitch/" class="md-nav__link">
+        Configuración de seguridad en el Switch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/12-ConceptosWLAN/" class="md-nav__link">
+        Conceptos de WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/13-ConfiguracionesRedesInal%C3%A1mbricasWLAN/" class="md-nav__link">
+        Configuraciones de redes inalámbricas WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/14-ConceptosEnrutamiento/" class="md-nav__link">
+        Conceptos de enrutamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/15-EnrutamientoIPEstatico/" class="md-nav__link">
+        Enrutamiento IP Estático
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          3 Enterprise Networking Security AndAutomation ENSA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3 Enterprise Networking Security AndAutomation ENSA" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          3 Enterprise Networking Security AndAutomation ENSA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-ConceptosOSPFv2DeAreaUnica/" class="md-nav__link">
+        Conceptos de OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-ConfiguracionOSPFv2AreaUnica/" class="md-nav__link">
+        Configuración OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-ConceptosSeguridadRedes/" class="md-nav__link">
+        Conceptos de Seguridad en Redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-ACL/" class="md-nav__link">
+        ACL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-ACLconfiguracionIPv4/" class="md-nav__link">
+        ACL para configuración IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-NAT-IPv4/" class="md-nav__link">
+        NAT para IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-conceptosWAN/" class="md-nav__link">
+        Conceptos WAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-ConceptosVPNeIPsec/" class="md-nav__link">
+        Conceptos de VPN e IPsec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-ConceptosQoS/" class="md-nav__link">
+        Conceptos de QoS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Administración de redes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Administración de redes
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deteccion-de-dispositivos-con-cdp" class="md-nav__link">
+    Detección de dispositivos con CDP
+  </a>
+  
+    <nav class="md-nav" aria-label="Detección de dispositivos con CDP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-general-de-cdp" class="md-nav__link">
+    Descripción general de CDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-y-verificacion-del-cdp" class="md-nav__link">
+    Configuración y verificación del CDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deteccion-de-dispositivos-mediante-cdp" class="md-nav__link">
+    Detección de dispositivos mediante CDP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deteccion-de-dispositivos-con-lldp" class="md-nav__link">
+    Detección de dispositivos con LLDP
+  </a>
+  
+    <nav class="md-nav" aria-label="Detección de dispositivos con LLDP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-general-de-lldp" class="md-nav__link">
+    Descripción general de LLDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-y-verificacion-del-lldp" class="md-nav__link">
+    Configuración y verificación del LLDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deteccion-de-dispositivos-mediante-lldp" class="md-nav__link">
+    Detección de dispositivos mediante LLDP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntp" class="md-nav__link">
+    NTP
+  </a>
+  
+    <nav class="md-nav" aria-label="NTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servicios-de-tiempo-y-calendario" class="md-nav__link">
+    Servicios de Tiempo y Calendario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operacion-ntp" class="md-nav__link">
+    Operación NTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-y-verificacion-del-ntp" class="md-nav__link">
+    Configuración y verificación del NTP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snmp" class="md-nav__link">
+    SNMP
+  </a>
+  
+    <nav class="md-nav" aria-label="SNMP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operacion-de-snmp" class="md-nav__link">
+    Operación de SNMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traps-del-agente-snmp" class="md-nav__link">
+    Traps del agente SNMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versiones-de-snmp" class="md-nav__link">
+    Versiones de SNMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-strings" class="md-nav__link">
+    Community Strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mib-id-de-objeto" class="md-nav__link">
+    MIB Id. de objeto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escenario-de-sondeo-snmp" class="md-nav__link">
+    Escenario de sondeo SNMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navegador-de-objeto-snmp" class="md-nav__link">
+    Navegador de objeto SNMP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syslog" class="md-nav__link">
+    Syslog
+  </a>
+  
+    <nav class="md-nav" aria-label="Syslog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operacion-syslog" class="md-nav__link">
+    Operación Syslog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-de-mensaje-de-syslog" class="md-nav__link">
+    Formato de mensaje de Syslog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicios-de-syslog" class="md-nav__link">
+    Servicios de Syslog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-syslog-timestamp" class="md-nav__link">
+    Configurar Syslog Timestamp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mantenimiento-de-routers-y-switches" class="md-nav__link">
+    Mantenimiento de routers y switches
+  </a>
+  
+    <nav class="md-nav" aria-label="Mantenimiento de routers y switches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sistemas-de-archivos-del-router" class="md-nav__link">
+    Sistemas de archivos del router
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivo-de-texto-para-realizar-una-copia-de-seguridad-de-una-configuracion" class="md-nav__link">
+    Archivo de texto para realizar una copia de seguridad de una configuración
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usar-un-archivo-de-texto-para-restaurar-una-configuracion" class="md-nav__link">
+    Usar un archivo de texto para restaurar una configuración
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-copias-de-seguridad-y-restauracion-mediante-tftp" class="md-nav__link">
+    Creación de copias de seguridad y restauración mediante TFTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-para-realizar-copias-de-seguridad-y-restaurar-una-configuracion" class="md-nav__link">
+    USB para realizar copias de seguridad y restaurar una configuración
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedimientos-de-recuperacion-de-contrasena" class="md-nav__link">
+    Procedimientos de recuperación de contraseña
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#administracion-de-imagenes-de-ios" class="md-nav__link">
+    Administración de imágenes de IOS
+  </a>
+  
+    <nav class="md-nav" aria-label="Administración de imágenes de IOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servidores-tftp-como-ubicacion-de-copia-de-seguridad" class="md-nav__link">
+    Servidores TFTP como ubicación de copia de seguridad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-copia-de-seguridad-de-la-imagen-del-ios-en-el-servidor-tftp" class="md-nav__link">
+    Ejemplo de copia de seguridad de la imagen del IOS en el servidor TFTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-boot-system" class="md-nav__link">
+    Comando boot system
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-Dise%C3%B1oDeRedes/" class="md-nav__link">
+        Diseño de redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-ResolucionDeProblemasDeRed/" class="md-nav__link">
+        Resolución de problemas de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-VirtualizacionDeRed/" class="md-nav__link">
+        Virtualización de Red
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cloud" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cloud/aws/" class="md-nav__link">
+        aws
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Curiosidades
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Curiosidades" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Curiosidades
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/Eliminar_contrase%C3%B1a_windows/" class="md-nav__link">
+        Eliminar contraseña windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/Lanzador_aplicaciones_en_gnome/" class="md-nav__link">
+        Lanzador aplicaciones en gnome
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/cambiar_color_promp_terminal/" class="md-nav__link">
+        Cambiar color promp terminal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/conky/" class="md-nav__link">
+        conky
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/openbox/" class="md-nav__link">
+        Openbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/qbit/" class="md-nav__link">
+        Qbit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/tmux/" class="md-nav__link">
+        Tmux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Desatendidas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Desatendidas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Desatendidas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/" class="md-nav__link">
+        Desatendidas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/Instalacion-desatendida-debian/" class="md-nav__link">
+        Instalacion desatendida debian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/desatendida-windows/" class="md-nav__link">
+        Desatendida windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/kikstart/" class="md-nav__link">
+        Kikstart
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Generar doc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Generar doc" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Generar doc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generar_doc/docsify/" class="md-nav__link">
+        Docsify
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generar_doc/remark/" class="md-nav__link">
+        Remark
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Lenguajes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lenguajes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Lenguajes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/Fundamentos_php/" class="md-nav__link">
+        Fundamentos php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/Shell/" class="md-nav__link">
+        Shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_3">
+          Python3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python3" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_3">
+          <span class="md-nav__icon md-icon"></span>
+          Python3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/Apuntes-Metodos/" class="md-nav__link">
+        Métodos de colecciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-Funcionalidades_avanzadas/" class="md-nav__link">
+        apuntes Funcionalidades avanzadas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-Herencia/" class="md-nav__link">
+        Herencias
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-distribucion/" class="md-nav__link">
+        Distribución
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-documentacion/" class="md-nav__link">
+        Documentación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-ficheros/" class="md-nav__link">
+        Apuntes ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-modulos/" class="md-nav__link">
+        Módulos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-orientado-objetos/" class="md-nav__link">
+        Orientado a objetos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-test/" class="md-nav__link">
+        Test
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-tkinter/" class="md-nav__link">
+        Tkinter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes_bases/" class="md-nav__link">
+        Apuntes bases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/argparse/" class="md-nav__link">
+        Argparse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_13" type="checkbox" id="__nav_10_3_13" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_3_13">
+          Fundamentos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fundamentos" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_3_13">
+          <span class="md-nav__icon md-icon"></span>
+          Fundamentos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/excepciones/" class="md-nav__link">
+        Las excepciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/funciones/" class="md-nav__link">
+        Funciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/fundamento/" class="md-nav__link">
+        Fundamentos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/manejo_de_datos/" class="md-nav__link">
+        Manejo de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/salida_por_pantalla/" class="md-nav__link">
+        Salida por pantalla
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Lpi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lpi" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Lpi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1">
+          101
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="101" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          101
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/101_Arquitectura_del_sistema/" class="md-nav__link">
+        101 Arquitectura del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/102_Instalacion_de_Linux_y_gestion_de_paquetes/" class="md-nav__link">
+        102 Instalación de Linux y gestión de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/103_Comandos_GNU_y_Linux/" class="md-nav__link">
+        103 Comandos GNU y Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/104_Dispositivos_sistema_de_archivos_y_estandar_jerarquia_de_archivos/" class="md-nav__link">
+        104 Dispositivos, sistema de archivos Linux y el estándar de jerarquia de archivos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" type="checkbox" id="__nav_11_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_2">
+          102
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="102" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          102
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/105.2_Scripting/" class="md-nav__link">
+        105.2 Scripting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/105_Shells/" class="md-nav__link">
+        105 Shells
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/106_Interfaces_de_usuario_y_escritorio/" class="md-nav__link">
+        106 Interfaces de usuario y escritorio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/107_tareas_de_administracion/" class="md-nav__link">
+        107 tareas de administración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/108_Servicios_esenciales_del_sistema/" class="md-nav__link">
+        108 Servicios esenciales del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/108_rsyslog_server/" class="md-nav__link">
+        rsyslog server central
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/109_Fundamentos_de_red/" class="md-nav__link">
+        109 Fundamentos de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/110_Seguridad/" class="md-nav__link">
+        110 Seguridad
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_3" type="checkbox" id="__nav_11_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_3">
+          201
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="201" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_3">
+          <span class="md-nav__icon md-icon"></span>
+          201
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/200_Planificaci%C3%B3n_de_la_capacidad/" class="md-nav__link">
+        200 Planificación de la capacidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/201_Kernel_Linux/" class="md-nav__link">
+        201 Kernel Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/202_Arranque_del%20_Sistema/" class="md-nav__link">
+        202 Arranque del  Sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/203_sistemas_de_archivos_y_dispositivos/" class="md-nav__link">
+        203 sistemas de archivos y dispositivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/204_Administracion_avanzada_de_dispositivos_de_almacenamiento/" class="md-nav__link">
+        204 Administración avanzada de dispositivos de almacenamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/205_configuracion_de_red/" class="md-nav__link">
+        205 configuración de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/206_Mantenimiento_del_sistema/" class="md-nav__link">
+        206 Mantenimiento del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/Exam_201_Detailed_Objectives/" class="md-nav__link">
+        Exam 201: Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4">
+          202
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="202" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          202
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/207_Servidor_de_nombres_de_dominio/" class="md-nav__link">
+        207 Servidor de nombres de dominio (DNS)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/208.4_servicios_web_nginx/" class="md-nav__link">
+        208 servicios web nginx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/208_servicios_web/" class="md-nav__link">
+        208 servicios web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/209_compartir_ficheros/" class="md-nav__link">
+        209 compartir ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/210_gestion_de_clientes_de_red/" class="md-nav__link">
+        210 gestión de clientes de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/211_Servicios_E-Mail/" class="md-nav__link">
+        211 Servicios de E-Mail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/212_Seguridad_del_sistema/" class="md-nav__link">
+        212 Seguridad del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/Exam_202_Detailed_Objectives/" class="md-nav__link">
+        Exam 202 Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_5" type="checkbox" id="__nav_11_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_5">
+          303
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="303" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_5">
+          <span class="md-nav__icon md-icon"></span>
+          303
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/331.3_Encrypted_File_Systems/" class="md-nav__link">
+        Topic 331: Cryptography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/332.3_Resource_Control/" class="md-nav__link">
+        Topic 332: Host Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/333.1_Discretionary_Access_Control/" class="md-nav__link">
+        333.1 Discretionary Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/333.2_Mandatory_Access_Control/" class="md-nav__link">
+        333.2 Mandatory Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/334.3.2_Packet_Filtering/" class="md-nav__link">
+        Firewalld
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/334.3_Packet_Filtering/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/extra/" class="md-nav__link">
+        Extra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/freeIpa/" class="md-nav__link">
+        freeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/nose/" class="md-nav__link">
+        Nose
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/objetivos/" class="md-nav__link">
+        Objetivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/pendiente/" class="md-nav__link">
+        Pendiente
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_6" type="checkbox" id="__nav_11_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_6">
+          304
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="304" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_6">
+          <span class="md-nav__icon md-icon"></span>
+          304
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/ClusterPacemakerDRBD/" class="md-nav__link">
+        Cluster Pacemaker DRBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/Clusterfs/" class="md-nav__link">
+        Clusterfs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/Haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/Montaje%20isard-nas1%20y%20isard-nas2/" class="md-nav__link">
+        Montaje isard-nas1 y isard-nas2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/cluster_basico/" class="md-nav__link">
+        Cluster en centos con pacemaker/corosync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/clvm_gfs2_en_clusterPacemaker/" class="md-nav__link">
+        clvm gfs2 en clusterPacemaker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/haproxy_pacemaker/" class="md-nav__link">
+        Haproxy pacemaker
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_7" type="checkbox" id="__nav_11_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_7">
+          305
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="305" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_7">
+          <span class="md-nav__icon md-icon"></span>
+          305
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.1VirtualizationConceptsandTheory/" class="md-nav__link">
+        351.1 Virtualization Concepts and Theory (weight: 6)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.2Xen/" class="md-nav__link">
+        351.2 Xen (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.3Qemu/" class="md-nav__link">
+        351.3 QEMU (weight: 4)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.4LibvirtVirtualMachineManageme/" class="md-nav__link">
+        351.4 Libvirt Virtual Machine Management (weight: 9)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.5VirtualMachineDiskImageManagem/" class="md-nav__link">
+        351.5 Virtual Machine Disk Image Management (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352.1ContainerVirtualizationConcepts/" class="md-nav__link">
+        352.1 Container Virtualization Concepts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352.3Docker/" class="md-nav__link">
+        352.3 Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352.4ContainerOrchestrationPlatforms/" class="md-nav__link">
+        352.4ContainerOrchestrationPlatforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352LXC/" class="md-nav__link">
+        352.2 LXC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.1CloudManagementTools/" class="md-nav__link">
+        353.1 Cloud Management Tools (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.2Packer/" class="md-nav__link">
+        353.2 Packer (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.3cloud-init/" class="md-nav__link">
+        353.3 cloud-init (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.4Vagrant/" class="md-nav__link">
+        353.4 Vagrant (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          Seguridad
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seguridad" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Seguridad
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/Certificados-Digitales/" class="md-nav__link">
+        Certificados Digitales
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/Kerberos/" class="md-nav__link">
+        Kerberos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/OpenVpn/" class="md-nav__link">
+        OpenVpn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/The-crazy-thing/" class="md-nav__link">
+        The crazy thing!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/TunelSSH/" class="md-nav__link">
+        Tunel SSH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/lvm/" class="md-nav__link">
+        Lvm logical volum manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/practica-ssl-tls/" class="md-nav__link">
+        Practica ssl tls
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_10" type="checkbox" id="__nav_12_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_10">
+          Backups
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Backups" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_10">
+          <span class="md-nav__icon md-icon"></span>
+          Backups
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/Borg_basico/" class="md-nav__link">
+        Borg básico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/Tar/" class="md-nav__link">
+        Tar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/rdiff-backup/" class="md-nav__link">
+        rdiff-backup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/rsync/" class="md-nav__link">
+        rsync
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_11" type="checkbox" id="__nav_12_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_11">
+          Cortafuegos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cortafuegos" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_11">
+          <span class="md-nav__icon md-icon"></span>
+          Cortafuegos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/cortafuegos/Iptables/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Sistemas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sistemas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Sistemas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Actualizar_hora_sys_o_bios/" class="md-nav__link">
+        Gestionar Hora
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Arranque-del-sistema/" class="md-nav__link">
+        Arranque del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Estructura_de_directorios/" class="md-nav__link">
+        Estructura de directorios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Logs/" class="md-nav__link">
+        Logs del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Systemd/" class="md-nav__link">
+        Systemd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/ZFS/" class="md-nav__link">
+        ZFS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/chroot/" class="md-nav__link">
+        Chroot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/disco/" class="md-nav__link">
+        Disco
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/gestores_de_paquetes/" class="md-nav__link">
+        Gestores de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/getenforce/" class="md-nav__link">
+        getenforce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/grub/" class="md-nav__link">
+        Grub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/home/" class="md-nav__link">
+        Cambiar /home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/ip_est%C3%A1tica/" class="md-nav__link">
+        ip estática raspberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/pam/" class="md-nav__link">
+        Pam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/xinetd/" class="md-nav__link">
+        xinetd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_17" type="checkbox" id="__nav_13_17" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13_17">
+          Automatizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Automatizacion" data-md-level="2">
+        <label class="md-nav__title" for="__nav_13_17">
+          <span class="md-nav__icon md-icon"></span>
+          Automatizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/automatizacion/ansible/" class="md-nav__link">
+        Ansible
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/automatizacion/tareas_programadas/" class="md-nav__link">
+        Tareas Programadas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Virtualizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virtualizacion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Virtualizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/Docker-basico/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/Lxc/" class="md-nav__link">
+        LXC y LXD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/Vagrant/" class="md-nav__link">
+        Vagrant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/kubernetes/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/swarm/" class="md-nav__link">
+        Swarm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_6" type="checkbox" id="__nav_14_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14_6">
+          Virt manager
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virt manager" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_6">
+          <span class="md-nav__icon md-icon"></span>
+          Virt manager
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/Backing_chain/" class="md-nav__link">
+        Backing_chain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/Clonar/" class="md-nav__link">
+        Clonar de virtual a físico y de físico a virtual.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/Instalacion_de_virtualizacion_fedora/" class="md-nav__link">
+        Instalación de virtualización fedora
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/acceder_consola_desde_virsh/" class="md-nav__link">
+        acceder consola desde virsh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/crear_red_aislada/" class="md-nav__link">
+        Crear red aislada
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/instalar_maquina_virtual_virt-install/" class="md-nav__link">
+        virt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deteccion-de-dispositivos-con-cdp" class="md-nav__link">
+    Detección de dispositivos con CDP
+  </a>
+  
+    <nav class="md-nav" aria-label="Detección de dispositivos con CDP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-general-de-cdp" class="md-nav__link">
+    Descripción general de CDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-y-verificacion-del-cdp" class="md-nav__link">
+    Configuración y verificación del CDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deteccion-de-dispositivos-mediante-cdp" class="md-nav__link">
+    Detección de dispositivos mediante CDP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deteccion-de-dispositivos-con-lldp" class="md-nav__link">
+    Detección de dispositivos con LLDP
+  </a>
+  
+    <nav class="md-nav" aria-label="Detección de dispositivos con LLDP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-general-de-lldp" class="md-nav__link">
+    Descripción general de LLDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-y-verificacion-del-lldp" class="md-nav__link">
+    Configuración y verificación del LLDP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deteccion-de-dispositivos-mediante-lldp" class="md-nav__link">
+    Detección de dispositivos mediante LLDP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntp" class="md-nav__link">
+    NTP
+  </a>
+  
+    <nav class="md-nav" aria-label="NTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servicios-de-tiempo-y-calendario" class="md-nav__link">
+    Servicios de Tiempo y Calendario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operacion-ntp" class="md-nav__link">
+    Operación NTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-y-verificacion-del-ntp" class="md-nav__link">
+    Configuración y verificación del NTP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snmp" class="md-nav__link">
+    SNMP
+  </a>
+  
+    <nav class="md-nav" aria-label="SNMP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operacion-de-snmp" class="md-nav__link">
+    Operación de SNMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traps-del-agente-snmp" class="md-nav__link">
+    Traps del agente SNMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versiones-de-snmp" class="md-nav__link">
+    Versiones de SNMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-strings" class="md-nav__link">
+    Community Strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mib-id-de-objeto" class="md-nav__link">
+    MIB Id. de objeto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escenario-de-sondeo-snmp" class="md-nav__link">
+    Escenario de sondeo SNMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navegador-de-objeto-snmp" class="md-nav__link">
+    Navegador de objeto SNMP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syslog" class="md-nav__link">
+    Syslog
+  </a>
+  
+    <nav class="md-nav" aria-label="Syslog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operacion-syslog" class="md-nav__link">
+    Operación Syslog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-de-mensaje-de-syslog" class="md-nav__link">
+    Formato de mensaje de Syslog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicios-de-syslog" class="md-nav__link">
+    Servicios de Syslog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-syslog-timestamp" class="md-nav__link">
+    Configurar Syslog Timestamp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mantenimiento-de-routers-y-switches" class="md-nav__link">
+    Mantenimiento de routers y switches
+  </a>
+  
+    <nav class="md-nav" aria-label="Mantenimiento de routers y switches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sistemas-de-archivos-del-router" class="md-nav__link">
+    Sistemas de archivos del router
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivo-de-texto-para-realizar-una-copia-de-seguridad-de-una-configuracion" class="md-nav__link">
+    Archivo de texto para realizar una copia de seguridad de una configuración
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usar-un-archivo-de-texto-para-restaurar-una-configuracion" class="md-nav__link">
+    Usar un archivo de texto para restaurar una configuración
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-copias-de-seguridad-y-restauracion-mediante-tftp" class="md-nav__link">
+    Creación de copias de seguridad y restauración mediante TFTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-para-realizar-copias-de-seguridad-y-restaurar-una-configuracion" class="md-nav__link">
+    USB para realizar copias de seguridad y restaurar una configuración
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedimientos-de-recuperacion-de-contrasena" class="md-nav__link">
+    Procedimientos de recuperación de contraseña
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#administracion-de-imagenes-de-ios" class="md-nav__link">
+    Administración de imágenes de IOS
+  </a>
+  
+    <nav class="md-nav" aria-label="Administración de imágenes de IOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servidores-tftp-como-ubicacion-de-copia-de-seguridad" class="md-nav__link">
+    Servidores TFTP como ubicación de copia de seguridad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-copia-de-seguridad-de-la-imagen-del-ios-en-el-servidor-tftp" class="md-nav__link">
+    Ejemplo de copia de seguridad de la imagen del IOS en el servidor TFTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-boot-system" class="md-nav__link">
+    Comando boot system
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/jorgepastorr/apuntes/edit/master/docs/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/10-AdministracionDeRedes.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<h1 id="administracion-de-redes">Administración de redes</h1>
+<h2 id="deteccion-de-dispositivos-con-cdp">Detección de dispositivos con CDP</h2>
+<h3 id="descripcion-general-de-cdp">Descripción general de CDP</h3>
+<p>CDP es un protocolo de Capa 2 propiedad de Cisco que se utiliza para recopilar información sobre dispositivos Cisco que comparten el mismo enlace de datos. El CDP es independiente de los medios y protocolos y se ejecuta en todos los dispositivos Cisco, como routers, switches y servidores de acceso.</p>
+<p>El dispositivo envía mensajes periódicos del CDP a los dispositivos conectados. Estos mensajes comparten información sobre el tipo de dispositivo que se descubre, el nombre de los dispositivos, y la cantidad y el tipo de interfaces.</p>
+<h3 id="configuracion-y-verificacion-del-cdp">Configuración y verificación del CDP</h3>
+<p>Para los dispositivos Cisco, el CDP está habilitado de manera predeterminada. Para verificar el estado de CDP y mostrar información sobre CDP, ingrese el comando <code>show cdp</code> .</p>
+<p>Para deshabilitar CDP en una interfaz específica, ingrese <code>no cdp enable</code> en el modo de configuración de la interfaz. El CDP aún se encuentra habilitado en el dispositivo; sin embargo, no se enviarán más mensajes a la interfaz. Para habilitar CDP en la interfaz específica nuevamente, ingrese <code>cdp enable</code>.</p>
+<p>Para habilitar CDP globalmente para todas las interfaces compatibles en el dispositivo, ingrese <code>cdp run</code> en el modo de configuración global. CDP se puede deshabilitar para todas las interfaces en el dispositivo con el comando <code>no cdp run</code> en el modo de configuración global.</p>
+<p>Utilice el comando <code>show cdp interface</code> para mostrar las interfaces que están habilitadas en CDP en el dispositivo. También se muestra el estado de cada interfaz. </p>
+<h3 id="deteccion-de-dispositivos-mediante-cdp">Detección de dispositivos mediante CDP</h3>
+<p>Con CDP habilitado en la red, el comando <code>show cdp neighbors</code> se puede usar para determinar el diseño de la red, como se muestra en el ejemplo.</p>
+<p>La salida muestra que hay otro dispositivo Cisco, S1, conectado a la interfaz G0/0/1 en R1. Además, S1 está conectado a través de su F0/5</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">R1</span>#<span class="w"> </span><span class="k">show</span><span class="w"> </span><span class="nv">cdp</span><span class="w"> </span><span class="nv">neighbors</span><span class="w"> </span>
+<span class="nv">Capability</span><span class="w"> </span><span class="nv">Codes</span>:<span class="w"> </span><span class="nv">R</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">Router</span>,<span class="w"> </span><span class="nv">T</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">Trans</span><span class="w"> </span><span class="nv">Bridge</span>,<span class="w"> </span><span class="nv">B</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">Source</span><span class="w"> </span><span class="nv">Route</span><span class="w"> </span><span class="nv">Bridge</span>
+<span class="w">                </span><span class="nv">S</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">Switch</span>,<span class="w"> </span><span class="nv">H</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">Host</span>,<span class="w"> </span><span class="nv">I</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">IGMP</span>,<span class="w"> </span><span class="nv">r</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">Repeater</span>,<span class="w"> </span><span class="nv">P</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">Phone</span>,<span class="w"> </span>
+<span class="w">                </span><span class="nv">D</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">Remote</span>,<span class="w"> </span><span class="nv">C</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">CVTA</span>,<span class="w"> </span><span class="nv">M</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">Two</span><span class="o">-</span><span class="nv">port</span><span class="w"> </span><span class="nv">Mac</span><span class="w"> </span><span class="nv">Relay</span>
+
+<span class="nv">Device</span><span class="w"> </span><span class="nv">ID</span><span class="w"> </span><span class="nv">Local</span><span class="w"> </span><span class="nv">Intrfce</span><span class="w"> </span><span class="nv">Holdtme</span><span class="w"> </span><span class="nv">Capability</span><span class="w"> </span><span class="nv">Platform</span><span class="w"> </span><span class="nv">Port</span><span class="w"> </span><span class="nv">ID</span><span class="w"> </span>
+<span class="nv">S1</span><span class="w"> </span><span class="nv">Gig</span><span class="w"> </span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span><span class="w"> </span><span class="mi">179</span><span class="w"> </span><span class="nv">S</span><span class="w"> </span><span class="nv">I</span><span class="w"> </span><span class="nv">WS</span><span class="o">-</span><span class="nv">C3560</span><span class="o">-</span><span class="w"> </span><span class="nv">Fas</span><span class="w"> </span><span class="mi">0</span><span class="o">/</span><span class="mi">5</span>
+</code></pre></div>
+
+<p>El administrador de red utiliza <code>show cdp neighbors detail</code> para descubrir la dirección IP de S1. Como se muestra en la salida, la dirección de S1 es 192.168.1.2.</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">R1</span>#<span class="w"> </span><span class="k">show</span><span class="w"> </span><span class="nv">cdp</span><span class="w"> </span><span class="nv">neighbors</span><span class="w"> </span><span class="nv">detail</span><span class="w"> </span>
+<span class="o">-------------------------</span><span class="w"> </span>
+<span class="nv">Device</span><span class="w"> </span><span class="nv">ID</span>:<span class="w"> </span><span class="nv">S1</span><span class="w"> </span>
+<span class="nv">Entry</span><span class="w"> </span><span class="nv">address</span><span class="ss">(</span><span class="nv">es</span><span class="ss">)</span>:<span class="w"> </span>
+<span class="nv">IP</span><span class="w"> </span><span class="nv">address</span>:<span class="w"> </span><span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">2</span><span class="w"> </span>
+<span class="nv">Platform</span>:<span class="w"> </span><span class="nv">cisco</span><span class="w"> </span><span class="nv">WS</span><span class="o">-</span><span class="nv">C3560</span><span class="o">-</span><span class="mi">24</span><span class="nv">TS</span>,<span class="w"> </span><span class="nv">Capabilities</span>:<span class="w"> </span><span class="nv">Switch</span><span class="w"> </span><span class="nv">IGMP</span>
+<span class="nv">Interface</span>:<span class="w"> </span><span class="nv">GigabitEthernet0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span>,<span class="w"> </span><span class="nv">Port</span><span class="w"> </span><span class="nv">ID</span><span class="w"> </span><span class="ss">(</span><span class="nv">outgoing</span><span class="w"> </span><span class="nv">port</span><span class="ss">)</span>:<span class="w"> </span><span class="nv">FastEthernet0</span><span class="o">/</span><span class="mi">5</span>
+<span class="nv">Holdtime</span><span class="w"> </span>:<span class="w"> </span><span class="mi">136</span><span class="w"> </span><span class="nv">sec</span>
+
+<span class="ss">(</span><span class="nv">output</span><span class="w"> </span><span class="nv">omitted</span><span class="ss">)</span>
+</code></pre></div>
+
+<h2 id="deteccion-de-dispositivos-con-lldp">Detección de dispositivos con LLDP</h2>
+<h3 id="descripcion-general-de-lldp">Descripción general de LLDP</h3>
+<p>El protocolo de detección de capa de enlace (LLDP) es un protocolo de detección de vecinos similar al CDP que es independiente del proveedor. El LLDP funciona con los dispositivos de red, como routers, switches, y puntos de acceso inalámbrico LAN. Este protocolo anuncia su identidad y capacidades a otros dispositivos y recibe la información de un dispositivo de capa 2 conectado físicamente.</p>
+<h3 id="configuracion-y-verificacion-del-lldp">Configuración y verificación del LLDP</h3>
+<p>LLDP puede estar habilitado por defecto. Para habilitar LLDP a nivel global en un dispositivo de red Cisco, ingrese el comando <code>lldp run</code> en el modo de configuración global. Para deshabilitar el LLDP, ingrese el comando <code>no lldp run</code> en el modo de configuración global.</p>
+<p>LLDP se puede configurar en interfaces específicas. Sin embargo, LLDP debe configurarse por separado para transmitir y recibir paquetes LLDP.</p>
+<p>Para verificar que LLDP esté habilitado, ingrese el comando <code>show lldp</code> en modo EXEC privilegiado.</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">Switch</span>#<span class="w"> </span><span class="nv">conf</span><span class="w"> </span><span class="nv">t</span><span class="w"> </span>
+<span class="nv">Enter</span><span class="w"> </span><span class="nv">configuration</span><span class="w"> </span><span class="nv">commands</span>,<span class="w"> </span><span class="nv">one</span><span class="w"> </span><span class="nv">per</span><span class="w"> </span><span class="nv">line</span>.<span class="w"> </span><span class="k">End</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">CNTL</span><span class="o">/</span><span class="nv">Z</span>.<span class="w"> </span>
+<span class="nv">Switch</span><span class="ss">(</span><span class="nv">config</span><span class="ss">)</span>#<span class="w"> </span><span class="nv">lldp</span><span class="w"> </span><span class="nv">run</span><span class="w"> </span>
+<span class="nv">Switch</span><span class="ss">(</span><span class="nv">config</span><span class="ss">)</span>#<span class="w"> </span><span class="nv">interface</span><span class="w"> </span><span class="nv">gigabitethernet</span><span class="w"> </span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span><span class="w"> </span>
+<span class="nv">Switch</span><span class="ss">(</span><span class="nv">config</span><span class="o">-</span><span class="k">if</span><span class="ss">)</span>#<span class="w"> </span><span class="nv">lldp</span><span class="w"> </span><span class="nv">transmit</span><span class="w"> </span>
+<span class="nv">Switch</span><span class="ss">(</span><span class="nv">config</span><span class="o">-</span><span class="k">if</span><span class="ss">)</span>#<span class="w"> </span><span class="nv">lldp</span><span class="w"> </span><span class="nv">receive</span><span class="w"> </span>
+<span class="nv">Switch</span><span class="ss">(</span><span class="nv">config</span><span class="o">-</span><span class="k">if</span><span class="ss">)</span>#<span class="w"> </span><span class="k">end</span>
+<span class="nv">Switch</span>#<span class="w"> </span><span class="k">show</span><span class="w"> </span><span class="nv">lldp</span><span class="w"> </span>
+<span class="nv">Global</span><span class="w"> </span><span class="nv">LLDP</span><span class="w"> </span><span class="nv">Information</span>:<span class="w"> </span>
+<span class="nv">Status</span>:<span class="w"> </span><span class="nv">ACTIVE</span><span class="w"> </span>
+<span class="nv">LLDP</span><span class="w"> </span><span class="nv">advertisements</span><span class="w"> </span><span class="nv">are</span><span class="w"> </span><span class="nv">sent</span><span class="w"> </span><span class="nv">every</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="nv">seconds</span><span class="w"> </span>
+<span class="nv">LLDP</span><span class="w"> </span><span class="nv">hold</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="nv">advertised</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="mi">120</span><span class="w"> </span><span class="nv">seconds</span><span class="w"> </span>
+<span class="nv">LLDP</span><span class="w"> </span><span class="nv">interface</span><span class="w"> </span><span class="nv">reinitialisation</span><span class="w"> </span><span class="nv">delay</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nv">seconds</span>
+</code></pre></div>
+
+<h3 id="deteccion-de-dispositivos-mediante-lldp">Detección de dispositivos mediante LLDP</h3>
+<p>Con LLDP habilitado, los vecinos del dispositivo se pueden descubrir mediante el comando <code>show lldp neighbors</code> .</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">S1</span>#<span class="w"> </span><span class="k">show</span><span class="w"> </span><span class="nv">lldp</span><span class="w"> </span><span class="nv">neighbors</span><span class="w"> </span>
+<span class="nv">Capability</span><span class="w"> </span><span class="nv">codes</span>:<span class="w"> </span>
+<span class="w">    </span><span class="ss">(</span><span class="nv">R</span><span class="ss">)</span><span class="w"> </span><span class="nv">Router</span>,<span class="w"> </span><span class="ss">(</span><span class="nv">B</span><span class="ss">)</span><span class="w"> </span><span class="nv">Bridge</span>,<span class="w"> </span><span class="ss">(</span><span class="nv">T</span><span class="ss">)</span><span class="w"> </span><span class="nv">Telephone</span>,<span class="w"> </span><span class="ss">(</span><span class="nv">C</span><span class="ss">)</span><span class="w"> </span><span class="nv">DOCSIS</span><span class="w"> </span><span class="nv">Cable</span><span class="w"> </span><span class="nv">Device</span><span class="w"> </span>
+<span class="w">    </span><span class="ss">(</span><span class="nv">W</span><span class="ss">)</span><span class="w"> </span><span class="nv">WLAN</span><span class="w"> </span><span class="nv">Access</span><span class="w"> </span><span class="nv">Point</span>,<span class="w"> </span><span class="ss">(</span><span class="nv">P</span><span class="ss">)</span><span class="w"> </span><span class="nv">Repeater</span>,<span class="w"> </span><span class="ss">(</span><span class="nv">S</span><span class="ss">)</span><span class="w"> </span><span class="nv">Station</span>,<span class="w"> </span><span class="ss">(</span><span class="nv">O</span><span class="ss">)</span><span class="w"> </span><span class="nv">Other</span><span class="w"> </span>
+<span class="nv">Device</span><span class="w"> </span><span class="nv">ID</span><span class="w"> </span><span class="nv">Local</span><span class="w"> </span><span class="nv">Intf</span><span class="w"> </span><span class="nv">Hold</span><span class="o">-</span><span class="nv">time</span><span class="w"> </span><span class="nv">Capability</span><span class="w"> </span><span class="nv">Port</span><span class="w"> </span><span class="nv">ID</span><span class="w"> </span>
+<span class="nv">R1</span><span class="w"> </span><span class="nv">Fa0</span><span class="o">/</span><span class="mi">5</span><span class="w"> </span><span class="mi">117</span><span class="w"> </span><span class="nv">R</span><span class="w"> </span><span class="nv">Gi0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span><span class="w"> </span>
+<span class="nv">S2</span><span class="w"> </span><span class="nv">Fa0</span><span class="o">/</span><span class="mi">1</span><span class="w"> </span><span class="mi">112</span><span class="w"> </span><span class="nv">B</span><span class="w"> </span><span class="nv">Fa0</span><span class="o">/</span><span class="mi">1</span><span class="w"> </span>
+<span class="nv">Total</span><span class="w"> </span><span class="nv">entries</span><span class="w"> </span><span class="nv">displayed</span>:<span class="w"> </span><span class="mi">2</span>
+</code></pre></div>
+
+<p>Cuando se necesitan más detalles sobre los vecinos, el comando <code>show lldp neighbors detail</code> puede proporcionar información, como la versión del IOS vecino, la dirección IP y la capacidad del dispositivo.</p>
+<h2 id="ntp">NTP</h2>
+<h3 id="servicios-de-tiempo-y-calendario">Servicios de Tiempo y Calendario</h3>
+<p>El reloj del software en un router o un switch se inicia cuando se inicia el sistema. Es la principal fuente de tiempo para el sistema. Es importante sincronizar la hora en todos los dispositivos de la red. Cuando no se sincroniza la hora entre los dispositivos, será imposible determinar el orden de los eventos y la causa de un evento.</p>
+<p>Normalmente, la configuración de fecha y hora de un router o switch se puede establecer mediante uno de los dos métodos. Puede configurarse manualmente la fecha y la hora, como se muestra en el ejemplo, o configurar el Protocolo de tiempo de red (NTP).</p>
+<div class="codehilite"><pre><span></span><code>R1# clock set 20:36:00 nov 15 2019
+</code></pre></div>
+
+<p>A medida que la red crece, se hace difícil garantizar que todos los dispositivos de infraestructura estén funcionando con tiempo sincronizado utilizando el método manual.</p>
+<p>Una mejor solución es configurar el NTP en la red. Este protocolo permite a los routers de la red sincronizar sus configuraciones de hora con un servidor NTP, lo que proporciona configuraciones de hora más consistentes. NTP puede configurarse para sincronizarse con un reloj maestro privado, o puede sincronizarse con un servidor NTP disponible públicamente en Internet. NTP utiliza el puerto 123 de UDP y se documenta en RFC 1305.</p>
+<h3 id="operacion-ntp">Operación NTP</h3>
+<p>Las redes NTP utilizan un sistema jerárquico de fuentes horarias. Cada nivel en este sistema jerárquico se denomina estrato. El nivel de estrato se define como la cantidad de saltos desde la fuente autorizada. El tiempo sincronizado se distribuye a través de la red mediante NTP.</p>
+<p>El recuento de saltos máximo es 15. El estrato 16, el nivel de estrato inferior, indica que un dispositivo no está sincronizado.</p>
+<p><strong>Stratum 0</strong>: Estas "fuentes de tiempo autorizadas" son dispositivos de cronometraje de alta precisión que se supone son precisos y con poco o ningún retraso asociado con ellos. </p>
+<p><strong>Stratum 1</strong>: Dispositivos que están directamente conectados a las fuentes de tiempo autorizadas. Actúan como el estándar horario de la red principal.</p>
+<p><strong>Stratum 2 e inferiores</strong>: los servidores del estrato 2 están conectados a los dispositivos del estrato 1 a través de conexiones de red. Los dispositivos de stratum 2, como los clientes NTP, sincronizan su tiempo utilizando los paquetes NTP de los servidores de stratum 1. Podrían también actuar como servidores para dispositivos del stratum 3.</p>
+<p>Los servidores en el mismo nivel de Stratum, pueden configurarse para actuar como un par con otros servidores horarios en el mismo nivel de estratos, esto con la finalidad de verificar o respaldar el horario.</p>
+<h3 id="configuracion-y-verificacion-del-ntp">Configuración y verificación del NTP</h3>
+<p>Antes de configurar NTP en la red, el comando <code>show clock</code> muestra la hora actual en el reloj del software. Con la opción de <code>detail</code> , observe que la fuente de tiempo es la configuración del usuario. Esto significa que la hora se configuró manualmente con el comando clock .</p>
+<p>El <code>comando ntp server ip-address</code> se emite en modo de configuración global para configurar 209.165.200.225 como el servidor NTP para R1. Para verificar que la fuente de tiempo esté establecida en NTP, use el comando <code>show clock detail</code> . </p>
+<p>Observe que ahora la fuente de tiempo es NTP.</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">R1</span>#<span class="w"> </span><span class="k">show</span><span class="w"> </span><span class="nv">clock</span><span class="w"> </span><span class="nv">detail</span><span class="w"> </span>
+<span class="mi">20</span>:<span class="mi">55</span>:<span class="mi">10</span><span class="w"> </span>.<span class="mi">207</span><span class="w"> </span><span class="nv">UTC</span><span class="w"> </span><span class="nv">Vie</span><span class="w"> </span><span class="nv">Nov</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="mi">2019</span><span class="w"> </span>
+<span class="nv">Time</span><span class="w"> </span><span class="nv">source</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">user</span><span class="w"> </span><span class="nv">configuration</span>
+<span class="nv">R1</span>#<span class="w"> </span><span class="nv">config</span><span class="w"> </span><span class="nv">t</span>
+<span class="nv">R1</span><span class="ss">(</span><span class="nv">config</span><span class="ss">)</span>#<span class="w"> </span><span class="nv">ntp</span><span class="w"> </span><span class="nv">server</span><span class="w"> </span><span class="mi">209</span>.<span class="mi">165</span>.<span class="mi">200</span>.<span class="mi">225</span><span class="w"> </span>
+<span class="nv">R1</span><span class="ss">(</span><span class="nv">config</span><span class="ss">)</span>#<span class="w"> </span><span class="k">end</span><span class="w"> </span>
+<span class="nv">R1</span>#<span class="w"> </span><span class="k">show</span><span class="w"> </span><span class="nv">clock</span><span class="w"> </span><span class="nv">detail</span><span class="w"> </span>
+<span class="mi">21</span>:<span class="mi">01</span>:<span class="mi">34</span><span class="w"> </span>.<span class="mi">563</span><span class="w"> </span><span class="nv">UTC</span><span class="w"> </span><span class="nv">Vie</span><span class="w"> </span><span class="nv">Nov</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="mi">2019</span><span class="w"> </span>
+<span class="nv">Time</span><span class="w"> </span><span class="nv">source</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">NTP</span>
+</code></pre></div>
+
+<p>Los comandos <code>show ntp associations</code> y <code>show ntp status</code> se utilizan para verificar que R1 esté sincronizado con el servidor NTP en 209.165.200.225. Observe que el R1 está sincronizado con un servidor NTP de Stratum 1 en 209.165.200.225, que se sincroniza con un reloj GPS. El comando <code>show ntp status</code> muestra que R1 ahora es un dispositivo del Stratum 2 que está sincronizado con el servidor NTP en 209.165.220.225.</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">R1</span>#<span class="w"> </span><span class="k">show</span><span class="w"> </span><span class="nv">ntp</span><span class="w"> </span><span class="nv">associations</span>
+
+<span class="nv">address</span><span class="w"> </span><span class="nv">ref</span><span class="w"> </span><span class="nv">clock</span><span class="w"> </span><span class="nv">st</span><span class="w"> </span><span class="nv">when</span><span class="w"> </span><span class="nv">poll</span><span class="w"> </span><span class="nv">each</span><span class="w"> </span><span class="nv">delay</span><span class="w"> </span><span class="nv">offset</span><span class="w"> </span><span class="nv">disp</span><span class="w"> </span>
+<span class="o">*~</span><span class="mi">209</span>.<span class="mi">165</span>.<span class="mi">200</span>.<span class="mi">225</span><span class="w"> </span>.<span class="nv">GPS</span>.<span class="w">         </span><span class="mi">1</span><span class="w"> </span><span class="mi">61</span><span class="w"> </span><span class="mi">64</span><span class="w"> </span><span class="mi">377</span><span class="w"> </span><span class="mi">0</span>,<span class="mi">481</span><span class="w"> </span><span class="mi">7</span>,<span class="mi">480</span><span class="w"> </span><span class="mi">4</span>,<span class="mi">261</span><span class="w"> </span>
+<span class="nv">sys</span>.<span class="nv">peer</span>,<span class="w"> </span>#<span class="w"> </span><span class="nv">selected</span>,<span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">candidate</span>,<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">outlyer</span>,<span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="nv">falseticker</span>,<span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="nv">configured</span>
+
+<span class="nv">R1</span>#<span class="w"> </span><span class="k">show</span><span class="w"> </span><span class="nv">ntp</span><span class="w"> </span><span class="nv">status</span><span class="w"> </span>
+<span class="nv">Clock</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">synchronized</span>,<span class="w"> </span><span class="nv">stratum</span><span class="w"> </span><span class="mi">2</span>,<span class="w"> </span><span class="nv">reference</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="mi">209</span>.<span class="mi">165</span>.<span class="mi">200</span>.<span class="mi">225</span><span class="w"> </span>
+<span class="nv">nominal</span><span class="w"> </span><span class="nv">freq</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="mi">250</span>.<span class="mi">0000</span><span class="w"> </span><span class="nv">Hz</span>,<span class="w"> </span><span class="nv">actual</span><span class="w"> </span><span class="nv">freq</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="mi">249</span>.<span class="mi">9995</span><span class="w"> </span><span class="nv">Hz</span>,<span class="w"> </span><span class="nv">precision</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="mi">2</span><span class="o">**</span><span class="mi">19</span>
+<span class="ss">(</span><span class="nv">output</span><span class="w"> </span><span class="nv">omitted</span><span class="ss">)</span>
+</code></pre></div>
+
+<p>El reloj de S1 está configurado para sincronizarse con R1 con el comando <code>ntp server</code> y la configuración se verifica con el comando <code>show ntp associations</code> .</p>
+<p>La salida del comando <code>show ntp associations</code> verifica que el reloj en S1 ahora esté sincronizado con R1 en 192.168.1.1 a través de NTP. Ahora S1 es un dispositivo de Stratum 3, que puede proporcionar el servicio NTP a otros dispositivos en la red, por ejemplo terminales.</p>
+<h2 id="snmp">SNMP</h2>
+<p>SNMP fue desarrollado para permitir a los administradores administrar nodos en una red IP. Permite que los administradores de redes monitoreen y administren el rendimiento de la red, detecten y resuelvan problemas de red y planifiquen el crecimiento de la red.</p>
+<p>SNMP es un protocolo de capa de aplicación que proporciona un formato de mensaje para la comunicación entre administradores y agentes. El sistema SNMP consta de tres elementos:</p>
+<ul>
+<li>Administrador de SNMP</li>
+<li>Agentes SNMP (nodo administrado)</li>
+<li>Base de información de administración (MIB)</li>
+</ul>
+<p>SNMP define cómo se intercambia la información de administración entre las aplicaciones de administración de red y los agentes de administración. El administrador de SNMP sondea los agentes y consulta la MIB para los agentes de SNMP en el puerto UDP 161. Los agentes de SNMP envían todas las notificaciones de SNMP al administrador de SNMP en el puerto UDP 162.</p>
+<p>El administrador de SNMP forma parte de un sistema de administración de red (NMS). El administrador SNMP puede recopilar información de un agente SNMP mediante la acción "GET" y puede cambiar las configuraciones de un agente mediante la acción "SET". Los agentes SNMP pueden reenviar información directamente a un administrador de red mediante el uso de "TRAPS".</p>
+<p>El agente de SNMP y MIB se alojan en los dispositivos del cliente de SNMP. Las MIB almacenan datos sobre el dispositivo y estadísticas operativas y deben estar disponibles para los usuarios remotos autenticados. El agente de SNMP es responsable de brindar acceso a la MIB local.</p>
+<h3 id="operacion-de-snmp">Operación de SNMP</h3>
+<p>Los agentes SNMP que residen en dispositivos administrados recopilan y almacenan información sobre el dispositivo y su funcionamiento localmente en la MIB. El administrador de SNMP luego usa el agente SNMP para tener acceso a la información dentro de la MIB.</p>
+<p>Existen dos solicitudes principales de administrador de SNMP: get y set. Además de la configuración, un conjunto puede provocar que se produzca una acción, como reiniciar un router.</p>
+<p>OperationDescriptionget-request recupera un valor de una variable específica. get-next-request recupera un valor de una variable dentro de una tabla; el administrador SNMP no necesita conocer el nombre exacto de la variable. Una busqueda sequencial es realizada para encontrar la variable dentro de una tabla.get-bulk-request recupera grandes bloques de datos, como varias filas en una tabla, que de otra manera requerirían la transmisión de muchos bloques pequeños de datos. (Sólo funciona con SNMPv2 o posterior.) Get-Response responde a un get-request, get-next-request y set-request enviados por un NMS.set-request almacena un valor en una variable específica.</p>
+<p>get-request</p>
+<ul>
+<li>Recupera un valor de una variable específica.</li>
+</ul>
+<p>get-next-request</p>
+<ul>
+<li>Recupera un valor de una variable dentro de una tabla; el administrador de SNMP no necesita saber el nombre exacto de la variable. Se realiza una búsqueda secuencial para encontrar la variable necesaria dentro de una tabla.</li>
+</ul>
+<p>get-bulk-request</p>
+<ul>
+<li>Recupera grandes bloques de datos, como varias filas en una tabla, que de otra manera requerirían la transmisión de muchos bloques pequeños de datos. (Solo funciona con SNMPv2 o más reciente).</li>
+</ul>
+<p>get-response</p>
+<ul>
+<li>Responde a get-request, get-next-request, y set-request enviados por un NMS.</li>
+</ul>
+<p>set-request</p>
+<ul>
+<li>Almacena un valor en una variable específica.</li>
+</ul>
+<p>El agente SNMP responde a las solicitudes del administrador de SNMP de la siguiente manera:</p>
+<ul>
+<li>Get an MIB variable - el agente de SNMP ejecuta esta función en respuesta a una PDU GetRequest del administrador de red. El agente obtiene el valor de la variable de MIB solicitada y responde al administrador de red con dicho valor.</li>
+<li>Set an MIB variable - el agente SNMP realiza esta función en respuesta a una PDU SetRequest del administrador de red. El agente de SNMP cambia el valor de la variable de MIB al valor especificado por el administrador de red. La respuesta del agente SNMP a una solicitud set incluye la nueva configuración en el dispositivo.</li>
+</ul>
+<h3 id="traps-del-agente-snmp">Traps del agente SNMP</h3>
+<p>Las traps son mensajes no solicitados que alertan al administrador de SNMP sobre una condición o un evento en la red. Las notificaciones dirigidas a trampas reducen los recursos de la red y del agente al eliminar la necesidad de algunas solicitudes de sondeo SNMP.</p>
+<p>La figura ilustra el uso de una trampa SNMP para alertar al administrador de la red que la interfaz G0/0/0 ha fallado. El software de NMS puede enviar un mensaje de texto al administrador de red, mostrar una ventana emergente en el software de NMS o mostrar el ícono del router en color rojo en la GUI de NMS.</p>
+<h3 id="versiones-de-snmp">Versiones de SNMP</h3>
+<p>SNMPv1 - Estándar heredado definido en RFC 1157. Utiliza un método de autenticación simple basado en cadenas de comunidad. No debe utilizarse debido a riesgos de seguridad.</p>
+<p>SNMPv2c - Definido en RFC 1901-1908. Utiliza un método de autenticación simple basado en cadenas de comunidad. Proporciona opciones de recuperación masiva, así como mensajes de error más detallados.</p>
+<p>SNMPv3 - Definido en RFC 3410-3415. Utiliza la autenticación de nombre de usuario, proporciona protección de datos mediante HMAC-MD5 o HMAC-SHA y el cifrado mediante DES, 3DES o AES.</p>
+<h3 id="community-strings">Community Strings</h3>
+<p>SNMPv1 y SNMPv2c usan cadenas de comunidad que controlan el acceso a la MIB. Las cadenas de comunidad son contraseñas de texto no cifrado. Las cadenas de la comunidad de SNMP autentican el acceso a los objetos MIB.</p>
+<p>Existen dos tipos de cadenas de comunidad:</p>
+<ul>
+<li>Sólo lectura (ro) - Este tipo proporciona acceso a las variables MIB, pero no permite cambiar estas variables, sólo lectura. Debido a que la seguridad es mínima en la versión 2c, muchas organizaciones usan SNMPv2c en modo de solo lectura.</li>
+<li>Read-write (rw) - Este tipo proporciona acceso de lectura y escritura a todos los objetos en la MIB.</li>
+</ul>
+<p>Para ver o establecer variables de MIB, el usuario debe especificar la cadena de comunidad correspondiente para el acceso de lectura o escritura.</p>
+<h3 id="mib-id-de-objeto">MIB Id. de objeto</h3>
+<p>La MIB organiza variables de manera jerárquica. Formalmente, la MIB define cada variable como una ID de objeto (OID). Las OID identifican de forma exclusiva los objetos administrados. La MIB organiza las OID según estándares RFC en una jerarquía de OID, que se suele mostrar como un árbol.</p>
+<p>El árbol de la MIB para un dispositivo determinado incluye algunas ramas con variables comunes a varios dispositivos de red y algunas ramas con variables específicas de ese dispositivo o proveedor.</p>
+<p>Las RFC definen algunas variables públicas comunes. La mayoría de los dispositivos implementan estas variables de MIB. Además, los proveedores de equipos de redes, como Cisco, pueden definir sus propias ramas privadas del árbol para admitir las nuevas variables específicas de sus dispositivos.</p>
+<h3 id="escenario-de-sondeo-snmp">Escenario de sondeo SNMP</h3>
+<p>SNMP se puede utilizar para observar la utilización de la CPU durante un período de tiempo mediante dispositivos de sondeo. Las estadísticas de la CPU se pueden compilar en el NMS y graficar. Esto crea una línea de base para el administrador de red.</p>
+<p>Los datos se recuperan mediante la utilidad <code>snmpget</code>, que se emite en NMS. Con la utilidad snmpget, puede recuperar manualmente datos en tiempo real o hacer que el NMS ejecute un informe. Este informe le daría un período de tiempo en el que podría utilizar los datos para obtener el promedio.</p>
+<h3 id="navegador-de-objeto-snmp">Navegador de objeto SNMP</h3>
+<p>La utilidad snmpget da una idea de la mecánica básica de cómo funciona SNMP. Sin embargo, trabajar con nombres de variables de MIB largos como 1.3.6.1.4.1.9.2.1.58.0 puede ser problemático para el usuario promedio. Más comúnmente, el personal de operaciones de la red utiliza un producto de administración de red con una GUI fácil de usar, lo que hace que el nombre completo de la variable de datos MIB sea transparente para el usuario.</p>
+<p>Cisco SNMP Navigator en el sitio web http://www.cisco.com  permite a un administrador de red investigar detalles sobre un OID en particular.</p>
+<h2 id="syslog">Syslog</h2>
+<p>Syslog utiliza el puerto UDP 514 para enviar mensajes de notificación de eventos a través de redes IP a recopiladores de mensajes de eventos, como se muestra en la figura.</p>
+<p>El servicio de registro de syslog proporciona tres funciones principales:</p>
+<ul>
+<li>La capacidad de recopilar información de registro para el control y la solución de problemas</li>
+<li>La capacidad de escoger el tipo de información de registro que se captura</li>
+<li>La capacidad de especificar los destinos de los mensajes de syslog capturados</li>
+</ul>
+<h3 id="operacion-syslog">Operación Syslog</h3>
+<p>El protocolo syslog comienza enviando mensajes del sistema y resultados de debug a un proceso de registro local. La configuración de Syslog puede enviar estos mensajes a través de la red a un servidor syslog externo, donde se pueden recuperar sin necesidad de acceder al dispositivo. </p>
+<p>Por otra parte, los mensajes de syslog se pueden enviar a un búfer interno. Los mensajes enviados al búfer interno solo se pueden ver mediante la CLI del dispositivo.</p>
+<p>El administrador de red puede especificar que solo se envíen ciertos tipos de mensajes del sistema a varios destinos. Los destinos populares para mensajes de syslog incluyen los siguientes:</p>
+<ul>
+<li>Búfer de registro (RAM dentro de un router o switch)</li>
+<li>Línea de consola</li>
+<li>Línea de terminal</li>
+<li>Servidor de syslog</li>
+</ul>
+<h3 id="formato-de-mensaje-de-syslog">Formato de mensaje de Syslog</h3>
+<p>Los dispositivos de Cisco generan mensajes de syslog como resultado de los eventos de red. Cada mensaje de syslog contiene un nivel de severidad y su origen.</p>
+<p>Cuanto más bajos son los números de nivel, más fundamentales son las alarmas de syslog. El nivel de severidad de los mensajes se puede establecer para controlar dónde se muestra cada tipo de mensaje (es decir, en la consola o los otros destinos). La lista completa de niveles de syslog se muestra en la tabla.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Nombre de la gravedad</th>
+<th style="text-align: left;">Nivel de gravedad</th>
+<th style="text-align: left;">Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Emergencia</td>
+<td style="text-align: left;">Nivel 0</td>
+<td style="text-align: left;">El sistema no se puede usar.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alerta</td>
+<td style="text-align: left;">Nivel 1</td>
+<td style="text-align: left;">Se necesita una acción inmediata.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Crítico</td>
+<td style="text-align: left;">Nivel 2</td>
+<td style="text-align: left;">Condición crítica.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Error</td>
+<td style="text-align: left;">Nivel 3</td>
+<td style="text-align: left;">Condición de error.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Advertencia</td>
+<td style="text-align: left;">Nivel 4</td>
+<td style="text-align: left;">Condición de advertencia.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Notificación</td>
+<td style="text-align: left;">Nivel 5</td>
+<td style="text-align: left;">Condición normal pero importante.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Informativo</td>
+<td style="text-align: left;">Nivel 6</td>
+<td style="text-align: left;">Mensaje informativo.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Depuración</td>
+<td style="text-align: left;">Nivel 7</td>
+<td style="text-align: left;">Mensaje de depuración.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="servicios-de-syslog">Servicios de Syslog</h3>
+<p>Además de especificar la gravedad, los mensajes de syslog también contienen información sobre el sistema/proceso que lo origino. Estos últimos, son identificadores de servicios que identifican y categorizan los datos de estado del sistema para informar los mensajes de error y de eventos. Las opciones registro disponibles son específicas del dispositivo de red.</p>
+<p>Algunas registros comunes de mensajes de syslog que se informan en los routers con IOS de Cisco incluyen los siguientes:</p>
+<ul>
+<li>IP</li>
+<li>Protocolo OSPF</li>
+<li>Sistema operativo SYS</li>
+<li>Seguridad IP (IPsec)</li>
+<li>IP de interfaz (IF)</li>
+</ul>
+<h3 id="configurar-syslog-timestamp">Configurar Syslog Timestamp</h3>
+<p>De manera predeterminada, los mensajes no tienen marca de hora. Los mensajes deben tener marcas de hora, así cuando se envían a otro destino, como un servidor syslog, haya un registro del momento en el que se generó el mensaje. Use el comando <code>service timestamps log datetime</code> para forzar que los eventos registrados muestren la fecha y la hora. </p>
+<div class="codehilite"><pre><span></span><code><span class="nv">R1</span><span class="ss">(</span><span class="nv">config</span><span class="ss">)</span>#<span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="nv">timestamps</span><span class="w"> </span><span class="nv">log</span><span class="w"> </span><span class="nv">datetime</span><span class="w"> </span>
+<span class="nv">R1</span><span class="ss">(</span><span class="nv">config</span><span class="ss">)</span>#<span class="w"> </span><span class="nv">interface</span><span class="w"> </span><span class="nv">g0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="w"> </span>
+<span class="nv">R1</span><span class="ss">(</span><span class="nv">config</span><span class="o">-</span><span class="k">if</span><span class="ss">)</span>#<span class="w"> </span><span class="nv">no</span><span class="w"> </span><span class="nv">shutdown</span><span class="w"> </span>
+<span class="o">*</span><span class="mi">1</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="nv">mar</span><span class="w"> </span><span class="mi">11</span>:<span class="mi">52</span>:<span class="mi">42</span>:<span class="w"> </span><span class="o">%</span><span class="nv">LINK</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="nv">UPDOWN</span>:<span class="w"> </span><span class="nv">Interface</span><span class="w"> </span><span class="nv">GigabitEthernet0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span>,<span class="w"> </span><span class="nv">changed</span><span class="w"> </span><span class="nv">state</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">down</span><span class="w"> </span>
+<span class="o">*</span><span class="nv">Mar</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">11</span>:<span class="mi">52</span>:<span class="mi">45</span>:<span class="w"> </span><span class="o">%</span><span class="nv">LINK</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="nv">UPDOWN</span>:<span class="w"> </span><span class="nv">Interface</span><span class="w"> </span><span class="nv">GigabitEthernet0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span>,<span class="w"> </span><span class="nv">changed</span><span class="w"> </span><span class="nv">state</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">up</span><span class="w"> </span>
+<span class="o">*</span><span class="nv">Mar</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">11</span>:<span class="mi">52</span>:<span class="mi">46</span>:<span class="w"> </span><span class="o">%</span><span class="nv">LINEPROTO</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="nv">UPDOWN</span>:<span class="w"> </span><span class="nv">Line</span><span class="w"> </span><span class="nv">protocol</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">Interface</span><span class="w"> </span><span class="nv">GigabitEthernet0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span>,<span class="w"> </span><span class="nv">changed</span><span class="w"> </span><span class="nv">state</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">up</span>
+</code></pre></div>
+
+<h2 id="mantenimiento-de-routers-y-switches">Mantenimiento de routers y switches</h2>
+<h3 id="sistemas-de-archivos-del-router">Sistemas de archivos del router</h3>
+<p>El Sistema de archivos Cisco IOS (IFS) permite al administrador navegar a diferentes directorios y enumerar los archivos en un directorio. El administrador también puede crear subdirectorios en memoria flash o en un disco. Los directorios disponibles dependen del dispositivo.</p>
+<p>El ejemplo muestra la salida del comando <code>show file systems</code> , que enumera todos los sistemas de archivos disponibles en un router Cisco 4221.</p>
+<p>Ya que la memoria flash es el sistema de archivos predeterminado, el comando <code>dir</code> enumera el contenido de flash. La última lista es de interés específico. Se trata del nombre del archivo de imagen de Cisco IOS actual, que se ejecuta en la memoria RAM.</p>
+<p>Para ver el contenido de NVRAM, debe cambiar el sistema de archivos predeterminado actual mediante el comando <code>cd</code> (cambiar directorio), como se muestra en el ejemplo.</p>
+<p>El comando actual del directorio de trabajo es <code>pwd</code>. Este comando verifica que estamos viendo el directorio NVRAM. Finalmente, el comando dir enumera los contenidos de NVRAM. Si bien se enumeran varios archivos de configuración, el de mayor interés específicamente es el archivo de configuración de inicio.</p>
+<h3 id="archivo-de-texto-para-realizar-una-copia-de-seguridad-de-una-configuracion">Archivo de texto para realizar una copia de seguridad de una configuración</h3>
+<p>Los archivos de configuración se pueden guardar en un archivo de texto utilizando Tera Term:</p>
+<ol>
+<li>En el menú Archivo (File menu), haga clic en Log.</li>
+<li>Elija la ubicación para guardar el archivo. Tera Term comenzará a capturar texto.</li>
+<li>Después de iniciar la captura, ejecute el comando show running-config o show startup-config en el indicador EXEC privilegiado. El texto que aparece en la ventana del terminal se dirigirá al archivo elegido.</li>
+<li>Cuando se complete la captura, seleccione Close en la ventana Tera Term: Log.</li>
+<li>Observe el archivo para verificar que no esté dañado.</li>
+</ol>
+<h3 id="usar-un-archivo-de-texto-para-restaurar-una-configuracion">Usar un archivo de texto para restaurar una configuración</h3>
+<p>Además, es posible que desee agregar enable y configure terminal al comienzo del archivo o entrar en el modo de configuración global antes de pegar la configuración. En lugar de copiar y pegar, una configuración se puede restaurar a partir de un archivo de texto utilizando Tera Term. </p>
+<p>Al usar Tera Term, los pasos son los siguientes:</p>
+<ol>
+<li>En el menú File (Archivo), haga clic en Send file (Enviar archivo).</li>
+<li>Ubique el archivo que debe copiar en el dispositivo y haga clic en Open (Abrir).</li>
+<li>Tera Term pegará el archivo en el dispositivo.</li>
+</ol>
+<p>El texto en el archivo se aplicará en forma de comandos en la CLI y pasará a ser la configuración en ejecución en el dispositivo.</p>
+<h3 id="creacion-de-copias-de-seguridad-y-restauracion-mediante-tftp">Creación de copias de seguridad y restauración mediante TFTP</h3>
+<p>Siga estos pasos para realizar una copia de respaldo de la configuración en un servidor TFTP:</p>
+<ol>
+<li>Introduzca el comando copy running-config tftp .</li>
+<li>Introduzca la dirección IP del host en el cual se almacenará el archivo de configuración.</li>
+<li>Introduzca el nombre que se asignará al archivo de configuración.</li>
+<li>Presione Entrar para confirmar cada elección.</li>
+</ol>
+<p>Siga estos pasos para restaurar la configuración en ejecución desde un servidor TFTP:</p>
+<ol>
+<li>Introduzca el comando copy tftp running-config .</li>
+<li>Introduzca la dirección IP del host en el que está almacenado el archivo de configuración.</li>
+<li>Introduzca el nombre que se asignará al archivo de configuración.</li>
+<li>
+<p>Presione Enter para confirmar cada elección.</p>
+<p>R1# copy running-config tftp 
+Remote host []? 192.168.10.254 
+Name of the configuration file to write[R1-config]? R1-Jan-2019
+Write file R1-Jan-2019 to 192.168.10.254? [confirm] 
+Writing R1-Jan-2019 !!!!!! [OK</p>
+</li>
+</ol>
+<h3 id="usb-para-realizar-copias-de-seguridad-y-restaurar-una-configuracion">USB para realizar copias de seguridad y restaurar una configuración</h3>
+<p>Ejecute el comando <code>show file systems</code> para verificar que la unidad USB está allí y confirmar su nombre. Para este ejemplo, el sistema de archivos USB se denomina <code>usbflash0:</code>.</p>
+<p>Utilice el comando <code>copy run usbflash0:/</code> para copiar el archivo de configuración en la unidad flash USB. Asegúrese de utilizar el nombre de la unidad flash tal como se indica en el sistema de archivos. La barra es optativa, pero indica el directorio raíz de la unidad flash USB.</p>
+<p>El IOS le solicitará el nombre de archivo. Si el archivo ya existe en la unidad flash USB, el router solicitará que se sobrescriba.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">R1</span><span class="err">#</span><span class="w"> </span><span class="n">copy</span><span class="w"> </span><span class="n">running</span><span class="o">-</span><span class="n">config</span><span class="w"> </span><span class="nl">usbflash0</span><span class="p">:</span><span class="w"> </span>
+<span class="n">Destination</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">[</span><span class="n">running-config</span><span class="o">]</span><span class="vm">?</span><span class="w"> </span><span class="n">Configuración</span><span class="w"> </span><span class="n">R1</span><span class="o">-</span><span class="w"> </span>
+<span class="o">%</span><span class="nl">Warning</span><span class="p">:</span><span class="n">There</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">existing</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">name</span><span class="w"> </span>
+<span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">over</span><span class="w"> </span><span class="k">write</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">confirm</span><span class="o">]</span>
+
+<span class="mi">5024</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="n">copiados</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="mf">1.796</span><span class="w"> </span><span class="n">segundos</span><span class="w"> </span><span class="p">(</span><span class="mi">2797</span><span class="w"> </span><span class="n">bytes</span><span class="o">/</span><span class="n">seg</span><span class="p">)</span><span class="w"> </span>
+<span class="n">R1</span><span class="err">#</span>
+</code></pre></div>
+
+<p>Para restaurar configuraciones con una unidad flash USB, será necesario editar el archivo USB R1-Config con un editor de texto. Suponiendo que el nombre del archivo es R1-Config, use el comando <code>copy usbflash0:/R1-Config running-config</code> para restaurar una configuración en ejecución.</p>
+<h3 id="procedimientos-de-recuperacion-de-contrasena">Procedimientos de recuperación de contraseña</h3>
+<p>Las contraseñas de los dispositivos se utilizan para evitar el acceso no autorizado. Las contraseñas encriptadas, como las contraseñas generadas mediante "enable secret", se deben reemplazar después de su recuperación. Dependiendo del dispositivo, el procedimiento detallado para la recuperación de contraseña varía. </p>
+<p>Sin embargo, todos los procedimientos de recuperación de contraseña siguen el mismo principio:</p>
+<ol>
+<li>Ingrese en el modo ROMMON.</li>
+<li>Cambie el registro de configuración.</li>
+<li>Copie el startup-config en la running-config.</li>
+<li>Cambie la contraseña.</li>
+<li>Guarde el running-config como el nuevo startup-config. </li>
+<li>Reinicie el dispositivo.</li>
+</ol>
+<h2 id="administracion-de-imagenes-de-ios">Administración de imágenes de IOS</h2>
+<h3 id="servidores-tftp-como-ubicacion-de-copia-de-seguridad">Servidores TFTP como ubicación de copia de seguridad</h3>
+<p>A medida que una red crece, las imágenes y los archivos de configuración del software IOS de Cisco pueden almacenarse en un servidor TFTP central. Esto ayuda a controlar la cantidad de imágenes del IOS y las revisiones a dichas imágenes del IOS, así como los archivos de configuración que deben mantenerse.</p>
+<p>Las internetworks de producción suelen abarcar áreas extensas y contienen varios routers. Para cualquier red, es una buena práctica mantener una copia de seguridad de la imagen del software Cisco IOS en caso de que la imagen del sistema en el router se dañe o se borre accidentalmente.</p>
+<p>Los routers distribuidos ampliamente necesitan una ubicación de origen o de copia de seguridad para las imágenes del software IOS de Cisco. Utilizar un servidor TFTP de red permite cargar y descargar imágenes y configuraciones por la red. El servidor TFTP de la red puede ser otro router, una estación de trabajo o un sistema host.</p>
+<h3 id="ejemplo-de-copia-de-seguridad-de-la-imagen-del-ios-en-el-servidor-tftp">Ejemplo de copia de seguridad de la imagen del IOS en el servidor TFTP</h3>
+<p>Para mantener las operaciones de red con el mínimo tiempo de inactividad, es necesario implementar procedimientos para realizar copias de seguridad de las imágenes del IOS de Cisco. Esto permite que el administrador de red copie rápidamente una imagen a un router en caso de que la imagen esté dañada o borrada. </p>
+<p>Utilice los siguientes pasos:</p>
+<ol>
+<li>Haga ping al servidor TFTP: Haga ping al servidor TFTP para probar la conectividad.</li>
+<li>Verifique el tamaño de la imagen en flash: Verifique que el servidor TFTP tenga suficiente espacio en disco para admitir la imagen del software IOS de Cisco. Use el comando <code>show flash0:</code> en el router para determinar el tamaño del archivo de imagen Cisco IOS. </li>
+<li>
+<p>Copie la imagen al servidor TFTP: Copie la imagen en el servidor TFTP mediante el comando <code>copy source-url destination-url</code> . Después de emitir el comando utilizando las URL de origen y destino especificadas, se le solicita al usuario el nombre del archivo de origen, la dirección IP del host remoto y el nombre del archivo de destino. A continuación, se inicia la transferencia.</p>
+<p>R1# copy tftp: flash: 
+Address or name of remote host []? 2001:DB8:CAF:100: :99 
+Source filename []? isr4200-universalk9_ias.16.09.04.SPA.bin 
+Destination filename [isr4200-universalk9_ias.16.09.04.SPA.bin]? 
+Accessing tftp://2001:DB8:CAFE:100::99/ isr4200- universalk9_ias.16.09.04.SPA.bin... Loading isr4200-universalk9_ias.16.09.04.SPA.bin from 2001:DB8:CAFE:100::99 (via GigabitEthernet0/0/0): !!!!!!!!!!!!!!!!!!!! </p>
+<p>[OK - 517153193 bytes] 
+517153193 bytes copied in 868.128 secs (265652 bytes/sec)</p>
+</li>
+</ol>
+<h3 id="comando-boot-system">Comando boot system</h3>
+<p>Durante el inicio, el código de arranque analiza el archivo de configuración de inicio en NVRAM para los comandos <code>boot system</code> que específican el nombre y la ubicación de la imagen del software Cisco IOS para cargar. Si no hay comandos <code>boot system</code> de manera secuencial para proporcionar un plan de arranque que tenga tolerancia a fallas.</p>
+<p>Si no hay comandos <code>boot system</code> en la configuración, de manera predeterminada, el router carga y ejecuta la primera imagen válida del IOS de Cisco en la memoria flash.</p>
+<p>Para actualizar a la imagen IOS copiada después de que esa imagen se guarde en la memoria flash del router, configure el router para cargar la nueva imagen mediante el comando <code>boot system</code> . Guarde la configuración. Vuelva a cargar el router para que arranque con la nueva imagen.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">R1</span><span class="c1"># configure terminal </span>
+<span class="n">R1</span><span class="w"> </span><span class="p">(</span><span class="n">config</span><span class="p">)</span><span class="w"> </span><span class="c1"># boot system flash0:isr4200-universalk9_ias.16.09.04.SPA.bin </span>
+<span class="n">R1</span><span class="p">(</span><span class="n">config</span><span class="p">)</span><span class="c1"># exit </span>
+<span class="n">R1</span><span class="c1"># copy running-config startup-config </span>
+<span class="n">R1</span><span class="c1"># reload</span>
+</code></pre></div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../09-ConceptosQoS/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Conceptos de QoS" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Conceptos de QoS
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../11-Dise%C3%B1oDeRedes/" class="md-footer__link md-footer__link--next" aria-label="Next: Diseño de redes" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Diseño de redes
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+    
+  </body>
+</html>

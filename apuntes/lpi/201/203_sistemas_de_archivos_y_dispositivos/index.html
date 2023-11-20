@@ -1,0 +1,5381 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Jorge Pastor">
+      
+      
+        <link rel="canonical" href="https://jorgepastorr.github.io/apuntes/lpi/201/203_sistemas_de_archivos_y_dispositivos/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>203 sistemas de archivos y dispositivos - Apuntes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#203-sistemas-de-archivos-y-dispositivos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Apuntes" class="md-header__button md-logo" aria-label="Apuntes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              203 sistemas de archivos y dispositivos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Apuntes" class="md-nav__button md-logo" aria-label="Apuntes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Apuntes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Apuntes Jorgepastorr
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Administracion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Administracion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Administracion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Configurar_pantallas_manualmente/" class="md-nav__link">
+        Configurar pantallas manualmente
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Debian_hostname_dinamico/" class="md-nav__link">
+        Debian hostname dinamico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Mutt/" class="md-nav__link">
+        Que es mutt?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Procesos/" class="md-nav__link">
+        Procesos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Resetear_la_password_root/" class="md-nav__link">
+        Resetear la password root.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Vim/" class="md-nav__link">
+        Vim atajos básicos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/awk/" class="md-nav__link">
+        Uso básico de AWK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/freeipa/" class="md-nav__link">
+        FreeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/instalar_webmin/" class="md-nav__link">
+        instalar webmin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/per/" class="md-nav__link">
+        PER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/permisos_avanzados/" class="md-nav__link">
+        Permisos avanzados
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/samba/" class="md-nav__link">
+        Samba
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/server-correo/" class="md-nav__link">
+        Servidor Correo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/server-mensajeria/" class="md-nav__link">
+        Server mensajeria instantanea
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ssh/" class="md-nav__link">
+        ssh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/sudo/" class="md-nav__link">
+        sudo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/umask/" class="md-nav__link">
+        umask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/usuarios/" class="md-nav__link">
+        Usuarios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/vnc/" class="md-nav__link">
+        vnc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/webdav/" class="md-nav__link">
+        webdav
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_21" type="checkbox" id="__nav_2_21" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_21">
+          Ldap
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ldap" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_21">
+          <span class="md-nav__icon md-icon"></span>
+          Ldap
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/Ldap-Samba-Hostpam/" class="md-nav__link">
+        Ldap - Samba - Hostpam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/acl_ejercicios/" class="md-nav__link">
+        Acl ejercicios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/host-kerberos-con-ldap/" class="md-nav__link">
+        Instalación host  ldap-kerberos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/ldap/" class="md-nav__link">
+        ldap
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_22" type="checkbox" id="__nav_2_22" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_22">
+          Pxe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pxe" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_22">
+          <span class="md-nav__icon md-icon"></span>
+          Pxe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/pxe/Servidor-pxe-con-rapberry/" class="md-nav__link">
+        Servidor pxe con rapberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/pxe/guiapxe-fedora/" class="md-nav__link">
+        Guiapxe fedora
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_23" type="checkbox" id="__nav_2_23" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_23">
+          Redes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Redes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_23">
+          <span class="md-nav__icon md-icon"></span>
+          Redes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/apuntes-xarxa/" class="md-nav__link">
+        APUNTS DE XARXES
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/comandos_router_switch/" class="md-nav__link">
+        Configuració de Routers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/redes2/" class="md-nav__link">
+        Redes2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Auditoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Auditoria" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Auditoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../auditoria/apuntes_hacking/" class="md-nav__link">
+        Haking ético
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Bases datos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bases datos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Bases datos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Mongo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mongo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Mongo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/mongo/Mongo/" class="md-nav__link">
+        Mongo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Postgres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Postgres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Postgres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/bases/" class="md-nav__link">
+        Postgres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/modificaciones/" class="md-nav__link">
+        Modificación tablas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/plpgsql/" class="md-nav__link">
+        Plpgsql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/postgresql-intalacion/" class="md-nav__link">
+        Postgresql intalacion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Ccna
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ccna" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ccna
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/ordenes/" class="md-nav__link">
+        ordenes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          1 IntroducciónRedes(ITN)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1 IntroducciónRedes(ITN)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          1 IntroducciónRedes(ITN)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/01-LasRedesEnLaActualidad/" class="md-nav__link">
+        01 LasRedesEnLaActualidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/02-ConfiguracionBasicaDelSwitchYdisp/" class="md-nav__link">
+        Configuración básica del Switch y dispositivo final
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/03-ProtocolosYmodelos/" class="md-nav__link">
+        Protocolos y modelos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/04-CapaFisica/" class="md-nav__link">
+        Capa Física
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/05-SistemasDeNumeracion/" class="md-nav__link">
+        Sistemas de numeración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/06-CapaDeEnlaceDeDatos/" class="md-nav__link">
+        Capa de enlace de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/07-ConmutacionEthernet/" class="md-nav__link">
+        Conmutación Ethernet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/08-CapaDeRed/" class="md-nav__link">
+        Capa de Red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/09-Resoluci%C3%B3nDeDireccion/" class="md-nav__link">
+        Resolución de dirección
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/10-ConfiguracionBasicaDelRouter/" class="md-nav__link">
+        Configuración básica del router
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/11-DireccionamientoIPv4/" class="md-nav__link">
+        Direccionamiento IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/12-DireccionamientoIPv6/" class="md-nav__link">
+        Direccionamiento IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/13-ICMP/" class="md-nav__link">
+        ICMP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/14-CapaDeTransporte/" class="md-nav__link">
+        Capa de transporte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/15-CapaDeAplicacion/" class="md-nav__link">
+        Capa de aplicación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/16-FundamentosDeSeguridadDeRed/" class="md-nav__link">
+        Fundamentos de seguridad de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/17-ConstruirUnaRedPeque%C3%B1a/" class="md-nav__link">
+        Construir una red pequeña
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/ipv6/" class="md-nav__link">
+        IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/minicom/" class="md-nav__link">
+        Minicom
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          2 Switching Routing And WirelessEssentials(SRWE)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2 Switching Routing And WirelessEssentials(SRWE)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          2 Switching Routing And WirelessEssentials(SRWE)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/01-ConfiguracionBasicaDelDispositivo/" class="md-nav__link">
+        Configuración básica del dispositivo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/03-VLAN/" class="md-nav__link">
+        VLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/04-Inter-VLAN-Routing/" class="md-nav__link">
+        Inter-VLAN Routing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/05-ConceptosSTP/" class="md-nav__link">
+        Conceptos STP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/06-EtherChannel/" class="md-nav__link">
+        EtherChannel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/07-DHCPv4/" class="md-nav__link">
+        DHCPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/08-SLAACyDHCPv6/" class="md-nav__link">
+        SLAAC y DHCPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/09-ConceptosdeFHRP/" class="md-nav__link">
+        Conceptos de FHRP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/10-ConceptosSeguridadLAN/" class="md-nav__link">
+        Conceptos de seguridad LAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/11-ConfiguracionSeguridadSwitch/" class="md-nav__link">
+        Configuración de seguridad en el Switch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/12-ConceptosWLAN/" class="md-nav__link">
+        Conceptos de WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/13-ConfiguracionesRedesInal%C3%A1mbricasWLAN/" class="md-nav__link">
+        Configuraciones de redes inalámbricas WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/14-ConceptosEnrutamiento/" class="md-nav__link">
+        Conceptos de enrutamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/15-EnrutamientoIPEstatico/" class="md-nav__link">
+        Enrutamiento IP Estático
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          3 Enterprise Networking Security AndAutomation ENSA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3 Enterprise Networking Security AndAutomation ENSA" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          3 Enterprise Networking Security AndAutomation ENSA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/01-ConceptosOSPFv2DeAreaUnica/" class="md-nav__link">
+        Conceptos de OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/02-ConfiguracionOSPFv2AreaUnica/" class="md-nav__link">
+        Configuración OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/03-ConceptosSeguridadRedes/" class="md-nav__link">
+        Conceptos de Seguridad en Redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/04-ACL/" class="md-nav__link">
+        ACL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/05-ACLconfiguracionIPv4/" class="md-nav__link">
+        ACL para configuración IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/06-NAT-IPv4/" class="md-nav__link">
+        NAT para IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/07-conceptosWAN/" class="md-nav__link">
+        Conceptos WAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/08-ConceptosVPNeIPsec/" class="md-nav__link">
+        Conceptos de VPN e IPsec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/09-ConceptosQoS/" class="md-nav__link">
+        Conceptos de QoS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/10-AdministracionDeRedes/" class="md-nav__link">
+        Administración de redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/11-Dise%C3%B1oDeRedes/" class="md-nav__link">
+        Diseño de redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/12-ResolucionDeProblemasDeRed/" class="md-nav__link">
+        Resolución de problemas de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/13-VirtualizacionDeRed/" class="md-nav__link">
+        Virtualización de Red
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cloud" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cloud/aws/" class="md-nav__link">
+        aws
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Curiosidades
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Curiosidades" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Curiosidades
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/Eliminar_contrase%C3%B1a_windows/" class="md-nav__link">
+        Eliminar contraseña windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/Lanzador_aplicaciones_en_gnome/" class="md-nav__link">
+        Lanzador aplicaciones en gnome
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/cambiar_color_promp_terminal/" class="md-nav__link">
+        Cambiar color promp terminal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/conky/" class="md-nav__link">
+        conky
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/openbox/" class="md-nav__link">
+        Openbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/qbit/" class="md-nav__link">
+        Qbit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/tmux/" class="md-nav__link">
+        Tmux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Desatendidas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Desatendidas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Desatendidas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/" class="md-nav__link">
+        Desatendidas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/Instalacion-desatendida-debian/" class="md-nav__link">
+        Instalacion desatendida debian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/desatendida-windows/" class="md-nav__link">
+        Desatendida windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/kikstart/" class="md-nav__link">
+        Kikstart
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Generar doc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Generar doc" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Generar doc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generar_doc/docsify/" class="md-nav__link">
+        Docsify
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generar_doc/remark/" class="md-nav__link">
+        Remark
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Lenguajes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lenguajes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Lenguajes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/Fundamentos_php/" class="md-nav__link">
+        Fundamentos php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/Shell/" class="md-nav__link">
+        Shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_3">
+          Python3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python3" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_3">
+          <span class="md-nav__icon md-icon"></span>
+          Python3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/Apuntes-Metodos/" class="md-nav__link">
+        Métodos de colecciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-Funcionalidades_avanzadas/" class="md-nav__link">
+        apuntes Funcionalidades avanzadas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-Herencia/" class="md-nav__link">
+        Herencias
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-distribucion/" class="md-nav__link">
+        Distribución
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-documentacion/" class="md-nav__link">
+        Documentación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-ficheros/" class="md-nav__link">
+        Apuntes ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-modulos/" class="md-nav__link">
+        Módulos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-orientado-objetos/" class="md-nav__link">
+        Orientado a objetos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-test/" class="md-nav__link">
+        Test
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-tkinter/" class="md-nav__link">
+        Tkinter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes_bases/" class="md-nav__link">
+        Apuntes bases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/argparse/" class="md-nav__link">
+        Argparse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_13" type="checkbox" id="__nav_10_3_13" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_3_13">
+          Fundamentos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fundamentos" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_3_13">
+          <span class="md-nav__icon md-icon"></span>
+          Fundamentos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/excepciones/" class="md-nav__link">
+        Las excepciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/funciones/" class="md-nav__link">
+        Funciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/fundamento/" class="md-nav__link">
+        Fundamentos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/manejo_de_datos/" class="md-nav__link">
+        Manejo de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/salida_por_pantalla/" class="md-nav__link">
+        Salida por pantalla
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Lpi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lpi" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Lpi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1">
+          101
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="101" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          101
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../101/101_Arquitectura_del_sistema/" class="md-nav__link">
+        101 Arquitectura del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../101/102_Instalacion_de_Linux_y_gestion_de_paquetes/" class="md-nav__link">
+        102 Instalación de Linux y gestión de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../101/103_Comandos_GNU_y_Linux/" class="md-nav__link">
+        103 Comandos GNU y Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../101/104_Dispositivos_sistema_de_archivos_y_estandar_jerarquia_de_archivos/" class="md-nav__link">
+        104 Dispositivos, sistema de archivos Linux y el estándar de jerarquia de archivos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" type="checkbox" id="__nav_11_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_2">
+          102
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="102" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          102
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/105.2_Scripting/" class="md-nav__link">
+        105.2 Scripting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/105_Shells/" class="md-nav__link">
+        105 Shells
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/106_Interfaces_de_usuario_y_escritorio/" class="md-nav__link">
+        106 Interfaces de usuario y escritorio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/107_tareas_de_administracion/" class="md-nav__link">
+        107 tareas de administración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/108_Servicios_esenciales_del_sistema/" class="md-nav__link">
+        108 Servicios esenciales del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/108_rsyslog_server/" class="md-nav__link">
+        rsyslog server central
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/109_Fundamentos_de_red/" class="md-nav__link">
+        109 Fundamentos de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/110_Seguridad/" class="md-nav__link">
+        110 Seguridad
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_3" type="checkbox" id="__nav_11_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_3">
+          201
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="201" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_3">
+          <span class="md-nav__icon md-icon"></span>
+          201
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../200_Planificaci%C3%B3n_de_la_capacidad/" class="md-nav__link">
+        200 Planificación de la capacidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../201_Kernel_Linux/" class="md-nav__link">
+        201 Kernel Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../202_Arranque_del%20_Sistema/" class="md-nav__link">
+        202 Arranque del  Sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          203 sistemas de archivos y dispositivos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        203 sistemas de archivos y dispositivos
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2031-manipular-sistemas-de-archivos" class="md-nav__link">
+    203.1 Manipular sistemas de archivos
+  </a>
+  
+    <nav class="md-nav" aria-label="203.1 Manipular sistemas de archivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-filesystem" class="md-nav__link">
+    Tipos de filesystem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administracion-del-swap" class="md-nav__link">
+    Administración del swap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#montaje-del-sistema-de-ficheros" class="md-nav__link">
+    Montaje del sistema de ficheros
+  </a>
+  
+    <nav class="md-nav" aria-label="Montaje del sistema de ficheros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#montaje-con-systemd" class="md-nav__link">
+    Montaje con Systemd
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2032-mantener-sistemas-de-archivos" class="md-nav__link">
+    203.2 Mantener sistemas de archivos
+  </a>
+  
+    <nav class="md-nav" aria-label="203.2 Mantener sistemas de archivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copias-de-seguridad-a-nivel-de-sistema-de-archivos" class="md-nav__link">
+    copias de seguridad a nivel de sistema de archivos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programas-de-copias-de-seguridad" class="md-nav__link">
+    Programas de copias de seguridad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revision-de-filesystems" class="md-nav__link">
+    Revisión de filesystems
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2033-crear-y-configurar-opciones" class="md-nav__link">
+    203.3 Crear y configurar opciones
+  </a>
+  
+    <nav class="md-nav" aria-label="203.3 Crear y configurar opciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encriptacion-de-datos" class="md-nav__link">
+    Encriptación de datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administracion-de-datos-almacenados" class="md-nav__link">
+    Administración de datos almacenados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-discos-iscsi" class="md-nav__link">
+    Gestión de discos iSCSI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duplicacion-y-sincronizacion-de-datos" class="md-nav__link">
+    Duplicación y sincronización de datos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../204_Administracion_avanzada_de_dispositivos_de_almacenamiento/" class="md-nav__link">
+        204 Administración avanzada de dispositivos de almacenamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../205_configuracion_de_red/" class="md-nav__link">
+        205 configuración de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../206_Mantenimiento_del_sistema/" class="md-nav__link">
+        206 Mantenimiento del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Exam_201_Detailed_Objectives/" class="md-nav__link">
+        Exam 201: Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4">
+          202
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="202" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          202
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/207_Servidor_de_nombres_de_dominio/" class="md-nav__link">
+        207 Servidor de nombres de dominio (DNS)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/208.4_servicios_web_nginx/" class="md-nav__link">
+        208 servicios web nginx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/208_servicios_web/" class="md-nav__link">
+        208 servicios web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/209_compartir_ficheros/" class="md-nav__link">
+        209 compartir ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/210_gestion_de_clientes_de_red/" class="md-nav__link">
+        210 gestión de clientes de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/211_Servicios_E-Mail/" class="md-nav__link">
+        211 Servicios de E-Mail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/212_Seguridad_del_sistema/" class="md-nav__link">
+        212 Seguridad del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/Exam_202_Detailed_Objectives/" class="md-nav__link">
+        Exam 202 Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_5" type="checkbox" id="__nav_11_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_5">
+          303
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="303" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_5">
+          <span class="md-nav__icon md-icon"></span>
+          303
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/331.3_Encrypted_File_Systems/" class="md-nav__link">
+        Topic 331: Cryptography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/332.3_Resource_Control/" class="md-nav__link">
+        Topic 332: Host Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/333.1_Discretionary_Access_Control/" class="md-nav__link">
+        333.1 Discretionary Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/333.2_Mandatory_Access_Control/" class="md-nav__link">
+        333.2 Mandatory Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/334.3.2_Packet_Filtering/" class="md-nav__link">
+        Firewalld
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/334.3_Packet_Filtering/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/extra/" class="md-nav__link">
+        Extra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/freeIpa/" class="md-nav__link">
+        freeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/nose/" class="md-nav__link">
+        Nose
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/objetivos/" class="md-nav__link">
+        Objetivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/pendiente/" class="md-nav__link">
+        Pendiente
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_6" type="checkbox" id="__nav_11_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_6">
+          304
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="304" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_6">
+          <span class="md-nav__icon md-icon"></span>
+          304
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../304/ClusterPacemakerDRBD/" class="md-nav__link">
+        Cluster Pacemaker DRBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../304/Clusterfs/" class="md-nav__link">
+        Clusterfs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../304/Haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../304/Montaje%20isard-nas1%20y%20isard-nas2/" class="md-nav__link">
+        Montaje isard-nas1 y isard-nas2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../304/cluster_basico/" class="md-nav__link">
+        Cluster en centos con pacemaker/corosync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../304/clvm_gfs2_en_clusterPacemaker/" class="md-nav__link">
+        clvm gfs2 en clusterPacemaker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../304/haproxy_pacemaker/" class="md-nav__link">
+        Haproxy pacemaker
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_7" type="checkbox" id="__nav_11_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_7">
+          305
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="305" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_7">
+          <span class="md-nav__icon md-icon"></span>
+          305
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/351.1VirtualizationConceptsandTheory/" class="md-nav__link">
+        351.1 Virtualization Concepts and Theory (weight: 6)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/351.2Xen/" class="md-nav__link">
+        351.2 Xen (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/351.3Qemu/" class="md-nav__link">
+        351.3 QEMU (weight: 4)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/351.4LibvirtVirtualMachineManageme/" class="md-nav__link">
+        351.4 Libvirt Virtual Machine Management (weight: 9)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/351.5VirtualMachineDiskImageManagem/" class="md-nav__link">
+        351.5 Virtual Machine Disk Image Management (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/352.1ContainerVirtualizationConcepts/" class="md-nav__link">
+        352.1 Container Virtualization Concepts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/352.3Docker/" class="md-nav__link">
+        352.3 Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/352.4ContainerOrchestrationPlatforms/" class="md-nav__link">
+        352.4ContainerOrchestrationPlatforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/352LXC/" class="md-nav__link">
+        352.2 LXC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/353.1CloudManagementTools/" class="md-nav__link">
+        353.1 Cloud Management Tools (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/353.2Packer/" class="md-nav__link">
+        353.2 Packer (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/353.3cloud-init/" class="md-nav__link">
+        353.3 cloud-init (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/353.4Vagrant/" class="md-nav__link">
+        353.4 Vagrant (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          Seguridad
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seguridad" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Seguridad
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/Certificados-Digitales/" class="md-nav__link">
+        Certificados Digitales
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/Kerberos/" class="md-nav__link">
+        Kerberos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/OpenVpn/" class="md-nav__link">
+        OpenVpn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/The-crazy-thing/" class="md-nav__link">
+        The crazy thing!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/TunelSSH/" class="md-nav__link">
+        Tunel SSH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/lvm/" class="md-nav__link">
+        Lvm logical volum manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/practica-ssl-tls/" class="md-nav__link">
+        Practica ssl tls
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_10" type="checkbox" id="__nav_12_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_10">
+          Backups
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Backups" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_10">
+          <span class="md-nav__icon md-icon"></span>
+          Backups
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/Borg_basico/" class="md-nav__link">
+        Borg básico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/Tar/" class="md-nav__link">
+        Tar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/rdiff-backup/" class="md-nav__link">
+        rdiff-backup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/rsync/" class="md-nav__link">
+        rsync
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_11" type="checkbox" id="__nav_12_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_11">
+          Cortafuegos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cortafuegos" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_11">
+          <span class="md-nav__icon md-icon"></span>
+          Cortafuegos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/cortafuegos/Iptables/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Sistemas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sistemas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Sistemas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Actualizar_hora_sys_o_bios/" class="md-nav__link">
+        Gestionar Hora
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Arranque-del-sistema/" class="md-nav__link">
+        Arranque del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Estructura_de_directorios/" class="md-nav__link">
+        Estructura de directorios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Logs/" class="md-nav__link">
+        Logs del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Systemd/" class="md-nav__link">
+        Systemd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/ZFS/" class="md-nav__link">
+        ZFS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/chroot/" class="md-nav__link">
+        Chroot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/disco/" class="md-nav__link">
+        Disco
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/gestores_de_paquetes/" class="md-nav__link">
+        Gestores de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/getenforce/" class="md-nav__link">
+        getenforce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/grub/" class="md-nav__link">
+        Grub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/home/" class="md-nav__link">
+        Cambiar /home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/ip_est%C3%A1tica/" class="md-nav__link">
+        ip estática raspberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/pam/" class="md-nav__link">
+        Pam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/xinetd/" class="md-nav__link">
+        xinetd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_17" type="checkbox" id="__nav_13_17" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13_17">
+          Automatizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Automatizacion" data-md-level="2">
+        <label class="md-nav__title" for="__nav_13_17">
+          <span class="md-nav__icon md-icon"></span>
+          Automatizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/automatizacion/ansible/" class="md-nav__link">
+        Ansible
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/automatizacion/tareas_programadas/" class="md-nav__link">
+        Tareas Programadas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Virtualizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virtualizacion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Virtualizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/Docker-basico/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/Lxc/" class="md-nav__link">
+        LXC y LXD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/Vagrant/" class="md-nav__link">
+        Vagrant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/kubernetes/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/swarm/" class="md-nav__link">
+        Swarm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_6" type="checkbox" id="__nav_14_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14_6">
+          Virt manager
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virt manager" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_6">
+          <span class="md-nav__icon md-icon"></span>
+          Virt manager
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/Backing_chain/" class="md-nav__link">
+        Backing_chain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/Clonar/" class="md-nav__link">
+        Clonar de virtual a físico y de físico a virtual.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/Instalacion_de_virtualizacion_fedora/" class="md-nav__link">
+        Instalación de virtualización fedora
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/acceder_consola_desde_virsh/" class="md-nav__link">
+        acceder consola desde virsh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/crear_red_aislada/" class="md-nav__link">
+        Crear red aislada
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/instalar_maquina_virtual_virt-install/" class="md-nav__link">
+        virt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2031-manipular-sistemas-de-archivos" class="md-nav__link">
+    203.1 Manipular sistemas de archivos
+  </a>
+  
+    <nav class="md-nav" aria-label="203.1 Manipular sistemas de archivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-filesystem" class="md-nav__link">
+    Tipos de filesystem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administracion-del-swap" class="md-nav__link">
+    Administración del swap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#montaje-del-sistema-de-ficheros" class="md-nav__link">
+    Montaje del sistema de ficheros
+  </a>
+  
+    <nav class="md-nav" aria-label="Montaje del sistema de ficheros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#montaje-con-systemd" class="md-nav__link">
+    Montaje con Systemd
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2032-mantener-sistemas-de-archivos" class="md-nav__link">
+    203.2 Mantener sistemas de archivos
+  </a>
+  
+    <nav class="md-nav" aria-label="203.2 Mantener sistemas de archivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copias-de-seguridad-a-nivel-de-sistema-de-archivos" class="md-nav__link">
+    copias de seguridad a nivel de sistema de archivos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programas-de-copias-de-seguridad" class="md-nav__link">
+    Programas de copias de seguridad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revision-de-filesystems" class="md-nav__link">
+    Revisión de filesystems
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2033-crear-y-configurar-opciones" class="md-nav__link">
+    203.3 Crear y configurar opciones
+  </a>
+  
+    <nav class="md-nav" aria-label="203.3 Crear y configurar opciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encriptacion-de-datos" class="md-nav__link">
+    Encriptación de datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administracion-de-datos-almacenados" class="md-nav__link">
+    Administración de datos almacenados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-discos-iscsi" class="md-nav__link">
+    Gestión de discos iSCSI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duplicacion-y-sincronizacion-de-datos" class="md-nav__link">
+    Duplicación y sincronización de datos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/jorgepastorr/apuntes/edit/master/docs/lpi/201/203_sistemas_de_archivos_y_dispositivos.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<h1 id="203-sistemas-de-archivos-y-dispositivos">203 sistemas de archivos y dispositivos</h1>
+<h2 id="2031-manipular-sistemas-de-archivos">203.1 Manipular sistemas de archivos</h2>
+<h3 id="tipos-de-filesystem">Tipos de filesystem</h3>
+<table>
+<thead>
+<tr>
+<th>fisic</th>
+<th>filesystem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EXT2</td>
+<td>versión base de ext, archivos de hasta 2TB y volumen máximo 32TB, fecha limte de archivo en 2038.</td>
+</tr>
+<tr>
+<td>EXT3</td>
+<td>se añade un registro de transacciones sobre la version ext2.</td>
+</tr>
+<tr>
+<td>EXT4</td>
+<td>archivos hasta 16TB y volumenes 1EB, fecha limite de archivo en año 2514.</td>
+</tr>
+<tr>
+<td>reiserfs</td>
+<td>Este tipo de sistema de archivos ya no se mantiene, por lo que se debería evitar. Tenia un rendimiento ligeramente mejor a ext3</td>
+</tr>
+<tr>
+<td>XFS</td>
+<td>- Permite archivos  de hasta 8EB y una partición de 16EB <br>- Las operaciones de escritura sobre los metadatos se escriben en el registro antes de ejecutarse, lo que permite garantizar la coherencia del sistema de archivos en caso de fallo físico. <br>- Permite realizar de forma simultánea diferentes operaciones de entrada/salida en un mismo sistema de archivos<br>- Permite crear snapshots, Se puede ampliar en caliente, herramientas especificas</td>
+</tr>
+<tr>
+<td>BTRFS</td>
+<td>- implementa la posibilidad de compresión, de copia de seguridad en línea, de redundancia de datos, de snapshot, de redimensionamiento en línea, etc.<br>- <code>multi-devices</code>: se puede crear un unico sistema de ficheros en varias particiones <code>mkfs.btrfs /dev/device1 /dev/device2 /dev/device3</code><br>- <code>Subvolumenes</code>: se puede crear subvolúmenes y snapshots(instantaneas) <code>btrfs subvolume create /mnt/punto-montaje/subvolumen1</code>  <br>- <a href="https://juanjoselo.wordpress.com/2018/01/28/uso-de-btrfs-en-linux/">mas información sobre btrfs</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Virtual filesystem o Pseudofilesystem</strong></p>
+<p>En los sistemas Linux hay sistemas de archivos virtuales que solo están presentes en memoria sin ocupar espacio en disco.</p>
+<p><code>proc</code> El sistema de archivos virtual <strong>proc</strong> (o <strong>procfs</strong>), generalmente montado en el directorio <code>/proc</code>, permite la visualización de los elementos del sistema relacionados con la gestión de procesos por parte del núcleo.</p>
+<p><code>sys</code> El sistema de archivos virtual <strong>sys</strong> (o <strong>sysfs</strong>), generalmente montado en el directorio <code>/sys</code>, permite visualizar elementos de sistema relacionados con los periféricos.</p>
+<p><strong>Creación sistem de archivos</strong></p>
+<p>Para crear los sistemas de archivos el comando más utilizado es <code>mkfs</code> junto a sus diferentes extensiones adecuadas a cada sistema de archivos</p>
+<div class="highlight"><pre><span></span><code>mkfs<span class="w"> </span>-t<span class="w"> </span>tipo<span class="w"> </span>dispositivo<span class="w"> </span>
+-c<span class="w">  </span><span class="c1"># comprovar bloques defectuosos</span>
+
+sudo<span class="w"> </span>mkfs.ext4<span class="w"> </span>/dev/sdb1
+sudo<span class="w"> </span>mkfs<span class="w"> </span>-t<span class="w"> </span>ext4<span class="w"> </span>/dev/sdb1
+
+mkfs.ext4
+mkfs.vfat
+mkfs.ntfs
+mkfs.btrfs
+mkfs.xfs
+mkswap
+</code></pre></div>
+<h3 id="administracion-del-swap">Administración del swap</h3>
+<p>El swap es una partición en la que la RAM utiliza para grabar datos en caso de que el sistema este llegando a sus límites y así evitar el colapso del sistema. </p>
+<p>La gran época del swap se dio cuando la memoria tenía un coste tan caro que era necesario encontrar para el servidor un compromiso entre el coste del sistema y el rendimiento que podía obtener.</p>
+<p>Hoy en  día aun que se crea por defecto en la instalación básica, no es obligatoria. El tamaño a establecer como Swap siempre a sido un dilema, antiguamente se decia igual o doblar el tamaño de RAM. En los tiempos que corren dedicar 4G al swap es  suficiente.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># crear filesystem swap</span>
+mkswap<span class="w"> </span>espacio_de_almacenamiento
+/ruta/archivo
+/dev/device
+-L<span class="w"> </span>label
+-U<span class="w"> </span>uuid
+
+swapon<span class="w"> </span>espacio_de_almacenamiento
+-s<span class="w">  </span><span class="c1"># visualizar espacio  swap ( /proc/swaps)</span>
+-a<span class="w">  </span><span class="c1"># montar swap definida en /etc/fstab</span>
+
+swapoff<span class="w"> </span>espacio_de_almacenamiento
+-a<span class="w">  </span><span class="c1"># desmontar swap definida en /etc/fstab</span>
+</code></pre></div>
+<p>Por defecto las distribuciones empiezan a utilizar swap cuando la ram está a un 40% de su capacidad, y lo ideal es cambiarlo a 10% o 0%.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>sysctl<span class="w"> </span>-a<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>vm.swappiness<span class="w"> </span><span class="c1"># ver porcentaje actual</span>
+sudo<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>vm.swappiness<span class="o">=</span><span class="m">10</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/sysctl.conf<span class="w">  </span><span class="c1"># definir porcentaje</span>
+sudo<span class="w"> </span>sysctl<span class="w"> </span>-p<span class="w">  </span><span class="c1"># guardar</span>
+</code></pre></div>
+<h3 id="montaje-del-sistema-de-ficheros">Montaje del sistema de ficheros</h3>
+<p>El comando más usado para montar  sistemas de ficheros localmente es <code>mount</code> junto <code>umount</code> para desmontarlos.</p>
+<div class="highlight"><pre><span></span><code>mount<span class="w"> </span><span class="o">[</span>-t<span class="w"> </span>tipo_fs<span class="o">]</span><span class="w"> </span><span class="o">[</span>-o<span class="w"> </span>opciones<span class="o">]</span><span class="w"> </span>dispositivo<span class="w"> </span>punto_de_montaje
+umount<span class="w"> </span><span class="o">[</span>-O<span class="w"> </span>opciones<span class="o">]</span><span class="w"> </span><span class="o">[</span>dispositivo<span class="o">]</span><span class="w"> </span>punto_de_montaje<span class="w"> </span>
+-f<span class="w">  </span><span class="c1"># forzar desmontaje</span>
+-l<span class="w">  </span><span class="c1"># desmontar cuando todo este liberado</span>
+
+<span class="c1"># visualizan filesystem montados</span>
+mount
+/etc/mtab
+/proc/mounts
+</code></pre></div>
+<p><strong>/etc/fstab</strong> es el archivo donde se guardan los puntos de montaje que se haran al arrancar el  sistema</p>
+<p>Este es un archivo de texto, donde cada línea describe un sistema de  archivos que se va a montar, con seis campos por línea en el siguiente  orden:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># &lt;file system&gt; &lt;mount point&gt;   &lt;type&gt;  &lt;options&gt;       &lt;dump&gt;  &lt;pass&gt;</span>
+/dev/sda5<span class="w">       </span>/<span class="w">               </span>ext4<span class="w">    </span><span class="nv">errors</span><span class="o">=</span>remount-ro<span class="w"> </span><span class="m">0</span><span class="w">       </span><span class="m">1</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fyle_sistem</code></td>
+<td>hace referencia a una partición o recurso.</td>
+</tr>
+<tr>
+<td><code>mount_point</code></td>
+<td>Dónde se montará el sistema de archivos.</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>El tipo de sistema de archivos. (ext4, ntfs, xfs, vfat, ...)</td>
+</tr>
+<tr>
+<td><code>options</code></td>
+<td>las opciones para montar un dispositivo, si son varias se separan por comas. Para opciones por defcto se utiliza <strong>defaults</strong></td>
+</tr>
+<tr>
+<td><code>dump</code></td>
+<td>si se utiliza dump para hacer copias de seguridad en esta columna podemos indicar 1 para indicar que se copie la partición o un 0 para ignorarla.</td>
+</tr>
+<tr>
+<td><code>pass</code></td>
+<td>Cuando es distinto de cero, define el orden en el que se comprobarán los sistemas de archivos durante el arranque. Normalmente es cero.</td>
+</tr>
+</tbody>
+</table>
+<p>Las diferentes formas de identificar un <code>file system</code></p>
+<div class="highlight"><pre><span></span><code>/dev/sdax<span class="w"> </span><span class="c1"># nombre particion</span>
+<span class="nv">UUID</span><span class="o">=</span>854f5443...<span class="w">  </span><span class="c1"># Uid completo de particion</span>
+<span class="nv">LABEL</span><span class="o">=</span>sistema<span class="w"> </span><span class="c1"># label de partición </span>
+/dev/sr0<span class="w">      </span><span class="c1"># cdrom/dvd</span>
+<span class="m">192</span>.168.88.10:/ruta<span class="w">   </span><span class="c1"># dispositivo de red  nfs</span>
+/mnt/imagen.raw<span class="w">   </span><span class="c1"># imagen en ruta del sistema</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Diferentes opciones de montaje de file sistem.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default</code></td>
+<td>Englova las siguientes opciones</td>
+</tr>
+<tr>
+<td><code>ro, rw</code></td>
+<td>Solo lectura o lectura y escritura.</td>
+</tr>
+<tr>
+<td><code>noauto</code></td>
+<td>no se montara automáticamente en el arranque del sistema ni con <code>mount -a</code></td>
+</tr>
+<tr>
+<td><code>users</code></td>
+<td>cualquier usuario puede montar  y desmontar una linea con la opción users, indiferentemente quien lo aya montado.</td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td>puede montar cualquier usuario, pero solo el usuario que lo monta puede desmontarlo.</td>
+</tr>
+<tr>
+<td><code>group</code></td>
+<td>Permite a un usuario montar el sistema de archivos si el usuario  pertenece al mismo grupo que posee el dispositivo que lo contiene.</td>
+</tr>
+<tr>
+<td><code>exec, noexec</code></td>
+<td>no se pueden ejecutar archivos en esa partición.</td>
+</tr>
+<tr>
+<td><code>async</code></td>
+<td>utiliza bufers para el uso de tareas en el disco, <code>sync</code>  no utiliza bufers y escribe al momento.</td>
+</tr>
+<tr>
+<td><code>atime, noatime</code></td>
+<td>por defecto, cada vez que se lee un archivo, se actualiza la información de tiempo de acceso.</td>
+</tr>
+<tr>
+<td><code>dev, nodev</code></td>
+<td>se deben interpretarse los dispositivos de caracteres o bloques en el sistema de archivos</td>
+</tr>
+<tr>
+<td><code>suid, nosuid</code></td>
+<td>Permite, o no, que los bits SETUID y SETGID surtan efecto.</td>
+</tr>
+<tr>
+<td><code>remount</code></td>
+<td>sta opción no es par <code>/etc/fstab</code>  sino para el comando <code>mount -o remount,ro /dev/sdb1</code> que remontara un dispositivo en solo lectura</td>
+</tr>
+</tbody>
+</table>
+<h4 id="montaje-con-systemd">Montaje con Systemd</h4>
+<p>Systemd también se puede utilizar para gestionar el montaje (y montaje automático) de sistemas de archivos.</p>
+<p>Para utilizar esta función de systemd, debe crear un archivo de configuración llamado <em>mount unit</em>. Cada volumen que se va a montar tiene su propia unidad de montaje y es necesario colocarlos en <code>/etc/systemd/system/</code>.</p>
+<p><em>mnt-external.mount</em></p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>Unit<span class="o">]</span>
+<span class="nv">Description</span><span class="o">=</span>External<span class="w"> </span>data<span class="w"> </span>disk
+
+<span class="o">[</span>Mount<span class="o">]</span>
+<span class="nv">What</span><span class="o">=</span>/dev/disk/by-uuid/56C11DCC5D2E1334
+<span class="nv">Where</span><span class="o">=</span>/mnt/external
+<span class="nv">Type</span><span class="o">=</span>ntfs
+<span class="nv">Options</span><span class="o">=</span>defaults
+
+<span class="o">[</span>Install<span class="o">]</span>
+<span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</code></pre></div>
+<blockquote>
+<p>Para que funcione correctamente, la unidad de montaje <em>debe</em> tener el mismo nombre que el punto de montaje. En este caso, el punto de montaje es <code>/mnt/external</code>, por lo que el archivo debe llamarse <code>mnt-external.mount</code>.</p>
+</blockquote>
+<p>Despues de esto se debe reiniciar el demonio de systemd e inciar la unidad:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload<span class="w">    </span><span class="c1"># recargar systemd</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>mnt-external.mount<span class="w"> </span><span class="c1"># iniciar unidad de montaje</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>mnt-external.mount<span class="w">    </span><span class="c1"># habilitar unidad en el arranque</span>
+</code></pre></div>
+<h2 id="2032-mantener-sistemas-de-archivos">203.2 Mantener sistemas de archivos</h2>
+<p><strong>tar</strong> es un clasico en copias de seguridad en Linux, esto se deve a la versatilidad a la hora de crear copias de seguridad a nivell de archivos.</p>
+<p>opciones para copia de seguridad</p>
+<ul>
+<li>
+<p>Totales: se copian todos los datos</p>
+</li>
+<li>
+<p>Diferenciales: se copian sólo los que se hayan modificado desde una fecha indicada. Se utiliza la opción <code>-N</code> seguido de la fecha</p>
+</li>
+<li>incrementales: se copian sólo los ficheros que se han modificado desde la última copia. Se utiliza la opción <code>-g</code> seguido de la ruta del fichero de registro.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>-c<span class="w"> </span><span class="c1"># comprime</span>
+-x<span class="w"> </span><span class="c1"># descomprime</span>
+-z<span class="w"> </span><span class="c1"># gzip</span>
+-J<span class="w"> </span><span class="c1"># xz</span>
+-j<span class="w"> </span><span class="c1"># bzip2</span>
+-p<span class="w"> </span><span class="c1"># conserva permisos</span>
+-h<span class="w"> </span><span class="c1"># conservar softlinks</span>
+-v<span class="w"> </span><span class="c1"># muestra informacion vervose</span>
+-P<span class="w"> </span><span class="c1"># conserva ruta absoluta</span>
+-f<span class="w"> </span><span class="c1"># referencia a archivos       </span>
+-r<span class="w"> </span><span class="c1"># añade elementos a un fichero compacto</span>
+-t<span class="w"> </span><span class="c1"># ver interior tar</span>
+-u<span class="w"> </span><span class="c1"># añadir archivo a tar</span>
+--exclude<span class="w"> </span><span class="c1"># Excluir directorio o fichero</span>
+--delete<span class="w"> </span><span class="c1"># borrar ruta del interior del tar</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>cf<span class="w"> </span>file.tar<span class="w"> </span>files*
+tar<span class="w"> </span>xf<span class="w"> </span>file.tar
+
+tar<span class="w"> </span>czf<span class="w"> </span>file.tar.gz<span class="w"> </span>files*
+tar<span class="w"> </span>xzf<span class="w"> </span>file.tar.gz
+
+find<span class="w"> </span>/etc<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-print0<span class="w"> </span><span class="p">|</span><span class="w"> </span>tar<span class="w"> </span>-cJ<span class="w"> </span>-f<span class="w"> </span>/srv/backup/etc.tar.xz<span class="w"> </span>-T<span class="w"> </span>-<span class="w"> </span>--null
+</code></pre></div>
+<p>La opción <code>-T</code> indica que son nombres extraidos de un fichero o comando, y la opción <code>--null</code> que el caracter separador es nulo.</p>
+<p><strong>cpio</strong> tiene una función parecida a <code>tar</code>. Copia ficheros  y desde n solo archivo. Utiliza la enttrada y salida estándar para el origen y destino de datos.</p>
+<div class="highlight"><pre><span></span><code>-o<span class="w">  </span><span class="c1"># crear un archivo  con el contenido que le indiquemos</span>
+-i<span class="w">  </span><span class="c1"># extrae el contenido de un fichero</span>
+-t<span class="w">  </span><span class="c1"># junto con &quot;-i&quot; lista el contenido de un archivo de recopilación existente</span>
+-p<span class="w">  </span><span class="c1"># copia una estructura de directorios a otro lugar</span>
+
+find<span class="w"> </span>/etc/<span class="w"> </span><span class="p">|</span><span class="w"> </span>cpio<span class="w"> </span>-o<span class="w"> </span>&gt;<span class="w"> </span>copia_etc.cpio
+cpio<span class="w"> </span>-i<span class="w"> </span>&lt;<span class="w"> </span>copia_etc.cpio
+
+find<span class="w"> </span>/etc/<span class="w"> </span><span class="p">|</span><span class="w"> </span>cpio<span class="w"> </span>-o<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>copia_etc.cpio.ggz
+</code></pre></div>
+<p><strong>Btrfs</strong> es un nuevo sistema de archivos de copia en escritura (CoW) para Linux  destinado a implementar funciones avanzadas mientras se enfoca en la  tolerancia a fallas, reparación y fácil administración.</p>
+<p>Algunas ventajas son: crear sistema de ficheros en multiples discos, compresión  de datos, suvbolumenes y snapshots, soporta raid.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># crear una particion en varios discos</span>
+mkfs.btrfs<span class="w"> </span>/dev/sdb<span class="w"> </span>/dev/sdc<span class="w"> </span>/dev/sdd<span class="w"> </span>/dev/sde
+<span class="c1"># creacion raid 0</span>
+mkfs.btrfs<span class="w"> </span>-d<span class="w"> </span>raid0<span class="w"> </span>/dev/sdb<span class="w"> </span>/dev/sdc
+<span class="c1"># raid10 con datos y metadatos </span>
+mkfs.btrfs<span class="w"> </span>-m<span class="w"> </span>raid10<span class="w"> </span>-d<span class="w"> </span>raid10<span class="w"> </span>/dev/sdb<span class="w"> </span>/dev/sdc<span class="w"> </span>/dev/sdd<span class="w"> </span>/dev/sde
+<span class="c1"># no duplicar datos en una unidad</span>
+mkfs.btrfs<span class="w"> </span>-m<span class="w"> </span>single<span class="w"> </span>/dev/sdb
+
+btrfs<span class="w"> </span>filesystem<span class="w"> </span>show<span class="w">   </span><span class="c1"># ver sistema de archivos creados</span>
+
+btrfs<span class="w"> </span>subvolume<span class="w"> </span>create<span class="w"> </span>/home<span class="w">    </span><span class="c1"># crear subvolumen de /home</span>
+btrfs<span class="w"> </span>subvolume<span class="w"> </span>snapshot<span class="w"> </span>/home/<span class="w"> </span>/home-snap<span class="w">  </span><span class="c1"># crear snapshot</span>
+btrfs<span class="w"> </span>subvolume<span class="w"> </span>delete<span class="w"> </span>/home-snap/<span class="w">  </span><span class="c1"># eliminar instantanea</span>
+</code></pre></div>
+<p><strong>ZFS</strong> actualmente propiedad de Oracle Corporation, fue desarrollado en Sun Microsystems  como un sistema de archivos de próxima generación destinado a una  escalabilidad casi infinita y libre de paradigmas de diseño  tradicionales.</p>
+<p>las principales ventajas de zfs son: alta tolerancia a fallos, almacenamiento casi ilimitado, gestion hibrida de volumen, compresion, snapshots, volumenes(zvols), ...</p>
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>-m<span class="w"> </span>/tank<span class="w"> </span>tank<span class="w"> </span>/dev/vdb<span class="w">  </span><span class="c1"># crear volumenes</span>
+zpool<span class="w"> </span>scrub<span class="w"> </span>tank<span class="w">    </span><span class="c1"># añadir control de fallos al volumen</span>
+zpool<span class="w"> </span>list<span class="w"> </span>
+zpool<span class="w"> </span>status<span class="w"> </span>
+zpool<span class="w"> </span><span class="nb">history</span><span class="w">   </span>
+
+<span class="c1"># creear subvolumen con compresion</span>
+zfs<span class="w"> </span>create<span class="w"> </span>-o<span class="w"> </span><span class="nv">compression</span><span class="o">=</span>on<span class="w"> </span>tank/documents<span class="w"> </span>
+
+zfs<span class="w"> </span>create<span class="w"> </span>tank/documents
+zfs<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">compression</span><span class="o">=</span>on<span class="w"> </span>tank/documents
+
+zfs<span class="w"> </span>list<span class="w"> </span>
+
+<span class="c1"># snapshots</span>
+zfs<span class="w"> </span>snapshot<span class="w"> </span>tank/documents@backup
+zfs<span class="w"> </span>list<span class="w"> </span>-t<span class="w"> </span>snapshot
+ll<span class="w"> </span>/tank/documents/.zfs/snapshot/backup
+</code></pre></div>
+<h3 id="copias-de-seguridad-a-nivel-de-sistema-de-archivos">copias de seguridad a nivel de sistema de archivos</h3>
+<p>Las utilidades <strong>dump</strong> y <strong>restore</strong> permiten realizar copias de seguridad incrementales y la restauración de un sistema de archivos entero.</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span>dump<span class="w"> </span><span class="m">0</span><span class="w"> </span>-f<span class="w"> </span>/root/cs<span class="w"> </span>/dev/sdb1<span class="w"> </span>
+<span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="c1"># n nivel de incremento 0 copia completa</span>
+<span class="w"> </span>-f<span class="w"> </span><span class="c1"># archivo destino</span>
+
+<span class="w"> </span>restore<span class="w">  </span>-rvf<span class="w"> </span>/root/cs
+<span class="w"> </span>-r<span class="w"> </span><span class="c1"># realizar restauracion</span>
+<span class="w"> </span>-f<span class="w"> </span><span class="c1"># fichero de restauración</span>
+</code></pre></div>
+<p>Los sistemas de ficheros xfs tienen sus propias herramientas <code>xfsdump xfsrestore</code></p>
+<div class="highlight"><pre><span></span><code>xfsdump<span class="w"> </span>-f<span class="w"> </span>file.dump<span class="w"> </span>/dev/sdb2
+-L<span class="w">  </span><span class="c1"># añadir etiqueta</span>
+-f<span class="w">  </span><span class="c1"># modo desatendido</span>
+-E<span class="w">  </span><span class="c1"># sobreescritura</span>
+
+xfsrestore<span class="w"> </span>-f<span class="w"> </span>file.dump<span class="w"> </span>dir-destino
+-t<span class="w">  </span><span class="c1"># ver contenido del dump</span>
+-f<span class="w">   </span><span class="c1"># fichero de dump</span>
+-v<span class="w"> </span>trace<span class="w">    </span><span class="c1"># visualizacion detallada</span>
+</code></pre></div>
+<h3 id="programas-de-copias-de-seguridad">Programas de copias de seguridad</h3>
+<p><strong>AMANDA</strong> (Advanced Maryland Automatic Network Disk Archiver) es una solución de copias de seguridad creada inicialmente por la universidad de Maryland con licencia BSD. Disponible con licencia libre (gratuita) o comercial, AMANDA permite hacer copias de seguridad de forma local o en red, en discos o en cintas, de los datos de sistemas Linux/Unix o Windows.</p>
+<p><strong>Bacula</strong> es un programa con licencia GPL que permite crear copias de seguridad de forma local o en red, en discos o en cintas, de los datos de sistemas Linux/Unix o Windows.</p>
+<p><strong>BackupPC</strong> es un programa con licencia GPL que permite crear copias de seguridad de forma local o en red, en discos o en cintas, de los datos de sistemas Linux/Unix o Windows.</p>
+<h3 id="revision-de-filesystems">Revisión de filesystems</h3>
+<p><strong>fsck</strong> verifica la integridad del sistema de ficheros. Utiliza un comando distinto dependiendo del tipo  de sistema de ficheros a analizar:</p>
+<ul>
+<li><code>e2fsck</code> para familia ext</li>
+<li><code>dosfsckl</code> para dos/fat</li>
+<li><code>reiserfsck</code> para raiserFS</li>
+<li><code>xfs_check, xfs_repair</code> para xfs</li>
+</ul>
+<p>Opciones fsck:</p>
+<div class="highlight"><pre><span></span><code>-A<span class="w"> </span>verifica<span class="w"> </span>todos<span class="w"> </span>los<span class="w"> </span>sistemas<span class="w"> </span>de<span class="w"> </span>fstab
+-C<span class="w"> </span>indica<span class="w"> </span>el<span class="w"> </span>progreso
+-V<span class="w"> </span>salida<span class="w"> </span>detallada
+-N<span class="w"> </span>simular<span class="w"> </span>verificación
+-f<span class="w"> </span>fuerza<span class="w"> </span>verificación
+-p<span class="w"> </span>repara<span class="w"> </span>sin<span class="w"> </span>preguntar
+</code></pre></div>
+<p>Para verificar un sistema de ficheros la partición a de estar desmontada obligatoriamente</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>fsck.ext4<span class="w">  </span>/dev/particion
+</code></pre></div>
+<p><strong>dumpe2fs</strong> muestra información técnica sobre el sistema de ficheros que le pasemos como parametro. es recomendabl usar la opción <code>-h</code> para mostrar unicamente la información más importante <code>dumpe2fs -h /dev/particion</code></p>
+<p><strong>tune2fs</strong> Modifica opciones del sistema de ficheros, es muy extensa y técnica esta orden ya que modificar las opciones del sistema de ficheros puede ser en algunos casos peligroso. Las opciones más sencillas serian:</p>
+<div class="highlight"><pre><span></span><code>-l<span class="w"> </span><span class="c1"># ver parametros actuales</span>
+-c<span class="w"> </span><span class="c1"># numero maximo de montajes tras los que se hara una verificación</span>
+-i<span class="w"> </span><span class="c1"># periodo maximo entre comprobaciones, se usa d,w y m para dia, semana y mes</span>
+tune2fs<span class="w"> </span>-i<span class="w"> </span>1m<span class="w"> </span>/dev/sdb1
+
+-m<span class="w"> </span><span class="c1"># porcentaje de espacio reservado para root</span>
+-L<span class="w"> </span><span class="c1"># estblece etiqueta del volumen</span>
+-U<span class="w"> </span><span class="o">[</span>uuid<span class="p">|</span>random<span class="p">|</span>time<span class="o">]</span><span class="c1"># añadir UUID</span>
+
+-j<span class="w">  </span>dispositivo<span class="w"> </span><span class="c1"># convertir de ext2 a ext3</span>
+-0<span class="w"> </span>extents,uninit_bs,div_index<span class="w"> </span>dispositivo<span class="w"> </span><span class="c1"># convertir de ext3 a ext4</span>
+
+<span class="c1"># cambiar espacio reservado de root a 1% y aññadir label buster</span>
+sudo<span class="w"> </span>tune2fs<span class="w"> </span>-m<span class="w"> </span><span class="m">1</span><span class="w"> </span>-L<span class="w"> </span>buster<span class="w"> </span>/dev/sda3
+</code></pre></div>
+<p><strong>XFS</strong> tiene sus propios comandos para verificar su sistema de archivos:</p>
+<ul>
+<li>
+<p><code>xfs_repair</code> es el equivalente a fsck, para sistemas XFS <code>xfs_repair /dev/sdaX</code> </p>
+</li>
+<li>
+<p><code>xfs_db</code> es una herramienta de depuracion de xfs, contiene sus propios subcomandos</p>
+</li>
+<li>
+<p><code>xfs_fsr</code> defragmenta el sistema de ficheros, reorganiza sus trozos para que estén juntos <code>xfs_fsr /dev/sdaX</code> </p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>xfs-info<span class="w"> </span>device<span class="p">|</span>puntoMontaje
+
+xfs_reapir<span class="w"> </span>-n<span class="w"> </span>/dev/sda1<span class="w"> </span><span class="c1"># buscar errores</span>
+-m<span class="w"> </span>N<span class="w"> </span><span class="c1"># limita la memoria que puede utilizar repair, default 75% del sistema</span>
+-d<span class="w">  </span><span class="c1"># reparación de sistemas montados en lectura</span>
+-v<span class="w">  </span><span class="c1"># vervose</span>
+
+xfs_admin<span class="w"> </span>
+-L<span class="w"> </span>etiqueta<span class="w"> </span>device<span class="w">  </span><span class="c1"># asignar etiqueta max 12 caracteres</span>
+-U<span class="w"> </span>uuid<span class="w"> </span>device<span class="w">      </span><span class="c1"># añadir uuid</span>
+
+xfs_growfs<span class="w"> </span>-D<span class="w"> </span>Nuevotamaño<span class="w"> </span>device<span class="w">    </span><span class="c1"># aumentar filesistem a tamaño indicado</span>
+xfs_growfs<span class="w"> </span>-d<span class="w"> </span>device<span class="w">    </span><span class="c1"># aumentar tamaño al max permitido</span>
+
+xfs_fsr<span class="w"> </span>device<span class="w">  </span><span class="c1"># defragmentar</span>
+
+mkfs.xfs<span class="w"> </span>-f<span class="w"> </span>-d<span class="w"> </span><span class="nv">size</span><span class="o">=</span>25g<span class="w"> </span>/dev/sdb<span class="w">    </span><span class="c1"># crear filesistem xfs de 25G</span>
+</code></pre></div>
+<p><code>xfsdump</code>  El comando gestiona niveles de copia de seguridad, lo que permite implementar estrategias de copias incrementales. Solo se puede hacer una copia de seguridad de un sistema de archivos si está montado. </p>
+<div class="highlight"><pre><span></span><code>xfsdump<span class="w"> </span>-F<span class="w"> </span>-f<span class="w"> </span>/var/datassave.dump<span class="w"> </span>/dev/sdb<span class="w">  </span>
+-f<span class="w"> </span>file<span class="w"> </span><span class="c1"># archivo donde se crea la copia</span>
+-F<span class="w">  </span><span class="c1"># modo desatendido</span>
+
+xfsrestore<span class="w"> </span>
+-t<span class="w"> </span>-f<span class="w"> </span>/var/datassave.dump<span class="w">   </span><span class="c1"># muestra objetos del dump</span>
+-f<span class="w"> </span>/var/datassave.dump<span class="w"> </span>.<span class="w">    </span><span class="c1"># restaurar</span>
+</code></pre></div>
+<h2 id="2033-crear-y-configurar-opciones">203.3 Crear y configurar opciones</h2>
+<h3 id="encriptacion-de-datos">Encriptación de datos</h3>
+<p>Una manera simple de protejer los datos es cifrando y descifrando manualmente el contenido con datos sensibles.</p>
+<div class="highlight"><pre><span></span><code>cencrypt<span class="w"> </span>file<span class="w"> </span>-K<span class="w"> </span>pass
+ccat<span class="w"> </span>file
+cdecrypt<span class="w"> </span>file<span class="w"> </span>-K<span class="w"> </span>pass
+</code></pre></div>
+<p>Otra forma de protejer los datos es cifrar directamente una partición, siempre teniendo cuidado de no cifrar la partición que contenga el kernel.</p>
+<div class="highlight"><pre><span></span><code>cryptsetup<span class="w"> </span>luksFormat<span class="w"> </span>/dev/vdb1<span class="w">     </span><span class="c1"># formatear particion como encrypt_luks</span>
+cryptsetup<span class="w"> </span>luksOpen<span class="w"> </span>/dev/vdb1<span class="w"> </span>cryptpart<span class="w"> </span><span class="c1"># crear volumen y generar pasword</span>
+mkfs.ext4<span class="w"> </span>/dev/mapper/cryptpart<span class="w">     </span><span class="c1"># formatear volumen</span>
+mount<span class="w"> </span>/dev/mapper/cryptpart<span class="w"> </span>/mnt/secret<span class="w"> </span><span class="c1"># montar volumen en el sistema</span>
+
+cryptsetup<span class="w"> </span>luksDump<span class="w"> </span>/dev/vd1<span class="w">    </span><span class="c1"># ver informacion</span>
+</code></pre></div>
+<p>El mejor compromiso entre la flexibilidad y la eficiencia lo aporta el cifrado a nivel de sistema de archivos.</p>
+<p>En el siguente ejemplo se creasn dos directorios y se montan uno encima del otro. los archivos creados en datos se trabaja como siempre, pero al desmontar todos esos archivos estan encriptados en <code>.datos</code></p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>.datos<span class="w"> </span>datos<span class="w">  </span>
+mkdir<span class="w"> </span>-t<span class="w"> </span>ecryptfs<span class="w"> </span>.datos<span class="w"> </span>datos
+umount<span class="w"> </span>datos
+</code></pre></div>
+<h3 id="administracion-de-datos-almacenados">Administración de datos almacenados</h3>
+<p><code>udev</code> funciona en segundo plano por su cuenta, pero en ocasiones queremos gestionar algún comportamiento especifico y esto es posible hacerlo mediante reglas</p>
+<p>La ubicación de estas reglas se precisa en el archivo de configuración de udev: <strong>/etc/udev/udev.conf</strong>. En el supuesto de que no se haya informado, su valor por defecto es <strong>/etc/udev/rules.d</strong>.</p>
+<div class="highlight"><pre><span></span><code>udevadm<span class="w"> </span>info<span class="w"> </span>/dev/sda<span class="w">   </span><span class="c1"># información de cdisco</span>
+udevmonitor<span class="w"> </span><span class="c1"># monitorización</span>
+lsdev<span class="w">   </span><span class="c1"># ver perifericos reconocidos</span>
+ls<span class="w"> </span>/dev/disk/<span class="w">   </span><span class="c1"># directorios de reconocimiento de discos</span>
+by-id<span class="w">  </span>by-partuuid<span class="w">  </span>by-path<span class="w">  </span>by-uuid
+</code></pre></div>
+<p><strong>El rendimiento</strong> de discos lo checkeamos con <code>hdparm</code>, también se puede cambiar algunas opciones de disco.</p>
+<div class="highlight"><pre><span></span><code>hdparm<span class="w"> </span>/dev/sda<span class="w"> </span><span class="c1"># ver opciones </span>
+-c<span class="w">  </span><span class="c1"># acceso 32bits</span>
+-d<span class="w">  </span><span class="c1"># acceso DMA</span>
+-a<span class="w">  </span><span class="c1"># lectura canticipada</span>
+</code></pre></div>
+<p>Los <strong>fallos en disco</strong> debido a bloques defectuosos se comprueba con <code>badblocks</code> una vez detectados se tendrán que gestionar mediante ordenes como <code>e2fsck o mke2fs</code></p>
+<div class="highlight"><pre><span></span><code>badblocks<span class="w"> </span>-b<span class="w"> </span>tamaño_bloke<span class="w"> </span>-o<span class="w"> </span>archivo_salida
+badblocks<span class="w"> </span>/dev/sdb1
+</code></pre></div>
+<h3 id="gestion-de-discos-iscsi">Gestión de discos iSCSI</h3>
+<p><strong>SCSI</strong> (Small Computer System Interface) es una familia de protocolos de comunicación destinados a los dispositivos de entrada/salida. . Es un protocolo cliente servidor, que permite al cliente (el sistema) enviar peticiones al servidor (el controlador SCSI), que se encarga de gestionar las unidades de almacenamiento.</p>
+<p><strong>iSCSI</strong> (Internet SCSI) es una extensión de red del protocolo SCSI, que permite transferir comandos SCSI a través de una red TCP/IP. De este modo se pueden gestionar a distancia accesos a discos de bajo nivel, sobre una topología de tipo Ethernet.</p>
+<p><strong>Open-iSCSI</strong> es una implementación de este protocolo sobre Linux. Este software permite a un sistema Linux utilizar este protocolo como cliente (acceder a los servidores de almacenamiento de disco iSCSI).</p>
+<p>Los nombres iSCSI utilizan una nomenclatura de tipo WWN (World Wide Name), de manera que asegure que sea única:</p>
+<p><strong>iqn.</strong>: prefijo que especifica el espacio de nombres (iSCSI qualified name).</p>
+<p><strong>AAAA-MM.</strong>: fecha (Año-Mes) prevista que corresponderá al primer mes de asignación del nombre de dominio utilizado por la autoridad administradora de este WWN.</p>
+<p><strong>Dominio</strong>: nombre de dominio, en orden inverso, de la autoridad administradora de este WWN.</p>
+<p><strong>:cadena_ident</strong>: eventualmente, identificador del elemento designado para este nombre. La unicidad de este identificador es responsabilidad de la autoridad administradora del WWN.</p>
+<div class="highlight"><pre><span></span><code>iqn.2014-01.net.pas:cloud1.target1
+</code></pre></div>
+<h3 id="_1"></h3>
+<p><strong>La implementación de un cliente</strong> iSCSI en Linux, para permitir al sistema utilizar discos remotos a través de una red TCP/IP, se hace mediante tres conjuntos de elementos:</p>
+<ul>
+<li>Un módulo central que gestiona las interfaces de red TCP/IP.</li>
+<li>Un módulo servidor que garantice la comunicación con los servidores de almacenamiento de destino.</li>
+<li>Comandos de gestión que permiten gestionar las unidades lógicas de almacenamiento de los servidores de destino iSCSI.</li>
+</ul>
+<p>El archivo de configuración por defecto del servidor <strong>iscsid</strong> es <code>/etc/iscsi/iscsid.conf</code>. </p>
+<p>El descubrimiento de un servidor iSCSI se hace mediante su portal de red, identificado por una dirección IP.</p>
+<div class="highlight"><pre><span></span><code>iscsiadm<span class="w"> </span>-m<span class="w"> </span>discovery<span class="w"> </span>-t<span class="w"> </span>sendtargets<span class="w"> </span>-p<span class="w"> </span><span class="m">192</span>.168.0.39<span class="w">    </span><span class="c1"># descubrir servidor</span>
+<span class="c1"># conectar servidor</span>
+iscsiadm<span class="w"> </span>-m<span class="w"> </span>node<span class="w"> </span>-T<span class="w"> </span>iqn.2008-09.com.ejemplo:server.target1<span class="w"> </span>-p<span class="w"> </span><span class="m">192</span>.168.0.39<span class="w"> </span>--login<span class="w">  </span>
+<span class="c1"># desconectar servidor</span>
+iscsiadm<span class="w"> </span>-m<span class="w"> </span>node<span class="w"> </span>-T<span class="w"> </span>iqn.2008-09.com.ejemplo:server.target1<span class="w"> </span>-p<span class="w"> </span><span class="m">192</span>.168.0.39<span class="w"> </span>-logout<span class="w"> </span>
+</code></pre></div>
+<p><strong>Linux como servidor</strong> iSCSI arranca como servicio, se pone a la escucha de las peticiones de los clientes iSCSI (los iniciadores) y por defecto en el puerto 3260. Este servidor gestiona uno o varios destinos y, para cada uno de ellos, una o más unidades lógicas (LUN).</p>
+<p>En el archivo de configuración <code>/etc/tgt/targets.conf</code>:</p>
+<div class="highlight"><pre><span></span><code>&lt;target<span class="w"> </span>iqn.2008-09.com.ejemplo:server.target1&gt;<span class="w"> </span>
+<span class="w">    </span>backing-store<span class="w"> </span>/dev/sdf<span class="w"> </span>
+&lt;/target&gt;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>service<span class="w"> </span>tgtd<span class="w"> </span>start<span class="w"> </span>
+tgtadm<span class="w"> </span>--mode<span class="w"> </span>target<span class="w"> </span>--op<span class="w"> </span>show<span class="w"> </span><span class="c1"># ver </span>
+</code></pre></div>
+<h3 id="duplicacion-y-sincronizacion-de-datos">Duplicación y sincronización de datos</h3>
+<p>El comando de copia bloque a bloque <code>dd</code> permite realizar copias de bajo nivel de un periférico.</p>
+<div class="highlight"><pre><span></span><code>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>entrada<span class="w"> </span><span class="nv">of</span><span class="o">=</span>salida<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>tamaño_del_bloque<span class="w"> </span><span class="nv">count</span><span class="o">=</span>número_de_bloques<span class="w"> </span>
+
+<span class="k">if</span><span class="o">=</span>origen
+<span class="nv">of</span><span class="o">=</span>destino
+bs<span class="w">  </span><span class="c1"># tamaño del bloque a copiar</span>
+count<span class="w">   </span><span class="c1"># cantidad de bloques a copiar</span>
+
+dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/sdb1<span class="w"> </span><span class="nv">of</span><span class="o">=</span>/home/alumno/usb.img
+dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/zero<span class="w"> </span><span class="nv">of</span><span class="o">=</span>fichero<span class="w"> </span><span class="nv">bs</span><span class="o">=</span><span class="m">1024</span><span class="w"> </span><span class="nv">count</span><span class="o">=</span><span class="m">100000</span><span class="w"> </span><span class="c1"># archivo 100M</span>
+</code></pre></div>
+<p><code>mkisofs o genisoimage</code> genera archivos  ISO.  Puede ser útil generar imágenes ISO a partir de una estructura de directorios.</p>
+<div class="highlight"><pre><span></span><code>genisoimage<span class="w"> </span>-J<span class="w"> </span>-o<span class="w"> </span>imagen.iso<span class="w"> </span>directorio
+-J<span class="w">  </span><span class="c1"># opcional: Mejora la compatibilidad con los sistemas Windows.</span>
+-o<span class="w">  </span><span class="c1"># archivo imagen a generar</span>
+-r<span class="w">  </span><span class="c1"># permisos de lectura a todos los archivos</span>
+
+mount<span class="w"> </span>-t<span class="w"> </span>iso9660<span class="w"> </span>-o<span class="w"> </span>loop<span class="w"> </span>archivo_de_imagen<span class="w"> </span>punto_de_montaje<span class="w"> </span>
+</code></pre></div>
+<p>Sincronización de datos con <code>rsync</code></p>
+<div class="highlight"><pre><span></span><code>rsync<span class="w"> </span>-a<span class="w"> </span>m04-lm<span class="w">  </span>/tmp/proves/<span class="w"> </span><span class="c1"># copia el directorio</span>
+rsync<span class="w"> </span>-a<span class="w"> </span>--delete<span class="w">  </span>m04-lm/<span class="w">  </span>/tmp/proves/<span class="w"> </span><span class="c1"># sincronizar borrando si hay cambios</span>
+
+rsync<span class="w"> </span>-a<span class="w"> </span>m04-lm/<span class="w">  </span>localhost:/tmp/proves/<span class="w"> </span><span class="c1"># remoto</span>
+-n<span class="w"> </span>--dry-run<span class="w"> </span><span class="c1"># acer test</span>
+rsync<span class="w"> </span>-a<span class="w"> </span>~/dir1<span class="w"> </span>username@remote_host:destination_directory
+
+rsync<span class="w"> </span>-av<span class="w"> </span>--delete<span class="w"> </span>-e<span class="w"> </span>ssh<span class="w"> </span>/root/data<span class="w"> </span>root@192.168.200.106:/root/svg<span class="w"> </span><span class="c1"># conexion segura</span>
+</code></pre></div>
+<p>rsync puede funcionar como servidor añadiendo ciertos permisos al archivo <code>/etc/rsyncd.conf</code></p>
+<div class="highlight"><pre><span></span><code>log<span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/var/log/rsync.log
+pid<span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/var/run/rsyncd.pid
+
+<span class="o">[</span>public<span class="o">]</span>
+<span class="w">        </span><span class="nv">comment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>recurso<span class="w"> </span>publico
+<span class="w">        </span><span class="nv">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/home/debian/rsync/public
+
+<span class="o">[</span>read<span class="o">]</span>
+<span class="w">        </span><span class="nv">comment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>recurso<span class="w"> </span>solo<span class="w"> </span>lectura
+<span class="w">        </span><span class="nv">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/home/debian/rsync/read
+<span class="w">        </span><span class="nb">read</span><span class="w"> </span><span class="nv">only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>yes
+
+<span class="o">[</span>privat<span class="o">]</span>
+<span class="w">        </span><span class="nv">comment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>recurso<span class="w"> </span>de<span class="w"> </span>escritura
+<span class="w">        </span><span class="nv">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/home/debian/rsync/privat
+<span class="w">        </span><span class="nv">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>no
+<span class="w">        </span><span class="nb">read</span><span class="w"> </span><span class="nv">only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>no
+<span class="w">        </span>write<span class="w"> </span><span class="nv">only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>no
+<span class="w">        </span>auth<span class="w"> </span><span class="nv">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>jorge
+<span class="w">        </span>secrets<span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/etc/rsyncd.secrets
+
+<span class="o">[</span>write<span class="o">]</span>
+<span class="w">        </span><span class="nv">comment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>recurso<span class="w"> </span>de<span class="w"> </span>escritura
+<span class="w">        </span><span class="nv">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/home/debian/rsync/write
+<span class="w">        </span><span class="nb">read</span><span class="w"> </span><span class="nv">only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>no
+<span class="w">        </span>write<span class="w"> </span><span class="nv">only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>yes
+</code></pre></div>
+<blockquote>
+<p><code>read only = no</code> Imprescindible para que el servicio pueda escribir en el disco.</p>
+</blockquote>
+<p>Para el modo servidor tiene algunas ordenes adicionales</p>
+<div class="highlight"><pre><span></span><code>rsync<span class="w">  </span>localhost::<span class="w"> </span><span class="c1"># listar recursos</span>
+rsync<span class="w">  </span>localhost::public<span class="w">  </span><span class="c1"># listar contenido de public</span>
+rsync<span class="w">  </span>-a<span class="w"> </span>file<span class="w"> </span>localhost::write<span class="w"> </span><span class="c1"># subir contenido</span>
+rsync<span class="w">  </span>-a<span class="w"> </span>localhost::public<span class="w"> </span>.<span class="w"> </span><span class="c1"># descargar contenido</span>
+</code></pre></div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../202_Arranque_del%20_Sistema/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 202 Arranque del  Sistema" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              202 Arranque del  Sistema
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../204_Administracion_avanzada_de_dispositivos_de_almacenamiento/" class="md-footer__link md-footer__link--next" aria-label="Next: 204 Administración avanzada de dispositivos de almacenamiento" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              204 Administración avanzada de dispositivos de almacenamiento
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+    
+  </body>
+</html>

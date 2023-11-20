@@ -2,567 +2,1102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/Configurar_pantallas_manualmente/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/Debian_hostname_dinamico/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/Mutt/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/Procesos/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/Resetear_la_password_root/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/Vim/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/awk/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/freeipa/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/instalar_webmin/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/per/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/permisos_avanzados/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/samba/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/server-correo/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/server-mensajeria/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/ssh/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/sudo/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/umask/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/usuarios/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/vnc/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/webdav/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/ldap/Ldap-Samba-Hostpam/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/ldap/acl_ejercicios/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/ldap/host-kerberos-con-ldap/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/ldap/ldap/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/pxe/Servidor-pxe-con-rapberry/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/pxe/guiapxe-fedora/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/redes/apuntes-xarxa/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/redes/comandos_router_switch/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/redes/haproxy/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/administracion/redes/redes2/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/auditoria/apuntes_hacking/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/bases_datos/mongo/Mongo/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/bases_datos/postgres/bases/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/bases_datos/postgres/modificaciones/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/bases_datos/postgres/plpgsql/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/bases_datos/postgres/postgresql-intalacion/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/ordenes/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/01-LasRedesEnLaActualidad/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/02-ConfiguracionBasicaDelSwitchYdisp/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/03-ProtocolosYmodelos/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/04-CapaFisica/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/05-SistemasDeNumeracion/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/06-CapaDeEnlaceDeDatos/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/07-ConmutacionEthernet/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/08-CapaDeRed/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/09-Resoluci%C3%B3nDeDireccion/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/10-ConfiguracionBasicaDelRouter/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/11-DireccionamientoIPv4/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/12-DireccionamientoIPv6/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/13-ICMP/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/14-CapaDeTransporte/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/15-CapaDeAplicacion/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/16-FundamentosDeSeguridadDeRed/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/17-ConstruirUnaRedPeque%C3%B1a/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/ipv6/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/1-Introducci%C3%B3nRedes%28ITN%29/minicom/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/01-ConfiguracionBasicaDelDispositivo/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/03-VLAN/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/04-Inter-VLAN-Routing/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/05-ConceptosSTP/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/06-EtherChannel/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/07-DHCPv4/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/08-SLAACyDHCPv6/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/09-ConceptosdeFHRP/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/10-ConceptosSeguridadLAN/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/11-ConfiguracionSeguridadSwitch/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/12-ConceptosWLAN/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/13-ConfiguracionesRedesInal%C3%A1mbricasWLAN/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/14-ConceptosEnrutamiento/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/15-EnrutamientoIPEstatico/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/01-ConceptosOSPFv2DeAreaUnica/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/02-ConfiguracionOSPFv2AreaUnica/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/03-ConceptosSeguridadRedes/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/04-ACL/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/05-ACLconfiguracionIPv4/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/06-NAT-IPv4/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/07-conceptosWAN/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/08-ConceptosVPNeIPsec/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/09-ConceptosQoS/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/10-AdministracionDeRedes/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/11-Dise%C3%B1oDeRedes/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/12-ResolucionDeProblemasDeRed/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/13-VirtualizacionDeRed/</loc>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/cloud/aws/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/curiosidades/Eliminar_contrase%C3%B1a_windows/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/curiosidades/Lanzador_aplicaciones_en_gnome/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/curiosidades/cambiar_color_promp_terminal/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/curiosidades/conky/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/curiosidades/openbox/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/curiosidades/qbit/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/curiosidades/tmux/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/desatendidas/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/desatendidas/Instalacion-desatendida-debian/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/desatendidas/desatendida-windows/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/desatendidas/kikstart/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/generar_doc/docsify/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/generar_doc/remark/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/Fundamentos_php/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/Shell/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/Apuntes-Metodos/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-Funcionalidades_avanzadas/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-Herencia/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-distribucion/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-documentacion/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-ficheros/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-modulos/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-orientado-objetos/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-test/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes-tkinter/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/apuntes_bases/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/argparse/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/fundamentos/excepciones/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/fundamentos/funciones/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/fundamentos/fundamento/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/fundamentos/manejo_de_datos/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/lenguajes/python3/fundamentos/salida_por_pantalla/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/101/101_Arquitectura_del_sistema/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/101/102_Instalacion_de_Linux_y_gestion_de_paquetes/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/101/103_Comandos_GNU_y_Linux/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/101/104_Dispositivos_sistema_de_archivos_y_estandar_jerarquia_de_archivos/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/102/105.2_Scripting/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/102/105_Shells/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/102/106_Interfaces_de_usuario_y_escritorio/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/102/107_tareas_de_administracion/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/102/108_Servicios_esenciales_del_sistema/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/102/108_rsyslog_server/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/102/109_Fundamentos_de_red/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/102/110_Seguridad/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/201/200_Planificaci%C3%B3n_de_la_capacidad/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/201/201_Kernel_Linux/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/201/202_Arranque_del%20_Sistema/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/201/203_sistemas_de_archivos_y_dispositivos/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/201/204_Administracion_avanzada_de_dispositivos_de_almacenamiento/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/201/205_configuracion_de_red/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/201/206_Mantenimiento_del_sistema/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/201/Exam_201_Detailed_Objectives/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/202/207_Servidor_de_nombres_de_dominio/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/202/208.4_servicios_web_nginx/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/202/208_servicios_web/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/202/209_compartir_ficheros/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/202/210_gestion_de_clientes_de_red/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/202/211_Servicios_E-Mail/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/202/212_Seguridad_del_sistema/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/202/Exam_202_Detailed_Objectives/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/303/331.3_Encrypted_File_Systems/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/303/332.3_Resource_Control/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/303/333.1_Discretionary_Access_Control/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/303/333.2_Mandatory_Access_Control/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/303/334.3.2_Packet_Filtering/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/303/334.3_Packet_Filtering/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/303/extra/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/303/freeIpa/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/303/gpg/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/303/nose/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/303/objetivos/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/303/pendiente/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/304/ClusterPacemakerDRBD/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/304/Clusterfs/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/304/Haproxy/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/304/Montaje%20isard-nas1%20y%20isard-nas2/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/304/cluster_basico/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/304/clvm_gfs2_en_clusterPacemaker/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/304/haproxy_pacemaker/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/305/351.1VirtualizationConceptsandTheory/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/305/351.2Xen/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/305/351.3Qemu/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/305/351.4LibvirtVirtualMachineManageme/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/305/351.5VirtualMachineDiskImageManagem/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/305/352.1ContainerVirtualizationConcepts/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/305/352.3Docker/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/305/352.4ContainerOrchestrationPlatforms/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/305/352LXC/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/305/353.1CloudManagementTools/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/305/353.2Packer/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/305/353.3cloud-init/</loc>
+         <lastmod>2023-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jorgepastorr.github.io/apuntes/lpi/305/353.4Vagrant/</loc>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/seguridad/Certificados-Digitales/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/seguridad/Kerberos/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/seguridad/OpenVpn/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/seguridad/The-crazy-thing/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/seguridad/TunelSSH/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/seguridad/gpg/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/seguridad/lvm/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/seguridad/practica-ssl-tls/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/seguridad/raid/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/seguridad/backups/Borg_basico/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/seguridad/backups/Tar/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/seguridad/backups/rdiff-backup/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/seguridad/backups/rsync/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/seguridad/cortafuegos/Iptables/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/Actualizar_hora_sys_o_bios/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/Arranque-del-sistema/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/Estructura_de_directorios/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/Logs/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/Systemd/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/ZFS/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/chroot/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/disco/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/gestores_de_paquetes/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/getenforce/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/grub/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/home/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/ip_est%C3%A1tica/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/pam/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/raid/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/xinetd/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/automatizacion/ansible/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/sistemas/automatizacion/tareas_programadas/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/Docker-basico/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/Lxc/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/Vagrant/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/kubernetes/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/swarm/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/virt-manager/Backing_chain/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/virt-manager/Clonar/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/virt-manager/Instalacion_de_virtualizacion_fedora/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/virt-manager/acceder_consola_desde_virsh/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/virt-manager/crear_red_aislada/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jorgepastorr.github.io/apuntes/virtualizacion/virt-manager/instalar_maquina_virtual_virt-install/</loc>
-         <lastmod>2023-03-22</lastmod>
+         <lastmod>2023-11-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

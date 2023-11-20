@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://jorgepastorr.github.io/apuntes/administracion/ldap/ldap/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.2">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.2.5">
     
     
       
@@ -21,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.816931ca.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2d9f7617.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9204c3b2.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
         
           
           
@@ -36,16 +36,16 @@
     
       
         
+        
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../../..":"../../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-
 
     
     
@@ -147,7 +147,7 @@
         <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     jorgepastorr/apuntes
@@ -192,7 +192,7 @@
       <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     jorgepastorr/apuntes
@@ -1417,12 +1417,803 @@
       
       
         <label class="md-nav__link" for="__nav_5">
+          Ccna
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ccna" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ccna
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/ordenes/" class="md-nav__link">
+        ordenes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          1 IntroducciónRedes(ITN)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1 IntroducciónRedes(ITN)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          1 IntroducciónRedes(ITN)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/01-LasRedesEnLaActualidad/" class="md-nav__link">
+        01 LasRedesEnLaActualidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/02-ConfiguracionBasicaDelSwitchYdisp/" class="md-nav__link">
+        Configuración básica del Switch y dispositivo final
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/03-ProtocolosYmodelos/" class="md-nav__link">
+        Protocolos y modelos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/04-CapaFisica/" class="md-nav__link">
+        Capa Física
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/05-SistemasDeNumeracion/" class="md-nav__link">
+        Sistemas de numeración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/06-CapaDeEnlaceDeDatos/" class="md-nav__link">
+        Capa de enlace de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/07-ConmutacionEthernet/" class="md-nav__link">
+        Conmutación Ethernet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/08-CapaDeRed/" class="md-nav__link">
+        Capa de Red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/09-Resoluci%C3%B3nDeDireccion/" class="md-nav__link">
+        Resolución de dirección
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/10-ConfiguracionBasicaDelRouter/" class="md-nav__link">
+        Configuración básica del router
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/11-DireccionamientoIPv4/" class="md-nav__link">
+        Direccionamiento IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/12-DireccionamientoIPv6/" class="md-nav__link">
+        Direccionamiento IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/13-ICMP/" class="md-nav__link">
+        ICMP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/14-CapaDeTransporte/" class="md-nav__link">
+        Capa de transporte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/15-CapaDeAplicacion/" class="md-nav__link">
+        Capa de aplicación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/16-FundamentosDeSeguridadDeRed/" class="md-nav__link">
+        Fundamentos de seguridad de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/17-ConstruirUnaRedPeque%C3%B1a/" class="md-nav__link">
+        Construir una red pequeña
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/ipv6/" class="md-nav__link">
+        IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/minicom/" class="md-nav__link">
+        Minicom
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          2 Switching Routing And WirelessEssentials(SRWE)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2 Switching Routing And WirelessEssentials(SRWE)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          2 Switching Routing And WirelessEssentials(SRWE)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/01-ConfiguracionBasicaDelDispositivo/" class="md-nav__link">
+        Configuración básica del dispositivo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/03-VLAN/" class="md-nav__link">
+        VLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/04-Inter-VLAN-Routing/" class="md-nav__link">
+        Inter-VLAN Routing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/05-ConceptosSTP/" class="md-nav__link">
+        Conceptos STP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/06-EtherChannel/" class="md-nav__link">
+        EtherChannel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/07-DHCPv4/" class="md-nav__link">
+        DHCPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/08-SLAACyDHCPv6/" class="md-nav__link">
+        SLAAC y DHCPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/09-ConceptosdeFHRP/" class="md-nav__link">
+        Conceptos de FHRP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/10-ConceptosSeguridadLAN/" class="md-nav__link">
+        Conceptos de seguridad LAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/11-ConfiguracionSeguridadSwitch/" class="md-nav__link">
+        Configuración de seguridad en el Switch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/12-ConceptosWLAN/" class="md-nav__link">
+        Conceptos de WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/13-ConfiguracionesRedesInal%C3%A1mbricasWLAN/" class="md-nav__link">
+        Configuraciones de redes inalámbricas WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/14-ConceptosEnrutamiento/" class="md-nav__link">
+        Conceptos de enrutamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/15-EnrutamientoIPEstatico/" class="md-nav__link">
+        Enrutamiento IP Estático
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          3 Enterprise Networking Security AndAutomation ENSA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3 Enterprise Networking Security AndAutomation ENSA" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          3 Enterprise Networking Security AndAutomation ENSA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/01-ConceptosOSPFv2DeAreaUnica/" class="md-nav__link">
+        Conceptos de OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/02-ConfiguracionOSPFv2AreaUnica/" class="md-nav__link">
+        Configuración OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/03-ConceptosSeguridadRedes/" class="md-nav__link">
+        Conceptos de Seguridad en Redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/04-ACL/" class="md-nav__link">
+        ACL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/05-ACLconfiguracionIPv4/" class="md-nav__link">
+        ACL para configuración IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/06-NAT-IPv4/" class="md-nav__link">
+        NAT para IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/07-conceptosWAN/" class="md-nav__link">
+        Conceptos WAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/08-ConceptosVPNeIPsec/" class="md-nav__link">
+        Conceptos de VPN e IPsec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/09-ConceptosQoS/" class="md-nav__link">
+        Conceptos de QoS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/10-AdministracionDeRedes/" class="md-nav__link">
+        Administración de redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/11-Dise%C3%B1oDeRedes/" class="md-nav__link">
+        Diseño de redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/12-ResolucionDeProblemasDeRed/" class="md-nav__link">
+        Resolución de problemas de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/13-VirtualizacionDeRed/" class="md-nav__link">
+        Virtualización de Red
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
           Cloud
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Cloud" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Cloud
         </label>
@@ -1459,18 +2250,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_7">
           Curiosidades
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Curiosidades" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Curiosidades
         </label>
@@ -1591,18 +2382,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_8">
           Desatendidas
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Desatendidas" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Desatendidas
         </label>
@@ -1681,18 +2472,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_9">
           Generar doc
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Generar doc" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Generar doc
         </label>
@@ -1743,18 +2534,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_9">
+        <label class="md-nav__link" for="__nav_10">
           Lenguajes
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Lenguajes" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
+        <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           Lenguajes
         </label>
@@ -1797,18 +2588,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_9_3">
+        <label class="md-nav__link" for="__nav_10_3">
           Python3
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Python3" data-md-level="2">
-        <label class="md-nav__title" for="__nav_9_3">
+        <label class="md-nav__title" for="__nav_10_3">
           <span class="md-nav__icon md-icon"></span>
           Python3
         </label>
@@ -1991,18 +2782,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3_13" type="checkbox" id="__nav_9_3_13" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_13" type="checkbox" id="__nav_10_3_13" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_9_3_13">
+        <label class="md-nav__link" for="__nav_10_3_13">
           Fundamentos
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Fundamentos" data-md-level="3">
-        <label class="md-nav__title" for="__nav_9_3_13">
+        <label class="md-nav__title" for="__nav_10_3_13">
           <span class="md-nav__icon md-icon"></span>
           Fundamentos
         </label>
@@ -2109,18 +2900,1123 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_10">
+        <label class="md-nav__link" for="__nav_11">
+          Lpi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lpi" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Lpi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1">
+          101
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="101" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          101
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/101_Arquitectura_del_sistema/" class="md-nav__link">
+        101 Arquitectura del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/102_Instalacion_de_Linux_y_gestion_de_paquetes/" class="md-nav__link">
+        102 Instalación de Linux y gestión de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/103_Comandos_GNU_y_Linux/" class="md-nav__link">
+        103 Comandos GNU y Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/104_Dispositivos_sistema_de_archivos_y_estandar_jerarquia_de_archivos/" class="md-nav__link">
+        104 Dispositivos, sistema de archivos Linux y el estándar de jerarquia de archivos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" type="checkbox" id="__nav_11_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_2">
+          102
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="102" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          102
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/105.2_Scripting/" class="md-nav__link">
+        105.2 Scripting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/105_Shells/" class="md-nav__link">
+        105 Shells
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/106_Interfaces_de_usuario_y_escritorio/" class="md-nav__link">
+        106 Interfaces de usuario y escritorio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/107_tareas_de_administracion/" class="md-nav__link">
+        107 tareas de administración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/108_Servicios_esenciales_del_sistema/" class="md-nav__link">
+        108 Servicios esenciales del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/108_rsyslog_server/" class="md-nav__link">
+        rsyslog server central
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/109_Fundamentos_de_red/" class="md-nav__link">
+        109 Fundamentos de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/110_Seguridad/" class="md-nav__link">
+        110 Seguridad
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_3" type="checkbox" id="__nav_11_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_3">
+          201
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="201" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_3">
+          <span class="md-nav__icon md-icon"></span>
+          201
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/200_Planificaci%C3%B3n_de_la_capacidad/" class="md-nav__link">
+        200 Planificación de la capacidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/201_Kernel_Linux/" class="md-nav__link">
+        201 Kernel Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/202_Arranque_del%20_Sistema/" class="md-nav__link">
+        202 Arranque del  Sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/203_sistemas_de_archivos_y_dispositivos/" class="md-nav__link">
+        203 sistemas de archivos y dispositivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/204_Administracion_avanzada_de_dispositivos_de_almacenamiento/" class="md-nav__link">
+        204 Administración avanzada de dispositivos de almacenamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/205_configuracion_de_red/" class="md-nav__link">
+        205 configuración de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/206_Mantenimiento_del_sistema/" class="md-nav__link">
+        206 Mantenimiento del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/Exam_201_Detailed_Objectives/" class="md-nav__link">
+        Exam 201: Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4">
+          202
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="202" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          202
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/207_Servidor_de_nombres_de_dominio/" class="md-nav__link">
+        207 Servidor de nombres de dominio (DNS)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/208.4_servicios_web_nginx/" class="md-nav__link">
+        208 servicios web nginx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/208_servicios_web/" class="md-nav__link">
+        208 servicios web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/209_compartir_ficheros/" class="md-nav__link">
+        209 compartir ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/210_gestion_de_clientes_de_red/" class="md-nav__link">
+        210 gestión de clientes de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/211_Servicios_E-Mail/" class="md-nav__link">
+        211 Servicios de E-Mail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/212_Seguridad_del_sistema/" class="md-nav__link">
+        212 Seguridad del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/Exam_202_Detailed_Objectives/" class="md-nav__link">
+        Exam 202 Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_5" type="checkbox" id="__nav_11_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_5">
+          303
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="303" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_5">
+          <span class="md-nav__icon md-icon"></span>
+          303
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/331.3_Encrypted_File_Systems/" class="md-nav__link">
+        Topic 331: Cryptography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/332.3_Resource_Control/" class="md-nav__link">
+        Topic 332: Host Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/333.1_Discretionary_Access_Control/" class="md-nav__link">
+        333.1 Discretionary Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/333.2_Mandatory_Access_Control/" class="md-nav__link">
+        333.2 Mandatory Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/334.3.2_Packet_Filtering/" class="md-nav__link">
+        Firewalld
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/334.3_Packet_Filtering/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/extra/" class="md-nav__link">
+        Extra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/freeIpa/" class="md-nav__link">
+        freeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/nose/" class="md-nav__link">
+        Nose
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/objetivos/" class="md-nav__link">
+        Objetivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/pendiente/" class="md-nav__link">
+        Pendiente
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_6" type="checkbox" id="__nav_11_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_6">
+          304
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="304" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_6">
+          <span class="md-nav__icon md-icon"></span>
+          304
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/ClusterPacemakerDRBD/" class="md-nav__link">
+        Cluster Pacemaker DRBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/Clusterfs/" class="md-nav__link">
+        Clusterfs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/Haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/Montaje%20isard-nas1%20y%20isard-nas2/" class="md-nav__link">
+        Montaje isard-nas1 y isard-nas2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/cluster_basico/" class="md-nav__link">
+        Cluster en centos con pacemaker/corosync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/clvm_gfs2_en_clusterPacemaker/" class="md-nav__link">
+        clvm gfs2 en clusterPacemaker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/haproxy_pacemaker/" class="md-nav__link">
+        Haproxy pacemaker
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_7" type="checkbox" id="__nav_11_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_7">
+          305
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="305" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_7">
+          <span class="md-nav__icon md-icon"></span>
+          305
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.1VirtualizationConceptsandTheory/" class="md-nav__link">
+        351.1 Virtualization Concepts and Theory (weight: 6)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.2Xen/" class="md-nav__link">
+        351.2 Xen (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.3Qemu/" class="md-nav__link">
+        351.3 QEMU (weight: 4)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.4LibvirtVirtualMachineManageme/" class="md-nav__link">
+        351.4 Libvirt Virtual Machine Management (weight: 9)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.5VirtualMachineDiskImageManagem/" class="md-nav__link">
+        351.5 Virtual Machine Disk Image Management (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352.1ContainerVirtualizationConcepts/" class="md-nav__link">
+        352.1 Container Virtualization Concepts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352.3Docker/" class="md-nav__link">
+        352.3 Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352.4ContainerOrchestrationPlatforms/" class="md-nav__link">
+        352.4ContainerOrchestrationPlatforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352LXC/" class="md-nav__link">
+        352.2 LXC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.1CloudManagementTools/" class="md-nav__link">
+        353.1 Cloud Management Tools (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.2Packer/" class="md-nav__link">
+        353.2 Packer (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.3cloud-init/" class="md-nav__link">
+        353.3 cloud-init (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.4Vagrant/" class="md-nav__link">
+        353.4 Vagrant (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
           Seguridad
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Seguridad" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+        <label class="md-nav__title" for="__nav_12">
           <span class="md-nav__icon md-icon"></span>
           Seguridad
         </label>
@@ -2261,18 +4157,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_10" type="checkbox" id="__nav_10_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_10" type="checkbox" id="__nav_12_10" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_10_10">
+        <label class="md-nav__link" for="__nav_12_10">
           Backups
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Backups" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_10">
+        <label class="md-nav__title" for="__nav_12_10">
           <span class="md-nav__icon md-icon"></span>
           Backups
         </label>
@@ -2350,18 +4246,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_11" type="checkbox" id="__nav_10_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_11" type="checkbox" id="__nav_12_11" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_10_11">
+        <label class="md-nav__link" for="__nav_12_11">
           Cortafuegos
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Cortafuegos" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_11">
+        <label class="md-nav__title" for="__nav_12_11">
           <span class="md-nav__icon md-icon"></span>
           Cortafuegos
         </label>
@@ -2405,18 +4301,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_11">
+        <label class="md-nav__link" for="__nav_13">
           Sistemas
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Sistemas" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
+        <label class="md-nav__title" for="__nav_13">
           <span class="md-nav__icon md-icon"></span>
           Sistemas
         </label>
@@ -2655,18 +4551,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_17" type="checkbox" id="__nav_11_17" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_17" type="checkbox" id="__nav_13_17" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_11_17">
+        <label class="md-nav__link" for="__nav_13_17">
           Automatizacion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Automatizacion" data-md-level="2">
-        <label class="md-nav__title" for="__nav_11_17">
+        <label class="md-nav__title" for="__nav_13_17">
           <span class="md-nav__icon md-icon"></span>
           Automatizacion
         </label>
@@ -2724,18 +4620,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_12">
+        <label class="md-nav__link" for="__nav_14">
           Virtualizacion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Virtualizacion" data-md-level="1">
-        <label class="md-nav__title" for="__nav_12">
+        <label class="md-nav__title" for="__nav_14">
           <span class="md-nav__icon md-icon"></span>
           Virtualizacion
         </label>
@@ -2820,18 +4716,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_6" type="checkbox" id="__nav_12_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_6" type="checkbox" id="__nav_14_6" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_12_6">
+        <label class="md-nav__link" for="__nav_14_6">
           Virt manager
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Virt manager" data-md-level="2">
-        <label class="md-nav__title" for="__nav_12_6">
+        <label class="md-nav__title" for="__nav_14_6">
           <span class="md-nav__icon md-icon"></span>
           Virt manager
         </label>
@@ -3351,13 +5247,14 @@
 </a>
 
 
+
 <h1 id="ldap">ldap</h1>
 <p>autenticación  demostrar quien soy </p>
 <p>information provides ( info de la cuenta )
 authentication provides ( password )</p>
 <p>ldap es una base de datos <strong>no relacional</strong> que es <strong>jerárquica</strong>  ( estructura de árbol ), ademas <strong>puede ser distribuida</strong> y esta <strong>optimizada para lecturas</strong> . </p>
 <p>el nodo raíz se  compone de:  </p>
-<div class="highlight"><pre><span></span><code><span class="nv">dc</span><span class="o">=</span>edt,dc<span class="o">=</span>org  
+<div class="highlight"><pre><span></span><code><span class="nv">dc</span><span class="o">=</span>edt,dc<span class="o">=</span>org<span class="w">  </span>
 </code></pre></div>
 <h2 id="estructura">Estructura</h2>
 <p>El árbol de la estructura se denomina <code>DIT</code> </p>
@@ -3402,65 +5299,65 @@ nom=pep,ou=usuaris,dn=edt,dc=org  </p>
 <p><code>.ldif</code> es la extensión de los datos de ldap con estos ficheros cargaremos y modificaremos los datos.</p>
 <p><strong>organitzacio_edt.org</strong> 
 contiene 4 entidades con diferentes atributos, sería un ejemplo de estructura.</p>
-<div class="highlight"><pre><span></span><code>dn: <span class="nv">dc</span><span class="o">=</span>edt,dc<span class="o">=</span>org
-dc: edt
-description: Escola del treball de Barcelona
-objectClass: dcObject
-objectClass: organization
-o: edt.org
+<div class="highlight"><pre><span></span><code>dn:<span class="w"> </span><span class="nv">dc</span><span class="o">=</span>edt,dc<span class="o">=</span>org
+dc:<span class="w"> </span>edt
+description:<span class="w"> </span>Escola<span class="w"> </span>del<span class="w"> </span>treball<span class="w"> </span>de<span class="w"> </span>Barcelona
+objectClass:<span class="w"> </span>dcObject
+objectClass:<span class="w"> </span>organization
+o:<span class="w"> </span>edt.org
 
-dn: <span class="nv">ou</span><span class="o">=</span>maquines,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
-ou: maquines
-description: Container per a maquines linux
-objectclass: organizationalunit
+dn:<span class="w"> </span><span class="nv">ou</span><span class="o">=</span>maquines,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
+ou:<span class="w"> </span>maquines
+description:<span class="w"> </span>Container<span class="w"> </span>per<span class="w"> </span>a<span class="w"> </span>maquines<span class="w"> </span>linux
+objectclass:<span class="w"> </span>organizationalunit
 
-dn: <span class="nv">ou</span><span class="o">=</span>clients,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
-ou: clients
-description: Container per a clients linux
-objectclass: organizationalunit
+dn:<span class="w"> </span><span class="nv">ou</span><span class="o">=</span>clients,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
+ou:<span class="w"> </span>clients
+description:<span class="w"> </span>Container<span class="w"> </span>per<span class="w"> </span>a<span class="w"> </span>clients<span class="w"> </span>linux
+objectclass:<span class="w"> </span>organizationalunit
 
-dn: <span class="nv">ou</span><span class="o">=</span>productes,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
-ou: productes
-description: Container per a productes linux
-objectclass: organizationalunit
+dn:<span class="w"> </span><span class="nv">ou</span><span class="o">=</span>productes,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
+ou:<span class="w"> </span>productes
+description:<span class="w"> </span>Container<span class="w"> </span>per<span class="w"> </span>a<span class="w"> </span>productes<span class="w"> </span>linux
+objectclass:<span class="w"> </span>organizationalunit
 
-dn: <span class="nv">ou</span><span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
-ou: usuaris
-description: Container per usuaris del sistema linux
-objectclass: organizationalunit
+dn:<span class="w"> </span><span class="nv">ou</span><span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
+ou:<span class="w"> </span>usuaris
+description:<span class="w"> </span>Container<span class="w"> </span>per<span class="w"> </span>usuaris<span class="w"> </span>del<span class="w"> </span>sistema<span class="w"> </span>linux
+objectclass:<span class="w"> </span>organizationalunit
 </code></pre></div>
 <p><strong>usuaris_edt.org</strong>   </p>
 <p>En este ejemplo se ve los datos para introducir varios usuarios, no todos los atributos son necesarios los obligatorios para un usuario <code>posixAccount</code> son: <code>sn, cn, uid, uidNumber,  gidNumber, homeDirectory</code></p>
-<div class="highlight"><pre><span></span><code>dn: <span class="nv">cn</span><span class="o">=</span>Pau Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
-objectclass: posixAccount
-objectclass: inetOrgPerson
-cn: Pau Pou
-cn: Pauet Pou
-sn: Pou
-homephone: <span class="m">555</span>-222-2220
-mail: pau@edt.org
-description: Watch out <span class="k">for</span> this guy
-ou: Profes
-uid: pau
-uidNumber: <span class="m">5000</span>
-gidNumber: <span class="m">100</span>
-homeDirectory: /tmp/home/pau
-userPassword: <span class="o">{</span>SSHA<span class="o">}</span>NDkipesNQqTFDgGJfyraLz/csZAIlk2/
+<div class="highlight"><pre><span></span><code>dn:<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Pau<span class="w"> </span>Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
+objectclass:<span class="w"> </span>posixAccount
+objectclass:<span class="w"> </span>inetOrgPerson
+cn:<span class="w"> </span>Pau<span class="w"> </span>Pou
+cn:<span class="w"> </span>Pauet<span class="w"> </span>Pou
+sn:<span class="w"> </span>Pou
+homephone:<span class="w"> </span><span class="m">555</span>-222-2220
+mail:<span class="w"> </span>pau@edt.org
+description:<span class="w"> </span>Watch<span class="w"> </span>out<span class="w"> </span><span class="k">for</span><span class="w"> </span>this<span class="w"> </span>guy
+ou:<span class="w"> </span>Profes
+uid:<span class="w"> </span>pau
+uidNumber:<span class="w"> </span><span class="m">5000</span>
+gidNumber:<span class="w"> </span><span class="m">100</span>
+homeDirectory:<span class="w"> </span>/tmp/home/pau
+userPassword:<span class="w"> </span><span class="o">{</span>SSHA<span class="o">}</span>NDkipesNQqTFDgGJfyraLz/csZAIlk2/
 
-dn: <span class="nv">cn</span><span class="o">=</span>Pere Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
-objectclass: posixAccount
-objectclass: inetOrgPerson
-cn: Pere Pou
-sn: Pou
-homephone: <span class="m">555</span>-222-2221
-mail: pere@edt.org
-description: Watch out <span class="k">for</span> this guy
-ou: Profes
-uid: pere
-uidNumber: <span class="m">5001</span>
-gidNumber: <span class="m">100</span>
-homeDirectory: /tmp/home/pere
-userPassword: <span class="o">{</span>SSHA<span class="o">}</span>ghmtRL11YtXoUhIP7z6f7nb8RCNadFe+
+dn:<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Pere<span class="w"> </span>Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
+objectclass:<span class="w"> </span>posixAccount
+objectclass:<span class="w"> </span>inetOrgPerson
+cn:<span class="w"> </span>Pere<span class="w"> </span>Pou
+sn:<span class="w"> </span>Pou
+homephone:<span class="w"> </span><span class="m">555</span>-222-2221
+mail:<span class="w"> </span>pere@edt.org
+description:<span class="w"> </span>Watch<span class="w"> </span>out<span class="w"> </span><span class="k">for</span><span class="w"> </span>this<span class="w"> </span>guy
+ou:<span class="w"> </span>Profes
+uid:<span class="w"> </span>pere
+uidNumber:<span class="w"> </span><span class="m">5001</span>
+gidNumber:<span class="w"> </span><span class="m">100</span>
+homeDirectory:<span class="w"> </span>/tmp/home/pere
+userPassword:<span class="w"> </span><span class="o">{</span>SSHA<span class="o">}</span>ghmtRL11YtXoUhIP7z6f7nb8RCNadFe+
 </code></pre></div>
 <h2 id="ficheros-de-configuracion">Ficheros de configuración</h2>
 <p>podemos modificar los datos de configuración de diferentes maneras, desde bajo nivel con los ficheros que empiezan con <code>s</code> como <code>slapd.conf</code>  o de forma de alto nivel desde comandos como <code>ldapadd</code> </p>
@@ -3468,11 +5365,11 @@ userPassword: <span class="o">{</span>SSHA<span class="o">}</span>ghmtRL11YtXoUh
 <p>Es el fichero de configuración del demonio  donde incluye los diferentes schemas de ldap, configuración de la base de datos, control de acceso, etc...</p>
 <p>configuración de la base de datos:</p>
 <div class="highlight"><pre><span></span><code>...
-database mdb
-suffix <span class="s2">&quot;dc=edt,dc=org&quot;</span>
-rootdn <span class="s2">&quot;cn=Manager,dc=edt,dc=org&quot;</span>
-rootpw secret
-directory /var/lib/ldap
+database<span class="w"> </span>mdb
+suffix<span class="w"> </span><span class="s2">&quot;dc=edt,dc=org&quot;</span>
+rootdn<span class="w"> </span><span class="s2">&quot;cn=Manager,dc=edt,dc=org&quot;</span>
+rootpw<span class="w"> </span>secret
+directory<span class="w"> </span>/var/lib/ldap
 ...
 </code></pre></div>
 <ul>
@@ -3482,22 +5379,22 @@ directory /var/lib/ldap
 </ul>
 <div class="highlight"><pre><span></span><code>....
 <span class="c1"># ACL for this database</span>
-access to *
-    by self write
-    by * <span class="nb">read</span>
+access<span class="w"> </span>to<span class="w"> </span>*
+<span class="w">    </span>by<span class="w"> </span>self<span class="w"> </span>write
+<span class="w">    </span>by<span class="w"> </span>*<span class="w"> </span><span class="nb">read</span>
 ...
 </code></pre></div>
 <ul>
 <li>permisos de acceso a la base de datos.</li>
 </ul>
 <h2 id="pasos-de-instalacion-en-docker">Pasos de instalación en docker</h2>
-<div class="highlight"><pre><span></span><code>docker run --name ldapserver -it --hostname ldapserver fedora:27 /bin/bash
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>ldapserver<span class="w"> </span>-it<span class="w"> </span>--hostname<span class="w"> </span>ldapserver<span class="w"> </span>fedora:27<span class="w"> </span>/bin/bash
 </code></pre></div>
 <p>Ya dentro del contenedor   </p>
-<div class="highlight"><pre><span></span><code>dnf update vi 
-dnf install -y vim procps  iputils iproute tree nmap mlocate man
+<div class="highlight"><pre><span></span><code>dnf<span class="w"> </span>update<span class="w"> </span>vi<span class="w"> </span>
+dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>vim<span class="w"> </span>procps<span class="w">  </span>iputils<span class="w"> </span>iproute<span class="w"> </span>tree<span class="w"> </span>nmap<span class="w"> </span>mlocate<span class="w"> </span>man
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>dnf install -y openldap-clients openldap-servers  
+<div class="highlight"><pre><span></span><code>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>openldap-clients<span class="w"> </span>openldap-servers<span class="w">  </span>
 </code></pre></div>
 <p>esto crea un directorio <code>/var/lib/ldap</code> con el usuario ldap y siempre a de ser así<br />
 también crea <code>/etc/openldap/slapd.d</code> donde esta la configuración en formato <code>.ldapd</code> </p>
@@ -3505,23 +5402,23 @@ también crea <code>/etc/openldap/slapd.d</code> donde esta la configuración en
 <p>Borraremos toda la configuración por defecto y crearemos la que deseamos desde el archivo <code>slapd.conf</code> y <code>DB_CONFIG</code> , estos dos archivos son los necesarios para generar la configuración de los datos.</p>
 <p><code>slaptest</code>   genera la configuración inicial en <code>/etc/openldap/slapd.d/</code> desde el fichero <code>slapd.conf</code></p>
 <p>copiamos dentro del contenedor los archivos que necesitaremos.</p>
-<div class="highlight"><pre><span></span><code>mkdir /opt/docker
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>/opt/docker
 <span class="c1"># desde el host al contenedor</span>
-docker cp slapd-edt.org.conf ldapserver:/opt/docker
-docker cp DB_CONFIG ldapserver:/opt/docker
-docker cp usuaris_edt.org.ldif ldapserver:/opt/docker
-docker cp organitzacio_edt.org.ldif ldapserver:/opt/docker
+docker<span class="w"> </span>cp<span class="w"> </span>slapd-edt.org.conf<span class="w"> </span>ldapserver:/opt/docker
+docker<span class="w"> </span>cp<span class="w"> </span>DB_CONFIG<span class="w"> </span>ldapserver:/opt/docker
+docker<span class="w"> </span>cp<span class="w"> </span>usuaris_edt.org.ldif<span class="w"> </span>ldapserver:/opt/docker
+docker<span class="w"> </span>cp<span class="w"> </span>organitzacio_edt.org.ldif<span class="w"> </span>ldapserver:/opt/docker
 </code></pre></div>
 <h4 id="borrar-contenido-por-defecto">Borrar contenido por defecto</h4>
-<div class="highlight"><pre><span></span><code>rm -rf /var/lib/ldap/*
-rm -rf /etc/openldap/slapd.d/*
+<div class="highlight"><pre><span></span><code>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/ldap/*
+rm<span class="w"> </span>-rf<span class="w"> </span>/etc/openldap/slapd.d/*
 </code></pre></div>
 <h4 id="generar-base-de-datos">Generar base de datos</h4>
-<div class="highlight"><pre><span></span><code>cp DB_CONFIG /var/lib/ldap/
-slaptest -f slapd-edt.org.conf <span class="c1"># valida el archivo de configuracion</span>
-slaptest -f slapd-edt.org.conf -u 
-slaptest -f slapd-edt.org.conf -F /etc/openldap/slapd.d/ 
-slaptest -f slapd-edt.org.conf -F /etc/openldap/slapd.d/ -u
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>DB_CONFIG<span class="w"> </span>/var/lib/ldap/
+slaptest<span class="w"> </span>-f<span class="w"> </span>slapd-edt.org.conf<span class="w"> </span><span class="c1"># valida el archivo de configuracion</span>
+slaptest<span class="w"> </span>-f<span class="w"> </span>slapd-edt.org.conf<span class="w"> </span>-u<span class="w"> </span>
+slaptest<span class="w"> </span>-f<span class="w"> </span>slapd-edt.org.conf<span class="w"> </span>-F<span class="w"> </span>/etc/openldap/slapd.d/<span class="w"> </span>
+slaptest<span class="w"> </span>-f<span class="w"> </span>slapd-edt.org.conf<span class="w"> </span>-F<span class="w"> </span>/etc/openldap/slapd.d/<span class="w"> </span>-u
 </code></pre></div>
 <ul>
 <li>En este momento se a creado la base de datos pero nada más, aun no contiene datos. Comprobar con <code>slapcat</code>  o <code>slapcat -n0</code> la configuración del servidor.</li>
@@ -3533,13 +5430,13 @@ slaptest -f slapd-edt.org.conf -F /etc/openldap/slapd.d/ -u
 <p>El siguiente paso sería el populate (cargar los datos ) . Cargar los datos de forma cliente mediante las ordenes <code>ldapadd</code> con el protocolo ldap o cargar entradas masivas en forma de servidor con <code>slapadd</code>.     </p>
 <p>De marera masiva, desde el servidor ( el servicio tiene que estar apagado ).</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># cargo estructura</span>
-slapadd -F /etc/openldap/slapd.d/ -l organitzacio_edt.org.ldif 
+slapadd<span class="w"> </span>-F<span class="w"> </span>/etc/openldap/slapd.d/<span class="w"> </span>-l<span class="w"> </span>organitzacio_edt.org.ldif<span class="w"> </span>
 <span class="c1"># # se podrian cargar también nlos usuarios en este paso pero lo dejamos para ver las 2 maneras.</span>
 
 <span class="c1"># compruebo estructura</span>
 slapcat
-chown -R ldap:ldap  /etc/openldap/slapd.d/
-chown -R ldap:ldap  /var/lib/ldap/
+chown<span class="w"> </span>-R<span class="w"> </span>ldap:ldap<span class="w">  </span>/etc/openldap/slapd.d/
+chown<span class="w"> </span>-R<span class="w"> </span>ldap:ldap<span class="w">  </span>/var/lib/ldap/
 </code></pre></div>
 <blockquote>
 <p>Al generar datos de esta manera los archivos cambian de usuario y grupo, por lo tanto les devolvemos sus usuario y grupo originales <code>ldap:ldap</code>  </p>
@@ -3551,11 +5448,11 @@ chown -R ldap:ldap  /var/lib/ldap/
 <p>ldap funciona en el puerto <code>389/tcp</code> , así que mapeando ese puerto podemos ver si esta activo.</p>
 </blockquote>
 <p><strong>Comprobar</strong>  </p>
-<div class="highlight"><pre><span></span><code>ldapsearch -x -LLL -b <span class="s1">&#39;dc=edt,dc=org&#39;</span>
-ldapsearch -x -LLL -b <span class="s1">&#39;dc=edt,dc=org&#39;</span> dn
-ldapsearch -x -LLL -b <span class="s1">&#39;dc=edt,dc=org&#39;</span> description
-ldapsearch -x -LLL -b <span class="s1">&#39;dc=edt,dc=org&#39;</span>  +
-ldapsearch -x -LLL -b <span class="s1">&#39;dc=edt,dc=org&#39;</span> -h <span class="m">172</span>.17.0.2
+<div class="highlight"><pre><span></span><code>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-LLL<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;dc=edt,dc=org&#39;</span>
+ldapsearch<span class="w"> </span>-x<span class="w"> </span>-LLL<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;dc=edt,dc=org&#39;</span><span class="w"> </span>dn
+ldapsearch<span class="w"> </span>-x<span class="w"> </span>-LLL<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;dc=edt,dc=org&#39;</span><span class="w"> </span>description
+ldapsearch<span class="w"> </span>-x<span class="w"> </span>-LLL<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;dc=edt,dc=org&#39;</span><span class="w">  </span>+
+ldapsearch<span class="w"> </span>-x<span class="w"> </span>-LLL<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;dc=edt,dc=org&#39;</span><span class="w"> </span>-h<span class="w"> </span><span class="m">172</span>.17.0.2
 </code></pre></div>
 <ul>
 <li>
@@ -3574,24 +5471,24 @@ ldapsearch -x -LLL -b <span class="s1">&#39;dc=edt,dc=org&#39;</span> -h <span c
 <h3 id="cliente-ldap">Cliente ldap</h3>
 <p>El cliente ldap tiene que indicar que servidor tiene que consultar, por lo tanto se lo indicamos en el archivo de configuración del cliente <code>/etc/openldap/ldap.conf</code> </p>
 <div class="highlight"><pre><span></span><code>...
-URI ldap://ldapserver
-BASE <span class="nv">dc</span><span class="o">=</span>edt,dc<span class="o">=</span>org
+URI<span class="w"> </span>ldap://ldapserver
+BASE<span class="w"> </span><span class="nv">dc</span><span class="o">=</span>edt,dc<span class="o">=</span>org
 </code></pre></div>
 <p>comprobar que funciona </p>
-<div class="highlight"><pre><span></span><code>ldapwhoami -x -h <span class="m">172</span>.17.0.2
-ldapwhoami -x -h <span class="m">172</span>.17.0.2 -D <span class="s1">&#39;cn=Manager,dc=edt,dc=org&#39;</span> -w secret
+<div class="highlight"><pre><span></span><code>ldapwhoami<span class="w"> </span>-x<span class="w"> </span>-h<span class="w"> </span><span class="m">172</span>.17.0.2
+ldapwhoami<span class="w"> </span>-x<span class="w"> </span>-h<span class="w"> </span><span class="m">172</span>.17.0.2<span class="w"> </span>-D<span class="w"> </span><span class="s1">&#39;cn=Manager,dc=edt,dc=org&#39;</span><span class="w"> </span>-w<span class="w"> </span>secret
 </code></pre></div>
 <h4 id="insertar-datos-desde-cliente">Insertar datos desde cliente</h4>
-<div class="highlight"><pre><span></span><code>ldapadd -x -h <span class="m">172</span>.17.0.2   -f usuaris_edt.org.ldif  -D <span class="s1">&#39;cn=Manager,dc=edt,dc=org&#39;</span> -w secret
-ldapadd -x -h <span class="m">172</span>.17.0.2   -f usuaris_edt.org.ldif  -D <span class="s1">&#39;cn=Manager,dc=edt,dc=org&#39;</span> -W
+<div class="highlight"><pre><span></span><code>ldapadd<span class="w"> </span>-x<span class="w"> </span>-h<span class="w"> </span><span class="m">172</span>.17.0.2<span class="w">   </span>-f<span class="w"> </span>usuaris_edt.org.ldif<span class="w">  </span>-D<span class="w"> </span><span class="s1">&#39;cn=Manager,dc=edt,dc=org&#39;</span><span class="w"> </span>-w<span class="w"> </span>secret
+ldapadd<span class="w"> </span>-x<span class="w"> </span>-h<span class="w"> </span><span class="m">172</span>.17.0.2<span class="w">   </span>-f<span class="w"> </span>usuaris_edt.org.ldif<span class="w">  </span>-D<span class="w"> </span><span class="s1">&#39;cn=Manager,dc=edt,dc=org&#39;</span><span class="w"> </span>-W
 </code></pre></div>
 <h3 id="generar-imagen-docker">Generar imagen docker</h3>
 <p>Todo esto se a creado dentro de un contenedor de docker, pasaremos ese contenedor a imagen para futuros usos.</p>
-<div class="highlight"><pre><span></span><code>docker commit ldapserver  jorgepastorr/ldapserver19
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>commit<span class="w"> </span>ldapserver<span class="w">  </span>jorgepastorr/ldapserver19
 </code></pre></div>
 <h3 id="arrancar-de-nuevo">Arrancar de nuevo</h3>
 <p>En este caso ya no queremos un contenedor interactivo por lo tanto le indicaremos un <code>-d</code> </p>
-<div class="highlight"><pre><span></span><code>docker run --rm -d jorgepastorr/ldapserver19 /sbin/slapd -d0
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-d<span class="w"> </span>jorgepastorr/ldapserver19<span class="w"> </span>/sbin/slapd<span class="w"> </span>-d0
 </code></pre></div>
 <ul>
 <li><code>-d0</code>  argumento de slapd para que quede en forgraund</li>
@@ -3602,61 +5499,61 @@ ldapadd -x -h <span class="m">172</span>.17.0.2   -f usuaris_edt.org.ldif  -D <s
 </blockquote>
 <h2 id="dockerfile">Dockerfile</h2>
 <div class="highlight"><pre><span></span><code><span class="c"># ldapserver</span>
-<span class="k">FROM</span> <span class="s">fedora:27</span>  
-<span class="k">LABEL</span> <span class="nv">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span>
-<span class="k">LABEL</span> <span class="nv">author</span><span class="o">=</span><span class="s2">&quot;@jorgepastorr&quot;</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">fedora:27</span><span class="w">  </span>
+<span class="k">LABEL</span><span class="w"> </span><span class="nv">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span>
+<span class="k">LABEL</span><span class="w"> </span><span class="nv">author</span><span class="o">=</span><span class="s2">&quot;@jorgepastorr&quot;</span>
 
-<span class="k">RUN</span>  dnf -y install openldap-servers openldap-clients
-<span class="k">RUN</span> mkdir /opt/docker
+<span class="k">RUN</span><span class="w">  </span>dnf<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>openldap-servers<span class="w"> </span>openldap-clients
+<span class="k">RUN</span><span class="w"> </span>mkdir<span class="w"> </span>/opt/docker
 
-<span class="k">COPY</span> * /opt/docker/
+<span class="k">COPY</span><span class="w"> </span>*<span class="w"> </span>/opt/docker/
 
-<span class="k">RUN</span> chmod +x /opt/docker/startup.sh
-<span class="k">CMD</span> /opt/docker/startup.sh
+<span class="k">RUN</span><span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/opt/docker/startup.sh
+<span class="k">CMD</span><span class="w"> </span>/opt/docker/startup.sh
 </code></pre></div>
 <p><strong><u>install.sh</u></strong>  </p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 <span class="c1"># install ldapserver</span>
 
-rm -rf /etc/openldap/slapd.d/*
-rm -rf /var/lib/ldap/* 
-cp /opt/docker/DB_CONFIG /var/lib/ldap/.
-slaptest -f /opt/docker/slapd-edt.org.conf -F /etc/openldap/slapd.d/  
+rm<span class="w"> </span>-rf<span class="w"> </span>/etc/openldap/slapd.d/*
+rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/ldap/*<span class="w"> </span>
+cp<span class="w"> </span>/opt/docker/DB_CONFIG<span class="w"> </span>/var/lib/ldap/.
+slaptest<span class="w"> </span>-f<span class="w"> </span>/opt/docker/slapd-edt.org.conf<span class="w"> </span>-F<span class="w"> </span>/etc/openldap/slapd.d/<span class="w">  </span>
 
-slapadd -F /etc/openldap/slapd.d -l /opt/docker/organitzacio_edt.org.ldif
-slapadd -F /etc/openldap/slapd.d -l /opt/docker/usuaris_edt.org.ldif 
+slapadd<span class="w"> </span>-F<span class="w"> </span>/etc/openldap/slapd.d<span class="w"> </span>-l<span class="w"> </span>/opt/docker/organitzacio_edt.org.ldif
+slapadd<span class="w"> </span>-F<span class="w"> </span>/etc/openldap/slapd.d<span class="w"> </span>-l<span class="w"> </span>/opt/docker/usuaris_edt.org.ldif<span class="w"> </span>
 
-chown -R ldap:ldap /etc/openldap/slapd.d
-chown -R ldap:ldap /var/lib/ldap   
+chown<span class="w"> </span>-R<span class="w"> </span>ldap:ldap<span class="w"> </span>/etc/openldap/slapd.d
+chown<span class="w"> </span>-R<span class="w"> </span>ldap:ldap<span class="w"> </span>/var/lib/ldap<span class="w">   </span>
 
-cp /opt/docker/ldap.conf /etc/openldap/.
+cp<span class="w"> </span>/opt/docker/ldap.conf<span class="w"> </span>/etc/openldap/.
 </code></pre></div>
 <p><strong><u>startup.sh</u></strong>  </p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
-bash /opt/docker/install.sh
-/sbin/slapd -d0
+bash<span class="w"> </span>/opt/docker/install.sh
+/sbin/slapd<span class="w"> </span>-d0
 </code></pre></div>
 <p><strong>Importante:</strong> Si tenemos que arrancar el contenedor en máquinas limitadas como amazon es posible tener que añadir <code>unlimit -n 1024</code> antes de la linea de arrancar el servicio ldapd.</p>
 <h3 id="generar-imagen-con-dockerfile">Generar imagen con Dockerfile</h3>
 <p>Estando en el directorio donde se encuentra el Dockerfile</p>
 <div class="highlight"><pre><span></span><code>.
-├── DB_CONFIG
-├── Dockerfile
-├── install.sh
-├── ldap.conf
-├── organitzacio_edt.org.ldif
-├── slapd-edt.org.conf
-├── startup.sh
-└── usuaris_edt.org.ldif
+├──<span class="w"> </span>DB_CONFIG
+├──<span class="w"> </span>Dockerfile
+├──<span class="w"> </span>install.sh
+├──<span class="w"> </span>ldap.conf
+├──<span class="w"> </span>organitzacio_edt.org.ldif
+├──<span class="w"> </span>slapd-edt.org.conf
+├──<span class="w"> </span>startup.sh
+└──<span class="w"> </span>usuaris_edt.org.ldif
 </code></pre></div>
 <blockquote>
 <p>Es importante que este directorio no sea muy pesado ya que al crear la imagen copiara todo su contenido.</p>
 </blockquote>
 <div class="highlight"><pre><span></span><code><span class="c1"># generar imagen</span>
-docker build -t ldapserver:base .
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>ldapserver:base<span class="w"> </span>.
 <span class="c1"># arrancar contenedor</span>
-docker run --rm -d --name ldapserver -h ldapserver -p <span class="m">389</span>:389 ldapserver:base
+docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>ldapserver<span class="w"> </span>-h<span class="w"> </span>ldapserver<span class="w"> </span>-p<span class="w"> </span><span class="m">389</span>:389<span class="w"> </span>ldapserver:base
 </code></pre></div>
 <h2 id="el-profe-quieredice">El profe quiere/dice</h2>
 <p>Siempre que tengamos que copiar archivos dentro de una imagen hacerlo en <code>/opt/docker</code> </p>
@@ -3666,15 +5563,15 @@ docker run --rm -d --name ldapserver -h ldapserver -p <span class="m">389</span>
 <p>docker history ldapserver19:base</p>
 <h2 id="cliente-filtrar-modificar-anadir-eliminar">Cliente filtrar, modificar, añadir, eliminar.</h2>
 <h3 id="busquedas">Búsquedas</h3>
-<div class="highlight"><pre><span></span><code> ldapsearch -x -LLL -h <span class="m">172</span>.17.0.2 -b <span class="s1">&#39;dc=edt,dc=org&#39;</span> <span class="s1">&#39;(|(cn=* Mas)(cn=* Pou))&#39;</span> dn
- ldapsearch -x -LLL -b <span class="s1">&#39;dc=edt,dc=org&#39;</span> <span class="s1">&#39;(&amp;(cn=* Mas)(ou=Profes))&#39;</span> dn
- ldapsearch -x -LLL -b <span class="s1">&#39;dc=edt,dc=org&#39;</span> <span class="s1">&#39;(&amp;(|(cn=* Mas)(cn=* Pou))(gidNumber=600))&#39;</span>
- ldapsearch -x -LLL -b <span class="s1">&#39;ou=usuaris,dc=edt,dc=org&#39;</span> <span class="s1">&#39;uidNumber&gt;=5000&#39;</span> dn uidNumber
- ldapsearch -x -LLL -b <span class="s1">&#39;dc=edt,dc=org&#39;</span>  -s sub
- ldapsearch -x -LLL -b <span class="s1">&#39;dc=edt,dc=org&#39;</span> -s base
- ldapsearch -x -LLL -b <span class="s1">&#39;dc=edt,dc=org&#39;</span> -s one
- ldapsearch -x -LLL -b <span class="s1">&#39;dc=edt,dc=org&#39;</span> -s children
- ldapsearch -x -LLL -b <span class="s1">&#39;dc=edt,dc=org&#39;</span> +  <span class="c1">#  atributos operacionales, lenguaje ldap    </span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-LLL<span class="w"> </span>-h<span class="w"> </span><span class="m">172</span>.17.0.2<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;dc=edt,dc=org&#39;</span><span class="w"> </span><span class="s1">&#39;(|(cn=* Mas)(cn=* Pou))&#39;</span><span class="w"> </span>dn
+<span class="w"> </span>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-LLL<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;dc=edt,dc=org&#39;</span><span class="w"> </span><span class="s1">&#39;(&amp;(cn=* Mas)(ou=Profes))&#39;</span><span class="w"> </span>dn
+<span class="w"> </span>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-LLL<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;dc=edt,dc=org&#39;</span><span class="w"> </span><span class="s1">&#39;(&amp;(|(cn=* Mas)(cn=* Pou))(gidNumber=600))&#39;</span>
+<span class="w"> </span>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-LLL<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;ou=usuaris,dc=edt,dc=org&#39;</span><span class="w"> </span><span class="s1">&#39;uidNumber&gt;=5000&#39;</span><span class="w"> </span>dn<span class="w"> </span>uidNumber
+<span class="w"> </span>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-LLL<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;dc=edt,dc=org&#39;</span><span class="w">  </span>-s<span class="w"> </span>sub
+<span class="w"> </span>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-LLL<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;dc=edt,dc=org&#39;</span><span class="w"> </span>-s<span class="w"> </span>base
+<span class="w"> </span>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-LLL<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;dc=edt,dc=org&#39;</span><span class="w"> </span>-s<span class="w"> </span>one
+<span class="w"> </span>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-LLL<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;dc=edt,dc=org&#39;</span><span class="w"> </span>-s<span class="w"> </span>children
+<span class="w"> </span>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-LLL<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;dc=edt,dc=org&#39;</span><span class="w"> </span>+<span class="w">  </span><span class="c1">#  atributos operacionales, lenguaje ldap    </span>
 </code></pre></div>
 <ul>
 <li><code>-s sub</code> es la salida estándar</li>
@@ -3683,134 +5580,134 @@ docker run --rm -d --name ldapserver -h ldapserver -p <span class="m">389</span>
 <li><code>-s children</code> del segundo nivel incluido hasta el ultimo ( grupos y usuarios )</li>
 </ul>
 <h3 id="anadir">Añadir</h3>
-<div class="highlight"><pre><span></span><code>ldapadd -x -D <span class="nv">cn</span><span class="o">=</span>Manager,dc<span class="o">=</span>edt,dc<span class="o">=</span>org -w secret -f /tmp/ldap/usuario_nuevo.ldif
+<div class="highlight"><pre><span></span><code>ldapadd<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Manager,dc<span class="o">=</span>edt,dc<span class="o">=</span>org<span class="w"> </span>-w<span class="w"> </span>secret<span class="w"> </span>-f<span class="w"> </span>/tmp/ldap/usuario_nuevo.ldif
 </code></pre></div>
 <blockquote>
 <p>La opción <code>-c</code> permite en el caso de añadir un elemento y falle pase al siguiente y no pare todo el proceso.</p>
 </blockquote>
 <p><strong><u>usuario_nuevo.ldif</u></strong> </p>
-<div class="highlight"><pre><span></span><code>dn: <span class="nv">cn</span><span class="o">=</span>Pau Maria Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
-objectClass: posixAccount
-objectClass: inetOrgPerson
-cn: Pau Maria Pou
-sn: Pou
-ou: Profes
-uid: pau
-uidNumber: <span class="m">5000</span>
-gidNumber: <span class="m">100</span>
-homeDirectory: /tmp/home/pau
-userPassword:: <span class="nv">e1NTSEF9TkRraXBlc05RcVRGRGdHSmZ5cmFMei9jc1pBSWxrMi8</span><span class="o">=</span>
-mail: modme@example.com
-homePhone: <span class="m">111</span>-222-333
-description: nueva descripcion para Pau Pou
+<div class="highlight"><pre><span></span><code>dn:<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Pau<span class="w"> </span>Maria<span class="w"> </span>Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
+objectClass:<span class="w"> </span>posixAccount
+objectClass:<span class="w"> </span>inetOrgPerson
+cn:<span class="w"> </span>Pau<span class="w"> </span>Maria<span class="w"> </span>Pou
+sn:<span class="w"> </span>Pou
+ou:<span class="w"> </span>Profes
+uid:<span class="w"> </span>pau
+uidNumber:<span class="w"> </span><span class="m">5000</span>
+gidNumber:<span class="w"> </span><span class="m">100</span>
+homeDirectory:<span class="w"> </span>/tmp/home/pau
+userPassword::<span class="w"> </span><span class="nv">e1NTSEF9TkRraXBlc05RcVRGRGdHSmZ5cmFMei9jc1pBSWxrMi8</span><span class="o">=</span>
+mail:<span class="w"> </span>modme@example.com
+homePhone:<span class="w"> </span><span class="m">111</span>-222-333
+description:<span class="w"> </span>nueva<span class="w"> </span>descripcion<span class="w"> </span>para<span class="w"> </span>Pau<span class="w"> </span>Pou
 </code></pre></div>
 <h3 id="eliminar">Eliminar</h3>
-<div class="highlight"><pre><span></span><code>ldapdelete -x  -D <span class="nv">cn</span><span class="o">=</span>Manager,dc<span class="o">=</span>edt,dc<span class="o">=</span>org -w secret <span class="s1">&#39;cn=Pau Pou,ou=usuaris,dc=edt,dc=org&#39;</span>
-ldapdelete -x -D <span class="nv">cn</span><span class="o">=</span>Manager,dc<span class="o">=</span>edt,dc<span class="o">=</span>org -w secret -f modificaciones.ldif
+<div class="highlight"><pre><span></span><code>ldapdelete<span class="w"> </span>-x<span class="w">  </span>-D<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Manager,dc<span class="o">=</span>edt,dc<span class="o">=</span>org<span class="w"> </span>-w<span class="w"> </span>secret<span class="w"> </span><span class="s1">&#39;cn=Pau Pou,ou=usuaris,dc=edt,dc=org&#39;</span>
+ldapdelete<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Manager,dc<span class="o">=</span>edt,dc<span class="o">=</span>org<span class="w"> </span>-w<span class="w"> </span>secret<span class="w"> </span>-f<span class="w"> </span>modificaciones.ldif
 </code></pre></div>
 <h3 id="modificar">Modificar</h3>
-<div class="highlight"><pre><span></span><code>ldapmodify -x -D <span class="nv">cn</span><span class="o">=</span>Manager,dc<span class="o">=</span>edt,dc<span class="o">=</span>org -w secret -f modificaciones.ldif
+<div class="highlight"><pre><span></span><code>ldapmodify<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Manager,dc<span class="o">=</span>edt,dc<span class="o">=</span>org<span class="w"> </span>-w<span class="w"> </span>secret<span class="w"> </span>-f<span class="w"> </span>modificaciones.ldif
 </code></pre></div>
 <p><code>changetype: &lt;[modify|add|delete|modrdn]&gt;</code> </p>
 <h4 id="modify">Modify</h4>
 <p><strong><u>modificaciones.ldif</u></strong> </p>
-<div class="highlight"><pre><span></span><code>dn: <span class="nv">cn</span><span class="o">=</span>Pau Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
-changetype: modify
-replace: mail
-mail: modme@example.com
+<div class="highlight"><pre><span></span><code>dn:<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Pau<span class="w"> </span>Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
+changetype:<span class="w"> </span>modify
+replace:<span class="w"> </span>mail
+mail:<span class="w"> </span>modme@example.com
 -
-replace: homePhone
+replace:<span class="w"> </span>homePhone
 homephone:111-222-333
 -
-delete: description
+delete:<span class="w"> </span>description
 
-dn: <span class="nv">cn</span><span class="o">=</span>Anna Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
-changetype: modify
-add: description
-description: nueva descripcion para Anna Pou
+dn:<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Anna<span class="w"> </span>Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
+changetype:<span class="w"> </span>modify
+add:<span class="w"> </span>description
+description:<span class="w"> </span>nueva<span class="w"> </span>descripcion<span class="w"> </span>para<span class="w"> </span>Anna<span class="w"> </span>Pou
 </code></pre></div>
 <p>borrar todos los cn repetidos y dejar solo 1</p>
-<div class="highlight"><pre><span></span><code>dn: <span class="nv">cn</span><span class="o">=</span>Anna Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
-changetype: modify
-replace: cn
-cn: Anna Pou
+<div class="highlight"><pre><span></span><code>dn:<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Anna<span class="w"> </span>Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
+changetype:<span class="w"> </span>modify
+replace:<span class="w"> </span>cn
+cn:<span class="w"> </span>Anna<span class="w"> </span>Pou
 </code></pre></div>
 <p><strong><u>modificaciones.ldif</u></strong></p>
-<div class="highlight"><pre><span></span><code>dn: <span class="nv">cn</span><span class="o">=</span>Anna Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
-changetype: delete
+<div class="highlight"><pre><span></span><code>dn:<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Anna<span class="w"> </span>Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
+changetype:<span class="w"> </span>delete
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>ldapdelete -x -r -D <span class="nv">cn</span><span class="o">=</span>Manager,dc<span class="o">=</span>edt,dc<span class="o">=</span>org -w secret <span class="s2">&quot;ou=usuaris,dc=edt,dc=org&quot;</span>
+<div class="highlight"><pre><span></span><code>ldapdelete<span class="w"> </span>-x<span class="w"> </span>-r<span class="w"> </span>-D<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Manager,dc<span class="o">=</span>edt,dc<span class="o">=</span>org<span class="w"> </span>-w<span class="w"> </span>secret<span class="w"> </span><span class="s2">&quot;ou=usuaris,dc=edt,dc=org&quot;</span>
 </code></pre></div>
 <ul>
 <li>Ojo opción <code>-r</code> recursivo que borra toda su descendencia</li>
 </ul>
 <h4 id="add">Add</h4>
 <p><strong><u>modificaciones.ldif</u></strong></p>
-<div class="highlight"><pre><span></span><code>dn: <span class="nv">cn</span><span class="o">=</span>Anna Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
-changetype: add
-objectClass: posixAccount
-objectClass: inetOrgPerson
-cn: Anna Pou
-cn: Anita Pou
-sn: Pou
-mail: anna@edt.org
-ou: Alumnes
-uid: anna
-uidNumber: <span class="m">5002</span>
-gidNumber: <span class="m">600</span>
-homeDirectory: /tmp/home/anna
-userPassword:: <span class="nv">e1NTSEF9Qm00QjNCdS9mdUg2QmJ5OWxneGZGQXdMWXJLMFJiT3E</span><span class="o">=</span>
-description: modified description
-homePhone: <span class="m">93</span>-222-333
+<div class="highlight"><pre><span></span><code>dn:<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Anna<span class="w"> </span>Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
+changetype:<span class="w"> </span>add
+objectClass:<span class="w"> </span>posixAccount
+objectClass:<span class="w"> </span>inetOrgPerson
+cn:<span class="w"> </span>Anna<span class="w"> </span>Pou
+cn:<span class="w"> </span>Anita<span class="w"> </span>Pou
+sn:<span class="w"> </span>Pou
+mail:<span class="w"> </span>anna@edt.org
+ou:<span class="w"> </span>Alumnes
+uid:<span class="w"> </span>anna
+uidNumber:<span class="w"> </span><span class="m">5002</span>
+gidNumber:<span class="w"> </span><span class="m">600</span>
+homeDirectory:<span class="w"> </span>/tmp/home/anna
+userPassword::<span class="w"> </span><span class="nv">e1NTSEF9Qm00QjNCdS9mdUg2QmJ5OWxneGZGQXdMWXJLMFJiT3E</span><span class="o">=</span>
+description:<span class="w"> </span>modified<span class="w"> </span>description
+homePhone:<span class="w"> </span><span class="m">93</span>-222-333
 </code></pre></div>
 <h4 id="modrdn">Modrdn</h4>
 <p><strong><u>modificaciones.ldif</u></strong> </p>
-<div class="highlight"><pre><span></span><code>dn: <span class="nv">cn</span><span class="o">=</span>Pau Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
-changetype: modrdn
-newrdn: <span class="nv">cn</span><span class="o">=</span>Pau Maria Pou
-deleteoldrdn: <span class="m">0</span>
+<div class="highlight"><pre><span></span><code>dn:<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Pau<span class="w"> </span>Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
+changetype:<span class="w"> </span>modrdn
+newrdn:<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Pau<span class="w"> </span>Maria<span class="w"> </span>Pou
+deleteoldrdn:<span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <ul>
 <li><code>deleteoldrdn</code>  0 | 1 se  refiere a si quieres remplazar el ultimo registro de cn o solo añadir uno nuevo.</li>
 </ul>
-<div class="highlight"><pre><span></span><code>dn: <span class="nv">cn</span><span class="o">=</span>Anna Woman,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
-changetype: modrdn
-newrdn: <span class="nv">cn</span><span class="o">=</span>Anna Elder
-deleteoldrdn: <span class="m">1</span>
-newsuperior: <span class="nv">ou</span><span class="o">=</span>consumidors,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
+<div class="highlight"><pre><span></span><code>dn:<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Anna<span class="w"> </span>Woman,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
+changetype:<span class="w"> </span>modrdn
+newrdn:<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Anna<span class="w"> </span>Elder
+deleteoldrdn:<span class="w"> </span><span class="m">1</span>
+newsuperior:<span class="w"> </span><span class="nv">ou</span><span class="o">=</span>consumidors,dc<span class="o">=</span>edt,dc<span class="o">=</span>org
 </code></pre></div>
 <ul>
 <li><code>newsuperior</code> modificar ruta del usuario</li>
 </ul>
 <p>Modificar desde linea de comando.</p>
-<div class="highlight"><pre><span></span><code>ldapmodrdn -x -D <span class="nv">cn</span><span class="o">=</span>Manager,dc<span class="o">=</span>edt,dc<span class="o">=</span>org -w secret <span class="s1">&#39;cn=Anna Puig,ou=usuaris,dc=edt,dc=org&#39;</span> <span class="s1">&#39;cn=Annita Puig&#39;</span>
+<div class="highlight"><pre><span></span><code>ldapmodrdn<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>Manager,dc<span class="o">=</span>edt,dc<span class="o">=</span>org<span class="w"> </span>-w<span class="w"> </span>secret<span class="w"> </span><span class="s1">&#39;cn=Anna Puig,ou=usuaris,dc=edt,dc=org&#39;</span><span class="w"> </span><span class="s1">&#39;cn=Annita Puig&#39;</span>
 </code></pre></div>
 <h3 id="ldapcompare">Ldapcompare</h3>
 <p>ldapcompare sirve para verificar datos en scripts, muestra cierto en el caso que el dato sea correcto.</p>
-<div class="highlight"><pre><span></span><code>ldapcompare -x -h <span class="m">172</span>.17.0.2 <span class="s1">&#39;cn=Anna pou,ou=usuaris,dc=edt,dc=org&#39;</span> mail:anna@edt.org
+<div class="highlight"><pre><span></span><code>ldapcompare<span class="w"> </span>-x<span class="w"> </span>-h<span class="w"> </span><span class="m">172</span>.17.0.2<span class="w"> </span><span class="s1">&#39;cn=Anna pou,ou=usuaris,dc=edt,dc=org&#39;</span><span class="w"> </span>mail:anna@edt.org
 TRUE
 </code></pre></div>
 <h3 id="getent">getent</h3>
 <p>permite validar obtener la información de los usuarios del sistema independientemente de donde vengan.</p>
-<div class="highlight"><pre><span></span><code>getent passwd &lt;usuario&gt;
-getent group &lt;grupo&gt;
+<div class="highlight"><pre><span></span><code>getent<span class="w"> </span>passwd<span class="w"> </span>&lt;usuario&gt;
+getent<span class="w"> </span>group<span class="w"> </span>&lt;grupo&gt;
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>ldapurl -h <span class="m">172</span>.17.0.2 -b <span class="nv">dc</span><span class="o">=</span>edt,dc<span class="o">=</span>org -s sub
+<div class="highlight"><pre><span></span><code>ldapurl<span class="w"> </span>-h<span class="w"> </span><span class="m">172</span>.17.0.2<span class="w"> </span>-b<span class="w"> </span><span class="nv">dc</span><span class="o">=</span>edt,dc<span class="o">=</span>org<span class="w"> </span>-s<span class="w"> </span>sub
 
-ldapurl -H ldap://172.17.0.2:389/dc<span class="o">=</span>edt,dc<span class="o">=</span>org?dn,mail?sub?<span class="o">(</span><span class="nv">cn</span><span class="o">=</span>Pau Pou<span class="o">)</span>
+ldapurl<span class="w"> </span>-H<span class="w"> </span>ldap://172.17.0.2:389/dc<span class="o">=</span>edt,dc<span class="o">=</span>org?dn,mail?sub?<span class="o">(</span><span class="nv">cn</span><span class="o">=</span>Pau<span class="w"> </span>Pou<span class="o">)</span>
 </code></pre></div>
 <h3 id="password">Password</h3>
 <p><strong>Cliente</strong> </p>
-<div class="highlight"><pre><span></span><code> ldappasswd -x -h <span class="m">172</span>.17.0.2 -D <span class="s1">&#39;cn=user10,ou=usuaris,dc=edt,dc=org&#39;</span> -w jupiter -s user10
+<div class="highlight"><pre><span></span><code><span class="w"> </span>ldappasswd<span class="w"> </span>-x<span class="w"> </span>-h<span class="w"> </span><span class="m">172</span>.17.0.2<span class="w"> </span>-D<span class="w"> </span><span class="s1">&#39;cn=user10,ou=usuaris,dc=edt,dc=org&#39;</span><span class="w"> </span>-w<span class="w"> </span>jupiter<span class="w"> </span>-s<span class="w"> </span>user10
 </code></pre></div>
 <ul>
 <li><code>-w</code> antiguo pasword <code>-s</code> nuevo pasword</li>
 </ul>
 <p><strong>Servidor</strong> </p>
 <p>generar contraseñas para añadir al archivo de usuarios.</p>
-<div class="highlight"><pre><span></span><code>slappasswd -h <span class="o">{</span>SSHA<span class="o">}</span><span class="p">|</span><span class="o">{</span>CRYPT<span class="o">}</span><span class="p">|</span><span class="o">{</span>md5<span class="o">}</span>
-New password:
-Re-enter new password: jupiter
+<div class="highlight"><pre><span></span><code>slappasswd<span class="w"> </span>-h<span class="w"> </span><span class="o">{</span>SSHA<span class="o">}</span><span class="p">|</span><span class="o">{</span>CRYPT<span class="o">}</span><span class="p">|</span><span class="o">{</span>md5<span class="o">}</span>
+New<span class="w"> </span>password:
+Re-enter<span class="w"> </span>new<span class="w"> </span>password:<span class="w"> </span>jupiter
 <span class="o">{</span>SHA<span class="o">}</span>ovf8ta/reYP/u2zj0afpHt8yE1A<span class="o">=</span>
 </code></pre></div>
 <ul>
@@ -3820,69 +5717,69 @@ Re-enter new password: jupiter
 <p><strong>slapd.conf</strong>  </p>
 <div class="highlight"><pre><span></span><code>...
 <span class="c1"># ----------------------------------------------------------------------</span>
-database mdb
-suffix <span class="s2">&quot;dc=edt,dc=org&quot;</span>
-rootdn <span class="s2">&quot;cn=Manager,dc=edt,dc=org&quot;</span>
-rootpw secret
-directory /var/lib/ldap.edt.org
-index objectClass                       eq,pres
-access to * by self write by * <span class="nb">read</span>
+database<span class="w"> </span>mdb
+suffix<span class="w"> </span><span class="s2">&quot;dc=edt,dc=org&quot;</span>
+rootdn<span class="w"> </span><span class="s2">&quot;cn=Manager,dc=edt,dc=org&quot;</span>
+rootpw<span class="w"> </span>secret
+directory<span class="w"> </span>/var/lib/ldap.edt.org
+index<span class="w"> </span>objectClass<span class="w">                       </span>eq,pres
+access<span class="w"> </span>to<span class="w"> </span>*<span class="w"> </span>by<span class="w"> </span>self<span class="w"> </span>write<span class="w"> </span>by<span class="w"> </span>*<span class="w"> </span><span class="nb">read</span>
 <span class="c1"># ----------------------------------------------------------------------</span>
-database mdb
-suffix <span class="s2">&quot;dc=m06,dc=cat&quot;</span>
-rootdn <span class="s2">&quot;cn=Root,dc=m06,dc=cat&quot;</span>
-rootpw jupiter
-directory /var/lib/ldap.m06.cat
-index objectClass                       eq,pres
-access to * by self write by * <span class="nb">read</span>
+database<span class="w"> </span>mdb
+suffix<span class="w"> </span><span class="s2">&quot;dc=m06,dc=cat&quot;</span>
+rootdn<span class="w"> </span><span class="s2">&quot;cn=Root,dc=m06,dc=cat&quot;</span>
+rootpw<span class="w"> </span>jupiter
+directory<span class="w"> </span>/var/lib/ldap.m06.cat
+index<span class="w"> </span>objectClass<span class="w">                       </span>eq,pres
+access<span class="w"> </span>to<span class="w"> </span>*<span class="w"> </span>by<span class="w"> </span>self<span class="w"> </span>write<span class="w"> </span>by<span class="w"> </span>*<span class="w"> </span><span class="nb">read</span>
 <span class="c1"># --------------------------------------------------------</span>
 
-database config
-rootdn <span class="s2">&quot;cn=Sysadmin,cn=config&quot;</span>
-rootpw <span class="o">{</span>SSHA<span class="o">}</span>5DfZc1WXeIwrP7C3fr23WLZiPZ5YHMgA
+database<span class="w"> </span>config
+rootdn<span class="w"> </span><span class="s2">&quot;cn=Sysadmin,cn=config&quot;</span>
+rootpw<span class="w"> </span><span class="o">{</span>SSHA<span class="o">}</span>5DfZc1WXeIwrP7C3fr23WLZiPZ5YHMgA
 
 <span class="c1"># enable monitoring</span>
-database monitor
+database<span class="w"> </span>monitor
 </code></pre></div>
 <p>la instalación cambia un poco a la original, cada base de datos tendrá su propio directorio.</p>
-<div class="highlight"><pre><span></span><code>rm -rf /etc/openldap/slapd.d/*
-rm -rf /var/lib/ldap/* 
-mkdir /var/lib/ldap.m06.cat
-mkdir /var/lib/ldap.edt.org
+<div class="highlight"><pre><span></span><code>rm<span class="w"> </span>-rf<span class="w"> </span>/etc/openldap/slapd.d/*
+rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/ldap/*<span class="w"> </span>
+mkdir<span class="w"> </span>/var/lib/ldap.m06.cat
+mkdir<span class="w"> </span>/var/lib/ldap.edt.org
 
-cp /opt/docker/DB_CONFIG /var/lib/ldap.m06.cat/.
-cp /opt/docker/DB_CONFIG /var/lib/ldap.edt.org/.
+cp<span class="w"> </span>/opt/docker/DB_CONFIG<span class="w"> </span>/var/lib/ldap.m06.cat/.
+cp<span class="w"> </span>/opt/docker/DB_CONFIG<span class="w"> </span>/var/lib/ldap.edt.org/.
 
-slaptest -f /opt/docker/slapd.conf -F /etc/openldap/slapd.d/  
+slaptest<span class="w"> </span>-f<span class="w"> </span>/opt/docker/slapd.conf<span class="w"> </span>-F<span class="w"> </span>/etc/openldap/slapd.d/<span class="w">  </span>
 
-slapadd -F /etc/openldap/slapd.d -l /opt/docker/edt.org.ldif
+slapadd<span class="w"> </span>-F<span class="w"> </span>/etc/openldap/slapd.d<span class="w"> </span>-l<span class="w"> </span>/opt/docker/edt.org.ldif
 <span class="c1"># especifico en que base de datos inyectar los elementos con -b</span>
-slapadd -b <span class="s1">&#39;dc=m06,dc=cat&#39;</span> -F /etc/openldap/slapd.d -l /opt/docker/m06.cat.ldif
+slapadd<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;dc=m06,dc=cat&#39;</span><span class="w"> </span>-F<span class="w"> </span>/etc/openldap/slapd.d<span class="w"> </span>-l<span class="w"> </span>/opt/docker/m06.cat.ldif
 
-chown -R ldap:ldap /etc/openldap/slapd.d
-chown -R ldap:ldap /var/lib/ldap   
-chown -R ldap:ldap /var/lib/ldap.m06.cat   
-chown -R ldap:ldap /var/lib/ldap.edt.org   
+chown<span class="w"> </span>-R<span class="w"> </span>ldap:ldap<span class="w"> </span>/etc/openldap/slapd.d
+chown<span class="w"> </span>-R<span class="w"> </span>ldap:ldap<span class="w"> </span>/var/lib/ldap<span class="w">   </span>
+chown<span class="w"> </span>-R<span class="w"> </span>ldap:ldap<span class="w"> </span>/var/lib/ldap.m06.cat<span class="w">   </span>
+chown<span class="w"> </span>-R<span class="w"> </span>ldap:ldap<span class="w"> </span>/var/lib/ldap.edt.org<span class="w">   </span>
 
-cp /opt/docker/ldap.conf /etc/openldap/.
+cp<span class="w"> </span>/opt/docker/ldap.conf<span class="w"> </span>/etc/openldap/.
 </code></pre></div>
 <p><code>/etc/openldap/slap.d</code> config</p>
 <div class="highlight"><pre><span></span><code>/var/lib/ldab.edt.org
 /var/lib/ldab.m06.cat
 /var/lib/ldap
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>slapcat &gt; back.ldap.dump
+<div class="highlight"><pre><span></span><code>slapcat<span class="w"> </span>&gt;<span class="w"> </span>back.ldap.dump
 </code></pre></div>
 <h2 id="backup">Backup</h2>
 <p>backup del directorio de de configuracion y de datos o con slapcat un fichero ldif  </p>
 <h2 id="acl">Acl</h2>
 <p>Las acl son los permisos que tendrá cada usuario respecto a las bases de datos</p>
 <p>La base de datos <code>config</code> se crea por defecto, pero si no la especificas en el archivo <code>slapd.conf</code> el nombre y la contraseña de rootdn y rootpw serán aleatorios, y no podrás configurar los permisos.</p>
-<div class="highlight"><pre><span></span><code>database config
-rootdn <span class="s2">&quot;cn=Sysadmin,cn=config&quot;</span>
-rootpw <span class="o">{</span>SSHA<span class="o">}</span>8a7gp+odUWaevnLbf+9eJK9y3lTbMonq
+<div class="highlight"><pre><span></span><code>database<span class="w"> </span>config
+rootdn<span class="w"> </span><span class="s2">&quot;cn=Sysadmin,cn=config&quot;</span>
+rootpw<span class="w"> </span><span class="o">{</span>SSHA<span class="o">}</span>8a7gp+odUWaevnLbf+9eJK9y3lTbMonq
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>ldapmodify -x -D <span class="s1">&#39;cn=Sysadmin,cn=config&#39;</span> -w syskey -f acl.ldif
+<div class="highlight"><pre><span></span><code>ldapmodify<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="s1">&#39;cn=Sysadmin,cn=config&#39;</span><span class="w"> </span>-w<span class="w"> </span>syskey<span class="w"> </span>-f<span class="w"> </span>acl.ldif
 </code></pre></div>
 <h3 id="a-tener-en-cuenta">A tener en cuenta</h3>
 <ul>
@@ -3906,9 +5803,9 @@ rootpw <span class="o">{</span>SSHA<span class="o">}</span>8a7gp+odUWaevnLbf+9eJ
 </li>
 </ul>
 <p><strong>Sintaxis de la implantación de reglas</strong></p>
-<div class="highlight"><pre><span></span><code>access to &lt;what&gt; <span class="o">[</span> by &lt;who&gt; <span class="o">[</span> &lt;access&gt; <span class="o">]</span> <span class="o">[</span> &lt;control&gt; <span class="o">]</span> <span class="o">]</span>+
+<div class="highlight"><pre><span></span><code>access<span class="w"> </span>to<span class="w"> </span>&lt;what&gt;<span class="w"> </span><span class="o">[</span><span class="w"> </span>by<span class="w"> </span>&lt;who&gt;<span class="w"> </span><span class="o">[</span><span class="w"> </span>&lt;access&gt;<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>&lt;control&gt;<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">]</span>+
 
- &lt;level&gt; ::<span class="o">=</span> none<span class="p">|</span>disclose<span class="p">|</span>auth<span class="p">|</span>compare<span class="p">|</span>search<span class="p">|</span>read<span class="p">|</span><span class="o">{</span>write<span class="p">|</span>add<span class="p">|</span>delete<span class="o">}</span><span class="p">|</span>manage
+<span class="w"> </span>&lt;level&gt;<span class="w"> </span>::<span class="o">=</span><span class="w"> </span>none<span class="p">|</span>disclose<span class="p">|</span>auth<span class="p">|</span>compare<span class="p">|</span>search<span class="p">|</span>read<span class="p">|</span><span class="o">{</span>write<span class="p">|</span>add<span class="p">|</span>delete<span class="o">}</span><span class="p">|</span>manage
 </code></pre></div>
 <ul>
 <li><code>what</code> se refiere a que atributo afecta.</li>
@@ -3917,42 +5814,42 @@ rootpw <span class="o">{</span>SSHA<span class="o">}</span>8a7gp+odUWaevnLbf+9eJ
 </ul>
 <p>Cuando coinciden dos o mas <code>what</code> solo se implementará el primero.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># sintaxis erronea</span>
-access to <span class="nv">attrs</span><span class="o">=</span>homePhone by dn.exact<span class="o">=</span>”cn<span class="o">=</span>Anna Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org” write
-access to <span class="nv">attrs</span><span class="o">=</span>homePhone by dn.exact<span class="o">=</span>”cn<span class="o">=</span>Admin System,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org” write
-access to <span class="nv">attrs</span><span class="o">=</span>homePhone by * <span class="nb">read</span>
+access<span class="w"> </span>to<span class="w"> </span><span class="nv">attrs</span><span class="o">=</span>homePhone<span class="w"> </span>by<span class="w"> </span>dn.exact<span class="o">=</span>”cn<span class="o">=</span>Anna<span class="w"> </span>Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org”<span class="w"> </span>write
+access<span class="w"> </span>to<span class="w"> </span><span class="nv">attrs</span><span class="o">=</span>homePhone<span class="w"> </span>by<span class="w"> </span>dn.exact<span class="o">=</span>”cn<span class="o">=</span>Admin<span class="w"> </span>System,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org”<span class="w"> </span>write
+access<span class="w"> </span>to<span class="w"> </span><span class="nv">attrs</span><span class="o">=</span>homePhone<span class="w"> </span>by<span class="w"> </span>*<span class="w"> </span><span class="nb">read</span>
 
 <span class="c1"># sintaxis correcta</span>
-access to <span class="nv">attrs</span><span class="o">=</span>homePhone
-    by dn.exact<span class="o">=</span>”cn<span class="o">=</span>Anna Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org” write
-    by dn.exact<span class="o">=</span>”cn<span class="o">=</span>Admin System,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org” write
-    by * <span class="nb">read</span>
+access<span class="w"> </span>to<span class="w"> </span><span class="nv">attrs</span><span class="o">=</span>homePhone
+<span class="w">    </span>by<span class="w"> </span>dn.exact<span class="o">=</span>”cn<span class="o">=</span>Anna<span class="w"> </span>Pou,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org”<span class="w"> </span>write
+<span class="w">    </span>by<span class="w"> </span>dn.exact<span class="o">=</span>”cn<span class="o">=</span>Admin<span class="w"> </span>System,ou<span class="o">=</span>usuaris,dc<span class="o">=</span>edt,dc<span class="o">=</span>org”<span class="w"> </span>write
+<span class="w">    </span>by<span class="w"> </span>*<span class="w"> </span><span class="nb">read</span>
 </code></pre></div>
 <p>Ojo  con el atributo <code>userPassword</code> </p>
-<div class="highlight"><pre><span></span><code>access to <span class="nv">attrs</span><span class="o">=</span>userPassword
-        by self write
-        by * auth
-        <span class="o">[</span> by * none <span class="o">]</span>
-access to * 
-        by * <span class="nb">read</span>
+<div class="highlight"><pre><span></span><code>access<span class="w"> </span>to<span class="w"> </span><span class="nv">attrs</span><span class="o">=</span>userPassword
+<span class="w">        </span>by<span class="w"> </span>self<span class="w"> </span>write
+<span class="w">        </span>by<span class="w"> </span>*<span class="w"> </span>auth
+<span class="w">        </span><span class="o">[</span><span class="w"> </span>by<span class="w"> </span>*<span class="w"> </span>none<span class="w"> </span><span class="o">]</span>
+access<span class="w"> </span>to<span class="w"> </span>*<span class="w"> </span>
+<span class="w">        </span>by<span class="w"> </span>*<span class="w"> </span><span class="nb">read</span>
 </code></pre></div>
 <p>Ejemplo de modificación.</p>
-<div class="highlight"><pre><span></span><code>dn: <span class="nv">olcDatabase</span><span class="o">={</span><span class="m">1</span><span class="o">}</span>mdb,cn<span class="o">=</span>config
-changetype: modify
-replace: olcAccess
-olcAccess: to <span class="nv">attrs</span><span class="o">=</span>homePhone by * <span class="nb">read</span>
-olcAccess: to * by * write
+<div class="highlight"><pre><span></span><code>dn:<span class="w"> </span><span class="nv">olcDatabase</span><span class="o">={</span><span class="m">1</span><span class="o">}</span>mdb,cn<span class="o">=</span>config
+changetype:<span class="w"> </span>modify
+replace:<span class="w"> </span>olcAccess
+olcAccess:<span class="w"> </span>to<span class="w"> </span><span class="nv">attrs</span><span class="o">=</span>homePhone<span class="w"> </span>by<span class="w"> </span>*<span class="w"> </span><span class="nb">read</span>
+olcAccess:<span class="w"> </span>to<span class="w"> </span>*<span class="w"> </span>by<span class="w"> </span>*<span class="w"> </span>write
 </code></pre></div>
 <h3 id="slapacl">slapacl</h3>
 <p>Es una manera de ver los permisos rapidamente para una acción</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># permisos generales de usuario</span>
-slapacl -b <span class="s1">&#39;cn=Marta Mas,ou=usuaris,dc=edt,dc=org&#39;</span>
-entry: read<span class="o">(=</span>rscxd<span class="o">)</span>
-children: read<span class="o">(=</span>rscxd<span class="o">)</span>
+slapacl<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;cn=Marta Mas,ou=usuaris,dc=edt,dc=org&#39;</span>
+entry:<span class="w"> </span>read<span class="o">(=</span>rscxd<span class="o">)</span>
+children:<span class="w"> </span>read<span class="o">(=</span>rscxd<span class="o">)</span>
 ....
 
 <span class="c1"># marta mas puede leer su pasword?</span>
-slapacl -b <span class="s1">&#39;cn=Marta Mas,ou=usuaris,dc=edt,dc=org&#39;</span> -D <span class="s1">&#39;cn=Marta Mas,ou=usuaris,dc=edt,dc=org&#39;</span> userpassword/read
-<span class="nb">read</span> access to userPassword: ALLOWED
+slapacl<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;cn=Marta Mas,ou=usuaris,dc=edt,dc=org&#39;</span><span class="w"> </span>-D<span class="w"> </span><span class="s1">&#39;cn=Marta Mas,ou=usuaris,dc=edt,dc=org&#39;</span><span class="w"> </span>userpassword/read
+<span class="nb">read</span><span class="w"> </span>access<span class="w"> </span>to<span class="w"> </span>userPassword:<span class="w"> </span>ALLOWED
 </code></pre></div>
 <h2 id="schemas">Schemas</h2>
 <p><code>/etc/openldap/schema</code></p>
@@ -4109,38 +6006,38 @@ objectclass ( 1.1.2.2.1 NAME &#39;x-futbolistes&#39;
 </li>
 </ul>
 <h3 id="ejemplo-schema">Ejemplo schema</h3>
-<div class="highlight"><pre><span></span><code><span class="nv">attributetype</span> <span class="p">(</span> <span class="mf">1.1</span><span class="o">.</span><span class="mf">2.1</span><span class="o">.</span><span class="mi">1</span> <span class="nv">NAME</span> <span class="ss">&#39;x-equip</span><span class="o">&#39;</span>
-    <span class="nv">DESC</span>     <span class="ss">&#39;EQUIP</span> <span class="nv">DEL</span> <span class="nv">FUTBOLISTA</span><span class="o">&#39;</span>
-    <span class="nv">EQUALITY</span> <span class="nv">caseIgnoreMatch</span>
-    <span class="nv">SUBSTR</span>   <span class="nv">caseIgnoreSubstringsMatch</span>
-    <span class="nv">SYNTAX</span>   <span class="mf">1.3</span><span class="o">.</span><span class="mf">6.1</span><span class="o">.</span><span class="mf">4.1</span><span class="o">.</span><span class="mf">1466.115</span><span class="o">.</span><span class="mf">121.1</span><span class="o">.</span><span class="mi">15</span>
-    <span class="nv">SINGLE-VALUE</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nv">attributetype</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nv">1</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">2</span><span class="o">.</span><span class="mf">1.1</span><span class="w"> </span><span class="nv">NAME</span><span class="w"> </span><span class="ss">&#39;x-equip</span><span class="o">&#39;</span>
+<span class="w">    </span><span class="nv">DESC</span><span class="w">     </span><span class="ss">&#39;EQUIP</span><span class="w"> </span><span class="nv">DEL</span><span class="w"> </span><span class="nv">FUTBOLISTA</span><span class="o">&#39;</span>
+<span class="w">    </span><span class="nv">EQUALITY</span><span class="w"> </span><span class="nv">caseIgnoreMatch</span>
+<span class="w">    </span><span class="nv">SUBSTR</span><span class="w">   </span><span class="nv">caseIgnoreSubstringsMatch</span>
+<span class="w">    </span><span class="nv">SYNTAX</span><span class="w">   </span><span class="nv">1</span><span class="o">.</span><span class="nv">3</span><span class="o">.</span><span class="nv">6</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">4</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">1466</span><span class="o">.</span><span class="nv">115</span><span class="o">.</span><span class="nv">121</span><span class="o">.</span><span class="mf">1.15</span>
+<span class="w">    </span><span class="nv">SINGLE-VALUE</span><span class="p">)</span>
 
-<span class="nv">attributetype</span> <span class="p">(</span> <span class="mf">1.1</span><span class="o">.</span><span class="mf">2.1</span><span class="o">.</span><span class="mi">2</span> <span class="nv">NAME</span> <span class="ss">&#39;x-dorsal</span><span class="o">&#39;</span>
-    <span class="nv">DESC</span>     <span class="ss">&#39;dorsal</span> <span class="nv">de</span> <span class="nv">futbolista</span><span class="o">&#39;</span>
-    <span class="nv">SYNTAX</span>   <span class="mf">1.3</span><span class="o">.</span><span class="mf">6.1</span><span class="o">.</span><span class="mf">4.1</span><span class="o">.</span><span class="mf">1466.115</span><span class="o">.</span><span class="mf">121.1</span><span class="o">.</span><span class="mi">27</span>
-    <span class="nv">SINGLE-VALUE</span><span class="p">)</span>
+<span class="nv">attributetype</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nv">1</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">2</span><span class="o">.</span><span class="mf">1.2</span><span class="w"> </span><span class="nv">NAME</span><span class="w"> </span><span class="ss">&#39;x-dorsal</span><span class="o">&#39;</span>
+<span class="w">    </span><span class="nv">DESC</span><span class="w">     </span><span class="ss">&#39;dorsal</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="nv">futbolista</span><span class="o">&#39;</span>
+<span class="w">    </span><span class="nv">SYNTAX</span><span class="w">   </span><span class="nv">1</span><span class="o">.</span><span class="nv">3</span><span class="o">.</span><span class="nv">6</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">4</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">1466</span><span class="o">.</span><span class="nv">115</span><span class="o">.</span><span class="nv">121</span><span class="o">.</span><span class="mf">1.27</span>
+<span class="w">    </span><span class="nv">SINGLE-VALUE</span><span class="p">)</span>
 
-<span class="nv">attributetype</span> <span class="p">(</span> <span class="mf">1.1</span><span class="o">.</span><span class="mf">2.1</span><span class="o">.</span><span class="mi">3</span> <span class="nv">NAME</span> <span class="ss">&#39;x-web</span><span class="o">&#39;</span>
-    <span class="nv">DESC</span> <span class="ss">&#39;pagina</span> <span class="nv">web</span> <span class="nv">del</span> <span class="nv">futbolista</span><span class="o">&#39;</span>
-    <span class="nv">EQUALITY</span> <span class="nv">caseIgnoreMatch</span>
-    <span class="nv">SYNTAX</span>   <span class="mf">1.3</span><span class="o">.</span><span class="mf">6.1</span><span class="o">.</span><span class="mf">4.1</span><span class="o">.</span><span class="mf">1466.115</span><span class="o">.</span><span class="mf">121.1</span><span class="o">.</span><span class="mi">15</span> <span class="p">)</span>
+<span class="nv">attributetype</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nv">1</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">2</span><span class="o">.</span><span class="mf">1.3</span><span class="w"> </span><span class="nv">NAME</span><span class="w"> </span><span class="ss">&#39;x-web</span><span class="o">&#39;</span>
+<span class="w">    </span><span class="nv">DESC</span><span class="w"> </span><span class="ss">&#39;pagina</span><span class="w"> </span><span class="nv">web</span><span class="w"> </span><span class="nv">del</span><span class="w"> </span><span class="nv">futbolista</span><span class="o">&#39;</span>
+<span class="w">    </span><span class="nv">EQUALITY</span><span class="w"> </span><span class="nv">caseIgnoreMatch</span>
+<span class="w">    </span><span class="nv">SYNTAX</span><span class="w">   </span><span class="nv">1</span><span class="o">.</span><span class="nv">3</span><span class="o">.</span><span class="nv">6</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">4</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">1466</span><span class="o">.</span><span class="nv">115</span><span class="o">.</span><span class="nv">121</span><span class="o">.</span><span class="mf">1.15</span><span class="w"> </span><span class="p">)</span>
 
-<span class="nv">attributetype</span> <span class="p">(</span> <span class="mf">1.1</span><span class="o">.</span><span class="mf">2.1</span><span class="o">.</span><span class="mi">4</span> <span class="nv">NAME</span> <span class="ss">&#39;x-foto</span><span class="o">&#39;</span>
-    <span class="nv">DESC</span> <span class="ss">&#39;foto</span> <span class="nv">del</span> <span class="nv">futbolista</span><span class="o">&#39;</span>
-    <span class="nv">SYNTAX</span>   <span class="mf">1.3</span><span class="o">.</span><span class="mf">6.1</span><span class="o">.</span><span class="mf">4.1</span><span class="o">.</span><span class="mf">1466.115</span><span class="o">.</span><span class="mf">121.1</span><span class="o">.</span><span class="mi">40</span> <span class="p">)</span>
+<span class="nv">attributetype</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nv">1</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">2</span><span class="o">.</span><span class="mf">1.4</span><span class="w"> </span><span class="nv">NAME</span><span class="w"> </span><span class="ss">&#39;x-foto</span><span class="o">&#39;</span>
+<span class="w">    </span><span class="nv">DESC</span><span class="w"> </span><span class="ss">&#39;foto</span><span class="w"> </span><span class="nv">del</span><span class="w"> </span><span class="nv">futbolista</span><span class="o">&#39;</span>
+<span class="w">    </span><span class="nv">SYNTAX</span><span class="w">   </span><span class="nv">1</span><span class="o">.</span><span class="nv">3</span><span class="o">.</span><span class="nv">6</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">4</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">1466</span><span class="o">.</span><span class="nv">115</span><span class="o">.</span><span class="nv">121</span><span class="o">.</span><span class="mf">1.40</span><span class="w"> </span><span class="p">)</span>
 
-<span class="nv">attributetype</span> <span class="p">(</span> <span class="mf">1.1</span><span class="o">.</span><span class="mf">2.1</span><span class="o">.</span><span class="mi">5</span> <span class="nv">NAME</span> <span class="ss">&#39;x-lesionat</span><span class="o">&#39;</span>
-    <span class="nv">DESC</span> <span class="ss">&#39;futbolista</span> <span class="nv">lesionat</span><span class="o">&#39;</span>
-    <span class="nv">SYNTAX</span>   <span class="mf">1.3</span><span class="o">.</span><span class="mf">6.1</span><span class="o">.</span><span class="mf">4.1</span><span class="o">.</span><span class="mf">1466.115</span><span class="o">.</span><span class="mf">121.1</span><span class="o">.</span><span class="mi">7</span> 
-    <span class="nv">SINGLE-VALUE</span><span class="p">)</span>
+<span class="nv">attributetype</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nv">1</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">2</span><span class="o">.</span><span class="mf">1.5</span><span class="w"> </span><span class="nv">NAME</span><span class="w"> </span><span class="ss">&#39;x-lesionat</span><span class="o">&#39;</span>
+<span class="w">    </span><span class="nv">DESC</span><span class="w"> </span><span class="ss">&#39;futbolista</span><span class="w"> </span><span class="nv">lesionat</span><span class="o">&#39;</span>
+<span class="w">    </span><span class="nv">SYNTAX</span><span class="w">   </span><span class="nv">1</span><span class="o">.</span><span class="nv">3</span><span class="o">.</span><span class="nv">6</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">4</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">1466</span><span class="o">.</span><span class="nv">115</span><span class="o">.</span><span class="nv">121</span><span class="o">.</span><span class="mf">1.7</span><span class="w"> </span>
+<span class="w">    </span><span class="nv">SINGLE-VALUE</span><span class="p">)</span>
 
-<span class="nv">objectclass</span> <span class="p">(</span> <span class="mf">1.1</span><span class="o">.</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">1</span> <span class="nv">NAME</span> <span class="ss">&#39;x-futbolistes</span><span class="o">&#39;</span>
-    <span class="nv">DESC</span> <span class="ss">&#39;futboleros</span><span class="o">&#39;</span>
-    <span class="nv">SUP</span> <span class="nv">TOP</span>
-    <span class="nv">AUXILIARY</span>
-    <span class="nv">MUST</span> <span class="nv">x-equip</span>
-    <span class="nv">MAY</span> <span class="p">(</span> <span class="nv">x-dorsal</span> <span class="nv">$</span> <span class="nv">x-web</span> <span class="nv">$</span> <span class="nv">x-foto</span> <span class="nv">$</span> <span class="nv">x-lesionat</span> <span class="p">))</span>
+<span class="nv">objectclass</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nv">1</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">2</span><span class="o">.</span><span class="mf">2.1</span><span class="w"> </span><span class="nv">NAME</span><span class="w"> </span><span class="ss">&#39;x-futbolistes</span><span class="o">&#39;</span>
+<span class="w">    </span><span class="nv">DESC</span><span class="w"> </span><span class="ss">&#39;futboleros</span><span class="o">&#39;</span>
+<span class="w">    </span><span class="nv">SUP</span><span class="w"> </span><span class="nv">TOP</span>
+<span class="w">    </span><span class="nv">AUXILIARY</span>
+<span class="w">    </span><span class="nv">MUST</span><span class="w"> </span><span class="nv">x-equip</span>
+<span class="w">    </span><span class="nv">MAY</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nv">x-dorsal</span><span class="w"> </span><span class="nv">$</span><span class="w"> </span><span class="nv">x-web</span><span class="w"> </span><span class="nv">$</span><span class="w"> </span><span class="nv">x-foto</span><span class="w"> </span><span class="nv">$</span><span class="w"> </span><span class="nv">x-lesionat</span><span class="w"> </span><span class="p">))</span>
 </code></pre></div>
 <h2 id="gestores-graficos">Gestores gráficos</h2>
 <p>Existen diferentes gestores gráficos para modificar, añadir, eliminar contenido en el servidor ldap. Estos son <code>gq</code> y <code>phpldapadmin</code> , los dos realizan las mismas funciones.</p>
@@ -4148,36 +6045,36 @@ objectclass ( 1.1.2.2.1 NAME &#39;x-futbolistes&#39;
 <p><strong>phpldapadmin</strong> tiene una pequeña configuración y requiere un apache, pero es mas fiable.</p>
 <h3 id="phpldapadmin">phpldapadmin</h3>
 <p>instalación</p>
-<div class="highlight"><pre><span></span><code>dnf install phpldapadmin php-xml httpd
-systemctl start httpd
+<div class="highlight"><pre><span></span><code>dnf<span class="w"> </span>install<span class="w"> </span>phpldapadmin<span class="w"> </span>php-xml<span class="w"> </span>httpd
+systemctl<span class="w"> </span>start<span class="w"> </span>httpd
 </code></pre></div>
 <p>configuración con ldap</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># vim  /etc/phpldapadmin/config.php</span>
 <span class="nv">$servers</span>-&gt;newServer<span class="o">(</span><span class="s1">&#39;ldap_pla&#39;</span><span class="o">)</span><span class="p">;</span>
 <span class="nv">$servers</span>-&gt;setValue<span class="o">(</span><span class="s1">&#39;server&#39;</span>,<span class="s1">&#39;name&#39;</span>,<span class="s1">&#39;Local LDAP Server&#39;</span><span class="o">)</span><span class="p">;</span>
 <span class="nv">$servers</span>-&gt;setValue<span class="o">(</span><span class="s1">&#39;server&#39;</span>,<span class="s1">&#39;host&#39;</span>,<span class="s1">&#39;172.17.0.2&#39;</span><span class="o">)</span><span class="p">;</span>
-// ip o hostame de servidor ldap
+//<span class="w"> </span>ip<span class="w"> </span>o<span class="w"> </span>hostame<span class="w"> </span>de<span class="w"> </span>servidor<span class="w"> </span>ldap
 <span class="nv">$servers</span>-&gt;setValue<span class="o">(</span><span class="s1">&#39;server&#39;</span>,<span class="s1">&#39;port&#39;</span>,389<span class="o">)</span><span class="p">;</span>
 <span class="nv">$servers</span>-&gt;setValue<span class="o">(</span><span class="s1">&#39;server&#39;</span>,<span class="s1">&#39;base&#39;</span>,array<span class="o">(</span><span class="s1">&#39;dc=edt,dc=org&#39;</span><span class="o">))</span><span class="p">;</span>
 <span class="nv">$servers</span>-&gt;setValue<span class="o">(</span><span class="s1">&#39;login&#39;</span>,<span class="s1">&#39;auth_type&#39;</span>,<span class="s1">&#39;session&#39;</span><span class="o">)</span><span class="p">;</span>
 <span class="nv">$servers</span>-&gt;setValue<span class="o">(</span><span class="s1">&#39;server&#39;</span>,<span class="s1">&#39;tls&#39;</span>,false<span class="o">)</span>
 
-// <span class="nv">$servers</span>-&gt;setValue<span class="o">(</span><span class="s1">&#39;appearance&#39;</span>,<span class="s1">&#39;password_hash&#39;</span>,<span class="s1">&#39;ssha&#39;</span><span class="o">)</span><span class="p">;</span>
-// comentada perquè generava un error
+//<span class="w"> </span><span class="nv">$servers</span>-&gt;setValue<span class="o">(</span><span class="s1">&#39;appearance&#39;</span>,<span class="s1">&#39;password_hash&#39;</span>,<span class="s1">&#39;ssha&#39;</span><span class="o">)</span><span class="p">;</span>
+//<span class="w"> </span>comentada<span class="w"> </span>perquè<span class="w"> </span>generava<span class="w"> </span>un<span class="w"> </span>error
 //<span class="nv">$servers</span>-&gt;setValue<span class="o">(</span><span class="s1">&#39;login&#39;</span>,<span class="s1">&#39;attr&#39;</span>,<span class="s1">&#39;uid&#39;</span><span class="o">)</span><span class="p">;</span>
-// comentada perquè generava un error
+//<span class="w"> </span>comentada<span class="w"> </span>perquè<span class="w"> </span>generava<span class="w"> </span>un<span class="w"> </span>error
 </code></pre></div>
 <p>configuración para acceso remoto</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># vim /etc/httpd/config.d/phpldapadmin.conf</span>
-Alias /phpldapadmin /usr/share/phpldapadmin/htdocs
-Alias /ldapadmin /usr/share/phpldapadmin/htdocs
-&lt;Directory /usr/share/phpldapadmin/htdocs&gt;
-    &lt;IfModule mod_authz_core.c&gt;
-       Require all granted
-    &lt;/IfModule&gt;
-    &lt;IfModule !mod_authz_core.c&gt;
-      Allow from *
-    &lt;/IfModule&gt;
+Alias<span class="w"> </span>/phpldapadmin<span class="w"> </span>/usr/share/phpldapadmin/htdocs
+Alias<span class="w"> </span>/ldapadmin<span class="w"> </span>/usr/share/phpldapadmin/htdocs
+&lt;Directory<span class="w"> </span>/usr/share/phpldapadmin/htdocs&gt;
+<span class="w">    </span>&lt;IfModule<span class="w"> </span>mod_authz_core.c&gt;
+<span class="w">       </span>Require<span class="w"> </span>all<span class="w"> </span>granted
+<span class="w">    </span>&lt;/IfModule&gt;
+<span class="w">    </span>&lt;IfModule<span class="w"> </span>!mod_authz_core.c&gt;
+<span class="w">      </span>Allow<span class="w"> </span>from<span class="w"> </span>*
+<span class="w">    </span>&lt;/IfModule&gt;
 &lt;/Directory&gt;
 </code></pre></div>
 <ul>
@@ -4187,43 +6084,43 @@ Alias /ldapadmin /usr/share/phpldapadmin/htdocs
 <h4 id="docker">Docker</h4>
 <p>Dockerfile</p>
 <div class="highlight"><pre><span></span><code><span class="c"># phpldapadmin</span>
-<span class="k">FROM</span> <span class="s">fedora:27</span>  
-<span class="k">LABEL</span> <span class="nv">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span>
-<span class="k">LABEL</span> <span class="nv">author</span><span class="o">=</span><span class="s2">&quot;@jorgepastorr&quot;</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">fedora:27</span><span class="w">  </span>
+<span class="k">LABEL</span><span class="w"> </span><span class="nv">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span>
+<span class="k">LABEL</span><span class="w"> </span><span class="nv">author</span><span class="o">=</span><span class="s2">&quot;@jorgepastorr&quot;</span>
 
-<span class="k">RUN</span>  dnf -y install phpldapadmin php-xml httpd
-<span class="k">RUN</span> mkdir /opt/docker
+<span class="k">RUN</span><span class="w">  </span>dnf<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>phpldapadmin<span class="w"> </span>php-xml<span class="w"> </span>httpd
+<span class="k">RUN</span><span class="w"> </span>mkdir<span class="w"> </span>/opt/docker
 
-<span class="k">COPY</span> * /opt/docker/
+<span class="k">COPY</span><span class="w"> </span>*<span class="w"> </span>/opt/docker/
 
-<span class="k">RUN</span> chmod +x /opt/docker/startup.sh
+<span class="k">RUN</span><span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/opt/docker/startup.sh
 
-<span class="k">WORKDIR</span><span class="s"> /opt/docker</span>
-<span class="k">CMD</span> /opt/docker/startup.sh                                        
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/opt/docker</span>
+<span class="k">CMD</span><span class="w"> </span>/opt/docker/startup.sh<span class="w">                                        </span>
 </code></pre></div>
 <p>install.sh</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
-cp /opt/docker/phpldapadmin.conf /etc/httpd/conf.d/
-cp /opt/docker/config.php /etc/phpldapadmin/
+cp<span class="w"> </span>/opt/docker/phpldapadmin.conf<span class="w"> </span>/etc/httpd/conf.d/
+cp<span class="w"> </span>/opt/docker/config.php<span class="w"> </span>/etc/phpldapadmin/
 </code></pre></div>
 <p>startup.sh</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
-bash /opt/docker/install.sh
+bash<span class="w"> </span>/opt/docker/install.sh
 /sbin/php-fpm
-/sbin/httpd -D FOREGROUND
+/sbin/httpd<span class="w"> </span>-D<span class="w"> </span>FOREGROUND
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>➜  tree
+<div class="highlight"><pre><span></span><code>➜<span class="w">  </span>tree
 .
-├── config.php
-├── Dockerfile
-├── install.sh
-├── phpldapadmin.conf
-└── startup.sh
+├──<span class="w"> </span>config.php
+├──<span class="w"> </span>Dockerfile
+├──<span class="w"> </span>install.sh
+├──<span class="w"> </span>phpldapadmin.conf
+└──<span class="w"> </span>startup.sh
 
-docker build -t phpldapadmin .
-docker run -h phpldapadmin --name phpldapadmin -d -p <span class="m">80</span>:80 phpldapadmin
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>phpldapadmin<span class="w"> </span>.
+docker<span class="w"> </span>run<span class="w"> </span>-h<span class="w"> </span>phpldapadmin<span class="w"> </span>--name<span class="w"> </span>phpldapadmin<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">80</span>:80<span class="w"> </span>phpldapadmin
 </code></pre></div>
 <h2 id="configurar-cliente-ldap">Configurar cliente ldap</h2>
 <p>En todos los clientes que vallan a tener acceso al servidor ldap, tienen que tener la siguiente configuración.</p>
@@ -4232,32 +6129,32 @@ docker run -h phpldapadmin --name phpldapadmin -d -p <span class="m">80</span>:8
 <p>Añadimos ruta al archivo de configuración:</p>
 <p><em>/etc/openldap/ldap.conf</em></p>
 <div class="highlight"><pre><span></span><code>...
-URI ldap://ldapserver
-BASE <span class="nv">dc</span><span class="o">=</span>edt,dc<span class="o">=</span>org
+URI<span class="w"> </span>ldap://ldapserver
+BASE<span class="w"> </span><span class="nv">dc</span><span class="o">=</span>edt,dc<span class="o">=</span>org
 </code></pre></div>
 <p>Comprobamos con  <code>ldapsearch -x -LLL dn</code>.</p>
 <h3 id="configuracion-de-acceso-al-servidor">Configuración de acceso al servidor</h3>
 <p>para el acceso a los usuarios, se necesita modificar el archivo <code>/etc/pam.d/system-auth</code> , pero lo aremos automáticamente con <code>authconfig</code></p>
-<div class="highlight"><pre><span></span><code>authconfig --enableshadow --enablelocauthorize <span class="se">\</span>
-   --enableldap <span class="se">\</span>
-   --enableldapauth <span class="se">\</span>
-   --ldapserver<span class="o">=</span><span class="s1">&#39;ldapserver&#39;</span> <span class="se">\</span>
-   --ldapbase<span class="o">=</span><span class="s1">&#39;dc=edt,dc=org&#39;</span> <span class="se">\</span>
-   --enablemkhomedir <span class="se">\</span>
-   --updateall
+<div class="highlight"><pre><span></span><code>authconfig<span class="w"> </span>--enableshadow<span class="w"> </span>--enablelocauthorize<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--enableldap<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--enableldapauth<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--ldapserver<span class="o">=</span><span class="s1">&#39;ldapserver&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--ldapbase<span class="o">=</span><span class="s1">&#39;dc=edt,dc=org&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--enablemkhomedir<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--updateall
 </code></pre></div>
 <p>El comando anterior comando a modificado los siguientes archivos y <code>system-auth</code></p>
 <p><em>/etc/nslcd.conf</em></p>
 <div class="highlight"><pre><span></span><code>...
-uri ldap://ldapserver
-base <span class="nv">dc</span><span class="o">=</span>edt,dc<span class="o">=</span>org
+uri<span class="w"> </span>ldap://ldapserver
+base<span class="w"> </span><span class="nv">dc</span><span class="o">=</span>edt,dc<span class="o">=</span>org
 ...
 </code></pre></div>
 <p><em>/etc/nsswitch.conf</em></p>
 <div class="highlight"><pre><span></span><code>...
-passwd:     files ldap systemd
-shadow:     files ldap
-group:      files ldap systemd
+passwd:<span class="w">     </span>files<span class="w"> </span>ldap<span class="w"> </span>systemd
+shadow:<span class="w">     </span>files<span class="w"> </span>ldap
+group:<span class="w">      </span>files<span class="w"> </span>ldap<span class="w"> </span>systemd
 ...
 </code></pre></div>
 <p>En este momento ya tenemos </p>
@@ -4332,10 +6229,10 @@ group:      files ldap systemd
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.01824240.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.ff0eccb3.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.467223ff.min.js"></script>
       
     
   </body>

@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://jorgepastorr.github.io/apuntes/seguridad/cortafuegos/Iptables/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.2">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.2.5">
     
     
       
@@ -21,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.816931ca.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2d9f7617.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9204c3b2.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
         
           
           
@@ -36,16 +36,16 @@
     
       
         
+        
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../../..":"../../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-
 
     
     
@@ -147,7 +147,7 @@
         <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     jorgepastorr/apuntes
@@ -192,7 +192,7 @@
       <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     jorgepastorr/apuntes
@@ -1005,12 +1005,803 @@
       
       
         <label class="md-nav__link" for="__nav_5">
+          Ccna
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ccna" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ccna
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/ordenes/" class="md-nav__link">
+        ordenes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          1 IntroducciónRedes(ITN)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1 IntroducciónRedes(ITN)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          1 IntroducciónRedes(ITN)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/01-LasRedesEnLaActualidad/" class="md-nav__link">
+        01 LasRedesEnLaActualidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/02-ConfiguracionBasicaDelSwitchYdisp/" class="md-nav__link">
+        Configuración básica del Switch y dispositivo final
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/03-ProtocolosYmodelos/" class="md-nav__link">
+        Protocolos y modelos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/04-CapaFisica/" class="md-nav__link">
+        Capa Física
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/05-SistemasDeNumeracion/" class="md-nav__link">
+        Sistemas de numeración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/06-CapaDeEnlaceDeDatos/" class="md-nav__link">
+        Capa de enlace de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/07-ConmutacionEthernet/" class="md-nav__link">
+        Conmutación Ethernet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/08-CapaDeRed/" class="md-nav__link">
+        Capa de Red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/09-Resoluci%C3%B3nDeDireccion/" class="md-nav__link">
+        Resolución de dirección
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/10-ConfiguracionBasicaDelRouter/" class="md-nav__link">
+        Configuración básica del router
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/11-DireccionamientoIPv4/" class="md-nav__link">
+        Direccionamiento IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/12-DireccionamientoIPv6/" class="md-nav__link">
+        Direccionamiento IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/13-ICMP/" class="md-nav__link">
+        ICMP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/14-CapaDeTransporte/" class="md-nav__link">
+        Capa de transporte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/15-CapaDeAplicacion/" class="md-nav__link">
+        Capa de aplicación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/16-FundamentosDeSeguridadDeRed/" class="md-nav__link">
+        Fundamentos de seguridad de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/17-ConstruirUnaRedPeque%C3%B1a/" class="md-nav__link">
+        Construir una red pequeña
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/ipv6/" class="md-nav__link">
+        IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/minicom/" class="md-nav__link">
+        Minicom
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          2 Switching Routing And WirelessEssentials(SRWE)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2 Switching Routing And WirelessEssentials(SRWE)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          2 Switching Routing And WirelessEssentials(SRWE)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/01-ConfiguracionBasicaDelDispositivo/" class="md-nav__link">
+        Configuración básica del dispositivo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/03-VLAN/" class="md-nav__link">
+        VLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/04-Inter-VLAN-Routing/" class="md-nav__link">
+        Inter-VLAN Routing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/05-ConceptosSTP/" class="md-nav__link">
+        Conceptos STP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/06-EtherChannel/" class="md-nav__link">
+        EtherChannel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/07-DHCPv4/" class="md-nav__link">
+        DHCPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/08-SLAACyDHCPv6/" class="md-nav__link">
+        SLAAC y DHCPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/09-ConceptosdeFHRP/" class="md-nav__link">
+        Conceptos de FHRP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/10-ConceptosSeguridadLAN/" class="md-nav__link">
+        Conceptos de seguridad LAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/11-ConfiguracionSeguridadSwitch/" class="md-nav__link">
+        Configuración de seguridad en el Switch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/12-ConceptosWLAN/" class="md-nav__link">
+        Conceptos de WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/13-ConfiguracionesRedesInal%C3%A1mbricasWLAN/" class="md-nav__link">
+        Configuraciones de redes inalámbricas WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/14-ConceptosEnrutamiento/" class="md-nav__link">
+        Conceptos de enrutamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/15-EnrutamientoIPEstatico/" class="md-nav__link">
+        Enrutamiento IP Estático
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          3 Enterprise Networking Security AndAutomation ENSA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3 Enterprise Networking Security AndAutomation ENSA" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          3 Enterprise Networking Security AndAutomation ENSA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/01-ConceptosOSPFv2DeAreaUnica/" class="md-nav__link">
+        Conceptos de OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/02-ConfiguracionOSPFv2AreaUnica/" class="md-nav__link">
+        Configuración OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/03-ConceptosSeguridadRedes/" class="md-nav__link">
+        Conceptos de Seguridad en Redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/04-ACL/" class="md-nav__link">
+        ACL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/05-ACLconfiguracionIPv4/" class="md-nav__link">
+        ACL para configuración IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/06-NAT-IPv4/" class="md-nav__link">
+        NAT para IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/07-conceptosWAN/" class="md-nav__link">
+        Conceptos WAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/08-ConceptosVPNeIPsec/" class="md-nav__link">
+        Conceptos de VPN e IPsec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/09-ConceptosQoS/" class="md-nav__link">
+        Conceptos de QoS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/10-AdministracionDeRedes/" class="md-nav__link">
+        Administración de redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/11-Dise%C3%B1oDeRedes/" class="md-nav__link">
+        Diseño de redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/12-ResolucionDeProblemasDeRed/" class="md-nav__link">
+        Resolución de problemas de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/13-VirtualizacionDeRed/" class="md-nav__link">
+        Virtualización de Red
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
           Cloud
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Cloud" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Cloud
         </label>
@@ -1047,18 +1838,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_7">
           Curiosidades
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Curiosidades" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Curiosidades
         </label>
@@ -1179,18 +1970,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_8">
           Desatendidas
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Desatendidas" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Desatendidas
         </label>
@@ -1269,18 +2060,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_9">
           Generar doc
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Generar doc" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Generar doc
         </label>
@@ -1331,18 +2122,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_9">
+        <label class="md-nav__link" for="__nav_10">
           Lenguajes
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Lenguajes" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
+        <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           Lenguajes
         </label>
@@ -1385,18 +2176,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_9_3">
+        <label class="md-nav__link" for="__nav_10_3">
           Python3
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Python3" data-md-level="2">
-        <label class="md-nav__title" for="__nav_9_3">
+        <label class="md-nav__title" for="__nav_10_3">
           <span class="md-nav__icon md-icon"></span>
           Python3
         </label>
@@ -1579,18 +2370,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3_13" type="checkbox" id="__nav_9_3_13" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_13" type="checkbox" id="__nav_10_3_13" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_9_3_13">
+        <label class="md-nav__link" for="__nav_10_3_13">
           Fundamentos
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Fundamentos" data-md-level="3">
-        <label class="md-nav__title" for="__nav_9_3_13">
+        <label class="md-nav__title" for="__nav_10_3_13">
           <span class="md-nav__icon md-icon"></span>
           Fundamentos
         </label>
@@ -1692,6 +2483,1111 @@
 
   
   
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Lpi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lpi" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Lpi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1">
+          101
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="101" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          101
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/101_Arquitectura_del_sistema/" class="md-nav__link">
+        101 Arquitectura del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/102_Instalacion_de_Linux_y_gestion_de_paquetes/" class="md-nav__link">
+        102 Instalación de Linux y gestión de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/103_Comandos_GNU_y_Linux/" class="md-nav__link">
+        103 Comandos GNU y Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/104_Dispositivos_sistema_de_archivos_y_estandar_jerarquia_de_archivos/" class="md-nav__link">
+        104 Dispositivos, sistema de archivos Linux y el estándar de jerarquia de archivos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" type="checkbox" id="__nav_11_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_2">
+          102
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="102" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          102
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/105.2_Scripting/" class="md-nav__link">
+        105.2 Scripting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/105_Shells/" class="md-nav__link">
+        105 Shells
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/106_Interfaces_de_usuario_y_escritorio/" class="md-nav__link">
+        106 Interfaces de usuario y escritorio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/107_tareas_de_administracion/" class="md-nav__link">
+        107 tareas de administración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/108_Servicios_esenciales_del_sistema/" class="md-nav__link">
+        108 Servicios esenciales del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/108_rsyslog_server/" class="md-nav__link">
+        rsyslog server central
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/109_Fundamentos_de_red/" class="md-nav__link">
+        109 Fundamentos de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/110_Seguridad/" class="md-nav__link">
+        110 Seguridad
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_3" type="checkbox" id="__nav_11_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_3">
+          201
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="201" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_3">
+          <span class="md-nav__icon md-icon"></span>
+          201
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/200_Planificaci%C3%B3n_de_la_capacidad/" class="md-nav__link">
+        200 Planificación de la capacidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/201_Kernel_Linux/" class="md-nav__link">
+        201 Kernel Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/202_Arranque_del%20_Sistema/" class="md-nav__link">
+        202 Arranque del  Sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/203_sistemas_de_archivos_y_dispositivos/" class="md-nav__link">
+        203 sistemas de archivos y dispositivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/204_Administracion_avanzada_de_dispositivos_de_almacenamiento/" class="md-nav__link">
+        204 Administración avanzada de dispositivos de almacenamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/205_configuracion_de_red/" class="md-nav__link">
+        205 configuración de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/206_Mantenimiento_del_sistema/" class="md-nav__link">
+        206 Mantenimiento del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/Exam_201_Detailed_Objectives/" class="md-nav__link">
+        Exam 201: Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4">
+          202
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="202" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          202
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/207_Servidor_de_nombres_de_dominio/" class="md-nav__link">
+        207 Servidor de nombres de dominio (DNS)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/208.4_servicios_web_nginx/" class="md-nav__link">
+        208 servicios web nginx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/208_servicios_web/" class="md-nav__link">
+        208 servicios web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/209_compartir_ficheros/" class="md-nav__link">
+        209 compartir ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/210_gestion_de_clientes_de_red/" class="md-nav__link">
+        210 gestión de clientes de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/211_Servicios_E-Mail/" class="md-nav__link">
+        211 Servicios de E-Mail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/212_Seguridad_del_sistema/" class="md-nav__link">
+        212 Seguridad del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/Exam_202_Detailed_Objectives/" class="md-nav__link">
+        Exam 202 Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_5" type="checkbox" id="__nav_11_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_5">
+          303
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="303" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_5">
+          <span class="md-nav__icon md-icon"></span>
+          303
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/331.3_Encrypted_File_Systems/" class="md-nav__link">
+        Topic 331: Cryptography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/332.3_Resource_Control/" class="md-nav__link">
+        Topic 332: Host Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/333.1_Discretionary_Access_Control/" class="md-nav__link">
+        333.1 Discretionary Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/333.2_Mandatory_Access_Control/" class="md-nav__link">
+        333.2 Mandatory Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/334.3.2_Packet_Filtering/" class="md-nav__link">
+        Firewalld
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/334.3_Packet_Filtering/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/extra/" class="md-nav__link">
+        Extra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/freeIpa/" class="md-nav__link">
+        freeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/nose/" class="md-nav__link">
+        Nose
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/objetivos/" class="md-nav__link">
+        Objetivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/pendiente/" class="md-nav__link">
+        Pendiente
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_6" type="checkbox" id="__nav_11_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_6">
+          304
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="304" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_6">
+          <span class="md-nav__icon md-icon"></span>
+          304
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/ClusterPacemakerDRBD/" class="md-nav__link">
+        Cluster Pacemaker DRBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/Clusterfs/" class="md-nav__link">
+        Clusterfs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/Haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/Montaje%20isard-nas1%20y%20isard-nas2/" class="md-nav__link">
+        Montaje isard-nas1 y isard-nas2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/cluster_basico/" class="md-nav__link">
+        Cluster en centos con pacemaker/corosync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/clvm_gfs2_en_clusterPacemaker/" class="md-nav__link">
+        clvm gfs2 en clusterPacemaker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/haproxy_pacemaker/" class="md-nav__link">
+        Haproxy pacemaker
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_7" type="checkbox" id="__nav_11_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_7">
+          305
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="305" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_7">
+          <span class="md-nav__icon md-icon"></span>
+          305
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.1VirtualizationConceptsandTheory/" class="md-nav__link">
+        351.1 Virtualization Concepts and Theory (weight: 6)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.2Xen/" class="md-nav__link">
+        351.2 Xen (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.3Qemu/" class="md-nav__link">
+        351.3 QEMU (weight: 4)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.4LibvirtVirtualMachineManageme/" class="md-nav__link">
+        351.4 Libvirt Virtual Machine Management (weight: 9)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.5VirtualMachineDiskImageManagem/" class="md-nav__link">
+        351.5 Virtual Machine Disk Image Management (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352.1ContainerVirtualizationConcepts/" class="md-nav__link">
+        352.1 Container Virtualization Concepts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352.3Docker/" class="md-nav__link">
+        352.3 Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352.4ContainerOrchestrationPlatforms/" class="md-nav__link">
+        352.4ContainerOrchestrationPlatforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352LXC/" class="md-nav__link">
+        352.2 LXC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.1CloudManagementTools/" class="md-nav__link">
+        353.1 Cloud Management Tools (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.2Packer/" class="md-nav__link">
+        353.2 Packer (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.3cloud-init/" class="md-nav__link">
+        353.3 cloud-init (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.4Vagrant/" class="md-nav__link">
+        353.4 Vagrant (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -1699,18 +3595,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_10">
+        <label class="md-nav__link" for="__nav_12">
           Seguridad
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Seguridad" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+        <label class="md-nav__title" for="__nav_12">
           <span class="md-nav__icon md-icon"></span>
           Seguridad
         </label>
@@ -1851,18 +3747,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_10" type="checkbox" id="__nav_10_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_10" type="checkbox" id="__nav_12_10" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_10_10">
+        <label class="md-nav__link" for="__nav_12_10">
           Backups
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Backups" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_10">
+        <label class="md-nav__title" for="__nav_12_10">
           <span class="md-nav__icon md-icon"></span>
           Backups
         </label>
@@ -1942,18 +3838,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_11" type="checkbox" id="__nav_10_11" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_11" type="checkbox" id="__nav_12_11" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_10_11">
+        <label class="md-nav__link" for="__nav_12_11">
           Cortafuegos
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Cortafuegos" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_11">
+        <label class="md-nav__title" for="__nav_12_11">
           <span class="md-nav__icon md-icon"></span>
           Cortafuegos
         </label>
@@ -2216,18 +4112,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_11">
+        <label class="md-nav__link" for="__nav_13">
           Sistemas
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Sistemas" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
+        <label class="md-nav__title" for="__nav_13">
           <span class="md-nav__icon md-icon"></span>
           Sistemas
         </label>
@@ -2466,18 +4362,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_17" type="checkbox" id="__nav_11_17" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_17" type="checkbox" id="__nav_13_17" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_11_17">
+        <label class="md-nav__link" for="__nav_13_17">
           Automatizacion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Automatizacion" data-md-level="2">
-        <label class="md-nav__title" for="__nav_11_17">
+        <label class="md-nav__title" for="__nav_13_17">
           <span class="md-nav__icon md-icon"></span>
           Automatizacion
         </label>
@@ -2535,18 +4431,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_12">
+        <label class="md-nav__link" for="__nav_14">
           Virtualizacion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Virtualizacion" data-md-level="1">
-        <label class="md-nav__title" for="__nav_12">
+        <label class="md-nav__title" for="__nav_14">
           <span class="md-nav__icon md-icon"></span>
           Virtualizacion
         </label>
@@ -2631,18 +4527,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_6" type="checkbox" id="__nav_12_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_6" type="checkbox" id="__nav_14_6" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_12_6">
+        <label class="md-nav__link" for="__nav_14_6">
           Virt manager
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Virt manager" data-md-level="2">
-        <label class="md-nav__title" for="__nav_12_6">
+        <label class="md-nav__title" for="__nav_14_6">
           <span class="md-nav__icon md-icon"></span>
           Virt manager
         </label>
@@ -2973,44 +4869,45 @@
 </a>
 
 
+
 <h1 id="iptables">Iptables</h1>
 <h2 id="reglas-y-acciones">Reglas y Acciones</h2>
 <p>Las reglas se evalúan una a una secuencial mente en orden descendente, si una orden coincide con otra hace match, se aplica la primera, es decir si hay una regla que abre el puerto 5000 para la ip 1 y mas abajo hay otra regla que cierra el puerto 5000 para la ip 1,  la segunda nunca se aplicara.</p>
 <h2 id="activar-host-hacer-router">Activar host hacer router</h2>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="m">1</span> &gt; /proc/sys/net/ipv4/ip_forward
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>/proc/sys/net/ipv4/ip_forward
 </code></pre></div>
 <h2 id="borrar-reglas-actuales">Borrar reglas actuales</h2>
-<div class="highlight"><pre><span></span><code>sudo iptables -F
-sudo iptables -X
-sudo iptables -Z
-sudo iptables -t nat -F
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-F
+sudo<span class="w"> </span>iptables<span class="w"> </span>-X
+sudo<span class="w"> </span>iptables<span class="w"> </span>-Z
+sudo<span class="w"> </span>iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-F
 </code></pre></div>
 <h3 id="borrar-una-regla">Borrar una regla</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Primer les mostrem amb nº de línia</span>
-iptables -t filter -n -L -v --line-numbers
-iptables -t nat -n -L -v --line-numbers
-iptables -t mangle -n -L -v --line-numbers
+iptables<span class="w"> </span>-t<span class="w"> </span>filter<span class="w"> </span>-n<span class="w"> </span>-L<span class="w"> </span>-v<span class="w"> </span>--line-numbers
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-n<span class="w"> </span>-L<span class="w"> </span>-v<span class="w"> </span>--line-numbers
+iptables<span class="w"> </span>-t<span class="w"> </span>mangle<span class="w"> </span>-n<span class="w"> </span>-L<span class="w"> </span>-v<span class="w"> </span>--line-numbers
 
 <span class="c1"># Esborrar la 4</span>
-iptables -D INPUT <span class="m">4</span>
+iptables<span class="w"> </span>-D<span class="w"> </span>INPUT<span class="w"> </span><span class="m">4</span>
 </code></pre></div>
 <h2 id="politica-por-defecto">Politica por defecto</h2>
 <p>Existen dos políticas por defecto ACCEPT y DROP, generalmente se establece en el inicio de los scripts cual sera su política,  aceptar todo por defecto o denegar todo por defecto.</p>
 <h3 id="accept">Accept</h3>
 <p>En la política Accept todo esta permitido excepto lo que explícitamente se deniegue, en este caso las reglas de firewall son una lista de lo que está prohibido. Esta política es la mas fácil de configurar pero el firewall nunca será del todo seguro.</p>
-<div class="highlight"><pre><span></span><code>sudo iptables -P INPUT ACCEPT
-sudo iptables -P OUTPUT ACCEPT
-sudo iptables -P FORWARD ACCEPT
-sudo iptables -t nat -P PREROUTING ACCEPT
-sudo iptables -t nat -P POSTROUTING ACCEPT
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-P<span class="w"> </span>INPUT<span class="w"> </span>ACCEPT
+sudo<span class="w"> </span>iptables<span class="w"> </span>-P<span class="w"> </span>OUTPUT<span class="w"> </span>ACCEPT
+sudo<span class="w"> </span>iptables<span class="w"> </span>-P<span class="w"> </span>FORWARD<span class="w"> </span>ACCEPT
+sudo<span class="w"> </span>iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-P<span class="w"> </span>PREROUTING<span class="w"> </span>ACCEPT
+sudo<span class="w"> </span>iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-P<span class="w"> </span>POSTROUTING<span class="w"> </span>ACCEPT
 </code></pre></div>
 <h3 id="drop">Drop</h3>
 <p>Esta es la política mas difícil de configurar pero es mas segura, por que por defecto todo esta denegado y se han de asignar en las reglas del firewall  todo lo que se permita, asegurándote no olvidarte ninguna opción imprescindible.</p>
-<div class="highlight"><pre><span></span><code>sudo iptables -P INPUT DROP
-sudo iptables -P OUTPUT DROP
-sudo iptables -P FORWARD DROP
-sudo iptables -t nat -P PREROUTING DROP
-sudo iptables -t nat -P POSTROUTING DROP
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-P<span class="w"> </span>INPUT<span class="w"> </span>DROP
+sudo<span class="w"> </span>iptables<span class="w"> </span>-P<span class="w"> </span>OUTPUT<span class="w"> </span>DROP
+sudo<span class="w"> </span>iptables<span class="w"> </span>-P<span class="w"> </span>FORWARD<span class="w"> </span>DROP
+sudo<span class="w"> </span>iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-P<span class="w"> </span>PREROUTING<span class="w"> </span>DROP
+sudo<span class="w"> </span>iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-P<span class="w"> </span>POSTROUTING<span class="w"> </span>DROP
 </code></pre></div>
 <p>Uno de los errores que pueden ocurrir si las reglas no se han asignado bien, es que el sistema se quede bloqueado por haber cerrado demasiados servicios necesarios para el funcionamiento.</p>
 <ul>
@@ -3021,182 +4918,182 @@ sudo iptables -t nat -P POSTROUTING DROP
 <li>dns, sincronización horaria, pings, Ldap, Kerberos, NFS, samba, sgún de que dependa la máquina para su funcionamiento.</li>
 </ul>
 <h2 id="permitir-todo-via-localhost">Permitir todo vía localhost</h2>
-<div class="highlight"><pre><span></span><code>sudo iptables -A INPUT -i lo -j ACCEPT
-sudo iptables -A OUTPUT -o lo -j ACCEPT
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-i<span class="w"> </span>lo<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-o<span class="w"> </span>lo<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 </code></pre></div>
 <p><code>-i</code> input-interface, <code>-o</code> output-interface</p>
 <h2 id="permitir-todo-en-propia-ip">Permitir todo en propia ip</h2>
-<div class="highlight"><pre><span></span><code>sudo iptables -A INPUT -s <span class="m">192</span>.168.88.2 -j ACCEPT
-sudo iptables -A OUTPUT -d <span class="m">192</span>.168.88.2 -j ACCEPT
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">192</span>.168.88.2<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-d<span class="w"> </span><span class="m">192</span>.168.88.2<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 </code></pre></div>
 <p><code>-s</code>  source(origen) <code>-d</code> destination</p>
 <h2 id="permitir-una-ipred-a-puerto">Permitir una ip/red a puerto</h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># permitir acceder una red a un puerto</span>
-sudo iptables -A INPUT -s <span class="m">192</span>.168.88.0/24 -p tcp --dport <span class="m">5432</span> -j ACCEPT
+sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">192</span>.168.88.0/24<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">5432</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 <span class="c1"># permitir una ip a un rango de puertos</span>
-sudo iptables -A INPUT -s <span class="m">80</span>.37.45.194 -p tcp --dport <span class="m">20</span>:21 -j ACCEPT
+sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">80</span>.37.45.194<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">20</span>:21<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 <span class="c1"># permitir una ip a un puerto</span>
-sudo iptables -A INPUT -s <span class="m">80</span>.37.45.194 -p tcp --dport <span class="m">80</span> -j ACCEPT
+sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">80</span>.37.45.194<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 </code></pre></div>
 <h2 id="cerrar-puerto-al-exterior">Cerrar puerto al exterior</h2>
-<div class="highlight"><pre><span></span><code>sudo iptables -A INPUT -p tcp --dport <span class="m">20</span>:21 -j DROP
-sudo iptables -A INPUT -p tcp --dport <span class="m">5432</span> -j DROP
-sudo iptables -A INPUT -p tcp --dport <span class="m">80</span> -j DROP
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">20</span>:21<span class="w"> </span>-j<span class="w"> </span>DROP
+sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">5432</span><span class="w"> </span>-j<span class="w"> </span>DROP
+sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>DROP
 </code></pre></div>
 <h2 id="guardar-reglas-actuales">Guardar reglas actuales</h2>
-<div class="highlight"><pre><span></span><code>sudo iptables-save &gt; /etc/sysconfig/iptables
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>iptables-save<span class="w"> </span>&gt;<span class="w"> </span>/etc/sysconfig/iptables
 </code></pre></div>
 <h3 id="backup">Backup</h3>
-<div class="highlight"><pre><span></span><code>sudo iptables-save &gt; arxiu.regles.iptables <span class="c1"># exportar</span>
-sudo iptables-restore &lt; arxiu.regles.iptables <span class="c1"># inportar</span>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>iptables-save<span class="w"> </span>&gt;<span class="w"> </span>arxiu.regles.iptables<span class="w"> </span><span class="c1"># exportar</span>
+sudo<span class="w"> </span>iptables-restore<span class="w"> </span>&lt;<span class="w"> </span>arxiu.regles.iptables<span class="w"> </span><span class="c1"># inportar</span>
 </code></pre></div>
 <h2 id="sourceport">sourceport</h2>
 <p>En este ejemplo quiero que el host pueda navegar por internet, pero este mismo host tiene un servidor web y  quiero que desde el exterior puedan acceder, por lo tanto añado la regla de aceptar entrada por source port (esto solo es estrictamente necesario en la política drop). </p>
-<div class="highlight"><pre><span></span><code>sudo iptables -A INPUT -p tcp -m tcp --sport <span class="m">80</span> -m state <span class="se">\</span>
-                    --state RELATED,ESTABLISHED -j ACCEPT
-sudo iptables -A OUTPUT -p tcp -m tcp --dport <span class="m">80</span> -j ACCEPT
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span><span class="se">\</span>
+<span class="w">                    </span>--state<span class="w"> </span>RELATED,ESTABLISHED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
-sudo iptables -A INPUT -p tcp -m tcp --sport <span class="m">443</span> -m state <span class="se">\</span>
-                    --state RELATED,ESTABLISHED -j ACCEPT
-sudo iptables -A OUTPUT -p tcp -m tcp --dport <span class="m">443</span> -j ACCEPT
+sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span><span class="se">\</span>
+<span class="w">                    </span>--state<span class="w"> </span>RELATED,ESTABLISHED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
-sudo iptables -A INPUT -p tcp --dport <span class="m">80</span> -j DROP
-sudo iptables -A INPUT -p tcp --dport <span class="m">443</span> -j DROP
+sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>DROP
+sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>DROP
 </code></pre></div>
 <p><strong>ESTABLECIDO</strong> significa que el paquete está asociado con una conexión que  ha visto paquetes en ambos direcciones</p>
 <p><strong>NUEVO</strong> que significa que el  paquete ha comenzado una nueva conexión, o asociado con una conexión que no ha visto paquetes en ambas direcciones,</p>
 <p><strong>RELACIONADO</strong> que significa  que el paquete está iniciando una nueva conexión, pero está asociado con una conexión existente, como una transferencia de datos FTP o un ICMP</p>
 <hr />
 <p>En este caso el ejemplo es de un host/firewall con política DROP que almacena un servidor web pero no tiene acceso de salida a internet, es decir el servidor web no puede hacer nuevas peticiones por http/s, pero si le permitimos que mande respuestas a las peticiones que le llegan.</p>
-<div class="highlight"><pre><span></span><code>iptables -A INTPUT -p tcp -m tcp --dport <span class="m">80</span> -j ACCEPT
-iptables -A OUTPUT -p tcp -m tcp --sport <span class="m">80</span> -m state <span class="se">\</span>
-                        --state RELATED,ESTABLISHED -j ACCEPT
+<div class="highlight"><pre><span></span><code>iptables<span class="w"> </span>-A<span class="w"> </span>INTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span>--state<span class="w"> </span>RELATED,ESTABLISHED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
-iptables -A INTPUT  -p tcp -m tcp --dport <span class="m">443</span> -j ACCEPT
-iptables -A OUTPUT -p tcp -m tcp --sport <span class="m">443</span> -m state <span class="se">\</span>
-                            --state RELATED,ESTABLISHED -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INTPUT<span class="w">  </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span><span class="se">\</span>
+<span class="w">                            </span>--state<span class="w"> </span>RELATED,ESTABLISHED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
-iptables -A OUTPUT -p tcp --dport <span class="m">443</span> -j DROP
-iptables -A OUTPUT -p tcp --dport <span class="m">80</span> -j DROP
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>DROP
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>DROP
 </code></pre></div>
 <h2 id="permitir-trafico-establecido">Permitir trafico establecido</h2>
-<div class="highlight"><pre><span></span><code>iptables -t filter -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-iptables -t filter -A OUPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+<div class="highlight"><pre><span></span><code>iptables<span class="w"> </span>-t<span class="w"> </span>filter<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span>--state<span class="w"> </span>ESTABLISHED,RELATED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-t<span class="w"> </span>filter<span class="w"> </span>-A<span class="w"> </span>OUPUT<span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span>--state<span class="w"> </span>ESTABLISHED,RELATED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 </code></pre></div>
 <h2 id="servicios-en-drop">Servicios en drop</h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># Permetre consultes DNS (primari i secundari)</span>
-/sbin/iptables -A INPUT  -s <span class="m">80</span>.58.61.250 -p udp --sport <span class="m">53</span> -j ACCEPT
-/sbin/iptables -A OUTPUT -d <span class="m">80</span>.58.61.250 -p udp --dport <span class="m">53</span> -j ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w">  </span>-s<span class="w"> </span><span class="m">80</span>.58.61.250<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>--sport<span class="w"> </span><span class="m">53</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-d<span class="w"> </span><span class="m">80</span>.58.61.250<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>--dport<span class="w"> </span><span class="m">53</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
-/sbin/iptables -A INPUT  -s <span class="m">80</span>.58.61.254 -p udp --sport <span class="m">53</span> -j ACCEPT
-/sbin/iptables -A OUTPUT -d <span class="m">80</span>.58.61.254 -p udp --dport <span class="m">53</span> -j ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w">  </span>-s<span class="w"> </span><span class="m">80</span>.58.61.254<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>--sport<span class="w"> </span><span class="m">53</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-d<span class="w"> </span><span class="m">80</span>.58.61.254<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>--dport<span class="w"> </span><span class="m">53</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># Actuar de servidor web el host/firewall</span>
-/sbin/iptables -A INPUT -p tcp -m tcp --dport <span class="m">80</span> -j ACCEPT
-/sbin/iptables -A OUTPUT -p tcp -m tcp --sport <span class="m">80</span> -m state <span class="se">\</span>
-                        --state RELATED,ESTABLISHED -j ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span>--state<span class="w"> </span>RELATED,ESTABLISHED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># Permetre al host/firewall navegar per internet</span>
-/sbin/iptables -A INPUT -p tcp -m tcp --sport <span class="m">80</span> -m state <span class="se">\</span>
-                        --state RELATED,ESTABLISHED -j ACCEPT
-/sbin/iptables -A OUTPUT -p tcp -m tcp --dport <span class="m">80</span> -j ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span>--state<span class="w"> </span>RELATED,ESTABLISHED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
-/sbin/iptables -A INPUT  -p tcp -m tcp --sport <span class="m">443</span> -m state <span class="se">\</span>
-                        --state RELATED,ESTABLISHED -j ACCEPT
-/sbin/iptables -A OUTPUT -p tcp -m tcp --dport <span class="m">443</span> -j ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w">  </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span>--state<span class="w"> </span>RELATED,ESTABLISHED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># Consultar al servidor de temps per permetre la sincronització horària</span>
-/sbin/iptables -A INPUT  -p udp -m udp --dport <span class="m">123</span> -j ACCEPT
-/sbin/iptables -A OUTPUT -p udp -m udp --sport <span class="m">123</span> -j ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w">  </span>-p<span class="w"> </span>udp<span class="w"> </span>-m<span class="w"> </span>udp<span class="w"> </span>--dport<span class="w"> </span><span class="m">123</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>-m<span class="w"> </span>udp<span class="w"> </span>--sport<span class="w"> </span><span class="m">123</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># Permetre el tràfic SMTP d’entrada i sortida</span>
-iptables -A INPUT  -s <span class="m">0</span>.0.0.0/0 -p tcp --dport <span class="m">25</span> -j ACCEPT
-iptables -A OUTPUT -s <span class="m">0</span>.0.0.0/0 -p tcp --dport <span class="m">25</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w">  </span>-s<span class="w"> </span><span class="m">0</span>.0.0.0/0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">25</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">0</span>.0.0.0/0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">25</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># Servei FTP actiu i passiu</span>
-/sbin/iptables -A INPUT -p tcp -m tcp --sport <span class="m">20</span>:21 -m state <span class="se">\</span>
-                            --state RELATED,ESTABLISHED -j ACCEPT
-/sbin/iptables -A OUTPUT -p tcp -m tcp --dport <span class="m">20</span>:21 -j ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">20</span>:21<span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span><span class="se">\</span>
+<span class="w">                            </span>--state<span class="w"> </span>RELATED,ESTABLISHED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">20</span>:21<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># puertos no sistema</span>
-/sbin/iptables -A INPUT -p tcp -m tcp --sport <span class="m">1024</span>:65535 --dport <span class="m">1024</span>:65535 -m state <span class="se">\</span>
-                            --state ESTABLISHED -j ACCEPT
-/sbin/iptables -A OUTPUT -p tcp -m tcp --dport <span class="m">1024</span>:65535 -m state <span class="se">\</span>
-                            --state NEW,RELATED,ESTABLISHED -j ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">1024</span>:65535<span class="w"> </span>--dport<span class="w"> </span><span class="m">1024</span>:65535<span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span><span class="se">\</span>
+<span class="w">                            </span>--state<span class="w"> </span>ESTABLISHED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">1024</span>:65535<span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span><span class="se">\</span>
+<span class="w">                            </span>--state<span class="w"> </span>NEW,RELATED,ESTABLISHED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 </code></pre></div>
 <p>En ocasiones la política drop hace demasiado bien su trabajo y al abrir nuevos servicios, fallan por que les esta cortando el firewall y se pone en política accept temporalmente mientras se soluciona el script por prisas o etc..  por esto mismo es una buena practica al final del script  poner la barrera drop y así no exponer datos sensibles que podamos tener..</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Barrera final DROP per si es canvia a ACCEPT temporalment</span>
 <span class="c1"># tancar tràfic no desitjat</span>
-/sbin/iptables -A INPUT -p tcp -m tcp --dport <span class="m">1</span>:1024 -j DROP
-/sbin/iptables -A INPUT -p udp -m udp --dport <span class="m">1</span>:1024 -j DROP
-/sbin/iptables -A INPUT -p tcp -m tcp --dport <span class="m">1723</span> -j DROP
-/sbin/iptables -A INPUT -p tcp -m tcp --dport <span class="m">3306</span> -j DROP
-/sbin/iptables -A INPUT -p tcp -m tcp --dport <span class="m">5432</span> -j DROP
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">1</span>:1024<span class="w"> </span>-j<span class="w"> </span>DROP
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>-m<span class="w"> </span>udp<span class="w"> </span>--dport<span class="w"> </span><span class="m">1</span>:1024<span class="w"> </span>-j<span class="w"> </span>DROP
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">1723</span><span class="w"> </span>-j<span class="w"> </span>DROP
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">3306</span><span class="w"> </span>-j<span class="w"> </span>DROP
+/sbin/iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-m<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">5432</span><span class="w"> </span>-j<span class="w"> </span>DROP
 </code></pre></div>
 <h2 id="forwarding">Forwarding</h2>
-<div class="highlight"><pre><span></span><code>$ <span class="nb">echo</span> <span class="m">1</span> &gt; /proc/sys/net/ipv4/ip_forward
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>/proc/sys/net/ipv4/ip_forward
 <span class="c1"># o be:</span>
-sysctl net.ipv4.ip_forward<span class="o">=</span><span class="m">1</span>
+sysctl<span class="w"> </span>net.ipv4.ip_forward<span class="o">=</span><span class="m">1</span>
 
-sysctl -a <span class="p">|</span> grep ip_forward
-net.ipv4.ip_forward <span class="o">=</span> <span class="m">1</span>
+sysctl<span class="w"> </span>-a<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ip_forward
+net.ipv4.ip_forward<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>En un firewall por defecto la red externa suele tener todos los puertos cerrados y la interna abiertos, <code>eth0</code> interficie externa, <code>eth1</code> interficie interna.</p>
-<div class="highlight"><pre><span></span><code>iptables -A INPUT -s <span class="m">0</span>.0.0.0  -i eth0 -j DROP
-iptables -A INPUT -s <span class="m">172</span>.16.10.0/24 -i eth1 -j ACCEPT
+<div class="highlight"><pre><span></span><code>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w">  </span>-i<span class="w"> </span>eth0<span class="w"> </span>-j<span class="w"> </span>DROP
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.10.0/24<span class="w"> </span>-i<span class="w"> </span>eth1<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 </code></pre></div>
 <h3 id="nat">Nat</h3>
 <p><strong>Network Addres Translation</strong> se le aplica cuando en un router o host/firewall con dos o mas interficies, recibe peticiones por un red y las devuelve por otra con una ip diferente, en este proceso se a aplicado un <code>forward</code> a recibido un paquete por una red, a mirado de quien era y se lo a enviado estando en una red diferente el destinatario.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># NAT usant la IP pública de eth0</span>
-iptables -t nat -A POSTROUTING -s <span class="m">172</span>.16.10.0/24 -o eth0 -j MASQUERADE
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>POSTROUTING<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.10.0/24<span class="w"> </span>-o<span class="w"> </span>eth0<span class="w"> </span>-j<span class="w"> </span>MASQUERADE
 </code></pre></div>
 <h3 id="forward">Forward</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># no deixar sortir de la lan a exterior a serveis concrets</span>
-iptables -A FORWARD -s <span class="m">172</span>.16.100.0/24 -p tcp --dport <span class="m">7</span> -j REJECT
-iptables -A FORWARD -s <span class="m">172</span>.16.100.11 -p tcp --dport <span class="m">13</span> -j REJECT
+iptables<span class="w"> </span>-A<span class="w"> </span>FORWARD<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.0/24<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">7</span><span class="w"> </span>-j<span class="w"> </span>REJECT
+iptables<span class="w"> </span>-A<span class="w"> </span>FORWARD<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.11<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">13</span><span class="w"> </span>-j<span class="w"> </span>REJECT
 
 <span class="c1"># no deixar sortir de la lan a exterior segons destí</span>
-iptables -A FORWARD -s <span class="m">172</span>.16.100.0/24 -d <span class="m">192</span>.168.1.34 -p tcp --dport <span class="m">23</span> -j REJECT
-iptables -A FORWARD -i em1 -d <span class="m">192</span>.168.1.0/24 -p tcp --dport <span class="m">82</span> -j REJECT
+iptables<span class="w"> </span>-A<span class="w"> </span>FORWARD<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.0/24<span class="w"> </span>-d<span class="w"> </span><span class="m">192</span>.168.1.34<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">23</span><span class="w"> </span>-j<span class="w"> </span>REJECT
+iptables<span class="w"> </span>-A<span class="w"> </span>FORWARD<span class="w"> </span>-i<span class="w"> </span>em1<span class="w"> </span>-d<span class="w"> </span><span class="m">192</span>.168.1.0/24<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">82</span><span class="w"> </span>-j<span class="w"> </span>REJECT
 
 <span class="c1"># un host de la lan concret no pot accedir a un servei extern (segons destí)</span>
-iptables -A FORWARD -s <span class="m">172</span>.16.100.11 -d <span class="m">192</span>.168.1.34 -p tcp --dport <span class="m">110</span> -j REJECT
-iptables -A FORWARD -s <span class="m">172</span>.16.100.11 -d <span class="m">192</span>.168.1.0/24 -p tcp --dport <span class="m">143</span> -j REJECT
+iptables<span class="w"> </span>-A<span class="w"> </span>FORWARD<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.11<span class="w"> </span>-d<span class="w"> </span><span class="m">192</span>.168.1.34<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">110</span><span class="w"> </span>-j<span class="w"> </span>REJECT
+iptables<span class="w"> </span>-A<span class="w"> </span>FORWARD<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.11<span class="w"> </span>-d<span class="w"> </span><span class="m">192</span>.168.1.0/24<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">143</span><span class="w"> </span>-j<span class="w"> </span>REJECT
 
 <span class="c1"># evitar que des de dins de la LAN es falsifiqui ip origen (spoofing)</span>
-iptables -A FORWARD ! -s <span class="m">172</span>.16.100.0/24 -i em1 -j REJECT
+iptables<span class="w"> </span>-A<span class="w"> </span>FORWARD<span class="w"> </span>!<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.0/24<span class="w"> </span>-i<span class="w"> </span>em1<span class="w"> </span>-j<span class="w"> </span>REJECT
 </code></pre></div>
 <h3 id="dnat">Dnat</h3>
 <p><strong>Destination network address translation</strong> es muy similar a NAT pero en DNAT se redirige el puerto a otro diferente, igual que NAT también se puede redirigir el destino. Es decir en NAT redirigimos de <code>ip a ip</code> y en DNAT de <code>ip:puerto a ip:puerto</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># dirigir tot el tràfic http port 80 a un altre host de la LAN</span>
-iptables -t nat -A PREROUTING -i eth0 -p tcp --dport <span class="m">80</span> -j DNAT --to <span class="m">192</span>.168.10.12:80
-iptables -t nat -A PREROUTING -i eth0 -p tcp --dport <span class="m">443</span> -j DNAT --to <span class="m">192</span>.168.10.12:443
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-i<span class="w"> </span>eth0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span>--to<span class="w"> </span><span class="m">192</span>.168.10.12:80
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-i<span class="w"> </span>eth0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span>--to<span class="w"> </span><span class="m">192</span>.168.10.12:443
 
 <span class="c1"># si el tràfic hhtp prové de de casa meva (221.15.15.15) enviar-lo a un altre web server</span>
 <span class="c1"># (aquesta regla ha d’anar abans de les anteriors)</span>
-iptables -t nat -A PREROUTING -s <span class="m">221</span>.15.15.15 -i eth0 -p tcp --dport <span class="m">80</span> -j DNAT <span class="se">\</span>
-                            --to <span class="m">192</span>.168.10.10:80
-iptables -t nat -A PREROUTING -s <span class="m">221</span>.15.15.15 -i eth0 -p tcp --dport <span class="m">443</span> -j DNAT <span class="se">\</span>
-                            --to <span class="m">192</span>.168.10.10:443
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-s<span class="w"> </span><span class="m">221</span>.15.15.15<span class="w"> </span>-i<span class="w"> </span>eth0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span><span class="se">\</span>
+<span class="w">                            </span>--to<span class="w"> </span><span class="m">192</span>.168.10.10:80
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-s<span class="w"> </span><span class="m">221</span>.15.15.15<span class="w"> </span>-i<span class="w"> </span>eth0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span><span class="se">\</span>
+<span class="w">                            </span>--to<span class="w"> </span><span class="m">192</span>.168.10.10:443
 
 <span class="c1"># obrir puerto 2022 e la interfaz enp3s0 y redirigir a 192.168.10.10:22</span>
-iptables -t nat -A PREROUTING -i eth0 -p tcp --dport <span class="m">2022</span> -j DNAT --to <span class="m">192</span>.168.10.10:22
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-i<span class="w"> </span>eth0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">2022</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span>--to<span class="w"> </span><span class="m">192</span>.168.10.10:22
 
 <span class="c1"># port forwarding según la red de origen</span>
-iptables -t nat -A PREROUTING -s <span class="m">172</span>.17.0.0/24 -i eth0 -p tcp --dport <span class="m">2022</span> -j DNAT --to <span class="m">192</span>.168.10.10:22
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.17.0.0/24<span class="w"> </span>-i<span class="w"> </span>eth0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">2022</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span>--to<span class="w"> </span><span class="m">192</span>.168.10.10:22
 </code></pre></div>
 <h2 id="icmp">Icmp</h2>
-<div class="highlight"><pre><span></span><code>iptables -A FORWARD -p icmp --icmp-type <span class="m">8</span> -j DROP
+<div class="highlight"><pre><span></span><code>iptables<span class="w"> </span>-A<span class="w"> </span>FORWARD<span class="w"> </span>-p<span class="w"> </span>icmp<span class="w"> </span>--icmp-type<span class="w"> </span><span class="m">8</span><span class="w"> </span>-j<span class="w"> </span>DROP
 
 <span class="c1"># habilitar ping</span>
-iptables -A INPUT -p icmp --icmp-type echo-reply -j ACCEPT
-iptables -A OUTPUT -p icmp --icmp-type echo-request -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>icmp<span class="w"> </span>--icmp-type<span class="w"> </span>echo-reply<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>icmp<span class="w"> </span>--icmp-type<span class="w"> </span>echo-request<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># no aceptar ping</span>
-iptables -A INPUT -p ICMP -j DROP
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>ICMP<span class="w"> </span>-j<span class="w"> </span>DROP
 <span class="c1"># o</span>
-iptables -A INPUT -p icmp --icmp-type <span class="m">8</span> -j DROP
-iptables -A OUTPUT -p icmp --icmp-type <span class="m">8</span> -j DROP
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>icmp<span class="w"> </span>--icmp-type<span class="w"> </span><span class="m">8</span><span class="w"> </span>-j<span class="w"> </span>DROP
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>icmp<span class="w"> </span>--icmp-type<span class="w"> </span><span class="m">8</span><span class="w"> </span>-j<span class="w"> </span>DROP
 </code></pre></div>
 <p>echo-reply (pong)</p>
 <p>echo-request (ping)</p>
@@ -3204,82 +5101,82 @@ iptables -A OUTPUT -p icmp --icmp-type <span class="m">8</span> -j DROP
 <p>=&gt; <strong>Eight</strong> (8) is for echo-request.</p>
 <h2 id="ejemplo-drop">Ejemplo Drop</h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># Regles Flush: buidar les regles actuals</span>
-iptables -F
-iptables -X
-iptables -Z
-iptables -t nat -F
+iptables<span class="w"> </span>-F
+iptables<span class="w"> </span>-X
+iptables<span class="w"> </span>-Z
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-F
 
 <span class="c1"># Establir la politica per defecte (ACCEPT o DROP)</span>
-iptables -P INPUT DROP
-iptables -P OUTPUT DROP
-iptables -P FORWARD DROP
+iptables<span class="w"> </span>-P<span class="w"> </span>INPUT<span class="w"> </span>DROP
+iptables<span class="w"> </span>-P<span class="w"> </span>OUTPUT<span class="w"> </span>DROP
+iptables<span class="w"> </span>-P<span class="w"> </span>FORWARD<span class="w"> </span>DROP
 
 <span class="c1"># Permetre totes les pròpies connexions via localhost</span>
-iptables -A INPUT -i lo -j ACCEPT
-iptables -A OUTPUT -o lo -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-i<span class="w"> </span>lo<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-o<span class="w"> </span>lo<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># Permetre tot el trafic de la pròpia ip(192.168.1.49))</span>
-iptables -A INPUT -s <span class="m">192</span>.168.1.35 -j ACCEPT
-iptables -A OUTPUT -d <span class="m">192</span>.168.1.35 -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">192</span>.168.1.35<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-d<span class="w"> </span><span class="m">192</span>.168.1.35<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 <span class="c1">#exit 0</span>
 <span class="c1"># -----------------------------------------------------------</span>
 
 <span class="c1"># consulta dns primari</span>
-iptables -A INPUT -s <span class="m">80</span>.58.61.250 -p udp -m udp --sport <span class="m">53</span> -j ACCEPT
-iptables -A OUTPUT -d <span class="m">80</span>.58.61.250 -p udp -m udp --dport <span class="m">53</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">80</span>.58.61.250<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>-m<span class="w"> </span>udp<span class="w"> </span>--sport<span class="w"> </span><span class="m">53</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-d<span class="w"> </span><span class="m">80</span>.58.61.250<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>-m<span class="w"> </span>udp<span class="w"> </span>--dport<span class="w"> </span><span class="m">53</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># consulta dns secundari</span>
-iptables -A INPUT -s <span class="m">80</span>.58.61.254 -p udp -m udp --sport <span class="m">53</span> -j ACCEPT
-iptables -A OUTPUT -d <span class="m">80</span>.58.61.254 -p udp -m udp --dport <span class="m">53</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">80</span>.58.61.254<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>-m<span class="w"> </span>udp<span class="w"> </span>--sport<span class="w"> </span><span class="m">53</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-d<span class="w"> </span><span class="m">80</span>.58.61.254<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>-m<span class="w"> </span>udp<span class="w"> </span>--dport<span class="w"> </span><span class="m">53</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># consulta ntp</span>
-iptables -A INPUT -p udp -m udp --dport <span class="m">123</span> -j ACCEPT
-iptables -A OUTPUT -p udp -m udp --sport <span class="m">123</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>-m<span class="w"> </span>udp<span class="w"> </span>--dport<span class="w"> </span><span class="m">123</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>-m<span class="w"> </span>udp<span class="w"> </span>--sport<span class="w"> </span><span class="m">123</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># ----------------------------------------------------------</span>
 <span class="c1"># servei cups</span>
-iptables -A INPUT -p tcp --dport <span class="m">631</span> -j ACCEPT
-iptables -A OUTPUT -p tcp --sport <span class="m">631</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">631</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">631</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># port xinetd</span>
-iptables -A INPUT -p tcp --dport <span class="m">3411</span> -j ACCEPT
-iptables -A OUTPUT -p tcp --sport <span class="m">3411</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">3411</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">3411</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># port x11-x-forwarding</span>
-iptables -A INPUT -p tcp --dport <span class="m">6010</span> -j ACCEPT
-iptables -A OUTPUT -p tcp --sport <span class="m">6010</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">6010</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">6010</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># servei rpc</span>
-iptables -A INPUT -p tcp --dport <span class="m">111</span> -j ACCEPT
-iptables -A OUTPUT -p tcp --sport <span class="m">111</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">111</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">111</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># -----------------------------------------------------------</span>
 
 <span class="c1"># icmp</span>
-iptables -A INPUT -p icmp --icmp-type echo-reply -j ACCEPT
-iptables -A OUTPUT -p icmp --icmp-type echo-request -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>icmp<span class="w"> </span>--icmp-type<span class="w"> </span>echo-reply<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>icmp<span class="w"> </span>--icmp-type<span class="w"> </span>echo-request<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># -----------------------------------------------------------</span>
 
 <span class="c1"># servei ssh</span>
-iptables -A INPUT -p tcp --dport <span class="m">22</span> -j ACCEPT
-iptables -A OUTPUT -p tcp --sport <span class="m">22</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># servei http</span>
-iptables -A INPUT -p tcp --dport <span class="m">80</span> -j ACCEPT
-iptables -A OUTPUT -p tcp --sport <span class="m">80</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># servei daytime</span>
-iptables -A INPUT -p tcp --dport <span class="m">13</span> -j ACCEPT
-iptables -A OUTPUT -p tcp --sport <span class="m">13</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">13</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">13</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># servei echo</span>
-iptables -A INPUT -p tcp --dport <span class="m">7</span> -j ACCEPT
-iptables -A OUTPUT -p tcp --sport <span class="m">7</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">7</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">7</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># servei smtp</span>
-iptables -A INPUT -p tcp --dport <span class="m">25</span> -j ACCEPT
-iptables -A OUTPUT -p tcp --sport <span class="m">25</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">25</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">25</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 <span class="c1"># exit 0</span>
 
 <span class="c1"># ==============================================================</span>
@@ -3289,45 +5186,45 @@ iptables -A OUTPUT -p tcp --sport <span class="m">25</span> -j ACCEPT
 
 <span class="c1"># navegar web</span>
 <span class="c1">#iptables -A INPUT -p tcp --sport 80 -j ACCEPT</span>
-iptables -A OUTPUT -p tcp --dport <span class="m">80</span> -j ACCEPT
-iptables -A INPUT -p tcp --sport <span class="m">443</span> -j ACCEPT
-iptables -A OUTPUT -p tcp --dport <span class="m">443</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># accedir a servei echo</span>
 <span class="c1">#iptables -A INPUT -p tcp --sport 7 -j ACCEPT</span>
-iptables -A OUTPUT -p tcp --dport <span class="m">7</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">7</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># accedir al servei daytime</span>
 <span class="c1">#iptables -A INPUT -p tcp --sport 13 -j ACCEPT</span>
-iptables -A OUTPUT -p tcp --dport <span class="m">13</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">13</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># accedir al servei ssh</span>
 <span class="c1">#iptables -A INPUT -p tcp --sport 22 -j ACCEPT</span>
-iptables -A OUTPUT -p tcp --dport <span class="m">22</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
-iptables -A INPUT -m state --state ESTABLISHED,RELATED
-iptables -A OUTPUT -m state --state ESTABLISHED,RELATED
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span>--state<span class="w"> </span>ESTABLISHED,RELATED
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span>--state<span class="w"> </span>ESTABLISHED,RELATED
 
 <span class="c1"># -----------------------------------------------------------------</span>
 <span class="c1"># ftp i tftp (trafic udp)               *****</span>
 <span class="c1"># -----------------------------------------------------------------</span>
 
 <span class="c1"># oferir servei tftp</span>
-iptables -A INPUT -p udp --dport <span class="m">69</span> -j ACCEPT
-iptables -A OUTPUT -p udp --sport <span class="m">69</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>--dport<span class="w"> </span><span class="m">69</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>--sport<span class="w"> </span><span class="m">69</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># accedir a serveis tftp externs</span>
-iptables -A INPUT -p udp --sport <span class="m">69</span> -j ACCEPT
-iptables -A OUTPUT -p udp --dport <span class="m">69</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>--sport<span class="w"> </span><span class="m">69</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>udp<span class="w"> </span>--dport<span class="w"> </span><span class="m">69</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># pendent obrir ports dinamics</span>
 <span class="c1"># oferir servei ftp</span>
-iptables -A INPUT -p tcp --dport <span class="m">20</span>:21 -j ACCEPT
-iptables -A OUTPUT -p tcp --sport <span class="m">20</span>:21 -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">20</span>:21<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">20</span>:21<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># accdir a serveis ftp externs</span>
-iptables -A INPUT -p tcp --sport <span class="m">20</span>:21 -j ACCEPT
-iptables -A OUTPUT -p tcp --dport <span class="m">20</span>:21 -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--sport<span class="w"> </span><span class="m">20</span>:21<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">20</span>:21<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># pendent obrir ports dinamics!</span>
 <span class="c1"># --------------------------------------------------------------</span>
@@ -3336,41 +5233,41 @@ iptables -A OUTPUT -p tcp --dport <span class="m">20</span>:21 -j ACCEPT
 </code></pre></div>
 <h2 id="ejemplo-dmz">Ejemplo DMZ</h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># Activar si el host ha de fer de router</span>
-<span class="nb">echo</span> <span class="m">1</span> &gt; /proc/sys/net/ipv4/ip_forward
+<span class="nb">echo</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>/proc/sys/net/ipv4/ip_forward
 
 <span class="c1"># Regles Flush: buidar les regles actuals</span>
-iptables -F
-iptables -X
-iptables -Z
-iptables -t nat -F
+iptables<span class="w"> </span>-F
+iptables<span class="w"> </span>-X
+iptables<span class="w"> </span>-Z
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-F
 
 <span class="c1"># Establir la politica per defecte (ACCEPT o DROP)</span>
-iptables -P INPUT ACCEPT
-iptables -P OUTPUT ACCEPT
-iptables -P FORWARD ACCEPT
-iptables -t nat -P PREROUTING ACCEPT
-iptables -t nat -P POSTROUTING ACCEPT
+iptables<span class="w"> </span>-P<span class="w"> </span>INPUT<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-P<span class="w"> </span>OUTPUT<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-P<span class="w"> </span>FORWARD<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-P<span class="w"> </span>PREROUTING<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-P<span class="w"> </span>POSTROUTING<span class="w"> </span>ACCEPT
 
 <span class="c1"># Permetre totes les pròpies connexions via localhost</span>
-iptables -A INPUT -i lo -j ACCEPT
-iptables -A OUTPUT -o lo -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-i<span class="w"> </span>lo<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-o<span class="w"> </span>lo<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># Permetre tot el trafic de la propia ip exterior (wlan0:192.168.1.41))</span>
-iptables -A INPUT -s <span class="m">192</span>.168.1.41 -j ACCEPT
-iptables -A OUTPUT -d <span class="m">192</span>.168.1.41 -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">192</span>.168.1.41<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-d<span class="w"> </span><span class="m">192</span>.168.1.41<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># Permetre tot el trafic de la propia ip interior (em1:172.16.100.1))</span>
-iptables -A INPUT -s <span class="m">172</span>.16.100.1 -j ACCEPT
-iptables -A OUTPUT -d <span class="m">172</span>.16.100.1 -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.1<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-d<span class="w"> </span><span class="m">172</span>.16.100.1<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># Permetre tot el trafic de la propia ip interior (em1:172.32.1.1))</span>
-iptables -A INPUT -s <span class="m">172</span>.32.1.1 -j ACCEPT
-iptables -A OUTPUT -d <span class="m">172</span>.32.1.1 -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.32.1.1<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-d<span class="w"> </span><span class="m">172</span>.32.1.1<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 <span class="c1">#exit 0</span>
 
 <span class="c1"># Ahora hacemos enmascaramiento de la red local (HACIA FUERA)</span>
-iptables -t nat -A POSTROUTING -s <span class="m">172</span>.16.100.0/24 -o wlan0 -j MASQUERADE
-iptables -t nat -A POSTROUTING -s <span class="m">172</span>.32.1.0/24 -o wlan0 -j MASQUERADE
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>POSTROUTING<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.0/24<span class="w"> </span>-o<span class="w"> </span>wlan0<span class="w"> </span>-j<span class="w"> </span>MASQUERADE
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>POSTROUTING<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.32.1.0/24<span class="w"> </span>-o<span class="w"> </span>wlan0<span class="w"> </span>-j<span class="w"> </span>MASQUERADE
 <span class="c1">#exit 0</span>
 
 <span class="c1"># ==========================================================</span>
@@ -3382,40 +5279,40 @@ iptables -t nat -A POSTROUTING -s <span class="m">172</span>.32.1.0/24 -o wlan0 
 <span class="c1"># ========================================================</span>
 
 <span class="c1"># de la lan no accedir al router/fireall, excepte ssh, telnet i daytime</span>
-iptables -A INPUT -s <span class="m">172</span>.16.100.0/24 -p tcp --dport <span class="m">22</span> -j ACCEPT
-iptables -A INPUT -s <span class="m">172</span>.16.100.0/24 -p tcp --dport <span class="m">23</span> -j ACCEPT
-iptables -A INPUT -s <span class="m">172</span>.16.100.0/24 -p tcp --dport <span class="m">13</span> -j ACCEPT
-iptables -A INPUT -s <span class="m">172</span>.16.100.0/24 -j DROP
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.0/24<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.0/24<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">23</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.0/24<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">13</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.0/24<span class="w"> </span>-j<span class="w"> </span>DROP
 <span class="c1">#exit 0</span>
 
 <span class="c1"># de la lan NO es pot navegar,telnet,ssh a fora</span>
-iptables -A FORWARD -s <span class="m">172</span>.16.100.0/24 -p tcp --dport <span class="m">80</span> -j DROP
-iptables -A FORWARD -s <span class="m">172</span>.16.100.0/24 -p tcp --dport <span class="m">23</span> -j DROP
-iptables -A FORWARD -s <span class="m">172</span>.16.100.0/24 -p tcp --dport <span class="m">22</span> -j DROP
+iptables<span class="w"> </span>-A<span class="w"> </span>FORWARD<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.0/24<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>DROP
+iptables<span class="w"> </span>-A<span class="w"> </span>FORWARD<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.0/24<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">23</span><span class="w"> </span>-j<span class="w"> </span>DROP
+iptables<span class="w"> </span>-A<span class="w"> </span>FORWARD<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.0/24<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-j<span class="w"> </span>DROP
 
 <span class="c1"># de la lan acces al servidor web de la dmz: intranet</span>
-iptables -A INPUT -s <span class="m">172</span>.16.100.0/24 -p tcp --dport <span class="m">80</span> -j ACCEPT
-iptables -A INPUT -s <span class="m">172</span>.16.100.0/24 -p tcp --dport <span class="m">443</span> -j ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.0/24<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">172</span>.16.100.0/24<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 
 <span class="c1"># de exterior acces ports 3081:3085 redirigits a servers dins dmz</span>
-iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport <span class="m">3081</span> -j DNAT <span class="se">\</span>
-                                        --to <span class="m">172</span>.32.1.11:81
-iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport <span class="m">3082</span> -j DNAT <span class="se">\</span>
-                                        --to <span class="m">172</span>.32.1.11:82
-iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport <span class="m">3083</span> -j DNAT <span class="se">\</span>
-                                        --to <span class="m">172</span>.32.1.11:83
-iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport <span class="m">3084</span> -j DNAT <span class="se">\</span>
-                                        --to <span class="m">172</span>.32.1.11:84
-iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport <span class="m">3085</span> -j DNAT <span class="se">\</span>
-                                        --to <span class="m">172</span>.32.1.11:85
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-i<span class="w"> </span>wlan0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">3081</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span><span class="se">\</span>
+<span class="w">                                        </span>--to<span class="w"> </span><span class="m">172</span>.32.1.11:81
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-i<span class="w"> </span>wlan0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">3082</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span><span class="se">\</span>
+<span class="w">                                        </span>--to<span class="w"> </span><span class="m">172</span>.32.1.11:82
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-i<span class="w"> </span>wlan0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">3083</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span><span class="se">\</span>
+<span class="w">                                        </span>--to<span class="w"> </span><span class="m">172</span>.32.1.11:83
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-i<span class="w"> </span>wlan0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">3084</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span><span class="se">\</span>
+<span class="w">                                        </span>--to<span class="w"> </span><span class="m">172</span>.32.1.11:84
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-i<span class="w"> </span>wlan0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">3085</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span><span class="se">\</span>
+<span class="w">                                        </span>--to<span class="w"> </span><span class="m">172</span>.32.1.11:85
 
 <span class="c1"># des de exteriors ports 3022:3025 redirigits a ssh host de la lan</span>
-iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport <span class="m">3022</span> -j DNAT <span class="se">\</span>
-                                        --to <span class="m">172</span>.16.100.11:22
-iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport <span class="m">3023</span> -j DNAT <span class="se">\</span>
-                                        --to <span class="m">172</span>.16.100.12:22
-iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport <span class="m">3024</span> -j DNAT <span class="se">\</span>
-                                        --to <span class="m">172</span>.16.100.13:22
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-i<span class="w"> </span>wlan0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">3022</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span><span class="se">\</span>
+<span class="w">                                        </span>--to<span class="w"> </span><span class="m">172</span>.16.100.11:22
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-i<span class="w"> </span>wlan0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">3023</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span><span class="se">\</span>
+<span class="w">                                        </span>--to<span class="w"> </span><span class="m">172</span>.16.100.12:22
+iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>PREROUTING<span class="w"> </span>-i<span class="w"> </span>wlan0<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">3024</span><span class="w"> </span>-j<span class="w"> </span>DNAT<span class="w"> </span><span class="se">\</span>
+<span class="w">                                        </span>--to<span class="w"> </span><span class="m">172</span>.16.100.13:22
 </code></pre></div>
 
               
@@ -3482,10 +5379,10 @@ iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport <span class="m">3024</span
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.01824240.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.ff0eccb3.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.467223ff.min.js"></script>
       
     
   </body>

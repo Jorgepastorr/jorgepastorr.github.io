@@ -1,0 +1,5534 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Jorge Pastor">
+      
+      
+        <link rel="canonical" href="https://jorgepastorr.github.io/apuntes/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/07-conceptosWAN/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Conceptos WAN - Apuntes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conceptos-wan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Apuntes" class="md-header__button md-logo" aria-label="Apuntes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conceptos WAN
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Apuntes" class="md-nav__button md-logo" aria-label="Apuntes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Apuntes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Apuntes Jorgepastorr
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Administracion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Administracion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Administracion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Configurar_pantallas_manualmente/" class="md-nav__link">
+        Configurar pantallas manualmente
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Debian_hostname_dinamico/" class="md-nav__link">
+        Debian hostname dinamico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Mutt/" class="md-nav__link">
+        Que es mutt?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Procesos/" class="md-nav__link">
+        Procesos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Resetear_la_password_root/" class="md-nav__link">
+        Resetear la password root.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Vim/" class="md-nav__link">
+        Vim atajos básicos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/awk/" class="md-nav__link">
+        Uso básico de AWK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/freeipa/" class="md-nav__link">
+        FreeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/instalar_webmin/" class="md-nav__link">
+        instalar webmin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/per/" class="md-nav__link">
+        PER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/permisos_avanzados/" class="md-nav__link">
+        Permisos avanzados
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/samba/" class="md-nav__link">
+        Samba
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/server-correo/" class="md-nav__link">
+        Servidor Correo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/server-mensajeria/" class="md-nav__link">
+        Server mensajeria instantanea
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ssh/" class="md-nav__link">
+        ssh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/sudo/" class="md-nav__link">
+        sudo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/umask/" class="md-nav__link">
+        umask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/usuarios/" class="md-nav__link">
+        Usuarios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/vnc/" class="md-nav__link">
+        vnc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/webdav/" class="md-nav__link">
+        webdav
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_21" type="checkbox" id="__nav_2_21" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_21">
+          Ldap
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ldap" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_21">
+          <span class="md-nav__icon md-icon"></span>
+          Ldap
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/Ldap-Samba-Hostpam/" class="md-nav__link">
+        Ldap - Samba - Hostpam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/acl_ejercicios/" class="md-nav__link">
+        Acl ejercicios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/host-kerberos-con-ldap/" class="md-nav__link">
+        Instalación host  ldap-kerberos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/ldap/" class="md-nav__link">
+        ldap
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_22" type="checkbox" id="__nav_2_22" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_22">
+          Pxe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pxe" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_22">
+          <span class="md-nav__icon md-icon"></span>
+          Pxe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/pxe/Servidor-pxe-con-rapberry/" class="md-nav__link">
+        Servidor pxe con rapberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/pxe/guiapxe-fedora/" class="md-nav__link">
+        Guiapxe fedora
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_23" type="checkbox" id="__nav_2_23" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_23">
+          Redes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Redes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_23">
+          <span class="md-nav__icon md-icon"></span>
+          Redes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/apuntes-xarxa/" class="md-nav__link">
+        APUNTS DE XARXES
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/comandos_router_switch/" class="md-nav__link">
+        Configuració de Routers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/redes2/" class="md-nav__link">
+        Redes2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Auditoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Auditoria" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Auditoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../auditoria/apuntes_hacking/" class="md-nav__link">
+        Haking ético
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Bases datos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bases datos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Bases datos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Mongo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mongo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Mongo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/mongo/Mongo/" class="md-nav__link">
+        Mongo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Postgres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Postgres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Postgres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/bases/" class="md-nav__link">
+        Postgres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/modificaciones/" class="md-nav__link">
+        Modificación tablas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/plpgsql/" class="md-nav__link">
+        Plpgsql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/postgresql-intalacion/" class="md-nav__link">
+        Postgresql intalacion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Ccna
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ccna" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ccna
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ordenes/" class="md-nav__link">
+        ordenes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          1 IntroducciónRedes(ITN)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1 IntroducciónRedes(ITN)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          1 IntroducciónRedes(ITN)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/01-LasRedesEnLaActualidad/" class="md-nav__link">
+        01 LasRedesEnLaActualidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/02-ConfiguracionBasicaDelSwitchYdisp/" class="md-nav__link">
+        Configuración básica del Switch y dispositivo final
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/03-ProtocolosYmodelos/" class="md-nav__link">
+        Protocolos y modelos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/04-CapaFisica/" class="md-nav__link">
+        Capa Física
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/05-SistemasDeNumeracion/" class="md-nav__link">
+        Sistemas de numeración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/06-CapaDeEnlaceDeDatos/" class="md-nav__link">
+        Capa de enlace de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/07-ConmutacionEthernet/" class="md-nav__link">
+        Conmutación Ethernet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/08-CapaDeRed/" class="md-nav__link">
+        Capa de Red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/09-Resoluci%C3%B3nDeDireccion/" class="md-nav__link">
+        Resolución de dirección
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/10-ConfiguracionBasicaDelRouter/" class="md-nav__link">
+        Configuración básica del router
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/11-DireccionamientoIPv4/" class="md-nav__link">
+        Direccionamiento IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/12-DireccionamientoIPv6/" class="md-nav__link">
+        Direccionamiento IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/13-ICMP/" class="md-nav__link">
+        ICMP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/14-CapaDeTransporte/" class="md-nav__link">
+        Capa de transporte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/15-CapaDeAplicacion/" class="md-nav__link">
+        Capa de aplicación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/16-FundamentosDeSeguridadDeRed/" class="md-nav__link">
+        Fundamentos de seguridad de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/17-ConstruirUnaRedPeque%C3%B1a/" class="md-nav__link">
+        Construir una red pequeña
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/ipv6/" class="md-nav__link">
+        IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introducci%C3%B3nRedes%28ITN%29/minicom/" class="md-nav__link">
+        Minicom
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          2 Switching Routing And WirelessEssentials(SRWE)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2 Switching Routing And WirelessEssentials(SRWE)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          2 Switching Routing And WirelessEssentials(SRWE)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/01-ConfiguracionBasicaDelDispositivo/" class="md-nav__link">
+        Configuración básica del dispositivo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/03-VLAN/" class="md-nav__link">
+        VLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/04-Inter-VLAN-Routing/" class="md-nav__link">
+        Inter-VLAN Routing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/05-ConceptosSTP/" class="md-nav__link">
+        Conceptos STP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/06-EtherChannel/" class="md-nav__link">
+        EtherChannel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/07-DHCPv4/" class="md-nav__link">
+        DHCPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/08-SLAACyDHCPv6/" class="md-nav__link">
+        SLAAC y DHCPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/09-ConceptosdeFHRP/" class="md-nav__link">
+        Conceptos de FHRP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/10-ConceptosSeguridadLAN/" class="md-nav__link">
+        Conceptos de seguridad LAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/11-ConfiguracionSeguridadSwitch/" class="md-nav__link">
+        Configuración de seguridad en el Switch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/12-ConceptosWLAN/" class="md-nav__link">
+        Conceptos de WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/13-ConfiguracionesRedesInal%C3%A1mbricasWLAN/" class="md-nav__link">
+        Configuraciones de redes inalámbricas WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/14-ConceptosEnrutamiento/" class="md-nav__link">
+        Conceptos de enrutamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Switching-Routing-And-WirelessEssentials%28SRWE%29/15-EnrutamientoIPEstatico/" class="md-nav__link">
+        Enrutamiento IP Estático
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          3 Enterprise Networking Security AndAutomation ENSA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3 Enterprise Networking Security AndAutomation ENSA" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          3 Enterprise Networking Security AndAutomation ENSA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-ConceptosOSPFv2DeAreaUnica/" class="md-nav__link">
+        Conceptos de OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-ConfiguracionOSPFv2AreaUnica/" class="md-nav__link">
+        Configuración OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-ConceptosSeguridadRedes/" class="md-nav__link">
+        Conceptos de Seguridad en Redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-ACL/" class="md-nav__link">
+        ACL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-ACLconfiguracionIPv4/" class="md-nav__link">
+        ACL para configuración IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-NAT-IPv4/" class="md-nav__link">
+        NAT para IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Conceptos WAN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Conceptos WAN
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-de-las-wans" class="md-nav__link">
+    Propósito de las WANs
+  </a>
+  
+    <nav class="md-nav" aria-label="Propósito de las WANs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lans-y-wans" class="md-nav__link">
+    LANs y WANs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privadas-y-publicas" class="md-nav__link">
+    Privadas y Públicas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topologias-wan" class="md-nav__link">
+    Topologías WAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexiones-de-operador" class="md-nav__link">
+    Conexiones de operador
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolucion-de-las-redes" class="md-nav__link">
+    Evolución de las redes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcionamiento-de-wan" class="md-nav__link">
+    Funcionamiento de WAN
+  </a>
+  
+    <nav class="md-nav" aria-label="Funcionamiento de WAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estandares-wan" class="md-nav__link">
+    Estándares WAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wan-en-el-modelo-osi" class="md-nav__link">
+    WAN en el modelo OSI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminologia-comun-wan" class="md-nav__link">
+    Terminología común WAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispositivos-wan" class="md-nav__link">
+    Dispositivos WAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacion-en-serie" class="md-nav__link">
+    Comunicación en serie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacion-conmutada-por-circuito" class="md-nav__link">
+    Comunicación Conmutada por Circuito
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacion-conmutada-por-paquetes" class="md-nav__link">
+    Comunicación Conmutada por Paquetes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sdh-sonet-y-dwdm" class="md-nav__link">
+    SDH, SONET y DWDM
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectividad-de-la-wan-tradicional" class="md-nav__link">
+    Conectividad de la WAN tradicional
+  </a>
+  
+    <nav class="md-nav" aria-label="Conectividad de la WAN tradicional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opciones-de-conectividad-wan-tradicionales" class="md-nav__link">
+    Opciones de conectividad WAN tradicionales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminologia-wan-comun" class="md-nav__link">
+    Terminología WAN común
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones-de-conexiones-conmutadas-por-circuitos" class="md-nav__link">
+    Opciones de conexiones conmutadas por circuitos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones-de-conmutacion-por-paquetes" class="md-nav__link">
+    Opciones de conmutación por paquetes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectividad-wan-moderna" class="md-nav__link">
+    Conectividad WAN moderna
+  </a>
+  
+    <nav class="md-nav" aria-label="Conectividad WAN moderna">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wan-modernas" class="md-nav__link">
+    WAN Modernas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones-de-conectividad-wan-modernas" class="md-nav__link">
+    Opciones de conectividad WAN modernas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethernet-wan" class="md-nav__link">
+    Ethernet WAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mpls" class="md-nav__link">
+    MPLS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectividad-basada-en-internet" class="md-nav__link">
+    Conectividad basada en Internet
+  </a>
+  
+    <nav class="md-nav" aria-label="Conectividad basada en Internet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internet-opciones-de-conectividad-basada-en-internet" class="md-nav__link">
+    Internet Opciones de conectividad basada en Internet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologia-dsl" class="md-nav__link">
+    Tecnología DSL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexiones-dsl" class="md-nav__link">
+    Conexiones DSL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsl-y-ppp" class="md-nav__link">
+    DSL y PPP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologia-de-cable" class="md-nav__link">
+    Tecnología de cable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fibra-optica" class="md-nav__link">
+    Fibra óptica
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#banda-ancha-inalambrica-basada-en-internet" class="md-nav__link">
+    Banda ancha inalámbrica basada en Internet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones-de-conectividad-de-isp" class="md-nav__link">
+    Opciones de conectividad de ISP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparacion-de-soluciones-de-banda-ancha" class="md-nav__link">
+    Comparación de soluciones de banda ancha
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-ConceptosVPNeIPsec/" class="md-nav__link">
+        Conceptos de VPN e IPsec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-ConceptosQoS/" class="md-nav__link">
+        Conceptos de QoS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-AdministracionDeRedes/" class="md-nav__link">
+        Administración de redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-Dise%C3%B1oDeRedes/" class="md-nav__link">
+        Diseño de redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-ResolucionDeProblemasDeRed/" class="md-nav__link">
+        Resolución de problemas de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-VirtualizacionDeRed/" class="md-nav__link">
+        Virtualización de Red
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cloud" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cloud/aws/" class="md-nav__link">
+        aws
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Curiosidades
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Curiosidades" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Curiosidades
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/Eliminar_contrase%C3%B1a_windows/" class="md-nav__link">
+        Eliminar contraseña windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/Lanzador_aplicaciones_en_gnome/" class="md-nav__link">
+        Lanzador aplicaciones en gnome
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/cambiar_color_promp_terminal/" class="md-nav__link">
+        Cambiar color promp terminal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/conky/" class="md-nav__link">
+        conky
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/openbox/" class="md-nav__link">
+        Openbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/qbit/" class="md-nav__link">
+        Qbit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/tmux/" class="md-nav__link">
+        Tmux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Desatendidas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Desatendidas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Desatendidas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/" class="md-nav__link">
+        Desatendidas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/Instalacion-desatendida-debian/" class="md-nav__link">
+        Instalacion desatendida debian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/desatendida-windows/" class="md-nav__link">
+        Desatendida windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/kikstart/" class="md-nav__link">
+        Kikstart
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Generar doc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Generar doc" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Generar doc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generar_doc/docsify/" class="md-nav__link">
+        Docsify
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generar_doc/remark/" class="md-nav__link">
+        Remark
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Lenguajes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lenguajes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Lenguajes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/Fundamentos_php/" class="md-nav__link">
+        Fundamentos php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/Shell/" class="md-nav__link">
+        Shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_3">
+          Python3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python3" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_3">
+          <span class="md-nav__icon md-icon"></span>
+          Python3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/Apuntes-Metodos/" class="md-nav__link">
+        Métodos de colecciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-Funcionalidades_avanzadas/" class="md-nav__link">
+        apuntes Funcionalidades avanzadas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-Herencia/" class="md-nav__link">
+        Herencias
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-distribucion/" class="md-nav__link">
+        Distribución
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-documentacion/" class="md-nav__link">
+        Documentación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-ficheros/" class="md-nav__link">
+        Apuntes ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-modulos/" class="md-nav__link">
+        Módulos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-orientado-objetos/" class="md-nav__link">
+        Orientado a objetos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-test/" class="md-nav__link">
+        Test
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-tkinter/" class="md-nav__link">
+        Tkinter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes_bases/" class="md-nav__link">
+        Apuntes bases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/argparse/" class="md-nav__link">
+        Argparse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_13" type="checkbox" id="__nav_10_3_13" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_3_13">
+          Fundamentos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fundamentos" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_3_13">
+          <span class="md-nav__icon md-icon"></span>
+          Fundamentos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/excepciones/" class="md-nav__link">
+        Las excepciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/funciones/" class="md-nav__link">
+        Funciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/fundamento/" class="md-nav__link">
+        Fundamentos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/manejo_de_datos/" class="md-nav__link">
+        Manejo de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/salida_por_pantalla/" class="md-nav__link">
+        Salida por pantalla
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Lpi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lpi" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Lpi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1">
+          101
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="101" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          101
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/101_Arquitectura_del_sistema/" class="md-nav__link">
+        101 Arquitectura del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/102_Instalacion_de_Linux_y_gestion_de_paquetes/" class="md-nav__link">
+        102 Instalación de Linux y gestión de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/103_Comandos_GNU_y_Linux/" class="md-nav__link">
+        103 Comandos GNU y Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/104_Dispositivos_sistema_de_archivos_y_estandar_jerarquia_de_archivos/" class="md-nav__link">
+        104 Dispositivos, sistema de archivos Linux y el estándar de jerarquia de archivos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" type="checkbox" id="__nav_11_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_2">
+          102
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="102" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          102
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/105.2_Scripting/" class="md-nav__link">
+        105.2 Scripting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/105_Shells/" class="md-nav__link">
+        105 Shells
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/106_Interfaces_de_usuario_y_escritorio/" class="md-nav__link">
+        106 Interfaces de usuario y escritorio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/107_tareas_de_administracion/" class="md-nav__link">
+        107 tareas de administración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/108_Servicios_esenciales_del_sistema/" class="md-nav__link">
+        108 Servicios esenciales del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/108_rsyslog_server/" class="md-nav__link">
+        rsyslog server central
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/109_Fundamentos_de_red/" class="md-nav__link">
+        109 Fundamentos de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/110_Seguridad/" class="md-nav__link">
+        110 Seguridad
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_3" type="checkbox" id="__nav_11_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_3">
+          201
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="201" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_3">
+          <span class="md-nav__icon md-icon"></span>
+          201
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/200_Planificaci%C3%B3n_de_la_capacidad/" class="md-nav__link">
+        200 Planificación de la capacidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/201_Kernel_Linux/" class="md-nav__link">
+        201 Kernel Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/202_Arranque_del%20_Sistema/" class="md-nav__link">
+        202 Arranque del  Sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/203_sistemas_de_archivos_y_dispositivos/" class="md-nav__link">
+        203 sistemas de archivos y dispositivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/204_Administracion_avanzada_de_dispositivos_de_almacenamiento/" class="md-nav__link">
+        204 Administración avanzada de dispositivos de almacenamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/205_configuracion_de_red/" class="md-nav__link">
+        205 configuración de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/206_Mantenimiento_del_sistema/" class="md-nav__link">
+        206 Mantenimiento del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/Exam_201_Detailed_Objectives/" class="md-nav__link">
+        Exam 201: Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4">
+          202
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="202" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          202
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/207_Servidor_de_nombres_de_dominio/" class="md-nav__link">
+        207 Servidor de nombres de dominio (DNS)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/208.4_servicios_web_nginx/" class="md-nav__link">
+        208 servicios web nginx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/208_servicios_web/" class="md-nav__link">
+        208 servicios web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/209_compartir_ficheros/" class="md-nav__link">
+        209 compartir ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/210_gestion_de_clientes_de_red/" class="md-nav__link">
+        210 gestión de clientes de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/211_Servicios_E-Mail/" class="md-nav__link">
+        211 Servicios de E-Mail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/212_Seguridad_del_sistema/" class="md-nav__link">
+        212 Seguridad del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/Exam_202_Detailed_Objectives/" class="md-nav__link">
+        Exam 202 Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_5" type="checkbox" id="__nav_11_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_5">
+          303
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="303" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_5">
+          <span class="md-nav__icon md-icon"></span>
+          303
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/331.3_Encrypted_File_Systems/" class="md-nav__link">
+        Topic 331: Cryptography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/332.3_Resource_Control/" class="md-nav__link">
+        Topic 332: Host Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/333.1_Discretionary_Access_Control/" class="md-nav__link">
+        333.1 Discretionary Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/333.2_Mandatory_Access_Control/" class="md-nav__link">
+        333.2 Mandatory Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/334.3.2_Packet_Filtering/" class="md-nav__link">
+        Firewalld
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/334.3_Packet_Filtering/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/extra/" class="md-nav__link">
+        Extra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/freeIpa/" class="md-nav__link">
+        freeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/nose/" class="md-nav__link">
+        Nose
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/objetivos/" class="md-nav__link">
+        Objetivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/pendiente/" class="md-nav__link">
+        Pendiente
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_6" type="checkbox" id="__nav_11_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_6">
+          304
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="304" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_6">
+          <span class="md-nav__icon md-icon"></span>
+          304
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/ClusterPacemakerDRBD/" class="md-nav__link">
+        Cluster Pacemaker DRBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/Clusterfs/" class="md-nav__link">
+        Clusterfs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/Haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/Montaje%20isard-nas1%20y%20isard-nas2/" class="md-nav__link">
+        Montaje isard-nas1 y isard-nas2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/cluster_basico/" class="md-nav__link">
+        Cluster en centos con pacemaker/corosync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/clvm_gfs2_en_clusterPacemaker/" class="md-nav__link">
+        clvm gfs2 en clusterPacemaker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/haproxy_pacemaker/" class="md-nav__link">
+        Haproxy pacemaker
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_7" type="checkbox" id="__nav_11_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_7">
+          305
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="305" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_7">
+          <span class="md-nav__icon md-icon"></span>
+          305
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.1VirtualizationConceptsandTheory/" class="md-nav__link">
+        351.1 Virtualization Concepts and Theory (weight: 6)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.2Xen/" class="md-nav__link">
+        351.2 Xen (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.3Qemu/" class="md-nav__link">
+        351.3 QEMU (weight: 4)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.4LibvirtVirtualMachineManageme/" class="md-nav__link">
+        351.4 Libvirt Virtual Machine Management (weight: 9)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.5VirtualMachineDiskImageManagem/" class="md-nav__link">
+        351.5 Virtual Machine Disk Image Management (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352.1ContainerVirtualizationConcepts/" class="md-nav__link">
+        352.1 Container Virtualization Concepts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352.3Docker/" class="md-nav__link">
+        352.3 Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352.4ContainerOrchestrationPlatforms/" class="md-nav__link">
+        352.4ContainerOrchestrationPlatforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352LXC/" class="md-nav__link">
+        352.2 LXC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.1CloudManagementTools/" class="md-nav__link">
+        353.1 Cloud Management Tools (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.2Packer/" class="md-nav__link">
+        353.2 Packer (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.3cloud-init/" class="md-nav__link">
+        353.3 cloud-init (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.4Vagrant/" class="md-nav__link">
+        353.4 Vagrant (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          Seguridad
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seguridad" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Seguridad
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/Certificados-Digitales/" class="md-nav__link">
+        Certificados Digitales
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/Kerberos/" class="md-nav__link">
+        Kerberos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/OpenVpn/" class="md-nav__link">
+        OpenVpn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/The-crazy-thing/" class="md-nav__link">
+        The crazy thing!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/TunelSSH/" class="md-nav__link">
+        Tunel SSH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/lvm/" class="md-nav__link">
+        Lvm logical volum manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/practica-ssl-tls/" class="md-nav__link">
+        Practica ssl tls
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_10" type="checkbox" id="__nav_12_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_10">
+          Backups
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Backups" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_10">
+          <span class="md-nav__icon md-icon"></span>
+          Backups
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/Borg_basico/" class="md-nav__link">
+        Borg básico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/Tar/" class="md-nav__link">
+        Tar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/rdiff-backup/" class="md-nav__link">
+        rdiff-backup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/rsync/" class="md-nav__link">
+        rsync
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_11" type="checkbox" id="__nav_12_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_11">
+          Cortafuegos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cortafuegos" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_11">
+          <span class="md-nav__icon md-icon"></span>
+          Cortafuegos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/cortafuegos/Iptables/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Sistemas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sistemas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Sistemas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Actualizar_hora_sys_o_bios/" class="md-nav__link">
+        Gestionar Hora
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Arranque-del-sistema/" class="md-nav__link">
+        Arranque del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Estructura_de_directorios/" class="md-nav__link">
+        Estructura de directorios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Logs/" class="md-nav__link">
+        Logs del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Systemd/" class="md-nav__link">
+        Systemd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/ZFS/" class="md-nav__link">
+        ZFS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/chroot/" class="md-nav__link">
+        Chroot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/disco/" class="md-nav__link">
+        Disco
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/gestores_de_paquetes/" class="md-nav__link">
+        Gestores de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/getenforce/" class="md-nav__link">
+        getenforce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/grub/" class="md-nav__link">
+        Grub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/home/" class="md-nav__link">
+        Cambiar /home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/ip_est%C3%A1tica/" class="md-nav__link">
+        ip estática raspberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/pam/" class="md-nav__link">
+        Pam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/xinetd/" class="md-nav__link">
+        xinetd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_17" type="checkbox" id="__nav_13_17" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13_17">
+          Automatizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Automatizacion" data-md-level="2">
+        <label class="md-nav__title" for="__nav_13_17">
+          <span class="md-nav__icon md-icon"></span>
+          Automatizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/automatizacion/ansible/" class="md-nav__link">
+        Ansible
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/automatizacion/tareas_programadas/" class="md-nav__link">
+        Tareas Programadas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Virtualizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virtualizacion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Virtualizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/Docker-basico/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/Lxc/" class="md-nav__link">
+        LXC y LXD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/Vagrant/" class="md-nav__link">
+        Vagrant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/kubernetes/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/swarm/" class="md-nav__link">
+        Swarm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_6" type="checkbox" id="__nav_14_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14_6">
+          Virt manager
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virt manager" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_6">
+          <span class="md-nav__icon md-icon"></span>
+          Virt manager
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/Backing_chain/" class="md-nav__link">
+        Backing_chain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/Clonar/" class="md-nav__link">
+        Clonar de virtual a físico y de físico a virtual.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/Instalacion_de_virtualizacion_fedora/" class="md-nav__link">
+        Instalación de virtualización fedora
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/acceder_consola_desde_virsh/" class="md-nav__link">
+        acceder consola desde virsh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/crear_red_aislada/" class="md-nav__link">
+        Crear red aislada
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/instalar_maquina_virtual_virt-install/" class="md-nav__link">
+        virt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-de-las-wans" class="md-nav__link">
+    Propósito de las WANs
+  </a>
+  
+    <nav class="md-nav" aria-label="Propósito de las WANs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lans-y-wans" class="md-nav__link">
+    LANs y WANs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privadas-y-publicas" class="md-nav__link">
+    Privadas y Públicas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topologias-wan" class="md-nav__link">
+    Topologías WAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexiones-de-operador" class="md-nav__link">
+    Conexiones de operador
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolucion-de-las-redes" class="md-nav__link">
+    Evolución de las redes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcionamiento-de-wan" class="md-nav__link">
+    Funcionamiento de WAN
+  </a>
+  
+    <nav class="md-nav" aria-label="Funcionamiento de WAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estandares-wan" class="md-nav__link">
+    Estándares WAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wan-en-el-modelo-osi" class="md-nav__link">
+    WAN en el modelo OSI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminologia-comun-wan" class="md-nav__link">
+    Terminología común WAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispositivos-wan" class="md-nav__link">
+    Dispositivos WAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacion-en-serie" class="md-nav__link">
+    Comunicación en serie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacion-conmutada-por-circuito" class="md-nav__link">
+    Comunicación Conmutada por Circuito
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacion-conmutada-por-paquetes" class="md-nav__link">
+    Comunicación Conmutada por Paquetes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sdh-sonet-y-dwdm" class="md-nav__link">
+    SDH, SONET y DWDM
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectividad-de-la-wan-tradicional" class="md-nav__link">
+    Conectividad de la WAN tradicional
+  </a>
+  
+    <nav class="md-nav" aria-label="Conectividad de la WAN tradicional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opciones-de-conectividad-wan-tradicionales" class="md-nav__link">
+    Opciones de conectividad WAN tradicionales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminologia-wan-comun" class="md-nav__link">
+    Terminología WAN común
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones-de-conexiones-conmutadas-por-circuitos" class="md-nav__link">
+    Opciones de conexiones conmutadas por circuitos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones-de-conmutacion-por-paquetes" class="md-nav__link">
+    Opciones de conmutación por paquetes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectividad-wan-moderna" class="md-nav__link">
+    Conectividad WAN moderna
+  </a>
+  
+    <nav class="md-nav" aria-label="Conectividad WAN moderna">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wan-modernas" class="md-nav__link">
+    WAN Modernas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones-de-conectividad-wan-modernas" class="md-nav__link">
+    Opciones de conectividad WAN modernas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethernet-wan" class="md-nav__link">
+    Ethernet WAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mpls" class="md-nav__link">
+    MPLS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectividad-basada-en-internet" class="md-nav__link">
+    Conectividad basada en Internet
+  </a>
+  
+    <nav class="md-nav" aria-label="Conectividad basada en Internet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internet-opciones-de-conectividad-basada-en-internet" class="md-nav__link">
+    Internet Opciones de conectividad basada en Internet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologia-dsl" class="md-nav__link">
+    Tecnología DSL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexiones-dsl" class="md-nav__link">
+    Conexiones DSL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsl-y-ppp" class="md-nav__link">
+    DSL y PPP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologia-de-cable" class="md-nav__link">
+    Tecnología de cable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fibra-optica" class="md-nav__link">
+    Fibra óptica
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#banda-ancha-inalambrica-basada-en-internet" class="md-nav__link">
+    Banda ancha inalámbrica basada en Internet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones-de-conectividad-de-isp" class="md-nav__link">
+    Opciones de conectividad de ISP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparacion-de-soluciones-de-banda-ancha" class="md-nav__link">
+    Comparación de soluciones de banda ancha
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/jorgepastorr/apuntes/edit/master/docs/ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/07-conceptosWAN.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<h1 id="conceptos-wan">Conceptos WAN</h1>
+<h2 id="proposito-de-las-wans">Propósito de las WANs</h2>
+<h3 id="lans-y-wans">LANs y WANs</h3>
+<p>Una WAN es una red de telecomunicaciones que abarca un área geográfica relativamente grande y se requiere para conectarse más allá del límite de la LAN. </p>
+<p>Redes de área local (LAN)   </p>
+<ul>
+<li>Las redes locales proporcionan servicios de red dentro de una pequeña área geográfica (es decir, red doméstica, red de oficinas, red de edificios o red de campus).</li>
+<li>Las LAN se utilizan para interconectar equipos locales, periféricos y otros dispositivos. </li>
+<li>Una LAN es propiedad de una organización o un usuario doméstico y la administra.  </li>
+<li>Aparte de los costos de infraestructura de red, no se cobra ningún cargo por usar un LAN. </li>
+<li>Las LAN proporcionan altas velocidades de ancho de banda mediante Ethernet y Wi-Fi por cable servicios de la red. </li>
+</ul>
+<p>Redes de área extensa (WAN)</p>
+<ul>
+<li>Las WAN proporcionan servicios de red en grandes áreas geográficas (es decir, en y entre ciudades, países y continentes).</li>
+<li>Las WAN proporcionan servicios de red en grandes áreas geográficas (es decir, en y entre ciudades, países y continentes).</li>
+<li>Las WAN se utilizan para interconectar usuarios, redes y sitios remotos.</li>
+<li>Las WAN son propiedad y administradas por servicios de Internet, teléfono, cable y proveedores de satélites.</li>
+<li>Los servicios de WAN se proporcionan por una tarifa.</li>
+<li>Los proveedores de WANs ofrecen velocidades de ancho de banda bajas a altas, a largas distancias utilizando redes físicas complejas.</li>
+</ul>
+<h3 id="privadas-y-publicas">Privadas y Públicas</h3>
+<p>Una WAN privada es una conexión dedicada a un único cliente.</p>
+<p>Las WAN privadas proporcionan lo siguiente:</p>
+<ul>
+<li>Nivel de servicio garantizado</li>
+<li>Ancho de banda consistente</li>
+<li>Seguridad</li>
+</ul>
+<p>Normalmente, un ISP o un proveedor de servicios de telecomunicaciones que utiliza Internet proporciona una conexión WAN pública. En este caso, los niveles de servicio y el ancho de banda pueden variar, y las conexiones compartidas no garantizan la seguridad.</p>
+<h3 id="topologias-wan">Topologías WAN</h3>
+<p>Las WAN se implementan utilizando los siguientes diseños de topología lógica:</p>
+<ul>
+<li>Topología punto a punto</li>
+<li>Topología de estrella (hub and spoke)</li>
+<li>Topología de doble conexión</li>
+<li>Topología de malla completa</li>
+<li>Topología parcialmente mallada</li>
+</ul>
+<blockquote>
+<p>Nota: Las redes grandes suelen implementar una combinación de estas topologías. </p>
+</blockquote>
+<p><strong>Topología punto a punto</strong></p>
+<ul>
+<li>Emplea un circuito punto a punto entre dos terminales.</li>
+<li>Implica un servicio de transporte de capa 2 a través de la red del proveedor de servicios.</li>
+<li>La conexión punto a punto es transparente para la red del cliente.</li>
+</ul>
+<p><strong>Topología de estrella (hub and spoke)</strong></p>
+<ul>
+<li>Permite que una sola interfaz al hub puede ser compartida por todos los circuitos de radio.</li>
+<li>Los sitios radiales se pueden interconectar a través del sitio de hub mediante circuitos virtuales y subinterfaces enrutadas del hub.</li>
+<li>Los routers radiales solo pueden comunicarse entre sí a través del router concentrador.</li>
+</ul>
+<blockquote>
+<p>Nota: El router central (concentrador) representa un punto único de falla. Si falla, la comunicación entre radios también falla. </p>
+</blockquote>
+<p><strong>Topología de doble conexión</strong></p>
+<ul>
+<li>Ofrecen redundancia de red mejorada, equilibrio de carga, computación o procesamiento distribuido y la capacidad de implementar conexiones del proveedor de servicio de respaldo.</li>
+<li>Más caro de implementar que las topologías de un solo hogar. Esto es porque requieren hardware de red, como routers y switches adicionales.</li>
+<li>Además, son más difíciles de implementar porque requieren configuraciones adicionales y más complejas.</li>
+</ul>
+<p><strong>Topología de malla completa</strong></p>
+<ul>
+<li>Utiliza múltiples circuitos virtuales para conectar todos los sitios</li>
+<li>La topología más tolerante a errores</li>
+</ul>
+<p><strong>Topología parcialmente mallada</strong></p>
+<ul>
+<li>Conecta muchos sitios pero no todos</li>
+</ul>
+<h3 id="conexiones-de-operador">Conexiones de operador</h3>
+<p>Otro aspecto del diseño WAN es cómo una organización se conecta a Internet. Por lo general, una organización firma un acuerdo de nivel de servicio (SLA) con un proveedor de servicios. El SLA describe los servicios esperados relacionados con la fiabilidad y disponibilidad de la conexión. </p>
+<p>El proveedor de servicios puede o no ser el transportista real. Un transportista posee y mantiene la conexión física y el equipo entre el proveedor y el cliente. Normalmente, una organización elegirá una conexión WAN de un solo operador o de dos portadoras.</p>
+<p>Una conexión de operador único es cuando una organización se conecta a un único proveedor de servicios. Un SLA se negocia entre la organización y el proveedor de servicios. </p>
+<p>Una conexión de doble operador proporciona redundancia y aumenta la disponibilidad de la red. La organización negocia acuerdos de nivel de servicio independientes con dos proveedores de servicios diferentes. </p>
+<h3 id="evolucion-de-las-redes">Evolución de las redes</h3>
+<p>Los requisitos de red de una empresa pueden cambiar significativamente a medida que la empresa crece con el tiempo.</p>
+<ul>
+<li>Una red no solo debe satisfacer las necesidades operativas diarias de la empresa, sino que debe ser capaz de adaptarse y crecer a medida que la empresa cambia. </li>
+<li>Los diseñadores de redes y los administradores pueden abordar estos desafíos eligiendo cuidadosamente las tecnologías de red, los protocolos y los proveedores de servicios. </li>
+<li>Las redes se pueden optimizar mediante el uso de una variedad de técnicas y arquitecturas de diseño de red.</li>
+</ul>
+<p>Para ilustrar las diferencias entre el tamaño de la red, utilizaremos una empresa ficticia llamada SPAN Engineering a medida que crece de un pequeño negocio local a una empresa global.</p>
+<p><strong>Redes pequeñas</strong></p>
+<p>SPAN, una pequeña empresa ficticia, comenzó con unos pocos empleados en una pequeña oficina.</p>
+<ul>
+<li>Utiliza una única LAN conectada a un router inalámbrico para compartir datos y periféricos.</li>
+<li>La conexión a Internet se realiza a través de un servicio de banda ancha común denominado línea de suscriptor digital (DSL).</li>
+<li>El soporte de TI se contrata con el proveedor de DSL.</li>
+</ul>
+<p><strong>Red de campus</strong></p>
+<p>Dentro de unos años SPAN creció y requirió varios pisos de un edificio.</p>
+<ul>
+<li>La empresa necesitaba ahora una red de área de campus (CAN).</li>
+<li>Un firewall asegura el acceso a Internet a los usuarios corporativos.</li>
+<li>La empresa cuenta con personal interno de TI para dar soporte y mantenimiento a la red.</li>
+</ul>
+<p><strong>Red de la sucursal</strong></p>
+<p>Unos años más tarde, la compañía se expandió y agregó una sucursal en la ciudad, y sitios remotos y regionales en otras ciudades.</p>
+<p>La compañía necesitaba ahora una red de área metropolitana (MAN) para interconectar sitios dentro de la ciudad. </p>
+<p>Para conectarse con la oficina central las sucursales que están en ciudades usan líneas privadas dedicadas a través de su proveedor de servicios local.</p>
+<p><strong>Red distribuida</strong></p>
+<p>SPAN Ingeniería tiene 20 años de operación y cuenta con miles de empleados distribuidos en oficinas en todo el mundo.</p>
+<p>Las redes privadas virtuales (VPN) de sitio a sitio y de acceso remoto permiten que la empresa use Internet para conectarse de manera fácil y segura con los empleados y las instalaciones en todo el mundo.</p>
+<h2 id="funcionamiento-de-wan">Funcionamiento de WAN</h2>
+<h3 id="estandares-wan">Estándares WAN</h3>
+<p>Varias autoridades reconocidas definen y administran los estándares de acceso WAN:</p>
+<ul>
+<li>TIA/EIA - Asociación de la Industria de Telecomunicaciones y Alianza de Industrias Electrónicas </li>
+<li>ISO - Organización Internacional de Estandarización.</li>
+<li>IEEE - Instituto de Ingenieros en Electricidad y Electrónica</li>
+</ul>
+<h3 id="wan-en-el-modelo-osi">WAN en el modelo OSI</h3>
+<p>La mayoría de los estándares WAN se centran en la capa física y la capa de enlace de datos.</p>
+<p>Protocolos de capa 1</p>
+<ul>
+<li>Jerarquía digital sincrónica (SDH, Synchronous Digital Hierarchy)</li>
+<li>Red óptica síncrona (SONET)</li>
+<li>Multiplexado por división de longitud de onda densa (DWDM)</li>
+</ul>
+<p>Protocolos de capa 2</p>
+<ul>
+<li>Banda ancha (es decir, DSL y cable)</li>
+<li>Conexión inalámbrica</li>
+<li>WAN Ethernet (Metro Ethernet)</li>
+<li>Switching por etiquetas multiprotocolo (MPLS)</li>
+<li>Protocolo punto a punto (PPP) (menos usado).</li>
+<li>Control de enlace de datos de alto nivel (HDLC, High-Level Data Link Control)(menos usado).</li>
+<li>Frame Relay (heredado)</li>
+<li>Modo de transferencia asíncrona (ATM, asynchronous transfer mode)</li>
+</ul>
+<h3 id="terminologia-comun-wan">Terminología común WAN</h3>
+<p>Existen términos específicos utilizados para describir las conexiones WAN entre el suscriptor (es decir, la empresa/cliente) y el proveedor de servicios WAN.</p>
+<p>Equipo terminal de datos (DTE)  </p>
+<ul>
+<li>Este es el dispositivo que conecta las LAN de suscriptor a la WAN dispositivo de comunicación (es decir, DCE).</li>
+<li>El dispositivo DTE suele ser un router, pero podría ser un host o un servidor.</li>
+</ul>
+<p>Equipo de comunicación de datos (DCE)   </p>
+<ul>
+<li>Dispositivo utilizado para comunicarse con el proveedor</li>
+</ul>
+<p>Equipo de las instalaciones del cliente (CPE)   </p>
+<ul>
+<li>Estos son los dispositivos DTE y DCE (es decir, router, módem, óptico convertidor) ubicado en el perímetro empresarial.</li>
+<li>El suscriptor posee el CPE o arrienda el CPE del proveedor de servicios</li>
+</ul>
+<p>Punto de presencia (POP)    </p>
+<ul>
+<li>Este es el punto donde el suscriptor se conecta al servicio Red de proveedor</li>
+</ul>
+<p>Punto de demarcación    </p>
+<ul>
+<li>Esta es una ubicación física en un edificio o complejo que oficialmente separa el CPE del equipo del proveedor de servicios.</li>
+</ul>
+<p>Loop local (o última milla)     </p>
+<ul>
+<li>Este es el cable real de cobre o fibra que conecta el CPE a el CO del proveedor de servicios.</li>
+</ul>
+<p>Oficina central (CO)    </p>
+<ul>
+<li>Esta es la instalación del proveedor de servicios local o edificio que conecta el CPE a la red del proveedor.</li>
+</ul>
+<p>Red con cargo   </p>
+<ul>
+<li>Esto incluye backhaul, larga distancia, todo digital, fibra óptica líneas de comunicaciones, switches, routers y otros equipos dentro de la red del proveedor WAN.</li>
+</ul>
+<p>Red de backhaul</p>
+<ul>
+<li>conectan varios nodos de acceso de la red del proveedor de servicios.</li>
+</ul>
+<p>Red troncal     </p>
+<ul>
+<li>Redes grandes y de alta capacidad utilizadas para interconectar redes de proveedores de servicios y crear una red redundante.</li>
+</ul>
+<h3 id="dispositivos-wan">Dispositivos WAN</h3>
+<p>Existen muchos tipos de dispositivos que son específicos de los entornos WAN: </p>
+<p>Módem de banda de voz   </p>
+<ul>
+<li>También conocido como módem de acceso telefónico.</li>
+<li>Dispositivo heredado que convirtió (es decir, moduló) las señales digitales producido por una computadora en frecuencias de voz analógicas.</li>
+<li>Utiliza líneas telefónicas para transmitir datos. </li>
+</ul>
+<p>Módem DSL y Módem por cable     </p>
+<ul>
+<li>Conocidos colectivamente como módems de banda ancha, estos digitales de alta velocidad se conectan al router DTE mediante Ethernet.</li>
+</ul>
+<p>CSU/DSU     </p>
+<ul>
+<li>Las líneas arrendadas digitalmente requieren una CSU y una DSU.</li>
+<li>Conecta un dispositivo digital a una línea digital.</li>
+</ul>
+<p>Optical Converter   </p>
+<ul>
+<li>También conocido como un convertidor de fibra óptica.</li>
+<li>Estos dispositivos conectan medios de fibra óptica a medios de cobre y convierten señales ópticas a impulsos electrónicos.</li>
+</ul>
+<p>Router inalámbrico o Punto de Acceso    </p>
+<ul>
+<li>Los dispositivos se utilizan para conectarse de forma inalámbrica a un proveedor WAN.</li>
+</ul>
+<p>Dispositivos WAN Core   </p>
+<ul>
+<li>La red troncal WAN consta de múltiples routers de alta velocidad y Capa 3 switches.</li>
+</ul>
+<h3 id="comunicacion-en-serie">Comunicación en serie</h3>
+<p>Casi todas las comunicaciones de red se producen mediante una entrega de comunicaciones en serie. La comunicación serial transmite los bits secuencialmente a través de un solo canal.</p>
+<p>Por el contrario, las comunicaciones paralelas transmiten simultáneamente varios bits utilizando varios cables.</p>
+<p>A medida que aumenta la longitud del cable, la sincronización entre varios canales se vuelve más sensible a la distancia. Por esta razón, la comunicación paralela se limita a distancias muy cortas</p>
+<h3 id="comunicacion-conmutada-por-circuito">Comunicación Conmutada por Circuito</h3>
+<p>Las red de conmutación de circuitos son aquellas que establecen un circuito (o canal) dedicado entre los nodos y las terminales antes de que los usuarios se puedan comunicar.</p>
+<p>La tecnología ATM requiere el establecimiento de una conexión a través de una red de proveedor de servicios antes de que se pueda iniciar la comunicación.</p>
+<p>Todas las comunicaciones usan la misma ruta.</p>
+<p>Los dos tipos más comunes de tecnologías WAN de conmutación de circuitos son la red pública de telefonía de conmutación (PSTN) y la red digital de servicios integrados (ISDN). </p>
+<h3 id="comunicacion-conmutada-por-paquetes">Comunicación Conmutada por Paquetes</h3>
+<p>La comunicación de red se implementa con mayor frecuencia mediante la comunicación conmutada por paquetes.</p>
+<ul>
+<li>La conmutación por paquetes divide el tráfico en paquetes que se enrutan a través de una red compartida.</li>
+<li>Mucho menos costoso y más flexible que la conmutación de circuitos.</li>
+<li>Los tipos comunes de tecnologías WAN conmutadas por paquetes son:<ul>
+<li>WAN Ethernet (Metro Ethernet), </li>
+<li>Switching por Etiquetas Mltiprotocolo (MPLS)</li>
+<li>Frame Relay</li>
+<li>Asynchronous Transfer Mode (ATM).</li>
+</ul>
+</li>
+</ul>
+<h3 id="sdh-sonet-y-dwdm">SDH, SONET y DWDM</h3>
+<p>Las redes de proveedores de servicios utilizan infraestructuras de fibra óptica para transportar datos de usuarios entre destinos. El cable de fibra óptica es muy superior al cable de cobre para transmisiones de larga distancia debido a su atenuación e interferencia mucho menor.</p>
+<p>Hay dos estándares OSI capa 1 de fibra óptica disponibles para los proveedores de servicios:</p>
+<ul>
+<li>SDH - Synchronous Digital Hierarchy (SDH) es un estándar global para el transporte de datos a través de cable de fibra óptica. </li>
+<li>SONET - Red óptica síncrona (SONET) es el estándar norteamericano que ofrece los mismos servicios que SDH. </li>
+</ul>
+<p>SDH/SONET definen cómo transferir múltiples comunicaciones de datos, voz y video a través de fibra óptica mediante láseres o diodos emisores de luz (LED) por grandes distancias.</p>
+<p>La multiplexación por división de longitud de onda densa (DWDM) es una tecnología más reciente que aumenta la capacidad de transmisión de datos de SDH y SONET al enviar simultáneamente múltiples flujos de datos (multiplexación) utilizando diferentes longitudes de onda de luz. </p>
+<h2 id="conectividad-de-la-wan-tradicional">Conectividad de la WAN tradicional</h2>
+<h3 id="opciones-de-conectividad-wan-tradicionales">Opciones de conectividad WAN tradicionales</h3>
+<p>Para entender las WAN de hoy, ayuda saber por dónde comenzaron. </p>
+<p>Cuando las LAN aparecieron en la década de 1980, las organizaciones comenzaron a ver la necesidad de interconectarse con otras ubicaciones. </p>
+<p>Para ello, necesitaban sus redes para conectarse al bucle local de un proveedor de servicios. </p>
+<p>Esto se logró mediante el uso de líneas dedicadas o mediante el uso de servicios conmutados de un proveedor de servicios.</p>
+<h3 id="terminologia-wan-comun">Terminología WAN común</h3>
+<p>Por lo general, un proveedor de servicios arrienda las líneas punto a punto, que se llaman “líneas arrendadas”. El término "línea arrendada" hace referencia al hecho de que la organización paga una tarifa mensual de arrendamiento a un proveedor de servicios para usar la línea.</p>
+<p>Hay líneas arrendadas disponibles de distintas capacidades y, por lo general, su precio depende del ancho de banda necesario y de la distancia entre los dos puntos conectados.</p>
+<p>Hay dos sistemas utilizados para definir la capacidad digital de un enlace serie de medios de cobre:</p>
+<ul>
+<li>T-carrier - Utilizado en América del Norte, T-carrier proporciona enlaces T1 que admiten ancho de banda de hasta 1.544 Mbps y enlaces T3 que soportan ancho de banda de hasta 43,7 Mbps. </li>
+<li>E-carrier — Utilizado en Europa, e-carrier proporciona enlaces E1 que admiten ancho de banda de hasta 2.048 Mbps y enlaces E3 que admiten ancho de banda de hasta 34.368 Mbps. </li>
+</ul>
+<p><strong>Ventajas</strong></p>
+<p>Simplicidad: Los enlaces de comunicación punto a punto requieren una experiencia mínima para instalar y mantener.</p>
+<p>Calidad: Los enlaces de comunicación punto a punto suelen ofrecer un servicio de alta calidad, si tienen un ancho de banda adecuado. La capacidad dedicada elimina la latencia o fluctuación entre los extremos.</p>
+<p>Disponibilidad: La disponibilidad constante es esencial para algunas aplicaciones, como e-commerce. Los enlaces de comunicación punto a punto proporcionan permanente, capacidad dedicada que se requiere para VoIP o Video sobre IP.</p>
+<p><strong>Desventajas</strong></p>
+<p>Costo:  Los enlaces punto a punto son generalmente el tipo más costoso de WAN acceso. El costo de las soluciones de línea arrendada puede llegar a ser significativo cuando se utilizan para conectar muchos sitios a distancias cada vez mayores. En además, cada terminal requiere una interfaz en el router, lo que aumenta los costos de equipo.</p>
+<p>Flexibilidad limitada:  El tráfico WAN suele ser variable, y las líneas arrendadas tienen una capacidad fija, para que el ancho de banda de la línea rara vez coincida con la necesidad exactamente. Cualquier cambio a la línea arrendada generalmente requiere una visita al sitio por parte del ISP personal para ajustar la capacidad.</p>
+<h3 id="opciones-de-conexiones-conmutadas-por-circuitos">Opciones de conexiones conmutadas por circuitos</h3>
+<p>Las conexiones conmutadas por circuitos son proporcionadas por los operadores de la Red Telefónica de Servicio Público (PSTN). El bucle local que conecta el CPE al CO es un medio de cobre. </p>
+<p>Hay dos opciones tradicionales de conmutación de circuito:</p>
+<p>Conexiones para la Red de telefonía de servicio público (PSTN)</p>
+<ul>
+<li>El acceso a la WAN de acceso telefónico utiliza la RTC como su conexión WAN. Los bucles locales tradicionales pueden transportar datos informáticos binarios a través de la red telefónica de voz mediante un módem.</li>
+<li>Las características físicas del bucle local y su conexión a la PSTN limitan la velocidad de señal a menos de 56 kbps.</li>
+</ul>
+<p>Red digital de servicios integrados (ISDN)</p>
+<ul>
+<li>ISDN es una tecnología de conmutación de circuitos que permite al bucle local PSTN transportar señales digitales. Esto proporcionó conexiones conmutadas de mayor capacidad que el acceso telefónico. ISDN proporciona velocidades de datos de 45 Kbps a 2.048 Mbps.</li>
+</ul>
+<h3 id="opciones-de-conmutacion-por-paquetes">Opciones de conmutación por paquetes</h3>
+<p>La conmutación por paquetes divide el tráfico en paquetes que se enrutan a través de una red compartida. Permite que muchos pares de nodos se comuniquen a través del mismo canal.</p>
+<p>Hay dos opciones tradicionales (heredadas) de conmutación de paquetes:</p>
+<p><strong>Frame Relay</strong></p>
+<ul>
+<li>La retransmisión de tramas (Frame Relay) es una tecnología WAN multiacceso sin difusión (NBMA) simple de capa 2 que se utiliza para interconectar las redes LAN de una empresa.</li>
+<li>Frame Relay crea PVC que se identifican únicamente por un identificador de conexión de enlace de datos (DLCI).</li>
+</ul>
+<p><strong>Modo de Transferencia Asíncrona (ATM, asynchronous transfer mode)</strong></p>
+<ul>
+<li>La tecnología del Modo de Transferencia Asíncrona (ATM) puede transferir voz, video y datos a través de redes privadas y públicas. </li>
+<li>ATM construye sobre una arquitectura basada en celdas, en vez de una arquitectura basada en tramas. Las celdas ATM tienen siempre una longitud fija de 53 bytes.</li>
+</ul>
+<blockquote>
+<p>Nota: Las redes de Frame Relay y ATM han sido reemplazadas en gran medida por soluciones Metro Ethernet más rápidas y basadas en Internet. </p>
+</blockquote>
+<h2 id="conectividad-wan-moderna">Conectividad WAN moderna</h2>
+<h3 id="wan-modernas">WAN Modernas</h3>
+<p>Las WANS modernas tienen más opciones de conectividad que los WAN tradicionales. </p>
+<p>Las empresas ahora requieren opciones de conectividad WAN más rápidas y flexibles.</p>
+<p>Las opciones de conectividad WAN tradicionales han disminuido rápidamente en uso porque ya no están disponibles, son demasiado caras o tienen un ancho de banda limitado.</p>
+<h3 id="opciones-de-conectividad-wan-modernas">Opciones de conectividad WAN modernas</h3>
+<p>Las nuevas tecnologías están surgiendo continuamente. La figura resume las opciones modernas de conectividad WAN.</p>
+<p>Banda ancha dedicada</p>
+<ul>
+<li>Una organización puede instalar fibra de forma independiente para conectar ubicaciones remotas directamente entre sí. </li>
+<li>La fibra oscura se puede alquilar o comprar a un proveedor. </li>
+</ul>
+<p>Conmutada por paquetes</p>
+<ul>
+<li>Metro Ethernet — Reemplazar muchas opciones WAN tradicionales. </li>
+<li>MPLS: permite que los sitios se conecten al proveedor independientemente de sus tecnologías de acceso.</li>
+</ul>
+<p>Banda ancha basada en Internet</p>
+<ul>
+<li>Actualmente, las organizaciones utilizan habitualmente la infraestructura global de Internet para la conectividad WAN.</li>
+</ul>
+<h3 id="ethernet-wan">Ethernet WAN</h3>
+<p>Los proveedores de servicios ahora ofrecen servicio WAN Ethernet con cableado de fibra óptica. </p>
+<p>El servicio WAN Ethernet puede ir por muchos nombres, incluidos los siguientes:</p>
+<ul>
+<li>Ethernet metropolitana (MetroE)</li>
+<li>Ethernet sobre MPLS</li>
+<li>Servicio de LAN privada virtual (VPLS)</li>
+</ul>
+<p>Existen varios beneficios de una WAN Ethernet:</p>
+<ul>
+<li>Gastos y administración reducidos.</li>
+<li>Fácil integración con las redes existentes.</li>
+<li>Mejoramiento de la productividad de la empresa.</li>
+</ul>
+<h3 id="mpls">MPLS</h3>
+<p><strong>Multiprotocol Label Switching (MPLS)</strong> es una tecnología de enrutamiento WAN de proveedor de servicios de alto rendimiento para interconectar clientes sin tener en cuenta el método de acceso o la carga útil.  </p>
+<p>MPLS soporta una variedad de métodos de acceso de cliente (por ejemplo, Ethernet, DSL, Cable, Frame Relay).</p>
+<p>MPLS puede encapsular todos los tipos de protocolos, incluido el tráfico IPv4 e IPv6.</p>
+<p>Un router MPLS puede ser un router de borde de cliente (CE), un router de borde de proveedor (PE) o un router de proveedor interno (P).</p>
+<p>Los routers MPLS también se denominan routers conmutados por etiquetas (LSR). Adjuntan etiquetas a paquetes que luego son utilizados por otros routers MPLS para reenviar tráfico.</p>
+<p>MPLS también proporciona servicios para soporte QoS, ingeniería de tráfico, redundancia y VPNs.</p>
+<h2 id="conectividad-basada-en-internet">Conectividad basada en Internet</h2>
+<h3 id="internet-opciones-de-conectividad-basada-en-internet">Internet Opciones de conectividad basada en Internet</h3>
+<p>La conectividad de banda ancha basada en Internet es una alternativa al uso de opciones WAN dedicadas.</p>
+<p>La conectividad basada en Internet se puede dividir en opciones cableadas e inalámbricas.</p>
+<p>Opciones con cable</p>
+<ul>
+<li>Las opciones cableadas utilizan cableado permanente (por ejemplo, cobre o fibra) para proporcionar ancho de banda consistente y reducir las tasas de error y la latencia. Ejemplos: DSL, las conexiones de TV por cable y las redes de fibra óptica.</li>
+</ul>
+<p>Opciones inalámbricas</p>
+<ul>
+<li>Las opciones inalámbricas son menos costosas de implementar en comparación con otras opciones de conectividad WAN porque utilizan ondas de radio en lugar de medios cableados para transmitir datos. Ejemplos: los servicios de Internet celulares 3G/4G/5G o satelitales.</li>
+<li>Las señales inalámbricas pueden verse afectadas negativamente por factores como la distancia de las torres de radio, la interferencia de otras fuentes y el clima.</li>
+</ul>
+<h3 id="tecnologia-dsl">Tecnología DSL</h3>
+<p>La tecnología DSL es una tecnología de conexión permanente que usa las líneas telefónicas de par trenzado existentes para transportar datos con un ancho de banda elevado y proporciona servicios IP a los suscriptores.</p>
+<p>Los DSL se clasifican como DSL asimétrico (ADSL) o DSL simétrico (SDSL). </p>
+<ul>
+<li>ADSL y ADSL2 + proporciona mayor ancho de banda descendente al usuario que el ancho de banda de carga.</li>
+<li>SDSL proporciona la misma capacidad en ambas direcciones.</li>
+</ul>
+<p>Las velocidades de transferencia DSL dependen de la extensión real del bucle local, y del tipo y la condición del cableado.</p>
+<h3 id="conexiones-dsl">Conexiones DSL</h3>
+<p>Los proveedores de servicios implementan conexiones DSL en el bucle local. La conexión se configura entre el módem DSL y el multiplexor de acceso DSL (DSLAM).</p>
+<p>El módem DSL convierte las señales Ethernet del dispositivo de teletrabajador en una señal DSL, que se transmite a un multiplexor de acceso DSL (DSLAM) en la ubicación del proveedor.</p>
+<p>Un DSLAM es el dispositivo ubicado en la oficina central (CO) del proveedor y concentra las conexiones de varios suscriptores de DSL.</p>
+<p>DSL no es un medio compartido. Cada usuario tiene su propia conexión directa al DSLAM. Agregar usuarios no impide el rendimiento.</p>
+<h3 id="dsl-y-ppp">DSL y PPP</h3>
+<p>Los ISP suelen usar PPP como protocolo de enlace de datos a través de las conexiones de banda ancha.</p>
+<ul>
+<li>PPP se puede utilizar para autenticar al suscriptor.</li>
+<li>PPP puede asignar una dirección IPv4 pública al suscriptor.</li>
+<li>El PPP también incluye la función de administración de calidad de enlace.</li>
+</ul>
+<p>Hay dos maneras de implementar PPP sobre Ethernet (PPPoE):</p>
+<ul>
+<li>Host con cliente PPPoE - El software cliente PPPoE se comunica con el módem DSL mediante PPPoE y el módem se comunica con el ISP mediante PPP. </li>
+<li>Cliente PPPoE Router - El router es el cliente PPPoE y obtiene su configuración del proveedor.  </li>
+</ul>
+<h3 id="tecnologia-de-cable">Tecnología de cable</h3>
+<p>La tecnología de cable es una tecnología de conexión siempre activa de alta velocidad que utiliza un cable coaxial de la compañía de cable para proporcionar servicios IP a los usuarios.</p>
+<p>La especificación de interfaz del servicio de datos por cable (DOCSIS) es el estándar internacional para agregar datos de ancho de banda de alta velocidad a un sistema de cables existente.</p>
+<ul>
+<li>El nodo óptico convierte las señales de RF en impulsos de luz sobre el cable de fibra óptica. </li>
+<li>El medio de fibra permite que las señales viajen a largas distancias hasta la cabecera del proveedor donde se encuentra un sistema de terminación de módem por cable (CMTS).</li>
+<li>El encabezado contiene las bases de datos necesarias para proporcionar acceso a Internet, mientras que el CMTS es responsable de comunicarse con los módems por cable.</li>
+</ul>
+<blockquote>
+<p>Nota:Todos los suscriptores locales comparten el mismo ancho de banda de cable.Fuzzy match 80% - Approved A medida que se unen más usuarios al servicio, es posible que el ancho de banda disponible caiga por debajo de la velocidad esperada.</p>
+</blockquote>
+<h3 id="fibra-optica">Fibra óptica</h3>
+<p>Muchos municipios, ciudades y proveedores instalan cable de fibra óptica en la ubicación del usuario. 
+Esto se conoce comúnmente como Fiber to the x (FTTx) e incluye lo siguiente:</p>
+<ul>
+<li>Fiber to the Home (FTTH) - La fibra alcanza el límite de la residencia.  </li>
+<li>Fiber to the Building (FTTB) - La fibra alcanza el límite del edificio con la conexión final con el espacio de vida individual que se realiza a través de medios alternativos. </li>
+<li>Fiber to the Node/Neighborhood (FTTN) : el cableado óptico llega a un nodo óptico que convierte las señales ópticas a un formato aceptable para par trenzado o cable coaxial a la premisa. </li>
+</ul>
+<h3 id="banda-ancha-inalambrica-basada-en-internet">Banda ancha inalámbrica basada en Internet</h3>
+<p>Para enviar y recibir datos, la tecnología inalámbrica usa el espectro de radio sin licencia.</p>
+<p><strong>Wi-Fi Municipal</strong>: Algunas de estas redes proporcionan acceso a Internet de alta velocidad de manera gratuita o por un precio sustancialmente inferior al de otros servicios de banda ancha..</p>
+<p><strong>Celular</strong>: Cada vez se utiliza más para conectar dispositivos a Internet mediante ondas de radio para comunicarse a través de una torre de telefonía móvil cercana. 3G/4G/5G y la evolución a largo plazo (LTE) son tecnologías celulares. </p>
+<p><strong>Internet satelital</strong>: Generalmente utilizada por usuarios en áreas rurales, donde no hay cable ni DSL. Específicamente, un router se conecta a un plato satelital que apunta al satélite de un proveedor de servicios. Los árboles y las fuertes lluvias pueden impactar la señal satelital. </p>
+<p><strong>WiMAX:</strong> Interoperabilidad mundial para acceso por microondas que proporciona un servicio de banda ancha de alta velocidad con acceso inalámbrico y una amplia cobertura, como una red de telefonía celular, en vez de pequeñas zonas de cobertura inalámbrica Wi-Fi.</p>
+<h3 id="opciones-de-conectividad-de-isp">Opciones de conectividad de ISP</h3>
+<p>Hay diferentes maneras en que una organización puede conectarse a un ISP. La elección depende de las necesidades y el presupuesto de la organización.</p>
+<p><strong>Una sola conexión</strong>: Una sola conexión al ISP mediante un enlace. No proporciona redundancia y es la solución menos costosa. </p>
+<p><strong>Dual-homed</strong>: Se conecta al mismo ISP mediante dos enlaces. Proporciona redundancia y equilibrio de carga. Sin embargo, la organización pierde conectividad a Internet si el ISP experimenta una interrupción. </p>
+<p><strong>Multihomed</strong>: El cliente se conecta a dos ISP diferentes. Este diseño proporciona una mayor redundancia y permite equilibrar la carga, pero puede ser costoso. </p>
+<p><strong>Dual-MultiHomed</strong>: Dual-MultiHomed es la topología más resistente de las cuatro mostradas. El cliente se conecta con vínculos redundantes a varios ISP. Esta topología proporciona la mayor redundancia posible. Es la opción más cara de los cuatro. </p>
+<h3 id="comparacion-de-soluciones-de-banda-ancha">Comparación de soluciones de banda ancha</h3>
+<p>Todas las soluciones de banda ancha tienen ventajas y desventajas. Si hay varias soluciones de banda ancha disponibles, se debe llevar a cabo un análisis de costos y beneficios para determinar cuál es la mejor solución.</p>
+<p>Entre otros de los factores que se deben considerar se incluyen los siguientes:</p>
+<ul>
+<li>Cable- Ancho de banda es compartido por muchos usuarios. Por lo tanto, el ancho de banda se comparte entre diversos usuarios; las velocidades de datos ascendentes suelen ser lentas durante las horas de alto uso en áreas con sobresubscripción.</li>
+<li>DSL- El ancho de banda es limitado y se ve afectado por la distancia. La tasa de carga es proporcionalmente menor en comparación con la tasa de descarga. </li>
+<li>Fibra hasta el hogar- Requiere la instalación de la fibra directamente en el hogar.</li>
+<li>Datos móviles- La cobertura a menudo representa un problema; incluso dentro de una SOHO, en donde el ancho de banda es relativamente limitado.</li>
+<li>Wi-Fi Municipal- la mayoría de las municipalidades no cuentan con una red de malla implementada. Si está disponible y en rango, entonces es una opción viable. </li>
+<li>Satélite - Es costoso, tiene una capacidad limitada por suscriptor. Normalmente se utiliza cuando no hay otra opción disponible. </li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../06-NAT-IPv4/" class="md-footer__link md-footer__link--prev" aria-label="Previous: NAT para IPv4" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              NAT para IPv4
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../08-ConceptosVPNeIPsec/" class="md-footer__link md-footer__link--next" aria-label="Next: Conceptos de VPN e IPsec" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Conceptos de VPN e IPsec
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+    
+  </body>
+</html>

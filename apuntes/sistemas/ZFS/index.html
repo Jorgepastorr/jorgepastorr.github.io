@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://jorgepastorr.github.io/apuntes/sistemas/ZFS/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.2">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.2.5">
     
     
       
@@ -21,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.816931ca.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
           
           
@@ -36,16 +36,16 @@
     
       
         
+        
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../..":"../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-
 
     
     
@@ -147,7 +147,7 @@
         <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     jorgepastorr/apuntes
@@ -192,7 +192,7 @@
       <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     jorgepastorr/apuntes
@@ -1005,12 +1005,803 @@
       
       
         <label class="md-nav__link" for="__nav_5">
+          Ccna
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ccna" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ccna
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/ordenes/" class="md-nav__link">
+        ordenes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          1 IntroducciónRedes(ITN)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1 IntroducciónRedes(ITN)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          1 IntroducciónRedes(ITN)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/01-LasRedesEnLaActualidad/" class="md-nav__link">
+        01 LasRedesEnLaActualidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/02-ConfiguracionBasicaDelSwitchYdisp/" class="md-nav__link">
+        Configuración básica del Switch y dispositivo final
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/03-ProtocolosYmodelos/" class="md-nav__link">
+        Protocolos y modelos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/04-CapaFisica/" class="md-nav__link">
+        Capa Física
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/05-SistemasDeNumeracion/" class="md-nav__link">
+        Sistemas de numeración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/06-CapaDeEnlaceDeDatos/" class="md-nav__link">
+        Capa de enlace de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/07-ConmutacionEthernet/" class="md-nav__link">
+        Conmutación Ethernet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/08-CapaDeRed/" class="md-nav__link">
+        Capa de Red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/09-Resoluci%C3%B3nDeDireccion/" class="md-nav__link">
+        Resolución de dirección
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/10-ConfiguracionBasicaDelRouter/" class="md-nav__link">
+        Configuración básica del router
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/11-DireccionamientoIPv4/" class="md-nav__link">
+        Direccionamiento IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/12-DireccionamientoIPv6/" class="md-nav__link">
+        Direccionamiento IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/13-ICMP/" class="md-nav__link">
+        ICMP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/14-CapaDeTransporte/" class="md-nav__link">
+        Capa de transporte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/15-CapaDeAplicacion/" class="md-nav__link">
+        Capa de aplicación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/16-FundamentosDeSeguridadDeRed/" class="md-nav__link">
+        Fundamentos de seguridad de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/17-ConstruirUnaRedPeque%C3%B1a/" class="md-nav__link">
+        Construir una red pequeña
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/ipv6/" class="md-nav__link">
+        IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/minicom/" class="md-nav__link">
+        Minicom
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          2 Switching Routing And WirelessEssentials(SRWE)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2 Switching Routing And WirelessEssentials(SRWE)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          2 Switching Routing And WirelessEssentials(SRWE)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/01-ConfiguracionBasicaDelDispositivo/" class="md-nav__link">
+        Configuración básica del dispositivo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/03-VLAN/" class="md-nav__link">
+        VLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/04-Inter-VLAN-Routing/" class="md-nav__link">
+        Inter-VLAN Routing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/05-ConceptosSTP/" class="md-nav__link">
+        Conceptos STP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/06-EtherChannel/" class="md-nav__link">
+        EtherChannel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/07-DHCPv4/" class="md-nav__link">
+        DHCPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/08-SLAACyDHCPv6/" class="md-nav__link">
+        SLAAC y DHCPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/09-ConceptosdeFHRP/" class="md-nav__link">
+        Conceptos de FHRP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/10-ConceptosSeguridadLAN/" class="md-nav__link">
+        Conceptos de seguridad LAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/11-ConfiguracionSeguridadSwitch/" class="md-nav__link">
+        Configuración de seguridad en el Switch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/12-ConceptosWLAN/" class="md-nav__link">
+        Conceptos de WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/13-ConfiguracionesRedesInal%C3%A1mbricasWLAN/" class="md-nav__link">
+        Configuraciones de redes inalámbricas WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/14-ConceptosEnrutamiento/" class="md-nav__link">
+        Conceptos de enrutamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/15-EnrutamientoIPEstatico/" class="md-nav__link">
+        Enrutamiento IP Estático
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          3 Enterprise Networking Security AndAutomation ENSA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3 Enterprise Networking Security AndAutomation ENSA" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          3 Enterprise Networking Security AndAutomation ENSA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/01-ConceptosOSPFv2DeAreaUnica/" class="md-nav__link">
+        Conceptos de OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/02-ConfiguracionOSPFv2AreaUnica/" class="md-nav__link">
+        Configuración OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/03-ConceptosSeguridadRedes/" class="md-nav__link">
+        Conceptos de Seguridad en Redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/04-ACL/" class="md-nav__link">
+        ACL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/05-ACLconfiguracionIPv4/" class="md-nav__link">
+        ACL para configuración IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/06-NAT-IPv4/" class="md-nav__link">
+        NAT para IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/07-conceptosWAN/" class="md-nav__link">
+        Conceptos WAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/08-ConceptosVPNeIPsec/" class="md-nav__link">
+        Conceptos de VPN e IPsec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/09-ConceptosQoS/" class="md-nav__link">
+        Conceptos de QoS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/10-AdministracionDeRedes/" class="md-nav__link">
+        Administración de redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/11-Dise%C3%B1oDeRedes/" class="md-nav__link">
+        Diseño de redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/12-ResolucionDeProblemasDeRed/" class="md-nav__link">
+        Resolución de problemas de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/13-VirtualizacionDeRed/" class="md-nav__link">
+        Virtualización de Red
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
           Cloud
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Cloud" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Cloud
         </label>
@@ -1047,18 +1838,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_7">
           Curiosidades
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Curiosidades" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Curiosidades
         </label>
@@ -1179,18 +1970,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_8">
           Desatendidas
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Desatendidas" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Desatendidas
         </label>
@@ -1269,18 +2060,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_9">
           Generar doc
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Generar doc" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Generar doc
         </label>
@@ -1331,18 +2122,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_9">
+        <label class="md-nav__link" for="__nav_10">
           Lenguajes
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Lenguajes" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
+        <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           Lenguajes
         </label>
@@ -1385,18 +2176,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_9_3">
+        <label class="md-nav__link" for="__nav_10_3">
           Python3
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Python3" data-md-level="2">
-        <label class="md-nav__title" for="__nav_9_3">
+        <label class="md-nav__title" for="__nav_10_3">
           <span class="md-nav__icon md-icon"></span>
           Python3
         </label>
@@ -1579,18 +2370,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3_13" type="checkbox" id="__nav_9_3_13" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_13" type="checkbox" id="__nav_10_3_13" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_9_3_13">
+        <label class="md-nav__link" for="__nav_10_3_13">
           Fundamentos
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Fundamentos" data-md-level="3">
-        <label class="md-nav__title" for="__nav_9_3_13">
+        <label class="md-nav__title" for="__nav_10_3_13">
           <span class="md-nav__icon md-icon"></span>
           Fundamentos
         </label>
@@ -1697,18 +2488,1123 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_10">
+        <label class="md-nav__link" for="__nav_11">
+          Lpi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lpi" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Lpi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1">
+          101
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="101" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          101
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/101/101_Arquitectura_del_sistema/" class="md-nav__link">
+        101 Arquitectura del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/101/102_Instalacion_de_Linux_y_gestion_de_paquetes/" class="md-nav__link">
+        102 Instalación de Linux y gestión de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/101/103_Comandos_GNU_y_Linux/" class="md-nav__link">
+        103 Comandos GNU y Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/101/104_Dispositivos_sistema_de_archivos_y_estandar_jerarquia_de_archivos/" class="md-nav__link">
+        104 Dispositivos, sistema de archivos Linux y el estándar de jerarquia de archivos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" type="checkbox" id="__nav_11_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_2">
+          102
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="102" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          102
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/102/105.2_Scripting/" class="md-nav__link">
+        105.2 Scripting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/102/105_Shells/" class="md-nav__link">
+        105 Shells
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/102/106_Interfaces_de_usuario_y_escritorio/" class="md-nav__link">
+        106 Interfaces de usuario y escritorio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/102/107_tareas_de_administracion/" class="md-nav__link">
+        107 tareas de administración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/102/108_Servicios_esenciales_del_sistema/" class="md-nav__link">
+        108 Servicios esenciales del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/102/108_rsyslog_server/" class="md-nav__link">
+        rsyslog server central
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/102/109_Fundamentos_de_red/" class="md-nav__link">
+        109 Fundamentos de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/102/110_Seguridad/" class="md-nav__link">
+        110 Seguridad
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_3" type="checkbox" id="__nav_11_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_3">
+          201
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="201" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_3">
+          <span class="md-nav__icon md-icon"></span>
+          201
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/201/200_Planificaci%C3%B3n_de_la_capacidad/" class="md-nav__link">
+        200 Planificación de la capacidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/201/201_Kernel_Linux/" class="md-nav__link">
+        201 Kernel Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/201/202_Arranque_del%20_Sistema/" class="md-nav__link">
+        202 Arranque del  Sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/201/203_sistemas_de_archivos_y_dispositivos/" class="md-nav__link">
+        203 sistemas de archivos y dispositivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/201/204_Administracion_avanzada_de_dispositivos_de_almacenamiento/" class="md-nav__link">
+        204 Administración avanzada de dispositivos de almacenamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/201/205_configuracion_de_red/" class="md-nav__link">
+        205 configuración de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/201/206_Mantenimiento_del_sistema/" class="md-nav__link">
+        206 Mantenimiento del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/201/Exam_201_Detailed_Objectives/" class="md-nav__link">
+        Exam 201: Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4">
+          202
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="202" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          202
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/202/207_Servidor_de_nombres_de_dominio/" class="md-nav__link">
+        207 Servidor de nombres de dominio (DNS)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/202/208.4_servicios_web_nginx/" class="md-nav__link">
+        208 servicios web nginx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/202/208_servicios_web/" class="md-nav__link">
+        208 servicios web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/202/209_compartir_ficheros/" class="md-nav__link">
+        209 compartir ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/202/210_gestion_de_clientes_de_red/" class="md-nav__link">
+        210 gestión de clientes de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/202/211_Servicios_E-Mail/" class="md-nav__link">
+        211 Servicios de E-Mail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/202/212_Seguridad_del_sistema/" class="md-nav__link">
+        212 Seguridad del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/202/Exam_202_Detailed_Objectives/" class="md-nav__link">
+        Exam 202 Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_5" type="checkbox" id="__nav_11_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_5">
+          303
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="303" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_5">
+          <span class="md-nav__icon md-icon"></span>
+          303
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/303/331.3_Encrypted_File_Systems/" class="md-nav__link">
+        Topic 331: Cryptography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/303/332.3_Resource_Control/" class="md-nav__link">
+        Topic 332: Host Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/303/333.1_Discretionary_Access_Control/" class="md-nav__link">
+        333.1 Discretionary Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/303/333.2_Mandatory_Access_Control/" class="md-nav__link">
+        333.2 Mandatory Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/303/334.3.2_Packet_Filtering/" class="md-nav__link">
+        Firewalld
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/303/334.3_Packet_Filtering/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/303/extra/" class="md-nav__link">
+        Extra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/303/freeIpa/" class="md-nav__link">
+        freeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/303/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/303/nose/" class="md-nav__link">
+        Nose
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/303/objetivos/" class="md-nav__link">
+        Objetivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/303/pendiente/" class="md-nav__link">
+        Pendiente
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_6" type="checkbox" id="__nav_11_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_6">
+          304
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="304" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_6">
+          <span class="md-nav__icon md-icon"></span>
+          304
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/304/ClusterPacemakerDRBD/" class="md-nav__link">
+        Cluster Pacemaker DRBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/304/Clusterfs/" class="md-nav__link">
+        Clusterfs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/304/Haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/304/Montaje%20isard-nas1%20y%20isard-nas2/" class="md-nav__link">
+        Montaje isard-nas1 y isard-nas2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/304/cluster_basico/" class="md-nav__link">
+        Cluster en centos con pacemaker/corosync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/304/clvm_gfs2_en_clusterPacemaker/" class="md-nav__link">
+        clvm gfs2 en clusterPacemaker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/304/haproxy_pacemaker/" class="md-nav__link">
+        Haproxy pacemaker
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_7" type="checkbox" id="__nav_11_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_7">
+          305
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="305" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_7">
+          <span class="md-nav__icon md-icon"></span>
+          305
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/305/351.1VirtualizationConceptsandTheory/" class="md-nav__link">
+        351.1 Virtualization Concepts and Theory (weight: 6)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/305/351.2Xen/" class="md-nav__link">
+        351.2 Xen (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/305/351.3Qemu/" class="md-nav__link">
+        351.3 QEMU (weight: 4)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/305/351.4LibvirtVirtualMachineManageme/" class="md-nav__link">
+        351.4 Libvirt Virtual Machine Management (weight: 9)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/305/351.5VirtualMachineDiskImageManagem/" class="md-nav__link">
+        351.5 Virtual Machine Disk Image Management (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/305/352.1ContainerVirtualizationConcepts/" class="md-nav__link">
+        352.1 Container Virtualization Concepts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/305/352.3Docker/" class="md-nav__link">
+        352.3 Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/305/352.4ContainerOrchestrationPlatforms/" class="md-nav__link">
+        352.4ContainerOrchestrationPlatforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/305/352LXC/" class="md-nav__link">
+        352.2 LXC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/305/353.1CloudManagementTools/" class="md-nav__link">
+        353.1 Cloud Management Tools (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/305/353.2Packer/" class="md-nav__link">
+        353.2 Packer (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/305/353.3cloud-init/" class="md-nav__link">
+        353.3 cloud-init (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lpi/305/353.4Vagrant/" class="md-nav__link">
+        353.4 Vagrant (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
           Seguridad
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Seguridad" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+        <label class="md-nav__title" for="__nav_12">
           <span class="md-nav__icon md-icon"></span>
           Seguridad
         </label>
@@ -1849,18 +3745,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_10" type="checkbox" id="__nav_10_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_10" type="checkbox" id="__nav_12_10" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_10_10">
+        <label class="md-nav__link" for="__nav_12_10">
           Backups
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Backups" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_10">
+        <label class="md-nav__title" for="__nav_12_10">
           <span class="md-nav__icon md-icon"></span>
           Backups
         </label>
@@ -1938,18 +3834,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_11" type="checkbox" id="__nav_10_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_11" type="checkbox" id="__nav_12_11" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_10_11">
+        <label class="md-nav__link" for="__nav_12_11">
           Cortafuegos
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Cortafuegos" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_11">
+        <label class="md-nav__title" for="__nav_12_11">
           <span class="md-nav__icon md-icon"></span>
           Cortafuegos
         </label>
@@ -1995,18 +3891,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_11">
+        <label class="md-nav__link" for="__nav_13">
           Sistemas
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Sistemas" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
+        <label class="md-nav__title" for="__nav_13">
           <span class="md-nav__icon md-icon"></span>
           Sistemas
         </label>
@@ -2503,18 +4399,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_17" type="checkbox" id="__nav_11_17" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_17" type="checkbox" id="__nav_13_17" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_11_17">
+        <label class="md-nav__link" for="__nav_13_17">
           Automatizacion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Automatizacion" data-md-level="2">
-        <label class="md-nav__title" for="__nav_11_17">
+        <label class="md-nav__title" for="__nav_13_17">
           <span class="md-nav__icon md-icon"></span>
           Automatizacion
         </label>
@@ -2572,18 +4468,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_12">
+        <label class="md-nav__link" for="__nav_14">
           Virtualizacion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Virtualizacion" data-md-level="1">
-        <label class="md-nav__title" for="__nav_12">
+        <label class="md-nav__title" for="__nav_14">
           <span class="md-nav__icon md-icon"></span>
           Virtualizacion
         </label>
@@ -2668,18 +4564,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_6" type="checkbox" id="__nav_12_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_6" type="checkbox" id="__nav_14_6" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_12_6">
+        <label class="md-nav__link" for="__nav_14_6">
           Virt manager
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Virt manager" data-md-level="2">
-        <label class="md-nav__title" for="__nav_12_6">
+        <label class="md-nav__title" for="__nav_14_6">
           <span class="md-nav__icon md-icon"></span>
           Virt manager
         </label>
@@ -3049,13 +4945,14 @@
 </a>
 
 
+
 <h1 id="zfs">ZFS</h1>
 <ul>
 <li><a href="https://docs.oracle.com/cd/E26921_01/html/E25823/docinfo.html#scrolltoc">Doc oracle zfs</a></li>
 <li><a href="https://linux.die.net/man/8/zpool">man zpool</a></li>
 <li><a href="https://linux.die.net/man/8/zfs">man zfs</a></li>
 </ul>
-<div class="highlight"><pre><span></span><code>apt install  zfsutils-linux  zfs-dkms
+<div class="highlight"><pre><span></span><code>apt<span class="w"> </span>install<span class="w">  </span>zfsutils-linux<span class="w">  </span>zfs-dkms
 </code></pre></div>
 <p><strong>IMPORTANTE</strong>: No usar ZFS sobre controladoras  hardware, puesto que tienen su propia caché. ZFS necesita comunicarse  directamente con los discos.</p>
 <h2 id="niveles-de-raid-soportados">Niveles de RAID soportados</h2>
@@ -3070,28 +4967,28 @@
 </ul>
 <h2 id="gestion-de-zpools">Gestión de Zpools</h2>
 <p>Visualización de zpool</p>
-<div class="highlight"><pre><span></span><code>zpool status    <span class="c1"># ver estado el pool</span>
-zpool list      <span class="c1"># ver la capacidad de los discos</span>
-zfs list        <span class="c1"># ver los volumenes dentro de zpool</span>
-zpool <span class="nb">history</span>   <span class="c1"># ver historial de comandos</span>
-zpool get all   <span class="c1"># ver propiedades del pool</span>
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>status<span class="w">    </span><span class="c1"># ver estado el pool</span>
+zpool<span class="w"> </span>list<span class="w">      </span><span class="c1"># ver la capacidad de los discos</span>
+zfs<span class="w"> </span>list<span class="w">        </span><span class="c1"># ver los volumenes dentro de zpool</span>
+zpool<span class="w"> </span><span class="nb">history</span><span class="w">   </span><span class="c1"># ver historial de comandos</span>
+zpool<span class="w"> </span>get<span class="w"> </span>all<span class="w">   </span><span class="c1"># ver propiedades del pool</span>
 </code></pre></div>
 <h3 id="crear-zpool">Crear zpool</h3>
 <p><a href="https://docs.oracle.com/cd/E23824_01/html/821-1448/gaypw.html#gazhd">doc oracle</a> sobre esta sección</p>
 <p><strong>RAID0 o "Striping"</strong></p>
 <p>No añade redundancia, por lo que un fallo en un disco supone un fallo en el RAID completo. Sin embargo, si que mejora la velocidad de Lectura/Escritura.</p>
-<div class="highlight"><pre><span></span><code>zpool create -f &lt;NombrePool&gt; &lt;Disco&gt; &lt;Disco&gt; <span class="o">[</span>&lt;Disco&gt; &lt;Disco&gt; &lt;Disco&gt; ...<span class="o">]</span>
-zpool create -f tank /dev/vdb /dev/vdc
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>&lt;NombrePool&gt;<span class="w"> </span>&lt;Disco&gt;<span class="w"> </span>&lt;Disco&gt;<span class="w"> </span><span class="o">[</span>&lt;Disco&gt;<span class="w"> </span>&lt;Disco&gt;<span class="w"> </span>&lt;Disco&gt;<span class="w"> </span>...<span class="o">]</span>
+zpool<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>tank<span class="w"> </span>/dev/vdb<span class="w"> </span>/dev/vdc
 </code></pre></div>
 <p><strong>RAID1 o "Mirroring"</strong></p>
 <p>Como mínimo necesitaremos 2 discos de la misma capacidad. La capacidad resultante será la de un solo disco.</p>
-<div class="highlight"><pre><span></span><code>zpool create -f &lt;NombrePool&gt; mirror &lt;Disco1&gt; &lt;Disco2&gt;
-zpool create -f tank mirror /dev/vdb /dev/vdc
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>&lt;NombrePool&gt;<span class="w"> </span>mirror<span class="w"> </span>&lt;Disco1&gt;<span class="w"> </span>&lt;Disco2&gt;
+zpool<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>tank<span class="w"> </span>mirror<span class="w"> </span>/dev/vdb<span class="w"> </span>/dev/vdc
 </code></pre></div>
 <p><strong>RAID10</strong></p>
 <p>El resultado será un RAID0 sobre varios RAID1. Su capacidad será la suma de capacidades de todos los RAID1 que lo compongan.</p>
-<div class="highlight"><pre><span></span><code>zpool create -f &lt;NombrePool&gt; mirror &lt;Disco1&gt; &lt;Disco2&gt; mirror &lt;Disco1&gt; &lt;Disco2&gt; <span class="o">[</span>mirror &lt;Disco1&gt; &lt;Disco2&gt; ...<span class="o">]</span>
-zpool create -f tank mirror /dev/vdb /dev/vdc mirror /dev/vdd /dev/vde
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>&lt;NombrePool&gt;<span class="w"> </span>mirror<span class="w"> </span>&lt;Disco1&gt;<span class="w"> </span>&lt;Disco2&gt;<span class="w"> </span>mirror<span class="w"> </span>&lt;Disco1&gt;<span class="w"> </span>&lt;Disco2&gt;<span class="w"> </span><span class="o">[</span>mirror<span class="w"> </span>&lt;Disco1&gt;<span class="w"> </span>&lt;Disco2&gt;<span class="w"> </span>...<span class="o">]</span>
+zpool<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>tank<span class="w"> </span>mirror<span class="w"> </span>/dev/vdb<span class="w"> </span>/dev/vdc<span class="w"> </span>mirror<span class="w"> </span>/dev/vdd<span class="w"> </span>/dev/vde
 </code></pre></div>
 <p><strong>RAIDZ-1</strong></p>
 <p>El RAID-Z1, es similar a un RAID5 con paridad simple, requiere al menos 3 discos.</p>
@@ -3109,207 +5006,207 @@ zpool create -f tank raidz2 /dev/vd[b-e]
 zpool create -f tank raidz2 /dev/vd[b-f]
 </code></pre></div>
 <h3 id="visualizar-estato">Visualizar estato</h3>
-<div class="highlight"><pre><span></span><code>zpool status    <span class="c1"># ver estado el pool</span>
-zpool list      <span class="c1"># ver la capacidad de los discos</span>
-zfs list        <span class="c1"># ver los volumenes dentro de zpool</span>
-zpool <span class="nb">history</span>   <span class="c1"># ver historial de comandos</span>
-zpool get all   <span class="c1"># ver propiedades del pool</span>
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>status<span class="w">    </span><span class="c1"># ver estado el pool</span>
+zpool<span class="w"> </span>list<span class="w">      </span><span class="c1"># ver la capacidad de los discos</span>
+zfs<span class="w"> </span>list<span class="w">        </span><span class="c1"># ver los volumenes dentro de zpool</span>
+zpool<span class="w"> </span><span class="nb">history</span><span class="w">   </span><span class="c1"># ver historial de comandos</span>
+zpool<span class="w"> </span>get<span class="w"> </span>all<span class="w">   </span><span class="c1"># ver propiedades del pool</span>
 </code></pre></div>
 <h3 id="discos-adicionales">Discos adicionales</h3>
 <h4 id="disco-de-log">Disco de log</h4>
 <p>Podemos añadir un disco adicional para logs:</p>
-<div class="highlight"><pre><span></span><code>zpool create -f &lt;NombrePool&gt; &lt;ElRaidQueSea&gt; log &lt;Disco&gt; <span class="c1"># crear pool con disco de log</span>
-zpool add -f &lt;NombrePool&gt; log &lt;Disco&gt;   <span class="c1"># añadir disco cache de pool ya creado</span>
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>&lt;NombrePool&gt;<span class="w"> </span>&lt;ElRaidQueSea&gt;<span class="w"> </span>log<span class="w"> </span>&lt;Disco&gt;<span class="w"> </span><span class="c1"># crear pool con disco de log</span>
+zpool<span class="w"> </span>add<span class="w"> </span>-f<span class="w"> </span>&lt;NombrePool&gt;<span class="w"> </span>log<span class="w"> </span>&lt;Disco&gt;<span class="w">   </span><span class="c1"># añadir disco cache de pool ya creado</span>
 </code></pre></div>
 <h4 id="disco-cache">Disco caché</h4>
 <p>Para acelerar la lectura y escritura en el RAID, podemos usar un disco caché. Obviamente esto tiene sentido con discos SSD:</p>
-<div class="highlight"><pre><span></span><code>zpool create -f &lt;NombrePool&gt; &lt;ElRaidQueSea&gt; cache &lt;Disco&gt;   <span class="c1"># crear pool con disco de cache</span>
-zpool add -f &lt;NombrePool&gt; cache &lt;Disco&gt; <span class="c1"># añadir disco cache a pool ya creado</span>
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>&lt;NombrePool&gt;<span class="w"> </span>&lt;ElRaidQueSea&gt;<span class="w"> </span>cache<span class="w"> </span>&lt;Disco&gt;<span class="w">   </span><span class="c1"># crear pool con disco de cache</span>
+zpool<span class="w"> </span>add<span class="w"> </span>-f<span class="w"> </span>&lt;NombrePool&gt;<span class="w"> </span>cache<span class="w"> </span>&lt;Disco&gt;<span class="w"> </span><span class="c1"># añadir disco cache a pool ya creado</span>
 </code></pre></div>
 <h4 id="disco-spare">Disco spare</h4>
-<div class="highlight"><pre><span></span><code>zpool create -f &lt;NombrePool&gt; &lt;ElRaidQueSea&gt; spare &lt;Disco&gt;   <span class="c1"># crear pool con disco de spare</span>
-zpool add -f &lt;NombrePool&gt; spare &lt;Disco&gt; <span class="c1"># añadir disco spare a pool ya creado</span>
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>&lt;NombrePool&gt;<span class="w"> </span>&lt;ElRaidQueSea&gt;<span class="w"> </span>spare<span class="w"> </span>&lt;Disco&gt;<span class="w">   </span><span class="c1"># crear pool con disco de spare</span>
+zpool<span class="w"> </span>add<span class="w"> </span>-f<span class="w"> </span>&lt;NombrePool&gt;<span class="w"> </span>spare<span class="w"> </span>&lt;Disco&gt;<span class="w"> </span><span class="c1"># añadir disco spare a pool ya creado</span>
 </code></pre></div>
 <h4 id="quitar-disco-adicional">Quitar disco adicional</h4>
-<div class="highlight"><pre><span></span><code>zpool remove tank  /dev/vdg <span class="c1"># remove solo funciona con discos spare, cache, log, ...</span>
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>remove<span class="w"> </span>tank<span class="w">  </span>/dev/vdg<span class="w"> </span><span class="c1"># remove solo funciona con discos spare, cache, log, ...</span>
 </code></pre></div>
 <h3 id="modificar-un-zpool">Modificar un Zpool</h3>
 <h4 id="anadirquitar-discos-a-mirror">Añadir/Quitar discos a mirror</h4>
-<div class="highlight"><pre><span></span><code>zpool create -f tank mirrot /dev/vdb /dev/vdc <span class="c1"># creación de mirror simple</span>
-zpool status 
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>tank<span class="w"> </span>mirrot<span class="w"> </span>/dev/vdb<span class="w"> </span>/dev/vdc<span class="w"> </span><span class="c1"># creación de mirror simple</span>
+zpool<span class="w"> </span>status<span class="w"> </span>
 ...
 config:
-    NAME          STATE     READ WRITE CKSUM
-    tank          ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-      mirror-0    ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdb       ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdc       ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+<span class="w">    </span>NAME<span class="w">          </span>STATE<span class="w">     </span>READ<span class="w"> </span>WRITE<span class="w"> </span>CKSUM
+<span class="w">    </span>tank<span class="w">          </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">      </span>mirror-0<span class="w">    </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdb<span class="w">       </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdc<span class="w">       </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
 
-zpool attach tank /dev/vdb /dev/vdd <span class="c1"># añadir disco a mirror</span>
-zpool offline tank  /dev/vdd        <span class="c1"># poner disco offline (simular un fallo)</span>
-zpool detach tank  /dev/vdd         <span class="c1"># retirar disco</span>
+zpool<span class="w"> </span>attach<span class="w"> </span>tank<span class="w"> </span>/dev/vdb<span class="w"> </span>/dev/vdd<span class="w"> </span><span class="c1"># añadir disco a mirror</span>
+zpool<span class="w"> </span>offline<span class="w"> </span>tank<span class="w">  </span>/dev/vdd<span class="w">        </span><span class="c1"># poner disco offline (simular un fallo)</span>
+zpool<span class="w"> </span>detach<span class="w"> </span>tank<span class="w">  </span>/dev/vdd<span class="w">         </span><span class="c1"># retirar disco</span>
 </code></pre></div>
 <blockquote>
 <p>La opción attach no se puede utilizar directamente sobre raidz*, se tendrá que utilizar replace</p>
 </blockquote>
 <h4 id="cambio-disco-fallido-n-raidz-con-spare">cambio disco fallido n raidz con spare</h4>
 <p>En este ejemplo se muestra como seria el cambio de un disco que a fallado en un raidz2 con spare</p>
-<div class="highlight"><pre><span></span><code>zpool create -f tank raidz2 /dev/vd<span class="o">[</span>b-e<span class="o">]</span> spare /dev/vd<span class="o">[</span>fg<span class="o">]</span>  <span class="c1"># creación de raidz2 con 2 discos spare</span>
-zpool status
-    NAME        STATE     READ WRITE CKSUM
-    tank        ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-      raidz2-0  ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdb     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdc     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdd     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vde     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-    spares
-      vdf       AVAIL   
-      vdg       AVAIL   
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>tank<span class="w"> </span>raidz2<span class="w"> </span>/dev/vd<span class="o">[</span>b-e<span class="o">]</span><span class="w"> </span>spare<span class="w"> </span>/dev/vd<span class="o">[</span>fg<span class="o">]</span><span class="w">  </span><span class="c1"># creación de raidz2 con 2 discos spare</span>
+zpool<span class="w"> </span>status
+<span class="w">    </span>NAME<span class="w">        </span>STATE<span class="w">     </span>READ<span class="w"> </span>WRITE<span class="w"> </span>CKSUM
+<span class="w">    </span>tank<span class="w">        </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">      </span>raidz2-0<span class="w">  </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdb<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdc<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdd<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vde<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">    </span>spares
+<span class="w">      </span>vdf<span class="w">       </span>AVAIL<span class="w">   </span>
+<span class="w">      </span>vdg<span class="w">       </span>AVAIL<span class="w">   </span>
 ---
-zpool offline tank vdc <span class="c1"># simulo fallo de disco vdc</span>
-zpool status
-    NAME        STATE     READ WRITE CKSUM
-    tank        DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-      raidz2-0  DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdb     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdc     OFFLINE      <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdd     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vde     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-    spares
-      vdg       AVAIL   
-      vdf       AVAIL   
+zpool<span class="w"> </span>offline<span class="w"> </span>tank<span class="w"> </span>vdc<span class="w"> </span><span class="c1"># simulo fallo de disco vdc</span>
+zpool<span class="w"> </span>status
+<span class="w">    </span>NAME<span class="w">        </span>STATE<span class="w">     </span>READ<span class="w"> </span>WRITE<span class="w"> </span>CKSUM
+<span class="w">    </span>tank<span class="w">        </span>DEGRADED<span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">      </span>raidz2-0<span class="w">  </span>DEGRADED<span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdb<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdc<span class="w">     </span>OFFLINE<span class="w">      </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdd<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vde<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">    </span>spares
+<span class="w">      </span>vdg<span class="w">       </span>AVAIL<span class="w">   </span>
+<span class="w">      </span>vdf<span class="w">       </span>AVAIL<span class="w">   </span>
 ---
-zpool replace tank vdc vdf <span class="c1"># remplazo disco vdc offline por vdf en spare</span>
-zpool status
-    NAME         STATE     READ WRITE CKSUM
-    tank         DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-      raidz2-0   DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdb      ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        spare-1  DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-          vdc    OFFLINE      <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-          vdf    ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdd      ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vde      ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-    spares
-      vdg        AVAIL   
-      vdf        INUSE     currently <span class="k">in</span> use
+zpool<span class="w"> </span>replace<span class="w"> </span>tank<span class="w"> </span>vdc<span class="w"> </span>vdf<span class="w"> </span><span class="c1"># remplazo disco vdc offline por vdf en spare</span>
+zpool<span class="w"> </span>status
+<span class="w">    </span>NAME<span class="w">         </span>STATE<span class="w">     </span>READ<span class="w"> </span>WRITE<span class="w"> </span>CKSUM
+<span class="w">    </span>tank<span class="w">         </span>DEGRADED<span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">      </span>raidz2-0<span class="w">   </span>DEGRADED<span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdb<span class="w">      </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>spare-1<span class="w">  </span>DEGRADED<span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">          </span>vdc<span class="w">    </span>OFFLINE<span class="w">      </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">          </span>vdf<span class="w">    </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdd<span class="w">      </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vde<span class="w">      </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">    </span>spares
+<span class="w">      </span>vdg<span class="w">        </span>AVAIL<span class="w">   </span>
+<span class="w">      </span>vdf<span class="w">        </span>INUSE<span class="w">     </span>currently<span class="w"> </span><span class="k">in</span><span class="w"> </span>use
 ---
-zpool detach tank vdc   <span class="c1"># quito disco dañado vdc</span>
-zpool status
-    NAME        STATE     READ WRITE CKSUM
-    tank        ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-      raidz2-0  ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdb     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdf     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdd     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vde     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-    spares
-      vdg       AVAIL   
+zpool<span class="w"> </span>detach<span class="w"> </span>tank<span class="w"> </span>vdc<span class="w">   </span><span class="c1"># quito disco dañado vdc</span>
+zpool<span class="w"> </span>status
+<span class="w">    </span>NAME<span class="w">        </span>STATE<span class="w">     </span>READ<span class="w"> </span>WRITE<span class="w"> </span>CKSUM
+<span class="w">    </span>tank<span class="w">        </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">      </span>raidz2-0<span class="w">  </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdb<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdf<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdd<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vde<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">    </span>spares
+<span class="w">      </span>vdg<span class="w">       </span>AVAIL<span class="w">   </span>
 ---
-zpool add tank spare vdc    <span class="c1"># pongo vdc reparado como spare</span>
-zpool status
-    NAME        STATE     READ WRITE CKSUM
-    tank        ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-      raidz2-0  ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdb     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdf     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdd     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vde     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-    spares
-      vdg       AVAIL   
-      vdc       AVAIL   
+zpool<span class="w"> </span>add<span class="w"> </span>tank<span class="w"> </span>spare<span class="w"> </span>vdc<span class="w">    </span><span class="c1"># pongo vdc reparado como spare</span>
+zpool<span class="w"> </span>status
+<span class="w">    </span>NAME<span class="w">        </span>STATE<span class="w">     </span>READ<span class="w"> </span>WRITE<span class="w"> </span>CKSUM
+<span class="w">    </span>tank<span class="w">        </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">      </span>raidz2-0<span class="w">  </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdb<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdf<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdd<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vde<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">    </span>spares
+<span class="w">      </span>vdg<span class="w">       </span>AVAIL<span class="w">   </span>
+<span class="w">      </span>vdc<span class="w">       </span>AVAIL<span class="w">   </span>
 </code></pre></div>
 <h4 id="cambio-de-disco-a-raidz">Cambio de disco a raidz</h4>
 <p>En este ejemplo se muestra el cambio de un disco en un raidz2 sin spare </p>
 <p>Primero de todo simulamos el fallo de un disco poniendolo offline</p>
-<div class="highlight"><pre><span></span><code>zpool offline tank vdd
-zpool status
-    NAME        STATE     READ WRITE CKSUM
-    tank        DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-      raidz2-0  DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdb     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdc     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdd     OFFLINE      <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vde     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdf     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdg     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>offline<span class="w"> </span>tank<span class="w"> </span>vdd
+zpool<span class="w"> </span>status
+<span class="w">    </span>NAME<span class="w">        </span>STATE<span class="w">     </span>READ<span class="w"> </span>WRITE<span class="w"> </span>CKSUM
+<span class="w">    </span>tank<span class="w">        </span>DEGRADED<span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">      </span>raidz2-0<span class="w">  </span>DEGRADED<span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdb<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdc<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdd<span class="w">     </span>OFFLINE<span class="w">      </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vde<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdf<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdg<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
 </code></pre></div>
 <p>En este paso ya podemos desmontar y retirar el disco de la máquina y poner uno nuevo. Una vez insertado el disco nuevo en la máquina con <code>zpool replace</code> lo volvemos a poner online en el pool</p>
-<div class="highlight"><pre><span></span><code>zpool replace tank /dev/vdd
-zpool status
-    NAME        STATE     READ WRITE CKSUM
-    tank        ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-      raidz2-0  ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdb     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdc     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdd     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vde     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdf     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-        vdg     ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>replace<span class="w"> </span>tank<span class="w"> </span>/dev/vdd
+zpool<span class="w"> </span>status
+<span class="w">    </span>NAME<span class="w">        </span>STATE<span class="w">     </span>READ<span class="w"> </span>WRITE<span class="w"> </span>CKSUM
+<span class="w">    </span>tank<span class="w">        </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">      </span>raidz2-0<span class="w">  </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdb<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdc<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdd<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vde<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdf<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">        </span>vdg<span class="w">     </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
 </code></pre></div>
 <h4 id="aumentarreducir-raidz">Aumentar/Reducir raidz</h4>
 <p>Actualmente en la versio de OpenZFS 2.1 no se puede canviar el modo de raidz, aun que anuncian para 3.0 en 2022 esa  funcionalidad.</p>
 <p>De momento solo podemos hacer un snapshot de los datos, destruir el el zpool, crear uno nuevo y volver a volcar el snapshot</p>
-<div class="highlight"><pre><span></span><code>zfs snapshot tank/documents@backup
-zfs send -cpe tank/documents@backup &gt; backup.documnts
+<div class="highlight"><pre><span></span><code>zfs<span class="w"> </span>snapshot<span class="w"> </span>tank/documents@backup
+zfs<span class="w"> </span>send<span class="w"> </span>-cpe<span class="w"> </span>tank/documents@backup<span class="w"> </span>&gt;<span class="w"> </span>backup.documnts
 
-zpool destroy tank
-zpool create -f tank raidz2 /dev/vd<span class="o">[</span>b-g<span class="o">]</span> 
+zpool<span class="w"> </span>destroy<span class="w"> </span>tank
+zpool<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>tank<span class="w"> </span>raidz2<span class="w"> </span>/dev/vd<span class="o">[</span>b-g<span class="o">]</span><span class="w"> </span>
 
-zfs recv tank/documents  &lt; backup.documnts
-zfs list
-NAME             USED  AVAIL     REFER  MOUNTPOINT
-tank             357K  <span class="m">7</span>.42G     <span class="m">44</span>.0K  /tank
-tank/documents  <span class="m">90</span>.9K  <span class="m">7</span>.42G     <span class="m">90</span>.9K  /tank/documents
+zfs<span class="w"> </span>recv<span class="w"> </span>tank/documents<span class="w">  </span>&lt;<span class="w"> </span>backup.documnts
+zfs<span class="w"> </span>list
+NAME<span class="w">             </span>USED<span class="w">  </span>AVAIL<span class="w">     </span>REFER<span class="w">  </span>MOUNTPOINT
+tank<span class="w">             </span>357K<span class="w">  </span><span class="m">7</span>.42G<span class="w">     </span><span class="m">44</span>.0K<span class="w">  </span>/tank
+tank/documents<span class="w">  </span><span class="m">90</span>.9K<span class="w">  </span><span class="m">7</span>.42G<span class="w">     </span><span class="m">90</span>.9K<span class="w">  </span>/tank/documents
 </code></pre></div>
 <h3 id="migracion">Migración</h3>
 <p><a href="https://docs.oracle.com/cd/E19253-01/820-2314/gbchy/index.html">doc oracle</a> sobre esta sección</p>
 <p>La opción export marca los discos como que se esta iniciando una migración y entre otras cosas purga cualquier dato no escrito en el disco ( hace un sync)</p>
-<div class="highlight"><pre><span></span><code>zpool <span class="nb">export</span> tank 
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span><span class="nb">export</span><span class="w"> </span>tank<span class="w"> </span>
 </code></pre></div>
 <blockquote>
 <p>Una vez exportado el pool ya se pueden extraer los discos e llevarlos a otro nas</p>
 </blockquote>
 <p>Para detectar las agrupaciones disponibles, ejecute el comando zpool import sin opciones. Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code>zpool import    <span class="c1"># ver pools disponibles</span>
-zpool import tank   <span class="c1"># importar pool tank (tambien se puede indicar con nel id)</span>
-zpool import tank zelda <span class="c1"># importar renombrando</span>
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>import<span class="w">    </span><span class="c1"># ver pools disponibles</span>
+zpool<span class="w"> </span>import<span class="w"> </span>tank<span class="w">   </span><span class="c1"># importar pool tank (tambien se puede indicar con nel id)</span>
+zpool<span class="w"> </span>import<span class="w"> </span>tank<span class="w"> </span>zelda<span class="w"> </span><span class="c1"># importar renombrando</span>
 
-zfs <span class="nb">set</span> <span class="nv">mountpoint</span><span class="o">=</span>/zelda zelda <span class="c1"># canviar punto de montaje</span>
+zfs<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">mountpoint</span><span class="o">=</span>/zelda<span class="w"> </span>zelda<span class="w"> </span><span class="c1"># canviar punto de montaje</span>
 </code></pre></div>
 <blockquote>
 <p>podrás ver el id de un pool con <code>zpool status</code> o <code>zpool import</code></p>
 </blockquote>
 <h3 id="destruccion">Destrucción</h3>
-<div class="highlight"><pre><span></span><code>zpool destroy dozer <span class="c1"># destruir un pool</span>
-zpool import -D     <span class="c1"># ver pools destridos</span>
-zpool import -Df dozer  <span class="c1"># forzar importción pool dozer</span>
-zpool status -x     <span class="c1"># visualizar pool en mal estado</span>
-  pool: dozer
- state: DEGRADED
-status: One or more devices could not be opened.  Sufficient replicas exist <span class="k">for</span>
-        the pool to <span class="k">continue</span> functioning <span class="k">in</span> a degraded state.
-action: Attach the missing device and online it using <span class="s1">&#39;zpool online&#39;</span>.
-   see: http://www.sun.com/msg/ZFS-8000-2Q
- scrub: scrub completed after 0h0m with <span class="m">0</span> errors on Thu Jan <span class="m">21</span> <span class="m">15</span>:38:48 <span class="m">2010</span>
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>destroy<span class="w"> </span>dozer<span class="w"> </span><span class="c1"># destruir un pool</span>
+zpool<span class="w"> </span>import<span class="w"> </span>-D<span class="w">     </span><span class="c1"># ver pools destridos</span>
+zpool<span class="w"> </span>import<span class="w"> </span>-Df<span class="w"> </span>dozer<span class="w">  </span><span class="c1"># forzar importción pool dozer</span>
+zpool<span class="w"> </span>status<span class="w"> </span>-x<span class="w">     </span><span class="c1"># visualizar pool en mal estado</span>
+<span class="w">  </span>pool:<span class="w"> </span>dozer
+<span class="w"> </span>state:<span class="w"> </span>DEGRADED
+status:<span class="w"> </span>One<span class="w"> </span>or<span class="w"> </span>more<span class="w"> </span>devices<span class="w"> </span>could<span class="w"> </span>not<span class="w"> </span>be<span class="w"> </span>opened.<span class="w">  </span>Sufficient<span class="w"> </span>replicas<span class="w"> </span>exist<span class="w"> </span><span class="k">for</span>
+<span class="w">        </span>the<span class="w"> </span>pool<span class="w"> </span>to<span class="w"> </span><span class="k">continue</span><span class="w"> </span>functioning<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>degraded<span class="w"> </span>state.
+action:<span class="w"> </span>Attach<span class="w"> </span>the<span class="w"> </span>missing<span class="w"> </span>device<span class="w"> </span>and<span class="w"> </span>online<span class="w"> </span>it<span class="w"> </span>using<span class="w"> </span><span class="s1">&#39;zpool online&#39;</span>.
+<span class="w">   </span>see:<span class="w"> </span>http://www.sun.com/msg/ZFS-8000-2Q
+<span class="w"> </span>scrub:<span class="w"> </span>scrub<span class="w"> </span>completed<span class="w"> </span>after<span class="w"> </span>0h0m<span class="w"> </span>with<span class="w"> </span><span class="m">0</span><span class="w"> </span>errors<span class="w"> </span>on<span class="w"> </span>Thu<span class="w"> </span>Jan<span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="m">15</span>:38:48<span class="w"> </span><span class="m">2010</span>
 config:
-        NAME         STATE     READ WRITE CKSUM
-        dozer        DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-          raidz2-0   DEGRADED     <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-            c2t8d0   ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-            c2t9d0   ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-            c2t10d0  ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
-            c2t11d0  UNAVAIL      <span class="m">0</span>    <span class="m">37</span>     <span class="m">0</span>  cannot open
-            c2t12d0  ONLINE       <span class="m">0</span>     <span class="m">0</span>     <span class="m">0</span>
+<span class="w">        </span>NAME<span class="w">         </span>STATE<span class="w">     </span>READ<span class="w"> </span>WRITE<span class="w"> </span>CKSUM
+<span class="w">        </span>dozer<span class="w">        </span>DEGRADED<span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">          </span>raidz2-0<span class="w">   </span>DEGRADED<span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">            </span>c2t8d0<span class="w">   </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">            </span>c2t9d0<span class="w">   </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">            </span>c2t10d0<span class="w">  </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+<span class="w">            </span>c2t11d0<span class="w">  </span>UNAVAIL<span class="w">      </span><span class="m">0</span><span class="w">    </span><span class="m">37</span><span class="w">     </span><span class="m">0</span><span class="w">  </span>cannot<span class="w"> </span>open
+<span class="w">            </span>c2t12d0<span class="w">  </span>ONLINE<span class="w">       </span><span class="m">0</span><span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
 
-errors: No known data errors
+errors:<span class="w"> </span>No<span class="w"> </span>known<span class="w"> </span>data<span class="w"> </span>errors
 
-zpool online dozer c2t11d0  <span class="c1"># reactivar disco </span>
-Bringing device c2t11d0 online
+zpool<span class="w"> </span>online<span class="w"> </span>dozer<span class="w"> </span>c2t11d0<span class="w">  </span><span class="c1"># reactivar disco </span>
+Bringing<span class="w"> </span>device<span class="w"> </span>c2t11d0<span class="w"> </span>online
 
-zpool status -x
-all pools are healthy
+zpool<span class="w"> </span>status<span class="w"> </span>-x
+all<span class="w"> </span>pools<span class="w"> </span>are<span class="w"> </span>healthy
 </code></pre></div>
 <h3 id="anadir-notificaciones-por-e-mail">Añadir notificaciones por e-Mail.</h3>
 <p>Instalamos el servicio que se encargará de monitorizar los eventos  del módulo de kernel ZFS. Este servicio puede enviar emails cuando  ocurran errores en alguna pool.</p>
@@ -3323,69 +5220,69 @@ ZED_EMAIL_ADDR=&quot;avisos@correo.es&quot;
 <p><a href="https://docs.oracle.com/cd/E19253-01/819-5461/gfifk/index.html">doc oracle</a> sobre esta sección</p>
 <p><strong>Definir tamaño de sector</strong></p>
 <p>Para un comportamiento óptimo de la unidad ZFS, el tamaño del sector  de la Pool (ashift), debe ser mayor o igual que el tamaño del sector en  los discos que la componen. Para configurarlo, lo haríamos de la  siguiente forma:</p>
-<div class="highlight"><pre><span></span><code>zpool create -f -o <span class="nv">ashift</span><span class="o">=</span><span class="m">12</span> &lt;NombrePool&gt; &lt;ElRaidQueSea&gt;
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>-o<span class="w"> </span><span class="nv">ashift</span><span class="o">=</span><span class="m">12</span><span class="w"> </span>&lt;NombrePool&gt;<span class="w"> </span>&lt;ElRaidQueSea&gt;
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>zpool create -f -m /tank tank /dev/vdb  <span class="c1"># crear volumenes -f force vdevs</span>
-zpool scrub tank    <span class="c1"># añadir control de fallos al volumen</span>
-zpool <span class="nb">history</span>   <span class="c1"># ver historial de comandos</span>
+<div class="highlight"><pre><span></span><code>zpool<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>-m<span class="w"> </span>/tank<span class="w"> </span>tank<span class="w"> </span>/dev/vdb<span class="w">  </span><span class="c1"># crear volumenes -f force vdevs</span>
+zpool<span class="w"> </span>scrub<span class="w"> </span>tank<span class="w">    </span><span class="c1"># añadir control de fallos al volumen</span>
+zpool<span class="w"> </span><span class="nb">history</span><span class="w">   </span><span class="c1"># ver historial de comandos</span>
 </code></pre></div>
 <h2 id="volumenes">Volumenes</h2>
 <h3 id="crear-volumen">Crear volumen</h3>
-<div class="highlight"><pre><span></span><code>zfs 
-create tank/documents
-zfs destroy tank/documents
+<div class="highlight"><pre><span></span><code>zfs<span class="w"> </span>
+create<span class="w"> </span>tank/documents
+zfs<span class="w"> </span>destroy<span class="w"> </span>tank/documents
 
-zfs create -o <span class="nv">compression</span><span class="o">=</span>on tank/documents 
+zfs<span class="w"> </span>create<span class="w"> </span>-o<span class="w"> </span><span class="nv">compression</span><span class="o">=</span>on<span class="w"> </span>tank/documents<span class="w"> </span>
 </code></pre></div>
 <h3 id="snapshot">Snapshot</h3>
-<div class="highlight"><pre><span></span><code>zfs snapshot tank/documents@backup
-zfs list -t snapshot
-ll /tank/documents/.zfs/snapshot/backup
+<div class="highlight"><pre><span></span><code>zfs<span class="w"> </span>snapshot<span class="w"> </span>tank/documents@backup
+zfs<span class="w"> </span>list<span class="w"> </span>-t<span class="w"> </span>snapshot
+ll<span class="w"> </span>/tank/documents/.zfs/snapshot/backup
 
-zfs rollback tank/documents@backup
-zfs destroy tank/documents@backup
-         -n no-action
-         -v verbose
-         -r recursive <span class="o">(</span>clones...<span class="o">)</span>
+zfs<span class="w"> </span>rollback<span class="w"> </span>tank/documents@backup
+zfs<span class="w"> </span>destroy<span class="w"> </span>tank/documents@backup
+<span class="w">         </span>-n<span class="w"> </span>no-action
+<span class="w">         </span>-v<span class="w"> </span>verbose
+<span class="w">         </span>-r<span class="w"> </span>recursive<span class="w"> </span><span class="o">(</span>clones...<span class="o">)</span>
 </code></pre></div>
 <h4 id="enviar-snapshot">Enviar snapshot</h4>
-<div class="highlight"><pre><span></span><code>zfs send -cpev tank/dana@snap1 <span class="p">|</span> ssh host2 zfs recv newtank/dana    <span class="c1"># enviar snap</span>
+<div class="highlight"><pre><span></span><code>zfs<span class="w"> </span>send<span class="w"> </span>-cpev<span class="w"> </span>tank/dana@snap1<span class="w"> </span><span class="p">|</span><span class="w"> </span>ssh<span class="w"> </span>host2<span class="w"> </span>zfs<span class="w"> </span>recv<span class="w"> </span>newtank/dana<span class="w">    </span><span class="c1"># enviar snap</span>
 <span class="c1"># -c compress</span>
 <span class="c1"># -p  Información verbosa sobre el paquete de transmisión generado. </span>
 <span class="c1"># -e  Generate a more compact stream </span>
 <span class="c1"># -v vervose</span>
 
-zfs send -i tank/dana@snap1 tank/dana@snap2 <span class="p">|</span> ssh host2 zfs recv -F newtank/dana    <span class="c1"># enviar icremental snap</span>
+zfs<span class="w"> </span>send<span class="w"> </span>-i<span class="w"> </span>tank/dana@snap1<span class="w"> </span>tank/dana@snap2<span class="w"> </span><span class="p">|</span><span class="w"> </span>ssh<span class="w"> </span>host2<span class="w"> </span>zfs<span class="w"> </span>recv<span class="w"> </span>-F<span class="w"> </span>newtank/dana<span class="w">    </span><span class="c1"># enviar icremental snap</span>
 <span class="c1"># -F forzar rollback a la instantanea mas reciente antes de recibir</span>
 
 <span class="c1"># enviar datast con todos los snapshots</span>
-zfs send -R tank/dataset@snapMasReciente <span class="p">|</span> ssh &lt;ip&gt; zfs recv tank/dataset
+zfs<span class="w"> </span>send<span class="w"> </span>-R<span class="w"> </span>tank/dataset@snapMasReciente<span class="w"> </span><span class="p">|</span><span class="w"> </span>ssh<span class="w"> </span>&lt;ip&gt;<span class="w"> </span>zfs<span class="w"> </span>recv<span class="w"> </span>tank/dataset
 
 <span class="c1"># si no existe lista snapshots remotos </span>
-zfs send -cpev &lt;dataset@snapshot&gt; <span class="p">|</span> ssh &lt;destino&gt; zfs recv -vsd pool
+zfs<span class="w"> </span>send<span class="w"> </span>-cpev<span class="w"> </span>&lt;dataset@snapshot&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>ssh<span class="w"> </span>&lt;destino&gt;<span class="w"> </span>zfs<span class="w"> </span>recv<span class="w"> </span>-vsd<span class="w"> </span>pool
 
 <span class="c1"># envia un incremental</span>
-zfs send -cpevI &lt;@snapshot&gt; &lt;dataset@snapshot&gt;  <span class="p">|</span> ssh &lt;destino&gt; zfs recv -Fvd pool
+zfs<span class="w"> </span>send<span class="w"> </span>-cpevI<span class="w"> </span>&lt;@snapshot&gt;<span class="w"> </span>&lt;dataset@snapshot&gt;<span class="w">  </span><span class="p">|</span><span class="w"> </span>ssh<span class="w"> </span>&lt;destino&gt;<span class="w"> </span>zfs<span class="w"> </span>recv<span class="w"> </span>-Fvd<span class="w"> </span>pool
 </code></pre></div>
 <p>Opciones mas usadas de send y recieve</p>
-<div class="highlight"><pre><span></span><code>zfs send
-    -p  <span class="c1"># enviar propiedades</span>
-    -v  <span class="c1"># vervose</span>
-    -I  <span class="c1"># enviar todas las instantaneas intermedias entre &quot;snapA&quot; y &quot;snapB&quot;</span>
-    -c  <span class="c1"># comprime el envio</span>
-    -e  <span class="c1"># comprimido optimizado</span>
+<div class="highlight"><pre><span></span><code>zfs<span class="w"> </span>send
+<span class="w">    </span>-p<span class="w">  </span><span class="c1"># enviar propiedades</span>
+<span class="w">    </span>-v<span class="w">  </span><span class="c1"># vervose</span>
+<span class="w">    </span>-I<span class="w">  </span><span class="c1"># enviar todas las instantaneas intermedias entre &quot;snapA&quot; y &quot;snapB&quot;</span>
+<span class="w">    </span>-c<span class="w">  </span><span class="c1"># comprime el envio</span>
+<span class="w">    </span>-e<span class="w">  </span><span class="c1"># comprimido optimizado</span>
 
-zfs recv
-    -v  <span class="c1"># vervose</span>
-    -e  <span class="c1"># Utiliza el ultimo snap (de send) para determinar el nombre de la nueva instantánea</span>
-    -d  <span class="c1"># Utilice todos menos el primer elemento de la ruta de la instantánea enviada </span>
-    -F  <span class="c1"># fuerza rolback en el destino al snap mas reciente</span>
-    -s  <span class="c1"># Si se interrumpe la recepción, guarde el estado de recepción parcial, en lugar de eliminarlo.</span>
+zfs<span class="w"> </span>recv
+<span class="w">    </span>-v<span class="w">  </span><span class="c1"># vervose</span>
+<span class="w">    </span>-e<span class="w">  </span><span class="c1"># Utiliza el ultimo snap (de send) para determinar el nombre de la nueva instantánea</span>
+<span class="w">    </span>-d<span class="w">  </span><span class="c1"># Utilice todos menos el primer elemento de la ruta de la instantánea enviada </span>
+<span class="w">    </span>-F<span class="w">  </span><span class="c1"># fuerza rolback en el destino al snap mas reciente</span>
+<span class="w">    </span>-s<span class="w">  </span><span class="c1"># Si se interrumpe la recepción, guarde el estado de recepción parcial, en lugar de eliminarlo.</span>
 </code></pre></div>
 <h3 id="clones">Clones</h3>
 <p><a href="https://docs.oracle.com/cd/E26921_01/html/E25823/gbcxz.html">doc oracle</a></p>
 <p>Crear un clon partiendo de un snap</p>
-<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="n">zfs</span><span class="w"> </span><span class="n">clone</span><span class="w"> </span><span class="n">tank</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">productA</span><span class="nv">@today</span><span class="w"> </span><span class="n">tank</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">productAbeta</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="n">zfs</span><span class="w"> </span><span class="n">clone</span><span class="w"> </span><span class="n">tank</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">productA</span><span class="nv">@today</span><span class="w"> </span><span class="n">tank</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">productAbeta</span>
 </code></pre></div>
 
 <h4 id="sustitur-clon-por-dataset-original">Sustitur clon por dataset original</h4>
@@ -3403,15 +5300,15 @@ zfs destroy tank/test/productAlegacy
 <h3 id="propiedades">Propiedades</h3>
 <p><a href="https://docs.oracle.com/cd/E19253-01/819-5461/gazss/index.html">doc oracle</a> sobre esta sección</p>
 <p>Se pueden ver todas las propiedades en <code>man zfsprops</code></p>
-<div class="highlight"><pre><span></span><code>zfs get all tank/documents <span class="c1"># ver opciones</span>
+<div class="highlight"><pre><span></span><code>zfs<span class="w"> </span>get<span class="w"> </span>all<span class="w"> </span>tank/documents<span class="w"> </span><span class="c1"># ver opciones</span>
 
-zfs <span class="nb">set</span> <span class="nv">compression</span><span class="o">=</span>on tank/documents
-zfs <span class="nb">set</span> <span class="nv">atime</span><span class="o">=</span>off  <span class="c1"># Controla si el tiempo de acceso a los archivos se actualiza cuando se leen</span>
-zfs <span class="nb">set</span> <span class="nv">atime</span><span class="o">=</span>off <span class="nv">relatime</span><span class="o">=</span>on zelda
+zfs<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">compression</span><span class="o">=</span>on<span class="w"> </span>tank/documents
+zfs<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">atime</span><span class="o">=</span>off<span class="w">  </span><span class="c1"># Controla si el tiempo de acceso a los archivos se actualiza cuando se leen</span>
+zfs<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">atime</span><span class="o">=</span>off<span class="w"> </span><span class="nv">relatime</span><span class="o">=</span>on<span class="w"> </span>zelda
 </code></pre></div>
 <p>Una vez creada la unidad ZFS, es posible usar compresión en este almacenamiento</p>
-<div class="highlight"><pre><span></span><code>zfs <span class="nb">set</span> <span class="nv">compression</span><span class="o">=</span>lz4 &lt;NombrePool&gt;
-zfs <span class="nb">set</span> <span class="nv">compression</span><span class="o">=</span>off &lt;NombrePool&gt;
+<div class="highlight"><pre><span></span><code>zfs<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">compression</span><span class="o">=</span>lz4<span class="w"> </span>&lt;NombrePool&gt;
+zfs<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">compression</span><span class="o">=</span>off<span class="w"> </span>&lt;NombrePool&gt;
 </code></pre></div>
 <blockquote>
 <p>Se recomienda usar el algoritmo lz4, ya que agrega muy poca sobrecarga de CPU. También están disponibles otros algoritmos como lzjb y gzip-N, donde N es un  número entero de 1 (más rápido) a 9 (mejor relación de compresión).  Dependiendo del algoritmo y de la compresión de los datos, tener la  compresión habilitada puede incluso aumentar el rendimiento.</p>
@@ -3419,14 +5316,14 @@ zfs <span class="nb">set</span> <span class="nv">compression</span><span class="
 <h4 id="comprimir-dataset-existente">Comprimir dataset existente</h4>
 <p>En el caso de tener un dataset sin compresión activada y activarla, los archivos existentes no se comprimen, solo los nuevos. En este caso hay que sobresscribir todo el dataset.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># activar compresion</span>
-zfs <span class="nb">set</span> <span class="nv">compress</span><span class="o">=</span>on tank/dataset
+zfs<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">compress</span><span class="o">=</span>on<span class="w"> </span>tank/dataset
 
 <span class="c1"># replicar dataset</span>
-zfs send -R tank/dataset <span class="p">|</span> zfs recv tank/newDataset
+zfs<span class="w"> </span>send<span class="w"> </span>-R<span class="w"> </span>tank/dataset<span class="w"> </span><span class="p">|</span><span class="w"> </span>zfs<span class="w"> </span>recv<span class="w"> </span>tank/newDataset
 
 <span class="c1"># eliminar el antiguo y renombrar</span>
-zfs destroy -r tank/dataset
-zfs rename tank/newDataset tank/dataset
+zfs<span class="w"> </span>destroy<span class="w"> </span>-r<span class="w"> </span>tank/dataset
+zfs<span class="w"> </span>rename<span class="w"> </span>tank/newDataset<span class="w"> </span>tank/dataset
 </code></pre></div>
 
               
@@ -3493,10 +5390,10 @@ zfs rename tank/newDataset tank/dataset
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ff0eccb3.min.js"></script>
+      <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>
       
     
   </body>

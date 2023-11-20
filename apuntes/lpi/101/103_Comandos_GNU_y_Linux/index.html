@@ -1,0 +1,5862 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Jorge Pastor">
+      
+      
+        <link rel="canonical" href="https://jorgepastorr.github.io/apuntes/lpi/101/103_Comandos_GNU_y_Linux/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>103 Comandos GNU y Linux - Apuntes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#103-comandos-gnu-y-linux" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Apuntes" class="md-header__button md-logo" aria-label="Apuntes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              103 Comandos GNU y Linux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Apuntes" class="md-nav__button md-logo" aria-label="Apuntes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Apuntes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jorgepastorr/apuntes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Apuntes Jorgepastorr
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Administracion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Administracion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Administracion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Configurar_pantallas_manualmente/" class="md-nav__link">
+        Configurar pantallas manualmente
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Debian_hostname_dinamico/" class="md-nav__link">
+        Debian hostname dinamico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Mutt/" class="md-nav__link">
+        Que es mutt?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Procesos/" class="md-nav__link">
+        Procesos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Resetear_la_password_root/" class="md-nav__link">
+        Resetear la password root.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/Vim/" class="md-nav__link">
+        Vim atajos básicos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/awk/" class="md-nav__link">
+        Uso básico de AWK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/freeipa/" class="md-nav__link">
+        FreeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/instalar_webmin/" class="md-nav__link">
+        instalar webmin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/per/" class="md-nav__link">
+        PER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/permisos_avanzados/" class="md-nav__link">
+        Permisos avanzados
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/samba/" class="md-nav__link">
+        Samba
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/server-correo/" class="md-nav__link">
+        Servidor Correo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/server-mensajeria/" class="md-nav__link">
+        Server mensajeria instantanea
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ssh/" class="md-nav__link">
+        ssh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/sudo/" class="md-nav__link">
+        sudo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/umask/" class="md-nav__link">
+        umask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/usuarios/" class="md-nav__link">
+        Usuarios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/vnc/" class="md-nav__link">
+        vnc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/webdav/" class="md-nav__link">
+        webdav
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_21" type="checkbox" id="__nav_2_21" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_21">
+          Ldap
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ldap" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_21">
+          <span class="md-nav__icon md-icon"></span>
+          Ldap
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/Ldap-Samba-Hostpam/" class="md-nav__link">
+        Ldap - Samba - Hostpam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/acl_ejercicios/" class="md-nav__link">
+        Acl ejercicios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/host-kerberos-con-ldap/" class="md-nav__link">
+        Instalación host  ldap-kerberos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/ldap/ldap/" class="md-nav__link">
+        ldap
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_22" type="checkbox" id="__nav_2_22" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_22">
+          Pxe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pxe" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_22">
+          <span class="md-nav__icon md-icon"></span>
+          Pxe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/pxe/Servidor-pxe-con-rapberry/" class="md-nav__link">
+        Servidor pxe con rapberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/pxe/guiapxe-fedora/" class="md-nav__link">
+        Guiapxe fedora
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_23" type="checkbox" id="__nav_2_23" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_23">
+          Redes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Redes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_23">
+          <span class="md-nav__icon md-icon"></span>
+          Redes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/apuntes-xarxa/" class="md-nav__link">
+        APUNTS DE XARXES
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/comandos_router_switch/" class="md-nav__link">
+        Configuració de Routers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administracion/redes/redes2/" class="md-nav__link">
+        Redes2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Auditoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Auditoria" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Auditoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../auditoria/apuntes_hacking/" class="md-nav__link">
+        Haking ético
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Bases datos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bases datos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Bases datos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Mongo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mongo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Mongo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/mongo/Mongo/" class="md-nav__link">
+        Mongo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Postgres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Postgres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Postgres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/bases/" class="md-nav__link">
+        Postgres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/modificaciones/" class="md-nav__link">
+        Modificación tablas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/plpgsql/" class="md-nav__link">
+        Plpgsql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bases_datos/postgres/postgresql-intalacion/" class="md-nav__link">
+        Postgresql intalacion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Ccna
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ccna" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ccna
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/ordenes/" class="md-nav__link">
+        ordenes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          1 IntroducciónRedes(ITN)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1 IntroducciónRedes(ITN)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          1 IntroducciónRedes(ITN)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/01-LasRedesEnLaActualidad/" class="md-nav__link">
+        01 LasRedesEnLaActualidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/02-ConfiguracionBasicaDelSwitchYdisp/" class="md-nav__link">
+        Configuración básica del Switch y dispositivo final
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/03-ProtocolosYmodelos/" class="md-nav__link">
+        Protocolos y modelos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/04-CapaFisica/" class="md-nav__link">
+        Capa Física
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/05-SistemasDeNumeracion/" class="md-nav__link">
+        Sistemas de numeración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/06-CapaDeEnlaceDeDatos/" class="md-nav__link">
+        Capa de enlace de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/07-ConmutacionEthernet/" class="md-nav__link">
+        Conmutación Ethernet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/08-CapaDeRed/" class="md-nav__link">
+        Capa de Red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/09-Resoluci%C3%B3nDeDireccion/" class="md-nav__link">
+        Resolución de dirección
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/10-ConfiguracionBasicaDelRouter/" class="md-nav__link">
+        Configuración básica del router
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/11-DireccionamientoIPv4/" class="md-nav__link">
+        Direccionamiento IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/12-DireccionamientoIPv6/" class="md-nav__link">
+        Direccionamiento IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/13-ICMP/" class="md-nav__link">
+        ICMP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/14-CapaDeTransporte/" class="md-nav__link">
+        Capa de transporte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/15-CapaDeAplicacion/" class="md-nav__link">
+        Capa de aplicación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/16-FundamentosDeSeguridadDeRed/" class="md-nav__link">
+        Fundamentos de seguridad de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/17-ConstruirUnaRedPeque%C3%B1a/" class="md-nav__link">
+        Construir una red pequeña
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/ipv6/" class="md-nav__link">
+        IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/minicom/" class="md-nav__link">
+        Minicom
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          2 Switching Routing And WirelessEssentials(SRWE)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2 Switching Routing And WirelessEssentials(SRWE)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          2 Switching Routing And WirelessEssentials(SRWE)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/01-ConfiguracionBasicaDelDispositivo/" class="md-nav__link">
+        Configuración básica del dispositivo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/03-VLAN/" class="md-nav__link">
+        VLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/04-Inter-VLAN-Routing/" class="md-nav__link">
+        Inter-VLAN Routing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/05-ConceptosSTP/" class="md-nav__link">
+        Conceptos STP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/06-EtherChannel/" class="md-nav__link">
+        EtherChannel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/07-DHCPv4/" class="md-nav__link">
+        DHCPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/08-SLAACyDHCPv6/" class="md-nav__link">
+        SLAAC y DHCPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/09-ConceptosdeFHRP/" class="md-nav__link">
+        Conceptos de FHRP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/10-ConceptosSeguridadLAN/" class="md-nav__link">
+        Conceptos de seguridad LAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/11-ConfiguracionSeguridadSwitch/" class="md-nav__link">
+        Configuración de seguridad en el Switch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/12-ConceptosWLAN/" class="md-nav__link">
+        Conceptos de WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/13-ConfiguracionesRedesInal%C3%A1mbricasWLAN/" class="md-nav__link">
+        Configuraciones de redes inalámbricas WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/14-ConceptosEnrutamiento/" class="md-nav__link">
+        Conceptos de enrutamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/15-EnrutamientoIPEstatico/" class="md-nav__link">
+        Enrutamiento IP Estático
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          3 Enterprise Networking Security AndAutomation ENSA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3 Enterprise Networking Security AndAutomation ENSA" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          3 Enterprise Networking Security AndAutomation ENSA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/01-ConceptosOSPFv2DeAreaUnica/" class="md-nav__link">
+        Conceptos de OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/02-ConfiguracionOSPFv2AreaUnica/" class="md-nav__link">
+        Configuración OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/03-ConceptosSeguridadRedes/" class="md-nav__link">
+        Conceptos de Seguridad en Redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/04-ACL/" class="md-nav__link">
+        ACL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/05-ACLconfiguracionIPv4/" class="md-nav__link">
+        ACL para configuración IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/06-NAT-IPv4/" class="md-nav__link">
+        NAT para IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/07-conceptosWAN/" class="md-nav__link">
+        Conceptos WAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/08-ConceptosVPNeIPsec/" class="md-nav__link">
+        Conceptos de VPN e IPsec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/09-ConceptosQoS/" class="md-nav__link">
+        Conceptos de QoS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/10-AdministracionDeRedes/" class="md-nav__link">
+        Administración de redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/11-Dise%C3%B1oDeRedes/" class="md-nav__link">
+        Diseño de redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/12-ResolucionDeProblemasDeRed/" class="md-nav__link">
+        Resolución de problemas de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/13-VirtualizacionDeRed/" class="md-nav__link">
+        Virtualización de Red
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cloud" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cloud/aws/" class="md-nav__link">
+        aws
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Curiosidades
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Curiosidades" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Curiosidades
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/Eliminar_contrase%C3%B1a_windows/" class="md-nav__link">
+        Eliminar contraseña windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/Lanzador_aplicaciones_en_gnome/" class="md-nav__link">
+        Lanzador aplicaciones en gnome
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/cambiar_color_promp_terminal/" class="md-nav__link">
+        Cambiar color promp terminal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/conky/" class="md-nav__link">
+        conky
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/openbox/" class="md-nav__link">
+        Openbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/qbit/" class="md-nav__link">
+        Qbit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../curiosidades/tmux/" class="md-nav__link">
+        Tmux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Desatendidas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Desatendidas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Desatendidas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/" class="md-nav__link">
+        Desatendidas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/Instalacion-desatendida-debian/" class="md-nav__link">
+        Instalacion desatendida debian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/desatendida-windows/" class="md-nav__link">
+        Desatendida windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../desatendidas/kikstart/" class="md-nav__link">
+        Kikstart
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Generar doc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Generar doc" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Generar doc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generar_doc/docsify/" class="md-nav__link">
+        Docsify
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generar_doc/remark/" class="md-nav__link">
+        Remark
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Lenguajes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lenguajes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Lenguajes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/Fundamentos_php/" class="md-nav__link">
+        Fundamentos php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/Shell/" class="md-nav__link">
+        Shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_3">
+          Python3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python3" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_3">
+          <span class="md-nav__icon md-icon"></span>
+          Python3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/Apuntes-Metodos/" class="md-nav__link">
+        Métodos de colecciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-Funcionalidades_avanzadas/" class="md-nav__link">
+        apuntes Funcionalidades avanzadas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-Herencia/" class="md-nav__link">
+        Herencias
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-distribucion/" class="md-nav__link">
+        Distribución
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-documentacion/" class="md-nav__link">
+        Documentación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-ficheros/" class="md-nav__link">
+        Apuntes ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-modulos/" class="md-nav__link">
+        Módulos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-orientado-objetos/" class="md-nav__link">
+        Orientado a objetos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-test/" class="md-nav__link">
+        Test
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes-tkinter/" class="md-nav__link">
+        Tkinter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/apuntes_bases/" class="md-nav__link">
+        Apuntes bases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/argparse/" class="md-nav__link">
+        Argparse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_13" type="checkbox" id="__nav_10_3_13" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_3_13">
+          Fundamentos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fundamentos" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_3_13">
+          <span class="md-nav__icon md-icon"></span>
+          Fundamentos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/excepciones/" class="md-nav__link">
+        Las excepciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/funciones/" class="md-nav__link">
+        Funciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/fundamento/" class="md-nav__link">
+        Fundamentos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/manejo_de_datos/" class="md-nav__link">
+        Manejo de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lenguajes/python3/fundamentos/salida_por_pantalla/" class="md-nav__link">
+        Salida por pantalla
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Lpi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lpi" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Lpi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1">
+          101
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="101" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          101
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../101_Arquitectura_del_sistema/" class="md-nav__link">
+        101 Arquitectura del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../102_Instalacion_de_Linux_y_gestion_de_paquetes/" class="md-nav__link">
+        102 Instalación de Linux y gestión de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          103 Comandos GNU y Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        103 Comandos GNU y Linux
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entorno-de-ejecucion-en-bash" class="md-nav__link">
+    Entorno de ejecucion en bash
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procesar-secuencias-texto-usando-filtros" class="md-nav__link">
+    Procesar secuencias texto usando filtros
+  </a>
+  
+    <nav class="md-nav" aria-label="Procesar secuencias texto usando filtros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cut" class="md-nav__link">
+    cut
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wc" class="md-nav__link">
+    wc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rev" class="md-nav__link">
+    rev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr" class="md-nav__link">
+    tr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nl" class="md-nav__link">
+    nl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#od" class="md-nav__link">
+    od
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split" class="md-nav__link">
+    split
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paste" class="md-nav__link">
+    paste
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cat" class="md-nav__link">
+    cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checksum" class="md-nav__link">
+    checksum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#administracion-basica-de-archivos" class="md-nav__link">
+    Administración básica de archivos
+  </a>
+  
+    <nav class="md-nav" aria-label="Administración básica de archivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tar" class="md-nav__link">
+    tar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpio" class="md-nav__link">
+    cpio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dd" class="md-nav__link">
+    dd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprimir" class="md-nav__link">
+    comprimir
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-secuencias-de-texto-tuberias-y-redireccionamiento" class="md-nav__link">
+    Uso secuencias de texto, tuberias y redireccionamiento
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso secuencias de texto, tuberias y redireccionamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redireccion" class="md-nav__link">
+    redireccion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuberias" class="md-nav__link">
+    tuberias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tee" class="md-nav__link">
+    tee
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xargs" class="md-nav__link">
+    xargs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-supervisar-y-matar-procesos" class="md-nav__link">
+    Crear, supervisar y matar procesos
+  </a>
+  
+    <nav class="md-nav" aria-label="Crear, supervisar y matar procesos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matar-procesos" class="md-nav__link">
+    Matar procesos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procesos-en-segundo-plano" class="md-nav__link">
+    Procesos en segundo plano
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proceso-desasociado" class="md-nav__link">
+    Proceso desasociado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prioridades" class="md-nav__link">
+    Prioridades
+  </a>
+  
+    <nav class="md-nav" aria-label="Prioridades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#niceness-de-procesos" class="md-nav__link">
+    Niceness de Procesos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expresiones-regulares" class="md-nav__link">
+    Expresiones regulares
+  </a>
+  
+    <nav class="md-nav" aria-label="Expresiones regulares">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grep" class="md-nav__link">
+    grep
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sed" class="md-nav__link">
+    sed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminales-multiplexores" class="md-nav__link">
+    Terminales multiplexores
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminales multiplexores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screnn" class="md-nav__link">
+    screnn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmux" class="md-nav__link">
+    tmux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104_Dispositivos_sistema_de_archivos_y_estandar_jerarquia_de_archivos/" class="md-nav__link">
+        104 Dispositivos, sistema de archivos Linux y el estándar de jerarquia de archivos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" type="checkbox" id="__nav_11_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_2">
+          102
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="102" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          102
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/105.2_Scripting/" class="md-nav__link">
+        105.2 Scripting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/105_Shells/" class="md-nav__link">
+        105 Shells
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/106_Interfaces_de_usuario_y_escritorio/" class="md-nav__link">
+        106 Interfaces de usuario y escritorio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/107_tareas_de_administracion/" class="md-nav__link">
+        107 tareas de administración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/108_Servicios_esenciales_del_sistema/" class="md-nav__link">
+        108 Servicios esenciales del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/108_rsyslog_server/" class="md-nav__link">
+        rsyslog server central
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/109_Fundamentos_de_red/" class="md-nav__link">
+        109 Fundamentos de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102/110_Seguridad/" class="md-nav__link">
+        110 Seguridad
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_3" type="checkbox" id="__nav_11_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_3">
+          201
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="201" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_3">
+          <span class="md-nav__icon md-icon"></span>
+          201
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../201/200_Planificaci%C3%B3n_de_la_capacidad/" class="md-nav__link">
+        200 Planificación de la capacidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../201/201_Kernel_Linux/" class="md-nav__link">
+        201 Kernel Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../201/202_Arranque_del%20_Sistema/" class="md-nav__link">
+        202 Arranque del  Sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../201/203_sistemas_de_archivos_y_dispositivos/" class="md-nav__link">
+        203 sistemas de archivos y dispositivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../201/204_Administracion_avanzada_de_dispositivos_de_almacenamiento/" class="md-nav__link">
+        204 Administración avanzada de dispositivos de almacenamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../201/205_configuracion_de_red/" class="md-nav__link">
+        205 configuración de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../201/206_Mantenimiento_del_sistema/" class="md-nav__link">
+        206 Mantenimiento del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../201/Exam_201_Detailed_Objectives/" class="md-nav__link">
+        Exam 201: Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4">
+          202
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="202" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          202
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/207_Servidor_de_nombres_de_dominio/" class="md-nav__link">
+        207 Servidor de nombres de dominio (DNS)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/208.4_servicios_web_nginx/" class="md-nav__link">
+        208 servicios web nginx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/208_servicios_web/" class="md-nav__link">
+        208 servicios web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/209_compartir_ficheros/" class="md-nav__link">
+        209 compartir ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/210_gestion_de_clientes_de_red/" class="md-nav__link">
+        210 gestión de clientes de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/211_Servicios_E-Mail/" class="md-nav__link">
+        211 Servicios de E-Mail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/212_Seguridad_del_sistema/" class="md-nav__link">
+        212 Seguridad del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../202/Exam_202_Detailed_Objectives/" class="md-nav__link">
+        Exam 202 Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_5" type="checkbox" id="__nav_11_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_5">
+          303
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="303" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_5">
+          <span class="md-nav__icon md-icon"></span>
+          303
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/331.3_Encrypted_File_Systems/" class="md-nav__link">
+        Topic 331: Cryptography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/332.3_Resource_Control/" class="md-nav__link">
+        Topic 332: Host Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/333.1_Discretionary_Access_Control/" class="md-nav__link">
+        333.1 Discretionary Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/333.2_Mandatory_Access_Control/" class="md-nav__link">
+        333.2 Mandatory Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/334.3.2_Packet_Filtering/" class="md-nav__link">
+        Firewalld
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/334.3_Packet_Filtering/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/extra/" class="md-nav__link">
+        Extra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/freeIpa/" class="md-nav__link">
+        freeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/nose/" class="md-nav__link">
+        Nose
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/objetivos/" class="md-nav__link">
+        Objetivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../303/pendiente/" class="md-nav__link">
+        Pendiente
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_6" type="checkbox" id="__nav_11_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_6">
+          304
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="304" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_6">
+          <span class="md-nav__icon md-icon"></span>
+          304
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../304/ClusterPacemakerDRBD/" class="md-nav__link">
+        Cluster Pacemaker DRBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../304/Clusterfs/" class="md-nav__link">
+        Clusterfs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../304/Haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../304/Montaje%20isard-nas1%20y%20isard-nas2/" class="md-nav__link">
+        Montaje isard-nas1 y isard-nas2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../304/cluster_basico/" class="md-nav__link">
+        Cluster en centos con pacemaker/corosync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../304/clvm_gfs2_en_clusterPacemaker/" class="md-nav__link">
+        clvm gfs2 en clusterPacemaker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../304/haproxy_pacemaker/" class="md-nav__link">
+        Haproxy pacemaker
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_7" type="checkbox" id="__nav_11_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_7">
+          305
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="305" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_7">
+          <span class="md-nav__icon md-icon"></span>
+          305
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/351.1VirtualizationConceptsandTheory/" class="md-nav__link">
+        351.1 Virtualization Concepts and Theory (weight: 6)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/351.2Xen/" class="md-nav__link">
+        351.2 Xen (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/351.3Qemu/" class="md-nav__link">
+        351.3 QEMU (weight: 4)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/351.4LibvirtVirtualMachineManageme/" class="md-nav__link">
+        351.4 Libvirt Virtual Machine Management (weight: 9)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/351.5VirtualMachineDiskImageManagem/" class="md-nav__link">
+        351.5 Virtual Machine Disk Image Management (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/352.1ContainerVirtualizationConcepts/" class="md-nav__link">
+        352.1 Container Virtualization Concepts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/352.3Docker/" class="md-nav__link">
+        352.3 Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/352.4ContainerOrchestrationPlatforms/" class="md-nav__link">
+        352.4ContainerOrchestrationPlatforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/352LXC/" class="md-nav__link">
+        352.2 LXC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/353.1CloudManagementTools/" class="md-nav__link">
+        353.1 Cloud Management Tools (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/353.2Packer/" class="md-nav__link">
+        353.2 Packer (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/353.3cloud-init/" class="md-nav__link">
+        353.3 cloud-init (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../305/353.4Vagrant/" class="md-nav__link">
+        353.4 Vagrant (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          Seguridad
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seguridad" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Seguridad
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/Certificados-Digitales/" class="md-nav__link">
+        Certificados Digitales
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/Kerberos/" class="md-nav__link">
+        Kerberos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/OpenVpn/" class="md-nav__link">
+        OpenVpn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/The-crazy-thing/" class="md-nav__link">
+        The crazy thing!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/TunelSSH/" class="md-nav__link">
+        Tunel SSH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/lvm/" class="md-nav__link">
+        Lvm logical volum manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/practica-ssl-tls/" class="md-nav__link">
+        Practica ssl tls
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_10" type="checkbox" id="__nav_12_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_10">
+          Backups
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Backups" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_10">
+          <span class="md-nav__icon md-icon"></span>
+          Backups
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/Borg_basico/" class="md-nav__link">
+        Borg básico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/Tar/" class="md-nav__link">
+        Tar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/rdiff-backup/" class="md-nav__link">
+        rdiff-backup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/backups/rsync/" class="md-nav__link">
+        rsync
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_11" type="checkbox" id="__nav_12_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_11">
+          Cortafuegos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cortafuegos" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_11">
+          <span class="md-nav__icon md-icon"></span>
+          Cortafuegos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seguridad/cortafuegos/Iptables/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Sistemas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sistemas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Sistemas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Actualizar_hora_sys_o_bios/" class="md-nav__link">
+        Gestionar Hora
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Arranque-del-sistema/" class="md-nav__link">
+        Arranque del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Estructura_de_directorios/" class="md-nav__link">
+        Estructura de directorios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Logs/" class="md-nav__link">
+        Logs del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/Systemd/" class="md-nav__link">
+        Systemd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/ZFS/" class="md-nav__link">
+        ZFS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/chroot/" class="md-nav__link">
+        Chroot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/disco/" class="md-nav__link">
+        Disco
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/gestores_de_paquetes/" class="md-nav__link">
+        Gestores de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/getenforce/" class="md-nav__link">
+        getenforce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/grub/" class="md-nav__link">
+        Grub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/home/" class="md-nav__link">
+        Cambiar /home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/ip_est%C3%A1tica/" class="md-nav__link">
+        ip estática raspberry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/pam/" class="md-nav__link">
+        Pam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/raid/" class="md-nav__link">
+        Raid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/xinetd/" class="md-nav__link">
+        xinetd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_17" type="checkbox" id="__nav_13_17" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13_17">
+          Automatizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Automatizacion" data-md-level="2">
+        <label class="md-nav__title" for="__nav_13_17">
+          <span class="md-nav__icon md-icon"></span>
+          Automatizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/automatizacion/ansible/" class="md-nav__link">
+        Ansible
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sistemas/automatizacion/tareas_programadas/" class="md-nav__link">
+        Tareas Programadas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Virtualizacion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virtualizacion" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Virtualizacion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/Docker-basico/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/Lxc/" class="md-nav__link">
+        LXC y LXD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/Vagrant/" class="md-nav__link">
+        Vagrant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/kubernetes/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/swarm/" class="md-nav__link">
+        Swarm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_6" type="checkbox" id="__nav_14_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14_6">
+          Virt manager
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virt manager" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_6">
+          <span class="md-nav__icon md-icon"></span>
+          Virt manager
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/Backing_chain/" class="md-nav__link">
+        Backing_chain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/Clonar/" class="md-nav__link">
+        Clonar de virtual a físico y de físico a virtual.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/Instalacion_de_virtualizacion_fedora/" class="md-nav__link">
+        Instalación de virtualización fedora
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/acceder_consola_desde_virsh/" class="md-nav__link">
+        acceder consola desde virsh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/crear_red_aislada/" class="md-nav__link">
+        Crear red aislada
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtualizacion/virt-manager/instalar_maquina_virtual_virt-install/" class="md-nav__link">
+        virt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entorno-de-ejecucion-en-bash" class="md-nav__link">
+    Entorno de ejecucion en bash
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procesar-secuencias-texto-usando-filtros" class="md-nav__link">
+    Procesar secuencias texto usando filtros
+  </a>
+  
+    <nav class="md-nav" aria-label="Procesar secuencias texto usando filtros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cut" class="md-nav__link">
+    cut
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wc" class="md-nav__link">
+    wc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rev" class="md-nav__link">
+    rev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tr" class="md-nav__link">
+    tr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nl" class="md-nav__link">
+    nl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#od" class="md-nav__link">
+    od
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split" class="md-nav__link">
+    split
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paste" class="md-nav__link">
+    paste
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cat" class="md-nav__link">
+    cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checksum" class="md-nav__link">
+    checksum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#administracion-basica-de-archivos" class="md-nav__link">
+    Administración básica de archivos
+  </a>
+  
+    <nav class="md-nav" aria-label="Administración básica de archivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tar" class="md-nav__link">
+    tar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpio" class="md-nav__link">
+    cpio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dd" class="md-nav__link">
+    dd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprimir" class="md-nav__link">
+    comprimir
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-secuencias-de-texto-tuberias-y-redireccionamiento" class="md-nav__link">
+    Uso secuencias de texto, tuberias y redireccionamiento
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso secuencias de texto, tuberias y redireccionamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redireccion" class="md-nav__link">
+    redireccion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuberias" class="md-nav__link">
+    tuberias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tee" class="md-nav__link">
+    tee
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xargs" class="md-nav__link">
+    xargs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-supervisar-y-matar-procesos" class="md-nav__link">
+    Crear, supervisar y matar procesos
+  </a>
+  
+    <nav class="md-nav" aria-label="Crear, supervisar y matar procesos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matar-procesos" class="md-nav__link">
+    Matar procesos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procesos-en-segundo-plano" class="md-nav__link">
+    Procesos en segundo plano
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proceso-desasociado" class="md-nav__link">
+    Proceso desasociado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prioridades" class="md-nav__link">
+    Prioridades
+  </a>
+  
+    <nav class="md-nav" aria-label="Prioridades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#niceness-de-procesos" class="md-nav__link">
+    Niceness de Procesos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expresiones-regulares" class="md-nav__link">
+    Expresiones regulares
+  </a>
+  
+    <nav class="md-nav" aria-label="Expresiones regulares">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grep" class="md-nav__link">
+    grep
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sed" class="md-nav__link">
+    sed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminales-multiplexores" class="md-nav__link">
+    Terminales multiplexores
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminales multiplexores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screnn" class="md-nav__link">
+    screnn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmux" class="md-nav__link">
+    tmux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/jorgepastorr/apuntes/edit/master/docs/lpi/101/103_Comandos_GNU_y_Linux.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<h1 id="103-comandos-gnu-y-linux">103 Comandos GNU y Linux</h1>
+<h2 id="entorno-de-ejecucion-en-bash">Entorno de ejecucion en bash</h2>
+<p><code>set</code> muestra o modifica la configuración de nuestro entorno. Sin parametros visualiza variables del sistema y con <code>-o</code> una lista de las opciones y sus estados. </p>
+<p><code>export</code> crea o modifica variables de entorno <code>export NOMBRE=jorge</code></p>
+<p><code>unset</code> Elimina una variable del entorno <code>unset NOMBRE</code></p>
+<p><code>env</code> Sin parametros muestra variables de entorno. Lo podemos usar para  ejecutar un comando modificando el valor de variables de entorno <code>env PATH=/new/path /bin/bash</code></p>
+<div class="highlight"><pre><span></span><code><span class="nb">set</span><span class="w"> </span>-o<span class="w">  </span><span class="c1"># mostrar estado de las opciones</span>
+<span class="nb">set</span><span class="w"> </span>+o<span class="w"> </span><span class="nb">history</span><span class="w">  </span><span class="c1"># desactivar historial</span>
+<span class="nb">set</span><span class="w"> </span>-o<span class="w"> </span><span class="nb">history</span><span class="w">  </span><span class="c1"># activar historial</span>
+</code></pre></div>
+<h2 id="procesar-secuencias-texto-usando-filtros">Procesar secuencias texto usando filtros</h2>
+<h3 id="cut">cut</h3>
+<p><strong>Cut</strong> muestra sólo una parte de cada linea. hace un corte en vertical</p>
+<p><code>-c</code> recorta teniendo en cuenta caracteres y <code>-f</code> tiene en cuenta columnas , por defecto cut delimita ppor tabuladores pero con <code>-d</code> se puede modificar</p>
+<div class="highlight"><pre><span></span><code>cut<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span>,2<span class="w"> </span>/etc/passwd<span class="w"> </span><span class="c1"># muestra el caracter 1 y 2 de todas las lineas</span>
+cut<span class="w"> </span>-c<span class="w"> </span>-3<span class="w"> </span>/etc/passwd<span class="w">   </span><span class="c1"># mestra del  primer caracter al tercero</span>
+cut<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span>-<span class="w"> </span>/etc/passwd<span class="w">   </span><span class="c1"># mestra del segundo al final de linea</span>
+cut<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span>-4<span class="w"> </span>/etc/passwd<span class="w">  </span><span class="c1"># muestra del segundo al cuarto caracter</span>
+
+<span class="c1"># muestra fila 1 y 2 delimitando las filas por :</span>
+cut<span class="w"> </span>-d<span class="s2">&quot;:&quot;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">1</span>,2
+</code></pre></div>
+<h3 id="wc">wc</h3>
+<p>wc cuenta lineas, bytes, caracteres y palabras</p>
+<div class="highlight"><pre><span></span><code>➜<span class="w"> </span>wc<span class="w"> </span>/etc/passwd
+<span class="w">  </span><span class="m">57</span><span class="w">   </span><span class="m">87</span><span class="w"> </span><span class="m">3133</span><span class="w"> </span>/etc/passwd
+
+➜<span class="w"> </span>wc<span class="w"> </span>-l<span class="w"> </span>/etc/passwd
+<span class="m">57</span><span class="w"> </span>/etc/passwd
+
+➜<span class="w"> </span>wc<span class="w"> </span>-m<span class="w"> </span>/etc/passwd
+<span class="m">3133</span><span class="w"> </span>/etc/passwd
+
+➜<span class="w"> </span>wc<span class="w"> </span>-w<span class="w"> </span>/etc/passwd
+<span class="m">87</span><span class="w"> </span>/etc/passwd
+
+➜<span class="w"> </span>wc<span class="w"> </span>-
+--bytes<span class="w">            </span>-c<span class="w">  </span>--<span class="w"> </span>print<span class="w"> </span>byte<span class="w"> </span>counts<span class="w">             </span>
+--chars<span class="w">            </span>-m<span class="w">  </span>--<span class="w"> </span>print<span class="w"> </span>character<span class="w"> </span>counts<span class="w">        </span>
+--lines<span class="w">            </span>-l<span class="w">  </span>--<span class="w"> </span>print<span class="w"> </span>line<span class="w"> </span>counts
+--max-line-length<span class="w">  </span>-L<span class="w">  </span>--<span class="w"> </span>print<span class="w"> </span>longest<span class="w"> </span>line<span class="w"> </span>lengths
+--words<span class="w">            </span>-w<span class="w">  </span>--<span class="w"> </span>print<span class="w"> </span>word<span class="w"> </span>counts<span class="w">           </span>
+</code></pre></div>
+<h3 id="rev">rev</h3>
+<p>rev invierte las lineas de caracteres</p>
+<div class="highlight"><pre><span></span><code>➜<span class="w"> </span>cat<span class="w"> </span>pr_rev<span class="w"> </span>
+/share/doc/mydoc
+/doc/otherdoc
+/usr/share/doc/masdoc
+
+➜<span class="w"> </span>rev<span class="w"> </span>pr_rev<span class="w"> </span>
+codym/cod/erahs/
+codrehto/cod/
+codsam/cod/erahs/rsu/
+
+➜<span class="w"> </span>rev<span class="w"> </span>pr_rev<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s2">&quot;/&quot;</span><span class="w"> </span>-f1<span class="w"> </span><span class="p">|</span><span class="w"> </span>rev
+mydoc
+otherdoc
+masdoc
+</code></pre></div>
+<h3 id="tr">tr</h3>
+<p>tr sustitulle letras, en sus filtros también acepta caracteres especiales como <code>\t</code>  o clases.</p>
+<div class="highlight"><pre><span></span><code>➜<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;casa&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="w"> </span><span class="s2">&quot;e&quot;</span>
+cese
+
+➜<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;casa&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="w"> </span>
+cs
+
+➜<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;caaasaaaa&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="w"> </span>
+casa
+
+➜<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Mi    casa    tiene 10 lamparas&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;[:blank:]&quot;</span><span class="w"> </span><span class="s2">&quot; &quot;</span>
+Mi<span class="w"> </span>casa<span class="w"> </span>tiene<span class="w"> </span><span class="m">10</span><span class="w"> </span>lamparas
+
+➜<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Mi casa tiene 10 lamparas&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s2">&quot;[:alpha:]&quot;</span><span class="w"> </span><span class="s2">&quot;X&quot;</span>
+XX<span class="w"> </span>XXXX<span class="w"> </span>XXXXX<span class="w"> </span><span class="m">10</span><span class="w"> </span>XXXXXXXX
+
+➜<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Mi casa tiene 10 lamparas&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s2">&quot;[:digit:]&quot;</span><span class="w"> </span><span class="s2">&quot;X&quot;</span>
+Mi<span class="w"> </span>casa<span class="w"> </span>tiene<span class="w"> </span>XX<span class="w"> </span>lamparas
+</code></pre></div>
+<p>Tipos de <strong>clases</strong>: representan un conjunto predefinido de caracteres</p>
+<table>
+<thead>
+<tr>
+<th>clases</th>
+<th>descripcion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[:alnum:]</td>
+<td>Las letras y Dígitos</td>
+</tr>
+<tr>
+<td>[:alpha:]</td>
+<td>Letras</td>
+</tr>
+<tr>
+<td>[:blank:]</td>
+<td>Espacios en Blanco</td>
+</tr>
+<tr>
+<td>[:cntrl:]</td>
+<td>Caracteres de control</td>
+</tr>
+<tr>
+<td>[:space:]</td>
+<td>Los Espacios en Blanco verticales y horizontales</td>
+</tr>
+<tr>
+<td>[:graph:]</td>
+<td>Caracteres imprimibles, sin incluir el Espacio en Blanco</td>
+</tr>
+<tr>
+<td>[:print:]</td>
+<td>Caracteres imprimibles, incluyendo el Espacio en Blanco</td>
+</tr>
+<tr>
+<td>[:digit:]</td>
+<td>Dígitos</td>
+</tr>
+<tr>
+<td>[:lower:]</td>
+<td>Letras minúsculas.</td>
+</tr>
+<tr>
+<td>[:upper:]</td>
+<td>Letras mayúsculas.</td>
+</tr>
+<tr>
+<td>[:punct:]</td>
+<td>Signos de puntuación.</td>
+</tr>
+<tr>
+<td>[:xdigit:]</td>
+<td>DígitosHexadecimales.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nl">nl</h3>
+<p>nl muestra el contenido de un fichero de texto añadiendo el numero de linea. Por defecto no cuenta las lineas en planco (para eso añade <code>-b a</code>)</p>
+<div class="highlight"><pre><span></span><code>➜<span class="w"> </span>nl<span class="w"> </span>texto<span class="w"> </span>
+<span class="w">     </span><span class="m">1</span><span class="w">  </span>Yo<span class="w"> </span>sé<span class="w"> </span>que<span class="w"> </span>existo
+<span class="w">     </span><span class="m">2</span><span class="w">  </span>Porque<span class="w"> </span>tú<span class="w"> </span>me<span class="w"> </span>imaginas.
+
+<span class="w">     </span><span class="m">3</span><span class="w">  </span>Soy<span class="w"> </span>alto<span class="w"> </span>porque<span class="w"> </span>tú<span class="w"> </span>me<span class="w"> </span>crees
+<span class="w">     </span><span class="m">4</span><span class="w">  </span>Alto,<span class="w"> </span>y<span class="w"> </span>limpio<span class="w"> </span>porque<span class="w"> </span>tú<span class="w"> </span>me<span class="w"> </span>miras
+<span class="w">     </span><span class="m">5</span><span class="w">  </span>Con<span class="w"> </span>buenos<span class="w"> </span>ojos,
+<span class="w">     </span><span class="m">6</span><span class="w">  </span>Con<span class="w"> </span>mirada<span class="w"> </span>limpia.
+
+➜<span class="w"> </span>nl<span class="w"> </span>-b<span class="w"> </span>a<span class="w"> </span>texto
+<span class="w">     </span><span class="m">1</span><span class="w">  </span>Yo<span class="w"> </span>sé<span class="w"> </span>que<span class="w"> </span>existo
+<span class="w">     </span><span class="m">2</span><span class="w">  </span>Porque<span class="w"> </span>tú<span class="w"> </span>me<span class="w"> </span>imaginas.
+<span class="w">     </span><span class="m">3</span><span class="w">  </span>
+<span class="w">     </span><span class="m">4</span><span class="w">  </span>Soy<span class="w"> </span>alto<span class="w"> </span>porque<span class="w"> </span>tú<span class="w"> </span>me<span class="w"> </span>crees
+<span class="w">     </span><span class="m">5</span><span class="w">  </span>Alto,<span class="w"> </span>y<span class="w"> </span>limpio<span class="w"> </span>porque<span class="w"> </span>tú<span class="w"> </span>me<span class="w"> </span>miras
+<span class="w">     </span><span class="m">6</span><span class="w">  </span>Con<span class="w"> </span>buenos<span class="w"> </span>ojos,
+<span class="w">     </span><span class="m">7</span><span class="w">  </span>Con<span class="w"> </span>mirada<span class="w"> </span>limpia.
+<span class="w">     </span><span class="m">8</span><span class="w">  </span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>a<span class="w">   </span><span class="c1"># numera todas las lineas</span>
+t<span class="w">   </span><span class="c1"># numera solo lines con contenido(opcion default)</span>
+</code></pre></div>
+<h3 id="od">od</h3>
+<p>od muestra un fichero en formato numerico octal</p>
+<div class="highlight"><pre><span></span><code>➜<span class="w"> </span>od<span class="w"> </span>texto<span class="w"> </span>
+<span class="m">0000000</span><span class="w"> </span><span class="m">067531</span><span class="w"> </span><span class="m">071440</span><span class="w"> </span><span class="m">124703</span><span class="w"> </span><span class="m">070440</span><span class="w"> </span><span class="m">062565</span><span class="w"> </span><span class="m">062440</span><span class="w"> </span><span class="m">064570</span><span class="w"> </span><span class="m">072163</span>
+<span class="m">0000020</span><span class="w"> </span><span class="m">005157</span><span class="w"> </span><span class="m">067520</span><span class="w"> </span><span class="m">070562</span><span class="w"> </span><span class="m">062565</span><span class="w"> </span><span class="m">072040</span><span class="w"> </span><span class="m">135303</span><span class="w"> </span><span class="m">066440</span><span class="w"> </span><span class="m">020145</span>
+...
+
+➜<span class="w"> </span>od<span class="w"> </span>-c<span class="w"> </span>text
+<span class="m">0000000</span><span class="w">   </span>b<span class="w">   </span>z<span class="w">   </span>c<span class="w">   </span>a<span class="w">   </span>t<span class="w">  </span><span class="se">\n</span><span class="w">   </span>c<span class="w">   </span>a<span class="w">   </span>t<span class="w">  </span><span class="se">\n</span><span class="w">   </span>c<span class="w">   </span>u<span class="w">   </span>t<span class="w">  </span><span class="se">\n</span><span class="w">   </span>h<span class="w">   </span>e
+<span class="m">0000020</span><span class="w">   </span>a<span class="w">   </span>d<span class="w">  </span><span class="se">\n</span><span class="w">   </span>l<span class="w">   </span>e<span class="w">   </span>s<span class="w">   </span>s<span class="w">  </span><span class="se">\n</span><span class="w">   </span>m<span class="w">   </span>d<span class="w">   </span><span class="m">5</span><span class="w">   </span>s<span class="w">   </span>u<span class="w">   </span>m<span class="w">  </span><span class="se">\n</span><span class="w">   </span>n
+...
+</code></pre></div>
+<p>En ocasiones es útil ver los caracteres ocultis de un archivo como el salto de línea, con la opción <code>-c</code> se muestran.</p>
+<h3 id="split">split</h3>
+<p>split divide un fichero en varios  según unos limites</p>
+<div class="highlight"><pre><span></span><code>split<span class="w"> </span>-l<span class="w"> </span><span class="m">5</span><span class="w"> </span>texto<span class="w"> </span>d1<span class="w"> </span><span class="c1"># divide el archivo en archivos de 5 lineas</span>
+split<span class="w"> </span>-b<span class="w"> </span><span class="m">50</span><span class="w"> </span>texto<span class="w"> </span>d1<span class="w"> </span><span class="c1"># divide el archivo en archivos de 50 bytes</span>
+split<span class="w"> </span>-C<span class="w"> </span><span class="m">50</span><span class="w"> </span>texto<span class="w"> </span>d1<span class="w"> </span><span class="c1"># divide el archivo en archivos de 50 bytes sin partir lineas</span>
+
+➜<span class="w"> </span>ll
+total<span class="w"> </span>64K
+-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>debian<span class="w"> </span>debian<span class="w">   </span><span class="m">43</span><span class="w"> </span>feb<span class="w"> </span><span class="m">19</span><span class="w"> </span><span class="m">12</span>:46<span class="w"> </span>d1aa
+-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>debian<span class="w"> </span>debian<span class="w">   </span><span class="m">29</span><span class="w"> </span>feb<span class="w"> </span><span class="m">19</span><span class="w"> </span><span class="m">12</span>:46<span class="w"> </span>d1ab
+-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>debian<span class="w"> </span>debian<span class="w">   </span><span class="m">35</span><span class="w"> </span>feb<span class="w"> </span><span class="m">19</span><span class="w"> </span><span class="m">12</span>:46<span class="w"> </span>d1ac
+-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>debian<span class="w"> </span>debian<span class="w">   </span><span class="m">38</span><span class="w"> </span>feb<span class="w"> </span><span class="m">19</span><span class="w"> </span><span class="m">12</span>:46<span class="w"> </span>d1ad
+-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>debian<span class="w"> </span>debian<span class="w">  </span><span class="m">145</span><span class="w"> </span>feb<span class="w"> </span><span class="m">19</span><span class="w"> </span><span class="m">12</span>:34<span class="w"> </span>texto
+
+➜<span class="w"> </span>cat<span class="w"> </span>d1*<span class="w"> </span>&gt;<span class="w"> </span>texto2<span class="w"> </span><span class="c1"># reagrupar archivos divididos</span>
+➜<span class="w"> </span>diff<span class="w"> </span>texto<span class="w"> </span>texto2
+</code></pre></div>
+<h3 id="paste">paste</h3>
+<p>paste concatena linea a linea la informacion de dos ficheros</p>
+<div class="highlight"><pre><span></span><code>➜<span class="w"> </span>cat<span class="w"> </span>notas<span class="w"> </span>
+<span class="m">1</span>
+<span class="m">2</span>
+<span class="m">5</span>
+<span class="m">9</span>
+➜<span class="w"> </span>cat<span class="w"> </span>nombres<span class="w"> </span>
+juan
+anna
+pedro
+lucia
+
+➜<span class="w"> </span>paste<span class="w"> </span>nombres<span class="w"> </span>notas<span class="w"> </span>
+juan<span class="w">    </span><span class="m">1</span>
+anna<span class="w">    </span><span class="m">2</span>
+pedro<span class="w">   </span><span class="m">5</span>
+lucia<span class="w">   </span><span class="m">9</span>
+</code></pre></div>
+<h3 id="cat">cat</h3>
+<p>Cat esta diseñado para visualizar archivos pero entre otras cosas, tiene la particulidad de visualizar archivos comprimidos, aquí se muestran algunas de las  opciones</p>
+<div class="highlight"><pre><span></span><code>➜<span class="w"> </span>gzip<span class="w"> </span>-c<span class="w"> </span>texto<span class="w"> </span>&gt;<span class="w"> </span>texto.gz
+➜<span class="w"> </span>zcat<span class="w"> </span>texto.gz<span class="w"> </span>
+Yo<span class="w"> </span>sé<span class="w"> </span>que<span class="w"> </span>existo
+Porque<span class="w"> </span>tú<span class="w"> </span>me<span class="w"> </span>imaginas.
+...
+
+➜<span class="w"> </span>bzip2<span class="w"> </span>-z<span class="w"> </span>texto
+➜<span class="w"> </span>bzcat<span class="w"> </span>texto.bz2<span class="w"> </span>
+Yo<span class="w"> </span>sé<span class="w"> </span>que<span class="w"> </span>existo
+Porque<span class="w"> </span>tú<span class="w"> </span>me<span class="w"> </span>imaginas.
+...
+
+➜<span class="w"> </span>xz<span class="w"> </span>texto
+➜<span class="w"> </span>xzcat<span class="w"> </span>texto.xz<span class="w"> </span>
+Yo<span class="w"> </span>sé<span class="w"> </span>que<span class="w"> </span>existo
+Porque<span class="w"> </span>tú<span class="w"> </span>me<span class="w"> </span>imaginas.
+...
+
+cat<span class="w"> </span>-b<span class="w"> </span>file.txt<span class="w"> </span><span class="c1"># numerar lineas del contenido</span>
+</code></pre></div>
+<h3 id="checksum">checksum</h3>
+<p>Podemos obtener una marca digital de la información de un fichero. Será basada en su contenido, mientras el contenido no sea modificado la marca siempre será la misma.</p>
+<p>Algunas opciones para crer marcas:</p>
+<ul>
+<li>
+<p>md5sum (md5 obsoleto)</p>
+</li>
+<li>
+<p>sha256sum (sha es mejor, cuantos más bit, mas fuerte)</p>
+</li>
+<li>
+<p>sha512sum</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sha256sum<span class="w"> </span>text<span class="w"> </span>
+d3f8ac7a0b45657fdd4f2e1f55a0d8f7b4fc9341eb94b2fcf1f6551bac37e133<span class="w">  </span>text
+
+$<span class="w"> </span>sha256sum<span class="w"> </span>text<span class="w"> </span>&gt;<span class="w"> </span>sha256.txt
+$<span class="w"> </span>sha256sum<span class="w"> </span>-c<span class="w"> </span>sha256.txt
+text:<span class="w"> </span>La<span class="w"> </span>suma<span class="w"> </span>coincide
+</code></pre></div>
+<p>Esto se suele utilizar para vrificar paquetes descargados o transferidos de alguna manera.</p>
+<h2 id="administracion-basica-de-archivos">Administración básica de archivos</h2>
+<p>uso  de comandos <code>rm, cp, mv, mkdir, touch</code></p>
+<h3 id="tar">tar</h3>
+<p>opciones para copia de seguridad</p>
+<ul>
+<li>
+<p>Totales: se copian todos los datos</p>
+</li>
+<li>
+<p>Diferenciales: se copian sólo los que se hayan modificado desde una fecha indicada. Se utiliza la opción <code>-N</code> seguido de la fecha</p>
+</li>
+<li>incrementales: se copian sólo los ficheros que se han modificado desde la última copia. Se utiliza la opción <code>-g</code> seguido de la ruta del fichero de registro.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>-c<span class="w"> </span><span class="c1"># comprime</span>
+-x<span class="w"> </span><span class="c1"># descomprime</span>
+-z<span class="w"> </span><span class="c1"># gzip</span>
+-J<span class="w"> </span><span class="c1"># xz</span>
+-j<span class="w"> </span><span class="c1"># bzip2</span>
+-p<span class="w"> </span><span class="c1"># conserva permisos</span>
+-h<span class="w"> </span><span class="c1"># conservar softlinks</span>
+-v<span class="w"> </span><span class="c1"># muestra informacion vervose</span>
+-P<span class="w"> </span><span class="c1"># conserva ruta absoluta</span>
+-f<span class="w"> </span><span class="c1"># referencia a archivos       </span>
+-r<span class="w"> </span><span class="c1"># añade elementos a un fichero compacto</span>
+-t<span class="w"> </span><span class="c1"># ver interior tar</span>
+-u<span class="w"> </span><span class="c1"># añadir archivo a tar</span>
+--exclude<span class="w"> </span><span class="c1"># Excluir directorio o fichero</span>
+--delete<span class="w"> </span><span class="c1"># borrar ruta del interior del tar</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>cf<span class="w"> </span>file.tar<span class="w"> </span>files*
+tar<span class="w"> </span>xf<span class="w"> </span>file.tar
+
+tar<span class="w"> </span>czf<span class="w"> </span>file.tar.gz<span class="w"> </span>files*
+tar<span class="w"> </span>xzf<span class="w"> </span>file.tar.gz
+
+find<span class="w"> </span>/etc<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-print0<span class="w"> </span><span class="p">|</span><span class="w"> </span>tar<span class="w"> </span>-cJ<span class="w"> </span>-f<span class="w"> </span>/srv/backup/etc.tar.xz<span class="w"> </span>-T<span class="w"> </span>-<span class="w"> </span>--null
+</code></pre></div>
+<p>La opción <code>-T</code> indica que son nombres extraidos de un fichero o comando, y la opción <code>--null</code> que el caracter separador es nulo.</p>
+<h3 id="cpio">cpio</h3>
+<p>cpio tiene una función parecida a <code>tar</code>. Copia ficheros  y desde n solo archivo. Utiliza la enttrada y salida estándar para el origen y destino de datos.</p>
+<div class="highlight"><pre><span></span><code>-o<span class="w">  </span><span class="c1"># crear un archivo  con el contenido que le indiquemos</span>
+-i<span class="w">  </span><span class="c1"># extrae el contenido de un fichero</span>
+-p<span class="w">  </span><span class="c1"># copia una estructura de directorios a otro lugar</span>
+
+find<span class="w"> </span>/etc/<span class="w"> </span><span class="p">|</span><span class="w"> </span>cpio<span class="w"> </span>-o<span class="w"> </span>&gt;<span class="w"> </span>copia_etc.cpio
+cpio<span class="w"> </span>-i<span class="w"> </span>&lt;<span class="w"> </span>copia_etc.cpio
+
+find<span class="w"> </span>/etc/<span class="w"> </span><span class="p">|</span><span class="w"> </span>cpio<span class="w"> </span>-o<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>copia_etc.cpio.ggz
+</code></pre></div>
+<h3 id="dd">dd</h3>
+<p>dd copia información a bajo nivel.</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="o">=</span>origen
+<span class="nv">of</span><span class="o">=</span>destino
+bs<span class="w">  </span><span class="c1"># tamaño del bloque a copiar</span>
+count<span class="w">   </span><span class="c1"># cantidad de bloques a copiar</span>
+
+dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/sdb1<span class="w"> </span><span class="nv">of</span><span class="o">=</span>/home/alumno/usb.img
+dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/zero<span class="w"> </span><span class="nv">of</span><span class="o">=</span>fichero<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>1M<span class="w"> </span><span class="nv">count</span><span class="o">=</span><span class="m">100</span>
+</code></pre></div>
+<p>El comando <code>dd</code> normalmente no mostrará nada en la pantalla hasta que el comando haya finalizado. A l proporcionar la opción <code>status=progress</code>, la consola mostrará la cantidad de trabajo que realiza el comando. Por ejemplo: <code>dd status=progress if=oldfile of=newfile</code>.</p>
+<h3 id="comprimir">comprimir</h3>
+<p>Hay varios comandos para comprimir y descomprimir ficheros. El funcionamiento básico es el mismo en los más conocidos: <code>gzip, bzip, xz</code></p>
+<p>Si indicamos comprimir el archivo original desaparece, para conservar el original indicamos la opción <code>-k</code>. para descomprimir se indica la opción <code>-d</code> o el comando <code>gunzip, bunzip, unxz</code></p>
+<table>
+<thead>
+<tr>
+<th>comprimir</th>
+<th>descomprimir</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gzip fichero</td>
+<td>gzip -d fichero.gz</td>
+<td>gunzip fichero.gz</td>
+</tr>
+<tr>
+<td>bzip -k fichero</td>
+<td>bzip -d fichero.bz</td>
+<td>bunzip  fichero.bz</td>
+</tr>
+<tr>
+<td>xz -k fichero</td>
+<td>xz -d fichero.xz</td>
+<td>unxz  fichero.xz</td>
+</tr>
+</tbody>
+</table>
+<p>Tambien esta la opción de descomprimir mezclando comandos.</p>
+<div class="highlight"><pre><span></span><code>bzcat<span class="w"> </span>file.tar.gz2<span class="w"> </span><span class="p">|</span><span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>-
+</code></pre></div>
+<h2 id="uso-secuencias-de-texto-tuberias-y-redireccionamiento">Uso secuencias de texto, tuberias y redireccionamiento</h2>
+<p>Los procesos estándar de Linux tienen tres canales de comunicación  abiertos de manera predeterminada: el canal de entrada estándar (la  mayoría de las veces llamado simplemente <em>stdin</em>) <code>0</code>, el <em>canal de salida</em> estándar (<em>stdout</em>) <code>1</code> y el <em>canal de error</em> estándar (<em>stderr</em>)<code>2</code>.   Los canales de comunicación también son accesibles a través de los dispositivos especiales <code>/dev/stdin</code>, <code>/dev/stdout</code> y <code>/dev/stderr</code>.</p>
+<h3 id="redireccion">redireccion</h3>
+<p>La redirección se utiliza para gestionar según que salidas queramos obtener. En ocasiones se quiere redireccionar una salida a un archivo o  simplemente descartarla</p>
+<div class="highlight"><pre><span></span><code>&gt;<span class="w">   </span><span class="c1"># redirige salida estandar reescribiendo el final</span>
+&gt;&gt;<span class="w">  </span><span class="c1"># redirige salida estandar añadiendo</span>
+<span class="m">2</span>&gt;<span class="w">  </span><span class="c1"># redirige stderr</span>
+<span class="m">2</span>&gt;&gt;
+<span class="p">&amp;</span>&gt;<span class="w">  </span><span class="c1"># redirige stdout y stderr</span>
+<span class="p">&amp;</span>&gt;&gt;
+&gt;<span class="p">&amp;</span><span class="m">2</span><span class="w"> </span><span class="c1"># redirige stdout a stderr</span>
+<span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w">    </span><span class="c1"># redirige stderr a stdout</span>
+<span class="s">&lt;&lt;EOF   # stdin hasta contener una linea con EOF</span>
+<span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">&quot;cadena de texto&quot;</span><span class="w"> </span><span class="c1"># enviar a stdin una cadena y finalizar</span>
+</code></pre></div>
+<h3 id="tuberias">tuberias</h3>
+<p>Las tuberias son muy utiles para enlazar comandos con la salida del anterior</p>
+<div class="highlight"><pre><span></span><code>➜<span class="w"> </span>du<span class="w"> </span>-sh<span class="w"> </span>/*<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-h<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-1
+73G<span class="w"> </span>/var
+</code></pre></div>
+<h3 id="tee">tee</h3>
+<p>El comando <code>tee</code> recoge la salida estandar y duplica la salida de la información ya que guarda en un fichero y también  la envia por salida estándar.</p>
+<div class="highlight"><pre><span></span><code>➜<span class="w">  </span>uptime<span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>info_lunes.txt
+<span class="w"> </span><span class="m">10</span>:58:40<span class="w"> </span>up<span class="w">  </span><span class="m">2</span>:59,<span class="w">  </span><span class="m">1</span><span class="w"> </span>user,<span class="w">  </span>load<span class="w"> </span>average:<span class="w"> </span><span class="m">0</span>,56,<span class="w"> </span><span class="m">0</span>,57,<span class="w"> </span><span class="m">0</span>,52
+➜<span class="w">  </span>cat<span class="w"> </span>info_lunes.txt<span class="w"> </span>
+<span class="w"> </span><span class="m">10</span>:58:40<span class="w"> </span>up<span class="w">  </span><span class="m">2</span>:59,<span class="w">  </span><span class="m">1</span><span class="w"> </span>user,<span class="w">  </span>load<span class="w"> </span>average:<span class="w"> </span><span class="m">0</span>,56,<span class="w"> </span><span class="m">0</span>,57,<span class="w"> </span><span class="m">0</span>,52
+</code></pre></div>
+<h3 id="xargs">xargs</h3>
+<p>El comando <code>xargs</code> permite ejecutar cualquier comando usando como parámetros la información que recoge de una tubería.</p>
+<div class="highlight"><pre><span></span><code>-d<span class="w">  </span><span class="c1"># establece un delimitador para dividir la cadena de entrada</span>
+-t<span class="w">  </span><span class="c1"># muestra la orden antes de ejecutarla</span>
+-p<span class="w">  </span><span class="c1"># pregunta antes de ejecutar cada orden</span>
+-I<span class="w">  </span><span class="c1"># permite definir donde se van a poner los parametros</span>
+</code></pre></div>
+<p>ejemplos:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span>pera<span class="w"> </span>manzana<span class="w"> </span>uva<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>touch
+<span class="c1"># se transforma en:</span>
+touch<span class="w"> </span>pera<span class="w"> </span>manzana<span class="w"> </span>uva
+
+<span class="c1"># hacer copia de ficheros mayores de 5M de /root a backups</span>
+find<span class="w"> </span>/root/<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-size<span class="w"> </span>+5M<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-I<span class="w"> </span>ARG<span class="w"> </span>cp<span class="w"> </span>ARG<span class="w"> </span>/backups/
+
+<span class="c1"># crear directorios con los nombres de los ultimos 5 usuarios</span>
+tail<span class="w"> </span>-5<span class="w"> </span>/etc/passwd<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s2">&quot;:&quot;</span><span class="w"> </span>-f1<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>mkdir
+</code></pre></div>
+<h2 id="crear-supervisar-y-matar-procesos">Crear, supervisar y matar procesos</h2>
+<p>los procesos son las tareas que va ejecutando nuestro pc, por ejemplo si abres una pestaña del navegador, una terminal y muchos otros que se ejecutan en segundo plano.</p>
+<p>Para visualizar tenemos diversos comandos:</p>
+<div class="highlight"><pre><span></span><code>ps<span class="w">      </span><span class="c1"># visualizar</span>
+pstree<span class="w">   </span><span class="c1"># visualizar en arbol</span>
+pgrep<span class="w">   </span><span class="c1"># visualizar pid y nombre</span>
+pidof<span class="w">   </span><span class="c1"># visualizar pid de proceso</span>
+top<span class="w">     </span><span class="c1"># visualizar en tiempo real</span>
+htop
+</code></pre></div>
+<p>cada uno tiene sus opciones</p>
+<div class="highlight"><pre><span></span><code>ps<span class="w"> </span>
+-u<span class="w"> </span><span class="c1"># formato orientado a usuario</span>
+-a<span class="w"> </span><span class="c1"># procesos conectados tty actual</span>
+-x<span class="w"> </span><span class="c1"># procesos que no estan conectado a un tty</span>
+-aux<span class="w"> </span><span class="c1"># opcion mas usual  </span>
+
+
+pstree<span class="w"> </span>-ps<span class="w"> </span>&lt;num<span class="w"> </span>proceso&gt;<span class="w">  </span>
+-p<span class="w">  </span><span class="c1"># proceso</span>
+-s<span class="w">  </span><span class="c1"># arbol  </span>
+-a<span class="w">  </span><span class="c1"># mostrar todo sin agrupaciones</span>
+
+pgrep
+-u<span class="w">  </span><span class="c1"># usuario</span>
+-l<span class="w">  </span><span class="c1"># mostrar proceso</span>
+-d<span class="w">   </span><span class="c1"># delimitador stdout</span>
+
+➜<span class="w"> </span>pgrep<span class="w">  </span>-u<span class="w"> </span>debian<span class="w"> </span>-l<span class="w"> </span><span class="s2">&quot;^Web*&quot;</span>
+<span class="m">8282</span><span class="w"> </span>WebExtensions
+<span class="m">16688</span><span class="w"> </span>Web<span class="w"> </span>Content
+<span class="m">16734</span><span class="w"> </span>Web<span class="w"> </span>Content
+<span class="m">17580</span><span class="w"> </span>Web<span class="w"> </span>Content
+➜<span class="w"> </span>pgrep<span class="w">  </span>-u<span class="w"> </span>debian<span class="w">  </span><span class="s2">&quot;^Web*&quot;</span><span class="w"> </span>-d<span class="w"> </span>,<span class="w"> </span>
+<span class="m">8282</span>,16688,16734,17580
+</code></pre></div>
+<h3 id="matar-procesos">Matar procesos</h3>
+<p>kill envia señales, las señales se envian entre procesos <code>kill -l</code> lista los diferentes tipos de señales disponibles</p>
+<ul>
+<li>15 SIGTERM ( señal terminar procesos, es la señal por defecto de kill)</li>
+<li>9 SIGKILL  ( señal matar ) Solo si se queda colgado, puedes perder información al matar a lo bestia.</li>
+<li>19 y 20 (señal stop ) parar un proceso, poner en pausa</li>
+<li>18 (CONT) reanudar un proceso parado</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nb">kill</span><span class="w"> </span>&lt;numero<span class="w"> </span>proceso&gt;
+killall<span class="w"> </span>&lt;nombre<span class="w"> </span>proceso&gt;
+pkill<span class="w"> </span>&lt;nombre<span class="w"> </span>proceso&gt;
+killall<span class="w"> </span>-u<span class="w"> </span>user1<span class="w"> </span><span class="c1"># matar todos los procesos de un usuario especifico</span>
+<span class="nb">kill</span><span class="w"> </span>%2<span class="w"> </span><span class="c1"># matar segundo proceso de backgroud</span>
+xkill<span class="w"> </span><span class="c1"># (clicar con el cursor encima ventana)</span>
+</code></pre></div>
+<h3 id="procesos-en-segundo-plano">Procesos en segundo plano</h3>
+<p>Ejecutar ordenes en segundo plano con <code>&amp;</code> al final de la orden. Hay que tener en cuenta  que el proceso en segundo plano no a de tener salida estandar y si la tiene hay que redirigirla.</p>
+<p>Ejemplo: <code>$ sleep 154856 &amp;</code>  </p>
+<p><code>jobs</code> ver procesos en segundo plano</p>
+<div class="highlight"><pre><span></span><code>■<span class="w">  </span>prova<span class="w"> </span><span class="nb">jobs</span>
+<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w">    </span>running<span class="w">    </span>tree<span class="w"> </span>/<span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span>
+<span class="o">[</span><span class="m">2</span><span class="o">]</span><span class="w">  </span>-<span class="w"> </span>running<span class="w">    </span>sleep<span class="w"> </span><span class="m">145879</span><span class="w">       </span>
+<span class="o">[</span><span class="m">3</span><span class="o">]</span><span class="w">  </span>+<span class="w"> </span>running<span class="w">    </span>sleep<span class="w"> </span><span class="m">145879</span><span class="w">      </span>
+</code></pre></div>
+<ul>
+<li>signo <code>+</code> indica el ultimo proceso.</li>
+<li>signo <code>-</code> indica el penúltimo proceso.</li>
+<li><code>[1]</code> número de proceso en background.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>-l<span class="w">  </span><span class="c1"># muestra ID de proceso (PID)</span>
+-p<span class="w">  </span><span class="c1"># muestra ID de proceso</span>
+-r<span class="w">  </span><span class="c1"># procesos en ejecución</span>
+-s<span class="w">  </span><span class="c1"># procesos detenidos</span>
+%sl<span class="w"> </span><span class="c1"># filtra trabajos que empiecen por &quot;sl&quot; en el omando</span>
+%?le<span class="w">    </span><span class="c1"># filtra trabajos que contengan &quot;le&quot;</span>
+</code></pre></div>
+<p>Para traer de foregraund a background <code>fg %2</code> número de proceso si quieres luego que vuelva a backgroud <code>Ctrl Z</code>  y se muestra como stopped  y se pueden reanudar ( poner en running ) con <code>bg</code>. Otra manera de parar un proceso en background es con la señal stoped SIGSTOP <code>kill -19 %5</code>  </p>
+<div class="highlight"><pre><span></span><code>➜<span class="w">  </span>~<span class="w"> </span>sleep<span class="w"> </span><span class="m">77777</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="m">18991</span>
+
+➜<span class="w">  </span>~<span class="w"> </span><span class="nb">jobs</span>
+<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w">  </span>+<span class="w"> </span>running<span class="w">    </span>sleep<span class="w"> </span><span class="m">77777</span>
+
+<span class="c1"># traigo proceso a primer plano con fg</span>
+➜<span class="w">  </span>~<span class="w"> </span><span class="nb">fg</span><span class="w"> </span>%1
+<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w">  </span>+<span class="w"> </span><span class="m">18991</span><span class="w"> </span>running<span class="w">    </span>sleep<span class="w"> </span><span class="m">77777</span>
+
+<span class="c1"># suspendo proceso con ctrl+z</span>
+^Z
+<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w">  </span>+<span class="w"> </span><span class="m">18991</span><span class="w"> </span>suspended<span class="w">  </span>sleep<span class="w"> </span><span class="m">77777</span>
+
+➜<span class="w">  </span>~<span class="w"> </span><span class="nb">jobs</span><span class="w"> </span>
+<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w">  </span>+<span class="w"> </span>suspended<span class="w">  </span>sleep<span class="w"> </span><span class="m">77777</span>
+
+<span class="c1"># reanudo proceso en segundo plano</span>
+➜<span class="w">  </span>~<span class="w"> </span><span class="nb">bg</span><span class="w"> </span>%1
+<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w">  </span>+<span class="w"> </span><span class="m">18991</span><span class="w"> </span>continued<span class="w">  </span>sleep<span class="w"> </span><span class="m">77777</span>
+
+➜<span class="w">  </span>~<span class="w"> </span><span class="nb">jobs</span><span class="w"> </span>
+<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w">  </span>+<span class="w"> </span>running<span class="w">    </span>sleep<span class="w"> </span><span class="m">77777</span>
+
+<span class="c1"># mato proceso</span>
+➜<span class="w">  </span>~<span class="w"> </span><span class="nb">kill</span><span class="w"> </span>%1
+<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w">  </span>+<span class="w"> </span><span class="m">18991</span><span class="w"> </span>terminated<span class="w">  </span>sleep<span class="w"> </span><span class="m">77777</span><span class="w">                                                       </span>
+</code></pre></div>
+<h3 id="proceso-desasociado">Proceso desasociado</h3>
+<p>Con nohub permite desasociar un proceso de la sesión actual, así se podrá cerrar la sesión y el comando  seguira en marcha.</p>
+<div class="highlight"><pre><span></span><code>➜<span class="w">  </span>nohup<span class="w"> </span>sleep<span class="w"> </span><span class="m">1547857</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="m">7033</span>
+nohup:<span class="w"> </span>se<span class="w"> </span>descarta<span class="w"> </span>la<span class="w"> </span>entrada<span class="w"> </span>y<span class="w"> </span>se<span class="w"> </span>añade<span class="w"> </span>la<span class="w"> </span>salida<span class="w"> </span>a<span class="w"> </span><span class="s1">&#39;nohup.out&#39;</span><span class="w">    </span>
+
+<span class="c1"># una vez cerrada la sesión y avierta otra</span>
+➜<span class="w">  </span>ps<span class="w"> </span>ax<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>sleep
+<span class="w"> </span><span class="m">7033</span><span class="w"> </span>?<span class="w">        </span>SN<span class="w">     </span><span class="m">0</span>:00<span class="w"> </span>sleep<span class="w"> </span><span class="m">1547857</span>
+</code></pre></div>
+<h3 id="prioridades">Prioridades</h3>
+<p>Linux reserva prioridades estáticas que van de 0 a 99 para procesos en  tiempo real y los procesos normales se asignan a prioridades estáticas  que van de 100 a 139, lo que significa que hay 39 niveles de prioridad  diferentes para procesos normales.  Los valores más bajos significan una prioridad más alta. La prioridad  estática de un proceso activo se puede encontrar en el archivo <code>sched</code>, ubicado en su directorio respectivo dentro del sistema de archivos <code>/proc</code>:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>grep<span class="w"> </span>^prio<span class="w"> </span>/proc/1/sched
+prio<span class="w">                   </span>:<span class="w">       </span><span class="m">120</span>
+</code></pre></div>
+<p>Las prioridades mostradas por <code>ps</code> varían de -40 a 99 por defecto, por lo que la prioridad real se obtiene agregando 40 (en particular, 80 + 40 = 120).</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ps<span class="w"> </span>-el
+F<span class="w"> </span>S<span class="w">   </span>UID<span class="w">   </span>PID<span class="w">  </span>PPID<span class="w">  </span>C<span class="w"> </span>PRI<span class="w">  </span>NI<span class="w"> </span>ADDR<span class="w"> </span>SZ<span class="w"> </span>WCHAN<span class="w">  </span>TTY<span class="w">          </span>TIME<span class="w"> </span>CMD
+<span class="m">4</span><span class="w"> </span>S<span class="w">     </span><span class="m">0</span><span class="w">     </span><span class="m">1</span><span class="w">     </span><span class="m">0</span><span class="w">  </span><span class="m">0</span><span class="w">  </span><span class="m">80</span><span class="w">   </span><span class="m">0</span><span class="w"> </span>-<span class="w">  </span><span class="m">9292</span><span class="w"> </span>-<span class="w">      </span>?<span class="w">        </span><span class="m">00</span>:00:00<span class="w"> </span>systemd
+<span class="m">4</span><span class="w"> </span>S<span class="w">     </span><span class="m">0</span><span class="w">    </span><span class="m">19</span><span class="w">     </span><span class="m">1</span><span class="w">  </span><span class="m">0</span><span class="w">  </span><span class="m">80</span><span class="w">   </span><span class="m">0</span><span class="w"> </span>-<span class="w">  </span><span class="m">8817</span><span class="w"> </span>-<span class="w">      </span>?<span class="w">        </span><span class="m">00</span>:00:00<span class="w"> </span>systemd-journal
+...
+</code></pre></div>
+<h4 id="niceness-de-procesos">Niceness de Procesos</h4>
+<p>Todo proceso normal comienza con un valor <em>nice</em> predeterminado de 0 (prioridad 120).  La columna <code>NI</code> en la salida de <code>ps</code> indica el número <em>nice</em>.</p>
+<p>Nos es útil si queremos que un programa vaya más o menos rápido según el momento.</p>
+<p>La prioridad va de:</p>
+<ul>
+<li>Máxima -20</li>
+<li>Mínima +19</li>
+<li>Por defecto 0</li>
+</ul>
+<p>Formas de cambiar prioridades.</p>
+<p>nice nos permite cambiar prioridades mediante un comando y si queremos renombrar la prioridad utilizaremos renice</p>
+<div class="highlight"><pre><span></span><code>nice<span class="w"> </span>-n<span class="w"> </span>prioridad<span class="w"> </span>comando
+renice<span class="w"> </span>-n<span class="w"> </span>prioridad<span class="w">  </span>PID
+
+nice<span class="w"> </span>comando<span class="w"> </span><span class="c1"># prioridad por defeccto 10</span>
+</code></pre></div>
+<p>Es posible cambiar la prioridad a los procesos de un usuario o grupo, el siguiente ejemplo cambia la prioridad de todos los procesos del grupo users a 5.</p>
+<div class="highlight"><pre><span></span><code>renice<span class="w"> </span>+5<span class="w"> </span>-g<span class="w"> </span>users
+-g<span class="w">  </span><span class="c1"># grupo</span>
+-u<span class="w">  </span><span class="c1"># user</span>
+</code></pre></div>
+<p>Una forma de ver la proridad es la columna de <code>NI</code> de ps</p>
+<div class="highlight"><pre><span></span><code>➜<span class="w"> </span>ps<span class="w"> </span>-l
+F<span class="w"> </span>S<span class="w">   </span>UID<span class="w">   </span>PID<span class="w">  </span>PPID<span class="w">  </span>C<span class="w"> </span>PRI<span class="w">  </span>NI<span class="w"> </span>ADDR<span class="w"> </span>SZ<span class="w"> </span>WCHAN<span class="w">  </span>TTY<span class="w">          </span>TIME<span class="w"> </span>CMD
+<span class="m">0</span><span class="w"> </span>S<span class="w">  </span><span class="m">1000</span><span class="w">  </span><span class="m">8634</span><span class="w">  </span><span class="m">8596</span><span class="w">  </span><span class="m">0</span><span class="w">  </span><span class="m">80</span><span class="w">   </span><span class="m">0</span><span class="w"> </span>-<span class="w">  </span><span class="m">3866</span><span class="w"> </span>-<span class="w">      </span>pts/0<span class="w">    </span><span class="m">00</span>:00:00<span class="w"> </span>zsh
+<span class="m">4</span><span class="w"> </span>R<span class="w">  </span><span class="m">1000</span><span class="w"> </span><span class="m">10092</span><span class="w">  </span><span class="m">8634</span><span class="w">  </span><span class="m">0</span><span class="w">  </span><span class="m">80</span><span class="w">   </span><span class="m">0</span><span class="w"> </span>-<span class="w">  </span><span class="m">2637</span><span class="w"> </span>-<span class="w">      </span>pts/0<span class="w">    </span><span class="m">00</span>:00:00<span class="w"> </span>ps
+</code></pre></div>
+<p><strong>htop</strong> también nos permite cambiar prioridades con las opciones inferiores nice+F8 y nice-F7</p>
+<p>Modo gráfico tenemos monitor de sistema, te muestra los procesos gráficamente</p>
+<h2 id="expresiones-regulares">Expresiones regulares</h2>
+<p><a href="https://regexone.com/">web practica de regex</a> </p>
+<div class="highlight"><pre><span></span><code>^<span class="w">    </span><span class="c1"># principio dev linea</span>
+$<span class="w">    </span><span class="c1"># final de linea</span>
+<span class="o">[]</span><span class="w">      </span><span class="c1"># lista que contenga [aei] a,e,i</span>
+<span class="o">[</span><span class="m">0</span>-9a-Z<span class="o">]</span><span class="w"> </span><span class="c1"># rangos</span>
+<span class="o">[</span>^<span class="o">]</span><span class="w">    </span><span class="c1"># lista que no contenga</span>
+.<span class="w">    </span><span class="c1"># un caracter</span>
+<span class="w"> </span>*<span class="w">    </span><span class="c1"># junto al caracter anterior 0 o n veces </span>
+.*<span class="w">    </span><span class="c1"># 0 o cualquier caracter</span>
+<span class="o">{}</span><span class="w">    </span><span class="c1"># numero de repeticiones {n}{n,m}{n,}{,n}</span>
+?<span class="w">    </span><span class="c1"># reperticion del caracter anterior cero o una vez</span>
++<span class="w">    </span><span class="c1"># reperticion del caracter anterior una o mas veces</span>
+</code></pre></div>
+<p>abreviaturas</p>
+<div class="highlight"><pre><span></span><code><span class="se">\w</span><span class="w">  </span><span class="c1"># cualquier caracter alfanumerico y el guion bajo</span>
+<span class="se">\W</span><span class="w">  </span><span class="c1"># lo contrario a \w, signos de puntuación, epacios, etc...</span>
+</code></pre></div>
+<p>limites de palabra</p>
+<div class="highlight"><pre><span></span><code><span class="se">\&lt;</span><span class="w">  </span><span class="c1"># inicio de palabra</span>
+<span class="se">\&gt;</span><span class="w">  </span><span class="c1"># fin de palabra</span>
+<span class="se">\b</span><span class="w">  </span><span class="c1"># limite de palagra (inicio o fin)</span>
+<span class="se">\B</span><span class="w">  </span><span class="c1"># lo contrario a \b</span>
+<span class="se">\s</span><span class="w">  </span><span class="c1"># espacio en blanco</span>
+<span class="se">\S</span><span class="w">  </span><span class="c1"># cualquier caracter menos espacio</span>
+</code></pre></div>
+<h3 id="grep">grep</h3>
+<div class="highlight"><pre><span></span><code>grep<span class="w"> </span>
+-i<span class="w"> </span><span class="c1"># ignore case ( ignorar casec sensitive )</span>
+-v<span class="w"> </span><span class="c1"># invert match ( revertir busquerda )</span>
+-n<span class="w"> </span><span class="c1"># numero de lineas</span>
+-E<span class="w"> </span><span class="c1"># aceptar expresiones regulares {}, |, [], etc... o egrep</span>
+-l<span class="w"> </span><span class="c1"># solo indica el nombre del fichero donde ha encontrado alguna coincidencia</span>
+-w<span class="w"> </span><span class="c1"># el patron es una palabra independiente</span>
+-r<span class="w"> </span><span class="c1"># busqueda recursiva</span>
+-c<span class="w"> </span><span class="c1"># muestra el numero de coincidencias</span>
+-H<span class="w"> </span><span class="c1"># muestra tambien el nombre del archivo que coincide</span>
+-o<span class="w"> </span><span class="c1"># solo mostrar coincidencia</span>
+</code></pre></div>
+<h3 id="sed">sed</h3>
+<div class="highlight"><pre><span></span><code>-n<span class="w">  </span><span class="c1"># suprimir salida estandar</span>
+-e<span class="w">  </span><span class="c1"># indica que se ejecute el script que viene a continuacion.</span>
+<span class="w">    </span><span class="c1"># si no se emplea la opción -f se puede omitir -e</span>
+-f<span class="w">  </span><span class="c1"># las ordenes se tomaran de un archivo</span>
+-r<span class="w">  </span><span class="c1"># utilizar expresiones regulares</span>
+-i<span class="w">  </span><span class="c1"># guardar cambios</span>
+
+i<span class="se">\ </span><span class="w"> </span><span class="c1"># insertar linea antes de la linea actual</span>
+a<span class="se">\ </span><span class="w"> </span><span class="c1"># insertar linea despues de la linea actual</span>
+c<span class="se">\ </span><span class="w"> </span><span class="c1"># sustitulle linea por la especificada a continuacion</span>
+d<span class="w">   </span><span class="c1"># borrar linea actual</span>
+p<span class="w">   </span><span class="c1"># imprimir linea actual, salida estandar</span>
+s<span class="w">   </span><span class="c1"># sustituir</span>
+!<span class="w">   </span><span class="c1"># aplicar instruccion a las lineas no coincidentes</span>
+q<span class="w">   </span><span class="c1"># abandonar proceso al alcanzar cierta linea</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>sed<span class="w"> </span>&lt;seleccio<span class="w"> </span>de<span class="w"> </span>linies&gt;<span class="w"> </span><span class="s1">&#39;s/&lt;que busco&gt;/&lt;por que cambio&gt;/&lt;numero de veces&gt;&#39;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># sustituir una vez</span>
+sed<span class="w"> </span><span class="s1">&#39;s/mama/papa/&#39;</span>
+
+<span class="c1"># sustituir recursivamente</span>
+sed<span class="w"> </span><span class="s1">&#39;s/mama/papa/g&#39;</span>
+
+<span class="c1"># desde la linea 3 hasta el final  </span>
+sed<span class="w"> </span><span class="s1">&#39;3,$ s/bin/BIN/g&#39;</span><span class="w"> </span>text
+
+<span class="c1"># desde linea 1 hasta 7 incluida</span>
+sed<span class="w"> </span><span class="s1">&#39;1,7 s/bin/BIN/g&#39;</span><span class="w"> </span>text
+
+<span class="c1"># sustitulle en las lineas que contengan elfo, bin por BIN</span>
+sed<span class="w"> </span><span class="s1">&#39;/elfo/ s/bin/BIN/g&#39;</span><span class="w"> </span>text
+
+<span class="c1"># desde la linea que contenga capitulo 1 hasta capitulo 2 sustituye bin por BIN</span>
+sed<span class="w"> </span><span class="s1">&#39;/capitulo 1/,/capitulo 2/ s/bin/BIN/g&#39;</span><span class="w"> </span>text
+
+<span class="c1"># desde la linea que contenga  capitulo 2 hasta el final</span>
+sed<span class="w"> </span><span class="s1">&#39;/capitulo 2/,$ s/bin/BIN/g&#39;</span><span class="w"> </span>text
+</code></pre></div>
+<p><strong>Sed con expresiones</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># dejar linea 3 en blanco</span>
+sed<span class="w"> </span><span class="s1">&#39;3 /^.*$//g&#39;</span>
+
+<span class="c1"># eliminar el primer campo</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Nom:Cognom:Adreça:email&quot;</span><span class="w">  </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/^[^:]*://g&#39;</span><span class="w">  </span>
+Cognom:Adreça:email
+
+<span class="c1"># Reordenar primer y segundo campo. &quot;\1 y \2&quot; se refiere a parentesi 1 y 2</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Nom:Cognom:Adreça:email&quot;</span><span class="w">  </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;s/^([^:]*):([^:]*):/\2:\1:/g&#39;</span><span class="w">  </span>
+Cognom:Nom:Adreça:email
+
+<span class="c1"># eliminar un campo y redistribuir los otros.</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Nom:Grup:Nota&quot;</span><span class="w">  </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;s/^([^:]*):([^:]*):(.*)$/\3--\1/g&#39;</span><span class="w">   </span>
+Nota--Nom
+
+<span class="c1"># modificar un valor. &quot;&amp;&quot; se refiere al contenido a substituir</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Nom:Grup:Nota&quot;</span><span class="w">  </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;s/Grup/ASI-&amp;/g&#39;</span><span class="w">  </span>
+Nom:ASI-Grup:Nota
+
+<span class="c1"># utilizando variables </span>
+<span class="nv">NOMBRE</span><span class="o">=</span><span class="s2">&quot;Jorge&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Nom:Grup:Nota&quot;</span><span class="w">  </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;s/Nom/</span><span class="nv">$NOMBRE</span><span class="s2">/g&quot;</span><span class="w">  </span>
+Jorge:Grup:Nota
+
+<span class="c1"># poner separador de millares</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;45200&quot;</span><span class="w">  </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;s/[0-9]{3}</span>$<span class="s2">/.&amp;/g&quot;</span><span class="w">   </span>
+<span class="m">45</span>.200
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>sed<span class="w"> </span>-r<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/(^[^.]*)\.(crt|key)$/cat \1.\2/e&#39;</span><span class="w"> </span>&lt;<span class="w"> </span>client.template<span class="w"> </span>&gt;<span class="w"> </span>client.ovpn
+</code></pre></div>
+<p>reemplaza cualquier línea que termine en <code>.crt</code> o <code>.key</code> por el contenido de un archivo cuyo nombre es igual a la línea. La opción <code>-r</code> indica a <code>sed</code> que use expresiones regulares extendidas, mientras que <code>s</code> al inicio de la expresion indica remplazar <code>/OLDpatern/NewPatern/</code>, la <code>e</code> al final de la expresión indica que ejecute <code>cat \1.\2</code>  en el bash y el resulado se adiera como input en el <code>NewPatern</code></p>
+<h2 id="terminales-multiplexores">Terminales multiplexores</h2>
+<h3 id="screnn">screnn</h3>
+<div class="highlight"><pre><span></span><code>ctrl<span class="w"> </span>+<span class="w"> </span>a<span class="w"> </span>w<span class="w">  </span><span class="c1"># ver listado ventanas</span>
+ctrl<span class="w"> </span>+<span class="w"> </span>a<span class="w"> </span>c<span class="w">  </span><span class="c1"># crear ventana nueva</span>
+ctrl<span class="w"> </span>+<span class="w"> </span>a<span class="w"> </span>A<span class="w">  </span><span class="c1"># camviar nombre a ventana</span>
+
+<span class="c1"># moverse entre ventanas</span>
+ctrl<span class="w"> </span>+<span class="w"> </span>a<span class="w"> </span>p<span class="w">  </span><span class="c1"># anterior</span>
+ctrl<span class="w"> </span>+<span class="w"> </span>a<span class="w"> </span>numero
+ctrl<span class="w"> </span>+<span class="w"> </span>a<span class="w"> </span><span class="s2">&quot;  # lista de ventanas</span>
+
+<span class="s2">ctrl + a S  # crear region horizontal</span>
+<span class="s2">ctrl + a L  # crear region vertical</span>
+<span class="s2">ctrl + a tab    # cambiar region</span>
+
+<span class="s2">ctrl + a k  # matar ventana</span>
+<span class="s2">ctrl + a X  # matar region</span>
+<span class="s2">ctrl + a Q  # matar todas las regiones excepto actual</span>
+
+<span class="s2">ctrl + a d  # salir y dejar en segundo plano</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>screen<span class="w"> </span>-list<span class="w">    </span><span class="c1"># listar sesiones abiertas</span>
+screen<span class="w"> </span>-ls
+screen<span class="w"> </span>-S<span class="w"> </span><span class="s2">&quot;second sesion&quot;</span><span class="w">   </span><span class="c1"># crear sesion con nombre</span>
+screen<span class="w"> </span>-S<span class="w"> </span>ID<span class="w"> </span>-X<span class="w"> </span>quit<span class="w">    </span><span class="c1"># matar sesion</span>
+screen<span class="w"> </span>-r<span class="w"> </span>session-id<span class="w">    </span><span class="c1"># entrar en una sesion abierta</span>
+</code></pre></div>
+<p>Copiar  texto</p>
+<ol>
+<li>Ingrese al modo de copia/scrollback: <code>Ctrl+a-[</code>.</li>
+<li>Vaya al principio del texto que desea copiar usando las teclas de flecha.</li>
+<li>Marque el comienzo del fragmento de texto que desea copiar: Espacio.</li>
+<li>Vaya al final del fragmento de texto que desea copiar usando las teclas de flecha.</li>
+<li>Marque el final del fragmento de texto que desea copiar: Espacio.</li>
+<li>Vaya a la ventana de su elección y pegue el fragmento de texto: <code>Ctrl+a-]</code>.</li>
+</ol>
+<h3 id="tmux">tmux</h3>
+<div class="highlight"><pre><span></span><code>ctrl<span class="w"> </span>+<span class="w"> </span>b<span class="w"> </span>c<span class="w">  </span><span class="c1"># crear ventana</span>
+ctrl<span class="w"> </span>+<span class="w"> </span>b<span class="w"> </span>,<span class="w">  </span><span class="c1"># cambiar nombre ventana</span>
+ctrl<span class="w"> </span>+<span class="w"> </span>b<span class="w"> </span>d<span class="w">  </span><span class="c1"># detach</span>
+
+ctrl<span class="w"> </span>+<span class="w"> </span>b<span class="w"> </span>n<span class="w">  </span><span class="c1"># siguiente</span>
+ctrl<span class="w"> </span>+<span class="w"> </span>b<span class="w"> </span>p<span class="w">  </span><span class="c1"># anterior</span>
+ctrl<span class="w"> </span>+<span class="w"> </span>b<span class="w"> </span>numero
+
+ctrl<span class="w"> </span>+<span class="w"> </span>b<span class="w"> </span><span class="p">&amp;</span><span class="w">  </span><span class="c1"># cerrar ventana</span>
+ctrl<span class="w"> </span>+<span class="w"> </span>b<span class="w"> </span>x<span class="w">  </span><span class="c1"># cerrar region</span>
+
+ctrl<span class="w"> </span>+<span class="w"> </span>b<span class="w"> </span><span class="s2">&quot;  # dividir horizontalmente</span>
+<span class="s2">ctrl + b %  # dividir verticalmente</span>
+<span class="s2">ctrl + b flecha # moverse entre subventanas</span>
+
+<span class="s2">ctrl + b z  # zoom, max y min</span>
+<span class="s2">ctrl + b s  # cambiar de sesion</span>
+<span class="s2">ctrl + b </span>$<span class="s2">  # cambiar nombre sesion</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>tmux<span class="w">    </span><span class="c1"># iniciar una sesion</span>
+tmux<span class="w"> </span>ls<span class="w"> </span><span class="c1"># ver sesiones abiertas</span>
+tmux<span class="w"> </span>new<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;LPI&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;Window zero&quot;</span><span class="w">  </span><span class="c1"># crear sesion con nombre de sesión y ventana</span>
+tmux<span class="w"> </span>kill-session<span class="w"> </span>-t<span class="w"> </span><span class="s2">&quot;Second Session&quot;</span><span class="w"> </span><span class="c1"># matar sesion abierta</span>
+tmux<span class="w"> </span>a<span class="w"> </span>-t<span class="w"> </span>ID-sesion<span class="w"> </span><span class="c1"># acceder a sesion abierta</span>
+</code></pre></div>
+<p>Copiar  texto</p>
+<ol>
+<li>ingrese al modo de copia/scrollback: <code>Ctrl+a-[</code>.</li>
+<li>Vaya al principio del texto que desea copiar usando las teclas de flecha.</li>
+<li>Marque el comienzo del fragmento de texto que desea copiar: <code>Ctrl + espacio</code>.</li>
+<li>Vaya al final del fragmento de texto que desea copiar usando las teclas de flecha.</li>
+<li>Marque el final del fragmento de texto que desea copiar: <code>alt + w</code>.</li>
+<li>Vaya a la ventana de su elección y pegue el fragmento de texto: <code>Ctrl+a-]</code>.</li>
+</ol>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../102_Instalacion_de_Linux_y_gestion_de_paquetes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 102 Instalación de Linux y gestión de paquetes" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              102 Instalación de Linux y gestión de paquetes
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../104_Dispositivos_sistema_de_archivos_y_estandar_jerarquia_de_archivos/" class="md-footer__link md-footer__link--next" aria-label="Next: 104 Dispositivos, sistema de archivos Linux y el estándar de jerarquia de archivos" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              104 Dispositivos, sistema de archivos Linux y el estándar de jerarquia de archivos
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+    
+  </body>
+</html>

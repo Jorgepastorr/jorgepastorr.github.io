@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://jorgepastorr.github.io/apuntes/bases_datos/mongo/Mongo/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.2">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.2.5">
     
     
       
@@ -21,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.816931ca.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2d9f7617.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9204c3b2.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
         
           
           
@@ -36,16 +36,16 @@
     
       
         
+        
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../../..":"../../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-
 
     
     
@@ -147,7 +147,7 @@
         <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     jorgepastorr/apuntes
@@ -192,7 +192,7 @@
       <a href="https://github.com/jorgepastorr/apuntes/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     jorgepastorr/apuntes
@@ -1303,12 +1303,803 @@
       
       
         <label class="md-nav__link" for="__nav_5">
+          Ccna
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ccna" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ccna
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/ordenes/" class="md-nav__link">
+        ordenes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          1 IntroducciónRedes(ITN)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1 IntroducciónRedes(ITN)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          1 IntroducciónRedes(ITN)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/01-LasRedesEnLaActualidad/" class="md-nav__link">
+        01 LasRedesEnLaActualidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/02-ConfiguracionBasicaDelSwitchYdisp/" class="md-nav__link">
+        Configuración básica del Switch y dispositivo final
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/03-ProtocolosYmodelos/" class="md-nav__link">
+        Protocolos y modelos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/04-CapaFisica/" class="md-nav__link">
+        Capa Física
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/05-SistemasDeNumeracion/" class="md-nav__link">
+        Sistemas de numeración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/06-CapaDeEnlaceDeDatos/" class="md-nav__link">
+        Capa de enlace de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/07-ConmutacionEthernet/" class="md-nav__link">
+        Conmutación Ethernet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/08-CapaDeRed/" class="md-nav__link">
+        Capa de Red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/09-Resoluci%C3%B3nDeDireccion/" class="md-nav__link">
+        Resolución de dirección
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/10-ConfiguracionBasicaDelRouter/" class="md-nav__link">
+        Configuración básica del router
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/11-DireccionamientoIPv4/" class="md-nav__link">
+        Direccionamiento IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/12-DireccionamientoIPv6/" class="md-nav__link">
+        Direccionamiento IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/13-ICMP/" class="md-nav__link">
+        ICMP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/14-CapaDeTransporte/" class="md-nav__link">
+        Capa de transporte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/15-CapaDeAplicacion/" class="md-nav__link">
+        Capa de aplicación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/16-FundamentosDeSeguridadDeRed/" class="md-nav__link">
+        Fundamentos de seguridad de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/17-ConstruirUnaRedPeque%C3%B1a/" class="md-nav__link">
+        Construir una red pequeña
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/ipv6/" class="md-nav__link">
+        IPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/1-Introducci%C3%B3nRedes%28ITN%29/minicom/" class="md-nav__link">
+        Minicom
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          2 Switching Routing And WirelessEssentials(SRWE)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2 Switching Routing And WirelessEssentials(SRWE)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          2 Switching Routing And WirelessEssentials(SRWE)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/01-ConfiguracionBasicaDelDispositivo/" class="md-nav__link">
+        Configuración básica del dispositivo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/03-VLAN/" class="md-nav__link">
+        VLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/04-Inter-VLAN-Routing/" class="md-nav__link">
+        Inter-VLAN Routing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/05-ConceptosSTP/" class="md-nav__link">
+        Conceptos STP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/06-EtherChannel/" class="md-nav__link">
+        EtherChannel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/07-DHCPv4/" class="md-nav__link">
+        DHCPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/08-SLAACyDHCPv6/" class="md-nav__link">
+        SLAAC y DHCPv6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/09-ConceptosdeFHRP/" class="md-nav__link">
+        Conceptos de FHRP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/10-ConceptosSeguridadLAN/" class="md-nav__link">
+        Conceptos de seguridad LAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/11-ConfiguracionSeguridadSwitch/" class="md-nav__link">
+        Configuración de seguridad en el Switch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/12-ConceptosWLAN/" class="md-nav__link">
+        Conceptos de WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/13-ConfiguracionesRedesInal%C3%A1mbricasWLAN/" class="md-nav__link">
+        Configuraciones de redes inalámbricas WLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/14-ConceptosEnrutamiento/" class="md-nav__link">
+        Conceptos de enrutamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/2-Switching-Routing-And-WirelessEssentials%28SRWE%29/15-EnrutamientoIPEstatico/" class="md-nav__link">
+        Enrutamiento IP Estático
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          3 Enterprise Networking Security AndAutomation ENSA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3 Enterprise Networking Security AndAutomation ENSA" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          3 Enterprise Networking Security AndAutomation ENSA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/01-ConceptosOSPFv2DeAreaUnica/" class="md-nav__link">
+        Conceptos de OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/02-ConfiguracionOSPFv2AreaUnica/" class="md-nav__link">
+        Configuración OSPFv2 de área única
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/03-ConceptosSeguridadRedes/" class="md-nav__link">
+        Conceptos de Seguridad en Redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/04-ACL/" class="md-nav__link">
+        ACL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/05-ACLconfiguracionIPv4/" class="md-nav__link">
+        ACL para configuración IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/06-NAT-IPv4/" class="md-nav__link">
+        NAT para IPv4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/07-conceptosWAN/" class="md-nav__link">
+        Conceptos WAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/08-ConceptosVPNeIPsec/" class="md-nav__link">
+        Conceptos de VPN e IPsec
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/09-ConceptosQoS/" class="md-nav__link">
+        Conceptos de QoS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/10-AdministracionDeRedes/" class="md-nav__link">
+        Administración de redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/11-Dise%C3%B1oDeRedes/" class="md-nav__link">
+        Diseño de redes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/12-ResolucionDeProblemasDeRed/" class="md-nav__link">
+        Resolución de problemas de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ccna/3-Enterprise-Networking-Security-AndAutomation-ENSA/13-VirtualizacionDeRed/" class="md-nav__link">
+        Virtualización de Red
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
           Cloud
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Cloud" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Cloud
         </label>
@@ -1345,18 +2136,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_7">
           Curiosidades
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Curiosidades" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Curiosidades
         </label>
@@ -1477,18 +2268,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_8">
           Desatendidas
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Desatendidas" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Desatendidas
         </label>
@@ -1567,18 +2358,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_9">
           Generar doc
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Generar doc" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Generar doc
         </label>
@@ -1629,18 +2420,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_9">
+        <label class="md-nav__link" for="__nav_10">
           Lenguajes
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Lenguajes" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
+        <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           Lenguajes
         </label>
@@ -1683,18 +2474,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_9_3">
+        <label class="md-nav__link" for="__nav_10_3">
           Python3
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Python3" data-md-level="2">
-        <label class="md-nav__title" for="__nav_9_3">
+        <label class="md-nav__title" for="__nav_10_3">
           <span class="md-nav__icon md-icon"></span>
           Python3
         </label>
@@ -1877,18 +2668,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3_13" type="checkbox" id="__nav_9_3_13" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_13" type="checkbox" id="__nav_10_3_13" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_9_3_13">
+        <label class="md-nav__link" for="__nav_10_3_13">
           Fundamentos
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Fundamentos" data-md-level="3">
-        <label class="md-nav__title" for="__nav_9_3_13">
+        <label class="md-nav__title" for="__nav_10_3_13">
           <span class="md-nav__icon md-icon"></span>
           Fundamentos
         </label>
@@ -1995,18 +2786,1123 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_10">
+        <label class="md-nav__link" for="__nav_11">
+          Lpi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lpi" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Lpi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_1">
+          101
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="101" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          101
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/101_Arquitectura_del_sistema/" class="md-nav__link">
+        101 Arquitectura del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/102_Instalacion_de_Linux_y_gestion_de_paquetes/" class="md-nav__link">
+        102 Instalación de Linux y gestión de paquetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/103_Comandos_GNU_y_Linux/" class="md-nav__link">
+        103 Comandos GNU y Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/101/104_Dispositivos_sistema_de_archivos_y_estandar_jerarquia_de_archivos/" class="md-nav__link">
+        104 Dispositivos, sistema de archivos Linux y el estándar de jerarquia de archivos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" type="checkbox" id="__nav_11_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_2">
+          102
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="102" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          102
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/105.2_Scripting/" class="md-nav__link">
+        105.2 Scripting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/105_Shells/" class="md-nav__link">
+        105 Shells
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/106_Interfaces_de_usuario_y_escritorio/" class="md-nav__link">
+        106 Interfaces de usuario y escritorio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/107_tareas_de_administracion/" class="md-nav__link">
+        107 tareas de administración
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/108_Servicios_esenciales_del_sistema/" class="md-nav__link">
+        108 Servicios esenciales del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/108_rsyslog_server/" class="md-nav__link">
+        rsyslog server central
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/109_Fundamentos_de_red/" class="md-nav__link">
+        109 Fundamentos de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/102/110_Seguridad/" class="md-nav__link">
+        110 Seguridad
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_3" type="checkbox" id="__nav_11_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_3">
+          201
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="201" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_3">
+          <span class="md-nav__icon md-icon"></span>
+          201
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/200_Planificaci%C3%B3n_de_la_capacidad/" class="md-nav__link">
+        200 Planificación de la capacidad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/201_Kernel_Linux/" class="md-nav__link">
+        201 Kernel Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/202_Arranque_del%20_Sistema/" class="md-nav__link">
+        202 Arranque del  Sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/203_sistemas_de_archivos_y_dispositivos/" class="md-nav__link">
+        203 sistemas de archivos y dispositivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/204_Administracion_avanzada_de_dispositivos_de_almacenamiento/" class="md-nav__link">
+        204 Administración avanzada de dispositivos de almacenamiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/205_configuracion_de_red/" class="md-nav__link">
+        205 configuración de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/206_Mantenimiento_del_sistema/" class="md-nav__link">
+        206 Mantenimiento del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/201/Exam_201_Detailed_Objectives/" class="md-nav__link">
+        Exam 201: Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4">
+          202
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="202" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          202
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/207_Servidor_de_nombres_de_dominio/" class="md-nav__link">
+        207 Servidor de nombres de dominio (DNS)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/208.4_servicios_web_nginx/" class="md-nav__link">
+        208 servicios web nginx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/208_servicios_web/" class="md-nav__link">
+        208 servicios web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/209_compartir_ficheros/" class="md-nav__link">
+        209 compartir ficheros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/210_gestion_de_clientes_de_red/" class="md-nav__link">
+        210 gestión de clientes de red
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/211_Servicios_E-Mail/" class="md-nav__link">
+        211 Servicios de E-Mail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/212_Seguridad_del_sistema/" class="md-nav__link">
+        212 Seguridad del sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/202/Exam_202_Detailed_Objectives/" class="md-nav__link">
+        Exam 202 Detailed Objectives
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_5" type="checkbox" id="__nav_11_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_5">
+          303
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="303" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_5">
+          <span class="md-nav__icon md-icon"></span>
+          303
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/331.3_Encrypted_File_Systems/" class="md-nav__link">
+        Topic 331: Cryptography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/332.3_Resource_Control/" class="md-nav__link">
+        Topic 332: Host Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/333.1_Discretionary_Access_Control/" class="md-nav__link">
+        333.1 Discretionary Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/333.2_Mandatory_Access_Control/" class="md-nav__link">
+        333.2 Mandatory Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/334.3.2_Packet_Filtering/" class="md-nav__link">
+        Firewalld
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/334.3_Packet_Filtering/" class="md-nav__link">
+        Iptables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/extra/" class="md-nav__link">
+        Extra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/freeIpa/" class="md-nav__link">
+        freeIpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/gpg/" class="md-nav__link">
+        GPG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/nose/" class="md-nav__link">
+        Nose
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/objetivos/" class="md-nav__link">
+        Objetivos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/303/pendiente/" class="md-nav__link">
+        Pendiente
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_6" type="checkbox" id="__nav_11_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_6">
+          304
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="304" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_6">
+          <span class="md-nav__icon md-icon"></span>
+          304
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/ClusterPacemakerDRBD/" class="md-nav__link">
+        Cluster Pacemaker DRBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/Clusterfs/" class="md-nav__link">
+        Clusterfs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/Haproxy/" class="md-nav__link">
+        Haproxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/Montaje%20isard-nas1%20y%20isard-nas2/" class="md-nav__link">
+        Montaje isard-nas1 y isard-nas2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/cluster_basico/" class="md-nav__link">
+        Cluster en centos con pacemaker/corosync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/clvm_gfs2_en_clusterPacemaker/" class="md-nav__link">
+        clvm gfs2 en clusterPacemaker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/304/haproxy_pacemaker/" class="md-nav__link">
+        Haproxy pacemaker
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_7" type="checkbox" id="__nav_11_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_7">
+          305
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="305" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_7">
+          <span class="md-nav__icon md-icon"></span>
+          305
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.1VirtualizationConceptsandTheory/" class="md-nav__link">
+        351.1 Virtualization Concepts and Theory (weight: 6)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.2Xen/" class="md-nav__link">
+        351.2 Xen (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.3Qemu/" class="md-nav__link">
+        351.3 QEMU (weight: 4)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.4LibvirtVirtualMachineManageme/" class="md-nav__link">
+        351.4 Libvirt Virtual Machine Management (weight: 9)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/351.5VirtualMachineDiskImageManagem/" class="md-nav__link">
+        351.5 Virtual Machine Disk Image Management (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352.1ContainerVirtualizationConcepts/" class="md-nav__link">
+        352.1 Container Virtualization Concepts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352.3Docker/" class="md-nav__link">
+        352.3 Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352.4ContainerOrchestrationPlatforms/" class="md-nav__link">
+        352.4ContainerOrchestrationPlatforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/352LXC/" class="md-nav__link">
+        352.2 LXC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.1CloudManagementTools/" class="md-nav__link">
+        353.1 Cloud Management Tools (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.2Packer/" class="md-nav__link">
+        353.2 Packer (weight: 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.3cloud-init/" class="md-nav__link">
+        353.3 cloud-init (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lpi/305/353.4Vagrant/" class="md-nav__link">
+        353.4 Vagrant (weight: 3)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
           Seguridad
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Seguridad" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+        <label class="md-nav__title" for="__nav_12">
           <span class="md-nav__icon md-icon"></span>
           Seguridad
         </label>
@@ -2147,18 +4043,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_10" type="checkbox" id="__nav_10_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_10" type="checkbox" id="__nav_12_10" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_10_10">
+        <label class="md-nav__link" for="__nav_12_10">
           Backups
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Backups" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_10">
+        <label class="md-nav__title" for="__nav_12_10">
           <span class="md-nav__icon md-icon"></span>
           Backups
         </label>
@@ -2236,18 +4132,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_11" type="checkbox" id="__nav_10_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_11" type="checkbox" id="__nav_12_11" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_10_11">
+        <label class="md-nav__link" for="__nav_12_11">
           Cortafuegos
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Cortafuegos" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_11">
+        <label class="md-nav__title" for="__nav_12_11">
           <span class="md-nav__icon md-icon"></span>
           Cortafuegos
         </label>
@@ -2291,18 +4187,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_11">
+        <label class="md-nav__link" for="__nav_13">
           Sistemas
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Sistemas" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
+        <label class="md-nav__title" for="__nav_13">
           <span class="md-nav__icon md-icon"></span>
           Sistemas
         </label>
@@ -2541,18 +4437,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_17" type="checkbox" id="__nav_11_17" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_17" type="checkbox" id="__nav_13_17" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_11_17">
+        <label class="md-nav__link" for="__nav_13_17">
           Automatizacion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Automatizacion" data-md-level="2">
-        <label class="md-nav__title" for="__nav_11_17">
+        <label class="md-nav__title" for="__nav_13_17">
           <span class="md-nav__icon md-icon"></span>
           Automatizacion
         </label>
@@ -2610,18 +4506,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_12">
+        <label class="md-nav__link" for="__nav_14">
           Virtualizacion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Virtualizacion" data-md-level="1">
-        <label class="md-nav__title" for="__nav_12">
+        <label class="md-nav__title" for="__nav_14">
           <span class="md-nav__icon md-icon"></span>
           Virtualizacion
         </label>
@@ -2706,18 +4602,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_6" type="checkbox" id="__nav_12_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_6" type="checkbox" id="__nav_14_6" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_12_6">
+        <label class="md-nav__link" for="__nav_14_6">
           Virt manager
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Virt manager" data-md-level="2">
-        <label class="md-nav__title" for="__nav_12_6">
+        <label class="md-nav__title" for="__nav_14_6">
           <span class="md-nav__icon md-icon"></span>
           Virt manager
         </label>
@@ -3123,194 +5019,195 @@
 </a>
 
 
+
 <h1 id="mongo">Mongo</h1>
 <h2 id="basico">básico</h2>
-<div class="highlight"><pre><span></span><code><span class="nx">Entrar</span> <span class="nx">en</span> <span class="nx">consola</span><span class="o">:</span>
+<div class="highlight"><pre><span></span><code><span class="nx">Entrar</span><span class="w"> </span><span class="nx">en</span><span class="w"> </span><span class="nx">consola</span><span class="o">:</span>
 <span class="nx">mongo</span>
-<span class="nx">Comandes</span> <span class="nx">bàsiques</span> <span class="nx">de</span> <span class="nx">la</span> <span class="nx">consola</span><span class="o">:</span>
-<span class="nx">db</span> <span class="c1">// mostra la BD en ús</span>
-<span class="nx">show</span> <span class="nx">databases</span> <span class="c1">// mostra les BD del servidor</span>
-<span class="nx">show</span> <span class="nx">collections</span> <span class="c1">// mostre les col·leccions de la BD en ús</span>
-<span class="nx">use</span> <span class="nx">proves</span> <span class="c1">// fa que la BD en ús sigui proves; si no existeix, la crea</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">createCollection</span><span class="p">(</span><span class="err">“</span><span class="nx">tweets</span><span class="err">”</span><span class="p">)</span> <span class="c1">// crear tabla</span>
+<span class="nx">Comandes</span><span class="w"> </span><span class="nx">bàsiques</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">la</span><span class="w"> </span><span class="nx">consola</span><span class="o">:</span>
+<span class="nx">db</span><span class="w"> </span><span class="c1">// mostra la BD en ús</span>
+<span class="nx">show</span><span class="w"> </span><span class="nx">databases</span><span class="w"> </span><span class="c1">// mostra les BD del servidor</span>
+<span class="nx">show</span><span class="w"> </span><span class="nx">collections</span><span class="w"> </span><span class="c1">// mostre les col·leccions de la BD en ús</span>
+<span class="nx">use</span><span class="w"> </span><span class="nx">proves</span><span class="w"> </span><span class="c1">// fa que la BD en ús sigui proves; si no existeix, la crea</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">createCollection</span><span class="p">(</span><span class="err">“</span><span class="nx">tweets</span><span class="err">”</span><span class="p">)</span><span class="w"> </span><span class="c1">// crear tabla</span>
 </code></pre></div>
 <h2 id="insertar">insertar</h2>
 <p><code>insertOne</code> se utiliza para insertar una fila y <code>insertMany</code> para insertar múltiples filas</p>
-<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span> <span class="nx">item</span><span class="o">:</span> <span class="s2">&quot;canvas&quot;</span><span class="p">,</span> <span class="nx">qty</span><span class="o">:</span> <span class="mf">100</span><span class="p">,</span> <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;cotton&quot;</span><span class="p">],</span> <span class="nx">size</span><span class="o">:</span> <span class="p">{</span> <span class="nx">h</span><span class="o">:</span> <span class="mf">28</span><span class="p">,</span> <span class="nx">w</span><span class="o">:</span> <span class="mf">35.5</span><span class="p">,</span> <span class="nx">uom</span><span class="o">:</span> <span class="s2">&quot;cm&quot;</span> <span class="p">}</span> <span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span><span class="w"> </span><span class="nx">item</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;canvas&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">qty</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="nx">tags</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;cotton&quot;</span><span class="p">],</span><span class="w"> </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">h</span><span class="o">:</span><span class="w"> </span><span class="mf">28</span><span class="p">,</span><span class="w"> </span><span class="nx">w</span><span class="o">:</span><span class="w"> </span><span class="mf">35.5</span><span class="p">,</span><span class="w"> </span><span class="nx">uom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cm&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">})</span>
 
 <span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">insertMany</span><span class="p">([</span>
-   <span class="p">{</span> <span class="nx">item</span><span class="o">:</span> <span class="s2">&quot;journal&quot;</span><span class="p">,</span> <span class="nx">qty</span><span class="o">:</span> <span class="mf">25</span><span class="p">,</span> <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;blank&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">],</span> <span class="nx">size</span><span class="o">:</span> <span class="p">{</span> <span class="nx">h</span><span class="o">:</span> <span class="mf">14</span><span class="p">,</span> <span class="nx">w</span><span class="o">:</span> <span class="mf">21</span><span class="p">,</span> <span class="nx">uom</span><span class="o">:</span> <span class="s2">&quot;cm&quot;</span> <span class="p">}</span> <span class="p">},</span>
-   <span class="p">{</span> <span class="nx">item</span><span class="o">:</span> <span class="s2">&quot;mat&quot;</span><span class="p">,</span> <span class="nx">qty</span><span class="o">:</span> <span class="mf">85</span><span class="p">,</span> <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;gray&quot;</span><span class="p">],</span> <span class="nx">size</span><span class="o">:</span> <span class="p">{</span> <span class="nx">h</span><span class="o">:</span> <span class="mf">27.9</span><span class="p">,</span> <span class="nx">w</span><span class="o">:</span> <span class="mf">35.5</span><span class="p">,</span> <span class="nx">uom</span><span class="o">:</span> <span class="s2">&quot;cm&quot;</span> <span class="p">}</span> <span class="p">},</span>
-   <span class="p">{</span> <span class="nx">item</span><span class="o">:</span> <span class="s2">&quot;mousepad&quot;</span><span class="p">,</span> <span class="nx">qty</span><span class="o">:</span> <span class="mf">25</span><span class="p">,</span> <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;gel&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">],</span> <span class="nx">size</span><span class="o">:</span> <span class="p">{</span> <span class="nx">h</span><span class="o">:</span> <span class="mf">19</span><span class="p">,</span> <span class="nx">w</span><span class="o">:</span> <span class="mf">22.85</span><span class="p">,</span> <span class="nx">uom</span><span class="o">:</span> <span class="s2">&quot;cm&quot;</span> <span class="p">}</span> <span class="p">}</span>
+<span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="nx">item</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;journal&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">qty</span><span class="o">:</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="w"> </span><span class="nx">tags</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;blank&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;red&quot;</span><span class="p">],</span><span class="w"> </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">h</span><span class="o">:</span><span class="w"> </span><span class="mf">14</span><span class="p">,</span><span class="w"> </span><span class="nx">w</span><span class="o">:</span><span class="w"> </span><span class="mf">21</span><span class="p">,</span><span class="w"> </span><span class="nx">uom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cm&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+<span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="nx">item</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mat&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">qty</span><span class="o">:</span><span class="w"> </span><span class="mf">85</span><span class="p">,</span><span class="w"> </span><span class="nx">tags</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;gray&quot;</span><span class="p">],</span><span class="w"> </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">h</span><span class="o">:</span><span class="w"> </span><span class="mf">27.9</span><span class="p">,</span><span class="w"> </span><span class="nx">w</span><span class="o">:</span><span class="w"> </span><span class="mf">35.5</span><span class="p">,</span><span class="w"> </span><span class="nx">uom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cm&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+<span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="nx">item</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mousepad&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">qty</span><span class="o">:</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="w"> </span><span class="nx">tags</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;gel&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;blue&quot;</span><span class="p">],</span><span class="w"> </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">h</span><span class="o">:</span><span class="w"> </span><span class="mf">19</span><span class="p">,</span><span class="w"> </span><span class="nx">w</span><span class="o">:</span><span class="w"> </span><span class="mf">22.85</span><span class="p">,</span><span class="w"> </span><span class="nx">uom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cm&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
 <span class="p">])</span>
 </code></pre></div>
 <h3 id="insert-save">insert save</h3>
 <p>Exemple (utilitza el mètode <em>deprecat</em> <code>db.collection.save()</code> enlloc del <code>.insertOne()</code>) :</p>
 <div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({})</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="p">[]})</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;George&#39;</span><span class="p">]})</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;George&#39;</span><span class="p">,</span> <span class="s1">&#39;Raymond&#39;</span><span class="p">]})</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;George&#39;</span><span class="p">,</span> <span class="s1">&#39;Raymond&#39;</span><span class="p">,</span> <span class="s1">&#39;Richard&#39;</span><span class="p">]})</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;George&#39;</span><span class="p">,</span> <span class="s1">&#39;Raymond&#39;</span><span class="p">,</span> <span class="s1">&#39;Richard&#39;</span><span class="p">,</span> <span class="s1">&#39;Martin&#39;</span><span class="p">]})</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="p">[]})</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;George&#39;</span><span class="p">]})</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;George&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Raymond&#39;</span><span class="p">]})</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;George&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Raymond&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Richard&#39;</span><span class="p">]})</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;George&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Raymond&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Richard&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Martin&#39;</span><span class="p">]})</span>
 </code></pre></div>
 <h2 id="update">Update</h2>
 <p>tiene este formato</p>
-<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">collection</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">update</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">collection</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="w"> </span><span class="n">update</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">)</span>
 </code></pre></div>
 <p><a href="https://docs.mongodb.com/manual/reference/operator/update/#id1">Operadors de valores</a></p>
 <p>actualiza el primero que encuentra</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">updateOne</span><span class="p">(</span> 
-<span class="p">...</span>    <span class="p">{</span> <span class="n">item</span><span class="p">:</span> <span class="s">&quot;paper&quot;</span> <span class="p">},</span> 
-<span class="p">...</span>    <span class="p">{</span> 
-<span class="p">...</span>      <span class="n">$set</span><span class="p">:</span> <span class="p">{</span> <span class="s">&quot;size.uom&quot;</span><span class="p">:</span> <span class="s">&quot;cm&quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="s">&quot;P&quot;</span> <span class="p">},</span> 
-<span class="p">...</span>      <span class="n">$currentDate</span><span class="p">:</span> <span class="p">{</span> <span class="n">lastModified</span><span class="p">:</span> <span class="kc">true</span> <span class="p">}</span> 
-<span class="p">...</span>    <span class="p">}</span> 
-<span class="p">...</span> <span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">updateOne</span><span class="p">(</span><span class="w"> </span>
+<span class="p">...</span><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="n">item</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;paper&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span>
+<span class="p">...</span><span class="w">    </span><span class="p">{</span><span class="w"> </span>
+<span class="p">...</span><span class="w">      </span><span class="n">$set</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;size.uom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cm&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;P&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span>
+<span class="p">...</span><span class="w">      </span><span class="n">$currentDate</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">lastModified</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
+<span class="p">...</span><span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="p">...</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
 <p>actualizar todos los que coinciden</p>
-<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">updateMany</span><span class="p">(</span> 
-   <span class="p">{</span> <span class="s">&quot;qty&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="n">$lt</span><span class="p">:</span> <span class="mi">50</span> <span class="p">}</span> <span class="p">},</span> 
-   <span class="p">{</span> 
-     <span class="n">$set</span><span class="p">:</span> <span class="p">{</span> <span class="s">&quot;size.uom&quot;</span><span class="p">:</span> <span class="s">&quot;in&quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="s">&quot;P&quot;</span> <span class="p">},</span> 
-     <span class="n">$currentDate</span><span class="p">:</span> <span class="p">{</span> <span class="n">lastModified</span><span class="p">:</span> <span class="kc">true</span> <span class="p">}</span> 
-   <span class="p">}</span> 
-<span class="p">)</span> 
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">updateMany</span><span class="p">(</span><span class="w"> </span>
+<span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;qty&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$lt</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span>
+<span class="w">   </span><span class="p">{</span><span class="w"> </span>
+<span class="w">     </span><span class="n">$set</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;size.uom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;in&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;P&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span>
+<span class="w">     </span><span class="n">$currentDate</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">lastModified</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
+<span class="w">   </span><span class="p">}</span><span class="w"> </span>
+<span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 <p>sustituir el primero que encuentra</p>
-<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">replaceOne</span><span class="p">(</span> 
-   <span class="p">{</span> <span class="n">item</span><span class="p">:</span> <span class="s">&quot;paper&quot;</span> <span class="p">},</span> 
-   <span class="p">{</span> <span class="n">item</span><span class="p">:</span> <span class="s">&quot;paper&quot;</span><span class="p">,</span> <span class="n">instock</span><span class="p">:</span> <span class="o">[</span> <span class="p">{</span> <span class="n">warehouse</span><span class="p">:</span> <span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="n">qty</span><span class="p">:</span> <span class="mi">60</span> <span class="p">},</span> <span class="p">{</span> <span class="n">warehouse</span><span class="p">:</span> <span class="s">&quot;B&quot;</span><span class="p">,</span> <span class="n">qty</span><span class="p">:</span> <span class="mi">40</span> <span class="p">}</span> <span class="o">]</span> <span class="p">}</span> 
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">replaceOne</span><span class="p">(</span><span class="w"> </span>
+<span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="n">item</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;paper&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span>
+<span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="n">item</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;paper&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">instock</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">warehouse</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">qty</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">warehouse</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">qty</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
 <span class="p">)</span>
 </code></pre></div>
 <h2 id="delete">Delete</h2>
-<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">deleteMany</span><span class="p">({</span> <span class="n">status</span> <span class="p">:</span> <span class="s">&quot;A&quot;</span> <span class="p">})</span>
-<span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">deleteOne</span><span class="p">({</span> <span class="n">status</span> <span class="p">:</span> <span class="s">&quot;A&quot;</span> <span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">deleteMany</span><span class="p">({</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="p">})</span>
+<span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">deleteOne</span><span class="p">({</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div>
 <h2 id="remove">Remove</h2>
-<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">restaurants</span><span class="p">.</span><span class="na">remove</span><span class="p">({})</span> <span class="c1">// eliminar contenido de tabla</span>
-<span class="n">db</span><span class="p">.</span><span class="na">restaurants</span><span class="p">.</span><span class="na">drop</span><span class="p">()</span> <span class="c1">// eliminar tabla</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">restaurants</span><span class="p">.</span><span class="na">remove</span><span class="p">({})</span><span class="w"> </span><span class="c1">// eliminar contenido de tabla</span>
+<span class="n">db</span><span class="p">.</span><span class="na">restaurants</span><span class="p">.</span><span class="na">drop</span><span class="p">()</span><span class="w"> </span><span class="c1">// eliminar tabla</span>
 </code></pre></div>
 <h2 id="operadores">Operadores</h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># comparadores</span>
-<span class="nv">$eq</span> <span class="c1"># igual que</span>
-<span class="nv">$gt</span> <span class="c1"># mayor que</span>
-<span class="nv">$gte</span> <span class="c1"># mayor o igual que</span>
-<span class="nv">$lt</span> <span class="c1"># menor que</span>
-<span class="nv">$lte</span> <span class="c1"># menor o igual que</span>
-<span class="nv">$ne</span>  <span class="c1">#  diferente </span>
-<span class="nv">$in</span> <span class="c1"># cualquier valor dentro de  una array</span>
-<span class="nv">$nin</span> <span class="c1"># ningun  valor dentro de  una array</span>
+<span class="nv">$eq</span><span class="w"> </span><span class="c1"># igual que</span>
+<span class="nv">$gt</span><span class="w"> </span><span class="c1"># mayor que</span>
+<span class="nv">$gte</span><span class="w"> </span><span class="c1"># mayor o igual que</span>
+<span class="nv">$lt</span><span class="w"> </span><span class="c1"># menor que</span>
+<span class="nv">$lte</span><span class="w"> </span><span class="c1"># menor o igual que</span>
+<span class="nv">$ne</span><span class="w">  </span><span class="c1">#  diferente </span>
+<span class="nv">$in</span><span class="w"> </span><span class="c1"># cualquier valor dentro de  una array</span>
+<span class="nv">$nin</span><span class="w"> </span><span class="c1"># ningun  valor dentro de  una array</span>
 
 <span class="c1"># logicos</span>
-<span class="nv">$or</span> <span class="c1"># cualquier coincidente</span>
-<span class="nv">$and</span> <span class="c1"># todos an de coincidir</span>
-<span class="nv">$not</span> <span class="c1"># invierte el efecto de una consulta</span>
-<span class="nv">$nor</span> <span class="c1"># debuelve los elementos que no comparten ninguna de las condiciones</span>
-<span class="nv">$exists</span> <span class="c1"># retorna los documentos que contienen el campo espewcificado</span>
+<span class="nv">$or</span><span class="w"> </span><span class="c1"># cualquier coincidente</span>
+<span class="nv">$and</span><span class="w"> </span><span class="c1"># todos an de coincidir</span>
+<span class="nv">$not</span><span class="w"> </span><span class="c1"># invierte el efecto de una consulta</span>
+<span class="nv">$nor</span><span class="w"> </span><span class="c1"># debuelve los elementos que no comparten ninguna de las condiciones</span>
+<span class="nv">$exists</span><span class="w"> </span><span class="c1"># retorna los documentos que contienen el campo espewcificado</span>
 </code></pre></div>
 <h2 id="importar">Importar</h2>
 <p>desde fuera de mongo</p>
-<div class="highlight"><pre><span></span><code>mongoimport --db users --collection contacts --file contacts.json
-mongoimport --db users --collection contacts --type csv <span class="se">\</span>
-            --headerline --file /opt/backups/contacts.csv
+<div class="highlight"><pre><span></span><code>mongoimport<span class="w"> </span>--db<span class="w"> </span>users<span class="w"> </span>--collection<span class="w"> </span>contacts<span class="w"> </span>--file<span class="w"> </span>contacts.json
+mongoimport<span class="w"> </span>--db<span class="w"> </span>users<span class="w"> </span>--collection<span class="w"> </span>contacts<span class="w"> </span>--type<span class="w"> </span>csv<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>--headerline<span class="w"> </span>--file<span class="w"> </span>/opt/backups/contacts.csv
 
-mongoimport --host <span class="m">127</span>.0.0.1 --port <span class="m">27017</span> --db geo --collection countries <span class="se">\ </span>
-            --type json --file json_dades_exemple/geo/countries.json -<span class="se">\</span>
-            -drop --stopOnError --maintainInsertionOrder
+mongoimport<span class="w"> </span>--host<span class="w"> </span><span class="m">127</span>.0.0.1<span class="w"> </span>--port<span class="w"> </span><span class="m">27017</span><span class="w"> </span>--db<span class="w"> </span>geo<span class="w"> </span>--collection<span class="w"> </span>countries<span class="w"> </span><span class="se">\ </span>
+<span class="w">            </span>--type<span class="w"> </span>json<span class="w"> </span>--file<span class="w"> </span>json_dades_exemple/geo/countries.json<span class="w"> </span>-<span class="se">\</span>
+<span class="w">            </span>-drop<span class="w"> </span>--stopOnError<span class="w"> </span>--maintainInsertionOrder
 </code></pre></div>
 <h2 id="querys">querys</h2>
 <p>Para hacer búsquedas se utiliza el método <code>find</code> o <code>findOne</code> si solo quieres un resultado.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="s2">&quot;patron de busqueda&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;campos a mostrar, por defecto todos&quot;</span><span class="p">})</span>
-<span class="o">&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">count</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="s2">&quot;patron de busqueda&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;campos a mostrar, por defecto todos&quot;</span><span class="p">})</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">count</span><span class="p">()</span>
 <span class="mf">4</span>
-<span class="o">&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">pretty</span><span class="p">()</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">pretty</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;5e661c4863e51a5f0a8f3c2a&quot;</span><span class="p">),</span>
-    <span class="s2">&quot;item&quot;</span> <span class="o">:</span> <span class="s2">&quot;mousepad&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;qty&quot;</span> <span class="o">:</span> <span class="mf">25</span><span class="p">,</span>
-    <span class="s2">&quot;tags&quot;</span> <span class="o">:</span> <span class="p">[</span>
-        <span class="s2">&quot;gel&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;blue&quot;</span>
-    <span class="p">],</span>
-    <span class="s2">&quot;size&quot;</span> <span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;h&quot;</span> <span class="o">:</span> <span class="mf">19</span><span class="p">,</span>
-        <span class="s2">&quot;w&quot;</span> <span class="o">:</span> <span class="mf">22.85</span><span class="p">,</span>
-        <span class="s2">&quot;uom&quot;</span> <span class="o">:</span> <span class="s2">&quot;cm&quot;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="s2">&quot;_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;5e661c4863e51a5f0a8f3c2a&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="s2">&quot;item&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mousepad&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;qty&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;tags&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;gel&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;blue&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="s2">&quot;size&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">&quot;h&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">19</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;w&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">22.85</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;uom&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cm&quot;</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 <span class="p">...</span>
- <span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">findOne</span><span class="p">()</span>
+<span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">findOne</span><span class="p">()</span>
 </code></pre></div>
 <h3 id="where">where</h3>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">item</span><span class="o">:</span> <span class="s2">&quot;mousepad&quot;</span><span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">item</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mousepad&quot;</span><span class="p">})</span>
 </code></pre></div>
 <p><strong>where</strong>: és un intèrpret i va molt lent (avalua l’expressió JavaScript per a cada document de la col·lecció), però alhora és molt potent. Utilitza l’objecte this per referir-se al document. Per exemple aquí serveix per avaluar si l’array name té mida més gran que 1:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span> <span class="p">{</span> <span class="nx">$where</span><span class="o">:</span> <span class="s2">&quot;this.name.length &gt; 1&quot;</span> <span class="p">}</span> <span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$where</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;this.name.length &gt; 1&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">);</span>
 </code></pre></div>
 <h3 id="in">in</h3>
-<div class="highlight"><pre><span></span><code><span class="nx">SELECT</span> <span class="o">*</span> <span class="nx">FROM</span> <span class="nx">inventory</span> <span class="nx">WHERE</span> <span class="nx">status</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nx">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">FROM</span><span class="w"> </span><span class="nx">inventory</span><span class="w"> </span><span class="nx">WHERE</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;D&quot;</span><span class="p">)</span>
 <span class="c1">// equivalente</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span> <span class="p">{</span> <span class="nx">status</span><span class="o">:</span> <span class="p">{</span> <span class="nx">$in</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span> <span class="p">]</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">inventory</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$in</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;D&quot;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
 <h3 id="and">and</h3>
-<div class="highlight"><pre><span></span><code><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">inventory</span> <span class="n">WHERE</span> <span class="n">status</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span> <span class="n">AND</span> <span class="n">qty</span> <span class="o">&lt;</span> <span class="mi">30</span>
+<div class="highlight"><pre><span></span><code><span class="n">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">FROM</span><span class="w"> </span><span class="n">inventory</span><span class="w"> </span><span class="n">WHERE</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="n">AND</span><span class="w"> </span><span class="n">qty</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">30</span>
 <span class="c1">// equivalente</span>
-<span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">status</span><span class="p">:</span> <span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="n">qty</span><span class="p">:</span> <span class="p">{</span> <span class="n">$lt</span><span class="p">:</span> <span class="mi">30</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
+<span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">status</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">qty</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$lt</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
 <h3 id="or">or</h3>
-<div class="highlight"><pre><span></span><code><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">inventory</span> <span class="n">WHERE</span> <span class="n">status</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span> <span class="n">OR</span> <span class="n">qty</span> <span class="o">&lt;</span> <span class="mi">30</span>
+<div class="highlight"><pre><span></span><code><span class="n">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">FROM</span><span class="w"> </span><span class="n">inventory</span><span class="w"> </span><span class="n">WHERE</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="n">OR</span><span class="w"> </span><span class="n">qty</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">30</span>
 <span class="c1">// equivalente</span>
-<span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">$or</span><span class="p">:</span> <span class="o">[</span> <span class="p">{</span> <span class="n">status</span><span class="p">:</span> <span class="s">&quot;A&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="n">qty</span><span class="p">:</span> <span class="p">{</span> <span class="n">$lt</span><span class="p">:</span> <span class="mi">30</span> <span class="p">}</span> <span class="p">}</span> <span class="o">]</span> <span class="p">}</span> <span class="p">)</span>
+<span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$or</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">status</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">qty</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$lt</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
 <h3 id="and-y-or">and y or</h3>
-<div class="highlight"><pre><span></span><code><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">inventory</span> <span class="n">WHERE</span> <span class="n">status</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span> <span class="n">AND</span> <span class="p">(</span> <span class="n">qty</span> <span class="o">&lt;</span> <span class="mi">30</span> <span class="n">OR</span> <span class="n">item</span> <span class="n">LIKE</span> <span class="s">&quot;p%&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">FROM</span><span class="w"> </span><span class="n">inventory</span><span class="w"> </span><span class="n">WHERE</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="n">AND</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">qty</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="n">OR</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="n">LIKE</span><span class="w"> </span><span class="s">&quot;p%&quot;</span><span class="p">)</span>
 <span class="c1">// equivalente</span>
-<span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span>
-     <span class="n">status</span><span class="p">:</span> <span class="s">&quot;A&quot;</span><span class="p">,</span>
-     <span class="n">$or</span><span class="p">:</span> <span class="o">[</span> <span class="p">{</span> <span class="n">qty</span><span class="p">:</span> <span class="p">{</span> <span class="n">$lt</span><span class="p">:</span> <span class="mi">30</span> <span class="p">}</span> <span class="p">},</span> <span class="p">{</span> <span class="n">item</span><span class="p">:</span> <span class="o">/^</span><span class="n">p</span><span class="o">/</span> <span class="p">}</span> <span class="o">]</span>
-<span class="p">}</span> <span class="p">)</span>
+<span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="n">status</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="n">$or</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">qty</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$lt</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">item</span><span class="p">:</span><span class="w"> </span><span class="o">/^</span><span class="n">p</span><span class="o">/</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">]</span>
+<span class="p">}</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
 <h3 id="likeilike">like/ilike</h3>
-<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="o">/</span><span class="p">.</span><span class="o">*</span><span class="n">m</span><span class="p">.</span><span class="o">*/</span><span class="p">})</span> <span class="c1">// like &#39;%m%&#39;</span>
-<span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="o">/</span><span class="n">m</span><span class="o">/</span><span class="p">})</span> <span class="c1">// like &#39;%m%&#39;</span>
-<span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="o">/</span><span class="n">m</span><span class="o">/</span><span class="n">i</span> <span class="p">}</span> <span class="p">)</span> <span class="c1">// ilike &#39;%m%&#39;</span>
-<span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="n">name</span><span class="p">:</span> <span class="o">/</span><span class="n">a</span><span class="o">/</span><span class="p">})</span>
-<span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="n">name</span><span class="p">:</span> <span class="o">/^</span><span class="n">pa</span><span class="o">/</span><span class="p">})</span> <span class="c1">// like &#39;pa%&#39;</span>
-<span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="n">name</span><span class="p">:</span> <span class="o">/</span><span class="n">ro$</span><span class="o">/</span><span class="p">})</span> <span class="c1">// like &#39;%ro&#39;</span>
-<span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span> <span class="n">name</span><span class="p">:</span> <span class="p">{</span> <span class="n">$regex</span><span class="p">:</span> <span class="o">/</span><span class="p">.</span><span class="o">*</span><span class="n">m</span><span class="p">.</span><span class="o">*/</span><span class="n">i</span><span class="p">}</span> <span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="s">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="p">.</span><span class="o">*</span><span class="n">m</span><span class="p">.</span><span class="o">*/</span><span class="p">})</span><span class="w"> </span><span class="c1">// like &#39;%m%&#39;</span>
+<span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="s">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">m</span><span class="o">/</span><span class="p">})</span><span class="w"> </span><span class="c1">// like &#39;%m%&#39;</span>
+<span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">m</span><span class="o">/</span><span class="n">i</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="c1">// ilike &#39;%m%&#39;</span>
+<span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">a</span><span class="o">/</span><span class="p">})</span>
+<span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="o">/^</span><span class="n">pa</span><span class="o">/</span><span class="p">})</span><span class="w"> </span><span class="c1">// like &#39;pa%&#39;</span>
+<span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">ro$</span><span class="o">/</span><span class="p">})</span><span class="w"> </span><span class="c1">// like &#39;%ro&#39;</span>
+<span class="n">db</span><span class="p">.</span><span class="na">users</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$regex</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="p">.</span><span class="o">*</span><span class="n">m</span><span class="p">.</span><span class="o">*/</span><span class="n">i</span><span class="p">}</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div>
 <p>https://www.w3schools.com/jsref/jsref_obj_regexp.asp</p>
 <h3 id="exists">exists</h3>
-<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">records</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">a</span><span class="p">:</span> <span class="p">{</span> <span class="n">$exists</span><span class="p">:</span> <span class="kc">true</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
-<span class="n">db</span><span class="p">.</span><span class="na">records</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">b</span><span class="p">:</span> <span class="p">{</span> <span class="n">$exists</span><span class="p">:</span> <span class="kc">false</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">records</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$exists</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">)</span>
+<span class="n">db</span><span class="p">.</span><span class="na">records</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">b</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$exists</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
 <h3 id="proyecciones">proyecciones</h3>
 <p>Las proyecciones son los campos a mostrar</p>
-<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">collection</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="o">&lt;</span><span class="n">query</span> <span class="n">document</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">projection</span> <span class="n">document</span><span class="o">&gt;</span><span class="p">)</span>
-<span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">findOne</span><span class="p">({},{</span><span class="n">_id</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
-<span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">findOne</span><span class="p">({},{</span><span class="n">item</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
-<span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">findOne</span><span class="p">({},{</span><span class="n">_id</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="n">item</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
-<span class="p">{</span> <span class="s">&quot;item&quot;</span> <span class="p">:</span> <span class="s">&quot;canvas&quot;</span> <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">collection</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="o">&lt;</span><span class="n">query</span><span class="w"> </span><span class="n">document</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">projection</span><span class="w"> </span><span class="n">document</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">findOne</span><span class="p">({},{</span><span class="n">_id</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">findOne</span><span class="p">({},{</span><span class="n">item</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">findOne</span><span class="p">({},{</span><span class="n">_id</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="n">item</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;item&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;canvas&quot;</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
 <h3 id="subcampos">subcampos</h3>
 <p>En la búsqueda de subcampos ( objetos dentro de objetos ) en el primer ejemplo se muestra como hay que asignar el subcampo entero a buscar ( El orden importa ). En el segundo ejemplo buscas un item dentro del subcampo.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// buscar el objeto {h:28, w:35.5, uom:&quot;cm&quot;}</span>
-<span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">findOne</span><span class="p">({</span><span class="n">size</span><span class="p">:</span> <span class="p">{</span><span class="n">h</span><span class="p">:</span><span class="mi">28</span><span class="p">,</span> <span class="n">w</span><span class="p">:</span><span class="mf">35.5</span><span class="p">,</span> <span class="n">uom</span><span class="p">:</span><span class="s">&quot;cm&quot;</span><span class="p">}})</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">findOne</span><span class="p">({</span><span class="n">size</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="n">h</span><span class="p">:</span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="p">:</span><span class="mf">35.5</span><span class="p">,</span><span class="w"> </span><span class="n">uom</span><span class="p">:</span><span class="s">&quot;cm&quot;</span><span class="p">}})</span>
 <span class="p">{</span>
-    <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s">&quot;5e661beb63e51a5f0a8f3c27&quot;</span><span class="p">),</span>
-    <span class="s">&quot;item&quot;</span> <span class="p">:</span> <span class="s">&quot;canvas&quot;</span><span class="p">,</span>
-    <span class="s">&quot;qty&quot;</span> <span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
-    <span class="s">&quot;tags&quot;</span> <span class="p">:</span> <span class="o">[</span>
-        <span class="s">&quot;cotton&quot;</span>
-    <span class="o">]</span><span class="p">,</span>
-    <span class="s">&quot;size&quot;</span> <span class="p">:</span> <span class="p">{</span>
-        <span class="s">&quot;h&quot;</span> <span class="p">:</span> <span class="mi">28</span><span class="p">,</span>
-        <span class="s">&quot;w&quot;</span> <span class="p">:</span> <span class="mf">35.5</span><span class="p">,</span>
-        <span class="s">&quot;uom&quot;</span> <span class="p">:</span> <span class="s">&quot;cm&quot;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="s">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ObjectId</span><span class="p">(</span><span class="s">&quot;5e661beb63e51a5f0a8f3c27&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="s">&quot;item&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;canvas&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;qty&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;tags&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">[</span>
+<span class="w">        </span><span class="s">&quot;cotton&quot;</span>
+<span class="w">    </span><span class="o">]</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;size&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;h&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;w&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">35.5</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;uom&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cm&quot;</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 <span class="c1">// buscar el valor del item &quot;uom&quot; dentro del subcampo de &quot;size&quot;</span>
-<span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">findOne</span><span class="p">({</span><span class="s">&quot;size.uom&quot;</span><span class="p">:</span> <span class="s">&quot;cm&quot;</span><span class="p">})</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">findOne</span><span class="p">({</span><span class="s">&quot;size.uom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cm&quot;</span><span class="p">})</span>
 </code></pre></div>
 <h3 id="campos-array">campos array</h3>
 <p>En la búsqueda de arrays existen diferentes soluciones:</p>
@@ -3319,28 +5216,28 @@ mongoimport --host <span class="m">127</span>.0.0.1 --port <span class="m">27017
 <li>metodo <code>$all</code> indica que contenga esos items.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c1">// busqueda por array</span>
-<span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">tags</span><span class="p">:</span> <span class="o">[</span><span class="s">&quot;blank&quot;</span><span class="p">,</span> <span class="s">&quot;red&quot;</span><span class="o">]</span> <span class="p">}</span> <span class="p">)</span>
+<span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">tags</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="s">&quot;blank&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="o">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">)</span>
 <span class="c1">// que contenga red y blank</span>
-<span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">tags</span><span class="p">:</span> <span class="p">{</span> <span class="n">$all</span><span class="p">:</span> <span class="o">[</span><span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="s">&quot;blank&quot;</span><span class="o">]</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
+<span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">tags</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$all</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;blank&quot;</span><span class="o">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">)</span>
 <span class="c1">// que contenga red</span>
-<span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">tags</span><span class="p">:</span> <span class="s">&quot;red&quot;</span> <span class="p">}</span> <span class="p">)</span>
+<span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">tags</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
 <h4 id="entre">entre</h4>
 <p>Búsquedas entre con comparadores</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// &gt; 22 and &lt; 30</span>
-<span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="n">dim_cm</span><span class="p">:</span> <span class="p">{</span> <span class="n">$elemMatch</span><span class="p">:</span> <span class="p">{</span> <span class="n">$gt</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span> <span class="n">$lt</span><span class="p">:</span> <span class="mi">30</span> <span class="p">}</span> <span class="p">}</span> <span class="p">})</span>
-<span class="p">{</span> <span class="s">&quot;dim_cm&quot;</span> <span class="p">:</span> <span class="o">[</span> <span class="mf">22.85</span><span class="p">,</span> <span class="mi">30</span> <span class="o">]</span> <span class="p">}</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">dim_cm</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$elemMatch</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$gt</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="n">$lt</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">})</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;dim_cm&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="mf">22.85</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">}</span>
 
 <span class="c1">// &gt; 25</span>
-<span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="s">&quot;dim_cm.1&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="n">$gt</span><span class="p">:</span> <span class="mi">25</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
-<span class="p">{</span> <span class="s">&quot;dim_cm&quot;</span> <span class="p">:</span> <span class="o">[</span> <span class="mf">22.85</span><span class="p">,</span> <span class="mi">30</span> <span class="o">]</span> <span class="p">}</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;dim_cm.1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$gt</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">)</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;dim_cm&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="mf">22.85</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
 <h4 id="buscar-entre-objetos">buscar entre objetos</h4>
 <p>buscar un item que contiene objetos, hay que buscar por objeto, el orden importa</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="s">&quot;instock&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="n">warehouse</span><span class="p">:</span> <span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="n">qty</span><span class="p">:</span> <span class="mi">5</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;instock&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">warehouse</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">qty</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">)</span>
 
 <span class="c1">// buscar en el primer objeto de instock</span>
-<span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span> <span class="p">{</span> <span class="err">&#39;</span><span class="n">instock</span><span class="mf">.0</span><span class="p">.</span><span class="na">qty</span><span class="err">&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="n">$lte</span><span class="p">:</span> <span class="mi">14</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">&#39;</span><span class="n">instock</span><span class="mf">.0</span><span class="p">.</span><span class="na">qty</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$lte</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
 <h3 id="nor">Nor</h3>
 <p>Devuelve los elementos que no comparten ninguna de las condiciones</p>
@@ -3349,153 +5246,153 @@ mongoimport --host <span class="m">127</span>.0.0.1 --port <span class="m">27017
 <li>los que no tengan el item name, o un tamaño de array de 0, o un tamaño de array de 1. Estos no me los muestres.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c1">// $size es el numero de valores que tiene la array name</span>
-<span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">test</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="n">$nor</span><span class="p">:</span> <span class="o">[</span><span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="p">{</span><span class="n">$exists</span><span class="p">:</span> <span class="kc">false</span><span class="p">}},</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="p">{</span><span class="n">$size</span><span class="p">:</span> <span class="mi">0</span><span class="p">}},</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="p">{</span><span class="n">$size</span><span class="p">:</span> <span class="mi">1</span><span class="p">}}</span><span class="o">]</span><span class="p">})</span>
-<span class="p">{</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="o">[</span> <span class="s">&quot;George&quot;</span><span class="p">,</span> <span class="s">&quot;Raymond&quot;</span> <span class="o">]</span> <span class="p">}</span>
-<span class="p">{</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="o">[</span> <span class="s">&quot;George&quot;</span><span class="p">,</span> <span class="s">&quot;Raymond&quot;</span><span class="p">,</span> <span class="s">&quot;Richard&quot;</span> <span class="o">]</span> <span class="p">}</span>
-<span class="p">{</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="o">[</span> <span class="s">&quot;George&quot;</span><span class="p">,</span> <span class="s">&quot;Raymond&quot;</span><span class="p">,</span> <span class="s">&quot;Richard&quot;</span><span class="p">,</span> <span class="s">&quot;Martin&quot;</span> <span class="o">]</span> <span class="p">}</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">test</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="n">$nor</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="n">$exists</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="n">$size</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="n">$size</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">}}</span><span class="o">]</span><span class="p">})</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s">&quot;George&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Raymond&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s">&quot;George&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Raymond&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Richard&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s">&quot;George&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Raymond&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Richard&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Martin&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
 <h3 id="not">not</h3>
-<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">test</span><span class="p">.</span><span class="na">count</span><span class="p">({</span> <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s">&quot;$not&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s">&quot;$size&quot;</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}</span> <span class="p">}</span> <span class="p">});</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">test</span><span class="p">.</span><span class="na">count</span><span class="p">({</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;$not&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;$size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
 </code></pre></div>
 <h3 id="aggregate">Aggregate</h3>
 <h4 id="group">group</h4>
 <p>group ace una agrupación de los campos que coinciden y sum los suma.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">aggregate</span><span class="p">(</span><span class="o">[</span>
-    <span class="p">{</span> <span class="n">$match</span> <span class="p">:{</span><span class="s">&quot;status&quot;</span> <span class="p">:</span> <span class="sc">&#39;A&#39;</span><span class="p">}},</span> 
-    <span class="p">{</span> <span class="n">$group</span><span class="p">:</span> <span class="p">{</span><span class="n">_id</span> <span class="p">:</span><span class="s">&quot;$status&quot;</span><span class="p">,</span> <span class="n">total</span> <span class="p">:</span> <span class="p">{</span><span class="n">$sum</span><span class="p">:</span> <span class="s">&quot;$qty&quot;</span><span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">aggregate</span><span class="p">(</span><span class="o">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="n">$match</span><span class="w"> </span><span class="p">:{</span><span class="s">&quot;status&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">}},</span><span class="w"> </span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="n">$group</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="n">_id</span><span class="w"> </span><span class="p">:</span><span class="s">&quot;$status&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="n">$sum</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$qty&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
 <span class="o">]</span><span class="p">)</span>
 <span class="c1">// resultado    </span>
-<span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="s">&quot;total&quot;</span> <span class="p">:</span> <span class="mi">120</span> <span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;total&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
 <h4 id="project">project</h4>
-<div class="highlight"><pre><span></span><code><span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s">&quot;5e6bc9655a4fa4a58d139cd9&quot;</span><span class="p">),</span> <span class="s">&quot;item&quot;</span> <span class="p">:</span> <span class="s">&quot;notebook&quot;</span><span class="p">,</span> <span class="s">&quot;qty&quot;</span> <span class="p">:</span> <span class="o">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="o">]</span><span class="p">}</span>
-<span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s">&quot;5e6bc9655a4fa4a58d139cdc&quot;</span><span class="p">),</span> <span class="s">&quot;item&quot;</span> <span class="p">:</span> <span class="s">&quot;jupiter&quot;</span><span class="p">,</span> <span class="s">&quot;qty&quot;</span> <span class="p">:</span> <span class="o">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="o">]</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="s">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ObjectId</span><span class="p">(</span><span class="s">&quot;5e6bc9655a4fa4a58d139cd9&quot;</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;item&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;notebook&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;qty&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="o">]</span><span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ObjectId</span><span class="p">(</span><span class="s">&quot;5e6bc9655a4fa4a58d139cdc&quot;</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;item&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;jupiter&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;qty&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="o">]</span><span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">aggregate</span><span class="p">(</span><span class="o">[</span>
-    <span class="p">{</span> <span class="n">$match</span> <span class="p">:{</span><span class="s">&quot;item&quot;</span> <span class="p">:</span> <span class="err">&#39;</span><span class="n">notebook</span><span class="err">&#39;</span><span class="p">}},</span> 
-    <span class="p">{</span> <span class="n">$project</span><span class="p">:</span> <span class="p">{</span> <span class="n">total</span> <span class="p">:</span> <span class="p">{</span><span class="n">$sum</span><span class="p">:</span> <span class="s">&quot;$qty&quot;</span><span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">inventory</span><span class="p">.</span><span class="na">aggregate</span><span class="p">(</span><span class="o">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="n">$match</span><span class="w"> </span><span class="p">:{</span><span class="s">&quot;item&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="n">notebook</span><span class="err">&#39;</span><span class="p">}},</span><span class="w"> </span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="n">$project</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="n">$sum</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$qty&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
 <span class="o">]</span><span class="p">)</span>
 <span class="c1">// resultado    </span>
-<span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s">&quot;5e6bc9655a4fa4a58d139cd9&quot;</span><span class="p">),</span> <span class="s">&quot;total&quot;</span> <span class="p">:</span> <span class="mi">50</span> <span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ObjectId</span><span class="p">(</span><span class="s">&quot;5e6bc9655a4fa4a58d139cd9&quot;</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;total&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
 <h2 id="indices">Indices</h2>
 <h3 id="texto">Texto</h3>
 <p>ver indice</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">getIndexes</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">getIndexes</span><span class="p">()</span>
 <span class="o">[</span><span class="p">{</span>
-        <span class="s">&quot;v&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="s">&quot;key&quot;</span> <span class="p">:</span> <span class="p">{</span>
-            <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">1</span>
-        <span class="p">},</span>
-        <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;_id_&quot;</span><span class="p">,</span>
-        <span class="s">&quot;ns&quot;</span> <span class="p">:</span> <span class="s">&quot;text.stores&quot;</span>
-    <span class="p">}</span><span class="o">]</span>
+<span class="w">        </span><span class="s">&quot;v&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;key&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;_id_&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;ns&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;text.stores&quot;</span>
+<span class="w">    </span><span class="p">}</span><span class="o">]</span>
 </code></pre></div>
 <p>expandir index de texto a campos name y description</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">createIndex</span><span class="p">(</span> <span class="p">{</span> <span class="n">name</span><span class="p">:</span> <span class="s">&quot;text&quot;</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="s">&quot;text&quot;</span> <span class="p">}</span> <span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">createIndex</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;text&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;text&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="s">&quot;createdCollectionAutomatically&quot;</span> <span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="s">&quot;numIndexesBefore&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s">&quot;numIndexesAfter&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="s">&quot;ok&quot;</span> <span class="p">:</span> <span class="mi">1</span>
+<span class="w">    </span><span class="s">&quot;createdCollectionAutomatically&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;numIndexesBefore&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;numIndexesAfter&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;ok&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
 <span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">find</span><span class="p">({</span> <span class="n">$text</span><span class="p">:</span> <span class="p">{</span> <span class="n">$search</span><span class="p">:</span> <span class="s">&quot;java coffe shop&quot;</span><span class="p">}</span> <span class="p">})</span>
-<span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;Java Shopping&quot;</span><span class="p">,</span> <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Indonesian goods&quot;</span> <span class="p">}</span>
-<span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;Java Hut&quot;</span><span class="p">,</span> <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Coffee and cakes&quot;</span> <span class="p">}</span>
-<span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;Coffee Shop&quot;</span><span class="p">,</span> <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Just coffee&quot;</span> <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="w"> </span><span class="n">$text</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$search</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;java coffe shop&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">})</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Java Shopping&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Indonesian goods&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Java Hut&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Coffee and cakes&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Coffee Shop&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Just coffee&quot;</span><span class="w"> </span><span class="p">}</span>
 
-<span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">find</span><span class="p">({</span> <span class="n">$text</span><span class="p">:</span> <span class="p">{</span> <span class="n">$search</span><span class="p">:</span> <span class="s">&quot;java -coffee shop&quot;</span><span class="p">}</span> <span class="p">})</span>
-<span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;Java Shopping&quot;</span><span class="p">,</span> <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Indonesian goods&quot;</span> <span class="p">}</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="w"> </span><span class="n">$text</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$search</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;java -coffee shop&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">})</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Java Shopping&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Indonesian goods&quot;</span><span class="w"> </span><span class="p">}</span>
 
-<span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">find</span><span class="p">({</span> <span class="n">$text</span><span class="p">:</span> <span class="p">{</span> <span class="n">$search</span><span class="p">:</span> <span class="s">&quot;java \&quot;coffee shop\&quot;&quot;</span><span class="p">}</span> <span class="p">})</span>
-<span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;Coffee Shop&quot;</span><span class="p">,</span> <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Just coffee&quot;</span> <span class="p">}</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="w"> </span><span class="n">$text</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$search</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;java \&quot;coffee shop\&quot;&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">})</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Coffee Shop&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Just coffee&quot;</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
 <p>ordenar por relevancia</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">find</span><span class="p">({</span> <span class="n">$text</span><span class="p">:</span> <span class="p">{</span> <span class="n">$search</span><span class="p">:</span> <span class="s">&quot;java coffe shop&quot;</span><span class="p">}</span> <span class="p">},</span> <span class="p">{</span> <span class="n">puntuacio</span><span class="p">:</span> <span class="p">{</span> <span class="n">$meta</span><span class="p">:</span> <span class="s">&quot;textScore&quot;</span> <span class="p">}}</span> <span class="p">).</span><span class="na">sort</span><span class="p">(</span> <span class="p">{</span> <span class="n">puntuacio</span><span class="p">:</span> <span class="p">{</span><span class="n">$meta</span><span class="p">:</span> <span class="s">&quot;textScore&quot;</span><span class="p">}})</span>
-<span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;Java Shopping&quot;</span><span class="p">,</span> <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Indonesian goods&quot;</span><span class="p">,</span> <span class="s">&quot;puntuacio&quot;</span> <span class="p">:</span> <span class="mf">1.5</span> <span class="p">}</span>
-<span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;Java Hut&quot;</span><span class="p">,</span> <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Coffee and cakes&quot;</span><span class="p">,</span> <span class="s">&quot;puntuacio&quot;</span> <span class="p">:</span> <span class="mf">0.75</span> <span class="p">}</span>
-<span class="p">{</span> <span class="s">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;Coffee Shop&quot;</span><span class="p">,</span> <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Just coffee&quot;</span><span class="p">,</span> <span class="s">&quot;puntuacio&quot;</span> <span class="p">:</span> <span class="mf">0.75</span> <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">stores</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="w"> </span><span class="n">$text</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$search</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;java coffe shop&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">puntuacio</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">$meta</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;textScore&quot;</span><span class="w"> </span><span class="p">}}</span><span class="w"> </span><span class="p">).</span><span class="na">sort</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">puntuacio</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="n">$meta</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;textScore&quot;</span><span class="p">}})</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Java Shopping&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Indonesian goods&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;puntuacio&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="w"> </span><span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Java Hut&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Coffee and cakes&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;puntuacio&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">0.75</span><span class="w"> </span><span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="s">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Coffee Shop&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Just coffee&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;puntuacio&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">0.75</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
 <h3 id="geoespaciales">geoespaciales</h3>
 <p>Mongo permet crear uns <a href="https://docs.mongodb.com/manual/geospatial-queries/">índexs geoespacials</a> per a camps que continguin aquest tipus d’informació, i així poder fer consultes sobre documents propers a certes coordenades. Les coordenades poden ser esfèriques-2D (com les de latitud i longitud de la Terra), o planars-2D.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">createIndex</span><span class="p">({</span><span class="s">&quot;loc&quot;</span><span class="p">:</span> <span class="s">&quot;2dsphere&quot;</span><span class="p">}</span> <span class="p">,</span> <span class="p">{</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;loc.geoidx&quot;</span><span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">createIndex</span><span class="p">({</span><span class="s">&quot;loc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2dsphere&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;loc.geoidx&quot;</span><span class="p">})</span>
 </code></pre></div>
 <p>var las ciudades que están hasta 20km de las cordenadas indicadas.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="s">&quot;loc&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="p">...</span>                      <span class="s">&quot;$near&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="p">...</span>      <span class="s">&quot;$geometry&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="p">...</span>      <span class="n">type</span><span class="p">:</span> <span class="s">&quot;Point&quot;</span> <span class="p">,</span>
-<span class="p">...</span>      <span class="n">coordinates</span><span class="p">:</span> <span class="o">[</span><span class="mf">116.40752599999996000</span><span class="p">,</span> <span class="mf">39.90403</span><span class="o">]</span>
-<span class="p">...</span>      <span class="p">},</span>
-<span class="p">...</span>      <span class="s">&quot;$maxDistance&quot;</span><span class="p">:</span> <span class="mi">20000</span><span class="p">,</span>
-<span class="p">...</span>      <span class="s">&quot;$minDistance&quot;</span><span class="p">:</span> <span class="mi">0</span>
-<span class="p">...</span>   <span class="p">}</span>
-<span class="p">...</span>    <span class="p">}</span>
-<span class="p">...</span>                 <span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">find</span><span class="p">({</span><span class="s">&quot;loc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="p">...</span><span class="w">                      </span><span class="s">&quot;$near&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="p">...</span><span class="w">      </span><span class="s">&quot;$geometry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="p">...</span><span class="w">      </span><span class="n">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Point&quot;</span><span class="w"> </span><span class="p">,</span>
+<span class="p">...</span><span class="w">      </span><span class="n">coordinates</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="mf">116.40752599999996000</span><span class="p">,</span><span class="w"> </span><span class="mf">39.90403</span><span class="o">]</span>
+<span class="p">...</span><span class="w">      </span><span class="p">},</span>
+<span class="p">...</span><span class="w">      </span><span class="s">&quot;$maxDistance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20000</span><span class="p">,</span>
+<span class="p">...</span><span class="w">      </span><span class="s">&quot;$minDistance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="p">...</span><span class="w">   </span><span class="p">}</span>
+<span class="p">...</span><span class="w">    </span><span class="p">}</span>
+<span class="p">...</span><span class="w">                 </span><span class="p">})</span>
 </code></pre></div>
 <h4 id="buscar-orden-cercania">Buscar orden cercanía</h4>
 <p>Devuelve documentos en orden de proximidad a un punto específico, del más cercano al más lejano.
 límite: opcional. El número máximo de documentos a devolver. El valor predeterminado es 100.</p>
-<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">aggregate</span> <span class="p">(</span><span class="o">[</span>
-        <span class="p">{</span><span class="s">&quot;$geoNear&quot;</span><span class="p">:</span> 
-            <span class="p">{</span><span class="s">&quot;near&quot;</span><span class="p">:</span> <span class="o">[-</span><span class="mf">5.53888900000004</span><span class="p">,</span>  <span class="mf">38.639167</span><span class="o">]</span><span class="p">,</span> 
-             <span class="s">&quot;distanceField&quot;</span><span class="p">:</span> <span class="s">&quot;dis&quot;</span><span class="p">,</span> 
-             <span class="s">&quot;includeLocs&quot;</span><span class="p">:</span> <span class="s">&quot;loc&quot;</span><span class="p">,</span> 
-             <span class="s">&quot;spherical&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> 
-             <span class="s">&quot;maxDistance&quot;</span><span class="p">:</span>  <span class="mi">40000</span><span class="o">/</span><span class="mi">6371</span><span class="p">,</span> 
-             <span class="s">&quot;minDistance&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="o">/</span><span class="mi">6371</span><span class="p">,</span> 
-             <span class="s">&quot;distanceMultiplier&quot;</span><span class="p">:</span> <span class="mi">6371</span><span class="p">}</span>
-            <span class="p">},</span>
-        <span class="p">{</span><span class="s">&quot;$project&quot;</span><span class="p">:</span> 
-            <span class="p">{</span><span class="s">&quot;_id&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="s">&quot;dis&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">}</span>
-        <span class="p">}</span>
-    <span class="o">]</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">aggregate</span><span class="w"> </span><span class="p">(</span><span class="o">[</span>
+<span class="w">        </span><span class="p">{</span><span class="s">&quot;$geoNear&quot;</span><span class="p">:</span><span class="w"> </span>
+<span class="w">            </span><span class="p">{</span><span class="s">&quot;near&quot;</span><span class="p">:</span><span class="w"> </span><span class="o">[-</span><span class="mf">5.53888900000004</span><span class="p">,</span><span class="w">  </span><span class="mf">38.639167</span><span class="o">]</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="s">&quot;distanceField&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dis&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="s">&quot;includeLocs&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;loc&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="s">&quot;spherical&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="s">&quot;maxDistance&quot;</span><span class="p">:</span><span class="w">  </span><span class="mi">40000</span><span class="o">/</span><span class="mi">6371</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="s">&quot;minDistance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="o">/</span><span class="mi">6371</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="s">&quot;distanceMultiplier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6371</span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="s">&quot;$project&quot;</span><span class="p">:</span><span class="w"> </span>
+<span class="w">            </span><span class="p">{</span><span class="s">&quot;_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;dis&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="o">]</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="orden-cercania-con-max-distancia">Orden cercanía con max distancia</h4>
 <p>en una distancia de max de 20km</p>
-<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">aggregate</span> <span class="p">(</span><span class="o">[</span>
-        <span class="p">{</span><span class="s">&quot;$geoNear&quot;</span><span class="p">:</span> 
-            <span class="p">{</span><span class="s">&quot;near&quot;</span><span class="p">:</span> <span class="o">[-</span><span class="mf">5.53888900000004</span><span class="p">,</span>  <span class="mf">38.639167</span><span class="o">]</span><span class="p">,</span> 
-             <span class="s">&quot;distanceField&quot;</span><span class="p">:</span> <span class="s">&quot;dis&quot;</span><span class="p">,</span> 
-             <span class="s">&quot;includeLocs&quot;</span><span class="p">:</span> <span class="s">&quot;loc&quot;</span><span class="p">,</span> 
-             <span class="s">&quot;spherical&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> 
-             <span class="s">&quot;distanceMultiplier&quot;</span><span class="p">:</span> <span class="mi">6371</span><span class="p">}</span>
-            <span class="p">},</span>
-        <span class="p">{</span><span class="s">&quot;$match&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s">&quot;dis&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">$lt</span><span class="p">:</span> <span class="mi">20</span><span class="p">}}},</span>
-        <span class="p">{</span><span class="s">&quot;$project&quot;</span><span class="p">:</span> 
-            <span class="p">{</span><span class="s">&quot;_id&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="s">&quot;dis&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">}</span>
-        <span class="p">}</span>
-    <span class="o">]</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">aggregate</span><span class="w"> </span><span class="p">(</span><span class="o">[</span>
+<span class="w">        </span><span class="p">{</span><span class="s">&quot;$geoNear&quot;</span><span class="p">:</span><span class="w"> </span>
+<span class="w">            </span><span class="p">{</span><span class="s">&quot;near&quot;</span><span class="p">:</span><span class="w"> </span><span class="o">[-</span><span class="mf">5.53888900000004</span><span class="p">,</span><span class="w">  </span><span class="mf">38.639167</span><span class="o">]</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="s">&quot;distanceField&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dis&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="s">&quot;includeLocs&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;loc&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="s">&quot;spherical&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="s">&quot;distanceMultiplier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6371</span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="s">&quot;$match&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;dis&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="n">$lt</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">}}},</span>
+<span class="w">        </span><span class="p">{</span><span class="s">&quot;$project&quot;</span><span class="p">:</span><span class="w"> </span>
+<span class="w">            </span><span class="p">{</span><span class="s">&quot;_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;dis&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="o">]</span><span class="p">)</span>
 
 
-<span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">aggregate</span> <span class="p">(</span><span class="o">[</span>
-        <span class="p">{</span><span class="s">&quot;$geoNear&quot;</span><span class="p">:</span> 
-            <span class="p">{</span><span class="s">&quot;near&quot;</span><span class="p">:</span> <span class="o">[-</span><span class="mf">5.53888900000004</span><span class="p">,</span>  <span class="mf">38.639167</span><span class="o">]</span><span class="p">,</span> 
-             <span class="s">&quot;distanceField&quot;</span><span class="p">:</span> <span class="s">&quot;dis&quot;</span><span class="p">,</span> 
-             <span class="s">&quot;includeLocs&quot;</span><span class="p">:</span> <span class="s">&quot;loc&quot;</span><span class="p">,</span> 
-             <span class="s">&quot;spherical&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> 
-             <span class="s">&quot;maxDistance&quot;</span><span class="p">:</span>  <span class="mi">20</span><span class="o">/</span><span class="mi">6371</span><span class="p">,</span> 
-             <span class="s">&quot;distanceMultiplier&quot;</span><span class="p">:</span> <span class="mi">6371</span><span class="p">}</span>
-            <span class="p">},</span>
-        <span class="p">{</span><span class="s">&quot;$project&quot;</span><span class="p">:</span> 
-            <span class="p">{</span><span class="s">&quot;_id&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="s">&quot;dis&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">}</span>
-        <span class="p">}</span>
-    <span class="o">]</span><span class="p">)</span>
+<span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">aggregate</span><span class="w"> </span><span class="p">(</span><span class="o">[</span>
+<span class="w">        </span><span class="p">{</span><span class="s">&quot;$geoNear&quot;</span><span class="p">:</span><span class="w"> </span>
+<span class="w">            </span><span class="p">{</span><span class="s">&quot;near&quot;</span><span class="p">:</span><span class="w"> </span><span class="o">[-</span><span class="mf">5.53888900000004</span><span class="p">,</span><span class="w">  </span><span class="mf">38.639167</span><span class="o">]</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="s">&quot;distanceField&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dis&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="s">&quot;includeLocs&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;loc&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="s">&quot;spherical&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="s">&quot;maxDistance&quot;</span><span class="p">:</span><span class="w">  </span><span class="mi">20</span><span class="o">/</span><span class="mi">6371</span><span class="p">,</span><span class="w"> </span>
+<span class="w">             </span><span class="s">&quot;distanceMultiplier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6371</span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="s">&quot;$project&quot;</span><span class="p">:</span><span class="w"> </span>
+<span class="w">            </span><span class="p">{</span><span class="s">&quot;_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;dis&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="o">]</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="funciones">Funciones</h2>
-<div class="highlight"><pre><span></span><code><span class="n">function</span> <span class="nf">findCities</span><span class="p">(</span><span class="kt">long</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">maxDist</span><span class="p">,</span> <span class="n">minDist</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">aggregate</span> <span class="p">(</span><span class="o">[</span>
-        <span class="p">{</span><span class="s">&quot;$geoNear&quot;</span><span class="p">:</span> 
-            <span class="p">{</span><span class="s">&quot;near&quot;</span><span class="p">:</span> <span class="o">[</span><span class="kt">long</span><span class="p">,</span> <span class="n">lat</span><span class="o">]</span><span class="p">,</span> <span class="s">&quot;distanceField&quot;</span><span class="p">:</span> <span class="s">&quot;dis&quot;</span><span class="p">,</span> <span class="s">&quot;includeLocs&quot;</span><span class="p">:</span> <span class="s">&quot;loc&quot;</span><span class="p">,</span> <span class="s">&quot;spherical&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="s">&quot;maxDistance&quot;</span><span class="p">:</span> <span class="n">maxDist</span><span class="o">/</span><span class="mi">6371</span><span class="p">,</span> <span class="s">&quot;minDistance&quot;</span><span class="p">:</span> <span class="n">minDist</span><span class="o">/</span><span class="mi">6371</span><span class="p">,</span> <span class="s">&quot;distanceMultiplier&quot;</span><span class="p">:</span> <span class="mi">6371</span><span class="p">}</span>
-            <span class="p">},</span> 
-        <span class="p">{</span><span class="s">&quot;$project&quot;</span><span class="p">:</span> 
-            <span class="p">{</span><span class="s">&quot;_id&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="s">&quot;dis&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">}</span>
-        <span class="p">}</span>
-    <span class="o">]</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">function</span><span class="w"> </span><span class="nf">findCities</span><span class="p">(</span><span class="kt">long</span><span class="p">,</span><span class="w"> </span><span class="n">lat</span><span class="p">,</span><span class="w"> </span><span class="n">maxDist</span><span class="p">,</span><span class="w"> </span><span class="n">minDist</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="na">cities</span><span class="p">.</span><span class="na">aggregate</span><span class="w"> </span><span class="p">(</span><span class="o">[</span>
+<span class="w">        </span><span class="p">{</span><span class="s">&quot;$geoNear&quot;</span><span class="p">:</span><span class="w"> </span>
+<span class="w">            </span><span class="p">{</span><span class="s">&quot;near&quot;</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="kt">long</span><span class="p">,</span><span class="w"> </span><span class="n">lat</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;distanceField&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;includeLocs&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;loc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;spherical&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;maxDistance&quot;</span><span class="p">:</span><span class="w"> </span><span class="n">maxDist</span><span class="o">/</span><span class="mi">6371</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;minDistance&quot;</span><span class="p">:</span><span class="w"> </span><span class="n">minDist</span><span class="o">/</span><span class="mi">6371</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;distanceMultiplier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6371</span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span><span class="w"> </span>
+<span class="w">        </span><span class="p">{</span><span class="s">&quot;$project&quot;</span><span class="p">:</span><span class="w"> </span>
+<span class="w">            </span><span class="p">{</span><span class="s">&quot;_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;dis&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="o">]</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="n">Aquesta</span> <span class="n">funció</span> <span class="n">només</span> <span class="n">funciona</span> <span class="n">si</span> <span class="n">estem</span> <span class="n">utilitzant</span> <span class="n">la</span> <span class="n">BD</span> <span class="n">geo</span><span class="p">,</span> <span class="n">és</span> <span class="n">clar</span><span class="p">.</span>
-<span class="nf">findCities</span><span class="p">(</span><span class="o">-</span><span class="mf">5.53888900000004</span><span class="p">,</span> <span class="mf">38.639167</span><span class="p">,</span> <span class="mi">40000</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Aquesta</span><span class="w"> </span><span class="n">funció</span><span class="w"> </span><span class="n">només</span><span class="w"> </span><span class="n">funciona</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">estem</span><span class="w"> </span><span class="n">utilitzant</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">BD</span><span class="w"> </span><span class="n">geo</span><span class="p">,</span><span class="w"> </span><span class="n">és</span><span class="w"> </span><span class="n">clar</span><span class="p">.</span>
+<span class="nf">findCities</span><span class="p">(</span><span class="o">-</span><span class="mf">5.53888900000004</span><span class="p">,</span><span class="w"> </span><span class="mf">38.639167</span><span class="p">,</span><span class="w"> </span><span class="mi">40000</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
 </code></pre></div>
 
               
@@ -3562,10 +5459,10 @@ límite: opcional. El número máximo de documentos a devolver. El valor predete
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.01824240.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.ff0eccb3.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.467223ff.min.js"></script>
       
     
   </body>
