@@ -2463,6 +2463,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#regex" class="md-nav__link">
+    regex
+  </a>
+  
+    <nav class="md-nav" aria-label="regex">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rematch" class="md-nav__link">
+    re.match
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#research" class="md-nav__link">
+    re.search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refindall" class="md-nav__link">
+    re.findall
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refinditer" class="md-nav__link">
+    re.finditer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resub" class="md-nav__link">
+    re.sub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resplit" class="md-nav__link">
+    re.split
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4768,6 +4823,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#regex" class="md-nav__link">
+    regex
+  </a>
+  
+    <nav class="md-nav" aria-label="regex">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rematch" class="md-nav__link">
+    re.match
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#research" class="md-nav__link">
+    re.search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refindall" class="md-nav__link">
+    re.findall
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refinditer" class="md-nav__link">
+    re.finditer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resub" class="md-nav__link">
+    re.sub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resplit" class="md-nav__link">
+    re.split
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5186,6 +5296,93 @@ AttributeError                            Traceback (most recent call last)
 <div class="highlight"><pre><span></span><code><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># muestra aleatoria de 2 elementos de la lista</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>[3, 4]
+</code></pre></div>
+<h2 id="regex">regex</h2>
+<p>Las funciones de este módulo permiten comprobar si una determinada cadena coincide con una expresión regular dada.</p>
+<p>El uso de las expresiones regulares en Python viene dado por el paquete re, que hay que importar a nuestro código. </p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<h3 id="rematch">re.match</h3>
+<p><strong>re.match()</strong> Si hay cero o más caracteres al comienzo de la cadena que coincide con el patrón de expresión regular</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Programa en Python&quot;</span>
+<span class="nv">buscar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">re</span>.<span class="nv">match</span><span class="ss">(</span><span class="s2">&quot;Programa&quot;</span>,<span class="w"> </span><span class="nv">texto</span><span class="ss">)</span><span class="w"> </span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">buscar</span><span class="ss">)</span>
+<span class="o">&lt;</span><span class="nv">re</span>.<span class="nv">Match</span><span class="w"> </span><span class="nv">object</span><span class="c1">; span=(0, 8), match=&#39;Programa&#39;&gt;</span>
+
+<span class="nv">buscar</span>.<span class="nv">string</span>
+<span class="s1">&#39;Programa en Python&#39;</span>
+
+<span class="nv">buscar</span>.<span class="nv">group</span><span class="ss">()</span>
+<span class="s1">&#39;Programa&#39;</span>
+
+<span class="nv">buscar</span>.<span class="nv">span</span><span class="ss">()</span>
+<span class="ss">(</span><span class="mi">0</span>,<span class="w"> </span><span class="mi">8</span><span class="ss">)</span>
+
+<span class="nv">buscar</span>.<span class="nv">start</span><span class="ss">()</span>
+<span class="mi">0</span>
+
+<span class="nv">buscar</span>.<span class="k">end</span><span class="ss">()</span>
+<span class="mi">8</span>
+</code></pre></div>
+
+<h3 id="research">re.search</h3>
+<p><strong>re.search(patrón, cadena):</strong> busca la primera ocurrencia de la expresión regular definida en patrón dentro del string cadena. </p>
+<div class="codehilite"><pre><span></span><code>encontro = re.search(&quot;Python&quot;, &quot;Programa en Python Python&quot;)
+encontro
+
+&lt;re.Match object; span=(12, 18), match=&#39;Python&#39;&gt;
+</code></pre></div>
+
+<h3 id="refindall">re.findall</h3>
+<p><strong>re.findall(patrón, cadena):</strong> devuelve una lista que contiene todas las ocurrencias de la expresión regular definida en patrón dentro del string cadena. </p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;En este curso de Python, aprenderemos a programar en Python y nos convertiremos en Pythonista.&quot;</span><span class="p">)</span>
+
+<span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+<blockquote>
+<p>Si quieres utilizar una variable como ptrón tentras que  compilasrla primero</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>patron = re.compile(&#39;^Python&#39;) 
+frase = &quot;Python es un lenguaje de programación. Python&quot;
+re.findall(patron, frase)
+
+[&#39;Python&#39;]
+</code></pre></div>
+
+<h3 id="refinditer">re.finditer</h3>
+<p><strong>finditer():</strong> El cual es similar a re.findall, pero en lugar de devolvernos una lista nos devuelve un iterador.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">encontrados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">re</span><span class="p">.</span><span class="nc">finditer</span><span class="o">(</span><span class="s2">&quot;Python&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;En este curso de Python, aprenderemos a programar en Python y nos convertiremos en Pythonista.&quot;</span><span class="o">)</span>
+
+<span class="nt">for</span><span class="w"> </span><span class="nt">encontro</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">encontrados</span><span class="o">:</span>
+<span class="w">    </span><span class="nt">print</span><span class="o">(</span><span class="nt">encontro</span><span class="o">)</span>
+
+<span class="o">&lt;</span><span class="nt">re</span><span class="p">.</span><span class="nc">Match</span><span class="w"> </span><span class="nt">object</span><span class="o">;</span><span class="w"> </span><span class="nt">span</span><span class="o">=(</span><span class="nt">17</span><span class="o">,</span><span class="w"> </span><span class="nt">23</span><span class="o">),</span><span class="w"> </span><span class="nt">match</span><span class="o">=</span><span class="s1">&#39;Python&#39;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nt">re</span><span class="p">.</span><span class="nc">Match</span><span class="w"> </span><span class="nt">object</span><span class="o">;</span><span class="w"> </span><span class="nt">span</span><span class="o">=(</span><span class="nt">53</span><span class="o">,</span><span class="w"> </span><span class="nt">59</span><span class="o">),</span><span class="w"> </span><span class="nt">match</span><span class="o">=</span><span class="s1">&#39;Python&#39;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nt">re</span><span class="p">.</span><span class="nc">Match</span><span class="w"> </span><span class="nt">object</span><span class="o">;</span><span class="w"> </span><span class="nt">span</span><span class="o">=(</span><span class="nt">83</span><span class="o">,</span><span class="w"> </span><span class="nt">89</span><span class="o">),</span><span class="w"> </span><span class="nt">match</span><span class="o">=</span><span class="s1">&#39;Python&#39;</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<h3 id="resub">re.sub</h3>
+<p><strong>re.sub(patrón, repl, string):</strong> reemplaza las coincidencias con el texto de su elección (repl).</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">txt</span> <span class="o">=</span> <span class="s2">&quot;Se esperan abundantes lluvias&quot;</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;\s&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">txt</span><span class="p">)</span> <span class="c1"># &quot;\s espacio en blanco en RE</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">Se</span><span class="o">-</span><span class="n">nuevo</span><span class="o">-</span><span class="n">abundantes</span><span class="o">-</span><span class="n">lluvias</span>
+</code></pre></div>
+
+<h3 id="resplit">re.split</h3>
+<p><strong>re.split(separador, cadena):</strong> divide la cadena tomando en cuenta las ocurrencias del separador. El resultado se devuelve en una lista.</p>
+<div class="codehilite"><pre><span></span><code>txt = &quot;Se esperan abundantes lluvias&quot;
+x = re.split(&quot;\s&quot;, txt, 2) #\s espacio en blanco en RE 2 aplica el split 2 veces
+print(x)
+
+[&#39;Se&#39;, &#39;esperan&#39;, &#39;abundantes lluvias&#39;]
 </code></pre></div>
 
               
